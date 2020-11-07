@@ -18,7 +18,7 @@
         border-bottom: none;
         border-left: none;
         border-right: none;
-        color: #1775be !important;
+        // color: var(--nbp-primary) !important;
       }
     }
     .nbp-dividing-line-center {
@@ -26,7 +26,7 @@
       .nbp-center-content {
         font-size: 0.875rem;
         line-height: 1rem;
-        color: #323232;
+        color: var(--nbp-slate-grey);
         vertical-align: middle;
       }
     }
@@ -43,17 +43,19 @@
         border-bottom: none;
         border-left: none;
         border-right: none;
-        color: #1775be !important;
+        // color: var(--nbp-primary) !important;
       }
     }
   }
   .nbp-dividing-line-cta {
-    font-size: .75rem;
-    color: #1775BE;
+    font-size: 0.75rem;
+    color: var(--nbp-primary);
     position: absolute;
     right: 0%;
-    cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
+  }
+  .nbp-dividing-line-cta-read-only {
+    cursor: pointer;
   }
 }
