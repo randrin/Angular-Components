@@ -3,18 +3,19 @@
     <div [ngClass]="nbpCta ? 'col-md-11' : 'col'">
       <div class="nbp-dividing-line-container">
         <div class="nbp-dividing-line-left">
-          <div class="nbp-left-line"></div>
+          <div class="nbp-left-line" [ngClass]="nbpGetCustomizeClass()"></div>
         </div>
         <div class="nbp-dividing-line-center">
           <span class="nbp-center-content">{{nbpTitle}}</span>
         </div>
         <div class="nbp-dividing-line-right">
-          <div class="nbp-right-line"></div>
+          <div class="nbp-right-line" [ngClass]="nbpGetCustomizeClass()"></div>
         </div>
       </div>
     </div>
     <div *ngIf="nbpCta" class="col-md-1">
-      <span class="nbp-dividing-line-cta mr-3">{{nbpCtaText}}</span>
+      <span *ngIf="nbpCtaReadOnly" class="nbp-dividing-line-cta mr-3">{{nbpCtaText}}</span>
+      <span *ngIf="!nbpCtaReadOnly" class="nbp-dividing-line-cta nbp-dividing-line-cta-read-only mr-3" (click)="nbpOnClickedCta()">{{nbpCtaText}}</span>
     </div>
   </div>
 </div>

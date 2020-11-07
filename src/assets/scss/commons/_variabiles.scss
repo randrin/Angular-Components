@@ -1,0 +1,22 @@
+// Colors
+:root {
+  --nbp-tomato: #d12420;
+  --nbp-white: #ffffff;
+  --nbp-white-smoke: #f2f2f2;
+  --nbp-black: #000000;
+  --nbp-slate-grey: #63666a;
+  --nbp-sliver: #e0e0e1;
+  --nbp-primary: #1775be;
+}
+
+.npb-color-primary {
+  color: var(--nbp-primary) !important;
+}
+
+.npb-color-tomato {
+  color: var(--nbp-tomato) !important;
+}
+
+.npb-color-default {
+  color: var(--nbp-slate-grey) !important;
+}

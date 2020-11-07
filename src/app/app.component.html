@@ -8,9 +8,10 @@
     </div>
   </div>
 
-  <nbp-dividing-line [nbpTitle]="nbpTitle"></nbp-dividing-line>
+  <nbp-dividing-line [nbpTitle]="nbpTitle" [nbpStyle]="_style.PRIMARY"></nbp-dividing-line>
   <br />
-  <nbp-dividing-line [nbpTitle]="nbpTitleCta.title" [nbpCta]="true" [nbpCtaText]="nbpTitleCta.cta"></nbp-dividing-line>
-
+  <nbp-dividing-line [nbpTitle]="nbpTitleCta.title" [nbpCta]="true" [nbpCtaText]="nbpTitleCta.cta" [nbpStyle]="_style.DANGER"></nbp-dividing-line>
+  <br />
+  <nbp-dividing-line [nbpTitle]="nbpTitleCtaReadOnly.title" [nbpCta]="true" [nbpStyle]="_style.PRIMARY" [nbpCtaReadOnly]="true" [nbpCtaText]="nbpTitleCtaReadOnly.cta"></nbp-dividing-line>
 </div>
 <router-outlet></router-outlet>
