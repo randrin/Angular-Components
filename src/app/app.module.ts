@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NbpDividingLineComponent } from './components/nbp-dividing-line/nbp-dividing-line.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NbpDividingLineComponent
   ],
   imports: [
     BrowserModule,

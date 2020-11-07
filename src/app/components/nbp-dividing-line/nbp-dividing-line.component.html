@@ -1,0 +1,20 @@
+<div class="nbp-dividing-line-wrapper">
+  <div class="row">
+    <div [ngClass]="nbpCta ? 'col-md-11' : 'col'">
+      <div class="nbp-dividing-line-container">
+        <div class="nbp-dividing-line-left">
+          <div class="nbp-left-line"></div>
+        </div>
+        <div class="nbp-dividing-line-center">
+          <span class="nbp-center-content">{{nbpTitle}}</span>
+        </div>
+        <div class="nbp-dividing-line-right">
+          <div class="nbp-right-line"></div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="nbpCta" class="col-md-1">
+      <span class="nbp-dividing-line-cta mr-3">{{nbpCtaText}}</span>
+    </div>
+  </div>
+</div>

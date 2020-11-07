@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular-components';
+  title = 'Angular Components';
+  nbpTitle = 'Dividing Line Composant'; 
+  nbpTitleCta = {
+    title: 'Dividing Line Composant with Cta',
+    cta: 'Edit Profil'
+  }; 
 }
