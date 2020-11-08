@@ -8,10 +8,23 @@
     </div>
   </div>
 
-  <nbp-dividing-line [nbpTitle]="nbpTitle" [nbpStyle]="_style.PRIMARY"></nbp-dividing-line>
+  <nbp-dividing-line [nbpTitle]="nbpTitle" [nbpColorStyle]="_style.PRIMARY"></nbp-dividing-line>
+  <nbp-background-box [nbpTitle]="nbpBackgroundBox.title" [nbpSubTitle]="nbpBackgroundBox.subtitle"
+    [nbpFontSize]="_fontSize.MEDIUM" [nbpTextTransform]="_pipe.UPPERCASE">
+  </nbp-background-box>
   <br />
-  <nbp-dividing-line [nbpTitle]="nbpTitleCta.title" [nbpCta]="true" [nbpCtaText]="nbpTitleCta.cta" [nbpStyle]="_style.DANGER"></nbp-dividing-line>
+  <nbp-dividing-line [nbpTitle]="nbpTitleCta.title" [nbpCta]="true" [nbpCtaText]="nbpTitleCta.cta"
+    [nbpColorStyle]="_style.DANGER"></nbp-dividing-line>
+  <nbp-background-box [nbpBackgroundStyle]="_style.PRIMARY" [nbpColorStyle]="_style.WHITE"
+    [nbpTitle]="nbpBackgroundBox.title" [nbpSubTitle]="nbpBackgroundBox.subtitle" [nbpTitlePosition]="_style.CENTER"
+    [nbpFontSize]="_fontSize.MEDIUM" [nbpTextTransform]="_pipe.UPPERCASE">
+  </nbp-background-box>
   <br />
-  <nbp-dividing-line [nbpTitle]="nbpTitleCtaReadOnly.title" [nbpCta]="true" [nbpStyle]="_style.PRIMARY" [nbpCtaReadOnly]="true" [nbpCtaText]="nbpTitleCtaReadOnly.cta"></nbp-dividing-line>
+  <nbp-dividing-line [nbpTitle]="nbpTitleCtaReadOnly.title" [nbpCta]="true" [nbpColorStyle]="_style.PRIMARY"
+    [nbpCtaReadOnly]="true" [nbpCtaText]="nbpTitleCtaReadOnly.cta"></nbp-dividing-line>
+  <nbp-background-box [nbpBackgroundStyle]="_style.DANGER" [nbpColorStyle]="_style.WHITE"
+    [nbpTitle]="nbpBackgroundBox.title" [nbpSubTitle]="nbpBackgroundBox.subtitle" [nbpTitlePosition]="_style.RIGHT"
+    [nbpFontSize]="_fontSize.MEDIUM" [nbpTextTransform]="_pipe.UPPERCASE">
+  </nbp-background-box>
 </div>
 <router-outlet></router-outlet>
