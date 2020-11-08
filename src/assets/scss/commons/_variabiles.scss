@@ -1,4 +1,4 @@
-// Colors
+// Variabiles
 :root {
   --nbp-tomato: #d12420;
   --nbp-white: #ffffff;
@@ -9,14 +9,90 @@
   --nbp-primary: #1775be;
 }
 
+// Colors
 .npb-color-primary {
   color: var(--nbp-primary) !important;
 }
-
 .npb-color-tomato {
   color: var(--nbp-tomato) !important;
 }
-
 .npb-color-default {
   color: var(--nbp-slate-grey) !important;
+}
+.npb-color-white {
+  color: var(--nbp-white) !important;
+}
+
+// Backgrounds
+.npb-background-primary {
+  background: var(--nbp-primary) !important;
+}
+.npb-background-tomato {
+  background: var(--nbp-tomato) !important;
+}
+.npb-background-default {
+  background: var(--nbp-white-smoke) !important;
+}
+
+// Fonts Size
+.npb-font-size-12 {
+  font-size: 12px !important;
+}
+.npb-font-size-13 {
+  font-size: 13px !important;
+}
+.npb-font-size-14 {
+  font-size: 14px !important;
+}
+.npb-font-size-15 {
+  font-size: 15px !important;
+}
+.npb-font-size-16 {
+  font-size: 16px !important;
+}
+.npb-font-size-17 {
+  font-size: 17px !important;
+}
+.npb-font-size-18 {
+  font-size: 18px !important;
+}
+.npb-font-size-20 {
+  font-size: 20px !important;
+}
+.npb-font-size-22 {
+  font-size: 22px !important;
+}
+.npb-font-size-24 {
+  background: 24px !important;
+}
+.npb-font-size-28 {
+  font-size: 28px !important;
+}
+.npb-font-size-30 {
+  font-size: 30px !important;
+}
+.npb-font-size-32 {
+  font-size: 32px !important;
+}
+.npb-font-size-42 {
+  font-size: 42px !important;
+}
+
+// Texts Align
+.npb-text-align-left {
+  text-align: left;
+}
+.npb-text-align-center {
+  text-align: center;
+}
+.npb-text-align-right {
+  text-align: right;
+}
+
+// Text Transform
+.npb-text-lowercase {
+  text-transform: capitalize !important;
+}
+.npb-text-uppercase {
+  text-transform: uppercase !important;
 }

@@ -1,0 +1,11 @@
+<div class="nbp-background-box-wrapper">
+  <div class="row" [ngClass]="nbpGetBackgroundClass()">
+    <div class="col" [ngClass]="nbpGetColorClass()">
+      <div class="nbp-background-box-container">
+        <span class="nbp-background-box-title"
+          [ngClass]="nbpGetFontSizeClass()+ ' ' +nbpGetTextAlignClass()+ ' ' +nbpGetTextTransformClass()">{{nbpTitle}}</span>
+        <span class="nbp-background-box-subtitle">{{nbpSubTitle}}</span>
+      </div>
+    </div>
+  </div>
+</div>

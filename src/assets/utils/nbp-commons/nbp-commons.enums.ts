@@ -11,6 +11,7 @@
 export enum NbpStyle {
   PRIMARY = 'PRIMARY',
   DANGER = 'DANGER',
+  WHITE = 'WHITE',
   SECONDARY = 1,
   THIRD = 2,
   FOURTH = 3,
@@ -19,9 +20,9 @@ export enum NbpStyle {
   FILLED = 6,
   OUTLINE = 7,
   ROUNDED = 8,
-  LEFT = 9,
-  RIGHT = 10,
-  CENTER = 11,
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT',
+  CENTER = 'CENTER',
   JUSTIFIED = 12,
   CHECK = 13,
   CIRCLE = 14,
@@ -43,18 +44,18 @@ export declare enum NbpSize {
 /**
 * Enum per la definizione della grandezza del font da utilizzare
 */
-export declare enum NbpFontSize {
-  SMALL = 0,
-  MEDIUM = 1,
-  LARGE = 2
+export enum NbpFontSize {
+  SMALL = 'SMALL',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE'
 }
-export declare enum NbpPipe {
+export enum NbpPipe {
   CURRENCY = 0,
   DATE = 1,
   DECIMAL = 2,
-  LOWERCASE = 3,
+  LOWERCASE = 'LOWERCASE',
   PERCENT = 4,
-  UPPERCASE = 5,
+  UPPERCASE = 'UPPERCASE',
   CONTO = 6
 }
 /**

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpStyle } from '../../../assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-dividing-line',
@@ -12,30 +11,28 @@ export class NbpDividingLineComponent implements OnInit {
   @Input() nbpCta: boolean = false;
   @Input() nbpCtaText: string = '';
   @Input() nbpCtaReadOnly: boolean = false;
-  @Input() nbpStyle: string;
+  @Input() nbpColorStyle: string;
 
   @Output() nbpOnClickCta = new EventEmitter<any>();
-
-  _style = NbpStyle;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log('{NbpDividingLineComponent - this.nbpStyle}: ', this.nbpStyle);
+    console.log('{NbpDividingLineComponent - this.nbpStyle}: ', this.nbpColorStyle);
   }
 
   nbpOnClickedCta() {
     this.nbpOnClickCta.emit('');
   }
 
-  nbpGetCustomizeClass() {
-    if (this.nbpStyle === 'DEFAULT' || this.nbpStyle === '' || undefined) {
+  nbpGetColorClass() {
+    if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
       return 'npb-color-default';
     }
-    if (this.nbpStyle === 'PRIMARY') {
+    if (this.nbpColorStyle === 'PRIMARY') {
       return 'npb-color-primary';
     }
-    if (this.nbpStyle === 'DANGER') {
+    if (this.nbpColorStyle === 'DANGER') {
       return 'npb-color-tomato';
     }
   }
