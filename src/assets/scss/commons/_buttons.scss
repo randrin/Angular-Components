@@ -12,9 +12,9 @@
 
 // Default
 .npb-button-default {
-  background: var(--nbp-slate-grey) !important;
-  background-color: var(--nbp-slate-grey) !important;
-  border-color: var(--nbp-slate-grey) !important;
+  background: var(--nbp-secondary) !important;
+  background-color: var(--nbp-secondary) !important;
+  border-color: var(--nbp-secondary) !important;
   color: var(--nbp-white) !important;
   &:hover {
     background-color: var(--nbp-night-rider) !important;
@@ -42,8 +42,8 @@
 // Outline
 .npb-button-outline-default {
   background-color: var(--nbp-white) !important;
-  border-color: var(--nbp-slate-grey) !important;
-  color: var(--nbp-slate-grey) !important;
+  border-color: var(--nbp-secondary) !important;
+  color: var(--nbp-secondary) !important;
   &:hover {
     color: var(--nbp-white) !important;
   }
