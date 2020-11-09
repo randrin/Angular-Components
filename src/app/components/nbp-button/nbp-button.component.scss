@@ -1,0 +1,46 @@
+.nbp-button-wrapper {
+  .nbp-button {
+    transition: unset;
+    border-width: 0.0625rem;
+    border-style: solid;
+    max-width: 100%;
+    position: relative;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1;
+    outline: 0 !important;
+    text-transform: uppercase;
+    padding: 0.375rem 1.25rem;
+    box-shadow: none !important;
+    border-radius: 0.125rem;
+    user-select: none;
+    border: 1px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+    .nbp-button-content {
+      display: inline-flex;
+      align-items: center;
+      margin: auto;
+      width: max-content;
+      max-width: 100%;
+      overflow: hidden;
+      height: 100%;
+      position: relative;
+      .nbp-button-label {
+        line-height: 0.88rem;
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        display: inline-flex;
+        justify-content: center;
+        .nbp-button-text {
+          display: inline-block;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

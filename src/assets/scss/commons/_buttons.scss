@@ -1,0 +1,82 @@
+// Primary
+.npb-button-primary {
+  background: var(--nbp-primary) !important;
+  background-color: var(--nbp-primary) !important;
+  border-color: var(--nbp-primary) !important;
+  color: var(--nbp-white) !important;
+  &:hover {
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
+}
+
+// Default
+.npb-button-default {
+  background: var(--nbp-slate-grey) !important;
+  background-color: var(--nbp-slate-grey) !important;
+  border-color: var(--nbp-slate-grey) !important;
+  color: var(--nbp-white) !important;
+  &:hover {
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
+}
+
+// Danger
+.npb-button-danger {
+  background: var(--nbp-tomato) !important;
+  background-color: var(--nbp-tomato) !important;
+  border-color: var(--nbp-tomato) !important;
+  color: var(--nbp-white) !important;
+  &:hover {
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
+}
+
+// Rounded
+.npb-button-rounded {
+  border-radius: 3.125rem !important;
+}
+
+// Outline
+.npb-button-outline-default {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-slate-grey) !important;
+  color: var(--nbp-slate-grey) !important;
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+.npb-button-outline-primary {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-primary) !important;
+  color: var(--nbp-primary) !important;
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+.npb-button-outline-danger {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-tomato) !important;
+  color: var(--nbp-tomato) !important;
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+
+// Size
+.npb-button-small {
+  min-width: 5.25rem !important;
+  min-height: 2.1875rem !important;
+}
+
+.npb-button-medium {
+  min-width: 6.875rem !important;
+  min-height: 3.1875rem !important;;
+}
+
+.npb-button-large {
+  min-width: 10.75rem !important;
+  min-height: 5.1875rem !important;
+}
