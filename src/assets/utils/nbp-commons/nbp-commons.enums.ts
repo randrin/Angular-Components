@@ -18,8 +18,8 @@ export enum NbpStyle {
   FIFTH = 4,
   DEFAULT = 'DEFAULT',
   FILLED = 6,
-  OUTLINE = 7,
-  ROUNDED = 8,
+  OUTLINE = 'OUTLINE',
+  ROUNDED = 'ROUNDED',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
   CENTER = 'CENTER',
@@ -35,11 +35,12 @@ export enum NbpStyle {
 * Enum per la definizione della dimensione dei componenti della libreria
 * LG - Large
 * MD - Medium
+* SM - Small
 */
-export declare enum NbpSize {
-  SM = 0,
-  LG = 1,
-  MD = 2
+export enum NbpSize {
+  SM = 'SM',
+  LG = 'LG',
+  MD = 'MD'
 }
 /**
 * Enum per la definizione della grandezza del font da utilizzare
