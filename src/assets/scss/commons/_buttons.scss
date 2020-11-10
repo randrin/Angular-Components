@@ -19,6 +19,9 @@
   &:hover {
     background-color: var(--nbp-night-rider) !important;
     border-color: var(--nbp-night-rider) !important;
+    &:disabled {
+      opacity: .5 !important;
+    }
   }
 }
 
