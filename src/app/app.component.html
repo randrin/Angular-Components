@@ -17,13 +17,24 @@
       <nbp-button [nbpLabel]="nbpButton.label"></nbp-button>
     </div>
     <div class="col-md-2">
+      <nbp-button [nbpLabel]="nbpButton.label" [nbpDisabled]="true"></nbp-button>
+    </div>
+    <div class="col-md-2">
       <nbp-button [nbpLabel]="nbpButton.label" [nbpSize]="_size.MD" [nbpStyleType]="_style.OUTLINE"></nbp-button>
+    </div>
+    <div class="col-md-2">
+      <nbp-button [nbpLabel]="nbpButton.label" [nbpDisabled]="true" [nbpSize]="_size.MD"
+        [nbpStyleType]="_style.OUTLINE"></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button [nbpLabel]="nbpButton.label" [nbpSize]="_size.LG" [nbpStyleType]="_style.ROUNDED"></nbp-button>
     </div>
+    <div class="col-md-2">
+      <nbp-button [nbpLabel]="nbpButton.label" [nbpDisabled]="true" [nbpSize]="_size.LG"
+        [nbpStyleType]="_style.ROUNDED"></nbp-button>
+    </div>
   </div>
-<nbp-alert-box></nbp-alert-box>
+  <nbp-alert-box></nbp-alert-box>
   <br />
 
   <nbp-dividing-line [nbpTitle]="nbpTitleCta.title" [nbpCta]="true" [nbpCtaText]="nbpTitleCta.cta"
@@ -47,7 +58,7 @@
   </div>
 
   <br />
-  
+
   <nbp-dividing-line [nbpTitle]="nbpTitleCtaReadOnly.title" [nbpCta]="true" [nbpColorStyle]="_style.PRIMARY"
     [nbpCtaReadOnly]="true" [nbpCtaText]="nbpTitleCtaReadOnly.cta"></nbp-dividing-line>
   <nbp-background-box [nbpBackgroundStyle]="_style.DANGER" [nbpColorStyle]="_style.WHITE"

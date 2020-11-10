@@ -11,6 +11,7 @@ export class NbpButtonComponent implements OnInit {
   @Input() nbpColorStyle: string;
   @Input() nbpStyleType: string;
   @Input() nbpSize: string;
+  @Input() nbpDisabled: boolean = false;
 
   nbpButton: string;
   nbpSeparator: string = ' ';
