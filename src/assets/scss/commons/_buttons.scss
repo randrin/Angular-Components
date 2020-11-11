@@ -4,9 +4,17 @@
   background-color: var(--nbp-primary) !important;
   border-color: var(--nbp-primary) !important;
   color: var(--nbp-white) !important;
+
   &:hover {
     background-color: var(--nbp-night-rider) !important;
     border-color: var(--nbp-night-rider) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-primary) !important;
+    border-color: var(--nbp-primary) !important;
+    color: var(--nbp-white) !important;
   }
 }
 
@@ -16,12 +24,17 @@
   background-color: var(--nbp-secondary) !important;
   border-color: var(--nbp-secondary) !important;
   color: var(--nbp-white) !important;
+
   &:hover {
     background-color: var(--nbp-night-rider) !important;
     border-color: var(--nbp-night-rider) !important;
-    &:disabled {
-      opacity: .5 !important;
-    }
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
   }
 }
 
@@ -31,9 +44,17 @@
   background-color: var(--nbp-tomato) !important;
   border-color: var(--nbp-tomato) !important;
   color: var(--nbp-white) !important;
+
   &:hover {
     background-color: var(--nbp-night-rider) !important;
     border-color: var(--nbp-night-rider) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-tomato) !important;
+    border-color: var(--nbp-tomato) !important;
+    color: var(--nbp-white) !important;
   }
 }
 
@@ -47,22 +68,34 @@
   background-color: var(--nbp-white) !important;
   border-color: var(--nbp-secondary) !important;
   color: var(--nbp-secondary) !important;
+
   &:hover {
     color: var(--nbp-white) !important;
   }
+
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
 }
+
 .npb-button-outline-primary {
   background-color: var(--nbp-white) !important;
   border-color: var(--nbp-primary) !important;
   color: var(--nbp-primary) !important;
+
   &:hover {
     color: var(--nbp-white) !important;
   }
 }
+
 .npb-button-outline-danger {
   background-color: var(--nbp-white) !important;
   border-color: var(--nbp-tomato) !important;
   color: var(--nbp-tomato) !important;
+
   &:hover {
     color: var(--nbp-white) !important;
   }
@@ -76,7 +109,7 @@
 
 .npb-button-medium {
   min-width: 6.875rem !important;
-  min-height: 3.1875rem !important;;
+  min-height: 3.1875rem !important;
 }
 
 .npb-button-large {
