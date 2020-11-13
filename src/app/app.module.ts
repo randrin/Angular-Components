@@ -7,6 +7,7 @@ import { NbpDividingLineComponent } from './components/nbp-dividing-line/nbp-div
 import { NbpBackgroundBoxComponent } from './components/nbp-background-box/nbp-background-box.component';
 import { NbpButtonComponent } from './components/nbp-button/nbp-button.component';
 import { NbpAlertBoxComponent } from './components/nbp-alert-box/nbp-alert-box.component';
+import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NbpAlertBoxComponent } from './components/nbp-alert-box/nbp-alert-box.c
     NbpDividingLineComponent,
     NbpBackgroundBoxComponent,
     NbpButtonComponent,
-    NbpAlertBoxComponent
+    NbpAlertBoxComponent,
+    NbpScrollTopComponent
   ],
   imports: [
     BrowserModule,

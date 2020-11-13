@@ -1,0 +1,33 @@
+#nbp-scroll-top-wrapper {
+  display: none;
+
+  &:hover {
+    background: var(--nbp-secondary);
+    color: var(--nbp-white);
+
+    .nbp-scroll-top-icon {
+      top: -5px;
+      position: relative;
+      transition: 300ms ease-in-out;
+    }
+  }
+}
+
+.nbp-scroll-top {
+  display: block;
+  bottom: 50px;
+  position: fixed;
+  right: 30px;
+  float: right;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  color: var(--nbp-white);
+  background: var(--nbp-primary);
+  border-radius: 0.125rem;
+
+  &:focus,
+  &:hover {
+    box-shadow: none !important;
+  }
+}
