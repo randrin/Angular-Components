@@ -15,14 +15,22 @@ export class NbpDividingLineComponent implements OnInit {
 
   @Output() nbpOnClickCta = new EventEmitter<any>();
 
+  nbpDividingLine: string;
+  nbpSeparator: string = ' ';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.nbpGetClasses();
     console.log('{NbpDividingLineComponent - this.nbpStyle}: ', this.nbpColorStyle);
   }
 
   nbpOnClickedCta() {
     this.nbpOnClickCta.emit('');
+  }
+
+  nbpGetClasses() {
+    this.nbpDividingLine = this.nbpGetColorClass();
   }
 
   nbpGetColorClass() {
