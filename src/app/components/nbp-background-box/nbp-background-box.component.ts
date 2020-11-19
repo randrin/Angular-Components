@@ -15,9 +15,17 @@ export class NbpBackgroundBoxComponent implements OnInit {
   @Input() nbpTextTransform: string;
   @Input() nbpColorStyle: string;
 
+  nbpBackgroundBox: string;
+  nbpColorBox: string;
+  nbpTitleBox: string;
+  nbpSeparator: string = ' ';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.nbpBackgroundBox = this.nbpGetBackgroundClass();
+    this.nbpColorBox = this.nbpGetColorClass();
+    this.nbpTitleBox = this.nbpGetFontSizeClass() + this.nbpSeparator + this.nbpGetTextAlignClass() + this.nbpSeparator + this.nbpGetTextTransformClass()
     console.log('{NbpBackgroundBoxComponent - this.nbpBackgroundStyle}: ', this.nbpBackgroundStyle);
   }
 
