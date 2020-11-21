@@ -8,7 +8,7 @@
 
   <nbp-dividing-line
     [nbpTitle]="nbpTitle"
-    [nbpColorStyle]="_style.PRIMARY"
+    [nbpColorStyle]="_style.DEFAULT"
   ></nbp-dividing-line>
   <nbp-background-box
     [nbpTitle]="nbpBackgroundBox.title"
@@ -63,9 +63,11 @@
 
   <nbp-dividing-line
     [nbpTitle]="nbpTitleCta.title"
+    [nbpColorTitle]="_style.PRIMARY"
     [nbpCta]="true"
     [nbpCtaText]="nbpTitleCta.cta"
-    [nbpColorStyle]="_style.DANGER"
+    [nbpColorStyle]="_style.PRIMARY"
+    (nbpOnClickCta)="nbpOnClickCta($event)"
   ></nbp-dividing-line>
   <nbp-background-box
     [nbpBackgroundStyle]="_style.PRIMARY"
@@ -77,7 +79,7 @@
     [nbpTextTransform]="_pipe.UPPERCASE"
   >
   </nbp-background-box>
-  <div class="row">
+  <div class="row" *ngIf="nbpShowPrimaryButtons">
     <div class="col-md-2">
       <nbp-button
         [nbpLabel]="nbpButton.label"
@@ -131,8 +133,9 @@
 
   <nbp-dividing-line
     [nbpTitle]="nbpTitleCtaReadOnly.title"
+    [nbpColorTitle]="_style.DANGER"
     [nbpCta]="true"
-    [nbpColorStyle]="_style.PRIMARY"
+    [nbpColorStyle]="_style.DANGER"
     [nbpCtaReadOnly]="true"
     [nbpCtaText]="nbpTitleCtaReadOnly.cta"
   ></nbp-dividing-line>

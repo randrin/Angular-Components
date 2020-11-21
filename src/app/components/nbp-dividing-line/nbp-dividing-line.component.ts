@@ -8,14 +8,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class NbpDividingLineComponent implements OnInit {
 
   @Input() nbpTitle: string;
+  @Input() nbpColorTitle: string;
   @Input() nbpCta: boolean = false;
   @Input() nbpCtaText: string = '';
   @Input() nbpCtaReadOnly: boolean = false;
   @Input() nbpColorStyle: string;
 
-  @Output() nbpOnClickCta = new EventEmitter<any>();
+  @Output() nbpOnClickCta: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   nbpDividingLine: string;
+  nbpDividingLineColorTitle: string;
   nbpSeparator: string = ' ';
 
   constructor() { }
@@ -26,21 +28,22 @@ export class NbpDividingLineComponent implements OnInit {
   }
 
   nbpOnClickedCta() {
-    this.nbpOnClickCta.emit('');
+    this.nbpOnClickCta.emit(true);
   }
 
   nbpGetClasses() {
-    this.nbpDividingLine = this.nbpGetColorClass();
+    this.nbpDividingLine = this.nbpGetColorClass(this.nbpColorStyle);
+    this.nbpDividingLineColorTitle = this.nbpGetColorClass(this.nbpColorTitle);
   }
 
-  nbpGetColorClass() {
-    if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
+  nbpGetColorClass(nbpInput) {
+    if (nbpInput === 'DEFAULT' || nbpInput === '' || nbpInput === undefined) {
       return 'npb-color-default';
     }
-    if (this.nbpColorStyle === 'PRIMARY') {
+    if (nbpInput === 'PRIMARY') {
       return 'npb-color-primary';
     }
-    if (this.nbpColorStyle === 'DANGER') {
+    if (nbpInput === 'DANGER') {
       return 'npb-color-tomato';
     }
   }
