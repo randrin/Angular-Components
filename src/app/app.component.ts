@@ -13,6 +13,8 @@ export class AppComponent {
   _pipe = NbpPipe;
   _size = NbpSize;
 
+  nbpShowPrimaryButtons: boolean;
+
   title = 'Angular Components';
   nbpTitle = 'Dividing Line Composant';
   nbpTitleCta = {
@@ -31,4 +33,10 @@ export class AppComponent {
     label: 'Button',
     cta: 'My Profil'
   };
+
+
+  nbpOnClickCta(event) {
+    console.log('{nbpOnClickCta}: ', event);
+    this.nbpShowPrimaryButtons = event;
+  }
 }
