@@ -10,7 +10,8 @@ export class NbpDividingLineComponent implements OnInit {
   @Input() nbpTitle: string;
   @Input() nbpColorTitle: string;
   @Input() nbpCta: boolean = false;
-  @Input() nbpCtaText: string = '';
+  @Input() nbpCtaTextShow: string = '';
+  @Input() nbpCtaTextHide: string = '';
   @Input() nbpCtaReadOnly: boolean = false;
   @Input() nbpColorStyle: string;
 
@@ -19,16 +20,25 @@ export class NbpDividingLineComponent implements OnInit {
   nbpDividingLine: string;
   nbpDividingLineColorTitle: string;
   nbpSeparator: string = ' ';
+  nbpCtaText: string;
+  nbpShowHide: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.nbpSetUpComponent();
     this.nbpGetClasses();
     console.log('{NbpDividingLineComponent - this.nbpStyle}: ', this.nbpColorStyle);
   }
 
+  nbpSetUpComponent() {
+    this.nbpCtaText = this.nbpShowHide ? this.nbpCtaTextHide : this.nbpCtaTextShow;
+  }
+
   nbpOnClickedCta() {
-    this.nbpOnClickCta.emit(true);
+    this.nbpShowHide = !this.nbpShowHide;
+    this.nbpSetUpComponent();
+    this.nbpOnClickCta.emit(this.nbpShowHide);
   }
 
   nbpGetClasses() {

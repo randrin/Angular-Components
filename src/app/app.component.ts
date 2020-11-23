@@ -23,7 +23,10 @@ export class AppComponent {
   };
   nbpTitleCtaReadOnly = {
     title: 'Dividing Line Composant with Cta read only',
-    cta: 'My Profil'
+    cta: {
+      show: 'My Profil',
+      hide: 'Edit Profil'
+    }
   };
   nbpBackgroundBox = {
     title: 'Background Box Title',

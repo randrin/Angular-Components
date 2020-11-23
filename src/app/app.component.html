@@ -65,7 +65,7 @@
     [nbpTitle]="nbpTitleCta.title"
     [nbpColorTitle]="_style.PRIMARY"
     [nbpCta]="true"
-    [nbpCtaText]="nbpTitleCta.cta"
+    [nbpCtaTextShow]="nbpTitleCta.cta"
     [nbpColorStyle]="_style.PRIMARY"
     (nbpOnClickCta)="nbpOnClickCta($event)"
   ></nbp-dividing-line>
@@ -137,7 +137,8 @@
     [nbpCta]="true"
     [nbpColorStyle]="_style.DANGER"
     [nbpCtaReadOnly]="true"
-    [nbpCtaText]="nbpTitleCtaReadOnly.cta"
+    [nbpCtaTextShow]="nbpTitleCtaReadOnly.cta.show"
+    [nbpCtaTextHide]="nbpTitleCtaReadOnly.cta.hide"
   ></nbp-dividing-line>
   <nbp-background-box
     [nbpBackgroundStyle]="_style.DANGER"
