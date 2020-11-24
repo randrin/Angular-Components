@@ -36,6 +36,7 @@ export class NbpDividingLineComponent implements OnInit {
   }
 
   nbpOnClickedCta() {
+    debugger
     this.nbpShowHide = !this.nbpShowHide;
     this.nbpSetUpComponent();
     this.nbpOnClickCta.emit(this.nbpShowHide);
