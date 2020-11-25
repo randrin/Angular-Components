@@ -1,12 +1,18 @@
 # AngularComponents
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.2.
 
-## Development server
+## Description Components
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
+- NbpDividingLineComponent
+the component accepts the following parameters:
+1. `nbpTitle`: the title text in the middle of lines
+2. `nbpColorTitle`: the color of the lines left and right (See section colors)
+3. `nbpColorStyle`: the color of title text in the middle of lines
+4. `nbpCta`: boolean, show or no the cta (call to action) in end of line
+5. `nbpCtaReadOnly`: boolean, the cta is clickage or no
+6. `nbpCtaTextShow`: the text to show in cta
+7. `nbpCtaTextHide`: the text to show when clicking in cta (nbpCtaReadOnly is true in this case)
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 

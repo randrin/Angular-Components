@@ -3,19 +3,19 @@
   margin-bottom: 1.25rem;
 
   .nbp-alert-box-container {
-    border-width: 0.125rem;
+    // border-width: 0.125rem;
     border-style: solid;
     width: 100%;
-    min-height: 4.5rem;
-    display: table;
-    table-layout: fixed;
-    position: relative;
+    // min-height: 4.5rem;
+    // display: table;
+    // table-layout: fixed;
+    // position: relative;
     border-color: #89bc72;
     box-shadow: var(--nbp-box-shadow);
 
-    .nbp-alert-box-row {
-      max-width: max-content;
-    }
+    // .nbp-alert-box-row {
+    //   max-width: max-content;
+    // }
 
     .nbp-alert-box-container-icon {
       text-align: center;
@@ -52,8 +52,10 @@
     }
 
     .nbp-alert-box-container-message {
-      padding-right: 3.75rem;
-      display: table-cell;
+      @include small() {
+        padding: 1.25rem 3.75rem;
+      }
+      // display: table-cell;
       vertical-align: middle;
       text-align: justify;
       position: relative;
@@ -63,7 +65,7 @@
 
       .nbp-alert-box-icon-close {
         position: absolute;
-        top: 1.25rem;
+        top: 0.25rem;
         right: 1.25rem;
         font-size: 1.25rem;
         cursor: pointer;
