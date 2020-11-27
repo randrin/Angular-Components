@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description Components
 
-- NbpDividingLineComponent
-the component accepts the following parameters:
+[NbpDividingLineComponent]
+The component accepts the following parameters:
 1. `nbpTitle`: the title text in the middle of lines
 2. `nbpColorTitle`: the color of the lines left and right (See section colors)
 3. `nbpColorStyle`: the color of title text in the middle of lines

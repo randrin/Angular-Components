@@ -28,7 +28,7 @@ export class NbpDividingLineComponent implements OnInit {
   ngOnInit(): void {
     this.nbpSetUpComponent();
     this.nbpGetClasses();
-    console.log('{NbpDividingLineComponent - this.nbpStyle}: ', this.nbpColorStyle);
+    console.log('{NbpDividingLineComponent - this.nbpColorStyle}: ', this.nbpColorStyle);
   }
 
   nbpSetUpComponent() {
@@ -36,7 +36,6 @@ export class NbpDividingLineComponent implements OnInit {
   }
 
   nbpOnClickedCta() {
-    debugger
     this.nbpShowHide = !this.nbpShowHide;
     this.nbpSetUpComponent();
     this.nbpOnClickCta.emit(this.nbpShowHide);

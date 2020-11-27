@@ -34,11 +34,26 @@
 .npb-background-primary {
   background: var(--nbp-primary) !important;
 }
+.npb-background-info {
+  background: var(--nbp-info) !important;
+}
+.npb-background-warning {
+  background: var(--nbp-warning) !important;
+}
+.npb-background-success {
+  background: var(--nbp-success) !important;
+}
+.npb-background-danger {
+  background: var(--nbp-danger) !important;
+}
 .npb-background-tomato {
   background: var(--nbp-tomato) !important;
 }
 .npb-background-default {
   background: var(--nbp-white-smoke) !important;
+}
+.npb-background-generic {
+  background: var(--nbp-secondary) !important;
 }
 
 // Fonts Size
@@ -102,4 +117,22 @@
 }
 .npb-text-uppercase {
   text-transform: uppercase !important;
+}
+
+
+// Border Color
+.npb-border-default {
+  border-color: var(--nbp-secondary) !important;
+}
+.npb-border-success {
+  border-color: var(--nbp-success) !important;
+}
+.npb-border-info {
+  border-color: var(--nbp-info) !important;
+}
+.npb-border-warning {
+  border-color: var(--nbp-warning) !important;
+}
+.npb-border-danger {
+  border-color: var(--nbp-danger) !important;
 }
