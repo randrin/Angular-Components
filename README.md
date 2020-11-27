@@ -4,15 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description Components
 
-## NbpDividingLineComponent
+## 1. NbpDividingLineComponent
 The component accepts the following parameters:
-`nbpTitle`: the title text in the middle of lines
-`nbpColorTitle`: the color of the lines left and right (See section colors)
-`nbpColorStyle`: the color of title text in the middle of lines
-`nbpCta`: boolean, show or no the cta (call to action) in end of line
-`nbpCtaReadOnly`: boolean, the cta is clickage or no
-`nbpCtaTextShow`: the text to show in cta
-`nbpCtaTextHide`: the text to show when clicking in cta (nbpCtaReadOnly is true in this case)
+1. `nbpTitle`: the title text in the middle of lines
+2. `nbpColorTitle`: the color of the lines left and right (See section colors)
+3. `nbpColorStyle`: the color of title text in the middle of lines
+4. `nbpCta`: boolean, show or no the cta (call to action) in end of line
+5. `nbpCtaReadOnly`: boolean, the cta is clickage or no
+6. `nbpCtaTextShow`: the text to show in cta
+7. `nbpCtaTextHide`: the text to show when clicking in cta (nbpCtaReadOnly is true in this case)
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
