@@ -75,12 +75,12 @@ export declare enum NbpClientType {
   PG = 0,
   PF = 1
 }
-export declare enum NbpAlertType {
-  GENERIC = 0,
-  POSITIVE = 1,
-  PROMOTIONAL = 2,
-  WARNING = 3,
-  ERROR = 4
+export enum NbpAlertType {
+  GENERIC = 'GENERIC',
+  POSITIVE = 'POSITIVE',
+  PROMOTIONAL = 'PROMOTIONAL',
+  WARNING = 'WARNING',
+  ERROR = 'ERROR'
 }
 export declare enum NbpSwitchType {
   ICON = 0,

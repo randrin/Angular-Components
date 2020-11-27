@@ -10,7 +10,7 @@
     // display: table;
     // table-layout: fixed;
     // position: relative;
-    border-color: #89bc72;
+    // border-color: #89bc72;
     box-shadow: var(--nbp-box-shadow);
 
     // .nbp-alert-box-row {
@@ -19,14 +19,14 @@
 
     .nbp-alert-box-container-icon {
       text-align: center;
-      padding: 0.8125rem 0.9375rem;
+      padding: 1.8125rem 0.9375rem;
       font-size: 2.25rem;
       width: 100%;
       height: 100%;
       line-height: 1;
       vertical-align: middle;
       color: #fff;
-      background-color: #89bc72;
+      // background-color: #89bc72;
 
       .nbp-alert-box-icon {
         align-items: center;
@@ -52,7 +52,7 @@
     }
 
     .nbp-alert-box-container-message {
-      @include small() {
+      @media only screen and (max-width: 47.9375em) { // to remove later
         padding: 1.25rem 3.75rem;
       }
       // display: table-cell;
@@ -70,6 +70,13 @@
         font-size: 1.25rem;
         cursor: pointer;
         vertical-align: middle;
+        &:hover {
+          border: 1px solid transparent;
+          border-radius: 100%;
+          padding: 0 5px;
+          background-color: var(--nbp-secondary) !important;
+          color: var(--nbp-white);
+        }
       }
 
       .nbp-alert-box-message {

@@ -58,7 +58,11 @@
       ></nbp-button>
     </div>
   </div>
-  <nbp-alert-box></nbp-alert-box>
+  <nbp-alert-box *ngIf="!nbpAlertClose"
+    [nbpText]="component.NbpAlertBoxComponent.title"
+    [nbpClose]="'true'"
+    (nbpClickClose)="nbpOnClickClose($event)"
+  ></nbp-alert-box>
   <br />
 
   <nbp-dividing-line
@@ -129,7 +133,10 @@
       ></nbp-button>
     </div>
   </div>
-
+  <nbp-alert-box 
+    [nbpText]="component.NbpAlertBoxComponent.title"
+    [nbpAlertType]="_alert.PROMOTIONAL"
+    ></nbp-alert-box>
   <br />
 
   <nbp-dividing-line
@@ -199,6 +206,10 @@
       ></nbp-button>
     </div>
   </div>
+  <nbp-alert-box 
+    [nbpText]="component.NbpAlertBoxComponent.title"
+    [nbpAlertType]="_alert.ERROR"
+    ></nbp-alert-box>
 </div>
 <nbp-scroll-top></nbp-scroll-top>
 <router-outlet></router-outlet>

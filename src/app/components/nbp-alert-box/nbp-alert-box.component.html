@@ -1,20 +1,18 @@
 <div class="nbp-alert-box-wrapper">
-  <div class="nbp-alert-box-container">
+  <div class="nbp-alert-box-container" [ngClass]="nbpAlertBoxType">
     <div class="row nbp-alert-box-row">
       <div class="col-md-1">
-        <div class="nbp-alert-box-container-icon">
-          <span class="nbp-alert-box-icon"><i class="fa fa-edit npb-font-size-28"></i></span>
+        <div class="nbp-alert-box-container-icon" [ngClass]="nbpAlertBoxBackground">
+          <span class="nbp-alert-box-icon"><i class="npb-font-size-40" [ngClass]="nbpAlertBoxIcon"></i></span>
         </div>
       </div>
       <div class="col-md-11">
         <div class="nbp-alert-box-container-message">
-          <div class="nbp-alert-box-icon-close">
+          <div *ngIf="nbpClose" class="nbp-alert-box-icon-close" (click)="nbpOnClickClose()">
             <span><i class="fa fa-remove"></i></span>
           </div>
           <div class="nbp-alert-box-message npb-color-default">
-            <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eros
-              turpis,.
-            </span>
+            <span>{{nbpText}}</span>
           </div>
         </div>
       </div>
