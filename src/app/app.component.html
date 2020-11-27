@@ -7,36 +7,36 @@
   </div>
 
   <nbp-dividing-line
-    [nbpTitle]="nbpTitle"
+    [nbpTitle]="component.NbpDividingLineComponent.nbpTitle"
     [nbpColorStyle]="_style.DEFAULT"
   ></nbp-dividing-line>
   <nbp-background-box
-    [nbpTitle]="nbpBackgroundBox.title"
-    [nbpSubTitle]="nbpBackgroundBox.subtitle"
+    [nbpTitle]="component.NbpBackgroundBoxComponent.title"
+    [nbpSubTitle]="component.NbpBackgroundBoxComponent.subtitle"
     [nbpFontSize]="_fontSize.MEDIUM"
     [nbpTextTransform]="_pipe.UPPERCASE"
   >
   </nbp-background-box>
   <div class="row">
     <div class="col-md-2">
-      <nbp-button [nbpLabel]="nbpButton.label"></nbp-button>
+      <nbp-button [nbpLabel]="component.NbpButtonComponent.label"></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpDisabled]="true"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.MD"
         [nbpStyleType]="_style.OUTLINE"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpDisabled]="true"
         [nbpSize]="_size.MD"
         [nbpStyleType]="_style.OUTLINE"
@@ -44,14 +44,14 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.LG"
         [nbpStyleType]="_style.ROUNDED"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpDisabled]="true"
         [nbpSize]="_size.LG"
         [nbpStyleType]="_style.ROUNDED"
@@ -66,19 +66,19 @@
   <br />
 
   <nbp-dividing-line
-    [nbpTitle]="nbpTitleCta.title"
+    [nbpTitle]="component.NbpDividingLineComponent.nbpTitleCta.title"
     [nbpColorTitle]="_style.PRIMARY"
     [nbpCta]="true"
-    [nbpCtaTextShow]="nbpTitleCtaReadOnly.cta.show"
-    [nbpCtaTextHide]="nbpTitleCtaReadOnly.cta.hide"
+    [nbpCtaTextShow]="component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
+    [nbpCtaTextHide]="component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.hide"
     [nbpColorStyle]="_style.PRIMARY"
     (nbpOnClickCta)="nbpOnClickCta($event)"
   ></nbp-dividing-line>
   <nbp-background-box
     [nbpBackgroundStyle]="_style.PRIMARY"
     [nbpColorStyle]="_style.WHITE"
-    [nbpTitle]="nbpBackgroundBox.title"
-    [nbpSubTitle]="nbpBackgroundBox.subtitle"
+    [nbpTitle]="component.NbpBackgroundBoxComponent.title"
+    [nbpSubTitle]="component.NbpBackgroundBoxComponent.subtitle"
     [nbpTitlePosition]="_style.CENTER"
     [nbpFontSize]="_fontSize.MEDIUM"
     [nbpTextTransform]="_pipe.UPPERCASE"
@@ -87,20 +87,20 @@
   <div class="row" *ngIf="nbpShowPrimaryButtons">
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpColorStyle]="_style.PRIMARY"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpColorStyle]="_style.PRIMARY"
         [nbpDisabled]="true"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.MD"
         [nbpColorStyle]="_style.PRIMARY"
         [nbpStyleType]="_style.OUTLINE"
@@ -108,7 +108,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.MD"
         [nbpColorStyle]="_style.PRIMARY"
         [nbpStyleType]="_style.OUTLINE"
@@ -117,7 +117,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.LG"
         [nbpColorStyle]="_style.PRIMARY"
         [nbpStyleType]="_style.ROUNDED"
@@ -125,7 +125,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.LG"
         [nbpColorStyle]="_style.PRIMARY"
         [nbpStyleType]="_style.ROUNDED"
@@ -140,18 +140,18 @@
   <br />
 
   <nbp-dividing-line
-    [nbpTitle]="nbpTitleCtaReadOnly.title"
+    [nbpTitle]="component.NbpDividingLineComponent.nbpTitleCtaReadOnly.title"
     [nbpColorTitle]="_style.DANGER"
     [nbpCta]="true"
     [nbpColorStyle]="_style.DANGER"
     [nbpCtaReadOnly]="true"
-    [nbpCtaTextShow]="nbpTitleCtaReadOnly.cta.show"
+    [nbpCtaTextShow]="component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
   ></nbp-dividing-line>
   <nbp-background-box
     [nbpBackgroundStyle]="_style.DANGER"
     [nbpColorStyle]="_style.WHITE"
-    [nbpTitle]="nbpBackgroundBox.title"
-    [nbpSubTitle]="nbpBackgroundBox.subtitle"
+    [nbpTitle]="component.NbpBackgroundBoxComponent.title"
+    [nbpSubTitle]="component.NbpBackgroundBoxComponent.subtitle"
     [nbpTitlePosition]="_style.RIGHT"
     [nbpFontSize]="_fontSize.MEDIUM"
     [nbpTextTransform]="_pipe.UPPERCASE"
@@ -160,20 +160,20 @@
   <div class="row">
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpColorStyle]="_style.DANGER"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpColorStyle]="_style.DANGER"
         [nbpDisabled]="true"
       ></nbp-button>
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.MD"
         [nbpColorStyle]="_style.DANGER"
         [nbpStyleType]="_style.OUTLINE"
@@ -181,7 +181,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.MD"
         [nbpColorStyle]="_style.DANGER"
         [nbpStyleType]="_style.OUTLINE"
@@ -190,7 +190,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.LG"
         [nbpColorStyle]="_style.DANGER"
         [nbpStyleType]="_style.ROUNDED"
@@ -198,7 +198,7 @@
     </div>
     <div class="col-md-2">
       <nbp-button
-        [nbpLabel]="nbpButton.label"
+        [nbpLabel]="component.NbpButtonComponent.label"
         [nbpSize]="_size.LG"
         [nbpColorStyle]="_style.DANGER"
         [nbpStyleType]="_style.ROUNDED"
