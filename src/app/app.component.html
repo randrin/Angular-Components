@@ -61,6 +61,7 @@
   <nbp-alert-box *ngIf="!nbpAlertClose"
     [nbpText]="component.NbpAlertBoxComponent.title"
     [nbpClose]="'true'"
+    [nbpColorStyle]="_style.PRIMARY"
     (nbpClickClose)="nbpOnClickClose($event)"
   ></nbp-alert-box>
   <br />
