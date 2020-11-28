@@ -8,6 +8,7 @@ import { NbpBackgroundBoxComponent } from './components/nbp-background-box/nbp-b
 import { NbpButtonComponent } from './components/nbp-button/nbp-button.component';
 import { NbpAlertBoxComponent } from './components/nbp-alert-box/nbp-alert-box.component';
 import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-top.component';
+import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-to
     NbpBackgroundBoxComponent,
     NbpButtonComponent,
     NbpAlertBoxComponent,
-    NbpScrollTopComponent
+    NbpScrollTopComponent,
+    NbpFeedbackComponent
   ],
   imports: [
     BrowserModule,
