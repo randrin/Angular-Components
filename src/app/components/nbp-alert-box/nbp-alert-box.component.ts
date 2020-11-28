@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpAlertType } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpAlertType, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-alert-box',
@@ -16,11 +16,14 @@ export class NbpAlertBoxComponent implements OnInit {
   @Output() nbpClickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   _alertType = NbpAlertType;
+  _style = NbpStyle;
   
+  nbpAlertBoxTextColor: string;
   nbpAlertBoxType: string;
   nbpAlertBoxIcon: string;
   nbpAlertBoxBackground: string;
   nbpSeparator: string = ' ';
+
   nbpIcon = {
     GENERIC: 'fa fa-info-circle',
     POSITIVE: 'fa fa-check-circle-o',
@@ -45,6 +48,13 @@ export class NbpAlertBoxComponent implements OnInit {
     ERROR: 'npb-background-danger'
   }
 
+  nbpColor = {
+    DEFAULT: 'npb-color-default',
+    PRIMARY: 'npb-color-primary',
+    TOMATO: 'npb-color-tomato',
+    WHITE: 'npb-color-white'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -54,6 +64,22 @@ export class NbpAlertBoxComponent implements OnInit {
 
   nbpSetUpComponent() {
     this.nbpGetColorBoxAlert(this.nbpAlertType);
+    this.nbpGetColorTextBoxAlert(this.nbpColorStyle);
+  }
+
+  nbpGetColorTextBoxAlert(nbpInput) {
+    if (nbpInput === this._style.DEFAULT || nbpInput === '' || nbpInput === undefined) {
+      this.nbpAlertBoxTextColor = this.nbpColor.DEFAULT;
+    }
+    if (nbpInput === this._style.PRIMARY) {
+      this.nbpAlertBoxTextColor =  this.nbpColor.PRIMARY;
+    }
+    if (nbpInput === this._style.DANGER) {
+      this.nbpAlertBoxTextColor =  this.nbpColor.TOMATO;
+    }
+    if (nbpInput === this._style.WHITE) {
+      this.nbpAlertBoxTextColor =  this.nbpColor.WHITE;
+    }
   }
 
   nbpGetColorBoxAlert(nbpInput) {
