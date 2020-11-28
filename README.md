@@ -41,7 +41,11 @@ The component accepts the following parameters:
 4. `nbpColorStyle`: The color text in allert (DEFAULT, PRIMARY, DANGER,...)
 4. `nbpClickClose`: Event emitter to close modal (in this case, nbpClose will be true)
 
-
+## 5. NbpFeedbackComponent
+The component accepts the following parameters:
+1. `nbpTitle`: The title to display in feedback
+2. `nbpMessage`: The message to display in feedback
+3. `nbpFeedbackType`: The type of feedback (SUCCESS, WARNING, ERROR)
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 

@@ -61,9 +61,13 @@
   <nbp-alert-box *ngIf="!nbpAlertClose"
     [nbpText]="component.NbpAlertBoxComponent.title"
     [nbpClose]="'true'"
-    [nbpColorStyle]="_style.PRIMARY"
+    [nbpColorStyle]="_style.DEFAULT"
     (nbpClickClose)="nbpOnClickClose($event)"
   ></nbp-alert-box>
+  <nbp-feedback *ngIf="nbpAlertClose"
+    [nbpTitle]="component.NbpFeedbackComponent.title"
+    [nbpMessage]="component.NbpFeedbackComponent.message"
+  ></nbp-feedback>
   <br />
 
   <nbp-dividing-line
@@ -133,6 +137,11 @@
         [nbpDisabled]="true"
       ></nbp-button>
     </div>
+    <nbp-feedback
+      [nbpTitle]="component.NbpFeedbackComponent.title"
+      [nbpMessage]="component.NbpFeedbackComponent.message"
+      [nbpFeedbackType]="_alert.WARNING"
+    ></nbp-feedback>
   </div>
   <nbp-alert-box 
     [nbpText]="component.NbpAlertBoxComponent.title"
