@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-dividing-line',
@@ -17,6 +18,8 @@ export class NbpDividingLineComponent implements OnInit {
 
   @Output() nbpOnClickCta: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  _style = NbpStyle;
+  
   nbpDividingLine: string;
   nbpDividingLineColorTitle: string;
   nbpSeparator: string = ' ';
@@ -54,13 +57,13 @@ export class NbpDividingLineComponent implements OnInit {
   }
 
   nbpGetColorClass(nbpInput) {
-    if (nbpInput === 'DEFAULT' || nbpInput === '' || nbpInput === undefined) {
+    if (nbpInput === this._style.DEFAULT || nbpInput === '' || nbpInput === undefined) {
       return this.nbpColor.DEFAULT;
     }
-    if (nbpInput === 'PRIMARY') {
+    if (nbpInput === this._style.PRIMARY) {
       return this.nbpColor.PRIMARY;
     }
-    if (nbpInput === 'DANGER') {
+    if (nbpInput === this._style.DANGER) {
       return this.nbpColor.TOMATO;
     }
   }

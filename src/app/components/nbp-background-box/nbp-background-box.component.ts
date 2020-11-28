@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NbpFontSize, NbpPipe, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-background-box',
@@ -15,6 +16,10 @@ export class NbpBackgroundBoxComponent implements OnInit {
   @Input() nbpTextTransform: string;
   @Input() nbpColorStyle: string;
 
+  _style = NbpStyle;
+  _pipe = NbpPipe;
+  _fontSize = NbpFontSize;
+  
   nbpBackgroundBox: string;
   nbpColorBox: string;
   nbpTitleBox: string;
@@ -60,61 +65,61 @@ export class NbpBackgroundBoxComponent implements OnInit {
   }
 
   nbpGetTextAlignClass() {
-    if (this.nbpTitlePosition === 'LEFT' || this.nbpTitlePosition === '' || this.nbpTitlePosition === undefined) {
+    if (this.nbpTitlePosition === this._style.LEFT || this.nbpTitlePosition === '' || this.nbpTitlePosition === undefined) {
       return this.nbpTextAlign.LEFT;
     }
-    if (this.nbpTitlePosition === 'CENTER') {
+    if (this.nbpTitlePosition === this._style.CENTER) {
       return this.nbpTextAlign.CENTER;
     }
-    if (this.nbpTitlePosition === 'RIGHT') {
+    if (this.nbpTitlePosition === this._style.RIGHT) {
       return this.nbpTextAlign.RIGHT;
     }
   }
 
   nbpGetBackgroundClass() {
-    if (this.nbpBackgroundStyle === 'DEFAULT' || this.nbpBackgroundStyle === '' || this.nbpBackgroundStyle === undefined) {
+    if (this.nbpBackgroundStyle === this._style.DEFAULT || this.nbpBackgroundStyle === '' || this.nbpBackgroundStyle === undefined) {
       return this.nbpBackground.DEFAULT;
     }
-    if (this.nbpBackgroundStyle === 'PRIMARY') {
+    if (this.nbpBackgroundStyle === this._style.PRIMARY) {
       return this.nbpBackground.PRIMARY;
     }
-    if (this.nbpBackgroundStyle === 'DANGER') {
+    if (this.nbpBackgroundStyle === this._style.DANGER) {
       return this.nbpBackground.TOMATO;
     }
   }
 
   nbpGetFontSizeClass() {
-    if (this.nbpFontSize === 'SMALL' || this.nbpFontSize === '' || this.nbpFontSize === undefined) {
+    if (this.nbpFontSize === this._fontSize.SMALL || this.nbpFontSize === '' || this.nbpFontSize === undefined) {
       return this.nbpSize.SMALL;
     }
-    if (this.nbpFontSize === 'MEDIUM') {
+    if (this.nbpFontSize === this._fontSize.MEDIUM) {
       return this.nbpSize.MEDIUM;
     }
-    if (this.nbpFontSize === 'LARGE') {
+    if (this.nbpFontSize === this._fontSize.LARGE) {
       return this.nbpSize.LARGE;
     }
   }
 
   nbpGetTextTransformClass() {
-    if (this.nbpTextTransform === 'LOWERCASE' || this.nbpTextTransform === '' || this.nbpTextTransform === undefined) {
+    if (this.nbpTextTransform === this._pipe.LOWERCASE || this.nbpTextTransform === '' || this.nbpTextTransform === undefined) {
       return this.nbpTransformText.LOWERCASE;
     }
-    if (this.nbpTextTransform === 'UPPERCASE') {
+    if (this.nbpTextTransform === this._pipe.UPPERCASE) {
       return this.nbpTransformText.UPPERCASE;
     }
   }
 
   nbpGetColorClass() {
-    if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
+    if (this.nbpColorStyle === this._style.DEFAULT || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
       return this.nbpColor.DEFAULT;
     }
-    if (this.nbpColorStyle === 'PRIMARY') {
+    if (this.nbpColorStyle === this._style.PRIMARY) {
       return this.nbpColor.PRIMARY;
     }
-    if (this.nbpColorStyle === 'DANGER') {
+    if (this.nbpColorStyle === this._style.DANGER) {
       return this.nbpColor.TOMATO;
     }
-    if (this.nbpColorStyle === 'WHITE') {
+    if (this.nbpColorStyle === this._style.WHITE) {
       return this.nbpColor.WHITE;
     }
   }
