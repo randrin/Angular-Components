@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NbpAlertType } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-alert-box',
@@ -14,6 +15,8 @@ export class NbpAlertBoxComponent implements OnInit {
 
   @Output() nbpClickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  _alertType = NbpAlertType;
+  
   nbpAlertBoxType: string;
   nbpAlertBoxIcon: string;
   nbpAlertBoxBackground: string;
@@ -54,27 +57,27 @@ export class NbpAlertBoxComponent implements OnInit {
   }
 
   nbpGetColorBoxAlert(nbpInput) {
-    if (nbpInput === 'GENERIC' || nbpInput === '' || nbpInput === undefined) {
+    if (nbpInput === this._alertType.GENERIC || nbpInput === '' || nbpInput === undefined) {
       this.nbpAlertBoxIcon = this.nbpIcon.GENERIC;
       this.nbpAlertBoxType = this.nbpBorder.GENERIC;
       this.nbpAlertBoxBackground = this.nbpBackground.GENERIC;
     }
-    if (nbpInput === 'POSITIVE') {
+    if (nbpInput === this._alertType.POSITIVE) {
       this.nbpAlertBoxIcon = this.nbpIcon.POSITIVE;
       this.nbpAlertBoxType = this.nbpBorder.POSITIVE;
       this.nbpAlertBoxBackground = this.nbpBackground.POSITIVE;
     }
-    if (nbpInput === 'PROMOTIONAL') {
+    if (nbpInput === this._alertType.PROMOTIONAL) {
       this.nbpAlertBoxIcon = this.nbpIcon.PROMOTIONAL;
       this.nbpAlertBoxType = this.nbpBorder.PROMOTIONAL;
       this.nbpAlertBoxBackground = this.nbpBackground.PROMOTIONAL;
     }
-    if (nbpInput === 'WARNING') {
+    if (nbpInput === this._alertType.WARNING) {
       this.nbpAlertBoxIcon = this.nbpIcon.WARNING;
       this.nbpAlertBoxType = this.nbpBorder.WARNING;
       this.nbpAlertBoxBackground = this.nbpBackground.WARNING;
     }
-    if (nbpInput === 'ERROR') {
+    if (nbpInput === this._alertType.ERROR) {
       this.nbpAlertBoxIcon = this.nbpIcon.ERROR;
       this.nbpAlertBoxType = this.nbpBorder.ERROR;
       this.nbpAlertBoxBackground = this.nbpBackground.ERROR;
