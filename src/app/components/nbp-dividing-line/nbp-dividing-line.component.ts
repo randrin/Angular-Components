@@ -23,6 +23,13 @@ export class NbpDividingLineComponent implements OnInit {
   nbpCtaText: string;
   nbpShowHide: boolean = false;
 
+  nbpColor = {
+    DEFAULT: 'npb-color-default',
+    PRIMARY: 'npb-color-primary',
+    TOMATO: 'npb-color-tomato',
+    WHITE: 'npb-color-white'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -48,13 +55,13 @@ export class NbpDividingLineComponent implements OnInit {
 
   nbpGetColorClass(nbpInput) {
     if (nbpInput === 'DEFAULT' || nbpInput === '' || nbpInput === undefined) {
-      return 'npb-color-default';
+      return this.nbpColor.DEFAULT;
     }
     if (nbpInput === 'PRIMARY') {
-      return 'npb-color-primary';
+      return this.nbpColor.PRIMARY;
     }
     if (nbpInput === 'DANGER') {
-      return 'npb-color-tomato';
+      return this.nbpColor.TOMATO;
     }
   }
 

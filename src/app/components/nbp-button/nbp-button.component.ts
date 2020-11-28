@@ -16,6 +16,19 @@ export class NbpButtonComponent implements OnInit {
   nbpButton: string;
   nbpSeparator: string = ' ';
 
+  nbpButtonType = {
+    DEFAULT: 'npb-button-default',
+    PRIMARY: 'npb-button-primary',
+    DANGER: 'npb-button-danger',
+    ROUNDED: 'npb-button-rounded',
+    OUTLINE_DEFAULT: 'npb-button-outline-default',
+    OUTLINE_PRIMARY: 'npb-button-outline-primary',
+    OUTLINE_DANGER: 'npb-button-outline-danger',
+    SMALL: 'npb-button-small',
+    MEDIUM: 'npb-button-medium',
+    LARGE: 'npb-button-large'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,43 +41,42 @@ export class NbpButtonComponent implements OnInit {
 
   nbpGetColorClass() {
     if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
-      return 'npb-button-default';
+      return this.nbpButtonType.DEFAULT;
     }
     if (this.nbpColorStyle === 'PRIMARY') {
-      return 'npb-button-primary';
+      return this.nbpButtonType.PRIMARY;
     }
     if (this.nbpColorStyle === 'DANGER') {
-      return 'npb-button-danger';
+      return this.nbpButtonType.DANGER;
     }
   }
 
   nbpGetStyleClass() {
     if (this.nbpStyleType === 'ROUNDED') {
-      return 'npb-button-rounded';
+      return this.nbpButtonType.ROUNDED;
     }
     if (this.nbpStyleType === 'OUTLINE') {
       if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
-        return 'npb-button-outline-default';
+        return this.nbpButtonType.OUTLINE_DEFAULT;
       }
       if (this.nbpColorStyle === 'PRIMARY') {
-        return 'npb-button-outline-primary';
+        return this.nbpButtonType.OUTLINE_PRIMARY;
       }
       if (this.nbpColorStyle === 'DANGER') {
-        return 'npb-button-outline-danger';
+        return this.nbpButtonType.OUTLINE_DANGER;
       }
     }
   }
 
   nbpGetSizeClass() {
     if (this.nbpSize === 'SM' || this.nbpSize === '' || this.nbpSize === undefined) {
-      return 'npb-button-small';
+      return this.nbpButtonType.SMALL;
     }
     if (this.nbpSize === 'MD') {
-      return 'npb-button-medium';
+      return this.nbpButtonType.MEDIUM;
     }
     if (this.nbpSize === 'LG') {
-      return 'npb-button-large';
+      return this.nbpButtonType.LARGE;
     }
   }
-
 }

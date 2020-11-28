@@ -20,6 +20,36 @@ export class NbpBackgroundBoxComponent implements OnInit {
   nbpTitleBox: string;
   nbpSeparator: string = ' ';
 
+  nbpBackground = {
+    DEFAULT: 'npb-background-default',
+    PRIMARY: 'npb-background-primary',
+    TOMATO: 'npb-background-tomato'
+  }
+
+  nbpSize = {
+    SMALL: 'npb-font-size-18',
+    MEDIUM: 'npb-font-size-24',
+    LARGE: 'npb-font-size-32'
+  }
+
+  nbpTextAlign = {
+    LEFT: 'npb-text-align-left',
+    CENTER: 'npb-text-align-center',
+    RIGHT: 'npb-text-align-right'
+  }
+
+  nbpTransformText = {
+    LOWERCASE: 'npb-text-lowercase',
+    UPPERCASE: 'npb-text-uppercase'
+  }
+
+  nbpColor = {
+    DEFAULT: 'npb-color-default',
+    PRIMARY: 'npb-color-primary',
+    TOMATO: 'npb-color-tomato',
+    WHITE: 'npb-color-white'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -31,61 +61,61 @@ export class NbpBackgroundBoxComponent implements OnInit {
 
   nbpGetTextAlignClass() {
     if (this.nbpTitlePosition === 'LEFT' || this.nbpTitlePosition === '' || this.nbpTitlePosition === undefined) {
-      return 'npb-text-align-left';
+      return this.nbpTextAlign.LEFT;
     }
     if (this.nbpTitlePosition === 'CENTER') {
-      return 'npb-text-align-center';
+      return this.nbpTextAlign.CENTER;
     }
     if (this.nbpTitlePosition === 'RIGHT') {
-      return 'npb-text-align-right';
+      return this.nbpTextAlign.RIGHT;
     }
   }
 
   nbpGetBackgroundClass() {
     if (this.nbpBackgroundStyle === 'DEFAULT' || this.nbpBackgroundStyle === '' || this.nbpBackgroundStyle === undefined) {
-      return 'npb-background-default';
+      return this.nbpBackground.DEFAULT;
     }
     if (this.nbpBackgroundStyle === 'PRIMARY') {
-      return 'npb-background-primary';
+      return this.nbpBackground.PRIMARY;
     }
     if (this.nbpBackgroundStyle === 'DANGER') {
-      return 'npb-background-tomato';
+      return this.nbpBackground.TOMATO;
     }
   }
 
   nbpGetFontSizeClass() {
     if (this.nbpFontSize === 'SMALL' || this.nbpFontSize === '' || this.nbpFontSize === undefined) {
-      return 'npb-font-size-18';
+      return this.nbpSize.SMALL;
     }
     if (this.nbpFontSize === 'MEDIUM') {
-      return 'npb-font-size-24';
+      return this.nbpSize.MEDIUM;
     }
     if (this.nbpFontSize === 'LARGE') {
-      return 'npb-font-size-32';
+      return this.nbpSize.LARGE;
     }
   }
 
   nbpGetTextTransformClass() {
     if (this.nbpTextTransform === 'LOWERCASE' || this.nbpTextTransform === '' || this.nbpTextTransform === undefined) {
-      return 'npb-text-lowercase';
+      return this.nbpTransformText.LOWERCASE;
     }
     if (this.nbpTextTransform === 'UPPERCASE') {
-      return 'npb-text-uppercase';
+      return this.nbpTransformText.UPPERCASE;
     }
   }
 
   nbpGetColorClass() {
     if (this.nbpColorStyle === 'DEFAULT' || this.nbpColorStyle === '' || this.nbpColorStyle === undefined) {
-      return 'npb-color-default';
+      return this.nbpColor.DEFAULT;
     }
     if (this.nbpColorStyle === 'PRIMARY') {
-      return 'npb-color-primary';
+      return this.nbpColor.PRIMARY;
     }
     if (this.nbpColorStyle === 'DANGER') {
-      return 'npb-color-tomato';
+      return this.nbpColor.TOMATO;
     }
     if (this.nbpColorStyle === 'WHITE') {
-      return 'npb-color-white';
+      return this.nbpColor.WHITE;
     }
   }
 }
