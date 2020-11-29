@@ -16,6 +16,7 @@ export class AppComponent {
 
   nbpShowPrimaryButtons: boolean;
   nbpAlertClose: boolean;
+  model: string;
 
   title = 'Angular Components';
 
@@ -48,9 +49,23 @@ export class AppComponent {
     NbpFeedbackComponent: {
       title: 'Feedback Title',
       message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    },
+    NbpInputTextComponent: {
+      label1: 'First Name',
+      label2: 'Last Name',
+      name: 'firstName',
+      value: 'Mario Rossi',
+      required: 'true',
+      requiredMessage: 'The first name is required',
+      placeholder: 'Insert your name',
+      icon1: 'fa fa-search',
+      icon2: 'fa fa-user'
     }
   }
 
+  nbpInputModel(event) {
+    this.model = event;
+  }
 
   nbpOnClickCta(event) {
     console.log('{nbpOnClickCta}: ', event);

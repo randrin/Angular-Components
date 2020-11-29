@@ -5,6 +5,48 @@
       <h1 class="my-4">Welcome to {{ title }}!</h1>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="component.NbpInputTextComponent.label1"
+      [nbpInputLabelRequired]="component.NbpInputTextComponent.required"
+      [nbpInputRequired]="'true'"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="component.NbpInputTextComponent.icon1"
+      [nbpInputIconRequired]="'true'"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    {{model}}
+    </div>
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputName]="component.NbpInputTextComponent.name"
+      [nbpInputValue]="component.NbpInputTextComponent.value"
+      [nbpInputLabel]="component.NbpInputTextComponent.label1"
+      [nbpInputLabelRequired]="component.NbpInputTextComponent.required"
+      [nbpInputErrorMessage]="component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="component.NbpInputTextComponent.icon1"
+      [nbpInputDisabled]="'true'"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="component.NbpInputTextComponent.label2"
+      [nbpInputLabelRequired]="component.NbpInputTextComponent.required"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="component.NbpInputTextComponent.icon2"
+      [nbpInputIconRequired]="'true'"
+    ></nbp-input-text>
+    </div>
+  </div>
 
   <nbp-dividing-line
     [nbpTitle]="component.NbpDividingLineComponent.nbpTitle"

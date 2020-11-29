@@ -30,3 +30,11 @@ $(document).ready(function () {
     $nbpAlertBoxWrapper.addClass("nbp-display-none");
   });
 });
+
+// NbpInputTextComponent
+$(document).ready(function () {
+  var $nbpInputTextWrapper = $("#nbp-input");
+  $nbpInputTextWrapper.on('focusout', function() {
+    console.log('$nbpInputTextWrapper: ', $nbpInputTextWrapper.value);
+  });
+});
