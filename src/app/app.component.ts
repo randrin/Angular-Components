@@ -53,7 +53,8 @@ export class AppComponent {
     NbpInputTextComponent: {
       label1: 'First Name',
       label2: 'Last Name',
-      name: 'Mario Rossi',
+      name: 'firstName',
+      value: 'Mario Rossi',
       required: 'true',
       requiredMessage: 'The first name is required',
       placeholder: 'Insert your name',

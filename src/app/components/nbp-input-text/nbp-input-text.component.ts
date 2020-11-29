@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -6,11 +6,12 @@ import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
   templateUrl: './nbp-input-text.component.html',
   styleUrls: ['./nbp-input-text.component.scss']
 })
-export class NbpInputTextComponent implements OnInit {
+export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() nbpInputLabel: string;
   @Input() nbpInputLabelRequired: boolean;
   @Input() nbpInputName: string;
+  @Input() nbpInputValue: string;
   @Input() nbpInputRequired: boolean;
   @Input() nbpInputDisabled: boolean;
   @Input() nbpInputBorderType: string;
@@ -47,11 +48,26 @@ export class NbpInputTextComponent implements OnInit {
 
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    // console.log('ngOnChanges: ', changes.nbpInputValue.currentValue);
+    if(this.nbpInputDisabled) {
+      this.nbpModel = this.nbpInputValue.length ? this.nbpInputValue : '';
+    }
+    
+  }
+
   ngOnInit(): void {
     this.nbpSetUpComponent();
   }
 
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy');
+    
+    this.nbpModel = '';
+  }
+
   nbpSetUpComponent() {
+    
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpGetClasses();
   }
@@ -89,6 +105,10 @@ export class NbpInputTextComponent implements OnInit {
     this.nbpModel = '';
     this.nbpIsDigitText = false;
     this.nbpInputModel.emit(this.nbpModel);
+    if (this.nbpInputRequired) {
+      this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpBorder.ERROR;
+      this.nbpErrorMessage = true;
+    }
   }
 
 }
