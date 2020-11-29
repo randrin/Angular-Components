@@ -1,0 +1,24 @@
+<div class="nbp-input-text-wrapper">
+  <div class="nbp-input-text-container">
+    <label *ngIf="nbpInputLabelRequired" for="nbpInputName" class="nbp-input-text-label">{{nbpInputLabel}} <span *ngIf="nbpInputRequired" class="npb-color-tomato ml-1">*</span></label>
+    <div class="nbp-input-text">
+      <input id="nbp-input" 
+        [(ngModel)]="nbpModel" 
+        (keyup)="nbpInputKeyUp()" 
+        [name]="nbpInputName"
+        [ngClass]="nbpInput" 
+        (focusout)="nbpInputFocusOut()" 
+        class="form-control nbp-form-control"
+        [type]="nbpInputType" 
+        [placeholder]="nbpInputPlaceholder" 
+        [disabled]="nbpInputDisabled"
+        [required]="nbpInputRequired" />
+      <i class="nbp-input-text-icon" [ngClass]="nbpInputIcon" *ngIf="!nbpIsDigitText && nbpInputIconRequired"></i>
+      <i class="nbp-input-text-clean-icon" [ngClass]="nbpCleanInput" *ngIf="nbpIsDigitText"
+        (click)="nbpInputOnClean()"></i>
+    </div>
+    <div class="nbp-input-text-error-message" *ngIf="nbpErrorMessage">
+      <span class="nbp-input-text-alert">{{nbpInputErrorMessage}}</span>
+    </div>
+  </div>
+</div>

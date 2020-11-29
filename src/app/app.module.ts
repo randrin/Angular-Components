@@ -9,6 +9,8 @@ import { NbpButtonComponent } from './components/nbp-button/nbp-button.component
 import { NbpAlertBoxComponent } from './components/nbp-alert-box/nbp-alert-box.component';
 import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-top.component';
 import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.component';
+import { NbpInputTextComponent } from './components/nbp-input-text/nbp-input-text.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.com
     NbpButtonComponent,
     NbpAlertBoxComponent,
     NbpScrollTopComponent,
-    NbpFeedbackComponent
+    NbpFeedbackComponent,
+    NbpInputTextComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
