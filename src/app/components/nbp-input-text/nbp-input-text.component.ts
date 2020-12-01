@@ -43,7 +43,8 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   nbpTypeInput = {
-    ROUNDED: 'npb-rounded'
+    ROUNDED: 'npb-rounded',
+    CURSOR: 'nbp-cursor-not-allowed'
   }
 
   constructor() { }
@@ -73,7 +74,8 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   nbpGetClasses() {
-    this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
+    this.nbpInput = this.nbpInputDisabled ? this.nbpTypeInput.CURSOR : '';
+    this.nbpInput = this.nbpInput + this.nbpSeparator + this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
     this.nbpInputModel.emit(this.nbpModel);
   }
 
