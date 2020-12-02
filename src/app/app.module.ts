@@ -11,6 +11,7 @@ import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-to
 import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.component';
 import { NbpInputTextComponent } from './components/nbp-input-text/nbp-input-text.component';
 import { FormsModule } from '@angular/forms';
+import { NbpTextareaComponent } from './components/nbp-textarea/nbp-textarea.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NbpAlertBoxComponent,
     NbpScrollTopComponent,
     NbpFeedbackComponent,
-    NbpInputTextComponent
+    NbpInputTextComponent,
+    NbpTextareaComponent
   ],
   imports: [
     BrowserModule,
