@@ -60,6 +60,15 @@ export class AppComponent {
       placeholder: 'Insert your name',
       icon1: 'fa fa-search',
       icon2: 'fa fa-user'
+    },
+    NbpTextareaComponent: {
+      label1: 'Description First Name',
+      label2: 'Description Last Name',
+      rows: 8,
+      name: 'description',
+      required: 'true',
+      requiredMessage: 'The description name is required',
+      placeholder: 'Insert the description name',
     }
   }
 

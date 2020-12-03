@@ -5,7 +5,34 @@
       <h1 class="my-4">Welcome to {{ title }}!</h1>
     </div>
   </div>
-  <nbp-textarea></nbp-textarea>
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home Component</a></li>
+    </ul>
+  </nav> 
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-textarea
+        [nbpTextareaLabel]="component.NbpTextareaComponent.label1"
+        [nbpTextareaLabelRequired]="component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="'true'"
+        [nbpTextareaPlaceholder]="component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="component.NbpTextareaComponent.requiredMessage"
+        ></nbp-textarea>
+    </div>
+    <div class="col-md-6">
+      <nbp-textarea
+        [nbpTextareaLabel]="component.NbpTextareaComponent.label2"
+        [nbpTextareaLabelRequired]="component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="'true'"
+        [nbpTextareaPlaceholder]="component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="component.NbpTextareaComponent.requiredMessage"
+        [nbpTextareaDisabled]="'true'"
+        ></nbp-textarea>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-6">
       <nbp-input-text
