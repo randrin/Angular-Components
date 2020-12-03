@@ -1,5 +1,37 @@
-.nbp-input-textarea-wrapper {
-  .nbp-input-textarea-container {
-
+.nbp-textarea-wrapper {
+  .nbp-textarea-container {
+    .nbp-textarea-text-label {
+      display: inline-flex;
+      font-weight: 600;
+      line-height: 1.0625rem !important;
+      margin: 10px !important;
+      font-size: 1.125em !important;
+    }
+    .nbp-form-control {
+      padding: 0.625rem 1.4375rem;
+      border-width: 0.0625rem;
+      border-style: solid;
+      font-size: 1rem;
+      color: var(--nbp-secondary);
+      border-color: var(--nbp-secondary);
+      &:focus {
+        border-width: 0.125rem;
+        border-style: solid;
+        outline: 0;
+        box-shadow: none !important;
+        border-color: var(--nbp-primary);
+      }
+    }
+    .nbp-textarea {
+      position: relative;
+    }
+    .nbp-textarea-error-message {
+      font-size: 0.875em;
+      margin-top: 0.7em;
+      margin-bottom: 0.7em;
+      opacity: 1;
+      transition: all ease-out 0.25s;
+      color: var(--nbp-tomato);
+    }
   }
 }

@@ -18,7 +18,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   @Input() nbpInputIcon: string;
   @Input() nbpInputIconRequired: boolean;
   @Input() nbpInputPlaceholder: string;
-  @Input() nbpInputType: string = 'text';
+  @Input() nbpInputType: string;
   @Input() nbpInputErrorMessage: string;
 
   @Output() nbpInputModel: EventEmitter<string> = new EventEmitter<string>();
@@ -33,6 +33,10 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   nbpIsDigitText: boolean = false;
   nbpCleanInput: string = 'fa fa-times-circle';
   nbpSeparator: string = ' ';
+
+  nbpInputDefault = {
+    type: 'text'
+  }
 
   nbpBorder = {
     GENERIC: 'npb-border-default',
@@ -68,7 +72,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   nbpSetUpComponent() {
-    
+    this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.type : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpGetClasses();
   }
@@ -92,7 +96,6 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
       this.nbpGetClasses();
     }
-
   }
 
   nbpInputFocusOut() {
