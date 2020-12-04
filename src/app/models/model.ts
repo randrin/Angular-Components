@@ -1,27 +1,4 @@
-import { Component } from '@angular/core';
-import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from '../assets/utils/nbp-commons/nbp-commons.enums';
-import { Model } from './models/model';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-
-  title = 'Angular Components';
-
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  nbpShowPrimaryButtons: boolean;
-  nbpAlertClose: boolean;
-  model: string;
-
+export class Model {
   component = {
     NbpButtonComponent: {
       label: 'Button',
@@ -72,19 +49,5 @@ export class AppComponent {
       requiredMessage: 'The description name is required',
       placeholder: 'Insert the description name',
     }
-  }
-
-  nbpInputModel(event) {
-    this.model = event;
-  }
-
-  nbpOnClickCta(event) {
-    console.log('{nbpOnClickCta}: ', event);
-    this.nbpShowPrimaryButtons = event;
-  }
-
-  nbpOnClickClose(event) {
-    console.log('{nbpOnClickClose}: ', this.nbpAlertClose);
-    this.nbpAlertClose = event;
   }
 }
