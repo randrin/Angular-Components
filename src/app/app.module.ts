@@ -13,6 +13,7 @@ import { NbpInputTextComponent } from './components/nbp-input-text/nbp-input-tex
 import { FormsModule } from '@angular/forms';
 import { NbpTextareaComponent } from './components/nbp-textarea/nbp-textarea.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ComposantsComponent } from './pages/composants/composants.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './pages/home/home.component';
     NbpFeedbackComponent,
     NbpInputTextComponent,
     NbpTextareaComponent,
-    HomeComponent
+    HomeComponent,
+    ComposantsComponent
   ],
   imports: [
     BrowserModule,
