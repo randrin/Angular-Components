@@ -11,6 +11,7 @@ export class NbpButtonComponent implements OnInit {
   @Input() nbpLabel: string;
   @Input() nbpColorStyle: string;
   @Input() nbpStyleType: string;
+  @Input() nbpButtonForm: string;
   @Input() nbpSize: string;
   @Input() nbpDisabled: boolean = false;
 
@@ -36,11 +37,22 @@ export class NbpButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.nbpGetClasses();
+    this.nbpSetUpComponent();
+  }
+
+  nbpSetUpComponent() {
+    this.nbpGetClasses()
   }
 
   nbpGetClasses() {
-    this.nbpButton = this.nbpGetColorClass() + this.nbpSeparator + this.nbpGetStyleClass() + this.nbpSeparator + this.nbpGetSizeClass();
+    this.nbpButton = this.nbpGetColorClass() + this.nbpSeparator + this.nbpGetStyleClass()
+     + this.nbpSeparator + this.nbpGetSizeClass() + this.nbpSeparator + this.nbpGetFormClass();
+  }
+
+  nbpGetFormClass() {
+    if(this.nbpButtonForm === this._style.ROUNDED) {
+      return this.nbpButtonType.ROUNDED;
+    }
   }
 
   nbpGetColorClass() {
