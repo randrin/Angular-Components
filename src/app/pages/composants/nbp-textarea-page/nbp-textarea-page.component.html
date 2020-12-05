@@ -1,0 +1,33 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-textarea
+        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label1"
+        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="'true'"
+        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
+        ></nbp-textarea>
+    </div>
+    <div class="col-md-6">
+      <nbp-textarea
+        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label2"
+        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="'true'"
+        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
+        [nbpTextareaDisabled]="'true'"
+        ></nbp-textarea>
+    </div>
+  </div>
+</div>

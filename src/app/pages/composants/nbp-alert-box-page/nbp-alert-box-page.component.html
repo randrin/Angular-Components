@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nbp-alert-box
+        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpClose]="'true'"
+        [nbpColorStyle]="_style.DEFAULT"
+        (nbpClickClose)="nbpOnClickClose($event)"
+      ></nbp-alert-box>
+      <nbp-alert-box 
+        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertType]="_alert.PROMOTIONAL"
+        ></nbp-alert-box>
+        <nbp-alert-box 
+          [nbpText]="_model.component.NbpAlertBoxComponent.title"
+          [nbpAlertType]="_alert.ERROR"
+          ></nbp-alert-box>
+    </div>
+  </div>
+</div>

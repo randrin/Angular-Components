@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
-@Component({
-  selector: 'app-composants',
-  templateUrl: './composants.component.html',
-  styleUrls: ['./composants.component.scss']
-})
-export class ComposantsComponent implements OnInit {
 
-  title = 'Nbp Composants';
+@Component({
+  selector: 'nbp-alert-box-page',
+  templateUrl: './nbp-alert-box-page.component.html',
+  styleUrls: ['./nbp-alert-box-page.component.scss']
+})
+export class NbpAlertBoxPageComponent implements OnInit {
+
+  title = 'Alert Box Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
@@ -18,19 +19,17 @@ export class ComposantsComponent implements OnInit {
   _alert = NbpAlertType;
   _model = new Model();
 
-  model: string;
-  hideNavigationMenu: boolean;
-
+  nbpAlertClose: boolean;
+  
   constructor() { }
 
   ngOnInit(): void {
-    this.hideNavigationMenu = !this.hideNavigationMenu;
   }
 
-
   // Functions
-  nbpInputModel(event) {
-    this.model = event;
+  nbpOnClickClose(event) {
+    console.log('{nbpOnClickClose}: ', this.nbpAlertClose);
+    this.nbpAlertClose = event;
   }
 
 }

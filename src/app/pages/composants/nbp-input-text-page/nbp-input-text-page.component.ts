@@ -3,13 +3,13 @@ import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'app-composants',
-  templateUrl: './composants.component.html',
-  styleUrls: ['./composants.component.scss']
+  selector: 'nbp-input-text-page',
+  templateUrl: './nbp-input-text-page.component.html',
+  styleUrls: ['./nbp-input-text-page.component.scss']
 })
-export class ComposantsComponent implements OnInit {
+export class NbpInputTextPageComponent implements OnInit {
 
-  title = 'Nbp Composants';
+  title = 'Input Text Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
@@ -19,12 +19,10 @@ export class ComposantsComponent implements OnInit {
   _model = new Model();
 
   model: string;
-  hideNavigationMenu: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.hideNavigationMenu = !this.hideNavigationMenu;
   }
 
 

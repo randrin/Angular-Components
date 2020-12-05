@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Model } from 'src/app/models/model';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'nbp-textarea-page',
+  templateUrl: './nbp-textarea-page.component.html',
+  styleUrls: ['./nbp-textarea-page.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class NbpTextareaPageComponent implements OnInit {
 
-  title = 'Nbp Home';
+  title = 'Textarea Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;

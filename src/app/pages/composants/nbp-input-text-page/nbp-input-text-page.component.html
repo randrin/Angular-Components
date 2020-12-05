@@ -1,0 +1,52 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label1"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputRequired]="'true'"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
+      [nbpInputIconRequired]="'true'"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    {{model}}
+    </div>
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputName]="_model.component.NbpInputTextComponent.name"
+      [nbpInputValue]="_model.component.NbpInputTextComponent.value"
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label1"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
+      [nbpInputDisabled]="'true'"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label2"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon2"
+      [nbpInputIconRequired]="'true'"
+    ></nbp-input-text>
+    </div>
+  </div>
+</div>
