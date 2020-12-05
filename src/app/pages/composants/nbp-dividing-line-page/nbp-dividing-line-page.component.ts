@@ -3,13 +3,13 @@ import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'app-composants',
-  templateUrl: './composants.component.html',
-  styleUrls: ['./composants.component.scss']
+  selector: 'nbp-dividing-line-page',
+  templateUrl: './nbp-dividing-line-page.component.html',
+  styleUrls: ['./nbp-dividing-line-page.component.scss']
 })
-export class ComposantsComponent implements OnInit {
+export class NbpDividingLinePageComponent implements OnInit {
 
-  title = 'Nbp Composants';
+  title = 'Dividing Line Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
@@ -18,19 +18,16 @@ export class ComposantsComponent implements OnInit {
   _alert = NbpAlertType;
   _model = new Model();
 
-  model: string;
-  hideNavigationMenu: boolean;
-
   constructor() { }
 
   ngOnInit(): void {
-    this.hideNavigationMenu = !this.hideNavigationMenu;
   }
 
 
   // Functions
-  nbpInputModel(event) {
-    this.model = event;
+  nbpOnClickCta(event) {
+    console.log('{nbpOnClickCta}: ', event);
+    // this.nbpShowPrimaryButtons = event;
   }
-
+  
 }

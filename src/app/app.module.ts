@@ -14,6 +14,13 @@ import { FormsModule } from '@angular/forms';
 import { NbpTextareaComponent } from './components/nbp-textarea/nbp-textarea.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ComposantsComponent } from './pages/composants/composants.component';
+import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
+import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
+import { NbpAlertBoxPageComponent } from './pages/composants/nbp-alert-box-page/nbp-alert-box-page.component';
+import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background-box-page/nbp-background-box-page.component';
+import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
+import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
+import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,14 @@ import { ComposantsComponent } from './pages/composants/composants.component';
     NbpInputTextComponent,
     NbpTextareaComponent,
     HomeComponent,
-    ComposantsComponent
+    ComposantsComponent,
+    NbpTextareaPageComponent,
+    NbpInputTextPageComponent,
+    NbpAlertBoxPageComponent,
+    NbpBackgroundBoxPageComponent,
+    NbpButtonPageComponent,
+    NbpDividingLinePageComponent,
+    NbpFeedbackPageComponent
   ],
   imports: [
     BrowserModule,

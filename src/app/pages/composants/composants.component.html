@@ -1,72 +1,44 @@
-<div class="container my-5">
-  <div class="row text-center">
-    <div class="col">
-      <h1 class="my-4">{{ title }}</h1>
+<div class="nbp-composants-wrapper">
+  <div class="container my-5" *ngIf="hideNavigationMenu">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <nbp-textarea
-        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label1"
-        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
-        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
-        [nbpTextareaRequired]="'true'"
-        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
-        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
-        ></nbp-textarea>
-    </div>
-    <div class="col-md-6">
-      <nbp-textarea
-        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label2"
-        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
-        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
-        [nbpTextareaRequired]="'true'"
-        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
-        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
-        [nbpTextareaDisabled]="'true'"
-        ></nbp-textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <nbp-input-text
-      [nbpInputLabel]="_model.component.NbpInputTextComponent.label1"
-      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
-      [nbpInputRequired]="'true'"
-      [nbpInputBorderType]="_style.ROUNDED"
-      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
-      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
-      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
-      [nbpInputIconRequired]="'true'"
-      (nbpInputModel)="nbpInputModel($event)"
-    ></nbp-input-text>
-    {{model}}
-    </div>
-    <div class="col-md-6">
-      <nbp-input-text
-      [nbpInputName]="_model.component.NbpInputTextComponent.name"
-      [nbpInputValue]="_model.component.NbpInputTextComponent.value"
-      [nbpInputLabel]="_model.component.NbpInputTextComponent.label1"
-      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
-      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
-      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
-      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
-      [nbpInputDisabled]="'true'"
-      (nbpInputModel)="nbpInputModel($event)"
-    ></nbp-input-text>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <nbp-input-text
-      [nbpInputLabel]="_model.component.NbpInputTextComponent.label2"
-      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
-      [nbpInputBorderType]="_style.ROUNDED"
-      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage"
-      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
-      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon2"
-      [nbpInputIconRequired]="'true'"
-    ></nbp-input-text>
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/dividing-line" routerLinkActive="active">Dividing Line</a>
+          </li>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/background-box" routerLinkActive="active">Background Box</a>
+          </li>
+          <li class="nbp-composants-link"> 
+            <a routerLink="/composants/feedback" routerLinkActive="active">Feedback Message</a>
+          </li>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/alert-box" routerLinkActive="active">Alerts Box</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/input-text" routerLinkActive="active">Input Text</a>
+          </li>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/button" routerLinkActive="active">Buttons</a>
+          </li>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/textarea" routerLinkActive="active">Textarea</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>

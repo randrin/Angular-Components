@@ -9,23 +9,23 @@
 }
 
 body {
-  background-color: var(--nbp-sliver);
+  background-color: var(--nbp-warm-gray-20);
 }
 
 .nbp-display-none {
   display: none !important;
 }
 
-
 .nbp-nav {
   ul {
     list-style-type: none;
     display: flex;
-    li { 
+    li {
       margin: 0 10px;
     }
   }
 
-.nbp-cursor-not-allowed {
-  cursor: not-allowed;
+  .nbp-cursor-not-allowed {
+    cursor: not-allowed;
+  }
 }

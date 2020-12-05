@@ -38,3 +38,16 @@ $(document).ready(function () {
     console.log('$nbpInputTextWrapper: ', $nbpInputTextWrapper.value);
   });
 });
+
+// ComposantsComponent
+$(document).ready(function () {
+  var $nbpComposantsWrapper = $(".nbp-composants-wrapper");
+  var $nbpComposantsLink = $(".nbp-composants-link");
+  var $nbpComposantsLinkMenu = $(".nbp-nav ul .nbp-composants-link");
+  $nbpComposantsLink.on('click', function() {
+    $nbpComposantsWrapper.addClass('nbp-display-none');
+  });
+  $nbpComposantsLinkMenu.on('click', function() {
+    $nbpComposantsWrapper.toggleClass('nbp-display-none');
+  });
+});

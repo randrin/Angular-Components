@@ -3,13 +3,13 @@ import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'app-composants',
-  templateUrl: './composants.component.html',
-  styleUrls: ['./composants.component.scss']
+  selector: 'nbp-feedback-page',
+  templateUrl: './nbp-feedback-page.component.html',
+  styleUrls: ['./nbp-feedback-page.component.scss']
 })
-export class ComposantsComponent implements OnInit {
+export class NbpFeedbackPageComponent implements OnInit {
 
-  title = 'Nbp Composants';
+  title = 'Feedback Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
@@ -18,19 +18,9 @@ export class ComposantsComponent implements OnInit {
   _alert = NbpAlertType;
   _model = new Model();
 
-  model: string;
-  hideNavigationMenu: boolean;
-
   constructor() { }
 
   ngOnInit(): void {
-    this.hideNavigationMenu = !this.hideNavigationMenu;
-  }
-
-
-  // Functions
-  nbpInputModel(event) {
-    this.model = event;
   }
 
 }

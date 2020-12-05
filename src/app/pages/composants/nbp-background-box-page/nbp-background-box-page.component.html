@@ -1,0 +1,41 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nbp-background-box
+        [nbpTitle]="_model.component.NbpBackgroundBoxComponent.title"
+        [nbpSubTitle]="_model.component.NbpBackgroundBoxComponent.subtitle"
+        [nbpFontSize]="_fontSize.MEDIUM"
+        [nbpTextTransform]="_pipe.UPPERCASE"
+      >
+      </nbp-background-box>
+      <nbp-background-box
+        [nbpBackgroundStyle]="_style.PRIMARY"
+        [nbpColorStyle]="_style.WHITE"
+        [nbpTitle]="_model.component.NbpBackgroundBoxComponent.title"
+        [nbpSubTitle]="_model.component.NbpBackgroundBoxComponent.subtitle"
+        [nbpTitlePosition]="_style.CENTER"
+        [nbpFontSize]="_fontSize.MEDIUM"
+        [nbpTextTransform]="_pipe.UPPERCASE"
+      >
+      </nbp-background-box>
+      <nbp-background-box
+        [nbpBackgroundStyle]="_style.DANGER"
+        [nbpColorStyle]="_style.WHITE"
+        [nbpTitle]="_model.component.NbpBackgroundBoxComponent.title"
+        [nbpSubTitle]="_model.component.NbpBackgroundBoxComponent.subtitle"
+        [nbpTitlePosition]="_style.RIGHT"
+        [nbpFontSize]="_fontSize.MEDIUM"
+        [nbpTextTransform]="_pipe.UPPERCASE"
+      >
+      </nbp-background-box>
+    </div>
+  </div>
+</div>
