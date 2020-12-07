@@ -21,6 +21,8 @@ import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
+import { NbpHeaderOneComponent } from './components/nbp-header-one/nbp-header-one.component';
+import { NbpFooterOneComponent } from './components/nbp-footer-one/nbp-footer-one.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/n
     NbpBackgroundBoxPageComponent,
     NbpButtonPageComponent,
     NbpDividingLinePageComponent,
-    NbpFeedbackPageComponent
+    NbpFeedbackPageComponent,
+    NbpHeaderOneComponent,
+    NbpFooterOneComponent
   ],
   imports: [
     BrowserModule,
