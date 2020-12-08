@@ -18,6 +18,27 @@
   }
 }
 
+// Primary with hover inverse
+.npb-button-primary-hover-inverse {
+  background: var(--nbp-primary) !important;
+  background-color: var(--nbp-primary) !important;
+  border-color: var(--nbp-primary) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-white) !important;
+    border-color: var(--nbp-primary) !important;
+    color: var(--nbp-primary) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-primary) !important;
+    border-color: var(--nbp-primary) !important;
+    color: var(--nbp-white) !important;
+  }
+}
+
 // Default
 .npb-button-default {
   background: var(--nbp-secondary) !important;

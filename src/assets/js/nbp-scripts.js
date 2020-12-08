@@ -51,3 +51,12 @@ $(document).ready(function () {
     $nbpComposantsWrapper.toggleClass('nbp-display-none');
   });
 });
+
+// NbpHeaderOneComponent
+$(document).ready(function () {
+  var $nbpHeaderOneWrapper = $(".nbp-header-one-wrapper").find('.nbp-header-one-profil-content'); 
+  var $nbpHeaderOneProfil = $(".nbp-header-one-profil");
+  $nbpHeaderOneProfil.on('click', function() {
+    $nbpHeaderOneWrapper.toggleClass('nbp-display-none');
+  });
+});
