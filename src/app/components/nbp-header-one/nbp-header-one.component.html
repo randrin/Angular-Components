@@ -1,1 +1,39 @@
-<p>nbp-header-one works!</p>
+<div class="nbp-header-one-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 nbp-header-one-left-section">
+        <label class="nbp-header-one-label">Project Name</label>
+        <p class="nbp-header-one-img"><img src="/assets/images/example-logo.png" alt="Logo Application" /></p>
+      </div>
+      <div class="col-md-3 nbp-header-one-right-section">
+        <div class="nbp-header-one-profil">
+          <span class="nbp-header-one-profil-firstname">R</span>
+          <span class="nbp-header-one-profil-lastname">N</span>
+        </div>
+        <span class="npb-font-size-12 npb-color-white ml-1">Profil</span>
+        <div class="nbp-header-one-profil-content nbp-display-none">
+          <div class="nbp-header-one-profil-triangle"></div>
+          <div class="nbp-header-one-profil-infos">
+            <div class="row">
+              <div class="nbp-header-one-profil-infos-items">
+                <span class="npb-font-size-14 nbp-font-bold">Randrin Nimpa</span>
+                <span class="npb-font-size-14 nbp-font-bold">U488575</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="nbp-header-one-profil-infos-items">
+                <span class="npb-font-size-14 nbp-font-bold">Expertise: IT Software</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="nbp-header-one-profil-infos-items">
+                <nbp-button [nbpLabel]="'Logout'" [nbpSize]="_size.SM" [nbpColorStyle]="_style.PRIMARY"
+                  [nbpStyleType]="_style.OUTLINE" (click)="logout()"></nbp-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
