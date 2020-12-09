@@ -26,33 +26,33 @@ export class NbpBackgroundBoxComponent implements OnInit {
   nbpSeparator: string = ' ';
 
   nbpBackground = {
-    DEFAULT: 'npb-background-default',
-    PRIMARY: 'npb-background-primary',
-    TOMATO: 'npb-background-tomato'
+    DEFAULT: 'nbp-background-default',
+    PRIMARY: 'nbp-background-primary',
+    TOMATO: 'nbp-background-tomato'
   }
 
   nbpSize = {
-    SMALL: 'npb-font-size-18',
-    MEDIUM: 'npb-font-size-24',
-    LARGE: 'npb-font-size-32'
+    SMALL: 'nbp-font-size-18',
+    MEDIUM: 'nbp-font-size-24',
+    LARGE: 'nbp-font-size-32'
   }
 
   nbpTextAlign = {
-    LEFT: 'npb-text-align-left',
-    CENTER: 'npb-text-align-center',
-    RIGHT: 'npb-text-align-right'
+    LEFT: 'nbp-text-align-left',
+    CENTER: 'nbp-text-align-center',
+    RIGHT: 'nbp-text-align-right'
   }
 
   nbpTransformText = {
-    LOWERCASE: 'npb-text-lowercase',
-    UPPERCASE: 'npb-text-uppercase'
+    LOWERCASE: 'nbp-text-lowercase',
+    UPPERCASE: 'nbp-text-uppercase'
   }
 
   nbpColor = {
-    DEFAULT: 'npb-color-default',
-    PRIMARY: 'npb-color-primary',
-    TOMATO: 'npb-color-tomato',
-    WHITE: 'npb-color-white'
+    DEFAULT: 'nbp-color-default',
+    PRIMARY: 'nbp-color-primary',
+    TOMATO: 'nbp-color-tomato',
+    WHITE: 'nbp-color-white'
   }
 
   constructor() { }

@@ -27,10 +27,10 @@ export class NbpDividingLineComponent implements OnInit {
   nbpShowHide: boolean = false;
 
   nbpColor = {
-    DEFAULT: 'npb-color-default',
-    PRIMARY: 'npb-color-primary',
-    TOMATO: 'npb-color-tomato',
-    WHITE: 'npb-color-white'
+    DEFAULT: 'nbp-color-default',
+    PRIMARY: 'nbp-color-primary',
+    TOMATO: 'nbp-color-tomato',
+    WHITE: 'nbp-color-white'
   }
 
   constructor() { }

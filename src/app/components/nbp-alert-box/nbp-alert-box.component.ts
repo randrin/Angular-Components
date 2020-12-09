@@ -33,26 +33,26 @@ export class NbpAlertBoxComponent implements OnInit {
   }
 
   nbpBorder = {
-    GENERIC: 'npb-border-default',
-    POSITIVE: 'npb-border-success',
-    PROMOTIONAL: 'npb-border-info',
-    WARNING: 'npb-border-warning',
-    ERROR: 'npb-border-danger'
+    GENERIC: 'nbp-border-default',
+    POSITIVE: 'nbp-border-success',
+    PROMOTIONAL: 'nbp-border-info',
+    WARNING: 'nbp-border-warning',
+    ERROR: 'nbp-border-danger'
   }
 
   nbpBackground = {
-    GENERIC: 'npb-background-generic',
-    POSITIVE: 'npb-background-success',
-    PROMOTIONAL: 'npb-background-info',
-    WARNING: 'npb-background-warning',
-    ERROR: 'npb-background-danger'
+    GENERIC: 'nbp-background-generic',
+    POSITIVE: 'nbp-background-success',
+    PROMOTIONAL: 'nbp-background-info',
+    WARNING: 'nbp-background-warning',
+    ERROR: 'nbp-background-danger'
   }
 
   nbpColor = {
-    DEFAULT: 'npb-color-default',
-    PRIMARY: 'npb-color-primary',
-    TOMATO: 'npb-color-tomato',
-    WHITE: 'npb-color-white'
+    DEFAULT: 'nbp-color-default',
+    PRIMARY: 'nbp-color-primary',
+    TOMATO: 'nbp-color-tomato',
+    WHITE: 'nbp-color-white'
   }
 
   constructor() { }
