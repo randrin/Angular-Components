@@ -7,6 +7,8 @@ export enum NbpStyleClasse {
   SUCCESS_HOVER = 'npb-button-success-hover',
   DANGER = 'npb-button-danger',
   DANGER_HOVER = 'npb-button-danger-hover',
+  WARNING = 'npb-button-warning',
+  WARNING_HOVER = 'npb-button-warning-hover',
   ROUNDED = 'npb-button-rounded',
   OUTLINE_DEFAULT = 'npb-button-outline-default',
   OUTLINE_DEFAULT_HOVER = 'npb-button-outline-default-hover',
@@ -16,6 +18,8 @@ export enum NbpStyleClasse {
   OUTLINE_PRIMARY_HOVER = 'npb-button-outline-primary-hover',
   OUTLINE_DANGER = 'npb-button-outline-danger',
   OUTLINE_DANGER_HOVER = 'npb-button-outline-danger-hover',
+  OUTLINE_WARNING = 'npb-button-outline-warning',
+  OUTLINE_WARNING_HOVER = 'npb-button-outline-warning-hover',
 }
 
 export enum NbpSizeClasse {

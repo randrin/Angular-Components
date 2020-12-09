@@ -154,6 +154,45 @@
   }
 }
 
+// Warning
+.npb-button-warning {
+  background-color: var(--nbp-warning) !important;
+  border-color: var(--nbp-warning) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-warning) !important;
+    border-color: var(--nbp-warning) !important;
+    color: var(--nbp-white) !important;
+  }
+}
+
+// Warning with hover inverse
+.npb-button-warning-hover {
+  background-color: var(--nbp-warning) !important;
+  border-color: var(--nbp-warning) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-white) !important;
+    border-color: var(--nbp-warning) !important;
+    color: var(--nbp-warning) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-warning) !important;
+    border-color: var(--nbp-warning) !important;
+    color: var(--nbp-white) !important;
+  }
+}
+
 // Rounded
 .npb-button-rounded {
   border-radius: 3.125rem !important;
@@ -277,6 +316,35 @@
     opacity: .5 !important;
     color: var(--nbp-white) !important;
     background-color: var(--nbp-tomato) !important;
+    border-color: var(--nbp-white) !important;
+  }
+}
+
+.npb-button-outline-warning {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-warning) !important;
+  color: var(--nbp-warning) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+
+.npb-button-outline-warning-hover {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-warning) !important;
+  color: var(--nbp-warning) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-warning) !important;
+    border-color: var(--nbp-white) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-warning) !important;
     border-color: var(--nbp-white) !important;
   }
 }
