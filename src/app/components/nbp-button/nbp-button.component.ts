@@ -53,6 +53,12 @@ export class NbpButtonComponent implements OnInit {
       case this._style.DEFAULTHOVER:
         return this._styleClasse.DEFAULT_HOVER;
         break;
+      case this._style.SUCCESS:
+        return this._styleClasse.SUCCESS;
+        break;
+      case this._style.SUCCESSHOVER:
+        return this._styleClasse.SUCCESS_HOVER;
+        break;
       case this._style.PRIMARY:
         return this._styleClasse.PRIMARY;
         break;
@@ -83,6 +89,12 @@ export class NbpButtonComponent implements OnInit {
             break;
           case this._style.DEFAULTHOVER:
             return this._styleClasse.OUTLINE_DEFAULT_HOVER;
+            break;
+          case this._style.SUCCESS:
+            return this._styleClasse.OUTLINE_SUCCESS;
+            break;
+          case this._style.SUCCESSHOVER:
+            return this._styleClasse.OUTLINE_SUCCESS_HOVER;
             break;
           case this._style.PRIMARY:
             return this._styleClasse.OUTLINE_PRIMARY;
