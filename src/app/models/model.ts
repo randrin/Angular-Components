@@ -2,6 +2,7 @@ export class Model {
   component = {
     NbpButtonComponent: {
       label: 'Button',
+      labelHover: 'Button Hover',
       cta: 'My Profil'
     },
     NbpDividingLineComponent: {

@@ -10,6 +10,7 @@ import { Model } from 'src/app/models/model';
 export class NbpButtonPageComponent implements OnInit {
 
   title = 'Button Page';
+  titleHover = 'Button Hover Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
