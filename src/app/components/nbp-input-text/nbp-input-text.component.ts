@@ -39,15 +39,15 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   nbpBorder = {
-    GENERIC: 'npb-border-default',
-    POSITIVE: 'npb-border-success',
-    PROMOTIONAL: 'npb-border-info',
-    WARNING: 'npb-border-warning',
-    ERROR: 'npb-border-danger'
+    GENERIC: 'nbp-border-default',
+    POSITIVE: 'nbp-border-success',
+    PROMOTIONAL: 'nbp-border-info',
+    WARNING: 'nbp-border-warning',
+    ERROR: 'nbp-border-danger'
   }
 
   nbpTypeInput = {
-    ROUNDED: 'npb-rounded',
+    ROUNDED: 'nbp-rounded',
     CURSOR: 'nbp-cursor-not-allowed'
   }
 

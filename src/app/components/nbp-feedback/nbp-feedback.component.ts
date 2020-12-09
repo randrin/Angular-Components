@@ -25,9 +25,9 @@ export class NbpFeedbackComponent implements OnInit {
   }
 
   nbpColor = {
-    SUCCESS: 'npb-color-success',
-    WARNING: 'npb-color-warning',
-    ERROR: 'npb-color-danger',
+    SUCCESS: 'nbp-color-success',
+    WARNING: 'nbp-color-warning',
+    ERROR: 'nbp-color-danger',
   }
 
   constructor() { }
