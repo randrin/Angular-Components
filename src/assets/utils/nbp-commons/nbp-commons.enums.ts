@@ -10,6 +10,7 @@
  */
 export enum NbpStyle {
   PRIMARY = 'PRIMARY',
+  PRIMARYHOVER = 'PRIMARYHOVER',
   DANGER = 'DANGER',
   WHITE = 'WHITE',
   SECONDARY = 'SECONDARY',

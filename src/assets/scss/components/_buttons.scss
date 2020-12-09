@@ -19,7 +19,7 @@
 }
 
 // Primary with hover inverse
-.npb-button-primary-hover-inverse {
+.npb-button-primary-hover {
   background: var(--nbp-primary) !important;
   background-color: var(--nbp-primary) !important;
   border-color: var(--nbp-primary) !important;
@@ -109,6 +109,24 @@
 
   &:hover {
     color: var(--nbp-white) !important;
+  }
+}
+
+.npb-button-outline-primary-hover {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-primary) !important;
+  color: var(--nbp-primary) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-primary) !important;
+    border-color: var(--nbp-white) !important;
+  }
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-primary) !important;
+    border-color: var(--nbp-white) !important;
   }
 }
 
