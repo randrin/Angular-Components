@@ -59,6 +59,27 @@
   }
 }
 
+// Default with hover inverse
+.npb-button-default-hover {
+  background: var(--nbp-secondary) !important;
+  background-color: var(--nbp-secondary) !important;
+  border-color: var(--nbp-secondary) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-white) !important;
+    border-color: var(--nbp-white) !important;
+    color: var(--nbp-secondary) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-secondary) !important;
+    border-color: var(--nbp-secondary) !important;
+  }
+}
+
 // Danger
 .npb-button-danger {
   background: var(--nbp-tomato) !important;
@@ -99,6 +120,25 @@
     color: var(--nbp-white) !important;
     background-color: var(--nbp-night-rider) !important;
     border-color: var(--nbp-night-rider) !important;
+  }
+}
+
+.npb-button-outline-default-hover {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-secondary) !important;
+  color: var(--nbp-secondary) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-secondary) !important;
+    border-color: var(--nbp-secondary) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-secondary) !important;
+    border-color: var(--nbp-secondary) !important;
   }
 }
 
