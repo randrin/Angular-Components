@@ -50,6 +50,9 @@ export class NbpButtonComponent implements OnInit {
       case this._style.DEFAULT:
         return this._styleClasse.DEFAULT;
         break;
+      case this._style.DEFAULTHOVER:
+        return this._styleClasse.DEFAULT_HOVER;
+        break;
       case this._style.PRIMARY:
         return this._styleClasse.PRIMARY;
         break;
@@ -58,6 +61,9 @@ export class NbpButtonComponent implements OnInit {
         break;
       case this._style.DANGER:
         return this._styleClasse.DANGER;
+        break;
+      case this._style.DANGERHOVER:
+        return this._styleClasse.DANGER_HOVER;
         break;
       default:
         return this._styleClasse.DEFAULT;
@@ -75,6 +81,9 @@ export class NbpButtonComponent implements OnInit {
           case this._style.DEFAULT:
             return this._styleClasse.OUTLINE_DEFAULT;
             break;
+          case this._style.DEFAULTHOVER:
+            return this._styleClasse.OUTLINE_DEFAULT_HOVER;
+            break;
           case this._style.PRIMARY:
             return this._styleClasse.OUTLINE_PRIMARY;
             break;
@@ -83,6 +92,9 @@ export class NbpButtonComponent implements OnInit {
             break;
           case this._style.DANGER:
             return this._styleClasse.OUTLINE_DANGER;
+            break;
+          case this._style.DANGERHOVER:
+            return this._styleClasse.OUTLINE_DANGER_HOVER;
             break;
           default:
             return this._styleClasse.OUTLINE_DEFAULT;
