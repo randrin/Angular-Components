@@ -27,12 +27,12 @@
       width: 2.91667em;
       height: 2.91667em;
       white-space: nowrap;
-      padding: 0.6em;
+      padding: 0.6em 0.7em;
       position: relative;
       .nbp-header-one-profil-firstname,
       .nbp-header-one-profil-lastname {
         text-transform: uppercase;
-        vertical-align: middle;
+        // vertical-align: middle;
       }
     }
     .nbp-header-one-profil-content {
@@ -59,6 +59,7 @@
         text-align: left;
         background-color: var(--nbp-black);
         color: var(--nbp-white);
+        z-index: 1;
         .nbp-header-one-profil-infos-items {
           display: grid;
           padding: 10px 15px;

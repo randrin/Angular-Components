@@ -23,6 +23,8 @@ import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-li
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 import { NbpHeaderOneComponent } from './components/nbp-header-one/nbp-header-one.component';
 import { NbpFooterOneComponent } from './components/nbp-footer-one/nbp-footer-one.component';
+import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component';
+import { NbpBreadcrumbComponent } from './components/nbp-breadcrumb/nbp-breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { NbpFooterOneComponent } from './components/nbp-footer-one/nbp-footer-on
     NbpDividingLinePageComponent,
     NbpFeedbackPageComponent,
     NbpHeaderOneComponent,
-    NbpFooterOneComponent
+    NbpFooterOneComponent,
+    NbpNavbarComponent,
+    NbpBreadcrumbComponent
   ],
   imports: [
     BrowserModule,

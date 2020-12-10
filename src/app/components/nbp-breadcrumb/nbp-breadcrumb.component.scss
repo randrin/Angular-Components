@@ -1,0 +1,13 @@
+.nbp-breadcrumb-wrapper {
+  margin: 5px 0;
+  .nbp-breadcrumb-navigation {
+    margin: 0px 3px;
+    font-weight: 500;
+    .nbp-breadcrumb-link {
+      &:hover {
+        text-decoration: none;
+        color: var(--nbp-secondary) !important;
+      }
+    }
+  }
+}
