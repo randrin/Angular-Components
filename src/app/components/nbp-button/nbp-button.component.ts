@@ -71,6 +71,12 @@ export class NbpButtonComponent implements OnInit {
       case this._style.DANGERHOVER:
         return this._styleClasse.DANGER_HOVER;
         break;
+      case this._style.WARNING:
+        return this._styleClasse.WARNING;
+        break;
+      case this._style.WARNINGHOVER:
+        return this._styleClasse.WARNING_HOVER;
+        break;
       default:
         return this._styleClasse.DEFAULT;
         break;
@@ -107,6 +113,12 @@ export class NbpButtonComponent implements OnInit {
             break;
           case this._style.DANGERHOVER:
             return this._styleClasse.OUTLINE_DANGER_HOVER;
+            break;
+          case this._style.WARNING:
+            return this._styleClasse.OUTLINE_WARNING;
+            break;
+          case this._style.WARNINGHOVER:
+            return this._styleClasse.OUTLINE_WARNING_HOVER;
             break;
           default:
             return this._styleClasse.OUTLINE_DEFAULT;
