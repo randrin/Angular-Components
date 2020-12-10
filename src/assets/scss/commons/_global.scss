@@ -24,8 +24,23 @@ body {
       margin: 0 10px;
     }
   }
+}
 
-  .nbp-cursor-not-allowed {
-    cursor: not-allowed;
-  }
+.nbp-cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.nbp-cursor-pointer {
+  cursor: pointer;
+}
+
+.nbp-text-decoration-none {
+  text-decoration: none;
+}
+
+.nbp-navbar-top-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }

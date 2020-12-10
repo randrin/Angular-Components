@@ -1,0 +1,26 @@
+.nbp-navbar-wrapper {
+  border-right-style: hidden;
+  border-left-style: hidden;
+  background: var(--nbp-white) 0% 0% no-repeat padding-box;
+  border-bottom: 1px solid var(--nbp-primary);
+  opacity: 1;
+  .nbp-navbar-container-items {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    .nbp-navbar-item {
+      cursor: pointer;
+      text-transform: uppercase;
+      margin: 0 10px;
+      font-weight: 700;
+      height: 30px;
+      .nbp-navbar-link {
+        text-decoration: none;
+        &:hover {
+          color: var(--nbp-secondary) !important;
+        }
+      }
+    }
+  }
+}

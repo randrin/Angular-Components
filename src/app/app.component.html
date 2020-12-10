@@ -1,38 +1,44 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nbp-header-one></nbp-header-one>
-<div class="container my-2">
-  <div class="row text-center">
-    <div class="col">
-      <h1 class="my-4">Welcome to {{ title }}</h1>
+<div class="nbp-app-wrapper">
+  <nbp-header-one></nbp-header-one>
+  <div class="container my-2">
+    <div class="row text-center">
+      <div class="col">
+        <h1 class="my-4">Welcome to {{ title }}</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <nav class="nbp-nav mt-5">
+        <ul>
+          <li class="nbp-composants-link">
+            <nbp-button
+              [nbpButtonForm]="_style.ROUNDED"
+              [nbpLabel]="'Home'"
+              [nbpSize]="_size.MD"
+              [nbpColorStyle]="_style.PRIMARY"
+              [nbpStyleType]="_style.OUTLINE"
+              routerLink="/home" 
+              routerLinkActive="active"
+            ></nbp-button>
+          </li>
+          <li class="nbp-composants-link">
+            <nbp-button
+              [nbpButtonForm]="_style.ROUNDED"
+              [nbpLabel]="'Composants'"
+              [nbpSize]="_size.MD"
+              [nbpColorStyle]="_style.PRIMARY"
+              [nbpStyleType]="_style.OUTLINE"
+              routerLink="/composants" 
+              routerLinkActive="active"
+            ></nbp-button>
+          </li>
+        </ul>
+      </nav> 
     </div>
   </div>
-  <div class="row justify-content-center">
-    <nav class="nbp-nav mt-5">
-      <ul>
-        <li class="nbp-composants-link">
-          <nbp-button
-            [nbpButtonForm]="_style.ROUNDED"
-            [nbpLabel]="'Home'"
-            [nbpSize]="_size.MD"
-            [nbpColorStyle]="_style.PRIMARY"
-            [nbpStyleType]="_style.OUTLINE"
-            routerLink="/home" 
-            routerLinkActive="active"
-          ></nbp-button></li>
-        <li class="nbp-composants-link">
-          <nbp-button
-            [nbpButtonForm]="_style.ROUNDED"
-            [nbpLabel]="'Composants'"
-            [nbpSize]="_size.MD"
-            [nbpColorStyle]="_style.PRIMARY"
-            [nbpStyleType]="_style.OUTLINE"
-            routerLink="/composants" 
-            routerLinkActive="active"
-          ></nbp-button></li>
-      </ul>
-    </nav> 
+  <div class="nbp-app-pages">
+    <router-outlet></router-outlet>
   </div>
+  <nbp-footer-one></nbp-footer-one>
+  <nbp-scroll-top></nbp-scroll-top>
 </div>
-<nbp-scroll-top></nbp-scroll-top>
-<router-outlet></router-outlet>
-<nbp-footer-one></nbp-footer-one>

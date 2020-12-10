@@ -1,0 +1,17 @@
+<div class="nbp-navbar-wrapper">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <ul class="nbp-navbar-container-items">
+          <li *ngFor="let item of items" class="nbp-navbar-item">
+            <a class="nbp-navbar-link nbp-font-size-14 nbp-color-primary"
+              [routerLink]="item.link" 
+              routerLinkActive="active"
+            >{{item.title}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<nbp-breadcrumb></nbp-breadcrumb>
