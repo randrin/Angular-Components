@@ -11,11 +11,11 @@ export class NbpDividingLineComponent implements OnInit {
 
   @Input() nbpTitle: string;
   @Input() nbpColorTitle: string;
-  @Input() nbpCta: boolean = false;
-  @Input() nbpUppercaseTitle: boolean = false;
+  @Input() nbpCta: boolean;
+  @Input() nbpUppercaseTitle: boolean;
   @Input() nbpCtaTextShow: string = '';
   @Input() nbpCtaTextHide: string = '';
-  @Input() nbpCtaReadOnly: boolean = false;
+  @Input() nbpCtaReadOnly: boolean;
   @Input() nbpColorStyle: string;
 
   @Output() nbpOnClickCta: EventEmitter<boolean> = new EventEmitter<boolean>();

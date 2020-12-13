@@ -5,6 +5,7 @@
         <nbp-dividing-line
           [nbpTitle]="title"
           [nbpColorStyle]="_style.DEFAULT"
+          [nbpUppercaseTitle]="true"
         ></nbp-dividing-line>
       </div>
     </div>
@@ -27,6 +28,9 @@
       </div>
       <div class="col-md-6">
         <ul>
+          <li class="nbp-composants-link">
+            <a routerLink="/composants/header" routerLinkActive="active">Headers Example</a>
+          </li>
           <li class="nbp-composants-link">
             <a routerLink="/composants/input-text" routerLinkActive="active">Input Text</a>
           </li>
