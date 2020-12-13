@@ -22,5 +22,9 @@ export class AppComponent {
 
   ngOnInit(): void {
   }
+
+  nbpCheckBoxModel(event) {
+    console.log(event);
+  }
   
 }

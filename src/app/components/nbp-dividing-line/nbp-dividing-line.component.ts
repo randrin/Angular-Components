@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpColorClasse, NbpTransformClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
+import { NbpColorClasse, NbpTextTransformClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -11,18 +11,18 @@ export class NbpDividingLineComponent implements OnInit {
 
   @Input() nbpTitle: string;
   @Input() nbpColorTitle: string;
-  @Input() nbpCta: boolean = false;
-  @Input() nbpUppercaseTitle: boolean = false;
+  @Input() nbpCta: boolean;
+  @Input() nbpUppercaseTitle: boolean;
   @Input() nbpCtaTextShow: string = '';
   @Input() nbpCtaTextHide: string = '';
-  @Input() nbpCtaReadOnly: boolean = false;
+  @Input() nbpCtaReadOnly: boolean;
   @Input() nbpColorStyle: string;
 
   @Output() nbpOnClickCta: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   _style = NbpStyle;
   _colorClasse = NbpColorClasse;
-  _transformClasse = NbpTransformClasse;
+  _transformClasse = NbpTextTransformClasse;
 
   nbpDividingLine: string;
   nbpDividingLineColorTitle: string;

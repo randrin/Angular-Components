@@ -6,6 +6,7 @@ import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
+import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
 import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
       { path: 'background-box', component: NbpBackgroundBoxPageComponent },
       { path: 'button', component: NbpButtonPageComponent },
       { path: 'alert-box', component: NbpAlertBoxPageComponent },
+      { path: 'header', component: NbpHeaderPageComponent },
     ]
   }
 ]

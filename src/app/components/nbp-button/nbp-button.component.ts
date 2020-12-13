@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NbpSizeClasse, NbpStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
+import { NbpButtonSizeClasse, NbpButtonStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -17,9 +17,9 @@ export class NbpButtonComponent implements OnInit {
   @Input() nbpDisabled: boolean = false;
 
   _style = NbpStyle;
-  _styleClasse = NbpStyleClasse;
+  _styleClasse = NbpButtonStyleClasse;
   _size = NbpSize;
-  _sizeClasse = NbpSizeClasse;
+  _sizeClasse = NbpButtonSizeClasse;
 
   nbpButton: string;
   nbpSeparator: string = ' ';

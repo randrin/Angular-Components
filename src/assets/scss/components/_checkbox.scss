@@ -1,0 +1,89 @@
+// Success
+.nbp-checkbox-success {
+  .checked {
+    background-color: var(--nbp-success) !important;
+    border-color: var(--nbp-success) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-success) !important;
+  }
+}
+
+// Primary
+.nbp-checkbox-primary {
+  .checked {
+    background-color: var(--nbp-primary) !important;
+    border-color: var(--nbp-primary) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-primary) !important;
+  }
+}
+
+// Info
+.nbp-checkbox-info {
+  .checked {
+    background-color: var(--nbp-info) !important;
+    border-color: var(--nbp-info) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-info) !important;
+  }
+}
+
+// Warning
+.nbp-checkbox-warning {
+  .checked {
+    background-color: var(--nbp-warning) !important;
+    border-color: var(--nbp-warning) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-warning) !important;
+  }
+}
+
+// Danger
+.nbp-checkbox-danger {
+  .checked {
+    background-color: var(--nbp-tomato) !important;
+    border-color: var(--nbp-tomato) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-tomato) !important;
+  }
+}
+
+// Default
+.nbp-checkbox-default {
+  .checked {
+    background-color: var(--nbp-secondary) !important;
+    border-color: var(--nbp-secondary) !important;
+    color: var(--nbp-white) !important;
+  }
+  .nbp-checkbox-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-secondary) !important;
+  }
+}
