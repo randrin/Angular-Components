@@ -95,6 +95,8 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
       this.nbpGetClasses();
+    } else {
+      this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
     }
   }
 

@@ -1,9 +1,18 @@
 <div class="nbp-header-one-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-9 nbp-header-one-left-section">
+      <div class="col-md-3 nbp-header-one-left-section">
         <label class="nbp-header-one-label">Project Name</label>
         <p class="nbp-header-one-img"><img src="/assets/images/example-logo.png" alt="Logo Application" /></p>
+      </div>
+      <div class="col-md-6">
+        <nbp-input-text
+        [nbpInputRequired]="false"
+        [nbpInputPlaceholder]="'Search'"
+        [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
+        [nbpInputIconRequired]="true"
+        (nbpInputModel)="nbpInputModel($event)"
+      ></nbp-input-text>
       </div>
       <div class="col-md-3 nbp-header-one-right-section">
         <div class="nbp-header-one-profil">

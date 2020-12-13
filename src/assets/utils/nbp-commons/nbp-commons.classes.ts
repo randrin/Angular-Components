@@ -27,3 +27,20 @@ export enum NbpSizeClasse {
   MEDIUM = 'nbp-button-medium',
   LARGE = 'nbp-button-large'
 }
+
+export enum NbpColorClasse {
+  DEFAULT = 'nbp-color-default',
+  SUCCESS = 'nbp-color-success',
+  PRIMARY = 'nbp-color-primary',
+  INFO = 'nbp-color-info',
+  DANGER = 'nbp-color-danger',
+  WARNING = 'nbp-color-warning',
+  TOMATO = 'nbp-color-tomato',
+  WHITE = 'nbp-color-white'
+}
+
+export enum NbpTransformClasse {
+  LOWERCASE = 'nbp-color-lowercase',
+  UPPERCASE = 'nbp-text-uppercase',
+  CAPITALIZE = 'nbp-text-capitalize'
+}

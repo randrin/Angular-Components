@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from 'src/app/models/model';
 import { NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -10,6 +11,9 @@ export class NbpHeaderOneComponent implements OnInit {
 
   _style = NbpStyle;
   _size = NbpSize;
+  _model = new Model();
+
+  model: string;
 
   constructor() { }
 
@@ -20,6 +24,10 @@ export class NbpHeaderOneComponent implements OnInit {
   // Functions
   logout() {
     console.log('{NbpHeaderOneComponent - logout}');
+  }
+
+  nbpInputModel(event) {
+    this.model = event;
   }
 
 }
