@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpColorClasse, NbpTransformClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
+import { NbpColorClasse, NbpTextTransformClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -22,7 +22,7 @@ export class NbpDividingLineComponent implements OnInit {
 
   _style = NbpStyle;
   _colorClasse = NbpColorClasse;
-  _transformClasse = NbpTransformClasse;
+  _transformClasse = NbpTextTransformClasse;
 
   nbpDividingLine: string;
   nbpDividingLineColorTitle: string;

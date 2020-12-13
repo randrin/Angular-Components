@@ -1,4 +1,4 @@
-export enum NbpStyleClasse {
+export enum NbpButtonStyleClasse {
   DEFAULT = 'nbp-button-default',
   DEFAULT_HOVER = 'nbp-button-default-hover',
   PRIMARY = 'nbp-button-primary',
@@ -22,7 +22,7 @@ export enum NbpStyleClasse {
   OUTLINE_WARNING_HOVER = 'nbp-button-outline-warning-hover',
 }
 
-export enum NbpSizeClasse {
+export enum NbpButtonSizeClasse {
   SMALL = 'nbp-button-small',
   MEDIUM = 'nbp-button-medium',
   LARGE = 'nbp-button-large'
@@ -39,8 +39,26 @@ export enum NbpColorClasse {
   WHITE = 'nbp-color-white'
 }
 
-export enum NbpTransformClasse {
-  LOWERCASE = 'nbp-color-lowercase',
+export enum NbpTextTransformClasse {
+  LOWERCASE = 'nbp-text-lowercase',
   UPPERCASE = 'nbp-text-uppercase',
   CAPITALIZE = 'nbp-text-capitalize'
+}
+
+export enum NbpCheckBoxStyleClasse {
+  DEFAULT = 'nbp-checkbox-default',
+  PRIMARY = 'nbp-checkbox-primary',
+  SUCCESS = 'nbp-checkbox-success',
+  DANGER = 'nbp-checkbox-danger',
+  WARNING = 'nbp-checkbox-warning',
+  INFO = 'nbp-checkbox-info',
+}
+
+export enum NbpOpacityClasse {
+  OPACITY_02 = 'nbp-opacity-02',
+  OPACITY_04 = 'nbp-opacity-04',
+  OPACITY_05 = 'nbp-opacity-05',
+  OPACITY_07 = 'nbp-opacity-07',
+  OPACITY_1 = 'nbp-opacity-1',
+  INFO = 'nbp-checkbox-info',
 }

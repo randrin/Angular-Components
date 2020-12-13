@@ -63,15 +63,27 @@ $(document).ready(function () {
 
 // NbpNavbarComponent
 $(document).ready(function () {
-  var $nbpNavbarsWrapper = $(".nbp-navbar-wrapper");
+  var $nbpNavbarWrapper = $(".nbp-navbar-wrapper");
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
-      $nbpNavbarsWrapper
+      $nbpNavbarWrapper
         .addClass("nbp-navbar-top-fixed")
     } else {
-      $nbpNavbarsWrapper
+      $nbpNavbarWrapper
         .removeClass("nbp-navbar-top-fixed")
     }
   });
+});
+
+// NbpCheckboxComponent
+$(document).ready(function () {
+  var $nbpCheckboxWrapper = $(".nbp-checkbox-wrapper");
+  var $nbpCheckboxInput = $nbpCheckboxWrapper.find(".nbp-checkbox-input");
+
+  $nbpCheckboxInput.on('click', function() {
+    $(this).toggleClass('checked')
+    $nbpCheckboxWrapper.find('.nbp-checkbox-label').toggleClass('checked')
+    $(this).find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
+  })
 });
