@@ -39,6 +39,9 @@
 .nbp-color-danger {
   color: var(--nbp-danger) !important;
 }
+.nbp-color-info {
+  color: var(--nbp-info) !important;
+}
 
 // Backgrounds
 .nbp-background-primary {
@@ -131,10 +134,13 @@
 
 // Text Transform
 .nbp-text-lowercase {
-  text-transform: capitalize !important;
+  text-transform: lowercase !important;
 }
 .nbp-text-uppercase {
   text-transform: uppercase !important;
+}
+.nbp-text-capitalize {
+  text-transform: capitalize !important;
 }
 
 
