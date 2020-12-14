@@ -34,6 +34,10 @@ body {
   cursor: pointer;
 }
 
+.nbp-cursor-none {
+  pointer-events: none;
+}
+
 .nbp-text-decoration-none {
   text-decoration: none;
 }

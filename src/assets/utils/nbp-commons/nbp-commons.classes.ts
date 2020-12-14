@@ -60,5 +60,14 @@ export enum NbpOpacityClasse {
   OPACITY_05 = 'nbp-opacity-05',
   OPACITY_07 = 'nbp-opacity-07',
   OPACITY_1 = 'nbp-opacity-1',
-  INFO = 'nbp-checkbox-info',
+}
+
+export enum NbpDisplayClasse {
+  NONE = 'nbp-display-none',
+}
+
+export enum NbpCursorClasse {
+  NOT_ALLOWED = 'nbp-cursor-not-allowed',
+  POINTER = 'nbp-cursor-point',
+  NONE = 'nbp-cursor-none'
 }

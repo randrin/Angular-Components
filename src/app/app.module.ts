@@ -27,6 +27,7 @@ import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component
 import { NbpBreadcrumbComponent } from './components/nbp-breadcrumb/nbp-breadcrumb.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
 import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.component';
+import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.com
     NbpNavbarComponent,
     NbpBreadcrumbComponent,
     NbpHeaderPageComponent,
-    NbpCheckboxComponent
+    NbpCheckboxComponent,
+    NbpCheckboxPageComponent
   ],
   imports: [
     BrowserModule,
