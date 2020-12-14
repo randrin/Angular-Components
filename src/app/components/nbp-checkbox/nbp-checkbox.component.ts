@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpCheckBoxStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
+import { NbpCheckBoxStyleClasse, NbpCursorClasse, NbpDisplayClasse, NbpOpacityClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
@@ -12,19 +12,24 @@ export class NbpCheckboxComponent implements OnInit {
   @Input() nbpCheckBoxLabel: string;
   @Input() nbpCheckBoxName: string;
   @Input() nbpCheckBoxStyle: string;
-  @Input() nbpCheckBoxDisabled: boolean = false;
-  @Input() nbpCheckBoxChecked: boolean = false;
+  @Input() nbpCheckBoxDisabled: boolean;
+  @Input() nbpCheckBoxChecked: boolean;
 
   @Output() nbpCheckBoxModel: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   _style = NbpStyle;
   _checkBoxStyleClasse = NbpCheckBoxStyleClasse;
+  _displayClasse = NbpDisplayClasse;
+  _opacityClasse = NbpOpacityClasse;
+  _cursorClasse = NbpCursorClasse;
 
   nbpModel: boolean;
+  nbpCheckBoxInput: string;
   nbpSeparator: string = ' ';
   nbpCheckBox: string;
   nbpCheckBoxIcon: string;
   nbpCheckBoxOpacity: string;
+  nbpCheckBoxCursor: string;
 
   constructor() { }
 
@@ -33,13 +38,15 @@ export class NbpCheckboxComponent implements OnInit {
   }
 
   nbpSetUpComponent() {
+    console.log('this.nbpCheckBoxChecked: ', this.nbpCheckBoxDisabled);
     this.nbpCheckBox = this.nbpGetCheckBoxStyle(this.nbpCheckBoxStyle);
-    this.nbpCheckBoxIcon = this.nbpCheckBoxChecked == false ? 'nbp-display-none' : '';
-    this.nbpCheckBoxOpacity = this.nbpCheckBoxDisabled == false ? 'nbp-opacity-02' : '';
+    this.nbpCheckBoxIcon = (this.nbpCheckBoxChecked == false || this.nbpCheckBoxChecked === undefined) ? this._displayClasse.NONE : '';
+    this.nbpCheckBoxOpacity = this.nbpCheckBoxDisabled == true ? this._opacityClasse.OPACITY_02 : '';
+    this.nbpCheckBoxCursor = this.nbpCheckBoxDisabled == true ? this._cursorClasse.NONE : '';
+    this.nbpCheckBoxInput = this.nbpCheckBoxOpacity + this.nbpSeparator + this.nbpCheckBoxCursor;
   }
 
   // Functions
-
   nbpCheckBoxClick() {
     debugger
     // if(this.nbpModel === undefined) {
@@ -71,9 +78,6 @@ export class NbpCheckboxComponent implements OnInit {
       default:
         return this._checkBoxStyleClasse.DEFAULT;
         break;
-
     }
-
   }
-
 }

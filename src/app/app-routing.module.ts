@@ -4,6 +4,7 @@ import { ComposantsComponent } from './pages/composants/composants.component';
 import { NbpAlertBoxPageComponent } from './pages/composants/nbp-alert-box-page/nbp-alert-box-page.component';
 import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background-box-page/nbp-background-box-page.component';
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
+import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
       { path: 'button', component: NbpButtonPageComponent },
       { path: 'alert-box', component: NbpAlertBoxPageComponent },
       { path: 'header', component: NbpHeaderPageComponent },
+      { path: 'checkbox', component: NbpCheckboxPageComponent },
     ]
   }
 ]

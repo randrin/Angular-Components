@@ -1,6 +1,6 @@
 <div class="nbp-checkbox-wrapper">
   <div class="nbp-checkbox-container" [ngClass]="nbpCheckBox">
-    <div class="nbp-checkbox-input" [ngClass]="nbpCheckBoxOpacity">
+    <div class="nbp-checkbox-input" [ngClass]="nbpCheckBoxInput">
       <input 
         type="checkbox" 
         class="form-control nbp-form-control" 
@@ -8,10 +8,10 @@
         [(ngModel)]="nbpModel"
         (click)="nbpCheckBoxClick()"
         disabled="nbpCheckBoxDisabled"
-         />
-        <div class="nbp-checkbox-icon-check" [ngClass]="nbpCheckBoxIcon">
-          <i class="fa fa-check"></i>
-        </div>
+      />
+      <div class="nbp-checkbox-icon-check" [ngClass]="nbpCheckBoxIcon">
+        <i class="fa fa-check"></i>
+      </div>
     </div>
     <div class="nbp-checkbox-label">
       <label for="nbpCheckBoxName" class="nbp-font-size-18">{{nbpCheckBoxLabel}}</label>
