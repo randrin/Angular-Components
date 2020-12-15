@@ -38,7 +38,6 @@ export class NbpCheckboxComponent implements OnInit {
   }
 
   nbpSetUpComponent() {
-    console.log('this.nbpCheckBoxChecked: ', this.nbpCheckBoxDisabled);
     this.nbpCheckBox = this.nbpGetCheckBoxStyle(this.nbpCheckBoxStyle);
     this.nbpCheckBoxIcon = (this.nbpCheckBoxChecked == false || this.nbpCheckBoxChecked === undefined) ? this._displayClasse.NONE : '';
     this.nbpCheckBoxOpacity = this.nbpCheckBoxDisabled == true ? this._opacityClasse.OPACITY_02 : '';
@@ -48,10 +47,6 @@ export class NbpCheckboxComponent implements OnInit {
 
   // Functions
   nbpCheckBoxClick() {
-    debugger
-    // if(this.nbpModel === undefined) {
-    //   this.nbpModel = true; // When clicking in first time
-    // }
     this.nbpCheckBoxModel.emit(this.nbpModel);
   }
 
