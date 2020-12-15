@@ -55,10 +55,10 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log('ngOnChanges: ', changes.nbpInputValue.currentValue);
-    if(this.nbpInputDisabled) {
+    if (this.nbpInputDisabled) {
       this.nbpModel = this.nbpInputValue.length ? this.nbpInputValue : '';
     }
-    
+
   }
 
   ngOnInit(): void {
@@ -67,7 +67,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
-    
+
     this.nbpModel = '';
   }
 
@@ -90,6 +90,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   nbpInputKeyUp() {
+    console.log('nbpInputKeyUp')
     if (this.nbpInputRequired) {
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
@@ -98,24 +99,38 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
     } else {
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
     }
+    this.nbpInputOnClean();
+  }
+
+  nbpInputBlur() {
+    console.log('nbpInputBlur')
   }
 
   nbpInputFocusOut() {
+    console.log('nbpInputFocusOut')
     if (this.nbpInputRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
       this.nbpGetClasses();
     }
+    this.nbpIsDigitText = false;
+  }
+
+  nbpInputFocus() {
+    console.log('nbpInputFocus')
+    this.nbpIsDigitText = (this.nbpModel.length === 0) ? false : true;
   }
 
   nbpInputOnClean() {
-    this.nbpModel = '';
-    this.nbpIsDigitText = false;
-    this.nbpInputModel.emit(this.nbpModel);
-    if (this.nbpInputRequired) {
-      this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpBorder.ERROR;
-      this.nbpErrorMessage = true;
+    console.log('nbpInputOnClean')
+    if (this.nbpModel.length !== 0) {
+      this.nbpModel = '';
+      this.nbpIsDigitText = false;
+      this.nbpInputModel.emit(this.nbpModel);
+      if (this.nbpInputRequired) {
+        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpBorder.ERROR;
+        this.nbpErrorMessage = true;
+      }
     }
   }
-
 }
