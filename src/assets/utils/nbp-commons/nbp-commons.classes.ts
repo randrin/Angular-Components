@@ -75,3 +75,15 @@ export enum NbpCursorClasse {
   POINTER = 'nbp-cursor-point',
   NONE = 'nbp-cursor-none'
 }
+
+export enum NbpBorderClasse {
+  DEFAULT = 'nbp-border-default',
+  SUCCESS = 'nbp-border-success',
+  PRIMARY = 'nbp-border-primary',
+  INFO = 'nbp-border-info',
+  DANGER = 'nbp-border-danger',
+  WARNING = 'nbp-border-warning',
+  TOMATO = 'nbp-border-tomato',
+  WHITE = 'nbp-border-white',
+  BLACK = 'nbp-black-white'
+}
