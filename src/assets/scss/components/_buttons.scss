@@ -37,6 +37,45 @@
   }
 }
 
+// Info
+.nbp-button-info {
+  background-color: var(--nbp-info) !important;
+  border-color: var(--nbp-info) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-night-rider) !important;
+    border-color: var(--nbp-night-rider) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-info) !important;
+    border-color: var(--nbp-info) !important;
+    color: var(--nbp-white) !important;
+  }
+}
+
+// Info with hover inverse
+.nbp-button-info-hover {
+  background-color: var(--nbp-info) !important;
+  border-color: var(--nbp-info) !important;
+  color: var(--nbp-white) !important;
+
+  &:hover {
+    background-color: var(--nbp-white) !important;
+    border-color: var(--nbp-info) !important;
+    color: var(--nbp-info) !important;
+  }
+
+  &:disabled {
+    opacity: .5 !important;
+    background-color: var(--nbp-info) !important;
+    border-color: var(--nbp-info) !important;
+    color: var(--nbp-white) !important;
+  }
+}
+
 // Primary
 .nbp-button-primary {
   background-color: var(--nbp-primary) !important;
@@ -259,6 +298,34 @@
     opacity: .5 !important;
     color: var(--nbp-white) !important;
     background-color: var(--nbp-success) !important;
+    border-color: var(--nbp-white) !important;
+  }
+}
+
+.nbp-button-outline-info {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-info) !important;
+  color: var(--nbp-info) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+
+.nbp-button-outline-info-hover {
+  background-color: var(--nbp-white) !important;
+  border-color: var(--nbp-info) !important;
+  color: var(--nbp-info) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-info) !important;
+    border-color: var(--nbp-white) !important;
+  }
+  &:disabled {
+    opacity: .5 !important;
+    color: var(--nbp-white) !important;
+    background-color: var(--nbp-info) !important;
     border-color: var(--nbp-white) !important;
   }
 }
