@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let color of _model.component.NbpColorComponent.colors">
+      <nbp-color
+        [nbpColorStyle]="color.label"
+        [nbpColorName]="color.name"
+        [nbpColorCode]="color.code"
+      ></nbp-color>
+    </div>
+  </div>
+</div>

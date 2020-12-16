@@ -5,6 +5,7 @@ import { NbpAlertBoxPageComponent } from './pages/composants/nbp-alert-box-page/
 import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background-box-page/nbp-background-box-page.component';
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
+import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-color-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   {
     path: 'composants', component: ComposantsComponent,
     children: [
+      { path: 'color', component: NbpColorPageComponent },
       { path: 'textarea', component: NbpTextareaPageComponent },
       { path: 'input-text', component: NbpInputTextPageComponent },
       { path: 'dividing-line', component: NbpDividingLinePageComponent },

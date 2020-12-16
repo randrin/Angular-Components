@@ -1,5 +1,18 @@
 export class Model {
   component = {
+    NbpColorComponent: {
+      colors: [
+        {label: 'DEFAULT', name: 'Default', code: '#63666a'},
+        {label: 'TOMATO', name: 'Tomato', code: '#d12420'},
+        {label: 'WHITE', name: 'White', code: '#ffffff'},
+        {label: 'BLACK', name: 'Black', code: '#000000'},
+        {label: 'PRIMARY', name: 'Primary', code: '#1775be'},
+        {label: 'SUCCESS', name: 'Success', code: '#258900'},
+        {label: 'WARNING', name: 'Warning', code: '#fa9600'},
+        {label: 'DANGER', name: 'Danger', code: '#f55854'},
+        {label: 'INFO', name: 'Info', code: '#0096c8'},
+      ]
+    },
     NbpButtonComponent: {
       label: 'Button',
       labelHover: 'Button Hover',

@@ -1,0 +1,18 @@
+.nbp-color-wrapper {
+  .nbp-color-content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    border-top-width: 8em;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    border-bottom-style: solid;
+    background-color: var(--nbp-white);
+    font-weight: 700;
+    font-size: 0.95em;
+    padding: 1em;
+    margin-bottom: 2em;
+    box-sizing: border-box;
+    width: 150px;
+  }
+}
