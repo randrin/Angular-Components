@@ -99,7 +99,6 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
     } else {
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
     }
-    this.nbpInputOnClean();
   }
 
   nbpInputBlur() {
