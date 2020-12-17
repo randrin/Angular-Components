@@ -21,8 +21,8 @@ import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
-import { NbpHeaderOneComponent } from './components/nbp-header-one/nbp-header-one.component';
-import { NbpFooterOneComponent } from './components/nbp-footer-one/nbp-footer-one.component';
+import { NbpHeaderOneComponent } from './components/nbp-headers/nbp-header-one/nbp-header-one.component';
+import { NbpFooterOneComponent } from './components/nbp-footers/nbp-footer-one/nbp-footer-one.component';
 import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component';
 import { NbpBreadcrumbComponent } from './components/nbp-breadcrumb/nbp-breadcrumb.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
@@ -30,6 +30,9 @@ import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.com
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
 import { NbpColorComponent } from './components/nbp-color/nbp-color.component';
 import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-color-page.component';
+import { NbpTableOneComponent } from './components/nbp-tables/nbp-table-one/nbp-table-one.component';
+import { ExamplesComponent } from './pages/examples/examples.component';
+import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-col
     NbpCheckboxComponent,
     NbpCheckboxPageComponent,
     NbpColorComponent,
-    NbpColorPageComponent
+    NbpColorPageComponent,
+    NbpTableOneComponent,
+    ExamplesComponent,
+    NbpTablePageComponent
   ],
   imports: [
     BrowserModule,

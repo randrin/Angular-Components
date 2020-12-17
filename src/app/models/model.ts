@@ -1,16 +1,34 @@
 export class Model {
   component = {
+    NbpTableComponent: {
+      headers: [
+        { label: 'FIRST_NAME', name: 'Firt Name' },
+        { label: 'LAST_NAME', name: 'Last Name' },
+        { label: 'EMAIL', name: 'Email Adress' },
+        { label: 'PHONE', name: 'Phone Number' },
+        { label: 'ZIP_CODE', name: 'Zip Code' },
+        { label: 'STREET', name: 'Street Discrit' },
+      ],
+      bodies: [
+        { firstName: 'Mario', lastName: 'Rossi', email: 'mario.rossi@gmail.com', phone: '0485726485', zipCode: '20143', street: 'Viale Romagna 32' },
+        { firstName: 'Rosita', lastName: 'Francesca', email: 'rosita.francesca@gmail.com', phone: '374695084', zipCode: '27029', street: 'Viale Santa Maria 49' }
+      ]
+    },
     NbpColorComponent: {
       colors: [
-        {label: 'DEFAULT', name: 'Default', code: '#63666a'},
-        {label: 'TOMATO', name: 'Tomato', code: '#d12420'},
-        {label: 'WHITE', name: 'White', code: '#ffffff'},
-        {label: 'BLACK', name: 'Black', code: '#000000'},
-        {label: 'PRIMARY', name: 'Primary', code: '#1775be'},
-        {label: 'SUCCESS', name: 'Success', code: '#258900'},
-        {label: 'WARNING', name: 'Warning', code: '#fa9600'},
-        {label: 'DANGER', name: 'Danger', code: '#f55854'},
-        {label: 'INFO', name: 'Info', code: '#0096c8'},
+        { label: 'DEFAULT', name: 'Default', code: '#63666a' },
+        { label: 'TOMATO', name: 'Tomato', code: '#d12420' },
+        { label: 'WHITE', name: 'White', code: '#ffffff' },
+        { label: 'BLACK', name: 'Black', code: '#000000' },
+        { label: 'PRIMARY', name: 'Primary', code: '#1775be' },
+        { label: 'SUCCESS', name: 'Success', code: '#258900' },
+        { label: 'WARM_GRAY_20', name: 'Warm Gray 20', code: '#f3f2ef' },
+        { label: 'WARNING', name: 'Warning', code: '#fa9600' },
+        { label: 'DANGER', name: 'Danger', code: '#f55854' },
+        { label: 'INFO', name: 'Info', code: '#0096c8' },
+        { label: 'WHITE_SMOKE', name: 'White Smoke', code: '#f2f2f2' },
+        { label: 'NIGHT_RIDER', name: 'Night Rider', code: '#323232' },
+        { label: 'SLIVER', name: 'Sliver', code: '#e0e0e1' }
       ]
     },
     NbpButtonComponent: {

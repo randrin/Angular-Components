@@ -37,6 +37,18 @@ export class NbpColorComponent implements OnInit {
       case this._style.WHITE:
         return this._borderClasse.WHITE;
         break;
+      case this._style.WHITE_SMOKE:
+        return this._borderClasse.WHITE_SMOKE;
+        break;
+      case this._style.WARM_GRAY_20:
+        return this._borderClasse.WARM_GRAY_20;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._borderClasse.NIGHT_RIDER;
+        break;
+      case this._style.SLIVER:
+        return this._borderClasse.SLIVER;
+        break;
       case this._style.BLACK:
         return this._borderClasse.BLACK;
         break;

@@ -10,7 +10,9 @@ import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-li
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
+import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
+import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const appRoutes: Routes = [
@@ -19,18 +21,20 @@ const appRoutes: Routes = [
   {
     path: 'composants', component: ComposantsComponent,
     children: [
-      { path: 'color', component: NbpColorPageComponent },
-      { path: 'textarea', component: NbpTextareaPageComponent },
+      { path: 'colors', component: NbpColorPageComponent },
+      { path: 'textareas', component: NbpTextareaPageComponent },
       { path: 'input-text', component: NbpInputTextPageComponent },
-      { path: 'dividing-line', component: NbpDividingLinePageComponent },
-      { path: 'feedback', component: NbpFeedbackPageComponent },
+      { path: 'dividing-lines', component: NbpDividingLinePageComponent },
+      { path: 'feedbacks', component: NbpFeedbackPageComponent },
       { path: 'background-box', component: NbpBackgroundBoxPageComponent },
-      { path: 'button', component: NbpButtonPageComponent },
+      { path: 'buttons', component: NbpButtonPageComponent },
       { path: 'alert-box', component: NbpAlertBoxPageComponent },
-      { path: 'header', component: NbpHeaderPageComponent },
+      { path: 'headers', component: NbpHeaderPageComponent },
       { path: 'checkbox', component: NbpCheckboxPageComponent },
+      { path: 'tables', component: NbpTablePageComponent },
     ]
-  }
+  },
+  { path: 'examples', component: ExamplesComponent },
 ]
 
 @NgModule({
