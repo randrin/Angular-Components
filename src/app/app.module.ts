@@ -21,8 +21,8 @@ import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
-import { NbpHeaderOneComponent } from './components/nbp-header-one/nbp-header-one.component';
-import { NbpFooterOneComponent } from './components/nbp-footer-one/nbp-footer-one.component';
+import { NbpHeaderOneComponent } from './components/nbp-headers/nbp-header-one/nbp-header-one.component';
+import { NbpFooterOneComponent } from './components/nbp-footers/nbp-footer-one/nbp-footer-one.component';
 import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component';
 import { NbpBreadcrumbComponent } from './components/nbp-breadcrumb/nbp-breadcrumb.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
