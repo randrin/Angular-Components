@@ -51,3 +51,27 @@
   border-top-color: var(--nbp-primary) !important;
   border-bottom-color: var(--nbp-primary) !important;
 }
+
+// White Smoke
+.nbp-border-white-smoke {
+  border-top-color: var(--nbp-white-smoke) !important;
+  border-bottom-color: var(--nbp-white-smoke) !important;
+}
+
+// Warm Gray 20
+.nbp-border-warm-gray-20 {
+  border-top-color: var(--nbp-warm-gray-20) !important;
+  border-bottom-color: var(-nbp-warm-gray-20) !important;
+}
+
+// Night Rider
+.nbp-border-night-rider {
+  border-top-color: var(--nbp-night-rider) !important;
+  border-bottom-color: var(-nbp-night-rider) !important;
+}
+
+// Sliver
+.nbp-border-sliver {
+  border-top-color: var(--nbp-sliver) !important;
+  border-bottom-color: var(-nbp-sliver) !important;
+}

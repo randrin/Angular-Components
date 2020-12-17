@@ -8,9 +8,13 @@ export class Model {
         {label: 'BLACK', name: 'Black', code: '#000000'},
         {label: 'PRIMARY', name: 'Primary', code: '#1775be'},
         {label: 'SUCCESS', name: 'Success', code: '#258900'},
+        {label: 'WARM_GRAY_20', name: 'Warm Gray 20', code: '#f3f2ef'},
         {label: 'WARNING', name: 'Warning', code: '#fa9600'},
         {label: 'DANGER', name: 'Danger', code: '#f55854'},
         {label: 'INFO', name: 'Info', code: '#0096c8'},
+        {label: 'WHITE_SMOKE', name: 'White Smoke', code: '#f2f2f2'},
+        {label: 'NIGHT_RIDER', name: 'Night Rider', code: '#323232'},
+        {label: 'SLIVER', name: 'Sliver', code: '#e0e0e1'}
       ]
     },
     NbpButtonComponent: {

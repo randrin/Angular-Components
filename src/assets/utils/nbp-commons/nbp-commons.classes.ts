@@ -85,5 +85,9 @@ export enum NbpBorderClasse {
   WARNING = 'nbp-border-warning',
   TOMATO = 'nbp-border-tomato',
   WHITE = 'nbp-border-white',
-  BLACK = 'nbp-black-white'
+  BLACK = 'nbp-border-black',
+  WHITE_SMOKE = 'nbp-border-white-smoke',
+  WARM_GRAY_20 = 'nbp-border-warm-gray-20',
+  NIGHT_RIDER = 'nbp-border-night-rider',
+  SLIVER = 'nbp-border-sliver'
 }
