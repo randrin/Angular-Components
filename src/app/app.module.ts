@@ -30,6 +30,9 @@ import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.com
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
 import { NbpColorComponent } from './components/nbp-color/nbp-color.component';
 import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-color-page.component';
+import { NbpTableOneComponent } from './components/nbp-tables/nbp-table-one/nbp-table-one.component';
+import { ExamplesComponent } from './pages/examples/examples.component';
+import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-col
     NbpCheckboxComponent,
     NbpCheckboxPageComponent,
     NbpColorComponent,
-    NbpColorPageComponent
+    NbpColorPageComponent,
+    NbpTableOneComponent,
+    ExamplesComponent,
+    NbpTablePageComponent
   ],
   imports: [
     BrowserModule,

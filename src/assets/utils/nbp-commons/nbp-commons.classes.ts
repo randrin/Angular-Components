@@ -49,6 +49,12 @@ export enum NbpTextTransformClasse {
   CAPITALIZE = 'nbp-text-capitalize'
 }
 
+export enum NbpTextAlignClasse {
+  LEFT = 'nbp-text-align-left',
+  CENTER = 'nbp-text-align-center',
+  RIGHT = 'nbp-text-align-right'
+}
+
 export enum NbpCheckBoxStyleClasse {
   DEFAULT = 'nbp-checkbox-default',
   PRIMARY = 'nbp-checkbox-primary',
