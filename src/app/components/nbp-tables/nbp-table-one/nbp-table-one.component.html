@@ -1,11 +1,11 @@
-<div class="nbp-table-wrapper">
+<div class="nbp-table-one-wrapper">
   <div class="container">
     <div class="row">
       <div class="col">
-        <table class="nbp-table">
+        <table datatable [dtOptions]="nbpDtOptions" class="nbp-table table table-striped border">
           <thead class="nbp-table-thead">
             <tr class="nbp-table-header">
-              <th class="nbp-table-header-item" *ngFor="let header of nbpTableHeaders">
+              <th *ngFor="let header of nbpTableHeaders" class="nbp-table-header-item">
                 {{header.name}}
               </th>
             </tr>
@@ -33,7 +33,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="nbp-table-body-empty" *ngIf="nbpTableBodies.length === 0">
+        <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length === 0">
           <div class="nbp-table-content-item">Empty Data :)</div>
       </div>
       </div>

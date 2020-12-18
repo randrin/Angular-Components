@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ComposantsComponent } from './pages/composants/composants.component';
 import { NbpAlertBoxPageComponent } from './pages/composants/nbp-alert-box-page/nbp-alert-box-page.component';
 import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background-box-page/nbp-background-box-page.component';
+import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
 import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-color-page.component';
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   {
     path: 'composants', component: ComposantsComponent,
     children: [
+      { path: 'breadcrumbs', component: NbpBreadcrumdPageComponent },
       { path: 'colors', component: NbpColorPageComponent },
       { path: 'textareas', component: NbpTextareaPageComponent },
       { path: 'input-text', component: NbpInputTextPageComponent },

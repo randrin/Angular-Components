@@ -16,6 +16,7 @@ export class NbpTableOneComponent implements OnInit {
   _style = NbpStyle;
   _textAlignClasse = NbpTextAlignClasse;
 
+  nbpDtOptions: DataTables.Settings = {};
   nbpTextAlign: string;
   nbpSeparator: string = ' ';
 
@@ -23,10 +24,13 @@ export class NbpTableOneComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    console.log('nbpTableBodies: ', this.nbpTableBodies)
+    console.log('nbpTableHeaders: ', this.nbpTableHeaders)
   }
 
   nbpSetUpComponent() {
+    this.nbpDtOptions = {
+      pagingType: 'full_numbers',
+    };
     this.nbpTextAlign = this.nbpGetTextAlignStyle(this.nbpTableTextAlignItem);
   }
 
