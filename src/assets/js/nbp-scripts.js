@@ -87,3 +87,22 @@ $(document).ready(function () {
     $(this).find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
   })
 });
+
+// NbpTablesComponent
+$(document).ready(function () {
+  var $nbpTableOneWrapper = $(".nbp-table-one-wrapper");
+  var $nbpDataTablesFilter = $nbpTableOneWrapper.find(".dataTables_filter");
+  $nbpDataTablesFilter.addClass('nbp-display-none');
+
+  console.log('$nbpDataTablesFilter: ', $nbpDataTablesFilter);
+
+  $('#the_table').DataTable({
+    language: {
+      paginate: {
+        next: '&#8594;', // or '→'
+        previous: '&#8592;' // or '←' 
+      }
+    }
+  });
+  
+});

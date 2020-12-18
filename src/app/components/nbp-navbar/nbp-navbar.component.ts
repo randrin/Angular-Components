@@ -12,11 +12,11 @@ export class NbpNavbarComponent implements OnInit {
   items = [
     {
       title: "Buttons",
-      link: "/composants/button"
+      link: "/composants/buttons"
     },
     {
       title: "Feedback Messages",
-      link: "/composants/feedback"
+      link: "/composants/feedbacks"
     },
     {
       title: "Alerts Box",

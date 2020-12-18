@@ -24,7 +24,8 @@ import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/n
 import { NbpHeaderOneComponent } from './components/nbp-headers/nbp-header-one/nbp-header-one.component';
 import { NbpFooterOneComponent } from './components/nbp-footers/nbp-footer-one/nbp-footer-one.component';
 import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component';
-import { NbpBreadcrumbComponent } from './components/nbp-breadcrumb/nbp-breadcrumb.component';
+import { NbpBreadcrumbOneComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-one/nbp-breadcrumb-one.component';
+import { NbpBreadcrumbTwoComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-two/nbp-breadcrumb-two.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
 import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.component';
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
@@ -33,6 +34,9 @@ import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-col
 import { NbpTableOneComponent } from './components/nbp-tables/nbp-table-one/nbp-table-one.component';
 import { ExamplesComponent } from './pages/examples/examples.component';
 import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
+import { NbpSortDirective } from './directive/nbp-sort.directive';
+import { DataTablesModule } from 'angular-datatables';
+import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,8 @@ import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-tab
     NbpHeaderOneComponent,
     NbpFooterOneComponent,
     NbpNavbarComponent,
-    NbpBreadcrumbComponent,
+    NbpBreadcrumbOneComponent,
+    NbpBreadcrumbTwoComponent,
     NbpHeaderPageComponent,
     NbpCheckboxComponent,
     NbpCheckboxPageComponent,
@@ -65,10 +70,13 @@ import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-tab
     NbpColorPageComponent,
     NbpTableOneComponent,
     ExamplesComponent,
-    NbpTablePageComponent
+    NbpTablePageComponent,
+    NbpSortDirective,
+    NbpBreadcrumdPageComponent,
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     FormsModule,
     AppRoutingModule
   ],
