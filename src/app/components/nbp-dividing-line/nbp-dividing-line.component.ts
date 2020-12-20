@@ -22,7 +22,7 @@ export class NbpDividingLineComponent implements OnInit {
 
   _style = NbpStyle;
   _colorClasse = NbpColorClasse;
-  _transformClasse = NbpTextTransformClasse;
+  _textTransformClasse = NbpTextTransformClasse;
 
   nbpDividingLine: string;
   nbpDividingLineColorTitle: string;
@@ -35,7 +35,6 @@ export class NbpDividingLineComponent implements OnInit {
   ngOnInit(): void {
     this.nbpSetUpComponent();
     this.nbpGetClasses();
-    console.log('{NbpDividingLineComponent - this.nbpColorStyle}: ', this.nbpColorStyle);
   }
 
   nbpSetUpComponent() {
@@ -54,7 +53,7 @@ export class NbpDividingLineComponent implements OnInit {
   }
 
   nbpGetTextTransform() {
-    return this.nbpUppercaseTitle ? this._transformClasse.UPPERCASE : this._transformClasse.CAPITALIZE;
+    return this.nbpUppercaseTitle ? this._textTransformClasse.UPPERCASE : this._textTransformClasse.CAPITALIZE;
   }
 
   nbpGetColorClass(nbpInput) {
@@ -88,5 +87,4 @@ export class NbpDividingLineComponent implements OnInit {
         break;
     }
   }
-
 }
