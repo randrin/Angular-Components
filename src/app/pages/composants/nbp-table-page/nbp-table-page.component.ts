@@ -9,7 +9,8 @@ import { NbpStyle, NbpFontSize, NbpPipe, NbpSize, NbpAlertType } from 'src/asset
 })
 export class NbpTablePageComponent implements OnInit {
 
-  title = 'Tables Page';
+  title = 'Examples Tables Page';
+  emptyTableTitle = 'Empty Data Table';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;

@@ -30,6 +30,17 @@ export class NbpTableOneComponent implements OnInit {
   nbpSetUpComponent() {
     this.nbpDtOptions = {
       pagingType: 'full_numbers',
+      responsive: true,
+      language: {
+        searchPlaceholder: "Seach element",
+        emptyTable: "Empty data :)",
+        paginate: {
+          first: "<i class='fa fa-angle-double-left'></i> First",
+          last: "Last <i class='fa fa-angle-double-right'></i>",
+          next: "<i class='fa fa-angle-right'></i>",
+          previous: "<i class='fa fa-angle-left'></i>",
+        }
+      },
     };
     this.nbpTextAlign = this.nbpGetTextAlignStyle(this.nbpTableTextAlignItem);
   }
