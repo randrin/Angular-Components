@@ -37,6 +37,7 @@ import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-tab
 import { NbpSortDirective } from './directive/nbp-sort.directive';
 import { DataTablesModule } from 'angular-datatables';
 import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
+import { NbpTableTwoComponent } from './components/nbp-tables/nbp-table-two/nbp-table-two.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-pa
     NbpTablePageComponent,
     NbpSortDirective,
     NbpBreadcrumdPageComponent,
+    NbpTableTwoComponent,
   ],
   imports: [
     BrowserModule,
