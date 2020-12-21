@@ -48,6 +48,20 @@
     </div>
   </div>
   <div class="nbp-app-pages">
+    <div class="container">
+    <div class="row">
+      <div class="col">
+        <nbp-badge
+          [nbpBadgeName]="_model.component.NbpBadgeComponent.name"
+        ></nbp-badge>
+        <nbp-badge
+          [nbpBadgeName]="_model.component.NbpBadgeComponent.name"
+          [nbpBadgeIcon]="_model.component.NbpBadgeComponent.icon"
+          [nbpBadgeStyle]="_style.PRIMARY"
+        ></nbp-badge>
+      </div>
+    </div>
+  </div>
     <router-outlet></router-outlet>
   </div>
   <nbp-footer-one></nbp-footer-one>

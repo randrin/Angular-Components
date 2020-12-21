@@ -20,4 +20,6 @@ export class NbpHeaderPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

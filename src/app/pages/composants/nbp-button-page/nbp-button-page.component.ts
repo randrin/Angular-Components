@@ -24,4 +24,6 @@ export class NbpButtonPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

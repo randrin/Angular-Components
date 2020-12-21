@@ -18,5 +18,7 @@ export class NbpCheckboxPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  // Functions
 
 }

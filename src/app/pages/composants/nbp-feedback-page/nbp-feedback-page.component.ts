@@ -23,4 +23,6 @@ export class NbpFeedbackPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

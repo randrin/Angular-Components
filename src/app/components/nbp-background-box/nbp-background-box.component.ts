@@ -59,9 +59,9 @@ export class NbpBackgroundBoxComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    console.log('{NbpBackgroundBoxComponent - this.nbpBackgroundStyle}: ', this.nbpBackgroundStyle);
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpBackgroundBox = this.nbpGetBackgroundClass();
     this.nbpColorBox = this.nbpGetColorClass();

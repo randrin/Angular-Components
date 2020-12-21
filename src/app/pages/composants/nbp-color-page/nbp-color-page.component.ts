@@ -19,4 +19,6 @@ export class NbpColorPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

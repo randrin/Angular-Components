@@ -59,9 +59,9 @@ export class NbpAlertBoxComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    console.log('{NbpAlertBoxComponent - this.nbpColorStyle}: ', this.nbpColorStyle);
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpGetColorBoxAlert(this.nbpAlertType);
     this.nbpGetColorTextBoxAlert(this.nbpColorStyle);

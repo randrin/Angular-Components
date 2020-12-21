@@ -25,4 +25,6 @@ export class NbpTablePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

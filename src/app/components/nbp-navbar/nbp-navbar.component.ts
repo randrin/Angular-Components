@@ -40,4 +40,6 @@ export class NbpNavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

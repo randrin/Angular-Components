@@ -19,4 +19,6 @@ export class NbpBreadcrumdPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

@@ -71,6 +71,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
     this.nbpModel = '';
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.type : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);

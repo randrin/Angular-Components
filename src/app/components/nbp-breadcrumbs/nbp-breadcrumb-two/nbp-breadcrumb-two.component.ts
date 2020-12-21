@@ -12,4 +12,6 @@ export class NbpBreadcrumbTwoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

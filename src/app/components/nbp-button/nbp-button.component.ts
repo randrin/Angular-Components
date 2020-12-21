@@ -30,6 +30,7 @@ export class NbpButtonComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpGetClasses()
   }

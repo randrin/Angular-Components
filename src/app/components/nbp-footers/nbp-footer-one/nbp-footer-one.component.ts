@@ -12,4 +12,6 @@ export class NbpFooterOneComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

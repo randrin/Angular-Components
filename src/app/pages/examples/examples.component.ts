@@ -23,4 +23,6 @@ export class ExamplesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

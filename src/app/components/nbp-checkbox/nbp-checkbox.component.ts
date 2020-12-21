@@ -37,6 +37,7 @@ export class NbpCheckboxComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpCheckBox = this.nbpGetCheckBoxStyle(this.nbpCheckBoxStyle);
     this.nbpCheckBoxIcon = (this.nbpCheckBoxChecked == false || this.nbpCheckBoxChecked === undefined) ? this._displayClasse.NONE : '';
