@@ -97,3 +97,19 @@ export enum NbpBorderClasse {
   NIGHT_RIDER = 'nbp-border-night-rider',
   SLIVER = 'nbp-border-sliver'
 }
+
+export enum NbpBadgeStyleClasse {
+  DEFAULT = 'nbp-badge-default',
+  SUCCESS = 'nbp-badge-success',
+  PRIMARY = 'nbp-badge-primary',
+  INFO = 'nbp-badge-info',
+  DANGER = 'nbp-badge-danger',
+  WARNING = 'nbp-badge-warning',
+  TOMATO = 'nbp-badge-tomato',
+  WHITE = 'nbp-badge-white',
+  BLACK = 'nbp-badge-black',
+  WHITE_SMOKE = 'nbp-badge-white-smoke',
+  WARM_GRAY_20 = 'nbp-badge-warm-gray-20',
+  NIGHT_RIDER = 'nbp-badge-night-rider',
+  SLIVER = 'nbp-badge-sliver'
+}

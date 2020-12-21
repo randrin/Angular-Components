@@ -1,1 +1,8 @@
-<p>nbp-badge works!</p>
+<div class="nbp-badge-wrapper">
+  <div class="nbp-badge-container">
+    <span class="nbp-badge" [ngClass]="nbpBadge">
+      <i *ngIf="nbpBadgeIcon" class="nbp-badge-icon" [ngClass]="nbpBadgeIcon"></i>
+      {{nbpBadgeName}}
+    </span>
+  </div>
+</div>
