@@ -18,11 +18,15 @@
   </div>
   <div class="row nbp-background-white">
     <div class="col">
-      <nbp-table-one
-      [nbpTableHeaders]="_model.component.NbpTableComponent.headers"
-      [nbpTableBodies]="_model.component.NbpTableComponent.bodies"
-      [nbpTableTextAlignItem]="_style.RIGHT"
-    ></nbp-table-one>
+      <nbp-dividing-line 
+        [nbpTitle]="tableNoSortTitle" 
+        [nbpColorStyle]="_style.SUCCESS"
+      ></nbp-dividing-line>
+      <nbp-table-two
+        [nbpTableHeaders]="_model.component.NbpTableComponent.headers"
+        [nbpTableBodies]="_model.component.NbpTableComponent.bodies"
+        [nbpTableTextAlignItem]="_style.RIGHT"
+      ></nbp-table-two>
     </div>
   </div>
   <div class="row nbp-background-white">

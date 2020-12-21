@@ -90,19 +90,18 @@ $(document).ready(function () {
 
 // NbpTablesComponent
 $(document).ready(function () {
+  "use strict";
   var $nbpTableOneWrapper = $(".nbp-table-one-wrapper");
   var $nbpDataTablesFilter = $nbpTableOneWrapper.find(".dataTables_filter");
   $nbpDataTablesFilter.addClass('nbp-display-none');
 
   console.log('$nbpDataTablesFilter: ', $nbpDataTablesFilter);
 
-  $('#the_table').DataTable({
-    language: {
-      paginate: {
-        next: '&#8594;', // or '→'
-        previous: '&#8592;' // or '←' 
-      }
-    }
-  });
+  // var $label = document.getElementsByClassName("dataTables_filter").addClass('nbp-display-none');
+  // console.log('$label: ', $label.length)
+  
+  Array.from(document.getElementsByClassName("dataTables_filter")).forEach(function(item) {
+    console.log(item);
+ });
   
 });
