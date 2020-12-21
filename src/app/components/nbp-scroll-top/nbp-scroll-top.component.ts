@@ -12,4 +12,6 @@ export class NbpScrollTopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

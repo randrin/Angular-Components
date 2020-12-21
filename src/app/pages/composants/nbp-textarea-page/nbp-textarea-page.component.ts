@@ -23,4 +23,6 @@ export class NbpTextareaPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Functions
+
 }

@@ -34,11 +34,12 @@ export class NbpDividingLineComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    this.nbpGetClasses();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpCtaText = this.nbpShowHide ? this.nbpCtaTextHide : this.nbpCtaTextShow;
+    this.nbpGetClasses();
   }
 
   nbpOnClickedCta() {

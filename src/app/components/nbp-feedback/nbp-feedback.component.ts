@@ -36,6 +36,7 @@ export class NbpFeedbackComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpFeedbackIcon = this.nbpGetColorFeedback(this.nbpFeedbackType) + this.nbpSeparator + this.nbpFeedbackColor;
   }

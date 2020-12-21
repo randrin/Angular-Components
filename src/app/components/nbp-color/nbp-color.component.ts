@@ -25,6 +25,7 @@ export class NbpColorComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpColor = this.nbpGetColorStyle(this.nbpColorStyle);
   }

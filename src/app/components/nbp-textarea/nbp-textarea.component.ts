@@ -42,6 +42,7 @@ export class NbpTextareaComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpTextareaRows = (this.nbpTextareaRows === 0 || this.nbpTextareaRows === undefined) ? this.nbpTextareaDefault.rows : this.nbpTextareaRows;
     // this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
