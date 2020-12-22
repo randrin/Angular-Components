@@ -1,0 +1,13 @@
+<div class="nbp-icon-page-wrapper container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row" *ngIf="_model.component.NbpIconComponent.icons.length">
+    <div *ngFor="let icon of _model.component.NbpIconComponent.icons" class="col-2 nbp-icon-content">
+      <nbp-icon [nbpIconName]="getIconName(icon.name)" class="nbp-icon"></nbp-icon>
+      <span>{{icon.name}}</span>
+    </div>
+  </div>
+</div>

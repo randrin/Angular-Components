@@ -39,6 +39,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
 import { NbpTableTwoComponent } from './components/nbp-tables/nbp-table-two/nbp-table-two.component';
 import { NbpBadgeComponent } from './components/nbp-badge/nbp-badge.component';
+import { NbpIconComponent } from './components/nbp-icon/nbp-icon.component';
+import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { NbpBadgeComponent } from './components/nbp-badge/nbp-badge.component';
     NbpBreadcrumdPageComponent,
     NbpTableTwoComponent,
     NbpBadgeComponent,
+    NbpIconComponent,
+    NbpIconPageComponent,
   ],
   imports: [
     BrowserModule,
