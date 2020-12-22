@@ -19,9 +19,9 @@ export class NbpFeedbackComponent implements OnInit {
   nbpSeparator: string = ' ';
 
   nbpIcon = {
-    SUCCESS: 'fa fa-smile-o',
-    WARNING: 'fa fa-meh-o',
-    ERROR: 'fa fa-frown-o'
+    SUCCESS: 'fa fa-smile',
+    WARNING: 'fa fa-meh',
+    ERROR: 'fa fa-frown'
   }
 
   nbpColor = {

@@ -2,7 +2,7 @@ export class Model {
   component = {
     NbpBadgeComponent: {
       name: "Badge Name",
-      icon: "fas fa-user"
+      icon: "fa fa-user"
     },
     NbpTableComponent: {
       headers: [
