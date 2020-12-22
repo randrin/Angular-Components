@@ -1,2066 +1,2066 @@
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glass:before { content: fa-content($fa-var-glass-martini); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-glass:before { content: fa-content($nbp-var-glass-martini); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meetup {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-meetup {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-o:before { content: fa-content($fa-var-star); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-o:before { content: fa-content($nbp-var-star); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-remove:before { content: fa-content($fa-var-times); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-remove:before { content: fa-content($nbp-var-times); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-close:before { content: fa-content($fa-var-times); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-close:before { content: fa-content($nbp-var-times); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gear:before { content: fa-content($fa-var-cog); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gear:before { content: fa-content($nbp-var-cog); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-trash-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-trash-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-trash-o:before { content: fa-content($fa-var-trash-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-trash-o:before { content: fa-content($nbp-var-trash-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-o:before { content: fa-content($fa-var-file); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-o:before { content: fa-content($nbp-var-file); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-clock-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-clock-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-clock-o:before { content: fa-content($fa-var-clock); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-clock-o:before { content: fa-content($nbp-var-clock); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-down {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-down {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-down:before { content: fa-content($fa-var-arrow-alt-circle-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-down:before { content: fa-content($nbp-var-arrow-alt-circle-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-up {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-up {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-up:before { content: fa-content($fa-var-arrow-alt-circle-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-up:before { content: fa-content($nbp-var-arrow-alt-circle-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-play-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-play-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-play-circle-o:before { content: fa-content($fa-var-play-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-play-circle-o:before { content: fa-content($nbp-var-play-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-repeat:before { content: fa-content($fa-var-redo); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-repeat:before { content: fa-content($nbp-var-redo); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rotate-right:before { content: fa-content($fa-var-redo); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rotate-right:before { content: fa-content($nbp-var-redo); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-refresh:before { content: fa-content($fa-var-sync); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-refresh:before { content: fa-content($nbp-var-sync); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-list-alt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-list-alt {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dedent:before { content: fa-content($fa-var-outdent); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dedent:before { content: fa-content($nbp-var-outdent); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-video-camera:before { content: fa-content($fa-var-video); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-video-camera:before { content: fa-content($nbp-var-video); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-picture-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-picture-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-picture-o:before { content: fa-content($fa-var-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-picture-o:before { content: fa-content($nbp-var-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-photo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-photo {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-photo:before { content: fa-content($fa-var-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-photo:before { content: fa-content($nbp-var-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-image {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-image {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-image:before { content: fa-content($fa-var-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-image:before { content: fa-content($nbp-var-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pencil:before { content: fa-content($fa-var-pencil-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pencil:before { content: fa-content($nbp-var-pencil-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-map-marker:before { content: fa-content($fa-var-map-marker-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-map-marker:before { content: fa-content($nbp-var-map-marker-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pencil-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pencil-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pencil-square-o:before { content: fa-content($fa-var-edit); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pencil-square-o:before { content: fa-content($nbp-var-edit); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-share-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-share-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-share-square-o:before { content: fa-content($fa-var-share-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-share-square-o:before { content: fa-content($nbp-var-share-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-check-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-check-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-check-square-o:before { content: fa-content($fa-var-check-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-check-square-o:before { content: fa-content($nbp-var-check-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrows:before { content: fa-content($fa-var-arrows-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrows:before { content: fa-content($nbp-var-arrows-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-times-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-times-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-times-circle-o:before { content: fa-content($fa-var-times-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-times-circle-o:before { content: fa-content($nbp-var-times-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-check-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-check-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-check-circle-o:before { content: fa-content($fa-var-check-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-check-circle-o:before { content: fa-content($nbp-var-check-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mail-forward:before { content: fa-content($fa-var-share); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mail-forward:before { content: fa-content($nbp-var-share); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-expand:before { content: fa-content($fa-var-expand-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-expand:before { content: fa-content($nbp-var-expand-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-compress:before { content: fa-content($fa-var-compress-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-compress:before { content: fa-content($nbp-var-compress-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eye {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eye {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eye-slash {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eye-slash {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-warning:before { content: fa-content($fa-var-exclamation-triangle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-warning:before { content: fa-content($nbp-var-exclamation-triangle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar:before { content: fa-content($fa-var-calendar-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar:before { content: fa-content($nbp-var-calendar-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrows-v:before { content: fa-content($fa-var-arrows-alt-v); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrows-v:before { content: fa-content($nbp-var-arrows-alt-v); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrows-h:before { content: fa-content($fa-var-arrows-alt-h); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrows-h:before { content: fa-content($nbp-var-arrows-alt-h); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bar-chart {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bar-chart {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bar-chart:before { content: fa-content($fa-var-chart-bar); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bar-chart:before { content: fa-content($nbp-var-chart-bar); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bar-chart-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bar-chart-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bar-chart-o:before { content: fa-content($fa-var-chart-bar); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bar-chart-o:before { content: fa-content($nbp-var-chart-bar); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-twitter-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-twitter-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gears:before { content: fa-content($fa-var-cogs); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gears:before { content: fa-content($nbp-var-cogs); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thumbs-o-up {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thumbs-o-up {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thumbs-o-up:before { content: fa-content($fa-var-thumbs-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thumbs-o-up:before { content: fa-content($nbp-var-thumbs-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thumbs-o-down {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thumbs-o-down {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thumbs-o-down:before { content: fa-content($fa-var-thumbs-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thumbs-o-down:before { content: fa-content($nbp-var-thumbs-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-heart-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-heart-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-heart-o:before { content: fa-content($fa-var-heart); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-heart-o:before { content: fa-content($nbp-var-heart); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sign-out:before { content: fa-content($fa-var-sign-out-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sign-out:before { content: fa-content($nbp-var-sign-out-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linkedin-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin-square:before { content: fa-content($fa-var-linkedin); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linkedin-square:before { content: fa-content($nbp-var-linkedin); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thumb-tack:before { content: fa-content($fa-var-thumbtack); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thumb-tack:before { content: fa-content($nbp-var-thumbtack); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-external-link:before { content: fa-content($fa-var-external-link-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-external-link:before { content: fa-content($nbp-var-external-link-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sign-in:before { content: fa-content($fa-var-sign-in-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sign-in:before { content: fa-content($nbp-var-sign-in-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-github-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-github-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lemon-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lemon-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lemon-o:before { content: fa-content($fa-var-lemon); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lemon-o:before { content: fa-content($nbp-var-lemon); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-square-o:before { content: fa-content($fa-var-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-square-o:before { content: fa-content($nbp-var-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bookmark-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bookmark-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bookmark-o:before { content: fa-content($fa-var-bookmark); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bookmark-o:before { content: fa-content($nbp-var-bookmark); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-twitter {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-twitter {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook:before { content: fa-content($fa-var-facebook-f); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook:before { content: fa-content($nbp-var-facebook-f); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-f {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook-f {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-f:before { content: fa-content($fa-var-facebook-f); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook-f:before { content: fa-content($nbp-var-facebook-f); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-github {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-github {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-credit-card {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-credit-card {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-feed:before { content: fa-content($fa-var-rss); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-feed:before { content: fa-content($nbp-var-rss); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hdd-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hdd-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hdd-o:before { content: fa-content($fa-var-hdd); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hdd-o:before { content: fa-content($nbp-var-hdd); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-right {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-right {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-right:before { content: fa-content($fa-var-hand-point-right); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-right:before { content: fa-content($nbp-var-hand-point-right); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-left {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-left {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-left:before { content: fa-content($fa-var-hand-point-left); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-left:before { content: fa-content($nbp-var-hand-point-left); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-up {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-up {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-up:before { content: fa-content($fa-var-hand-point-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-up:before { content: fa-content($nbp-var-hand-point-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-down {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-down {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-o-down:before { content: fa-content($fa-var-hand-point-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-o-down:before { content: fa-content($nbp-var-hand-point-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrows-alt:before { content: fa-content($fa-var-expand-arrows-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrows-alt:before { content: fa-content($nbp-var-expand-arrows-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-group:before { content: fa-content($fa-var-users); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-group:before { content: fa-content($nbp-var-users); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-chain:before { content: fa-content($fa-var-link); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-chain:before { content: fa-content($nbp-var-link); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-scissors:before { content: fa-content($fa-var-cut); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-scissors:before { content: fa-content($nbp-var-cut); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-files-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-files-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-files-o:before { content: fa-content($fa-var-copy); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-files-o:before { content: fa-content($nbp-var-copy); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-floppy-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-floppy-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-floppy-o:before { content: fa-content($fa-var-save); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-floppy-o:before { content: fa-content($nbp-var-save); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-navicon:before { content: fa-content($fa-var-bars); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-navicon:before { content: fa-content($nbp-var-bars); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reorder:before { content: fa-content($fa-var-bars); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-reorder:before { content: fa-content($nbp-var-bars); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pinterest {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pinterest-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus:before { content: fa-content($fa-var-google-plus-g); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus:before { content: fa-content($nbp-var-google-plus-g); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-money {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-money {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-money:before { content: fa-content($fa-var-money-bill-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-money:before { content: fa-content($nbp-var-money-bill-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-unsorted:before { content: fa-content($fa-var-sort); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-unsorted:before { content: fa-content($nbp-var-sort); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-desc:before { content: fa-content($fa-var-sort-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-desc:before { content: fa-content($nbp-var-sort-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-asc:before { content: fa-content($fa-var-sort-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-asc:before { content: fa-content($nbp-var-sort-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linkedin {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin:before { content: fa-content($fa-var-linkedin-in); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linkedin:before { content: fa-content($nbp-var-linkedin-in); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rotate-left:before { content: fa-content($fa-var-undo); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rotate-left:before { content: fa-content($nbp-var-undo); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-legal:before { content: fa-content($fa-var-gavel); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-legal:before { content: fa-content($nbp-var-gavel); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tachometer:before { content: fa-content($fa-var-tachometer-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tachometer:before { content: fa-content($nbp-var-tachometer-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dashboard:before { content: fa-content($fa-var-tachometer-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dashboard:before { content: fa-content($nbp-var-tachometer-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-comment-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-comment-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-comment-o:before { content: fa-content($fa-var-comment); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-comment-o:before { content: fa-content($nbp-var-comment); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-comments-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-comments-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-comments-o:before { content: fa-content($fa-var-comments); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-comments-o:before { content: fa-content($nbp-var-comments); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-flash:before { content: fa-content($fa-var-bolt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-flash:before { content: fa-content($nbp-var-bolt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-clipboard {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-clipboard {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paste {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-paste {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paste:before { content: fa-content($fa-var-clipboard); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-paste:before { content: fa-content($nbp-var-clipboard); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lightbulb-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lightbulb-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lightbulb-o:before { content: fa-content($fa-var-lightbulb); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lightbulb-o:before { content: fa-content($nbp-var-lightbulb); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-exchange:before { content: fa-content($fa-var-exchange-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-exchange:before { content: fa-content($nbp-var-exchange-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cloud-download:before { content: fa-content($fa-var-cloud-download-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cloud-download:before { content: fa-content($nbp-var-cloud-download-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cloud-upload:before { content: fa-content($fa-var-cloud-upload-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cloud-upload:before { content: fa-content($nbp-var-cloud-upload-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bell-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bell-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bell-o:before { content: fa-content($fa-var-bell); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bell-o:before { content: fa-content($nbp-var-bell); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cutlery:before { content: fa-content($fa-var-utensils); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cutlery:before { content: fa-content($nbp-var-utensils); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-text-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-text-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-text-o:before { content: fa-content($fa-var-file-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-text-o:before { content: fa-content($nbp-var-file-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-building-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-building-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-building-o:before { content: fa-content($fa-var-building); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-building-o:before { content: fa-content($nbp-var-building); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hospital-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hospital-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hospital-o:before { content: fa-content($fa-var-hospital); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hospital-o:before { content: fa-content($nbp-var-hospital); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tablet:before { content: fa-content($fa-var-tablet-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tablet:before { content: fa-content($nbp-var-tablet-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mobile:before { content: fa-content($fa-var-mobile-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mobile:before { content: fa-content($nbp-var-mobile-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mobile-phone:before { content: fa-content($fa-var-mobile-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mobile-phone:before { content: fa-content($nbp-var-mobile-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-circle-o:before { content: fa-content($fa-var-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-circle-o:before { content: fa-content($nbp-var-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mail-reply:before { content: fa-content($fa-var-reply); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mail-reply:before { content: fa-content($nbp-var-reply); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-github-alt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-github-alt {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-folder-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-folder-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-folder-o:before { content: fa-content($fa-var-folder); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-folder-o:before { content: fa-content($nbp-var-folder); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-folder-open-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-folder-open-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-folder-open-o:before { content: fa-content($fa-var-folder-open); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-folder-open-o:before { content: fa-content($nbp-var-folder-open); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-smile-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-smile-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-smile-o:before { content: fa-content($fa-var-smile); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-smile-o:before { content: fa-content($nbp-var-smile); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-frown-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-frown-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-frown-o:before { content: fa-content($fa-var-frown); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-frown-o:before { content: fa-content($nbp-var-frown); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meh-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-meh-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meh-o:before { content: fa-content($fa-var-meh); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-meh-o:before { content: fa-content($nbp-var-meh); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-keyboard-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-keyboard-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-keyboard-o:before { content: fa-content($fa-var-keyboard); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-keyboard-o:before { content: fa-content($nbp-var-keyboard); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-flag-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-flag-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-flag-o:before { content: fa-content($fa-var-flag); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-flag-o:before { content: fa-content($nbp-var-flag); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mail-reply-all:before { content: fa-content($fa-var-reply-all); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mail-reply-all:before { content: fa-content($nbp-var-reply-all); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-o:before { content: fa-content($fa-var-star-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-o:before { content: fa-content($nbp-var-star-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-empty {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-empty {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-empty:before { content: fa-content($fa-var-star-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-empty:before { content: fa-content($nbp-var-star-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-full {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-full {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-star-half-full:before { content: fa-content($fa-var-star-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-star-half-full:before { content: fa-content($nbp-var-star-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-code-fork:before { content: fa-content($fa-var-code-branch); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-code-fork:before { content: fa-content($nbp-var-code-branch); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-chain-broken:before { content: fa-content($fa-var-unlink); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-chain-broken:before { content: fa-content($nbp-var-unlink); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-shield:before { content: fa-content($fa-var-shield-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-shield:before { content: fa-content($nbp-var-shield-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-o:before { content: fa-content($fa-var-calendar); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-o:before { content: fa-content($nbp-var-calendar); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-maxcdn {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-maxcdn {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-html5 {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-html5 {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-css3 {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-css3 {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ticket:before { content: fa-content($fa-var-ticket-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ticket:before { content: fa-content($nbp-var-ticket-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-minus-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-minus-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-minus-square-o:before { content: fa-content($fa-var-minus-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-minus-square-o:before { content: fa-content($nbp-var-minus-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-level-up:before { content: fa-content($fa-var-level-up-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-level-up:before { content: fa-content($nbp-var-level-up-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-level-down:before { content: fa-content($fa-var-level-down-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-level-down:before { content: fa-content($nbp-var-level-down-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pencil-square:before { content: fa-content($fa-var-pen-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pencil-square:before { content: fa-content($nbp-var-pen-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-external-link-square:before { content: fa-content($fa-var-external-link-square-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-external-link-square:before { content: fa-content($nbp-var-external-link-square-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-compass {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-compass {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-down {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-down {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-down:before { content: fa-content($fa-var-caret-square-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-down:before { content: fa-content($nbp-var-caret-square-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-down {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-down {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-down:before { content: fa-content($fa-var-caret-square-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-down:before { content: fa-content($nbp-var-caret-square-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-up {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-up {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-up:before { content: fa-content($fa-var-caret-square-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-up:before { content: fa-content($nbp-var-caret-square-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-up {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-up {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-up:before { content: fa-content($fa-var-caret-square-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-up:before { content: fa-content($nbp-var-caret-square-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-right {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-right {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-right:before { content: fa-content($fa-var-caret-square-right); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-right:before { content: fa-content($nbp-var-caret-square-right); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-right {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-right {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-right:before { content: fa-content($fa-var-caret-square-right); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-right:before { content: fa-content($nbp-var-caret-square-right); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eur:before { content: fa-content($fa-var-euro-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eur:before { content: fa-content($nbp-var-euro-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-euro:before { content: fa-content($fa-var-euro-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-euro:before { content: fa-content($nbp-var-euro-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gbp:before { content: fa-content($fa-var-pound-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gbp:before { content: fa-content($nbp-var-pound-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-usd:before { content: fa-content($fa-var-dollar-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-usd:before { content: fa-content($nbp-var-dollar-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dollar:before { content: fa-content($fa-var-dollar-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dollar:before { content: fa-content($nbp-var-dollar-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-inr:before { content: fa-content($fa-var-rupee-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-inr:before { content: fa-content($nbp-var-rupee-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rupee:before { content: fa-content($fa-var-rupee-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rupee:before { content: fa-content($nbp-var-rupee-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-jpy:before { content: fa-content($fa-var-yen-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-jpy:before { content: fa-content($nbp-var-yen-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cny:before { content: fa-content($fa-var-yen-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cny:before { content: fa-content($nbp-var-yen-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rmb:before { content: fa-content($fa-var-yen-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rmb:before { content: fa-content($nbp-var-yen-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yen:before { content: fa-content($fa-var-yen-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yen:before { content: fa-content($nbp-var-yen-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rub:before { content: fa-content($fa-var-ruble-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rub:before { content: fa-content($nbp-var-ruble-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ruble:before { content: fa-content($fa-var-ruble-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ruble:before { content: fa-content($nbp-var-ruble-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rouble:before { content: fa-content($fa-var-ruble-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rouble:before { content: fa-content($nbp-var-ruble-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-krw:before { content: fa-content($fa-var-won-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-krw:before { content: fa-content($nbp-var-won-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-won:before { content: fa-content($fa-var-won-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-won:before { content: fa-content($nbp-var-won-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-btc {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-btc {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bitcoin {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bitcoin {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bitcoin:before { content: fa-content($fa-var-btc); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bitcoin:before { content: fa-content($nbp-var-btc); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-text:before { content: fa-content($fa-var-file-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-text:before { content: fa-content($nbp-var-file-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-alpha-asc:before { content: fa-content($fa-var-sort-alpha-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-alpha-asc:before { content: fa-content($nbp-var-sort-alpha-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-alpha-desc:before { content: fa-content($fa-var-sort-alpha-down-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-alpha-desc:before { content: fa-content($nbp-var-sort-alpha-down-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-amount-asc:before { content: fa-content($fa-var-sort-amount-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-amount-asc:before { content: fa-content($nbp-var-sort-amount-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-amount-desc:before { content: fa-content($fa-var-sort-amount-down-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-amount-desc:before { content: fa-content($nbp-var-sort-amount-down-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-numeric-asc:before { content: fa-content($fa-var-sort-numeric-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-numeric-asc:before { content: fa-content($nbp-var-sort-numeric-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sort-numeric-desc:before { content: fa-content($fa-var-sort-numeric-down-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sort-numeric-desc:before { content: fa-content($nbp-var-sort-numeric-down-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-youtube-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-youtube-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-youtube {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-youtube {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-xing {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-xing {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-xing-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-xing-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-youtube-play {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-youtube-play {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-youtube-play:before { content: fa-content($fa-var-youtube); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-youtube-play:before { content: fa-content($nbp-var-youtube); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dropbox {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dropbox {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stack-overflow {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stack-overflow {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-instagram {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-instagram {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-flickr {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-flickr {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-adn {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-adn {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bitbucket {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bitbucket {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bitbucket-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bitbucket-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bitbucket-square:before { content: fa-content($fa-var-bitbucket); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bitbucket-square:before { content: fa-content($nbp-var-bitbucket); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tumblr {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tumblr {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tumblr-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tumblr-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-down:before { content: fa-content($fa-var-long-arrow-alt-down); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-long-arrow-down:before { content: fa-content($nbp-var-long-arrow-alt-down); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-up:before { content: fa-content($fa-var-long-arrow-alt-up); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-long-arrow-up:before { content: fa-content($nbp-var-long-arrow-alt-up); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-left:before { content: fa-content($fa-var-long-arrow-alt-left); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-long-arrow-left:before { content: fa-content($nbp-var-long-arrow-alt-left); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-right:before { content: fa-content($fa-var-long-arrow-alt-right); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-long-arrow-right:before { content: fa-content($nbp-var-long-arrow-alt-right); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-apple {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-apple {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-windows {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-windows {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-android {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-android {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linux {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linux {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dribbble {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dribbble {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-skype {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-skype {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-foursquare {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-foursquare {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-trello {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-trello {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gratipay {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gratipay {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gittip {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gittip {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gittip:before { content: fa-content($fa-var-gratipay); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gittip:before { content: fa-content($nbp-var-gratipay); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sun-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sun-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sun-o:before { content: fa-content($fa-var-sun); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sun-o:before { content: fa-content($nbp-var-sun); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-moon-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-moon-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-moon-o:before { content: fa-content($fa-var-moon); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-moon-o:before { content: fa-content($nbp-var-moon); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vk {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vk {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-weibo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-weibo {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-renren {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-renren {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pagelines {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pagelines {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stack-exchange {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stack-exchange {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-right {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-right {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-right:before { content: fa-content($fa-var-arrow-alt-circle-right); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-right:before { content: fa-content($nbp-var-arrow-alt-circle-right); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-left {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-left {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-arrow-circle-o-left:before { content: fa-content($fa-var-arrow-alt-circle-left); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-arrow-circle-o-left:before { content: fa-content($nbp-var-arrow-alt-circle-left); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-left {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-left {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-caret-square-o-left:before { content: fa-content($fa-var-caret-square-left); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-caret-square-o-left:before { content: fa-content($nbp-var-caret-square-left); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-left {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-left {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-toggle-left:before { content: fa-content($fa-var-caret-square-left); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-toggle-left:before { content: fa-content($nbp-var-caret-square-left); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dot-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dot-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dot-circle-o:before { content: fa-content($fa-var-dot-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dot-circle-o:before { content: fa-content($nbp-var-dot-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vimeo-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-try:before { content: fa-content($fa-var-lira-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-try:before { content: fa-content($nbp-var-lira-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-turkish-lira:before { content: fa-content($fa-var-lira-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-turkish-lira:before { content: fa-content($nbp-var-lira-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-plus-square-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-plus-square-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-plus-square-o:before { content: fa-content($fa-var-plus-square); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-plus-square-o:before { content: fa-content($nbp-var-plus-square); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-slack {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-slack {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wordpress {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wordpress {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-openid {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-openid {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-institution:before { content: fa-content($fa-var-university); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-institution:before { content: fa-content($nbp-var-university); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bank:before { content: fa-content($fa-var-university); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bank:before { content: fa-content($nbp-var-university); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mortar-board:before { content: fa-content($fa-var-graduation-cap); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mortar-board:before { content: fa-content($nbp-var-graduation-cap); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yahoo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yahoo {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-reddit {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-reddit-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stumbleupon-circle {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stumbleupon-circle {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stumbleupon {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stumbleupon {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-delicious {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-delicious {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-digg {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-digg {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pied-piper-pp {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pied-piper-pp {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pied-piper-alt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pied-piper-alt {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-drupal {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-drupal {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-joomla {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-joomla {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-spoon:before { content: fa-content($fa-var-utensil-spoon); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-spoon:before { content: fa-content($nbp-var-utensil-spoon); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-behance {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-behance {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-behance-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-behance-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-steam {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-steam {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-steam-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-steam-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-automobile:before { content: fa-content($fa-var-car); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-automobile:before { content: fa-content($nbp-var-car); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-envelope-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-o:before { content: fa-content($fa-var-envelope); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-envelope-o:before { content: fa-content($nbp-var-envelope); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-spotify {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-spotify {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-deviantart {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-deviantart {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-soundcloud {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-soundcloud {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-pdf-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-pdf-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-pdf-o:before { content: fa-content($fa-var-file-pdf); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-pdf-o:before { content: fa-content($nbp-var-file-pdf); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-word-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-word-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-word-o:before { content: fa-content($fa-var-file-word); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-word-o:before { content: fa-content($nbp-var-file-word); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-excel-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-excel-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-excel-o:before { content: fa-content($fa-var-file-excel); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-excel-o:before { content: fa-content($nbp-var-file-excel); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-powerpoint-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-powerpoint-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-powerpoint-o:before { content: fa-content($fa-var-file-powerpoint); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-powerpoint-o:before { content: fa-content($nbp-var-file-powerpoint); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-image-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-image-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-image-o:before { content: fa-content($fa-var-file-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-image-o:before { content: fa-content($nbp-var-file-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-photo-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-photo-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-photo-o:before { content: fa-content($fa-var-file-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-photo-o:before { content: fa-content($nbp-var-file-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-picture-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-picture-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-picture-o:before { content: fa-content($fa-var-file-image); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-picture-o:before { content: fa-content($nbp-var-file-image); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-archive-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-archive-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-archive-o:before { content: fa-content($fa-var-file-archive); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-archive-o:before { content: fa-content($nbp-var-file-archive); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-zip-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-zip-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-zip-o:before { content: fa-content($fa-var-file-archive); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-zip-o:before { content: fa-content($nbp-var-file-archive); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-audio-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-audio-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-audio-o:before { content: fa-content($fa-var-file-audio); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-audio-o:before { content: fa-content($nbp-var-file-audio); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-sound-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-sound-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-sound-o:before { content: fa-content($fa-var-file-audio); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-sound-o:before { content: fa-content($nbp-var-file-audio); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-video-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-video-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-video-o:before { content: fa-content($fa-var-file-video); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-video-o:before { content: fa-content($nbp-var-file-video); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-movie-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-movie-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-movie-o:before { content: fa-content($fa-var-file-video); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-movie-o:before { content: fa-content($nbp-var-file-video); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-code-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-code-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-file-code-o:before { content: fa-content($fa-var-file-code); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-file-code-o:before { content: fa-content($nbp-var-file-code); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vine {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vine {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-codepen {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-codepen {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-jsfiddle {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-jsfiddle {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-ring {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-ring {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-bouy {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-bouy {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-bouy:before { content: fa-content($fa-var-life-ring); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-bouy:before { content: fa-content($nbp-var-life-ring); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-buoy {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-buoy {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-buoy:before { content: fa-content($fa-var-life-ring); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-buoy:before { content: fa-content($nbp-var-life-ring); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-saver {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-saver {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-life-saver:before { content: fa-content($fa-var-life-ring); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-life-saver:before { content: fa-content($nbp-var-life-ring); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-support {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-support {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-support:before { content: fa-content($fa-var-life-ring); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-support:before { content: fa-content($nbp-var-life-ring); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-circle-o-notch:before { content: fa-content($fa-var-circle-notch); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-circle-o-notch:before { content: fa-content($nbp-var-circle-notch); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-rebel {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-rebel {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ra {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ra {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ra:before { content: fa-content($fa-var-rebel); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ra:before { content: fa-content($nbp-var-rebel); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-resistance {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-resistance {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-resistance:before { content: fa-content($fa-var-rebel); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-resistance:before { content: fa-content($nbp-var-rebel); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-empire {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-empire {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ge {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ge {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ge:before { content: fa-content($fa-var-empire); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ge:before { content: fa-content($nbp-var-empire); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-git-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-git-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-git {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-git {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hacker-news {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hacker-news {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-y-combinator-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator-square:before { content: fa-content($fa-var-hacker-news); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-y-combinator-square:before { content: fa-content($nbp-var-hacker-news); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yc-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc-square:before { content: fa-content($fa-var-hacker-news); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yc-square:before { content: fa-content($nbp-var-hacker-news); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tencent-weibo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tencent-weibo {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-qq {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-qq {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-weixin {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-weixin {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wechat {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wechat {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wechat:before { content: fa-content($fa-var-weixin); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wechat:before { content: fa-content($nbp-var-weixin); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-send:before { content: fa-content($fa-var-paper-plane); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-send:before { content: fa-content($nbp-var-paper-plane); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paper-plane-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-paper-plane-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paper-plane-o:before { content: fa-content($fa-var-paper-plane); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-paper-plane-o:before { content: fa-content($nbp-var-paper-plane); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-send-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-send-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-send-o:before { content: fa-content($fa-var-paper-plane); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-send-o:before { content: fa-content($nbp-var-paper-plane); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-circle-thin {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-circle-thin {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-circle-thin:before { content: fa-content($fa-var-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-circle-thin:before { content: fa-content($nbp-var-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-header:before { content: fa-content($fa-var-heading); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-header:before { content: fa-content($nbp-var-heading); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sliders:before { content: fa-content($fa-var-sliders-h); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sliders:before { content: fa-content($nbp-var-sliders-h); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-futbol-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-futbol-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-futbol-o:before { content: fa-content($fa-var-futbol); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-futbol-o:before { content: fa-content($nbp-var-futbol); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-soccer-ball-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-soccer-ball-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-soccer-ball-o:before { content: fa-content($fa-var-futbol); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-soccer-ball-o:before { content: fa-content($nbp-var-futbol); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-slideshare {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-slideshare {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-twitch {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-twitch {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yelp {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yelp {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-newspaper-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-newspaper-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-newspaper-o:before { content: fa-content($fa-var-newspaper); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-newspaper-o:before { content: fa-content($nbp-var-newspaper); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paypal {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-paypal {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-wallet {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-wallet {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-visa {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-visa {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-mastercard {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-mastercard {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-discover {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-discover {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-amex {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-amex {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-paypal {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-paypal {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-stripe {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-stripe {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bell-slash-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bell-slash-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bell-slash-o:before { content: fa-content($fa-var-bell-slash); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bell-slash-o:before { content: fa-content($nbp-var-bell-slash); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-trash:before { content: fa-content($fa-var-trash-alt); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-trash:before { content: fa-content($nbp-var-trash-alt); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-copyright {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-copyright {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eyedropper:before { content: fa-content($fa-var-eye-dropper); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eyedropper:before { content: fa-content($nbp-var-eye-dropper); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-area-chart:before { content: fa-content($fa-var-chart-area); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-area-chart:before { content: fa-content($nbp-var-chart-area); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pie-chart:before { content: fa-content($fa-var-chart-pie); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pie-chart:before { content: fa-content($nbp-var-chart-pie); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-line-chart:before { content: fa-content($fa-var-chart-line); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-line-chart:before { content: fa-content($nbp-var-chart-line); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lastfm {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lastfm {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lastfm-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-lastfm-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ioxhost {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ioxhost {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-angellist {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-angellist {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc:before { content: fa-content($fa-var-closed-captioning); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc:before { content: fa-content($nbp-var-closed-captioning); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ils:before { content: fa-content($fa-var-shekel-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ils:before { content: fa-content($nbp-var-shekel-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-shekel:before { content: fa-content($fa-var-shekel-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-shekel:before { content: fa-content($nbp-var-shekel-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sheqel:before { content: fa-content($fa-var-shekel-sign); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sheqel:before { content: fa-content($nbp-var-shekel-sign); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meanpath {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-meanpath {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meanpath:before { content: fa-content($fa-var-font-awesome); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-meanpath:before { content: fa-content($nbp-var-font-awesome); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-buysellads {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-buysellads {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-connectdevelop {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-connectdevelop {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dashcube {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-dashcube {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-forumbee {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-forumbee {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-leanpub {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-leanpub {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sellsy {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sellsy {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-shirtsinbulk {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-shirtsinbulk {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-simplybuilt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-simplybuilt {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-skyatlas {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-skyatlas {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-diamond {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-diamond {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-diamond:before { content: fa-content($fa-var-gem); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-diamond:before { content: fa-content($nbp-var-gem); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-intersex:before { content: fa-content($fa-var-transgender); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-intersex:before { content: fa-content($nbp-var-transgender); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-official {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook-official {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-official:before { content: fa-content($fa-var-facebook); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-facebook-official:before { content: fa-content($nbp-var-facebook); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest-p {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pinterest-p {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-whatsapp {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-whatsapp {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hotel:before { content: fa-content($fa-var-bed); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hotel:before { content: fa-content($nbp-var-bed); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viacoin {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-viacoin {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-medium {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-medium {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-y-combinator {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yc {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc:before { content: fa-content($fa-var-y-combinator); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yc:before { content: fa-content($nbp-var-y-combinator); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-optin-monster {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-optin-monster {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-opencart {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-opencart {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-expeditedssl {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-expeditedssl {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery-4:before { content: fa-content($fa-var-battery-full); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery-4:before { content: fa-content($nbp-var-battery-full); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery:before { content: fa-content($fa-var-battery-full); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery:before { content: fa-content($nbp-var-battery-full); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery-3:before { content: fa-content($fa-var-battery-three-quarters); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery-3:before { content: fa-content($nbp-var-battery-three-quarters); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery-2:before { content: fa-content($fa-var-battery-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery-2:before { content: fa-content($nbp-var-battery-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery-1:before { content: fa-content($fa-var-battery-quarter); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery-1:before { content: fa-content($nbp-var-battery-quarter); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-battery-0:before { content: fa-content($fa-var-battery-empty); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-battery-0:before { content: fa-content($nbp-var-battery-empty); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-object-group {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-object-group {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-object-ungroup {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-object-ungroup {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sticky-note-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sticky-note-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sticky-note-o:before { content: fa-content($fa-var-sticky-note); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-sticky-note-o:before { content: fa-content($nbp-var-sticky-note); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-jcb {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-jcb {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-diners-club {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cc-diners-club {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-clone {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-clone {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hourglass-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hourglass-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hourglass-o:before { content: fa-content($fa-var-hourglass); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hourglass-o:before { content: fa-content($nbp-var-hourglass); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hourglass-1:before { content: fa-content($fa-var-hourglass-start); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hourglass-1:before { content: fa-content($nbp-var-hourglass-start); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hourglass-2:before { content: fa-content($fa-var-hourglass-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hourglass-2:before { content: fa-content($nbp-var-hourglass-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hourglass-3:before { content: fa-content($fa-var-hourglass-end); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hourglass-3:before { content: fa-content($nbp-var-hourglass-end); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-rock-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-rock-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-rock-o:before { content: fa-content($fa-var-hand-rock); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-rock-o:before { content: fa-content($nbp-var-hand-rock); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-grab-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-grab-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-grab-o:before { content: fa-content($fa-var-hand-rock); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-grab-o:before { content: fa-content($nbp-var-hand-rock); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-paper-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-paper-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-paper-o:before { content: fa-content($fa-var-hand-paper); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-paper-o:before { content: fa-content($nbp-var-hand-paper); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-stop-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-stop-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-stop-o:before { content: fa-content($fa-var-hand-paper); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-stop-o:before { content: fa-content($nbp-var-hand-paper); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-scissors-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-scissors-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-scissors-o:before { content: fa-content($fa-var-hand-scissors); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-scissors-o:before { content: fa-content($nbp-var-hand-scissors); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-lizard-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-lizard-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-lizard-o:before { content: fa-content($fa-var-hand-lizard); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-lizard-o:before { content: fa-content($nbp-var-hand-lizard); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-spock-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-spock-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-spock-o:before { content: fa-content($fa-var-hand-spock); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-spock-o:before { content: fa-content($nbp-var-hand-spock); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-pointer-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-pointer-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-pointer-o:before { content: fa-content($fa-var-hand-pointer); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-pointer-o:before { content: fa-content($nbp-var-hand-pointer); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-peace-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-peace-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hand-peace-o:before { content: fa-content($fa-var-hand-peace); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hand-peace-o:before { content: fa-content($nbp-var-hand-peace); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-registered {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-registered {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-creative-commons {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-creative-commons {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gg {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gg {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gg-circle {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gg-circle {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tripadvisor {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-tripadvisor {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-odnoklassniki {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-odnoklassniki {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-odnoklassniki-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-odnoklassniki-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-get-pocket {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-get-pocket {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wikipedia-w {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wikipedia-w {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-safari {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-safari {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-chrome {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-chrome {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-firefox {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-firefox {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-opera {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-opera {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-internet-explorer {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-internet-explorer {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-television:before { content: fa-content($fa-var-tv); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-television:before { content: fa-content($nbp-var-tv); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-contao {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-contao {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-500px {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-500px {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-amazon {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-amazon {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-plus-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-plus-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-plus-o:before { content: fa-content($fa-var-calendar-plus); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-plus-o:before { content: fa-content($nbp-var-calendar-plus); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-minus-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-minus-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-minus-o:before { content: fa-content($fa-var-calendar-minus); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-minus-o:before { content: fa-content($nbp-var-calendar-minus); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-times-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-times-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-times-o:before { content: fa-content($fa-var-calendar-times); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-times-o:before { content: fa-content($nbp-var-calendar-times); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-check-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-check-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-check-o:before { content: fa-content($fa-var-calendar-check); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-calendar-check-o:before { content: fa-content($nbp-var-calendar-check); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-map-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-map-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-map-o:before { content: fa-content($fa-var-map); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-map-o:before { content: fa-content($nbp-var-map); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-commenting:before { content: fa-content($fa-var-comment-dots); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-commenting:before { content: fa-content($nbp-var-comment-dots); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-commenting-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-commenting-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-commenting-o:before { content: fa-content($fa-var-comment-dots); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-commenting-o:before { content: fa-content($nbp-var-comment-dots); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-houzz {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-houzz {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vimeo {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo:before { content: fa-content($fa-var-vimeo-v); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vimeo:before { content: fa-content($nbp-var-vimeo-v); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-black-tie {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-black-tie {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-fonticons {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-fonticons {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit-alien {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-reddit-alien {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-edge {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-edge {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-credit-card-alt:before { content: fa-content($fa-var-credit-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-credit-card-alt:before { content: fa-content($nbp-var-credit-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-codiepie {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-codiepie {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-modx {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-modx {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-fort-awesome {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-fort-awesome {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-usb {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-usb {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-product-hunt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-product-hunt {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mixcloud {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-mixcloud {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-scribd {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-scribd {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pause-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pause-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pause-circle-o:before { content: fa-content($fa-var-pause-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pause-circle-o:before { content: fa-content($nbp-var-pause-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stop-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stop-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-stop-circle-o:before { content: fa-content($fa-var-stop-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-stop-circle-o:before { content: fa-content($nbp-var-stop-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bluetooth {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bluetooth {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bluetooth-b {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bluetooth-b {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gitlab {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-gitlab {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpbeginner {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wpbeginner {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpforms {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wpforms {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envira {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-envira {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wheelchair-alt {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wheelchair-alt {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wheelchair-alt:before { content: fa-content($fa-var-accessible-icon); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wheelchair-alt:before { content: fa-content($nbp-var-accessible-icon); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-question-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-question-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-question-circle-o:before { content: fa-content($fa-var-question-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-question-circle-o:before { content: fa-content($nbp-var-question-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-volume-control-phone:before { content: fa-content($fa-var-phone-volume); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-volume-control-phone:before { content: fa-content($nbp-var-phone-volume); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-asl-interpreting:before { content: fa-content($fa-var-american-sign-language-interpreting); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-asl-interpreting:before { content: fa-content($nbp-var-american-sign-language-interpreting); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-deafness:before { content: fa-content($fa-var-deaf); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-deafness:before { content: fa-content($nbp-var-deaf); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hard-of-hearing:before { content: fa-content($fa-var-deaf); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-hard-of-hearing:before { content: fa-content($nbp-var-deaf); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glide {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-glide {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glide-g {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-glide-g {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-signing:before { content: fa-content($fa-var-sign-language); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-signing:before { content: fa-content($nbp-var-sign-language); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viadeo {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-viadeo {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viadeo-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-viadeo-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-snapchat {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-ghost {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-snapchat-ghost {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-square {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-snapchat-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pied-piper {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-pied-piper {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-first-order {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-first-order {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yoast {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-yoast {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-themeisle {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-themeisle {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-official {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus-official {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-official:before { content: fa-content($fa-var-google-plus); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus-official:before { content: fa-content($nbp-var-google-plus); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-circle {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus-circle {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-circle:before { content: fa-content($fa-var-google-plus); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-google-plus-circle:before { content: fa-content($nbp-var-google-plus); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-font-awesome {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-font-awesome {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-fa {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-fa {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-fa:before { content: fa-content($fa-var-font-awesome); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-fa:before { content: fa-content($nbp-var-font-awesome); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-handshake-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-handshake-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-handshake-o:before { content: fa-content($fa-var-handshake); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-handshake-o:before { content: fa-content($nbp-var-handshake); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-open-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-envelope-open-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-open-o:before { content: fa-content($fa-var-envelope-open); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-envelope-open-o:before { content: fa-content($nbp-var-envelope-open); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linode {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-linode {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-address-book-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-address-book-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-address-book-o:before { content: fa-content($fa-var-address-book); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-address-book-o:before { content: fa-content($nbp-var-address-book); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vcard:before { content: fa-content($fa-var-address-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vcard:before { content: fa-content($nbp-var-address-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-address-card-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-address-card-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-address-card-o:before { content: fa-content($fa-var-address-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-address-card-o:before { content: fa-content($nbp-var-address-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vcard-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vcard-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vcard-o:before { content: fa-content($fa-var-address-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-vcard-o:before { content: fa-content($nbp-var-address-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-user-circle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-user-circle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-user-circle-o:before { content: fa-content($fa-var-user-circle); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-user-circle-o:before { content: fa-content($nbp-var-user-circle); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-user-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-user-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-user-o:before { content: fa-content($fa-var-user); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-user-o:before { content: fa-content($nbp-var-user); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-id-badge {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-id-badge {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-drivers-license:before { content: fa-content($fa-var-id-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-drivers-license:before { content: fa-content($nbp-var-id-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-id-card-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-id-card-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-id-card-o:before { content: fa-content($fa-var-id-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-id-card-o:before { content: fa-content($nbp-var-id-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-drivers-license-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-drivers-license-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-drivers-license-o:before { content: fa-content($fa-var-id-card); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-drivers-license-o:before { content: fa-content($nbp-var-id-card); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-quora {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-quora {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-free-code-camp {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-free-code-camp {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-telegram {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-telegram {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-4:before { content: fa-content($fa-var-thermometer-full); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer-4:before { content: fa-content($nbp-var-thermometer-full); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer:before { content: fa-content($fa-var-thermometer-full); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer:before { content: fa-content($nbp-var-thermometer-full); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-3:before { content: fa-content($fa-var-thermometer-three-quarters); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer-3:before { content: fa-content($nbp-var-thermometer-three-quarters); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-2:before { content: fa-content($fa-var-thermometer-half); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer-2:before { content: fa-content($nbp-var-thermometer-half); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-1:before { content: fa-content($fa-var-thermometer-quarter); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer-1:before { content: fa-content($nbp-var-thermometer-quarter); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-0:before { content: fa-content($fa-var-thermometer-empty); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-thermometer-0:before { content: fa-content($nbp-var-thermometer-empty); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bathtub:before { content: fa-content($fa-var-bath); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bathtub:before { content: fa-content($nbp-var-bath); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-s15:before { content: fa-content($fa-var-bath); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-s15:before { content: fa-content($nbp-var-bath); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-window-maximize {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-window-maximize {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-window-restore {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-window-restore {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-times-rectangle:before { content: fa-content($fa-var-window-close); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-times-rectangle:before { content: fa-content($nbp-var-window-close); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-window-close-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-window-close-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-window-close-o:before { content: fa-content($fa-var-window-close); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-window-close-o:before { content: fa-content($nbp-var-window-close); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-times-rectangle-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-times-rectangle-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-times-rectangle-o:before { content: fa-content($fa-var-window-close); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-times-rectangle-o:before { content: fa-content($nbp-var-window-close); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bandcamp {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-bandcamp {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-grav {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-grav {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-etsy {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-etsy {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-imdb {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-imdb {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ravelry {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-ravelry {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eercast {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eercast {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eercast:before { content: fa-content($fa-var-sellcast); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-eercast:before { content: fa-content($nbp-var-sellcast); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snowflake-o {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-snowflake-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snowflake-o:before { content: fa-content($fa-var-snowflake); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-snowflake-o:before { content: fa-content($nbp-var-snowflake); }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-superpowers {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-superpowers {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpexplorer {
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-wpexplorer {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
 
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cab:before { content: fa-content($fa-var-taxi); }
+.#{$nbp-css-prefix}.#{$nbp-css-prefix}-cab:before { content: fa-content($nbp-var-taxi); }
 

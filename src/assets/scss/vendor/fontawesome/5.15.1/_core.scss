@@ -1,12 +1,8 @@
 // Base Class Definition
 // -------------------------
 
-.#{$fa-css-prefix},
-.fas,
-.far,
-.fal,
-.fad,
-.fab {
+.#{$nbp-css-prefix},
+.nbp {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
