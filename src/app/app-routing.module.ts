@@ -10,6 +10,7 @@ import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-col
 import { NbpDividingLinePageComponent } from './pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component';
 import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/nbp-feedback-page.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
+import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
 import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
       { path: 'headers', component: NbpHeaderPageComponent },
       { path: 'checkbox', component: NbpCheckboxPageComponent },
       { path: 'tables', component: NbpTablePageComponent },
+      { path: 'icons', component: NbpIconPageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },

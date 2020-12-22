@@ -1,0 +1,11 @@
+.nbp-icon-page-wrapper {
+  .nbp-icon-content {
+    display: grid;
+    text-align: center;
+    border: 1px solid var(--nbp-primary);
+    margin: 10px;
+    .nbp-icon {
+      font-size: 40px;
+    }
+  }
+}

@@ -11,7 +11,10 @@
 .#{$nbp-css-prefix}-pull-right { float: right; }
 
 .#{$nbp-css-prefix},
-.nbp {
+.fas,
+.far,
+.fal,
+.fab {
   &.#{$nbp-css-prefix}-pull-left { margin-right: .3em; }
   &.#{$nbp-css-prefix}-pull-right { margin-left: .3em; }
 }
