@@ -41,6 +41,7 @@ import { NbpTableTwoComponent } from './components/nbp-tables/nbp-table-two/nbp-
 import { NbpBadgeComponent } from './components/nbp-badge/nbp-badge.component';
 import { NbpIconComponent } from './components/nbp-icon/nbp-icon.component';
 import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
+import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-badge-page.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-
     NbpBadgeComponent,
     NbpIconComponent,
     NbpIconPageComponent,
+    NbpBadgePageComponent,
   ],
   imports: [
     BrowserModule,

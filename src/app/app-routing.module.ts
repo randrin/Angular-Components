@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ComposantsComponent } from './pages/composants/composants.component';
 import { NbpAlertBoxPageComponent } from './pages/composants/nbp-alert-box-page/nbp-alert-box-page.component';
 import { NbpBackgroundBoxPageComponent } from './pages/composants/nbp-background-box-page/nbp-background-box-page.component';
+import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-badge-page.component';
 import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
 import { NbpButtonPageComponent } from './pages/composants/nbp-button-page/nbp-button-page.component';
 import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
       { path: 'checkbox', component: NbpCheckboxPageComponent },
       { path: 'tables', component: NbpTablePageComponent },
       { path: 'icons', component: NbpIconPageComponent },
+      { path: 'badges', component: NbpBadgePageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },
