@@ -1,0 +1,21 @@
+<div class="nbp-badge-page-wrapper">
+  <div class="container my-5">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line 
+          [nbpTitle]="title" 
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <nbp-badge 
+          [nbpBadgeName]="badge.name"
+          [nbpBadgeIcon]="badge.icon" 
+          [nbpBadgeStyle]="badge.style"
+        ></nbp-badge>
+      </div>
+    </div>
+  </div>
+</div>
