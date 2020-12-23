@@ -3,6 +3,7 @@
 @import 'commons/global';
 
 // COMPONENTS 
+@import 'components/typographies';
 @import 'components/buttons';
 @import 'components/checkbox';
 @import 'components/colors';
@@ -11,6 +12,7 @@
 
 // VENDOR
 @import 'vendor/fontawesome/5.15.1/fontawesome';
-
+@import 'vendor/typography/typography';
 // RESPONSIVE
+
 @import 'responsive/media-queries';
