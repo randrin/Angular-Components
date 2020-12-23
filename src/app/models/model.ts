@@ -90,22 +90,22 @@ export class Model {
       title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     },
     NbpFeedbackComponent: {
-      title: '},eedback Title',
+      title: 'Feedback Title',
       message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
     },
     NbpCheckboxComponent: {
       label: 'Privacy Policy',
     },
     NbpInputTextComponent: {
-      label1: '},irst Name',
+      label1: 'First Name',
       label2: 'Last Name',
-      name: '},irstName',
+      name: 'firstName',
       value: 'Mario Rossi',
       required: 'true',
       requiredMessage: 'The first name is required',
       placeholder: 'Insert your name',
-      icon1: '},a fa-search',
-      icon2: '},a fa-user'
+      icon1: 'fa fa-search',
+      icon2: 'fa fa-user'
     },
     NbpTextareaComponent: {
       label1: 'Description First Name',
