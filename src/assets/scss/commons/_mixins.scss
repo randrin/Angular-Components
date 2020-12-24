@@ -1,0 +1,21 @@
+@mixin nbp-font-size($from, $to) {
+  @for $i from $from through $to {
+    .nbp-font-size-#{$i} {
+      font-size: $i + px !important;
+    }
+  }
+}
+
+@mixin nbp-font-size-balise($fontSize) {
+  font-size: $fontSize + px !important;
+}
+
+@mixin nbp-opacity($from, $to) {
+  @for $i from $from through $to {
+    $opacityName: 02;
+    $opacityValue: $i / 10;
+    .nbp-opacity-#{$opacityName} {
+      opacity: $opacityValue + px !important;
+    }
+  }
+}

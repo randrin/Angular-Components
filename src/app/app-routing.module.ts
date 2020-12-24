@@ -15,6 +15,7 @@ import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
 import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
+import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
 import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
       { path: 'tables', component: NbpTablePageComponent },
       { path: 'icons', component: NbpIconPageComponent },
       { path: 'badges', component: NbpBadgePageComponent },
+      { path: 'typographies', component: NbpTypographyPageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },
