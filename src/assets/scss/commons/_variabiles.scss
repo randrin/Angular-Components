@@ -75,70 +75,23 @@
   background: var(--nbp-white) !important;
 }
 
-// Fonts Size
-.nbp-font-size-12 {
-  font-size: 12px !important;
-}
-.nbp-font-size-13 {
-  font-size: 13px !important;
-}
-.nbp-font-size-14 {
-  font-size: 14px !important;
-}
-.nbp-font-size-15 {
-  font-size: 15px !important;
-}
-.nbp-font-size-16 {
-  font-size: 16px !important;
-}
-.nbp-font-size-17 {
-  font-size: 17px !important;
-}
-.nbp-font-size-18 {
-  font-size: 18px !important;
-}
-.nbp-font-size-20 {
-  font-size: 20px !important;
-}
-.nbp-font-size-22 {
-  font-size: 22px !important;
-}
-.nbp-font-size-24 {
-  font-size: 24px !important;
-}
-.nbp-font-size-26 {
-  font-size: 26px !important;
-}
-.nbp-font-size-28 {
-  font-size: 28px !important;
-}
-.nbp-font-size-30 {
-  font-size: 30px !important;
-}
-.nbp-font-size-32 {
-  font-size: 32px !important;
-}
-.nbp-font-size-34 {
-  font-size: 34px !important;
-}
-.nbp-font-size-42 {
-  font-size: 42px !important;
-}
+// Fonts Size from 12px to 42px
+@include nbp-font-size(12, 42);
 
 // Fonts Weight
 .nbp-font-bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 // Texts Align
 .nbp-text-align-left {
-  text-align: left;
+  text-align: left !important;
 }
 .nbp-text-align-center {
-  text-align: center;
+  text-align: center !important;
 }
 .nbp-text-align-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 // Text Transform
@@ -179,6 +132,7 @@
 }
 
 // Opacity
+// TODO: @include nbp-opacity(0, 10); 
 .nbp-opacity-02 {
   opacity: 0.2 !important;
 }

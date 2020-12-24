@@ -1,0 +1,17 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let typography of typographies">
+      <h1 [ngClass]="typography.classe">H1 {{typography.name}} Title Text</h1>
+      <h2 [ngClass]="typography.classe">H2 {{typography.name}} Title Text</h2>
+      <h3 [ngClass]="typography.classe">H3 {{typography.name}} Title Text</h3>
+      <h4 [ngClass]="typography.classe">H4 {{typography.name}} Title Text</h4>
+      <h5 [ngClass]="typography.classe">H5 {{typography.name}} Title Text</h5>
+      <h6 [ngClass]="typography.classe">H6 {{typography.name}} Title Text</h6>
+    </div>
+  </div>
+</div>

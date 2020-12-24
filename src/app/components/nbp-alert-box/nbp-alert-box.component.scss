@@ -1,3 +1,8 @@
+@mixin small {
+  @media only screen and (max-width: 47.9375em) {
+    @content;
+  }
+}
 .nbp-alert-box-wrapper {
   position: relative;
   margin-bottom: 1.25rem;
@@ -52,7 +57,7 @@
     }
 
     .nbp-alert-box-container-message {
-      @media only screen and (max-width: 47.9375em) { // to remove later
+      @include small() { // to remove later
         padding: 1.25rem 3.75rem;
       }
       // display: table-cell;
