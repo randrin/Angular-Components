@@ -29,3 +29,35 @@
 .h6, h6 {
   @include nbp-font-size-balise(16);
 }
+
+.nbp-p1 {
+  font-family: OpenSans-Regular, sans-serif;
+  @include nbp-font-size-balise(24);
+  line-height: 32px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.nbp-p2 {
+  font-family: OpenSans-Regular, sans-serif;
+  @include nbp-font-size-balise(18);
+  line-height: 24px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.nbp-p3 {
+  font-family: OpenSans-Regular, sans-serif;
+  @include nbp-font-size-balise(14);
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.nbp-p4 {
+  font-family: OpenSans-Regular, sans-serif;
+  @include nbp-font-size-balise(12);
+  line-height: 18px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
