@@ -1,5 +1,12 @@
 export class Model {
   component = {
+    NbpPanelTitlePageComponent: {
+      title: {
+        left: "Panel Title Left",
+        center: "Panel Title Center",
+        right: "Panel title Right"
+      }
+    },
     NbpBadgeComponent: {
       name: "Badge Name",
       icon: "nbp-icon-user"

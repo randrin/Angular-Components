@@ -32,7 +32,7 @@ export class NbpButtonComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpGetClasses()
+    this.nbpGetClasses();
   }
 
   nbpGetClasses() {
