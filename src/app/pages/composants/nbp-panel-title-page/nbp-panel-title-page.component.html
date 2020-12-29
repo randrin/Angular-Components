@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nbp-panel-title 
+        [nbpPanelTitle]="_model.component.NbpPanelTitlePageComponent.title.left"
+        [nbpPanelTitleStyle]="_style.PRIMARY"
+        [nbpPanelTitlePosition]="_style.LEFT"
+        >
+      </nbp-panel-title>
+      <nbp-panel-title 
+        [nbpPanelTitle]="_model.component.NbpPanelTitlePageComponent.title.center"
+        [nbpPanelTitleStyle]="_style.PRIMARY"
+        [nbpPanelTitlePosition]="_style.CENTER"
+        >
+      </nbp-panel-title>
+      <nbp-panel-title 
+        [nbpPanelTitle]="_model.component.NbpPanelTitlePageComponent.title.right"
+        [nbpPanelTitleStyle]="_style.PRIMARY"
+        [nbpPanelTitlePosition]="_style.RIGHT"
+        >
+      </nbp-panel-title>
+    </div>
+  </div>
+</div>

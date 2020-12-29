@@ -43,6 +43,8 @@ import { NbpIconComponent } from './components/nbp-icon/nbp-icon.component';
 import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-badge-page.component';
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
+import { NbpPanelTitleComponent } from './components/nbp-panel-title/nbp-panel-title.component';
+import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-pa
     NbpIconPageComponent,
     NbpBadgePageComponent,
     NbpTypographyPageComponent,
+    NbpPanelTitleComponent,
+    NbpPanelTitlePageComponent,
   ],
   imports: [
     BrowserModule,

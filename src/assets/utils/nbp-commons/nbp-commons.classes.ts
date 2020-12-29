@@ -40,7 +40,12 @@ export enum NbpColorClasse {
   DANGER = 'nbp-color-danger',
   WARNING = 'nbp-color-warning',
   TOMATO = 'nbp-color-tomato',
-  WHITE = 'nbp-color-white'
+  WHITE = 'nbp-color-white',
+  WHITE_SMOKE = 'nbp-color-white-smoke',
+  WARM_GRAY_20 = 'nbp-color-warm-gray-20',
+  NIGHT_RIDER = 'nbp-color-night-rider',
+  SLIVER = 'nbp-color-sliver',
+  BLACK = 'nbp-color-black',
 }
 
 export enum NbpTextTransformClasse {
@@ -112,4 +117,26 @@ export enum NbpBadgeStyleClasse {
   WARM_GRAY_20 = 'nbp-badge-warm-gray-20',
   NIGHT_RIDER = 'nbp-badge-night-rider',
   SLIVER = 'nbp-badge-sliver'
+}
+
+export enum NbpPanelTitlePositionClasse {
+  LEFT = 'nbp-panel-title-left',
+  CENTER = 'nbp-panel-title-center',
+  RIGHT = 'nbp-panel-title-right'
+}
+
+export enum NbpBackgroundClasse {
+  DEFAULT = 'nbp-background-default',
+  SUCCESS = 'nbp-background-success',
+  PRIMARY = 'nbp-background-primary',
+  INFO = 'nbp-background-info',
+  DANGER = 'nbp-background-danger',
+  WARNING = 'nbp-background-warning',
+  TOMATO = 'nbp-background-tomato',
+  WHITE = 'nbp-background-white',
+  BLACK = 'nbp-background-black',
+  WHITE_SMOKE = 'nbp-background-white-smoke',
+  WARM_GRAY_20 = 'nbp-background-warm-gray-20',
+  NIGHT_RIDER = 'nbp-background-night-rider',
+  SLIVER = 'nbp-background-sliver'
 }

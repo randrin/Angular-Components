@@ -1,0 +1,16 @@
+.nbp-panel-title-wrapper {
+  margin: 15px;
+  padding: 15px 10px;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  .nbp-panel-title {
+    color: var(--nbp-white) !important;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 22px;
+    position: relative;
+    top: -32px;
+    max-width: calc(100% - 30px);
+  }
+}

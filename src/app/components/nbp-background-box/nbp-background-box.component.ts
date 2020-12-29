@@ -26,7 +26,7 @@ export class NbpBackgroundBoxComponent implements OnInit {
   nbpSeparator: string = ' ';
 
   nbpBackground = {
-    DEFAULT: 'nbp-background-default',
+    DEFAULT: 'nbp-background-white-smoke',
     PRIMARY: 'nbp-background-primary',
     TOMATO: 'nbp-background-tomato'
   }
