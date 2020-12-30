@@ -7,16 +7,16 @@
         [name]="nbpCheckBoxName" 
         [value]="nbpCheckBoxChecked"
         [(ngModel)]="nbpModel"
-        (click)="nbpCheckBoxClick()"
+        (click)="nbpCheckBoxClick($event)"
         disabled="nbpCheckBoxDisabled"
       />
       <div class="nbp-checkbox-icon-check" [ngClass]="nbpCheckBoxIcon">
         <i class="fa fa-check"></i>
       </div>
     </div>
-    <div class="nbp-checkbox-label">
+    <div class="nbp-checkbox-label" (click)="nbpCheckBoxClick($event)">
       <label for="nbpCheckBoxName" class="nbp-font-size-18">{{nbpCheckBoxLabel}}</label>
     </div>
   </div>
 </div>
-{{nbpModel}}
+<span>Model: {{nbpModel}}</span>

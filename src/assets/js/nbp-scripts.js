@@ -80,11 +80,15 @@ $(document).ready(function () {
 $(document).ready(function () {
   var $nbpCheckboxWrapper = $(".nbp-checkbox-wrapper");
   var $nbpCheckboxInput = $nbpCheckboxWrapper.find(".nbp-checkbox-input");
+  var $nbpCheckboxLabel = $nbpCheckboxWrapper.find(".nbp-checkbox-label");
 
   $nbpCheckboxInput.on('click', function() {
     $(this).toggleClass('checked')
-    $nbpCheckboxWrapper.find('.nbp-checkbox-label').toggleClass('checked')
     $(this).find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
+  })
+  $nbpCheckboxLabel.on('click', function() {
+    $nbpCheckboxInput.toggleClass('checked')
+    $nbpCheckboxInput.find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
   })
 });
 

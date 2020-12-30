@@ -20,5 +20,8 @@ export class NbpCheckboxPageComponent implements OnInit {
   }
   
   // Functions
+  nbpCheckBoxModel(event) {
+    console.log(event)
+  }
 
 }

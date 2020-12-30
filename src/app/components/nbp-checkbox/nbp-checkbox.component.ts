@@ -13,7 +13,7 @@ export class NbpCheckboxComponent implements OnInit {
   @Input() nbpCheckBoxName: string;
   @Input() nbpCheckBoxStyle: string;
   @Input() nbpCheckBoxDisabled: boolean;
-  @Input() nbpCheckBoxChecked: boolean;
+  @Input() nbpCheckBoxChecked: boolean = false;
 
   @Output() nbpCheckBoxModel: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -46,8 +46,8 @@ export class NbpCheckboxComponent implements OnInit {
     this.nbpCheckBoxInput = this.nbpCheckBoxOpacity + this.nbpSeparator + this.nbpCheckBoxCursor;
   }
 
-  // Functions
-  nbpCheckBoxClick() {
+  nbpCheckBoxClick(event) {
+    console.log('nbpCheckBoxClick: ', event)
     this.nbpCheckBoxModel.emit(this.nbpModel);
   }
 
