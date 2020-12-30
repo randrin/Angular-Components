@@ -103,6 +103,22 @@ export enum NbpBorderClasse {
   SLIVER = 'nbp-border-sliver'
 }
 
+// export enum NbpBorderTopBottomClasse {
+//   DEFAULT = 'nbp-border-top-bottom-default',
+//   SUCCESS = 'nbp-border-top-bottom-success',
+//   PRIMARY = 'nbp-border-top-bottom-primary',
+//   INFO = 'nbp-border-top-bottom-info',
+//   DANGER = 'nbp-border-top-bottom-danger',
+//   WARNING = 'nbp-border-top-bottom-warning',
+//   TOMATO = 'nbp-border-top-bottom-tomato',
+//   WHITE = 'nbp-border-top-bottom-white',
+//   BLACK = 'nbp-border-top-bottom-black',
+//   WHITE_SMOKE = 'nbp-border-top-bottom-white-smoke',
+//   WARM_GRAY_20 = 'nbp-border-top-bottom-warm-gray-20',
+//   NIGHT_RIDER = 'nbp-border-top-bottom-night-rider',
+//   SLIVER = 'nbp-border-top-bottom-sliver'
+// }
+
 export enum NbpBadgeStyleClasse {
   DEFAULT = 'nbp-badge-default',
   SUCCESS = 'nbp-badge-success',

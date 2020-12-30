@@ -1,0 +1,52 @@
+// Fonts Size from 12px to 42px
+@include nbp-font-size(12, 42);
+
+// Fonts Weight
+.nbp-font-bold {
+  font-weight: bold !important;
+}
+
+// Texts Align
+.nbp-text-align-left {
+  text-align: left !important;
+}
+.nbp-text-align-center {
+  text-align: center !important;
+}
+.nbp-text-align-right {
+  text-align: right !important;
+}
+
+// Text Transform
+.nbp-text-lowercase {
+  text-transform: lowercase !important;
+}
+.nbp-text-uppercase {
+  text-transform: uppercase !important;
+}
+.nbp-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Rounded
+.nbp-rounded {
+  border-radius: 1.5625rem !important;
+}
+
+// Opacity
+// TODO: @include nbp-opacity(0, 10);
+.nbp-opacity-02 {
+  opacity: 0.2 !important;
+}
+.nbp-opacity-04 {
+  opacity: 0.4 !important;
+}
+.nbp-opacity-05 {
+  opacity: 0.5 !important;
+}
+.nbp-opacity-07 {
+  opacity: 0.7 !important;
+}
+.nbp-opacity-1 {
+  opacity: 1 !important;
+}

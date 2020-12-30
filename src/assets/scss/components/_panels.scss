@@ -1,0 +1,16 @@
+// Panel Title Left
+.nbp-panel-title-left {
+  left: 0;
+}
+
+// Panel Title Center
+.nbp-panel-title-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Panel Title Right
+.nbp-panel-title-right {
+  left: 50%;
+  transform: translateX(50%);
+}
