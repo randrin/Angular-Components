@@ -41,7 +41,7 @@ export class NbpAlertBoxComponent implements OnInit {
   }
 
   nbpBackground = {
-    GENERIC: 'nbp-background-generic',
+    GENERIC: 'nbp-background-default',
     POSITIVE: 'nbp-background-success',
     PROMOTIONAL: 'nbp-background-info',
     WARNING: 'nbp-background-warning',
