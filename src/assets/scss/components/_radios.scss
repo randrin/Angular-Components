@@ -1,0 +1,101 @@
+// Success
+.nbp-radio-success {
+  .checked {
+    border-color: var(--nbp-success) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-success) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-success) !important;
+  }
+}
+
+// Primary
+.nbp-radio-primary {
+  .checked {
+    border-color: var(--nbp-primary) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-primary) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-primary) !important;
+  }
+}
+
+// Info
+.nbp-radio-info {
+  .checked {
+    border-color: var(--nbp-info) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-info) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-info) !important;
+  }
+}
+
+// Warning
+.nbp-radio-warning {
+  .checked {
+    border-color: var(--nbp-warning) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-warning) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-warning) !important;
+  }
+}
+
+// Danger
+.nbp-radio-danger {
+  .checked {
+    border-color: var(--nbp-tomato) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-tomato) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-tomato) !important;
+  }
+}
+
+// Default
+.nbp-radio-default {
+  .checked {
+    border-color: var(--nbp-secondary) !important;
+    color: var(--nbp-white) !important;
+    .nbp-radio-circle-icon {
+      background: var(--nbp-secondary) !important;
+    }
+  }
+  .nbp-radio-label.checked {
+    font-weight: 600;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--nbp-secondary) !important;
+  }
+}

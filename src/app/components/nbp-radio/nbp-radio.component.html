@@ -1,0 +1,19 @@
+<div class="nbp-radio-wrapper">
+  <div class="nbp-radio-container" [ngClass]="nbpRadio">
+    <div class="nbp-radio-input" [ngClass]="nbpRadioInput">
+      <input 
+        type="radio" 
+        class="form-control nbp-form-control" 
+        [name]="nbpRadioName" 
+        [value]="nbpRadioChecked"
+        [(ngModel)]="nbpModel"
+        (click)="nbpRadioClick($event)"
+        disabled="nbpRadioDisabled"
+      />
+      <div class="nbp-radio-circle-icon nbp-display-none"></div>
+    </div>
+    <div class="nbp-radio-label" (click)="nbpRadioClick($event)">
+      <label for="nbpRadioName" class="nbp-font-size-18">{{nbpRadioLabel}}</label>
+    </div>
+  </div>
+</div>

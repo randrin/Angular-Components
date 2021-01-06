@@ -69,6 +69,15 @@ export enum NbpCheckBoxStyleClasse {
   INFO = 'nbp-checkbox-info',
 }
 
+export enum NbpRadioStyleClasse {
+  DEFAULT = 'nbp-radio-default',
+  PRIMARY = 'nbp-radio-primary',
+  SUCCESS = 'nbp-radio-success',
+  DANGER = 'nbp-radio-danger',
+  WARNING = 'nbp-radio-warning',
+  INFO = 'nbp-radio-info',
+}
+
 export enum NbpOpacityClasse {
   OPACITY_02 = 'nbp-opacity-02',
   OPACITY_04 = 'nbp-opacity-04',

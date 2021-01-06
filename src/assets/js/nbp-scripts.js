@@ -82,13 +82,36 @@ $(document).ready(function () {
   var $nbpCheckboxInput = $nbpCheckboxWrapper.find(".nbp-checkbox-input");
   var $nbpCheckboxLabel = $nbpCheckboxWrapper.find(".nbp-checkbox-label");
 
-  $nbpCheckboxInput.on('click', function() {
-    $(this).toggleClass('checked')
+  $nbpCheckboxInput.on('click', function () {
+    $(this).toggleClass('checked');
     $(this).find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
   })
-  $nbpCheckboxLabel.on('click', function() {
-    $nbpCheckboxInput.toggleClass('checked')
+  $nbpCheckboxLabel.on('click', function () {
+    $nbpCheckboxInput.toggleClass('checked');
     $nbpCheckboxInput.find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
+  })
+});
+
+// NbpRadioComponent
+$(document).ready(function () {
+  var $nbpRadioWrapper = $(".nbp-radio-wrapper");
+  var $nbpRadioInput = $nbpRadioWrapper.find(".nbp-radio-input");
+  var $nbpRadioLabel = $nbpRadioWrapper.find(".nbp-radio-label");
+
+  $nbpRadioInput.on('click', function () {
+    
+    $(this).toggleClass('checked');
+    $(this).find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
+  })
+  $nbpRadioLabel.on('click', function () {
+    Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
+      console.log('nbpRadioInput: ', index);
+      console.log('nbpRadio: ', nbpRadio);
+      console.log('nbpRadio $(this): ', $(this));
+    });
+    $(this).toggleClass('checked');
+    $nbpRadioInput.toggleClass('checked');
+    $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
   })
 });
 
@@ -103,9 +126,9 @@ $(document).ready(function () {
 
   // var $label = document.getElementsByClassName("dataTables_filter").addClass('nbp-display-none');
   // console.log('$label: ', $label.length)
-  
-  Array.from(document.getElementsByClassName("dataTables_filter")).forEach(function(item) {
+
+  Array.from(document.getElementsByClassName("dataTables_filter")).forEach(function (item) {
     console.log(item);
- });
-  
+  });
+
 });
