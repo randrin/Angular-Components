@@ -1,0 +1,39 @@
+.nbp-breadcrumb-three-wrapper {
+  .nbp-breadcrumb {
+    list-style: none;
+    margin: 0.5rem 0 !important;
+    .nbp-breadcrumb-navigation:not(:first-child) {
+      padding-left: 10px;
+    }
+    .nbp-breadcrumb-navigation {
+      font-weight: 500;
+      display: inline-block;
+      padding: 12px 10px 12px 0px;
+      .nbp-breadcrumb-link {
+        padding-right: 20px;
+        position: relative;
+        &::before {
+          bottom: -15px;
+          transform: rotate(30deg);
+        }
+        &::after {
+          top: -15px;
+          transform: rotate(-30deg);
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          height: 28px;
+          width: 1px;
+          right: 0;
+          background: var(--nbp-secondary);
+        }
+        &:hover {
+          text-decoration: none;
+          color: var(--nbp-secondary) !important;
+        }
+      }
+    }
+  }
+}

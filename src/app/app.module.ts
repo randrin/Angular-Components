@@ -47,6 +47,7 @@ import { NbpPanelTitleComponent } from './components/nbp-panel-title/nbp-panel-t
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 import { NbpRadioComponent } from './components/nbp-radio/nbp-radio.component';
 import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
+import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumd-three/nbp-breadcrumd-three.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-rad
     NbpPanelTitlePageComponent,
     NbpRadioComponent,
     NbpRadioPageComponent,
+    NbpBreadcrumdThreeComponent,
   ],
   imports: [
     BrowserModule,
