@@ -103,16 +103,16 @@ $(document).ready(function () {
     $(this).toggleClass('checked');
     $(this).find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
   })
-  $nbpRadioLabel.on('click', function () {
-    Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
-      console.log('nbpRadioInput: ', index);
-      console.log('nbpRadio: ', nbpRadio);
-      console.log('nbpRadio $(this): ', $(this));
-    });
-    $(this).toggleClass('checked');
-    $nbpRadioInput.toggleClass('checked');
-    $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
-  })
+  // $nbpRadioLabel.on('click', function () {
+  //   Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
+  //     console.log('nbpRadioInput: ', index);
+  //     console.log('nbpRadio: ', nbpRadio);
+  //     console.log('nbpRadio $(this): ', $(this));
+  //   });
+  //   $(this).toggleClass('checked');
+  //   $nbpRadioInput.toggleClass('checked');
+  //   $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
+  // })
 });
 
 // NbpTablesComponent
