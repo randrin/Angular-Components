@@ -10,7 +10,8 @@ import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/asset
 })
 export class NbpAlertBoxPageComponent implements OnInit {
 
-  title = 'Alert Box Page';
+  title1 = 'Alert Box 1 Page';
+  title2 = 'Alert Box 2 Page';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;

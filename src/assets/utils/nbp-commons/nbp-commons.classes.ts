@@ -112,6 +112,22 @@ export enum NbpBorderClasse {
   SLIVER = 'nbp-border-sliver'
 }
 
+export enum NbpBorderColorClasse {
+  DEFAULT = 'nbp-border-color-default',
+  SUCCESS = 'nbp-border-color-success',
+  PRIMARY = 'nbp-border-color-primary',
+  INFO = 'nbp-border-color-info',
+  DANGER = 'nbp-border-color-danger',
+  WARNING = 'nbp-border-color-warning',
+  TOMATO = 'nbp-border-color-tomato',
+  WHITE = 'nbp-border-color-white',
+  BLACK = 'nbp-border-color-black',
+  WHITE_SMOKE = 'nbp-border-color-white-smoke',
+  WARM_GRAY_20 = 'nbp-border-color-warm-gray-20',
+  NIGHT_RIDER = 'nbp-border-color-night-rider',
+  SLIVER = 'nbp-border-color-sliver'
+}
+
 // export enum NbpBorderTopBottomClasse {
 //   DEFAULT = 'nbp-border-top-bottom-default',
 //   SUCCESS = 'nbp-border-top-bottom-success',
@@ -168,8 +184,8 @@ export enum NbpBackgroundClasse {
 
 export enum NbpIconClasse {
   GENERIC = 'fa fa-info-circle',
-  POSITIVE = 'fa fa-check-circle-o',
+  POSITIVE = 'fa fa-check-circle',
   PROMOTIONAL = 'fa fa-percent',
   WARNING = 'fa fa-exclamation-circle',
-  ERROR = 'fa fa-times-circle-o',
+  ERROR = 'fa fa-times-circle',
 }

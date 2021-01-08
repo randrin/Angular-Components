@@ -2,9 +2,9 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line
-          [nbpTitle]="title"
-          [nbpColorStyle]="_style.DEFAULT"
-        ></nbp-dividing-line>
+        [nbpTitle]="title1"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line>
     </div>
   </div>
   <div class="row">
@@ -12,25 +12,58 @@
       <nbp-alert-box-one
         [nbpText]="_model.component.NbpAlertBoxComponent.title"
         [nbpClose]="'true'"
-        [nbpColorStyle]="_style.DEFAULT"
         (nbpClickClose)="nbpOnClickClose($event)"
       ></nbp-alert-box-one>
-      <nbp-alert-box-one 
+      <nbp-alert-box-one
         [nbpText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.PROMOTIONAL"
       ></nbp-alert-box-one>
-      <nbp-alert-box-one 
-          [nbpText]="_model.component.NbpAlertBoxComponent.title"
-          [nbpAlertType]="_alert.WARNING"
-        ></nbp-alert-box-one>
-        <nbp-alert-box-one 
-          [nbpText]="_model.component.NbpAlertBoxComponent.title"
-          [nbpAlertType]="_alert.POSITIVE"
-        ></nbp-alert-box-one>
-        <nbp-alert-box-one 
-          [nbpText]="_model.component.NbpAlertBoxComponent.title"
-          [nbpAlertType]="_alert.ERROR"
-        ></nbp-alert-box-one>
+      <nbp-alert-box-one
+        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertType]="_alert.WARNING"
+      ></nbp-alert-box-one>
+      <nbp-alert-box-one
+        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertType]="_alert.POSITIVE"
+      ></nbp-alert-box-one>
+      <nbp-alert-box-one
+        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertType]="_alert.ERROR"
+      ></nbp-alert-box-one>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+        [nbpTitle]="title2"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-alert-box-two
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.PROMOTIONAL"
+      ></nbp-alert-box-two>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-two
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.WARNING"
+      ></nbp-alert-box-two>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-two
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.POSITIVE"
+      ></nbp-alert-box-two>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-two
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.ERROR"
+      ></nbp-alert-box-two>
     </div>
   </div>
 </div>

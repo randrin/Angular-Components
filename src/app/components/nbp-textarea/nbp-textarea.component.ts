@@ -29,11 +29,11 @@ export class NbpTextareaComponent implements OnInit {
   }
 
   nbpBorder = {
-    GENERIC: 'nbp-border-default',
-    POSITIVE: 'nbp-border-success',
-    PROMOTIONAL: 'nbp-border-info',
-    WARNING: 'nbp-border-warning',
-    ERROR: 'nbp-border-danger'
+    GENERIC: 'nbp-border-color-default',
+    POSITIVE: 'nbp-border-color-success',
+    PROMOTIONAL: 'nbp-border-color-info',
+    WARNING: 'nbp-border-color-warning',
+    ERROR: 'nbp-border-color-danger'
   }
 
   constructor() { }
