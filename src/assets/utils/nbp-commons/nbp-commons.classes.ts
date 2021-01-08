@@ -165,3 +165,11 @@ export enum NbpBackgroundClasse {
   NIGHT_RIDER = 'nbp-background-night-rider',
   SLIVER = 'nbp-background-sliver'
 }
+
+export enum NbpIconClasse {
+  GENERIC = 'fa fa-info-circle',
+  POSITIVE = 'fa fa-check-circle-o',
+  PROMOTIONAL = 'fa fa-percent',
+  WARNING = 'fa fa-exclamation-circle',
+  ERROR = 'fa fa-times-circle-o',
+}

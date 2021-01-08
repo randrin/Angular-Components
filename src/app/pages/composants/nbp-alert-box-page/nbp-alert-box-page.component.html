@@ -9,28 +9,28 @@
   </div>
   <div class="row">
     <div class="col">
-      <nbp-alert-box
+      <nbp-alert-box-one
         [nbpText]="_model.component.NbpAlertBoxComponent.title"
         [nbpClose]="'true'"
         [nbpColorStyle]="_style.DEFAULT"
         (nbpClickClose)="nbpOnClickClose($event)"
-      ></nbp-alert-box>
-      <nbp-alert-box 
+      ></nbp-alert-box-one>
+      <nbp-alert-box-one 
         [nbpText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.PROMOTIONAL"
-      ></nbp-alert-box>
-      <nbp-alert-box 
+      ></nbp-alert-box-one>
+      <nbp-alert-box-one 
           [nbpText]="_model.component.NbpAlertBoxComponent.title"
           [nbpAlertType]="_alert.WARNING"
-        ></nbp-alert-box>
-        <nbp-alert-box 
+        ></nbp-alert-box-one>
+        <nbp-alert-box-one 
           [nbpText]="_model.component.NbpAlertBoxComponent.title"
           [nbpAlertType]="_alert.POSITIVE"
-        ></nbp-alert-box>
-        <nbp-alert-box 
+        ></nbp-alert-box-one>
+        <nbp-alert-box-one 
           [nbpText]="_model.component.NbpAlertBoxComponent.title"
           [nbpAlertType]="_alert.ERROR"
-        ></nbp-alert-box>
+        ></nbp-alert-box-one>
     </div>
   </div>
 </div>
