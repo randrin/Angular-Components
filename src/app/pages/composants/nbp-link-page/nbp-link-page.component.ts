@@ -5,8 +5,7 @@ import { NbpStyle, NbpSize, NbpPipe } from 'src/assets/utils/nbp-commons/nbp-com
 @Component({
   selector: 'nbp-link-page',
   templateUrl: './nbp-link-page.component.html',
-  styles: [
-  ]
+  styleUrls: ['./nbp-link-page.component.scss']
 })
 export class NbpLinkPageComponent implements OnInit {
 

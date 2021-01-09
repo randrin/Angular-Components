@@ -1,3 +1,49 @@
 .nbp-arrow-link-wrapper {
-    
+  margin: 10px 0px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  .nbp-arrow-link-direction {
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 14px;
+    letter-spacing: .6px;
+    text-decoration: none !important;
+    display: flex;
+
+    .nbp-arrow-link-content {
+      left: 5px;
+      top: 2px;
+      position: relative;
+
+      .nbp-arrow-link-body {
+        width: 30px;
+        border-bottom: solid 1px;
+        top: 8px;
+        left: 2px;
+        position: relative;
+        transition: width 300ms;
+      }
+
+      .nbp-arrow-link-head {
+        width: 15.7px;
+        height: 15.7px;
+        transform: rotate(-45deg);
+        border-right: solid 1px;
+        border-bottom: solid 1px;
+        right: 0;
+        float: right;
+        transition: left 300ms;
+      }
+    }
+
+    &:hover {
+      .nbp-arrow-link-content {
+        .nbp-arrow-link-body {
+          width: 40px;
+          transition: width 300ms;
+        }
+      }
+    }
+  }
 }

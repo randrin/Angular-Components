@@ -1,7 +1,22 @@
 <div class="nbp-arrow-link-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col"></div>
+      <div class="col">
+        <a
+          [href]="nbpArrowLinkRedirection"
+          [target]="nbpArrowLinkTarget ? '_blank' : ''"
+          class="nbp-arrow-link-direction"
+          [ngClass]="nbpColor"
+        >
+          <div class="nbp-arrow-link-text" [ngClass]="nbpTextTransform">
+            {{ nbpArrowLinkName }}
+          </div>
+          <div class="nbp-arrow-link-content">
+            <div class="nbp-arrow-link-body" [ngClass]="nbpColor"></div>
+            <div class="nbp-arrow-link-head" [ngClass]="nbpColor"></div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

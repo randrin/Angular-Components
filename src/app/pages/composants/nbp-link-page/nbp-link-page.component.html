@@ -14,7 +14,7 @@
         [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
         [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
         [nbpDeepLinkRedirection]="_model.component.NbpLinkPageComponent.href"
-        [nbpDeepLinkTarget]="'false'"
+        [nbpDeepLinkTarget]="true"
       ></nbp-deep-link>
     </div>
     <div class="col-md-2">
@@ -22,6 +22,8 @@
         [nbpDeepLinkStyle]="_style.PRIMARY"
         [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
         [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+        [nbpDeepLinkRedirection]="'/#/composants/alert-boxes'"
+        [nbpDeepLinkTarget]="false"
       ></nbp-deep-link>
     </div>
     <div class="col-md-2">
@@ -51,6 +53,55 @@
         [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
         [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
       ></nbp-deep-link>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+        [nbpTitle]="title2"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <nbp-arrow-link
+        [nbpArrowLinkStyle]="_style.DEFAULT"
+        [nbpArrowLinkName]="_model.component.NbpLinkPageComponent.name2"
+        [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+        [nbpArrowLinkRedirection]="_model.component.NbpLinkPageComponent.href"
+        [nbpArrowLinkTarget]="true"
+      ></nbp-arrow-link>
+    </div>
+    <div class="col-md-3">
+      <nbp-arrow-link
+        [nbpArrowLinkStyle]="_style.PRIMARY"
+        [nbpArrowLinkName]="_model.component.NbpLinkPageComponent.name2"
+        [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+        [nbpArrowLinkRedirection]="'/#/composants/alert-boxes'"
+        [nbpArrowLinkTarget]="false"
+      ></nbp-arrow-link>
+    </div>
+    <div class="col-md-3">
+      <nbp-arrow-link
+        [nbpArrowLinkStyle]="_style.TOMATO"
+        [nbpArrowLinkName]="_model.component.NbpLinkPageComponent.name2"
+        [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-arrow-link>
+    </div>
+    <div class="col-md-3">
+      <nbp-arrow-link
+        [nbpArrowLinkStyle]="_style.WARNING"
+        [nbpArrowLinkName]="_model.component.NbpLinkPageComponent.name2"
+        [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-arrow-link>
+    </div>
+    <div class="col-md-3">
+      <nbp-arrow-link
+        [nbpArrowLinkStyle]="_style.INFO"
+        [nbpArrowLinkName]="_model.component.NbpLinkPageComponent.name2"
+        [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-arrow-link>
     </div>
   </div>
 </div>
