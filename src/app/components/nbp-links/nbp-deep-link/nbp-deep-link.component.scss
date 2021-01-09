@@ -1,0 +1,32 @@
+.nbp-deep-link-wrapper {
+  margin: 7px 0 -5px;
+  text-align: center;
+
+  .nbp-deep-link-direction {
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 14px;
+    letter-spacing: .6px;
+    text-decoration: none !important;
+    display: inline-block;
+
+    .nbp-deep-link-text::after {
+      content: "";
+      position: relative;
+      left: 3px;
+      top: -2px;
+      transition: left 300ms;
+      border: solid;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      .nbp-deep-link-text::after {
+        left: 15px;
+        transition: left 300ms;
+      }
+    }
+  }
+}

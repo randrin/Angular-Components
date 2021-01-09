@@ -1,0 +1,56 @@
+<div class="nbp-link-page-wrapper container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+        [nbpTitle]="title1"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.DEFAULT"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+        [nbpDeepLinkRedirection]="_model.component.NbpLinkPageComponent.href"
+        [nbpDeepLinkTarget]="'false'"
+      ></nbp-deep-link>
+    </div>
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.PRIMARY"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-deep-link>
+    </div>
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.TOMATO"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-deep-link>
+    </div>
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.DANGER"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-deep-link>
+    </div>
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.WARNING"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-deep-link>
+    </div>
+    <div class="col-md-2">
+      <nbp-deep-link
+        [nbpDeepLinkStyle]="_style.INFO"
+        [nbpDeepLinkName]="_model.component.NbpLinkPageComponent.name1"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+      ></nbp-deep-link>
+    </div>
+  </div>
+</div>

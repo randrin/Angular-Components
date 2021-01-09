@@ -49,6 +49,9 @@ import { NbpRadioComponent } from './components/nbp-radio/nbp-radio.component';
 import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
 import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumd-three/nbp-breadcrumd-three.component';
 import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component';
+import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp-arrow-link.component';
+import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-deep-link.component';
+import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +100,9 @@ import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-
     NbpRadioPageComponent,
     NbpBreadcrumdThreeComponent,
     NbpAlertBoxTwoComponent,
+    NbpArrowLinkComponent,
+    NbpDeepLinkComponent,
+    NbpLinkPageComponent,
   ],
   imports: [
     BrowserModule,

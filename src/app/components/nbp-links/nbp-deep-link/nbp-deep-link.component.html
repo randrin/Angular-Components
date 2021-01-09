@@ -1,0 +1,18 @@
+<div class="nbp-deep-link-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a
+          [href]="nbpDeepLinkRedirection"
+          [target]="nbpDeepLinkTarget ? '_blank' : ''"
+          class="nbp-deep-link-direction"
+          [ngClass]="nbpColor"
+        >
+          <div class="nbp-deep-link-text" [ngClass]="nbpTextTransform">
+            {{ nbpDeepLinkName }}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

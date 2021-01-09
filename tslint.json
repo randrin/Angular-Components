@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "component-selector": true,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -42,7 +43,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,
@@ -57,7 +58,7 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [
-      true,
+      false,
       "single"
     ],
     "trailing-comma": false,

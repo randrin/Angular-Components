@@ -13,6 +13,7 @@ import { NbpFeedbackPageComponent } from './pages/composants/nbp-feedback-page/n
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
 import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
+import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
 import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
       { path: 'badges', component: NbpBadgePageComponent },
       { path: 'typographies', component: NbpTypographyPageComponent },
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
+      { path: 'links', component: NbpLinkPageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },

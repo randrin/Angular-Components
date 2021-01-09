@@ -1,5 +1,10 @@
 export class Model {
   component = {
+    NbpLinkPageComponent: {
+      name1: "Deep Link",
+      name2: "Arrow Link",
+      href: "https://www.google.com"
+    },
     NbpPanelTitlePageComponent: {
       title: {
         left: "Panel Title Left",
