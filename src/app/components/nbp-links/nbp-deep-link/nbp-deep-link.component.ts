@@ -14,7 +14,6 @@ import {
   styleUrls: ["./nbp-deep-link.component.scss"],
 })
 export class NbpDeepLinkComponent implements OnInit {
-
   @Input() nbpDeepLinkName: string;
   @Input() nbpDeepLinkStyle: string;
   @Input() nbpDeepLinkTextTransform: string;
@@ -30,6 +29,11 @@ export class NbpDeepLinkComponent implements OnInit {
 
   nbpColor: string;
   nbpTextTransform: string;
+  nbpSeparator: string = " ";
+  nbpPosition = {
+    LEFT: "nbp-deep-link-left",
+    RIGHT: "nbp-deep-link-right",
+  };
 
   constructor() {}
 
@@ -43,6 +47,12 @@ export class NbpDeepLinkComponent implements OnInit {
     this.nbpTextTransform = this.nbpGetTextTransform(
       this.nbpDeepLinkTextTransform
     );
+    this.nbpDeepLinkPosition =
+      this.nbpDeepLinkPosition === "" || this.nbpDeepLinkPosition === undefined
+        ? this.nbpPosition.RIGHT
+        : this.nbpPosition.LEFT;
+    this.nbpTextTransform =
+      this.nbpTextTransform + this.nbpSeparator + this.nbpDeepLinkPosition;
   }
 
   nbpGetColorClass(nbpInput) {
@@ -65,8 +75,20 @@ export class NbpDeepLinkComponent implements OnInit {
       case this._style.TOMATO:
         return this._colorClasse.TOMATO;
         break;
+      case this._style.BLACK:
+        return this._colorClasse.BLACK;
+        break;
+      case this._style.SLIVER:
+        return this._colorClasse.SLIVER;
+        break;
       case this._style.WHITE:
         return this._colorClasse.WHITE;
+        break;
+      case this._style.WHITE_SMOKE:
+        return this._colorClasse.WHITE_SMOKE;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._colorClasse.NIGHT_RIDER;
         break;
       case this._style.SUCCESS:
         return this._colorClasse.SUCCESS;

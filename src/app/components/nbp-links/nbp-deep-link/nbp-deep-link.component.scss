@@ -1,5 +1,5 @@
 .nbp-deep-link-wrapper {
-  margin: 7px 0 -5px;
+  margin: 10px 0px;
   text-align: center;
 
   .nbp-deep-link-direction {
@@ -9,7 +9,7 @@
     text-decoration: none !important;
     display: inline-block;
 
-    .nbp-deep-link-text::after {
+    .nbp-deep-link-text.nbp-deep-link-right::after {
       content: "";
       position: relative;
       left: 3px;
@@ -22,10 +22,28 @@
       transform: rotate(-45deg);
     }
 
+    .nbp-deep-link-text.nbp-deep-link-left::before {
+      content: "";
+      position: relative;
+      right: 3px;
+      top: -2px;
+      transition: right 300ms;
+      border: solid;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(130deg);
+    }
+
     &:hover {
-      .nbp-deep-link-text::after {
+      .nbp-deep-link-text.nbp-deep-link-right::after {
         left: 15px;
         transition: left 300ms;
+      }
+
+      .nbp-deep-link-text.nbp-deep-link-left::before {
+        right: 15px;
+        transition: right 300ms;
       }
     }
   }
