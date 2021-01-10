@@ -11,12 +11,12 @@
     text-decoration: none !important;
     display: flex;
 
-    .nbp-arrow-link-content {
+    .nbp-arrow-link-content-right {
       left: 5px;
       top: 2px;
       position: relative;
 
-      .nbp-arrow-link-body {
+      .nbp-arrow-link-body-right {
         width: 30px;
         border-bottom: solid 1px;
         top: 8px;
@@ -25,7 +25,7 @@
         transition: width 300ms;
       }
 
-      .nbp-arrow-link-head {
+      .nbp-arrow-link-head-right {
         width: 15.7px;
         height: 15.7px;
         transform: rotate(-45deg);
@@ -37,9 +37,41 @@
       }
     }
 
+    .nbp-arrow-link-content-left {
+        right: 5px;
+        top: 2px;
+        position: relative;
+  
+        .nbp-arrow-link-body-left {
+          width: 30px;
+          border-bottom: solid 1px;
+          top: 8px;
+          left: -2px;
+          position: relative;
+          transition: width 300ms;
+        }
+  
+        .nbp-arrow-link-head-left {
+          width: 15.7px;
+          height: 15.7px;
+          transform: rotate(-222deg);
+          border-right: solid 1px;
+          border-bottom: solid 1px;
+          left: 0;
+          float: left;
+          transition: left 300ms;
+        }
+      }
+
     &:hover {
-      .nbp-arrow-link-content {
-        .nbp-arrow-link-body {
+      .nbp-arrow-link-content-right {
+        .nbp-arrow-link-body-right {
+          width: 40px;
+          transition: width 300ms;
+        }
+      }
+      .nbp-arrow-link-content-left {
+        .nbp-arrow-link-body-left {
           width: 40px;
           transition: width 300ms;
         }

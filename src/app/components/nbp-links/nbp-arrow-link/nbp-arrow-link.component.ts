@@ -1,19 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NbpTextTransformClasse, NbpColorClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpPipe, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Input, OnInit } from "@angular/core";
+import {
+  NbpTextTransformClasse,
+  NbpColorClasse,
+} from "src/assets/utils/nbp-commons/nbp-commons.classes";
+import {
+  NbpPipe,
+  NbpStyle,
+} from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
-  selector: 'nbp-arrow-link',
-  templateUrl: './nbp-arrow-link.component.html',
-  styleUrls: ['./nbp-arrow-link.component.scss']
+  selector: "nbp-arrow-link",
+  templateUrl: "./nbp-arrow-link.component.html",
+  styleUrls: ["./nbp-arrow-link.component.scss"],
 })
 export class NbpArrowLinkComponent implements OnInit {
-
   @Input() nbpArrowLinkName: string;
   @Input() nbpArrowLinkStyle: string;
   @Input() nbpArrowLinkTextTransform: string;
   @Input() nbpArrowLinkRedirection: string;
   @Input() nbpArrowLinkTarget: boolean;
+  @Input() nbpArrowLinkPosition: string;
 
   _style = NbpStyle;
   _pipe = NbpPipe;
@@ -24,12 +30,11 @@ export class NbpArrowLinkComponent implements OnInit {
   nbpColor: string;
   nbpTextTransform: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
   }
-
 
   // Functions
   nbpSetUpComponent() {
@@ -37,6 +42,11 @@ export class NbpArrowLinkComponent implements OnInit {
     this.nbpTextTransform = this.nbpGetTextTransform(
       this.nbpArrowLinkTextTransform
     );
+    this.nbpArrowLinkPosition =
+      this.nbpArrowLinkPosition === "" ||
+      this.nbpArrowLinkPosition === undefined
+        ? this._style.RIGHT
+        : this.nbpArrowLinkPosition;
   }
 
   nbpGetColorClass(nbpInput) {
@@ -61,6 +71,9 @@ export class NbpArrowLinkComponent implements OnInit {
         break;
       case this._style.WHITE:
         return this._colorClasse.WHITE;
+        break;
+      case this._style.BLACK:
+        return this._colorClasse.BLACK;
         break;
       case this._style.SUCCESS:
         return this._colorClasse.SUCCESS;

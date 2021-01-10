@@ -20,6 +20,7 @@ export class NbpDeepLinkComponent implements OnInit {
   @Input() nbpDeepLinkTextTransform: string;
   @Input() nbpDeepLinkRedirection: string;
   @Input() nbpDeepLinkTarget: boolean;
+  @Input() nbpDeepLinkPosition: string;
 
   _style = NbpStyle;
   _pipe = NbpPipe;

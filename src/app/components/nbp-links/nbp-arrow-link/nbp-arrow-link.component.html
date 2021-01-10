@@ -8,12 +8,22 @@
           class="nbp-arrow-link-direction"
           [ngClass]="nbpColor"
         >
+          <div
+            class="nbp-arrow-link-content-left"
+            *ngIf="nbpArrowLinkPosition === _style.LEFT"
+          >
+            <div class="nbp-arrow-link-body-left" [ngClass]="nbpColor"></div>
+            <div class="nbp-arrow-link-head-left" [ngClass]="nbpColor"></div>
+          </div>
           <div class="nbp-arrow-link-text" [ngClass]="nbpTextTransform">
             {{ nbpArrowLinkName }}
           </div>
-          <div class="nbp-arrow-link-content">
-            <div class="nbp-arrow-link-body" [ngClass]="nbpColor"></div>
-            <div class="nbp-arrow-link-head" [ngClass]="nbpColor"></div>
+          <div
+            class="nbp-arrow-link-content-right"
+            *ngIf="nbpArrowLinkPosition === _style.RIGHT"
+          >
+            <div class="nbp-arrow-link-body-right" [ngClass]="nbpColor"></div>
+            <div class="nbp-arrow-link-head-right" [ngClass]="nbpColor"></div>
           </div>
         </a>
       </div>
