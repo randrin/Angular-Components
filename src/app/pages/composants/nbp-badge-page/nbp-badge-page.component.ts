@@ -9,7 +9,8 @@ import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 })
 export class NbpBadgePageComponent implements OnInit {
 
-  title = 'Badges Style';
+  title1 = 'Badges Style with icon';
+  title2 = 'Badges Style without icon';
 
   _style = NbpStyle;
   _model = new Model();
