@@ -1,7 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NbpBorderClasse, NbpTextTransformClasse, NbpBackgroundClasse, NbpColorClasse, NbpIconClasse, NbpBorderColorClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpAlertType, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpAlertType, NbpPipe, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-base-component',
@@ -15,6 +15,7 @@ export class NbpBaseComponent implements OnInit {
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
+  _pipe = NbpPipe;
 
   _colorClasse = NbpColorClasse;
   _iconClasse = NbpIconClasse;
@@ -26,7 +27,13 @@ export class NbpBaseComponent implements OnInit {
   nbpColor: string;
   nbpBackground: string;
   nbpBorder: string;
+  nbpTextTransform: string;
+
   nbpSeparator: string = ' ';
+  nbpPosition = {
+    LEFT: "nbp-deep-link-left",
+    RIGHT: "nbp-deep-link-right",
+  };
 
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
@@ -169,6 +176,15 @@ export class NbpBaseComponent implements OnInit {
       case this._style.WHITE:
         return this._colorClasse.WHITE;
         break;
+      case this._style.BLACK:
+        return this._colorClasse.BLACK;
+        break;
+      case this._style.WARM_GRAY_20:
+        return this._colorClasse.WARM_GRAY_20;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._colorClasse.NIGHT_RIDER;
+        break;
       case this._style.SUCCESS:
       case this._alertType.POSITIVE:
         return this._colorClasse.SUCCESS;
@@ -252,6 +268,21 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._iconClasse.GENERIC;
+        break;
+    }
+  }
+
+  /* Function to get the text transform classe with input as argument */
+  nbpGetTextTransformClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._pipe.LOWERCASE:
+        return this._textTransformClasse.LOWERCASE;
+        break;
+      case this._pipe.UPPERCASE:
+        return this._textTransformClasse.UPPERCASE;
+        break;
+      default:
+        return this._textTransformClasse.UPPERCASE;
         break;
     }
   }
