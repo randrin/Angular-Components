@@ -1,42 +1,24 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {
-  NbpBackgroundClasse,
-  NbpBorderColorClasse,
-  NbpColorClasse,
-  NbpIconClasse,
-} from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import {
-  NbpAlertType,
-  NbpStyle,
-} from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-alert-box-one',
   templateUrl: './nbp-alert-box-one.component.html',
   styleUrls: ['./nbp-alert-box-one.component.scss'],
 })
-export class NbpAlertBoxOneComponent implements OnInit {
+export class NbpAlertBoxOneComponent extends NbpBaseComponent implements OnInit {
+
   @Input() nbpText: string;
   @Input() nbpClose: boolean;
   @Input() nbpAlertType: string;
 
   @Output() nbpClickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  _alertType = NbpAlertType;
-  _style = NbpStyle;
-
-  _colorClasse = NbpColorClasse;
-  _iconClasse = NbpIconClasse;
-  _borderColorClasse = NbpBorderColorClasse;
-  _backgroundClasse = NbpBackgroundClasse;
-
-  nbpAlertBoxTextColor: string;
   nbpAlertBoxType: string;
   nbpAlertBoxIcon: string;
   nbpAlertBoxBackground: string;
-  nbpSeparator: string = ' ';
 
-  constructor() {}
+  constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
@@ -44,65 +26,9 @@ export class NbpAlertBoxOneComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpGetColorBoxAlert(this.nbpAlertType);
-    this.nbpAlertBoxTextColor = this.nbpGetColorTextBoxAlert(
-      this.nbpAlertType
-    );
-  }
-
-  nbpGetColorTextBoxAlert(nbpInput) {
-    switch (nbpInput) {
-      case this._style.DEFAULT:
-        return this._colorClasse.DEFAULT;
-        break;
-      case this._style.PRIMARY:
-        return this._colorClasse.PRIMARY;
-        break;
-      case this._style.WHITE:
-        return this._colorClasse.WHITE;
-        break;
-      case this._style.DANGER:
-        return this._colorClasse.DANGER;
-        break;
-      default:
-        return this._colorClasse.DEFAULT;
-        break;
-    }
-  }
-
-  nbpGetColorBoxAlert(nbpInput) {
-    switch (nbpInput) {
-      case this._alertType.GENERIC:
-        this.nbpAlertBoxIcon = this._iconClasse.GENERIC;
-        this.nbpAlertBoxType = this._borderColorClasse.DEFAULT;
-        this.nbpAlertBoxBackground = this._backgroundClasse.DEFAULT;
-        break;
-      case this._alertType.POSITIVE:
-        this.nbpAlertBoxIcon = this._iconClasse.POSITIVE;
-        this.nbpAlertBoxType = this._borderColorClasse.SUCCESS;
-        this.nbpAlertBoxBackground = this._backgroundClasse.SUCCESS;
-        break;
-      case this._alertType.PROMOTIONAL:
-        this.nbpAlertBoxIcon = this._iconClasse.PROMOTIONAL;
-        this.nbpAlertBoxType = this._borderColorClasse.INFO;
-        this.nbpAlertBoxBackground = this._backgroundClasse.INFO;
-        break;
-      case this._alertType.WARNING:
-        this.nbpAlertBoxIcon = this._iconClasse.WARNING;
-        this.nbpAlertBoxType = this._borderColorClasse.WARNING;
-        this.nbpAlertBoxBackground = this._backgroundClasse.WARNING;
-        break;
-      case this._alertType.ERROR:
-        this.nbpAlertBoxIcon = this._iconClasse.ERROR;
-        this.nbpAlertBoxType = this._borderColorClasse.DANGER;
-        this.nbpAlertBoxBackground = this._backgroundClasse.DANGER;
-        break;
-      default:
-        this.nbpAlertBoxIcon = this._iconClasse.GENERIC;
-        this.nbpAlertBoxType = this._borderColorClasse.DEFAULT;
-        this.nbpAlertBoxBackground = this._backgroundClasse.DEFAULT;
-        break;
-    }
+    this.nbpAlertBoxType = this.nbpGetBorderColorClasse(this.nbpAlertType);
+    this.nbpAlertBoxBackground = this.nbpGetBackgroundClasse(this.nbpAlertType);
+    this.nbpAlertBoxIcon = this.nbpGetIconClasse(this.nbpAlertType);
   }
 
   nbpOnClickClose() {

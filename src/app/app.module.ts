@@ -54,10 +54,12 @@ import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-d
 import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-alert-box-three/nbp-alert-box-three.component';
 import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-panel-title-two/nbp-panel-title-two.component';
+import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NbpBaseComponent,
     NbpDividingLineComponent,
     NbpBackgroundBoxComponent,
     NbpButtonComponent,
