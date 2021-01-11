@@ -20,6 +20,7 @@ export class NbpRadioComponent implements OnInit {
 
   nbpModel: boolean;
   nbpRadio: string;
+  nbpRadioInput: string;
 
   constructor() { }
 
