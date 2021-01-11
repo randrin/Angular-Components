@@ -52,6 +52,7 @@ import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-
 import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp-arrow-link.component';
 import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-deep-link.component';
 import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
+import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-alert-box-three/nbp-alert-box-three.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-
     NbpArrowLinkComponent,
     NbpDeepLinkComponent,
     NbpLinkPageComponent,
+    NbpAlertBoxThreeComponent,
   ],
   imports: [
     BrowserModule,

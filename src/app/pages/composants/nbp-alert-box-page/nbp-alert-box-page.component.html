@@ -44,6 +44,12 @@
     <div class="col-md-6">
       <nbp-alert-box-two
         [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.GENERIC"
+      ></nbp-alert-box-two>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-two
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
         [nbpAlertType]="_alert.PROMOTIONAL"
       ></nbp-alert-box-two>
     </div>
@@ -64,6 +70,46 @@
         [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
         [nbpAlertType]="_alert.ERROR"
       ></nbp-alert-box-two>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line
+        [nbpTitle]="title3"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.GENERIC"
+      ></nbp-alert-box-three>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.PROMOTIONAL"
+      ></nbp-alert-box-three>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.WARNING"
+      ></nbp-alert-box-three>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.POSITIVE"
+      ></nbp-alert-box-three>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpText]="_model.component.NbpAlertBoxComponent.title.substring(0, 100)"
+        [nbpAlertType]="_alert.ERROR"
+      ></nbp-alert-box-three>
     </div>
   </div>
 </div>

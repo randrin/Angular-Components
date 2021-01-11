@@ -179,7 +179,11 @@ export enum NbpBackgroundClasse {
   WHITE_SMOKE = 'nbp-background-white-smoke',
   WARM_GRAY_20 = 'nbp-background-warm-gray-20',
   NIGHT_RIDER = 'nbp-background-night-rider',
-  SLIVER = 'nbp-background-sliver'
+  SLIVER = 'nbp-background-sliver',
+  EGYPTIAN_BLUE = 'nbp-background-egyptian-blue',
+  FLORAL_WHITE = 'nbp-background-floral-white',
+  MINT_CREAM = 'nbp-background-mint-cream',
+  MISTY_ROSE = 'nbp-background-misty-rose'
 }
 
 export enum NbpIconClasse {
