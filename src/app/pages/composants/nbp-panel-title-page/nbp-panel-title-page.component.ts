@@ -9,7 +9,8 @@ import { NbpStyle, NbpFontSize, NbpPipe, NbpSize, NbpAlertType } from 'src/asset
 })
 export class NbpPanelTitlePageComponent implements OnInit {
 
-  title = 'Panels Title Page';
+  title1 = 'Panels Title Page';
+  title2 = 'Panels Title Page with Header Background';
 
   _style = NbpStyle;
   _fontSize = NbpFontSize;
