@@ -7,6 +7,7 @@ export class Model {
     },
     NbpPanelTitlePageComponent: {
       title: {
+        normal: "Panel Title",
         left: "Panel Title Left",
         center: "Panel Title Center",
         right: "Panel title Right"

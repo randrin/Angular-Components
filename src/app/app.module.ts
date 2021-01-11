@@ -43,7 +43,7 @@ import { NbpIconComponent } from './components/nbp-icon/nbp-icon.component';
 import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-badge-page.component';
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
-import { NbpPanelTitleComponent } from './components/nbp-panel-title/nbp-panel-title.component';
+import { NbpPanelTitleOneComponent } from './components/nbp-panel-titles/nbp-panel-title-one/nbp-panel-title-one.component';
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 import { NbpRadioComponent } from './components/nbp-radio/nbp-radio.component';
 import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
@@ -53,6 +53,7 @@ import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp
 import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-deep-link.component';
 import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-alert-box-three/nbp-alert-box-three.component';
+import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-panel-title-two/nbp-panel-title-two.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,7 @@ import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-aler
     NbpIconPageComponent,
     NbpBadgePageComponent,
     NbpTypographyPageComponent,
-    NbpPanelTitleComponent,
+    NbpPanelTitleOneComponent,
     NbpPanelTitlePageComponent,
     NbpRadioComponent,
     NbpRadioPageComponent,
@@ -105,6 +106,7 @@ import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-aler
     NbpDeepLinkComponent,
     NbpLinkPageComponent,
     NbpAlertBoxThreeComponent,
+    NbpPanelTitleTwoComponent,
   ],
   imports: [
     BrowserModule,

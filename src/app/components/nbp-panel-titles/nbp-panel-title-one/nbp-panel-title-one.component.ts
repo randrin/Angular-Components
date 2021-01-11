@@ -4,11 +4,11 @@ import { NbpBackgroundClasse, NbpBorderColorClasse, NbpPanelTitlePositionClasse 
 import { NbpStyle, NbpFontSize, NbpPipe, NbpSize, NbpAlertType } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'nbp-panel-title',
-  templateUrl: './nbp-panel-title.component.html',
-  styleUrls: ['./nbp-panel-title.component.scss']
+  selector: 'nbp-panel-title-one',
+  templateUrl: './nbp-panel-title-one.component.html',
+  styleUrls: ['./nbp-panel-title-one.component.scss']
 })
-export class NbpPanelTitleComponent implements OnInit {
+export class NbpPanelTitleOneComponent implements OnInit {
 
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
