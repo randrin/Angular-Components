@@ -1,7 +1,8 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Model } from 'src/app/models/model';
 import { NbpBorderClasse, NbpTextTransformClasse, NbpBackgroundClasse, NbpColorClasse, NbpIconClasse, NbpBorderColorClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpAlertType, NbpPipe, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpAlertType, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-base-component',
@@ -16,6 +17,8 @@ export class NbpBaseComponent implements OnInit {
   _alertType = NbpAlertType;
   _style = NbpStyle;
   _pipe = NbpPipe;
+  _size = NbpSize;
+  _model = new Model();
 
   _colorClasse = NbpColorClasse;
   _iconClasse = NbpIconClasse;

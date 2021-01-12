@@ -55,6 +55,7 @@ import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-
 import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-alert-box-three/nbp-alert-box-three.component';
 import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-panel-title-two/nbp-panel-title-two.component';
 import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
+import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.compo
     NbpLinkPageComponent,
     NbpAlertBoxThreeComponent,
     NbpPanelTitleTwoComponent,
+    NbpCookieOneComponent,
   ],
   imports: [
     BrowserModule,

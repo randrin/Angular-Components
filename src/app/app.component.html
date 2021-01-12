@@ -17,7 +17,7 @@
               [nbpSize]="_size.MD"
               [nbpColorStyle]="_style.PRIMARY"
               [nbpStyleType]="_style.OUTLINE"
-              routerLink="/home" 
+              routerLink="/home"
               routerLinkActive="active"
             ></nbp-button>
           </li>
@@ -28,7 +28,7 @@
               [nbpSize]="_size.MD"
               [nbpColorStyle]="_style.PRIMARY"
               [nbpStyleType]="_style.OUTLINE"
-              routerLink="/composants" 
+              routerLink="/composants"
               routerLinkActive="active"
             ></nbp-button>
           </li>
@@ -39,17 +39,23 @@
               [nbpSize]="_size.MD"
               [nbpColorStyle]="_style.WARNING"
               [nbpStyleType]="_style.OUTLINE"
-              routerLink="/examples" 
+              routerLink="/examples"
               routerLinkActive="active"
             ></nbp-button>
           </li>
         </ul>
-      </nav> 
+      </nav>
     </div>
   </div>
   <div class="nbp-app-pages">
     <router-outlet></router-outlet>
   </div>
+  <nbp-cookie-one
+    [nbpCookieText]="_model.component.NbpCookieComponent.text"
+    [nbpCookieTextButton]="_model.component.NbpCookieComponent.title"
+    [nbpCookieTextLink]="_model.component.NbpCookieComponent.link"
+    [nbpCookieRedirectionLink]="_model.component.NbpCookieComponent.href"
+  ></nbp-cookie-one>
   <nbp-footer-one></nbp-footer-one>
   <nbp-scroll-top></nbp-scroll-top>
 </div>

@@ -1,0 +1,20 @@
+<div class="nbp-cookie-one-wrapper" *ngIf="nbpCookieClose">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="nbp-cookie-one-text">
+          {{nbpCookieText}}
+          <a [href]="nbpCookieRedirectionLink" class="d-flex">{{nbpCookieTextLink}}</a>
+        </p>
+        <nbp-button
+        (click)="nbpCookieOnClose()"
+          [nbpLabel]="nbpCookieTextButton"
+          [nbpSize]="_size.MD"
+          [nbpButtonForm]="_style.ROUNDED"
+          [nbpColorStyle]="_style.PRIMARYHOVER"
+          [nbpStyleType]="_style.OUTLINE"
+        ></nbp-button>
+      </div>
+    </div>
+  </div>
+</div>

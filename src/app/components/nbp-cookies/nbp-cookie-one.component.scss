@@ -1,0 +1,22 @@
+.nbp-cookie-one-wrapper {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: var(--nbp-primary) !important;
+  z-index: 1051;
+  color: var(--nbp-white) !important;
+  text-shadow: none;
+  padding: 25px 0px;
+
+  .nbp-cookie-one-text {
+    line-height: 24px;
+    color: var(--nbp-white) !important;
+    text-align: justify;
+
+    a {
+      color: var(--nbp-white) !important;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
