@@ -15,7 +15,7 @@ import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-
 import { NbpInputTextPageComponent } from './pages/composants/nbp-input-text-page/nbp-input-text-page.component';
 import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
-import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
+import { NbpInputRadioPageComponent } from './pages/composants/nbp-input-radio-page/nbp-input-radio-page.component';
 import { NbpTablePageComponent } from './pages/composants/nbp-table-page/nbp-table-page.component';
 import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/nbp-textarea-page.component';
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
@@ -39,7 +39,7 @@ const appRoutes: Routes = [
       { path: 'alert-boxes', component: NbpAlertBoxPageComponent },
       { path: 'headers', component: NbpHeaderPageComponent },
       { path: 'checkboxes', component: NbpCheckboxPageComponent },
-      { path: 'radios', component: NbpRadioPageComponent },
+      { path: 'radios', component: NbpInputRadioPageComponent },
       { path: 'tables', component: NbpTablePageComponent },
       { path: 'icons', component: NbpIconPageComponent },
       { path: 'badges', component: NbpBadgePageComponent },

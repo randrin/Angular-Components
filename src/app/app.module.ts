@@ -45,8 +45,8 @@ import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-bad
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
 import { NbpPanelTitleOneComponent } from './components/nbp-panel-titles/nbp-panel-title-one/nbp-panel-title-one.component';
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
-import { NbpRadioComponent } from './components/nbp-radio/nbp-radio.component';
-import { NbpRadioPageComponent } from './pages/composants/nbp-radio-page/nbp-radio-page.component';
+import { NbpInputRadioComponent } from './components/nbp-input-radio/nbp-input-radio.component';
+import { NbpInputRadioPageComponent } from './pages/composants/nbp-input-radio-page/nbp-input-radio-page.component';
 import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumd-three/nbp-breadcrumd-three.component';
 import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component';
 import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp-arrow-link.component';
@@ -100,8 +100,8 @@ import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.compo
     NbpTypographyPageComponent,
     NbpPanelTitleOneComponent,
     NbpPanelTitlePageComponent,
-    NbpRadioComponent,
-    NbpRadioPageComponent,
+    NbpInputRadioComponent,
+    NbpInputRadioPageComponent,
     NbpBreadcrumdThreeComponent,
     NbpAlertBoxTwoComponent,
     NbpArrowLinkComponent,

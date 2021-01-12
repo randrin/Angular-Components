@@ -3,11 +3,11 @@ import { NbpRadioStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.cl
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'nbp-radio',
-  templateUrl: './nbp-radio.component.html',
-  styleUrls: ['./nbp-radio.component.scss']
+  selector: 'nbp-input-radio',
+  templateUrl: './nbp-input-radio.component.html',
+  styleUrls: ['./nbp-input-radio.component.scss']
 })
-export class NbpRadioComponent implements OnInit {
+export class NbpInputRadioComponent implements OnInit {
 
   @Input() nbpRadioLabel: string;
   @Input() nbpRadioName: string;
