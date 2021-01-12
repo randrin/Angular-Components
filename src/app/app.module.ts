@@ -27,8 +27,8 @@ import { NbpNavbarComponent } from './components/nbp-navbar/nbp-navbar.component
 import { NbpBreadcrumbOneComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-one/nbp-breadcrumb-one.component';
 import { NbpBreadcrumbTwoComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-two/nbp-breadcrumb-two.component';
 import { NbpHeaderPageComponent } from './pages/composants/nbp-header-page/nbp-header-page.component';
-import { NbpCheckboxComponent } from './components/nbp-checkbox/nbp-checkbox.component';
-import { NbpCheckboxPageComponent } from './pages/composants/nbp-checkbox-page/nbp-checkbox-page.component';
+import { NbpInputCheckboxComponent } from './components/nbp-input-checkbox/nbp-input-checkbox.component';
+import { NbpInputCheckboxPageComponent } from './pages/composants/nbp-input-checkbox-page/nbp-input-checkbox-page.component';
 import { NbpColorComponent } from './components/nbp-color/nbp-color.component';
 import { NbpColorPageComponent } from './pages/composants/nbp-color-page/nbp-color-page.component';
 import { NbpTableOneComponent } from './components/nbp-tables/nbp-table-one/nbp-table-one.component';
@@ -83,8 +83,8 @@ import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.compo
     NbpBreadcrumbOneComponent,
     NbpBreadcrumbTwoComponent,
     NbpHeaderPageComponent,
-    NbpCheckboxComponent,
-    NbpCheckboxPageComponent,
+    NbpInputCheckboxComponent,
+    NbpInputCheckboxPageComponent,
     NbpColorComponent,
     NbpColorPageComponent,
     NbpTableOneComponent,

@@ -3,11 +3,11 @@ import { Model } from 'src/app/models/model';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'nbp-checkbox-page',
-  templateUrl: './nbp-checkbox-page.component.html',
-  styleUrls: ['./nbp-checkbox-page.component.scss']
+  selector: 'nbp-input-checkbox-page',
+  templateUrl: './nbp-input-checkbox-page.component.html',
+  styleUrls: ['./nbp-input-checkbox-page.component.scss']
 })
-export class NbpCheckboxPageComponent implements OnInit {
+export class NbpInputCheckboxPageComponent implements OnInit {
 
   title = 'Checkbox Page';
 

@@ -3,11 +3,11 @@ import { NbpCheckBoxStyleClasse, NbpCursorClasse, NbpDisplayClasse, NbpOpacityCl
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'nbp-checkbox',
-  templateUrl: './nbp-checkbox.component.html',
-  styleUrls: ['./nbp-checkbox.component.scss']
+  selector: 'nbp-input-checkbox',
+  templateUrl: './nbp-input-checkbox.component.html',
+  styleUrls: ['./nbp-input-checkbox.component.scss']
 })
-export class NbpCheckboxComponent implements OnInit {
+export class NbpInputCheckboxComponent implements OnInit {
 
   @Input() nbpCheckBoxLabel: string;
   @Input() nbpCheckBoxName: string;
