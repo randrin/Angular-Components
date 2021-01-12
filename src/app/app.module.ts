@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NbpDividingLineComponent } from './components/nbp-dividing-line/nbp-dividing-line.component';
+import { NbpDividingLineOneComponent } from './components/nbp-dividing-lines/nbp-dividing-line-one/nbp-dividing-line-one.component';
 import { NbpBackgroundBoxComponent } from './components/nbp-background-box/nbp-background-box.component';
 import { NbpButtonComponent } from './components/nbp-button/nbp-button.component';
 import { NbpAlertBoxOneComponent } from './components/nbp-alert-boxes/nbp-alert-box-one/nbp-alert-box-one.component';
@@ -61,7 +61,7 @@ import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.c
   declarations: [
     AppComponent,
     NbpBaseComponent,
-    NbpDividingLineComponent,
+    NbpDividingLineOneComponent,
     NbpBackgroundBoxComponent,
     NbpButtonComponent,
     NbpAlertBoxOneComponent,

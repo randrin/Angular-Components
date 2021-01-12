@@ -285,7 +285,7 @@ export class NbpBaseComponent implements OnInit {
         return this._textTransformClasse.UPPERCASE;
         break;
       default:
-        return this._textTransformClasse.UPPERCASE;
+        return this._textTransformClasse.CAPITALIZE;
         break;
     }
   }

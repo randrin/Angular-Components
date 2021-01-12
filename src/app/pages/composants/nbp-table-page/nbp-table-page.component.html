@@ -1,10 +1,10 @@
 <div class="container my-5">
   <div class="row text-center">
     <div class="col">
-      <nbp-dividing-line 
+      <nbp-dividing-line-one 
         [nbpTitle]="title" 
         [nbpColorStyle]="_style.DEFAULT"
-      ></nbp-dividing-line>
+      ></nbp-dividing-line-one>
     </div>
   </div>
   <div class="row nbp-background-white">
@@ -18,10 +18,10 @@
   </div>
   <div class="row nbp-background-white">
     <div class="col">
-      <nbp-dividing-line 
+      <nbp-dividing-line-one 
         [nbpTitle]="tableNoSortTitle" 
         [nbpColorStyle]="_style.SUCCESS"
-      ></nbp-dividing-line>
+      ></nbp-dividing-line-one>
       <nbp-table-two
         [nbpTableHeaders]="_model.component.NbpTableComponent.headers"
         [nbpTableBodies]="_model.component.NbpTableComponent.bodies"
@@ -31,10 +31,10 @@
   </div>
   <div class="row nbp-background-white">
     <div class="col">
-      <nbp-dividing-line 
+      <nbp-dividing-line-one 
         [nbpTitle]="emptyTableTitle" 
         [nbpColorStyle]="_style.SUCCESS"
-      ></nbp-dividing-line>
+      ></nbp-dividing-line-one>
       <nbp-table-one
       [nbpTableHeaders]="_model.component.NbpTableComponent.headers"
       [nbpTableTextAlignItem]="_style.RIGHT"

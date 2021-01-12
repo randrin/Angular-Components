@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
-import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'nbp-dividing-line',
-  templateUrl: './nbp-dividing-line.component.html',
-  styleUrls: ['./nbp-dividing-line.component.scss']
+  selector: 'nbp-dividing-line-one',
+  templateUrl: './nbp-dividing-line-one.component.html',
+  styleUrls: ['./nbp-dividing-line-one.component.scss']
 })
-export class NbpDividingLineComponent extends NbpBaseComponent implements OnInit {
+export class NbpDividingLineOneComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpTitle: string;
   @Input() nbpColorTitle: string;
   @Input() nbpCta: boolean;
-  @Input() nbpUppercaseTitle: boolean;
+  @Input() nbpUppercaseTitle: string;
   @Input() nbpCtaTextShow: string;
   @Input() nbpCtaTextHide: string;
   @Input() nbpCtaReadOnly: boolean;
@@ -44,10 +44,10 @@ export class NbpDividingLineComponent extends NbpBaseComponent implements OnInit
 
   nbpGetClasses() {
     this.nbpDividingLine = this.nbpGetColorClasse(this.nbpColorStyle);
-    this.nbpDividingLineColorTitle = this.nbpGetColorClasse(this.nbpColorTitle) + this.nbpSeparator + this.nbpGetTextTransform();
+    this.nbpDividingLineColorTitle = this.nbpGetColorClasse(this.nbpColorTitle) + this.nbpSeparator + this.nbpGetTextTransformClasse(this.nbpUppercaseTitle);
   }
 
-  nbpGetTextTransform() {
-    return this.nbpUppercaseTitle ? this._textTransformClasse.UPPERCASE : this._textTransformClasse.CAPITALIZE;
-  }
+  // nbpGetTextTransform() {
+  //   return this.nbpUppercaseTitle ? this._textTransformClasse.UPPERCASE : this._textTransformClasse.CAPITALIZE;
+  // }
 }

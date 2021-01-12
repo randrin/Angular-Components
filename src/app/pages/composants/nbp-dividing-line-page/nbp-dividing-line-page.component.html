@@ -1,20 +1,20 @@
 <div class="container my-5">
   <div class="row text-center">
     <div class="col">
-      <nbp-dividing-line
+      <nbp-dividing-line-one
           [nbpTitle]="title"
           [nbpColorStyle]="_style.DEFAULT"
-        ></nbp-dividing-line>
+        ></nbp-dividing-line-one>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <nbp-dividing-line
+      <nbp-dividing-line-one
         [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitle"
         [nbpColorStyle]="_style.DEFAULT"
-        [nbpUppercaseTitle]="'true'"
-      ></nbp-dividing-line>
-      <nbp-dividing-line
+        [nbpUppercaseTitle]="_pipe.UPPERCASE"
+      ></nbp-dividing-line-one>
+      <nbp-dividing-line-one
         [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCta.title"
         [nbpColorTitle]="_style.PRIMARY"
         [nbpCta]="true"
@@ -22,15 +22,15 @@
         [nbpCtaTextHide]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.hide"
         [nbpColorStyle]="_style.PRIMARY"
         (nbpOnClickCta)="nbpOnClickCta($event)"
-      ></nbp-dividing-line>
-      <nbp-dividing-line
+      ></nbp-dividing-line-one>
+      <nbp-dividing-line-one
         [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.title"
         [nbpColorTitle]="_style.DANGER"
         [nbpCta]="true"
         [nbpColorStyle]="_style.DANGER"
         [nbpCtaReadOnly]="true"
         [nbpCtaTextShow]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
-      ></nbp-dividing-line>
+      ></nbp-dividing-line-one>
       </div>
   </div>
 </div>
