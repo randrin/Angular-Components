@@ -2,9 +2,9 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one
-          [nbpTitle]="title"
-          [nbpColorStyle]="_style.DEFAULT"
-        ></nbp-dividing-line-one>
+        [nbpTitle]="title"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
     </div>
   </div>
   <div class="row">
@@ -18,19 +18,40 @@
         [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCta.title"
         [nbpColorTitle]="_style.PRIMARY"
         [nbpCta]="true"
-        [nbpCtaTextShow]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
-        [nbpCtaTextHide]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.hide"
+        [nbpCtaTextShow]="
+          _model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show
+        "
+        [nbpCtaTextHide]="
+          _model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.hide
+        "
         [nbpColorStyle]="_style.PRIMARY"
         (nbpOnClickCta)="nbpOnClickCta($event)"
       ></nbp-dividing-line-one>
       <nbp-dividing-line-one
-        [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.title"
+        [nbpTitle]="
+          _model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.title
+        "
         [nbpColorTitle]="_style.DANGER"
         [nbpCta]="true"
         [nbpColorStyle]="_style.DANGER"
         [nbpCtaReadOnly]="true"
-        [nbpCtaTextShow]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
+        [nbpCtaTextShow]="
+          _model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show
+        "
       ></nbp-dividing-line-one>
-      </div>
+      <nbp-dividing-line-two
+        [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitle"
+      ></nbp-dividing-line-two>
+      <nbp-dividing-line-two
+        [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitle"
+        [nbpColorStyle]="_style.PRIMARY"
+        [nbpUppercaseTitle]="_pipe.UPPERCASE"
+      ></nbp-dividing-line-two>
+      <nbp-dividing-line-two
+        [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitle"
+        [nbpColorStyle]="_style.SUCCESS"
+        [nbpUppercaseTitle]="_pipe.LOWERCASE"
+      ></nbp-dividing-line-two>
+    </div>
   </div>
 </div>

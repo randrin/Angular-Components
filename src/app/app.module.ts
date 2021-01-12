@@ -56,6 +56,7 @@ import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-aler
 import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-panel-title-two/nbp-panel-title-two.component';
 import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
 import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.component';
+import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +112,7 @@ import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.c
     NbpAlertBoxThreeComponent,
     NbpPanelTitleTwoComponent,
     NbpCookieOneComponent,
+    NbpDividingLineTwoComponent,
   ],
   imports: [
     BrowserModule,

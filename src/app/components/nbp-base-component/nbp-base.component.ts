@@ -1,16 +1,27 @@
-import { Component, Injector, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Model } from 'src/app/models/model';
-import { NbpBorderClasse, NbpTextTransformClasse, NbpBackgroundClasse, NbpColorClasse, NbpIconClasse, NbpBorderColorClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpAlertType, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Model } from "src/app/models/model";
+import {
+  NbpBorderClasse,
+  NbpTextTransformClasse,
+  NbpBackgroundClasse,
+  NbpColorClasse,
+  NbpIconClasse,
+  NbpBorderColorClasse,
+} from "src/assets/utils/nbp-commons/nbp-commons.classes";
+import {
+  NbpAlertType,
+  NbpPipe,
+  NbpSize,
+  NbpStyle,
+} from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
-  selector: 'nbp-base-component',
-  templateUrl: './nbp-base.component.html',
-  styleUrls: ['./nbp-base.component.scss']
+  selector: "nbp-base-component",
+  templateUrl: "./nbp-base.component.html",
+  styleUrls: ["./nbp-base.component.scss"],
 })
 export class NbpBaseComponent implements OnInit {
-
   router: Router;
   activatedRoute: ActivatedRoute;
 
@@ -32,7 +43,7 @@ export class NbpBaseComponent implements OnInit {
   nbpBorder: string;
   nbpTextTransform: string;
 
-  nbpSeparator: string = ' ';
+  nbpSeparator: string = " ";
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
     RIGHT: "nbp-deep-link-right",
@@ -43,8 +54,7 @@ export class NbpBaseComponent implements OnInit {
     this.router = injector.get(Router);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // Functions
   /* Function to get the border classe with input as argument */
@@ -279,7 +289,7 @@ export class NbpBaseComponent implements OnInit {
   nbpGetTextTransformClasse(nbpInput) {
     switch (nbpInput) {
       case this._pipe.LOWERCASE:
-        return this._textTransformClasse.LOWERCASE;
+        return this._textTransformClasse.CAPITALIZE;
         break;
       case this._pipe.UPPERCASE:
         return this._textTransformClasse.UPPERCASE;

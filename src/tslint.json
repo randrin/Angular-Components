@@ -4,14 +4,15 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "nbp",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "nbp",
       "kebab-case"
-    ]
+    ],
+    "no-trailing-whitespace": false
   }
 }

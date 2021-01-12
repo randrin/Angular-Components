@@ -46,8 +46,4 @@ export class NbpDividingLineOneComponent extends NbpBaseComponent implements OnI
     this.nbpDividingLine = this.nbpGetColorClasse(this.nbpColorStyle);
     this.nbpDividingLineColorTitle = this.nbpGetColorClasse(this.nbpColorTitle) + this.nbpSeparator + this.nbpGetTextTransformClasse(this.nbpUppercaseTitle);
   }
-
-  // nbpGetTextTransform() {
-  //   return this.nbpUppercaseTitle ? this._textTransformClasse.UPPERCASE : this._textTransformClasse.CAPITALIZE;
-  // }
 }
