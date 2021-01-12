@@ -104,6 +104,18 @@ export class NbpBaseComponent implements OnInit {
       case this._alertType.ERROR:
         return this._borderClasse.DANGER;
         break;
+      case this._style.EGYPTIAN_BLUE:
+        return this._borderClasse.EGYPTIAN_BLUE;
+        break;
+      case this._style.MISTY_ROSE:
+        return this._borderClasse.MISTY_ROSE;
+        break;
+      case this._style.MINT_CREAM:
+        return this._borderClasse.MINT_CREAM;
+        break;
+      case this._style.FLORAL_WHITE:
+        return this._borderClasse.FLORAL_WHITE;
+        break;
       default:
         return this._borderClasse.DEFAULT;
         break;
@@ -154,6 +166,18 @@ export class NbpBaseComponent implements OnInit {
       case this._style.DANGER:
       case this._alertType.ERROR:
         return this._backgroundClasse.DANGER;
+        break;
+      case this._style.EGYPTIAN_BLUE:
+        return this._backgroundClasse.EGYPTIAN_BLUE;
+        break;
+      case this._style.MISTY_ROSE:
+        return this._backgroundClasse.MISTY_ROSE;
+        break;
+      case this._style.MINT_CREAM:
+        return this._backgroundClasse.MINT_CREAM;
+        break;
+      case this._style.FLORAL_WHITE:
+        return this._backgroundClasse.FLORAL_WHITE;
         break;
       default:
         return this._backgroundClasse.DEFAULT;

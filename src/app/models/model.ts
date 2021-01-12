@@ -291,6 +291,10 @@ export class Model {
         { label: "WHITE_SMOKE", name: "White Smoke", code: "#f2f2f2" },
         { label: "NIGHT_RIDER", name: "Night Rider", code: "#323232" },
         { label: "SLIVER", name: "Sliver", code: "#e0e0e1" },
+        { label: "EGYPTIAN_BLUE", name: "Egytian Blue", code: "#f1faff" },
+        { label: "FLORAL_WHITE", name: "Floral White", code: "#fffbe9" },
+        { label: "MINT_CREAM", name: "Mint Cream", code: "#ddffeb" },
+        { label: "MISTY_ROSE", name: "Misty Rose", code: "#ffd6d6" },
       ],
     },
     NbpButtonComponent: {

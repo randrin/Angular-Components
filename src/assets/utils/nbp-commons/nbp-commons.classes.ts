@@ -46,6 +46,10 @@ export enum NbpColorClasse {
   NIGHT_RIDER = 'nbp-color-night-rider',
   SLIVER = 'nbp-color-sliver',
   BLACK = 'nbp-color-black',
+  EGYPTIAN_BLUE = 'nbp-color-egyptian-blue',
+  FLORAL_WHITE = 'nbp-color-floral-white',
+  MINT_CREAM = 'nbp-color-mint-cream',
+  MISTY_ROSE = 'nbp-color-misty-rose'
 }
 
 export enum NbpTextTransformClasse {
@@ -109,7 +113,11 @@ export enum NbpBorderClasse {
   WHITE_SMOKE = 'nbp-border-white-smoke',
   WARM_GRAY_20 = 'nbp-border-warm-gray-20',
   NIGHT_RIDER = 'nbp-border-night-rider',
-  SLIVER = 'nbp-border-sliver'
+  SLIVER = 'nbp-border-sliver',
+  EGYPTIAN_BLUE = 'nbp-border-egyptian-blue',
+  FLORAL_WHITE = 'nbp-border-floral-white',
+  MINT_CREAM = 'nbp-border-mint-cream',
+  MISTY_ROSE = 'nbp-border-misty-rose'
 }
 
 export enum NbpBorderColorClasse {
