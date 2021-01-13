@@ -21,6 +21,7 @@ import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/n
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
 import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
       { path: 'typographies', component: NbpTypographyPageComponent },
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
+      { path: 'boxes', component: NbpBoxPageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },

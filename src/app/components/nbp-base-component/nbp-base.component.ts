@@ -11,6 +11,7 @@ import {
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
+  NbpCtaType,
   NbpPipe,
   NbpSize,
   NbpStyle,
@@ -29,6 +30,7 @@ export class NbpBaseComponent implements OnInit {
   _style = NbpStyle;
   _pipe = NbpPipe;
   _size = NbpSize;
+  _ctaType = NbpCtaType;
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -57,6 +59,11 @@ export class NbpBaseComponent implements OnInit {
   ngOnInit(): void {}
 
   // Functions
+  /* Function to navigate to another link or page */
+  goTo(name?: string): void {
+    window.location.href = name;
+  }
+
   /* Function to get the border classe with input as argument */
   nbpGetBorderClasse(nbpInput) {
     switch (nbpInput) {

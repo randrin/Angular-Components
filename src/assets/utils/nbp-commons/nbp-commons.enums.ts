@@ -67,6 +67,16 @@ export enum NbpFontSize {
   MEDIUM = 'MEDIUM',
   LARGE = 'LARGE'
 }
+
+/**
+* Enum per la definizione del tipo del cta da utilizzare
+*/
+export enum NbpCtaType {
+  BUTTON = 'BUTTON',
+  ARROW = 'ARROW',
+  DEEP = 'DEEP'
+}
+
 export enum NbpPipe {
   CURRENCY = 0,
   DATE = 1,

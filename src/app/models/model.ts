@@ -1,11 +1,19 @@
 export class Model {
   component = {
+    NbpBoxComponent: {
+      title: "Box Title 1",
+      description:
+        "Si vous poursuivez la navigation, nous utiliserons les cookies qui amélioreront les performances de notre site et personnaliseront votre expérience. Si vous acceptez, nous utiliserons également les cookies pour personnaliser les publicités.",
+      titleCta1: "Add money",
+      titleCta2: "Go shopping",
+      titleCta3: "Visit store",
+    },
     NbpCookieComponent: {
       title: "Accept the Cookies",
       text:
         "Si vous poursuivez la navigation, nous utiliserons les cookies qui amélioreront les performances de notre site et personnaliseront votre expérience. Si vous acceptez, nous utiliserons également les cookies pour personnaliser les publicités.",
       href: "https://www.google.com",
-      link: "Gérer vos cookies Accepter"
+      link: "Gérer vos cookies Accepter",
     },
     NbpLinkPageComponent: {
       name1: "Deep Link",

@@ -1,0 +1,36 @@
+<div class="nbp-box-one-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col nbp-box-content">
+        <div class="nbp-box-header h2 nbp-color-default">{{ nbpBoxTitle }}</div>
+        <div class="nbp-box-body nbp-p2">
+          {{ getNbpBoxDescription() }}
+        </div>
+        <div class="nbp-box-footer">
+          <nbp-button
+            *ngIf="nbpBoxCta === _ctaType.BUTTON"
+            [nbpLabel]="nbpBoxTitleCta"
+            [nbpColorStyle]="nbpBoxTypeCta"
+            [nbpButtonForm]="_style.ROUNDED"
+          ></nbp-button>
+          <nbp-deep-link
+            *ngIf="nbpBoxCta === _ctaType.DEEP"
+            [nbpDeepLinkStyle]="nbpBoxTypeCta"
+            [nbpDeepLinkName]="nbpBoxTitleCta"
+            [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+            [nbpDeepLinkRedirection]="nbpBoxCtaRedirection"
+            [nbpDeepLinkTarget]="nbpBoxCtaTarget"
+          ></nbp-deep-link>
+          <nbp-arrow-link
+            *ngIf="nbpBoxCta === _ctaType.ARROW"
+            [nbpArrowLinkStyle]="nbpBoxTypeCta"
+            [nbpArrowLinkName]="nbpBoxTitleCta"
+            [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+            [nbpArrowLinkRedirection]="nbpBoxCtaRedirection"
+            [nbpArrowLinkTarget]="nbpBoxCtaTarget"
+          ></nbp-arrow-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
