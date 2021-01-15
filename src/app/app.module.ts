@@ -47,7 +47,7 @@ import { NbpPanelTitleOneComponent } from './components/nbp-panel-titles/nbp-pan
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 import { NbpInputRadioComponent } from './components/nbp-input-radio/nbp-input-radio.component';
 import { NbpInputRadioPageComponent } from './pages/composants/nbp-input-radio-page/nbp-input-radio-page.component';
-import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumd-three/nbp-breadcrumd-three.component';
+import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-three/nbp-breadcrumd-three.component';
 import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component';
 import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp-arrow-link.component';
 import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-deep-link.component';
