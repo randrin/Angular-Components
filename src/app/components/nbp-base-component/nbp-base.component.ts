@@ -8,6 +8,8 @@ import {
   NbpColorClasse,
   NbpIconClasse,
   NbpBorderColorClasse,
+  NbpBadgeStyleClasse,
+  NbpBadgeOutlineStyleClasse
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -39,6 +41,8 @@ export class NbpBaseComponent implements OnInit {
   _backgroundClasse = NbpBackgroundClasse;
   _borderClasse = NbpBorderClasse;
   _textTransformClasse = NbpTextTransformClasse;
+  _badgeStyleClasse = NbpBadgeStyleClasse;
+  _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
 
   nbpColor: string;
   nbpBackground: string;
@@ -56,12 +60,108 @@ export class NbpBaseComponent implements OnInit {
     this.router = injector.get(Router);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // Functions
   /* Function to navigate to another link or page */
   goTo(name?: string): void {
     window.location.href = name;
+  }
+
+  /* Function to get the badge outline style classe with input as argument */
+  nbpGetBadgeOutlineClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._badgeOutlineStyleClasse.DEFAULT;
+        break;
+      case this._style.WHITE:
+        return this._badgeOutlineStyleClasse.WHITE;
+        break;
+      case this._style.WHITE_SMOKE:
+        return this._badgeOutlineStyleClasse.WHITE_SMOKE;
+        break;
+      case this._style.WARM_GRAY_20:
+        return this._badgeOutlineStyleClasse.WARM_GRAY_20;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._badgeOutlineStyleClasse.NIGHT_RIDER;
+        break;
+      case this._style.SLIVER:
+        return this._badgeOutlineStyleClasse.SLIVER;
+        break;
+      case this._style.BLACK:
+        return this._badgeOutlineStyleClasse.BLACK;
+        break;
+      case this._style.PRIMARY:
+        return this._badgeOutlineStyleClasse.PRIMARY;
+        break;
+      case this._style.TOMATO:
+        return this._badgeOutlineStyleClasse.TOMATO;
+        break;
+      case this._style.INFO:
+        return this._badgeOutlineStyleClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+        return this._badgeOutlineStyleClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+        return this._badgeOutlineStyleClasse.WARNING;
+        break;
+      case this._style.DANGER:
+        return this._badgeOutlineStyleClasse.DANGER;
+        break;
+      default:
+        return this._badgeOutlineStyleClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the badge style classe with input as argument */
+  nbpGetBadgeClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._badgeStyleClasse.DEFAULT;
+        break;
+      case this._style.WHITE:
+        return this._badgeStyleClasse.WHITE;
+        break;
+      case this._style.WHITE_SMOKE:
+        return this._badgeStyleClasse.WHITE_SMOKE;
+        break;
+      case this._style.WARM_GRAY_20:
+        return this._badgeStyleClasse.WARM_GRAY_20;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._badgeStyleClasse.NIGHT_RIDER;
+        break;
+      case this._style.SLIVER:
+        return this._badgeStyleClasse.SLIVER;
+        break;
+      case this._style.BLACK:
+        return this._badgeStyleClasse.BLACK;
+        break;
+      case this._style.PRIMARY:
+        return this._badgeStyleClasse.PRIMARY;
+        break;
+      case this._style.TOMATO:
+        return this._badgeStyleClasse.TOMATO;
+        break;
+      case this._style.INFO:
+        return this._badgeStyleClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+        return this._badgeStyleClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+        return this._badgeStyleClasse.WARNING;
+        break;
+      case this._style.DANGER:
+        return this._badgeStyleClasse.DANGER;
+        break;
+      default:
+        return this._badgeStyleClasse.DEFAULT;
+        break;
+    }
   }
 
   /* Function to get the border classe with input as argument */
