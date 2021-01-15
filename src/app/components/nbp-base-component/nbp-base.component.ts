@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit } from "@angular/core";
+import { Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
 import {
@@ -24,9 +24,6 @@ import {
   NbpFontSize,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
-@Component({
-  selector: "nbp-base-component",
-})
 export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
