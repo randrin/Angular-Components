@@ -24,8 +24,8 @@ export class NbpBadgeComponent extends NbpBaseComponent implements OnInit {
   // Functions
   nbpSetUpComponent() {
     // Only the outline is accepted, otherwise nothing.
-    this.nbpBadgeType = this.nbpBadgeType === this._style.OUTLINE ? this.nbpBadgeType : undefined; 
+    this.nbpBadgeType = this.nbpBadgeType === this._style.OUTLINE ? this.nbpBadgeType : undefined;
     console.log(this.nbpBadgeType)
-    this.nbpBadge = this.nbpBadgeType === undefined ? this.nbpGetBadgeClasse(this.nbpBadgeStyle) : this.nbpGetBadgeOutlineClasse(this.nbpBadgeStyle) ;
+    this.nbpBadge = this.nbpBadgeType === undefined ? this.nbpGetBadgeClasse(this.nbpBadgeStyle) : this.nbpGetBadgeOutlineClasse(this.nbpBadgeStyle);
   }
 }

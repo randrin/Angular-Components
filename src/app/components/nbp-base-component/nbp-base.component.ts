@@ -9,7 +9,9 @@ import {
   NbpIconClasse,
   NbpBorderColorClasse,
   NbpBadgeStyleClasse,
-  NbpBadgeOutlineStyleClasse
+  NbpBadgeOutlineStyleClasse,
+  NbpFontSizeClasse,
+  NbpTextAlignClasse
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -17,6 +19,7 @@ import {
   NbpPipe,
   NbpSize,
   NbpStyle,
+  NbpFontSize,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -30,6 +33,7 @@ export class NbpBaseComponent implements OnInit {
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
+  _fontSize = NbpFontSize;
   _pipe = NbpPipe;
   _size = NbpSize;
   _ctaType = NbpCtaType;
@@ -43,6 +47,8 @@ export class NbpBaseComponent implements OnInit {
   _textTransformClasse = NbpTextTransformClasse;
   _badgeStyleClasse = NbpBadgeStyleClasse;
   _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
+  _fontSizeClasse = NbpFontSizeClasse;
+  _textAlignClasse = NbpTextAlignClasse;
 
   nbpColor: string;
   nbpBackground: string;
@@ -427,6 +433,42 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._textTransformClasse.CAPITALIZE;
+        break;
+    }
+  }
+
+  /* Function to get the font size classe with input as argument */
+  nbpGetFontSizeClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._fontSize.SMALL:
+        return this._fontSizeClasse.SMALL;
+        break;
+      case this._fontSize.MEDIUM:
+        return this._fontSizeClasse.MEDIUM;
+        break;
+      case this._fontSize.LARGE:
+        return this._fontSizeClasse.LARGE;
+        break;
+      default:
+        return this._fontSizeClasse.SMALL;
+        break;
+    }
+  }
+
+  /* Function to get the text align classe with input as argument */
+  nbpGetTextAlignClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.LEFT:
+        return this._textAlignClasse.LEFT;
+        break;
+      case this._style.RIGHT:
+        return this._textAlignClasse.RIGHT;
+        break;
+      case this._style.CENTER:
+        return this._textAlignClasse.CENTER;
+        break;
+      default:
+        return this._textAlignClasse.LEFT;
         break;
     }
   }

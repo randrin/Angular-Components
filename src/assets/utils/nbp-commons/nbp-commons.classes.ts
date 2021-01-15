@@ -217,3 +217,9 @@ export enum NbpIconClasse {
   WARNING = 'fa fa-exclamation-circle',
   ERROR = 'fa fa-times-circle',
 }
+
+export enum NbpFontSizeClasse {
+  SMALL = 'nbp-font-size-18',
+  MEDIUM = 'nbp-font-size-24',
+  LARGE = 'nbp-font-size-32'
+}
