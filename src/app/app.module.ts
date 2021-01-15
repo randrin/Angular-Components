@@ -54,7 +54,6 @@ import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-d
 import { NbpLinkPageComponent } from './pages/composants/nbp-link-page/nbp-link-page.component';
 import { NbpAlertBoxThreeComponent } from './components/nbp-alert-boxes/nbp-alert-box-three/nbp-alert-box-three.component';
 import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-panel-title-two/nbp-panel-title-two.component';
-import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
 import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.component';
 import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
@@ -63,7 +62,6 @@ import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-pag
 @NgModule({
   declarations: [
     AppComponent,
-    NbpBaseComponent,
     NbpDividingLineOneComponent,
     NbpBackgroundBoxComponent,
     NbpButtonComponent,
