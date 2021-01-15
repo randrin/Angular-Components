@@ -26,6 +26,8 @@ import {
 
 @Component({
   selector: 'nbp-base',
+  templateUrl: "./nbp-base.component.html",
+  styleUrls: ["./nbp-base.component.scss"],
 })
 export class NbpBaseComponent implements OnInit {
   router: Router;
