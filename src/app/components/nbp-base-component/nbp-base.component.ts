@@ -9,7 +9,11 @@ import {
   NbpIconClasse,
   NbpBorderColorClasse,
   NbpBadgeStyleClasse,
-  NbpBadgeOutlineStyleClasse
+  NbpBadgeOutlineStyleClasse,
+  NbpFontSizeClasse,
+  NbpTextAlignClasse,
+  NbpButtonStyleClasse,
+  NbpButtonSizeClasse
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -17,12 +21,11 @@ import {
   NbpPipe,
   NbpSize,
   NbpStyle,
+  NbpFontSize,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
   selector: "nbp-base-component",
-  templateUrl: "./nbp-base.component.html",
-  styleUrls: ["./nbp-base.component.scss"],
 })
 export class NbpBaseComponent implements OnInit {
   router: Router;
@@ -30,6 +33,7 @@ export class NbpBaseComponent implements OnInit {
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
+  _fontSize = NbpFontSize;
   _pipe = NbpPipe;
   _size = NbpSize;
   _ctaType = NbpCtaType;
@@ -43,8 +47,14 @@ export class NbpBaseComponent implements OnInit {
   _textTransformClasse = NbpTextTransformClasse;
   _badgeStyleClasse = NbpBadgeStyleClasse;
   _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
+  _fontSizeClasse = NbpFontSizeClasse;
+  _textAlignClasse = NbpTextAlignClasse;
+  _buttonStyleClasse = NbpButtonStyleClasse;
+  _buttonSizeClasse = NbpButtonSizeClasse;
 
   nbpColor: string;
+  nbpButton: string;
+  nbpBadge: string;
   nbpBackground: string;
   nbpBorder: string;
   nbpTextTransform: string;
@@ -292,6 +302,102 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
+  /* Function to get the button classe with input as argument */
+  nbpGetButtonColorClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._buttonStyleClasse.DEFAULT;
+        break;
+      case this._style.DEFAULTHOVER:
+        return this._buttonStyleClasse.DEFAULT_HOVER;
+        break;
+      case this._style.SUCCESS:
+        return this._buttonStyleClasse.SUCCESS;
+        break;
+      case this._style.SUCCESSHOVER:
+        return this._buttonStyleClasse.SUCCESS_HOVER;
+        break;
+      case this._style.INFO:
+        return this._buttonStyleClasse.INFO;
+        break;
+      case this._style.INFOHOVER:
+        return this._buttonStyleClasse.INFO_HOVER;
+        break;
+      case this._style.PRIMARY:
+        return this._buttonStyleClasse.PRIMARY;
+        break;
+      case this._style.PRIMARYHOVER:
+        return this._buttonStyleClasse.PRIMARY_HOVER;
+        break;
+      case this._style.DANGER:
+        return this._buttonStyleClasse.DANGER;
+        break;
+      case this._style.DANGERHOVER:
+        return this._buttonStyleClasse.DANGER_HOVER;
+        break;
+      case this._style.WARNING:
+        return this._buttonStyleClasse.WARNING;
+        break;
+      case this._style.WARNINGHOVER:
+        return this._buttonStyleClasse.WARNING_HOVER;
+        break;
+      default:
+        return this._buttonStyleClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the button form (normal or outline) classe with inputs as argument */
+  nbpGetButtonFormColorClasse(nbpInput1, nbpInput2) {
+    switch (nbpInput1) {
+      case this._style.ROUNDED:
+        return this._buttonStyleClasse.ROUNDED;
+        break;
+      case this._style.OUTLINE:
+        switch (nbpInput2) {
+          case this._style.DEFAULT:
+            return this._buttonStyleClasse.OUTLINE_DEFAULT;
+            break;
+          case this._style.DEFAULTHOVER:
+            return this._buttonStyleClasse.OUTLINE_DEFAULT_HOVER;
+            break;
+          case this._style.SUCCESS:
+            return this._buttonStyleClasse.OUTLINE_SUCCESS;
+            break;
+          case this._style.SUCCESSHOVER:
+            return this._buttonStyleClasse.OUTLINE_SUCCESS_HOVER;
+            break;
+          case this._style.INFO:
+            return this._buttonStyleClasse.OUTLINE_INFO;
+            break;
+          case this._style.INFOHOVER:
+            return this._buttonStyleClasse.OUTLINE_INFO_HOVER;
+            break;
+          case this._style.PRIMARY:
+            return this._buttonStyleClasse.OUTLINE_PRIMARY;
+            break;
+          case this._style.PRIMARYHOVER:
+            return this._buttonStyleClasse.OUTLINE_PRIMARY_HOVER;
+            break;
+          case this._style.DANGER:
+            return this._buttonStyleClasse.OUTLINE_DANGER;
+            break;
+          case this._style.DANGERHOVER:
+            return this._buttonStyleClasse.OUTLINE_DANGER_HOVER;
+            break;
+          case this._style.WARNING:
+            return this._buttonStyleClasse.OUTLINE_WARNING;
+            break;
+          case this._style.WARNINGHOVER:
+            return this._buttonStyleClasse.OUTLINE_WARNING_HOVER;
+            break;
+          default:
+            return this._buttonStyleClasse.OUTLINE_DEFAULT;
+            break;
+        }
+    }
+  }
+
   /* Function to get the color classe with input as argument */
   nbpGetColorClasse(nbpInput) {
     switch (nbpInput) {
@@ -427,6 +533,60 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._textTransformClasse.CAPITALIZE;
+        break;
+    }
+  }
+
+  /* Function to get the font size classe with input as argument */
+  nbpGetFontSizeClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._fontSize.SMALL:
+        return this._fontSizeClasse.SMALL;
+        break;
+      case this._fontSize.MEDIUM:
+        return this._fontSizeClasse.MEDIUM;
+        break;
+      case this._fontSize.LARGE:
+        return this._fontSizeClasse.LARGE;
+        break;
+      default:
+        return this._fontSizeClasse.SMALL;
+        break;
+    }
+  }
+
+  /* Function to get the text align classe with input as argument */
+  nbpGetTextAlignClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.LEFT:
+        return this._textAlignClasse.LEFT;
+        break;
+      case this._style.RIGHT:
+        return this._textAlignClasse.RIGHT;
+        break;
+      case this._style.CENTER:
+        return this._textAlignClasse.CENTER;
+        break;
+      default:
+        return this._textAlignClasse.LEFT;
+        break;
+    }
+  }
+
+  /* Function to get the size classe with input as argument */
+  nbpGetSizeClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._size.SM:
+        return this._buttonSizeClasse.SMALL;
+        break;
+      case this._size.MD:
+        return this._buttonSizeClasse.MEDIUM;
+        break;
+      case this._size.LG:
+        return this._buttonSizeClasse.LARGE;
+        break;
+      default:
+        return this._buttonSizeClasse.SMALL;
         break;
     }
   }
