@@ -359,7 +359,9 @@ export class Model {
       name: "description",
       required: "true",
       requiredMessage: "The description name is required",
+      lunghezzaMaxSup: "You have superate the length required",
       placeholder: "Insert the description name",
+      lunghezzaMax: 10
     },
     NbpIconComponent: {
       icons: [
