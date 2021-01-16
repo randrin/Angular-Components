@@ -13,7 +13,9 @@ export class NbpTextareaComponent implements OnInit {
   @Input() nbpTextareaRows: number;
   @Input() nbpTextareaPlaceholder: string;
   @Input() nbpTextareaErrorMessage: string;
+  @Input() nbpTextareaErrorlunghezzaMaxSup: string;
   @Input() nbpTextareaDisabled: boolean;
+  @Input() maxlength: number = 50;
 
   @Output() nbpTextareaModel: EventEmitter<string> = new EventEmitter<string>();
   
@@ -21,6 +23,7 @@ export class NbpTextareaComponent implements OnInit {
   nbpTextarea: string;
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
+  nbpErrorLung: boolean = false;
   nbpErrorBorder: string = '';
   nbpSeparator: string = ' ';
 
@@ -60,6 +63,11 @@ export class NbpTextareaComponent implements OnInit {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpGetClasses();
     }
+    if(this.nbpModel.length > this.maxlength){
+      this.nbpErrorBorder = this.nbpBorder.ERROR;
+       this.nbpGetClasses();
+    }
+    this.nbpModel.length > 0? this.nbpErrorLung = true : this.nbpErrorLung = false
   }
 
   nbpTextareaFocusOut() {
@@ -68,6 +76,15 @@ export class NbpTextareaComponent implements OnInit {
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
       this.nbpGetClasses();
     }
+  }
+
+  get verifica() {
+    return this.nbpModel.length > this.maxlength;
+  }
+
+  getCountWord(){
+  return  this.nbpModel.length > this.maxlength ? 
+  this.nbpModel.length-this.maxlength:this.nbpModel.length-this.maxlength
   }
 
 }
