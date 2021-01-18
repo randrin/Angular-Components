@@ -84,7 +84,7 @@ export class NbpTextareaComponent implements OnInit {
 
   getCountWord(){
   return  this.nbpModel.length > this.maxlength ? 
-  this.nbpModel.length-this.maxlength:this.nbpModel.length-this.maxlength
+  this.maxlength-this.nbpModel.length:this.nbpModel.length
   }
 
 }
