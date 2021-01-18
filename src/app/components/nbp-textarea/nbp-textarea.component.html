@@ -1,23 +1,39 @@
 <div class="nbp-textarea-wrapper">
   <div class="nbp-textarea-container">
-    <label *ngIf="nbpTextareaLabelRequired" for="nbpTextareaName" class="nbp-textarea-text-label nbp-text-uppercase">
-      {{nbpTextareaLabel}} <span *ngIf="nbpTextareaRequired" class="nbp-color-tomato ml-1">*</span>
+    <label
+      *ngIf="nbpTextareaLabelRequired"
+      for="nbpTextareaName"
+      class="nbp-textarea-text-label nbp-text-uppercase"
+    >
+      {{ nbpTextareaLabel }}
+      <span *ngIf="nbpTextareaRequired" class="nbp-color-tomato ml-1">*</span>
     </label>
     <div class="nbp-textarea">
-      <textarea [(ngModel)]="nbpModel" [rows]="nbpTextareaRows" [ngClass]="nbpTextarea" (keyup)="nbpTextareaKeyUp()"
-        (focusout)="nbpTextareaFocusOut()" class="nbp-form-control form-control" [placeholder]="nbpTextareaPlaceholder"
-        [disabled]="nbpTextareaDisabled" [required]="nbpTextareaRequired" [name]="'nbpTextareaName'"></textarea>
+      <textarea
+        [(ngModel)]="nbpModel"
+        [rows]="nbpTextareaRows"
+        [ngClass]="nbpTextarea"
+        (keyup)="nbpTextareaKeyUp()"
+        (keypress)="nbpTextareaKeyPress()"
+        (focusout)="nbpTextareaFocusOut()"
+        class="nbp-form-control form-control"
+        [placeholder]="nbpTextareaPlaceholder"
+        [disabled]="nbpTextareaDisabled"
+        [required]="nbpTextareaRequired"
+        [name]="'nbpTextareaName'"
+      ></textarea>
     </div>
     <div class="nbp-textarea-error-message" *ngIf="nbpErrorMessage">
-      <span class="nbp-textarea-alert">{{nbpTextareaErrorMessage}}</span>
+      <span class="nbp-textarea-alert">{{ nbpTextareaErrorMessage }}</span>
     </div>
-    <div class="row" *ngIf="nbpErrorLung">
-      <span class="nbp-textarea-error-message"
-        *ngIf="verifica">{{nbpTextareaErrorlunghezzaMaxSup}}
+    <div class="nbp-textarea-error-message" *ngIf="nbpErrorLung">
+      <span class="nbp-textarea-alert-count"
+        [ngClass]="{ 'nbp-textarea-error-message-length': verifica, '': !verifica }"
+        >{{ nbpGetCountWord() }}/{{ maxlength }}
       </span>
-      <span [ngClass]="{'nbp-textarea-error-messages': verifica,
-        '': !verifica}">{{getCountWord()}}/{{maxlength}}
-      </span> 
-    </div> 
+      <span class="nbp-textarea-alert-length" *ngIf="verifica"
+        >{{ nbpTextareaErrorlunghezzaMaxSup }}
+      </span>
+    </div>
   </div>
 </div>

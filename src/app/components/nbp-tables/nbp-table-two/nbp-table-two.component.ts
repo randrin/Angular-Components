@@ -1,26 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnInit } from '@angular/core';
 import { NbpTextAlignClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-table-two',
   templateUrl: './nbp-table-two.component.html',
   styleUrls: ['./nbp-table-two.component.scss']
 })
-export class NbpTableTwoComponent implements OnInit {
+export class NbpTableTwoComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpTableHeaders: Array<any> = [];
   @Input() nbpTableBodies: Array<any> = [];
   @Input() nbpTableTextAlignItem: string;
 
-  _style = NbpStyle;
-  _textAlignClasse = NbpTextAlignClasse;
 
   nbpDtOptions: DataTables.Settings = {};
   nbpTextAlign: string;
-  nbpSeparator: string = ' ';
   
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

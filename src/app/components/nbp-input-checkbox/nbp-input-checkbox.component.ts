@@ -1,13 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NbpCheckBoxStyleClasse, NbpCursorClasse, NbpDisplayClasse, NbpOpacityClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-input-checkbox',
   templateUrl: './nbp-input-checkbox.component.html',
   styleUrls: ['./nbp-input-checkbox.component.scss']
 })
-export class NbpInputCheckboxComponent implements OnInit {
+export class NbpInputCheckboxComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpCheckBoxLabel: string;
   @Input() nbpCheckBoxName: string;
@@ -17,21 +16,16 @@ export class NbpInputCheckboxComponent implements OnInit {
 
   @Output() nbpCheckBoxModel: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  _style = NbpStyle;
-  _checkBoxStyleClasse = NbpCheckBoxStyleClasse;
-  _displayClasse = NbpDisplayClasse;
-  _opacityClasse = NbpOpacityClasse;
-  _cursorClasse = NbpCursorClasse;
-
   nbpModel: boolean;
   nbpCheckBoxInput: string;
-  nbpSeparator: string = ' ';
   nbpCheckBox: string;
   nbpCheckBoxIcon: string;
   nbpCheckBoxOpacity: string;
   nbpCheckBoxCursor: string;
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

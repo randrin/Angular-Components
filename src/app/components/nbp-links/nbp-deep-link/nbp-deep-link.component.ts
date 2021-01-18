@@ -1,12 +1,4 @@
 import { Component, Injector, Input, OnInit } from "@angular/core";
-import {
-  NbpTextTransformClasse,
-  NbpColorClasse,
-} from "src/assets/utils/nbp-commons/nbp-commons.classes";
-import {
-  NbpPipe,
-  NbpStyle,
-} from "src/assets/utils/nbp-commons/nbp-commons.enums";
 import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({

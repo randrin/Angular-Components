@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnInit } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-icon',
   templateUrl: './nbp-icon.component.html',
   styleUrls: ['./nbp-icon.component.scss']
 })
-export class NbpIconComponent implements OnInit {
+export class NbpIconComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpIconName: string;
 
   nbpIcon: string;
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

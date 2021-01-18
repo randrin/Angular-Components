@@ -1,13 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NbpRadioStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, Input, OnInit } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-input-radio',
   templateUrl: './nbp-input-radio.component.html',
   styleUrls: ['./nbp-input-radio.component.scss']
 })
-export class NbpInputRadioComponent implements OnInit {
+export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpRadioLabel: string;
   @Input() nbpRadioName: string;
@@ -15,14 +14,14 @@ export class NbpInputRadioComponent implements OnInit {
   @Input() nbpRadioDisabled: boolean;
   @Input() nbpRadioChecked: boolean = false;
 
-  _style = NbpStyle;
-  _radioStyleClasse = NbpRadioStyleClasse;
-
+  
   nbpModel: boolean;
   nbpRadio: string;
   nbpRadioInput: string;
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
