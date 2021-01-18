@@ -33,12 +33,15 @@
       transition: all ease-out 0.25s;
       color: var(--nbp-tomato);
     }
-    .nbp-textarea-error-messages {
-      font-size: 0.875em;
-      margin-top: 0.7em;
+    .nbp-textarea-alert-length {
+      float: right;
+    }
+    .nbp-textarea-alert-count {
+      font-weight: 600;
+      color: var(--nbp-primary);
+    }
+    .nbp-textarea-error-message-length {
       color: var(--nbp-tomato);
-      margin-left: 283px;
-      text-align: end
     }
   }
 }
