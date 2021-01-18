@@ -1,31 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Model } from 'src/app/models/model';
-import { NbpBackgroundClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpStyle, NbpFontSize, NbpPipe, NbpSize, NbpAlertType } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, Input, OnInit } from '@angular/core';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-panel-title-two',
   templateUrl: './nbp-panel-title-two.component.html',
   styleUrls: ['./nbp-panel-title-two.component.scss']
 })
-export class NbpPanelTitleTwoComponent implements OnInit {
+export class NbpPanelTitleTwoComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
 
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  _backgroundClasse = NbpBackgroundClasse;
+  
 
   nbpTitle: string;
   nbpBackground: string;
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

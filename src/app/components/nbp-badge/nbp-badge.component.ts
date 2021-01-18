@@ -1,25 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnInit } from '@angular/core';
 import { NbpBadgeStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-badge',
   templateUrl: './nbp-badge.component.html',
   styleUrls: ['./nbp-badge.component.scss']
 })
-export class NbpBadgeComponent implements OnInit {
+export class NbpBadgeComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpBadgeName: string;
   @Input() nbpBadgeIcon: string;
   @Input() nbpBadgeStyle: string;
 
-  _style = NbpStyle;
-  _badgeStyleClasse = NbpBadgeStyleClasse;
-
+  
   nbpBadge: string;
-  nbpSeparator: string = ' ';
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

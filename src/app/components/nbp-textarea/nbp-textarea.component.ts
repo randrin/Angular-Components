@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-textarea',
   templateUrl: './nbp-textarea.component.html',
   styleUrls: ['./nbp-textarea.component.scss']
 })
-export class NbpTextareaComponent implements OnInit {
+export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpTextareaLabel: string;
   @Input() nbpTextareaLabelRequired: boolean;
@@ -25,21 +26,21 @@ export class NbpTextareaComponent implements OnInit {
   nbpErrorMessage: boolean = false;
   nbpErrorLung: boolean = false;
   nbpErrorBorder: string = '';
-  nbpSeparator: string = ' ';
 
   nbpTextareaDefault = {
     rows: 8
   }
+  // nbpBorder = {
+  //   GENERIC: 'nbp-border-color-default',
+  //   POSITIVE: 'nbp-border-color-success',
+  //   PROMOTIONAL: 'nbp-border-color-info',
+  //   WARNING: 'nbp-border-color-warning',
+  //   ERROR: 'nbp-border-color-danger'
+  // }
 
-  nbpBorder = {
-    GENERIC: 'nbp-border-color-default',
-    POSITIVE: 'nbp-border-color-success',
-    PROMOTIONAL: 'nbp-border-color-info',
-    WARNING: 'nbp-border-color-warning',
-    ERROR: 'nbp-border-color-danger'
+  constructor(injector: Injector) {
+    super(injector);
   }
-
-  constructor() { }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
@@ -59,12 +60,12 @@ export class NbpTextareaComponent implements OnInit {
 
   nbpTextareaKeyUp() {
     if (this.nbpTextareaRequired) {
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpGetClasses();
     }
     if(this.nbpModel.length > this.maxlength){
-      this.nbpErrorBorder = this.nbpBorder.ERROR;
+      this.nbpErrorBorder = this.nbpGetBorderColorClasse(this._alertType.ERROR);
        this.nbpGetClasses();
     }
     this.nbpModel.length > 0? this.nbpErrorLung = true : this.nbpErrorLung = false
@@ -73,7 +74,7 @@ export class NbpTextareaComponent implements OnInit {
   nbpTextareaFocusOut() {
     if (this.nbpTextareaRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : '';
       this.nbpGetClasses();
     }
   }

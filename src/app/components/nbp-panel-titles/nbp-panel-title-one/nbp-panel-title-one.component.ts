@@ -1,37 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Model } from 'src/app/models/model';
-import { NbpBackgroundClasse, NbpBorderColorClasse, NbpPanelTitlePositionClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
-import { NbpStyle, NbpFontSize, NbpPipe, NbpSize, NbpAlertType } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, Input, OnInit } from '@angular/core';
+import { NbpBorderColorClasse, NbpPanelTitlePositionClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-panel-title-one',
   templateUrl: './nbp-panel-title-one.component.html',
   styleUrls: ['./nbp-panel-title-one.component.scss']
 })
-export class NbpPanelTitleOneComponent implements OnInit {
+export class NbpPanelTitleOneComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
   @Input() nbpPanelTitlePosition: string;
 
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  _borderColorClasse = NbpBorderColorClasse;
-  _backgroundClasse = NbpBackgroundClasse;
-  _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
-
   nbpTitle: string;
   nbpBorderPanel: string;
   nbpBackgroundTitle: string;
   nbpPositionTitle: string;
-  nbpSeparator: string = ' ';
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

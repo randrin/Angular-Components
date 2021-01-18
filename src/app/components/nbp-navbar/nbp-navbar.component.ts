@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Model } from 'src/app/models/model';
-import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, OnInit } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-navbar',
   templateUrl: './nbp-navbar.component.html',
   styleUrls: ['./nbp-navbar.component.scss']
 })
-export class NbpNavbarComponent implements OnInit {
+export class NbpNavbarComponent extends NbpBaseComponent implements OnInit {
 
   items = [
     {
@@ -28,14 +27,9 @@ export class NbpNavbarComponent implements OnInit {
     }
   ];
 
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

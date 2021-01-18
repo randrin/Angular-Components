@@ -8,10 +8,21 @@ import {
   NbpColorClasse,
   NbpIconClasse,
   NbpBorderColorClasse,
+  NbpBadgeStyleClasse,
+  NbpButtonStyleClasse,
+  NbpButtonSizeClasse,
+  NbpDisplayClasse,
+  NbpCheckBoxStyleClasse,
+  NbpOpacityClasse,
+  NbpCursorClasse,
+  NbpRadioStyleClasse,
+  NbpTextAlignClasse,
+  NbpPanelTitlePositionClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
   NbpCtaType,
+  NbpFontSize,
   NbpPipe,
   NbpSize,
   NbpStyle,
@@ -31,6 +42,9 @@ export class NbpBaseComponent implements OnInit {
   _pipe = NbpPipe;
   _size = NbpSize;
   _ctaType = NbpCtaType;
+  _feedbackType = NbpAlertType;
+  _fontSize = NbpFontSize
+  _alert = NbpAlertType
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -39,6 +53,16 @@ export class NbpBaseComponent implements OnInit {
   _backgroundClasse = NbpBackgroundClasse;
   _borderClasse = NbpBorderClasse;
   _textTransformClasse = NbpTextTransformClasse;
+  _badgeStyleClasse = NbpBadgeStyleClasse;
+  _styleClasse = NbpButtonStyleClasse;
+  _sizeClasse = NbpButtonSizeClasse;
+  _checkBoxStyleClasse = NbpCheckBoxStyleClasse;
+  _displayClasse = NbpDisplayClasse;
+  _opacityClasse = NbpOpacityClasse;
+  _cursorClasse = NbpCursorClasse;
+  _radioStyleClasse = NbpRadioStyleClasse;
+  _textAlignClasse = NbpTextAlignClasse;
+  _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
 
   nbpColor: string;
   nbpBackground: string;

@@ -1,19 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { Model } from 'src/app/models/model';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, OnInit, Injector } from '@angular/core';
+import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-badge-page',
   templateUrl: './nbp-badge-page.component.html',
   styleUrls: ['./nbp-badge-page.component.scss']
 })
-export class NbpBadgePageComponent implements OnInit {
+export class NbpBadgePageComponent extends NbpBaseComponent implements OnInit {
 
   title1 = 'Badges Style with icon';
   title2 = 'Badges Style without icon';
 
-  _style = NbpStyle;
-  _model = new Model();
 
   nbpBadges = [
     { name: 'Default Badge', icon: '', style: this._style.DEFAULT },
@@ -38,7 +35,9 @@ export class NbpBadgePageComponent implements OnInit {
     { name: 'Night Rider Badge Icon', icon: 'nbp-icon-ambulance', style: this._style.NIGHT_RIDER },
   ];
 
-  constructor() { }
+  constructor(injector:Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

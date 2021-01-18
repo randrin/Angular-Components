@@ -1,13 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnInit } from '@angular/core';
 import { NbpButtonSizeClasse, NbpButtonStyleClasse } from 'src/assets/utils/nbp-commons/nbp-commons.classes';
 import { NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-button',
   templateUrl: './nbp-button.component.html',
   styleUrls: ['./nbp-button.component.scss']
 })
-export class NbpButtonComponent implements OnInit {
+export class NbpButtonComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpLabel: string;
   @Input() nbpColorStyle: string;
@@ -16,15 +17,12 @@ export class NbpButtonComponent implements OnInit {
   @Input() nbpSize: string;
   @Input() nbpDisabled: boolean = false;
 
-  _style = NbpStyle;
-  _styleClasse = NbpButtonStyleClasse;
-  _size = NbpSize;
-  _sizeClasse = NbpButtonSizeClasse;
-
   nbpButton: string;
-  nbpSeparator: string = ' ';
 
-  constructor() { }
+
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
