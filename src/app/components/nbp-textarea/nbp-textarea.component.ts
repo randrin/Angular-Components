@@ -2,9 +2,9 @@ import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angul
 import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'nbp-textarea',
-  templateUrl: './nbp-textarea.component.html',
-  styleUrls: ['./nbp-textarea.component.scss']
+  selector: "nbp-textarea",
+  templateUrl: "./nbp-textarea.component.html",
+  styleUrls: ["./nbp-textarea.component.scss"],
 })
 export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
@@ -19,8 +19,8 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
   @Input() maxlength: number = 50;
 
   @Output() nbpTextareaModel: EventEmitter<string> = new EventEmitter<string>();
-  
-  nbpModel: string = '';
+
+  nbpModel: string = "";
   nbpTextarea: string;
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
@@ -48,13 +48,17 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpTextareaRows = (this.nbpTextareaRows === 0 || this.nbpTextareaRows === undefined) ? this.nbpTextareaDefault.rows : this.nbpTextareaRows;
-    // this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
+    this.nbpTextareaRows =
+      this.nbpTextareaRows === 0 || this.nbpTextareaRows === undefined
+        ? this.nbpTextareaDefault.rows
+        : this.nbpTextareaRows;
+    this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
     this.nbpGetClasses();
   }
 
   nbpGetClasses() {
-    this.nbpTextarea = this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
+    this.nbpTextarea =
+      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
     this.nbpTextareaModel.emit(this.nbpModel);
   }
 
@@ -68,13 +72,16 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
       this.nbpErrorBorder = this.nbpGetBorderColorClasse(this._alertType.ERROR);
        this.nbpGetClasses();
     }
-    this.nbpModel.length > 0? this.nbpErrorLung = true : this.nbpErrorLung = false
+    this.nbpModel.length > 0
+      ? (this.nbpErrorLung = true)
+      : (this.nbpErrorLung = false);
   }
 
   nbpTextareaFocusOut() {
     if (this.nbpTextareaRequired) {
-      this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : '';
+      this.nbpErrorMessage = this.nbpModel.length === 0 ? true : false;
+      this.nbpErrorBorder =
+        this.nbpModel.length === 0 || (this.nbpModel.length > this.maxlength) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : "";
       this.nbpGetClasses();
     }
   }
@@ -83,9 +90,15 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
     return this.nbpModel.length > this.maxlength;
   }
 
-  getCountWord(){
-  return  this.nbpModel.length > this.maxlength ? 
-  this.maxlength-this.nbpModel.length:this.nbpModel.length
+  nbpGetCountWord() {
+    return this.nbpModel.length < this.maxlength
+      ? this.maxlength - this.nbpModel.length
+      : 0;
   }
 
+  nbpTextareaKeyPress() {
+    if (this.nbpModel.length > this.maxlength) {
+      this.nbpModel = this.nbpModel.slice(0, this.maxlength);
+    }
+  }
 }
