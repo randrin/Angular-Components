@@ -86,14 +86,14 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
     }
   }
 
-  get verifica() {
+  get verified() {
     return this.nbpModel.length > this.maxlength;
   }
 
   nbpGetCountWord() {
-    return this.nbpModel.length < this.maxlength
-      ? this.maxlength - this.nbpModel.length
-      : 0;
+    return this.nbpModel.length <= this.maxlength
+      ? this.nbpModel.length
+      : -1;
   }
 
   nbpTextareaKeyPress() {
