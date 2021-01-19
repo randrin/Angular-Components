@@ -93,7 +93,7 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
   nbpGetCountWord() {
     return this.nbpModel.length <= this.maxlength
       ? this.nbpModel.length
-      : -1;
+      : 0;
   }
 
   nbpTextareaKeyPress() {
