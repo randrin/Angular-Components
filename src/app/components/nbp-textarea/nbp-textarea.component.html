@@ -28,10 +28,10 @@
     </div>
     <div class="nbp-textarea-error-message" *ngIf="nbpErrorLung">
       <span class="nbp-textarea-alert-count"
-        [ngClass]="{ 'nbp-textarea-error-message-length': verifica, '': !verifica }"
+        [ngClass]="{ 'nbp-textarea-error-message-length': verified, '': !verified }"
         >{{ nbpGetCountWord() }}/{{ maxlength }}
       </span>
-      <span class="nbp-textarea-alert-length" *ngIf="verifica"
+      <span class="nbp-textarea-alert-length" *ngIf="verified"
         >{{ nbpTextareaErrorlunghezzaMaxSup }}
       </span>
     </div>
