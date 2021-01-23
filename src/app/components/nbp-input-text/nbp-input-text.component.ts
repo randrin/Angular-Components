@@ -1,12 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, EventEmitter, Injector, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-input-text',
   templateUrl: './nbp-input-text.component.html',
   styleUrls: ['./nbp-input-text.component.scss']
 })
-export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
+export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, OnDestroy, OnChanges {
 
   @Input() nbpInputLabel: string;
   @Input() nbpInputLabelRequired: boolean;
@@ -23,8 +23,6 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
 
   @Output() nbpInputModel: EventEmitter<string> = new EventEmitter<string>();
 
-  _style = NbpStyle;
-
   nbpModel: string = '';
   nbpInput: string;
   nbpErrorBorder: string = '';
@@ -32,26 +30,10 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   nbpErrorMessage: boolean = false;
   nbpIsDigitText: boolean = false;
   nbpCleanInput: string = 'fa fa-times-circle';
-  nbpSeparator: string = ' ';
 
-  nbpInputDefault = {
-    type: 'text'
+  constructor(injector: Injector) {
+    super(injector);
   }
-
-  nbpBorder = {
-    GENERIC: 'nbp-border-color-default',
-    POSITIVE: 'nbp-border-color-success',
-    PROMOTIONAL: 'nbp-border-color-info',
-    WARNING: 'nbp-border-color-warning',
-    ERROR: 'nbp-border-color-danger'
-  }
-
-  nbpTypeInput = {
-    ROUNDED: 'nbp-rounded',
-    CURSOR: 'nbp-cursor-not-allowed'
-  }
-
-  constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log('ngOnChanges: ', changes.nbpInputValue.currentValue);
@@ -93,7 +75,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
   nbpInputKeyUp() {
     console.log('nbpInputKeyUp')
     if (this.nbpInputRequired) {
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR): '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
       this.nbpGetClasses();
@@ -110,7 +92,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
     console.log('nbpInputFocusOut')
     if (this.nbpInputRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpBorder.ERROR : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : '';
       this.nbpGetClasses();
     }
     this.nbpIsDigitText = false;
@@ -128,7 +110,7 @@ export class NbpInputTextComponent implements OnInit, OnDestroy, OnChanges {
       this.nbpIsDigitText = false;
       this.nbpInputModel.emit(this.nbpModel);
       if (this.nbpInputRequired) {
-        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpBorder.ERROR;
+        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderColorClasse(this._alertType.ERROR);
         this.nbpErrorMessage = true;
       }
     }

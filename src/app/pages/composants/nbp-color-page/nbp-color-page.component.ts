@@ -1,7 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
-import { Model } from 'src/app/models/model';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
   selector: 'nbp-color-page',

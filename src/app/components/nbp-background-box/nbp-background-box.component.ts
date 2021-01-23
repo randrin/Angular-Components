@@ -20,7 +20,9 @@ export class NbpBackgroundBoxComponent extends NbpBaseComponent implements OnIni
   nbpColorBox: string;
   nbpTitleBox: string;
 
-  constructor(injector: Injector) { super(injector); }
+  constructor(injector:Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
@@ -29,7 +31,8 @@ export class NbpBackgroundBoxComponent extends NbpBaseComponent implements OnIni
   // Functions
   nbpSetUpComponent() {
     this.nbpBackgroundBox = this.nbpGetBackgroundClasse(this.nbpBackgroundStyle);
-    this.nbpColorBox = this.nbpColorStyle === undefined ? this.nbpGetColorClasse(this._style.WHITE) : this.nbpGetColorClasse(this.nbpColorStyle);
-    this.nbpTitleBox = this.nbpGetFontSizeClasse(this.nbpFontSize) + this.nbpSeparator + this.nbpGetTextAlignClasse(this.nbpTitlePosition) + this.nbpSeparator + this.nbpGetTextTransformClasse(this.nbpTextTransform);
+    this.nbpColorBox = (this.nbpBackgroundStyle === this._style.DEFAULT || this.nbpBackgroundStyle === undefined) ?  this.nbpGetColorClasse(this._style.WHITE) : this.nbpGetColorClasse(this.nbpColorStyle);
+    this.nbpTitleBox = this.nbpGetFontSizeClasse(this.nbpFontSize) + this.nbpSeparator + this.nbpGetTextAlignClasse(this.nbpTitlePosition) +
+     this.nbpSeparator + this.nbpGetTextTransformClasse(this.nbpTextTransform);
   }
 }

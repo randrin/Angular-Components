@@ -11,9 +11,15 @@ import {
   NbpBadgeStyleClasse,
   NbpBadgeOutlineStyleClasse,
   NbpFontSizeClasse,
+  NbpDisplayClasse,
+  NbpCheckBoxStyleClasse,
+  NbpOpacityClasse,
+  NbpCursorClasse,
+  NbpRadioStyleClasse,
   NbpTextAlignClasse,
+  NbpPanelTitlePositionClasse,
+  NbpButtonSizeClasse,
   NbpButtonStyleClasse,
-  NbpButtonSizeClasse
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -25,7 +31,7 @@ import {
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
-  selector: 'nbp-base',
+  selector: "nbp-base",
   templateUrl: "./nbp-base.component.html",
   styleUrls: ["./nbp-base.component.scss"],
 })
@@ -39,6 +45,8 @@ export class NbpBaseComponent implements OnInit {
   _pipe = NbpPipe;
   _size = NbpSize;
   _ctaType = NbpCtaType;
+  _feedbackType = NbpAlertType;
+  _alert = NbpAlertType;
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -53,6 +61,12 @@ export class NbpBaseComponent implements OnInit {
   _textAlignClasse = NbpTextAlignClasse;
   _buttonStyleClasse = NbpButtonStyleClasse;
   _buttonSizeClasse = NbpButtonSizeClasse;
+  _checkBoxStyleClasse = NbpCheckBoxStyleClasse;
+  _displayClasse = NbpDisplayClasse;
+  _opacityClasse = NbpOpacityClasse;
+  _cursorClasse = NbpCursorClasse;
+  _radioStyleClasse = NbpRadioStyleClasse;
+  _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
 
   nbpColor: string;
   nbpButton: string;
@@ -60,11 +74,24 @@ export class NbpBaseComponent implements OnInit {
   nbpBackground: string;
   nbpBorder: string;
   nbpTextTransform: string;
+  nbpFeedbackColor: string;
 
   nbpSeparator: string = " ";
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
     RIGHT: "nbp-deep-link-right",
+  };
+  nbpFeedbackIcon = {
+    SUCCESS: "fa fa-smile",
+    WARNING: "fa fa-meh",
+    ERROR: "fa fa-frown",
+  };
+  nbpInputDefault = {
+    type: "text",
+  };
+  nbpTypeInput = {
+    ROUNDED: "nbp-rounded",
+    CURSOR: "nbp-cursor-not-allowed",
   };
 
   constructor(injector: Injector) {
@@ -72,7 +99,7 @@ export class NbpBaseComponent implements OnInit {
     this.router = injector.get(Router);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   // Functions
   /* Function to navigate to another link or page */
@@ -172,6 +199,60 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._badgeStyleClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the radio classe with input as argument */
+  nbpGetRadioStyleClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._radioStyleClasse.DEFAULT;
+        break;
+      case this._style.PRIMARY:
+        return this._radioStyleClasse.PRIMARY;
+        break;
+      case this._style.INFO:
+        return this._radioStyleClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+        return this._radioStyleClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+        return this._radioStyleClasse.WARNING;
+        break;
+      case this._style.DANGER:
+        return this._radioStyleClasse.DANGER;
+        break;
+      default:
+        return this._radioStyleClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the checkbox classe with input as argument */
+  nbpGetCheckBoxStyleClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._checkBoxStyleClasse.DEFAULT;
+        break;
+      case this._style.PRIMARY:
+        return this._checkBoxStyleClasse.PRIMARY;
+        break;
+      case this._style.INFO:
+        return this._checkBoxStyleClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+        return this._checkBoxStyleClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+        return this._checkBoxStyleClasse.WARNING;
+        break;
+      case this._style.DANGER:
+        return this._checkBoxStyleClasse.DANGER;
+        break;
+      default:
+        return this._checkBoxStyleClasse.DEFAULT;
         break;
     }
   }
@@ -300,6 +381,24 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._backgroundClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the panel position classe with input as argument */
+  nbpGetPanelTitlePosiionClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.LEFT:
+        return this._panelTitlePositionClasse.LEFT;
+        break;
+      case this._style.CENTER:
+        return this._panelTitlePositionClasse.CENTER;
+        break;
+      case this._style.RIGHT:
+        return this._panelTitlePositionClasse.RIGHT;
+        break;
+      default:
+        return this._panelTitlePositionClasse.LEFT;
         break;
     }
   }
@@ -443,6 +542,28 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._colorClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the feedback color classe with input as argument */
+  nbpGetColorFeedbackClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._feedbackType.POSITIVE:
+        this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
+        return this.nbpFeedbackIcon.SUCCESS;
+        break;
+      case this._feedbackType.WARNING:
+        this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.WARNING);
+        return this.nbpFeedbackIcon.WARNING;
+        break;
+      case this._feedbackType.ERROR:
+        this.nbpFeedbackColor = this.nbpGetColorClasse(this._alertType.ERROR);
+        return this.nbpFeedbackIcon.ERROR;
+        break;
+      default:
+        this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
+        return this.nbpFeedbackIcon.SUCCESS;
         break;
     }
   }
