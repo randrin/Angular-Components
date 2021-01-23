@@ -3,8 +3,7 @@
     <label
       *ngIf="nbpTextareaLabelRequired"
       for="nbpTextareaName"
-      class="nbp-textarea-text-label nbp-text-uppercase"
-    >
+      class="nbp-textarea-text-label nbp-text-uppercase">
       {{ nbpTextareaLabel }}
       <span *ngIf="nbpTextareaRequired" class="nbp-color-tomato ml-1">*</span>
     </label>
@@ -13,27 +12,24 @@
         [(ngModel)]="nbpModel"
         [rows]="nbpTextareaRows"
         [ngClass]="nbpTextarea"
-        (keyup)="nbpTextareaKeyUp()"
-        (keypress)="nbpTextareaKeyPress()"
+        (keydown)="nbpTextareaKeyDown()"
         (focusout)="nbpTextareaFocusOut()"
         class="nbp-form-control form-control"
         [placeholder]="nbpTextareaPlaceholder"
         [disabled]="nbpTextareaDisabled"
         [required]="nbpTextareaRequired"
-        [name]="'nbpTextareaName'"
-      ></textarea>
+        [maxlength]="maxlength"
+        [name]="'nbpTextareaName'">
+      </textarea>
     </div>
     <div class="nbp-textarea-error-message" *ngIf="nbpErrorMessage">
       <span class="nbp-textarea-alert">{{ nbpTextareaErrorMessage }}</span>
     </div>
     <div class="nbp-textarea-error-message" *ngIf="nbpErrorLung">
-      <span class="nbp-textarea-alert-count"
-        [ngClass]="{ 'nbp-textarea-error-message-length': verified, '': !verified }"
-        >{{ nbpGetCountWord() }}/{{ maxlength }}
-      </span>
-      <span class="nbp-textarea-alert-length" *ngIf="verified"
-        >{{ nbpTextareaErrorlunghezzaMaxSup }}
-      </span>
+      <span class="nbp-textarea-alert-length" *ngIf="verified">{{ nbpTextareaErrorlunghezzaMaxSup }}</span>
+      <span class="nbp-textarea-alert-count" *ngIf="nbpTextareaErrorlunghezzaMaxSup"
+      [ngClass]="{ 'nbp-textarea-error-message-length': verified, '': !verified }">{{ nbpGetCountWord() }}/{{ maxlength }}
+    </span>
     </div>
   </div>
 </div>
