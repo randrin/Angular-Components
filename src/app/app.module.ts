@@ -59,6 +59,10 @@ import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.c
 import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpModalOneComponent } from './components/nbp-modal/nbp-modal-one/nbp-modal-one.component';
+import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-modal-two.component';
+import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
+import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +121,10 @@ import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-pag
     NbpDividingLineTwoComponent,
     NbpBoxOneComponent,
     NbpBoxPageComponent,
+    NbpModalOneComponent,
+    NbpModalTwoComponent,
+    NbpModalThreeComponent,
+    NbpModalPageComponent,
   ],
   imports: [
     BrowserModule,

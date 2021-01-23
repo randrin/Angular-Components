@@ -22,6 +22,7 @@ import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-pa
 import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
       { path: 'boxes', component: NbpBoxPageComponent },
+      { path: 'modals', component: NbpModalPageComponent }
     ]
   },
   { path: 'examples', component: ExamplesComponent },
