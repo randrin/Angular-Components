@@ -8,11 +8,11 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 })
 export class NbpBreadcrumdThreeComponent extends NbpBaseComponent implements OnInit {
 
-  constructor(injector: Injector) {
-    super(injector);
-  }
+  constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
   }
 
+  // Functions
+  
 }

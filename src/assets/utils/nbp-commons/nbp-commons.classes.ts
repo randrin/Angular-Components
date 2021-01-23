@@ -168,6 +168,22 @@ export enum NbpBadgeStyleClasse {
   SLIVER = 'nbp-badge-sliver'
 }
 
+export enum NbpBadgeOutlineStyleClasse {
+  DEFAULT = 'nbp-badge-outline-default',
+  SUCCESS = 'nbp-badge-outline-success',
+  PRIMARY = 'nbp-badge-outline-primary',
+  INFO = 'nbp-badge-outline-info',
+  DANGER = 'nbp-badge-outline-danger',
+  WARNING = 'nbp-badge-outline-warning',
+  TOMATO = 'nbp-badge-outline-tomato',
+  WHITE = 'nbp-badge-outline-white',
+  BLACK = 'nbp-badge-outline-black',
+  WHITE_SMOKE = 'nbp-badge-outline-white-smoke',
+  WARM_GRAY_20 = 'nbp-badge-outline-warm-gray-20',
+  NIGHT_RIDER = 'nbp-badge-outline-night-rider',
+  SLIVER = 'nbp-badge-outline-sliver'
+}
+
 export enum NbpPanelTitlePositionClasse {
   LEFT = 'nbp-panel-title-left',
   CENTER = 'nbp-panel-title-center',
@@ -200,4 +216,10 @@ export enum NbpIconClasse {
   PROMOTIONAL = 'fa fa-percent',
   WARNING = 'fa fa-exclamation-circle',
   ERROR = 'fa fa-times-circle',
+}
+
+export enum NbpFontSizeClasse {
+  SMALL = 'nbp-font-size-18',
+  MEDIUM = 'nbp-font-size-24',
+  LARGE = 'nbp-font-size-32'
 }

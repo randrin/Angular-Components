@@ -8,9 +8,7 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 })
 export class NbpBreadcrumbOneComponent extends NbpBaseComponent implements OnInit {
 
-  constructor(injector: Injector) {
-    super(injector);
-  }
+  constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
   }

@@ -28,8 +28,8 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
   nbpErrorBorder: string = '';
 
   nbpTextareaDefault = {
-    rows: 8
-  }
+    rows: 8,
+  };
 
   constructor(injector: Injector) {
     super(injector);

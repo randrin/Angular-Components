@@ -5,11 +5,23 @@
   border-color: var(--nbp-white) !important;
 }
 
+// White Outline
+.nbp-badge-outline-white {
+  color: var(--nbp-white) !important;
+  border: 1px solid var(--nbp-white) !important;
+}
+
 // Success
 .nbp-badge-success {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-success) !important;
   border-color: var(--nbp-success) !important;
+}
+
+// Success Outline
+.nbp-badge-outline-success {
+  color: var(--nbp-success) !important;
+  border: 1px solid var(--nbp-success) !important;
 }
 
 // Info
@@ -19,11 +31,23 @@
   border-color: var(--nbp-info) !important;
 }
 
+// Info Outline
+.nbp-badge-outline-info {
+  color: var(--nbp-info) !important;
+  border: 1px solid var(--nbp-info) !important;
+}
+
 // Black
 .nbp-badge-black {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-black) !important;
   border-color: var(--nbp-black) !important;
+}
+
+// Black Outline
+.nbp-badge-outline-black {
+  color: var(--nbp-black) !important;
+  border: 1px solid var(--nbp-black) !important;
 }
 
 // Default
@@ -33,11 +57,23 @@
   border-color: var(--nbp-secondary) !important;
 }
 
+// Default Outline
+.nbp-badge-outline-default {
+  color: var(--nbp-secondary) !important;
+  border: 1px solid var(--nbp-secondary) !important;
+}
+
 // Tomato
 .nbp-badge-tomato {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-tomato) !important;
   border-color: var(--nbp-tomato) !important;
+}
+
+// Tomato Outline
+.nbp-badge-outline-tomato {
+  color: var(--nbp-tomato) !important;
+  border: 1px solid var(--nbp-tomato) !important;
 }
 
 // Danger
@@ -47,11 +83,23 @@
   border-color: var(--nbp-danger) !important;
 }
 
+// Danger Outline
+.nbp-badge-outline-danger {
+  color: var(--nbp-danger) !important;
+  border: 1px solid var(--nbp-danger) !important;
+}
+
 // Warning
 .nbp-badge-warning {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-warning) !important;
   border-color: var(--nbp-warning) !important;
+}
+
+// Warning Outline
+.nbp-badge-outline-warning {
+  color: var(--nbp-warning) !important;
+  border: 1px solid var(--nbp-warning) !important;
 }
 
 // Primary
@@ -61,11 +109,23 @@
   border-color: var(--nbp-primary) !important;
 }
 
+// Primary Outline
+.nbp-badge-outline-primary {
+  color: var(--nbp-primary) !important;
+  border: 1px solid var(--nbp-primary) !important;
+}
+
 // White Smoke
 .nbp-badge-white-smoke {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-white-smoke) !important;
   border-color: var(--nbp-white-smoke) !important;
+}
+
+// White Smoke Outline
+.nbp-badge-outline-white-smoke {
+  color: var(--nbp-white-smoke) !important;
+  border: 1px solid var(--nbp-white-smoke) !important;
 }
 
 // Warm Gray 20
@@ -75,6 +135,12 @@
   border-color: var(--nbp-warm-gray-20) !important;
 }
 
+// Warm Gray 20 Outline
+.nbp-badge-outline-warm-gray-20 {
+  color: var(--nbp-warm-gray-20) !important;
+  border: 1px solid var(--nbp-warm-gray-20) !important;
+}
+
 // Night Rider
 .nbp-badge-night-rider {
   color: var(--nbp-white) !important;
@@ -82,9 +148,21 @@
   border-color: var(--nbp-night-rider) !important;
 }
 
+// Night Rider Outline
+.nbp-badge-outline-night-rider {
+  color: var(--nbp-night-rider) !important;
+  border: 1px solid var(--nbp-night-rider) !important;
+}
+
 // Sliver
 .nbp-badge-sliver {
   color: var(--nbp-white) !important;
   background-color: var(--nbp-sliver) !important;
   border-color: var(--nbp-sliver) !important;
+}
+
+// Sliver Outline
+.nbp-badge-outline-sliver {
+  color: var(--nbp-sliver) !important;
+  border: 1px solid var(--nbp-sliver) !important;
 }

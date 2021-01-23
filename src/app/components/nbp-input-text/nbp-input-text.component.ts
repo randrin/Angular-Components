@@ -31,22 +31,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
   nbpIsDigitText: boolean = false;
   nbpCleanInput: string = 'fa fa-times-circle';
 
-
-  nbpInputDefault = {
-    type: 'text'
-  }
-  // nbpBorder = {
-  //   GENERIC: 'nbp-border-color-default',
-  //   POSITIVE: 'nbp-border-color-success',
-  //   PROMOTIONAL: 'nbp-border-color-info',
-  //   WARNING: 'nbp-border-color-warning',
-  //   ERROR: 'nbp-border-color-danger'
-  // }
-  nbpTypeInput = {
-    ROUNDED: 'nbp-rounded',
-    CURSOR: 'nbp-cursor-not-allowed'
-  }
-
   constructor(injector: Injector) {
     super(injector);
   }
