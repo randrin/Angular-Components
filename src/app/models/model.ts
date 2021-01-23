@@ -355,6 +355,7 @@ export class Model {
     NbpTextareaComponent: {
       label1: "Description First Name",
       label2: "Description Last Name",
+      label3: "Description About",
       rows: 8,
       name: "description",
       required: "true",

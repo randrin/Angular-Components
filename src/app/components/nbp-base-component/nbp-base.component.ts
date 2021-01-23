@@ -551,19 +551,19 @@ export class NbpBaseComponent implements OnInit {
     switch (nbpInput) {
       case this._feedbackType.POSITIVE:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS;
+        return this.nbpFeedbackIcon.SUCCESS + this.nbpSeparator + this.nbpFeedbackColor;
         break;
       case this._feedbackType.WARNING:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.WARNING);
-        return this.nbpFeedbackIcon.WARNING;
+        return this.nbpFeedbackIcon.WARNING  + this.nbpSeparator + this.nbpFeedbackColor;
         break;
       case this._feedbackType.ERROR:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._alertType.ERROR);
-        return this.nbpFeedbackIcon.ERROR;
+        return this.nbpFeedbackIcon.ERROR + this.nbpSeparator + this.nbpFeedbackColor;
         break;
       default:
-        this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS;
+         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
+        return this.nbpFeedbackIcon.SUCCESS + this.nbpSeparator + this.nbpFeedbackColor;
         break;
     }
   }
