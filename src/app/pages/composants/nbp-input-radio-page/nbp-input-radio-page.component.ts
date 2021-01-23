@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
+import { Component, Injector, OnInit } from '@angular/core';
+import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
+
 
 @Component({
   selector: 'nbp-input-radio-page',
   templateUrl: './nbp-input-radio-page.component.html',
   styleUrls: ['./nbp-input-radio-page.component.scss']
 })
-export class NbpInputRadioPageComponent implements OnInit {
+export class NbpInputRadioPageComponent extends NbpBaseComponent implements OnInit {
 
   title = 'Input Radios Page';
 
-  _style = NbpStyle;
-
-  constructor() { }
+  constructor(injector:Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

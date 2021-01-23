@@ -10,7 +10,9 @@ export class NbpBackgroundBoxPageComponent extends NbpBaseComponent implements O
 
   title = 'Background Box Page';
 
-  constructor(injector: Injector) { super(injector); }
+  constructor(injector:Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

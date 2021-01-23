@@ -13,7 +13,12 @@ export class NbpBadgeComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpBadgeStyle: string;
   @Input() nbpBadgeType: string;
 
-  constructor(injector: Injector) { super(injector); }
+  
+  nbpBadge: string;
+
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();

@@ -1,24 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
-import { Model } from 'src/app/models/model';
+import { Component, Injector, OnInit } from '@angular/core';
+import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-textarea-page',
   templateUrl: './nbp-textarea-page.component.html',
   styleUrls: ['./nbp-textarea-page.component.scss']
 })
-export class NbpTextareaPageComponent implements OnInit {
+export class NbpTextareaPageComponent extends NbpBaseComponent implements OnInit {
 
   title = 'Textarea Page';
 
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  constructor() { }
+  constructor(injector:Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }
