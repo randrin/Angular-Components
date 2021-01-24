@@ -60,6 +60,7 @@ import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
+import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
 
 @NgModule({
   declarations: [
@@ -119,6 +120,7 @@ import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-ale
     NbpBoxOneComponent,
     NbpBoxPageComponent,
     NbpAlertBoxFourthComponent,
+    NbpAlertBoxFiveComponent,
   ],
   imports: [
     BrowserModule,

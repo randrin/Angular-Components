@@ -21,6 +21,7 @@ import {
   NbpButtonSizeClasse,
   NbpButtonStyleClasse,
   NbpBorderTopClasse,
+  NbpBorderLeftClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -56,6 +57,7 @@ export class NbpBaseComponent implements OnInit {
   _backgroundClasse = NbpBackgroundClasse;
   _borderClasse = NbpBorderClasse;
   _borderTopClasse = NbpBorderTopClasse;
+  _borderLeftClasse = NbpBorderLeftClasse;
   _textTransformClasse = NbpTextTransformClasse;
   _badgeStyleClasse = NbpBadgeStyleClasse;
   _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
@@ -287,67 +289,132 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-    /* Function to get the border top classe with input as argument */
-    nbpGetBorderTopClasse(nbpInput) {
+  /* Function to get the border top classe with input as argument */
+  nbpGetBorderTopClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+      case this._alertType.GENERIC:
+        return this._borderTopClasse.DEFAULT;
+        break;
+      case this._style.WHITE:
+        return this._borderTopClasse.WHITE;
+        break;
+      case this._style.WHITE_SMOKE:
+        return this._borderTopClasse.WHITE_SMOKE;
+        break;
+      case this._style.WARM_GRAY_20:
+        return this._borderTopClasse.WARM_GRAY_20;
+        break;
+      case this._style.NIGHT_RIDER:
+        return this._borderTopClasse.NIGHT_RIDER;
+        break;
+      case this._style.SLIVER:
+        return this._borderTopClasse.SLIVER;
+        break;
+      case this._style.BLACK:
+        return this._borderTopClasse.BLACK;
+        break;
+      case this._style.PRIMARY:
+        return this._borderTopClasse.PRIMARY;
+        break;
+      case this._style.TOMATO:
+        return this._borderTopClasse.TOMATO;
+        break;
+      case this._style.INFO:
+      case this._alertType.PROMOTIONAL:
+        return this._borderTopClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+      case this._alertType.POSITIVE:
+        return this._borderTopClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+      case this._alertType.WARNING:
+        return this._borderTopClasse.WARNING;
+        break;
+      case this._style.DANGER:
+      case this._alertType.ERROR:
+        return this._borderTopClasse.DANGER;
+        break;
+      case this._style.EGYPTIAN_BLUE:
+        return this._borderTopClasse.EGYPTIAN_BLUE;
+        break;
+      case this._style.MISTY_ROSE:
+        return this._borderTopClasse.MISTY_ROSE;
+        break;
+      case this._style.MINT_CREAM:
+        return this._borderTopClasse.MINT_CREAM;
+        break;
+      case this._style.FLORAL_WHITE:
+        return this._borderTopClasse.FLORAL_WHITE;
+        break;
+      default:
+        return this._borderTopClasse.DEFAULT;
+        break;
+    }
+  }
+
+    /* Function to get the border left classe with input as argument */
+    nbpGetBorderLeftClasse(nbpInput) {
       switch (nbpInput) {
         case this._style.DEFAULT:
         case this._alertType.GENERIC:
-          return this._borderTopClasse.DEFAULT;
+          return this._borderLeftClasse.DEFAULT;
           break;
         case this._style.WHITE:
-          return this._borderTopClasse.WHITE;
+          return this._borderLeftClasse.WHITE;
           break;
         case this._style.WHITE_SMOKE:
-          return this._borderTopClasse.WHITE_SMOKE;
+          return this._borderLeftClasse.WHITE_SMOKE;
           break;
         case this._style.WARM_GRAY_20:
-          return this._borderTopClasse.WARM_GRAY_20;
+          return this._borderLeftClasse.WARM_GRAY_20;
           break;
         case this._style.NIGHT_RIDER:
-          return this._borderTopClasse.NIGHT_RIDER;
+          return this._borderLeftClasse.NIGHT_RIDER;
           break;
         case this._style.SLIVER:
-          return this._borderTopClasse.SLIVER;
+          return this._borderLeftClasse.SLIVER;
           break;
         case this._style.BLACK:
-          return this._borderTopClasse.BLACK;
+          return this._borderLeftClasse.BLACK;
           break;
         case this._style.PRIMARY:
-          return this._borderTopClasse.PRIMARY;
+          return this._borderLeftClasse.PRIMARY;
           break;
         case this._style.TOMATO:
-          return this._borderTopClasse.TOMATO;
+          return this._borderLeftClasse.TOMATO;
           break;
         case this._style.INFO:
         case this._alertType.PROMOTIONAL:
-          return this._borderTopClasse.INFO;
+          return this._borderLeftClasse.INFO;
           break;
         case this._style.SUCCESS:
         case this._alertType.POSITIVE:
-          return this._borderTopClasse.SUCCESS;
+          return this._borderLeftClasse.SUCCESS;
           break;
         case this._style.WARNING:
         case this._alertType.WARNING:
-          return this._borderTopClasse.WARNING;
+          return this._borderLeftClasse.WARNING;
           break;
         case this._style.DANGER:
         case this._alertType.ERROR:
-          return this._borderTopClasse.DANGER;
+          return this._borderLeftClasse.DANGER;
           break;
         case this._style.EGYPTIAN_BLUE:
-          return this._borderTopClasse.EGYPTIAN_BLUE;
+          return this._borderLeftClasse.EGYPTIAN_BLUE;
           break;
         case this._style.MISTY_ROSE:
-          return this._borderTopClasse.MISTY_ROSE;
+          return this._borderLeftClasse.MISTY_ROSE;
           break;
         case this._style.MINT_CREAM:
-          return this._borderTopClasse.MINT_CREAM;
+          return this._borderLeftClasse.MINT_CREAM;
           break;
         case this._style.FLORAL_WHITE:
-          return this._borderTopClasse.FLORAL_WHITE;
+          return this._borderLeftClasse.FLORAL_WHITE;
           break;
         default:
-          return this._borderTopClasse.DEFAULT;
+          return this._borderLeftClasse.DEFAULT;
           break;
       }
     }
