@@ -38,7 +38,7 @@ export class NbpPanelTitleOneComponent
     this.nbpBackgroundTitle = this.nbpGetBackgroundClasse(
       this.nbpPanelTitleStyle
     );
-    this.nbpBorderPanel = this.nbpGetBorderClasse(this.nbpPanelTitleStyle);
+    this.nbpBorderPanel = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, "border");
     this.nbpTitle =
       this.nbpBackgroundTitle + this.nbpSeparator + this.nbpPositionTitle;
   }

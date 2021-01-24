@@ -20,7 +20,7 @@ export class NbpAlertBoxThreeComponent extends NbpBaseComponent implements OnIni
   // Functions
   nbpSetUpComponent() {
     this.nbpAlertBoxIcon = this.nbpGetIconClasse(this.nbpAlertType);
-    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType);
+    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType, "border");
     this.nbpAlertBoxColor = this.nbpGetColorClasse(this.nbpAlertType);
     this.nbpAlertBoxBackground = this.nbpGetBackgroundBoxAlertClasse(this.nbpAlertType);;
   }

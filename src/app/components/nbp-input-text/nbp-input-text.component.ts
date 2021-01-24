@@ -75,7 +75,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
   nbpInputKeyUp() {
     console.log('nbpInputKeyUp')
     if (this.nbpInputRequired) {
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR): '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, "color"): '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
       this.nbpGetClasses();
@@ -92,7 +92,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
     console.log('nbpInputFocusOut')
     if (this.nbpInputRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderColorClasse(this._alertType.ERROR) : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, "color") : '';
       this.nbpGetClasses();
     }
     this.nbpIsDigitText = false;
@@ -110,7 +110,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
       this.nbpIsDigitText = false;
       this.nbpInputModel.emit(this.nbpModel);
       if (this.nbpInputRequired) {
-        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderColorClasse(this._alertType.ERROR);
+        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderClasse(this._alertType.ERROR, "color");
         this.nbpErrorMessage = true;
       }
     }

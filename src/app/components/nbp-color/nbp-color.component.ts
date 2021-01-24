@@ -22,7 +22,7 @@ export class NbpColorComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpColorStyle);
+    this.nbpBorder = this.nbpGetBorderClasse(this.nbpColorStyle, "border");
     this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpColorStyle);
     this.nbpColor = this.nbpBorder + this.nbpSeparator + this.nbpBackground;
   }
