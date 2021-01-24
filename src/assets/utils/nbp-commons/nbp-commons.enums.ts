@@ -77,6 +77,16 @@ export enum NbpCtaType {
   DEEP = 'DEEP'
 }
 
+/**
+* Enum per la definizione del tipo del border da utilizzare
+*/
+export enum NbpBorder {
+  BORDER = 'BORDER',
+  COLOR = 'COLOR',
+  LEFT = 'LEFT',
+  TOP = 'TOP',
+}
+
 export enum NbpPipe {
   CURRENCY = 0,
   DATE = 1,

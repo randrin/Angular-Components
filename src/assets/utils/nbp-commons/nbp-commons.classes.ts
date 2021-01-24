@@ -120,6 +120,46 @@ export enum NbpBorderClasse {
   MISTY_ROSE = 'nbp-border-misty-rose'
 }
 
+export enum NbpBorderTopClasse {
+  DEFAULT = 'nbp-border-top-default',
+  SUCCESS = 'nbp-border-top-success',
+  PRIMARY = 'nbp-border-top-primary',
+  INFO = 'nbp-border-top-info',
+  DANGER = 'nbp-border-top-danger',
+  WARNING = 'nbp-border-top-warning',
+  TOMATO = 'nbp-border-top-tomato',
+  WHITE = 'nbp-border-top-white',
+  BLACK = 'nbp-border-top-black',
+  WHITE_SMOKE = 'nbp-border-top-white-smoke',
+  WARM_GRAY_20 = 'nbp-border-top-warm-gray-20',
+  NIGHT_RIDER = 'nbp-border-top-night-rider',
+  SLIVER = 'nbp-border-top-sliver',
+  EGYPTIAN_BLUE = 'nbp-border-top-egyptian-blue',
+  FLORAL_WHITE = 'nbp-border-top-floral-white',
+  MINT_CREAM = 'nbp-border-top-mint-cream',
+  MISTY_ROSE = 'nbp-border-top-misty-rose'
+}
+
+export enum NbpBorderLeftClasse {
+  DEFAULT = 'nbp-border-left-default',
+  SUCCESS = 'nbp-border-left-success',
+  PRIMARY = 'nbp-border-left-primary',
+  INFO = 'nbp-border-left-info',
+  DANGER = 'nbp-border-left-danger',
+  WARNING = 'nbp-border-left-warning',
+  TOMATO = 'nbp-border-left-tomato',
+  WHITE = 'nbp-border-left-white',
+  BLACK = 'nbp-border-left-black',
+  WHITE_SMOKE = 'nbp-border-left-white-smoke',
+  WARM_GRAY_20 = 'nbp-border-left-warm-gray-20',
+  NIGHT_RIDER = 'nbp-border-left-night-rider',
+  SLIVER = 'nbp-border-left-sliver',
+  EGYPTIAN_BLUE = 'nbp-border-left-egyptian-blue',
+  FLORAL_WHITE = 'nbp-border-left-floral-white',
+  MINT_CREAM = 'nbp-border-left-mint-cream',
+  MISTY_ROSE = 'nbp-border-left-misty-rose'
+}
+
 export enum NbpBorderColorClasse {
   DEFAULT = 'nbp-border-color-default',
   SUCCESS = 'nbp-border-color-success',
