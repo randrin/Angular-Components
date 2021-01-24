@@ -57,13 +57,13 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
   nbpTextareaKeyDown() {
     if (this.nbpTextareaRequired) {
-      this.nbpErrorBorder = (this.nbpModel.length === -1) ? this.nbpGetBorderClasse(this._alertType.ERROR, "color") : '';
+      this.nbpErrorBorder = (this.nbpModel.length === -1) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR) : '';
       this.nbpErrorMessage = (this.nbpModel.length === -1) ? true : false;
       this.nbpGetClasses();
     }
     if(this.nbpModel.length >= this.maxlength){
       this.nbpErrorMessage= true;
-      this.nbpErrorBorder = this.nbpGetBorderClasse(this._alertType.ERROR, "color");
+      this.nbpErrorBorder = this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR);
        this.nbpGetClasses();
     }
     this.nbpModel.length > 0
@@ -75,7 +75,7 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
     if (this.nbpTextareaRequired) {
       this.nbpErrorMessage = this.nbpModel.length === 0 ? true : false;
       this.nbpErrorBorder =
-        this.nbpModel.length === 0 || (this.nbpModel.length > this.maxlength) ? this.nbpGetBorderClasse(this._alertType.ERROR, "color") : "";
+        this.nbpModel.length === 0 || (this.nbpModel.length > this.maxlength) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR) : "";
       this.nbpGetClasses();
     }
   }
