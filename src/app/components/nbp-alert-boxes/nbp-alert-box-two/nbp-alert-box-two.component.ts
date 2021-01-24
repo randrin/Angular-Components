@@ -11,10 +11,6 @@ export class NbpAlertBoxTwoComponent extends NbpBaseComponent implements OnInit 
   @Input() nbpText: string;
   @Input() nbpAlertType: string;
 
-  nbpAlertBoxType: string;
-  nbpAlertBoxIcon: string;
-  nbpAlertBoxColor: string;
-
   constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {

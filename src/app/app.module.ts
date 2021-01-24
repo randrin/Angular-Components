@@ -59,6 +59,7 @@ import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.c
 import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +118,7 @@ import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-pag
     NbpDividingLineTwoComponent,
     NbpBoxOneComponent,
     NbpBoxPageComponent,
+    NbpAlertBoxFourthComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,10 +14,6 @@ export class NbpAlertBoxOneComponent extends NbpBaseComponent implements OnInit 
 
   @Output() nbpClickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  nbpAlertBoxType: string;
-  nbpAlertBoxIcon: string;
-  nbpAlertBoxBackground: string;
-
   constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {

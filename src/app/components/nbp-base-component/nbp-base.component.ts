@@ -20,6 +20,7 @@ import {
   NbpPanelTitlePositionClasse,
   NbpButtonSizeClasse,
   NbpButtonStyleClasse,
+  NbpBorderTopClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -54,6 +55,7 @@ export class NbpBaseComponent implements OnInit {
   _borderColorClasse = NbpBorderColorClasse;
   _backgroundClasse = NbpBackgroundClasse;
   _borderClasse = NbpBorderClasse;
+  _borderTopClasse = NbpBorderTopClasse;
   _textTransformClasse = NbpTextTransformClasse;
   _badgeStyleClasse = NbpBadgeStyleClasse;
   _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
@@ -75,6 +77,10 @@ export class NbpBaseComponent implements OnInit {
   nbpBorder: string;
   nbpTextTransform: string;
   nbpFeedbackColor: string;
+  nbpAlertBoxType: string;
+  nbpAlertBoxIcon: string;
+  nbpAlertBoxColor: string;
+  nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
   nbpPosition = {
@@ -256,6 +262,95 @@ export class NbpBaseComponent implements OnInit {
         break;
     }
   }
+
+  /* Function to get the background alert classe with input as argument */
+  nbpGetBackgroundBoxAlertClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._alertType.GENERIC:
+        return this._backgroundClasse.WHITE;
+        break;
+      case this._alertType.POSITIVE:
+        return this._backgroundClasse.MINT_CREAM;
+        break;
+      case this._alertType.PROMOTIONAL:
+        return this._backgroundClasse.EGYPTIAN_BLUE;
+        break;
+      case this._alertType.WARNING:
+        return this._backgroundClasse.FLORAL_WHITE;
+        break;
+      case this._alertType.ERROR:
+        return this._backgroundClasse.MISTY_ROSE;
+        break;
+      default:
+        return this._backgroundClasse.WHITE;
+        break;
+    }
+  }
+
+    /* Function to get the border top classe with input as argument */
+    nbpGetBorderTopClasse(nbpInput) {
+      switch (nbpInput) {
+        case this._style.DEFAULT:
+        case this._alertType.GENERIC:
+          return this._borderTopClasse.DEFAULT;
+          break;
+        case this._style.WHITE:
+          return this._borderTopClasse.WHITE;
+          break;
+        case this._style.WHITE_SMOKE:
+          return this._borderTopClasse.WHITE_SMOKE;
+          break;
+        case this._style.WARM_GRAY_20:
+          return this._borderTopClasse.WARM_GRAY_20;
+          break;
+        case this._style.NIGHT_RIDER:
+          return this._borderTopClasse.NIGHT_RIDER;
+          break;
+        case this._style.SLIVER:
+          return this._borderTopClasse.SLIVER;
+          break;
+        case this._style.BLACK:
+          return this._borderTopClasse.BLACK;
+          break;
+        case this._style.PRIMARY:
+          return this._borderTopClasse.PRIMARY;
+          break;
+        case this._style.TOMATO:
+          return this._borderTopClasse.TOMATO;
+          break;
+        case this._style.INFO:
+        case this._alertType.PROMOTIONAL:
+          return this._borderTopClasse.INFO;
+          break;
+        case this._style.SUCCESS:
+        case this._alertType.POSITIVE:
+          return this._borderTopClasse.SUCCESS;
+          break;
+        case this._style.WARNING:
+        case this._alertType.WARNING:
+          return this._borderTopClasse.WARNING;
+          break;
+        case this._style.DANGER:
+        case this._alertType.ERROR:
+          return this._borderTopClasse.DANGER;
+          break;
+        case this._style.EGYPTIAN_BLUE:
+          return this._borderTopClasse.EGYPTIAN_BLUE;
+          break;
+        case this._style.MISTY_ROSE:
+          return this._borderTopClasse.MISTY_ROSE;
+          break;
+        case this._style.MINT_CREAM:
+          return this._borderTopClasse.MINT_CREAM;
+          break;
+        case this._style.FLORAL_WHITE:
+          return this._borderTopClasse.FLORAL_WHITE;
+          break;
+        default:
+          return this._borderTopClasse.DEFAULT;
+          break;
+      }
+    }
 
   /* Function to get the border classe with input as argument */
   nbpGetBorderClasse(nbpInput) {
@@ -551,19 +646,33 @@ export class NbpBaseComponent implements OnInit {
     switch (nbpInput) {
       case this._feedbackType.POSITIVE:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS + this.nbpSeparator + this.nbpFeedbackColor;
+        return (
+          this.nbpFeedbackIcon.SUCCESS +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
       case this._feedbackType.WARNING:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.WARNING);
-        return this.nbpFeedbackIcon.WARNING  + this.nbpSeparator + this.nbpFeedbackColor;
+        return (
+          this.nbpFeedbackIcon.WARNING +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
       case this._feedbackType.ERROR:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._alertType.ERROR);
-        return this.nbpFeedbackIcon.ERROR + this.nbpSeparator + this.nbpFeedbackColor;
+        return (
+          this.nbpFeedbackIcon.ERROR + this.nbpSeparator + this.nbpFeedbackColor
+        );
         break;
       default:
-         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS + this.nbpSeparator + this.nbpFeedbackColor;
+        this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
+        return (
+          this.nbpFeedbackIcon.SUCCESS +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
     }
   }

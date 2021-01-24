@@ -2,9 +2,15 @@
 .nbp-border-white {
   border: 1px solid var(--nbp-white) !important;
 }
+
 .nbp-border-color-white {
   border-color: var(--nbp-white) !important;
 }
+
+.nbp-border-top-white {
+  border-top: 5px solid var(--nbp-white) !important;
+}
+
 .nbp-color-white {
   color: var(--nbp-white) !important;
 }
@@ -13,9 +19,15 @@
 .nbp-border-success {
   border: 1px solid var(--nbp-success) !important;
 }
+
 .nbp-border-color-success {
   border-color: var(--nbp-success) !important;
 }
+
+.nbp-border-top-success {
+  border-top: 5px solid var(--nbp-success) !important;
+}
+
 .nbp-color-success {
   color: var(--nbp-success) !important;
 }
@@ -24,9 +36,15 @@
 .nbp-border-info {
   border: 1px solid var(--nbp-info) !important;
 }
+
 .nbp-border-color-info {
   border-color: var(--nbp-info) !important;
 }
+
+.nbp-border-top-info {
+  border-top: 5px solid var(--nbp-info) !important;
+}
+
 .nbp-color-info {
   color: var(--nbp-info) !important;
 }
@@ -35,9 +53,15 @@
 .nbp-border-black {
   border: 1px solid var(--nbp-black) !important;
 }
+
 .nbp-border-color-black {
   border-color: var(--nbp-black) !important;
 }
+
+.nbp-border-top-black {
+  border-top: 5px solid var(--nbp-black) !important;
+}
+
 .nbp-color-black {
   color: var(--nbp-black) !important;
 }
@@ -46,9 +70,15 @@
 .nbp-border-default {
   border: 1px solid var(--nbp-secondary) !important;
 }
+
 .nbp-border-color-default {
   border-color: var(--nbp-secondary) !important;
 }
+
+.nbp-border-top-default {
+  border-top: 5px solid var(--nbp-secondary) !important;
+}
+
 .nbp-color-default {
   color: var(--nbp-secondary) !important;
 }
@@ -57,9 +87,15 @@
 .nbp-border-tomato {
   border: 1px solid var(--nbp-tomato) !important;
 }
+
 .nbp-border-color-tomato {
   border-color: var(--nbp-tomato) !important;
 }
+
+.nbp-border-top-tomato {
+  border-top: 5px solid var(--nbp-tomato) !important;
+}
+
 .nbp-color-tomato {
   color: var(--nbp-tomato) !important;
 }
@@ -68,9 +104,15 @@
 .nbp-border-danger {
   border: 1px solid var(--nbp-danger) !important;
 }
+
 .nbp-border-color-danger {
   border-color: var(--nbp-danger) !important;
 }
+
+.nbp-border-top-danger {
+  border-top: 5px solid var(--nbp-danger) !important;
+}
+
 .nbp-color-danger {
   color: var(--nbp-danger) !important;
 }
@@ -79,9 +121,15 @@
 .nbp-border-warning {
   border: 1px solid var(--nbp-warning) !important;
 }
+
 .nbp-border-color-warning {
   border-color: var(--nbp-warning) !important;
 }
+
+.nbp-border-top-warning {
+  border-top: 5px solid var(--nbp-warning) !important;
+}
+
 .nbp-color-warning {
   color: var(--nbp-warning) !important;
 }
@@ -90,9 +138,15 @@
 .nbp-border-primary {
   border: 1px solid var(--nbp-primary) !important;
 }
+
 .nbp-border-color-primary {
   border-color: var(--nbp-primary) !important;
 }
+
+.nbp-border-top-primary {
+  border-top: 5px solid var(--nbp-primary) !important;
+}
+
 .nbp-color-primary {
   color: var(--nbp-primary) !important;
 }
@@ -101,9 +155,15 @@
 .nbp-border-white-smoke {
   border: 1px solid var(--nbp-white-smoke) !important;
 }
+
 .nbp-border-color-white-smoke {
   border-color: var(--nbp-white-smoke) !important;
 }
+
+.nbp-border-top-white-smoke {
+  border-top: 5px solid var(--nbp-white-smoke) !important;
+}
+
 .nbp-color-white-smoke {
   color: var(--nbp-white-smoke) !important;
 }
@@ -112,9 +172,15 @@
 .nbp-border-warm-gray-20 {
   border: 1px solid var(--nbp-warm-gray-20) !important;
 }
+
 .nbp-border-color-warm-gray-20 {
   border-color: var(--nbp-warm-gray-20) !important;
 }
+
+.nbp-border-top-warm-gray-20 {
+  border-top: 5px solid var(--nbp-warm-gray-20) !important;
+}
+
 .nbp-color-warm-gray-20 {
   color: var(--nbp-warm-gray-20) !important;
 }
@@ -123,9 +189,15 @@
 .nbp-border-night-rider {
   border: 1px solid var(--nbp-night-rider) !important;
 }
+
 .nbp-border-color-night-rider {
   border-color: var(--nbp-night-rider) !important;
 }
+
+.nbp-border-top-night-rider {
+  border-top: 5px solid var(--nbp-night-rider) !important;
+}
+
 .nbp-color-night-rider {
   color: var(--nbp-night-rider) !important;
 }
@@ -134,9 +206,15 @@
 .nbp-border-sliver {
   border: 1px solid var(--nbp-sliver) !important;
 }
+
 .nbp-border-color-sliver {
   border-color: var(--nbp-sliver) !important;
 }
+
+.nbp-border-top-sliver {
+  border-top: 5px solid var(--nbp-sliver) !important;
+}
+
 .nbp-color-silver {
   color: var(--nbp-silver) !important;
 }
@@ -145,42 +223,66 @@
 .nbp-border-egyptian-blue {
   border: 1px solid var(--nbp-egyptian-blue) !important;
 }
+
 .nbp-border-color-egyptian-blue {
   border-color: var(--nbp-egyptian-blue) !important;
 }
+
+.nbp-border-top-egyptian-blue {
+  border-top: 5px solid var(--nbp-egyptian-blue) !important;
+}
+
 .nbp-color-egyptian-blue {
   color: var(--nbp-egyptian-blue) !important;
 }
 
 // Floral White
 .nbp-border-floral-white {
-  border: 1px solid  var(--nbp-floral-white) !important;
+  border: 1px solid var(--nbp-floral-white) !important;
 }
+
 .nbp-border-color-floral-white {
   border-color: var(--nbp-floral-white) !important;
 }
+
+.nbp-border-top-floral-white {
+  border-top: 5px solid var(--nbp-floral-white) !important;
+}
+
 .nbp-color-floral-white {
   color: var(--nbp-floral-white) !important;
 }
 
 // Mint Cream
 .nbp-border-mint-cream {
-  border: 1px solid  var(--nbp-mint-cream) !important;
+  border: 1px solid var(--nbp-mint-cream) !important;
 }
+
 .nbp-border-color-mint-cream {
   border-color: var(--nbp-mint-cream) !important;
 }
+
+.nbp-border-top-mint-cream {
+  border-top: 5px solid var(--nbp-mint-cream) !important;
+}
+
 .nbp-color-mint-cream {
   color: var(--nbp-mint-cream) !important;
 }
 
 // Misty Rose
 .nbp-border-misty-rose {
-  border: 1px solid  var(--nbp-misty-rose) !important;
+  border: 1px solid var(--nbp-misty-rose) !important;
 }
+
 .nbp-border-color-misty-rose {
-  border-color: 1px solid  var(--nbp-misty-rose) !important;
+  border-color: 1px solid var(--nbp-misty-rose) !important;
 }
+
+.nbp-border-top-misty-rose {
+  border-top: 5px solid var(--nbp-misty-rose) !important;
+}
+
 .nbp-color-misty-rose {
-  color: 1px solid  var(--nbp-misty-rose) !important;
+  color: 1px solid var(--nbp-misty-rose) !important;
 }
