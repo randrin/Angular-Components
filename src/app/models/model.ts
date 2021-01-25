@@ -375,6 +375,8 @@ export class Model {
     },
     NbpModalComponent: {
       modal:"modal",
+      close:"close",
+      save:"Save",
       modalTitle: "string",
       content: "jahjchacasbcjkasnchbsbcscnkscjiscslcscjsacbjc",
     },
