@@ -61,6 +61,9 @@ import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-o
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpToggleButtonOneComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-one/nbp-toggle-button-one.component';
+import { NbpToggleButtonTwoComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-two/nbp-toggle-button-two.component';
+import { NbpToggleButtonPageComponent } from './pages/composants/nbp-toggle-button-page/nbp-toggle-button-page.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +124,9 @@ import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert
     NbpBoxPageComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
+    NbpToggleButtonOneComponent,
+    NbpToggleButtonTwoComponent,
+    NbpToggleButtonPageComponent,
   ],
   imports: [
     BrowserModule,

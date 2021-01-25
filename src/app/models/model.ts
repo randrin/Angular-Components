@@ -1,5 +1,16 @@
 export class Model {
   component = {
+    NbpToggleButtonOneComponent: {
+      default: "default",
+      info: "info",
+      danger: "danger",
+      warning: "warning",
+      black: "black",
+      primary: "primary",
+      tomato: "tomato",
+      smoke: "smoke",
+      success: "success"
+    },
     NbpBoxComponent: {
       title: "Box Title 1",
       description:

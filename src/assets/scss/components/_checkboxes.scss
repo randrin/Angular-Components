@@ -5,11 +5,24 @@
     border-color: var(--nbp-success) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-success) !important;
+  }
+}
+
+.nbp-toggle-button-success {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-success) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
 
@@ -20,11 +33,24 @@
     border-color: var(--nbp-primary) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-primary) !important;
+  }
+}
+
+.nbp-toggle-button-primary {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-primary) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
 
@@ -35,11 +61,24 @@
     border-color: var(--nbp-info) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-info) !important;
+  }
+}
+
+.nbp-toggle-button-info {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-info) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
 
@@ -50,11 +89,24 @@
     border-color: var(--nbp-warning) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-warning) !important;
+  }
+}
+
+.nbp-toggle-button-warning {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-warning) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
 
@@ -65,11 +117,24 @@
     border-color: var(--nbp-tomato) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-tomato) !important;
+  }
+}
+
+.nbp-toggle-button-danger {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-danger) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
 
@@ -80,10 +145,23 @@
     border-color: var(--nbp-secondary) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-secondary) !important;
+  }
+}
+
+.nbp-toggle-button-default {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-secondary) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
   }
 }
