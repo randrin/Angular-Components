@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-nbp-toggle-button-two',
+  selector: 'nbp-toggle-button-two',
   templateUrl: './nbp-toggle-button-two.component.html',
   styleUrls: ['./nbp-toggle-button-two.component.scss']
 })

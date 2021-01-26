@@ -15,7 +15,8 @@ export class NbpToggleButtonOneComponent
 
   @Input() nbpToggleButtonName: string;
   @Input() nbpToggleButtonType: string;
-  @Input() nbpToggleButtonChecked: true;
+  @Input() nbpToggleButtonChecked: boolean;
+  @Input() nbpToggleButtonDisabled: boolean;
 
   @Output() nbpToogleButtonOnClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
