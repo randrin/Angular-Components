@@ -23,7 +23,7 @@ import {
   NbpBorderTopClasse,
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
-  NbpnbpModalPosition
+  NbpModalPosition
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -53,8 +53,8 @@ export class NbpBaseComponent implements OnInit {
   _feedbackType = NbpAlertType;
   _alert = NbpAlertType;
   _border = NbpBorder;
+  _position= NbpModalPosition
   _model = new Model();
-  _position = String
 
   _colorClasse = NbpColorClasse;
   _iconClasse = NbpIconClasse;
@@ -77,7 +77,7 @@ export class NbpBaseComponent implements OnInit {
   _radioStyleClasse = NbpRadioStyleClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
-  _positionModalClasse = NbpnbpModalPosition;
+  _positionModalClasse = NbpModalPosition;
 
   nbpColor: string;
   nbpButton: string;
