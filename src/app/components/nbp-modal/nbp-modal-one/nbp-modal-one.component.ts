@@ -17,6 +17,7 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
 
   modalSize: string;
   modalPosition: string
+  nbpSizeAndPosition: string;
 
   constructor(injector:Injector) {
     super(injector);
@@ -27,8 +28,10 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   }
   
   nbpSetUpComponent() {
+    debugger
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
-    this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition)
+    this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
+    this.nbpSizeAndPosition =  this.modalPosition + this.nbpSeparator + this.modalSize
   }
 
   nbpOnSaved(){

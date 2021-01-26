@@ -267,10 +267,11 @@ export enum NbpFontSizeClasse {
 export enum NbpSizeModalClasse {
   SMALL = 'modal-sm',
   MEDIUM = 'modal-md',
-  LARGE = 'modal-lg'
+  LARGE = 'modal-lg',
+  EXTRALARGE = 'modal-xl'
 }
-export enum NbpnbpModalPosition {
-  TOP = ' ',
+export enum NbpModalPosition {
+  TOP = 'modal-dialog',
   CENTER = 'modal-dialog-centered',
 }
 
