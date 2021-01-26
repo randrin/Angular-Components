@@ -60,9 +60,11 @@ import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 import { NbpModalOneComponent } from './components/nbp-modal/nbp-modal-one/nbp-modal-one.component';
+import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
 import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-modal-two.component';
 import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
-import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
+import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
+import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
 
 @NgModule({
   declarations: [
@@ -121,10 +123,12 @@ import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-mod
     NbpDividingLineTwoComponent,
     NbpBoxOneComponent,
     NbpBoxPageComponent,
+    NbpModalPageComponent,
     NbpModalOneComponent,
     NbpModalTwoComponent,
     NbpModalThreeComponent,
-    NbpModalPageComponent,
+    NbpAlertBoxFourthComponent,
+    NbpAlertBoxFiveComponent,
   ],
   imports: [
     BrowserModule,
