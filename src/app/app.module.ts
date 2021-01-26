@@ -47,7 +47,7 @@ import { NbpPanelTitleOneComponent } from './components/nbp-panel-titles/nbp-pan
 import { NbpPanelTitlePageComponent } from './pages/composants/nbp-panel-title-page/nbp-panel-title-page.component';
 import { NbpInputRadioComponent } from './components/nbp-input-radio/nbp-input-radio.component';
 import { NbpInputRadioPageComponent } from './pages/composants/nbp-input-radio-page/nbp-input-radio-page.component';
-import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumd-three/nbp-breadcrumd-three.component';
+import { NbpBreadcrumdThreeComponent } from './components/nbp-breadcrumbs/nbp-breadcrumb-three/nbp-breadcrumd-three.component';
 import { NbpAlertBoxTwoComponent } from './components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component';
 import { NbpArrowLinkComponent } from './components/nbp-links/nbp-arrow-link/nbp-arrow-link.component';
 import { NbpDeepLinkComponent } from './components/nbp-links/nbp-deep-link/nbp-deep-link.component';
@@ -59,6 +59,10 @@ import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.c
 import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
 import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
+import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpPanelTitleThreeComponent } from './components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component';
+import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +121,10 @@ import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-pag
     NbpDividingLineTwoComponent,
     NbpBoxOneComponent,
     NbpBoxPageComponent,
+    NbpAlertBoxFourthComponent,
+    NbpAlertBoxFiveComponent,
+    NbpPanelTitleThreeComponent,
+    NbpPanelTitleFourthComponent,
   ],
   imports: [
     BrowserModule,

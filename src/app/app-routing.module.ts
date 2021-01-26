@@ -47,7 +47,7 @@ const appRoutes: Routes = [
       { path: 'typographies', component: NbpTypographyPageComponent },
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
-      { path: 'boxes', component: NbpBoxPageComponent },
+      { path: 'boxes', component: NbpBoxPageComponent }
     ]
   },
   { path: 'examples', component: ExamplesComponent },

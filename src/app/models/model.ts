@@ -290,8 +290,8 @@ export class Model {
         { label: "TOMATO", name: "Tomato", code: "#d12420" },
         { label: "WHITE", name: "White", code: "#ffffff" },
         { label: "BLACK", name: "Black", code: "#000000" },
-        { label: "PRIMARY", name: "Primary", code: "#1775be" },
-        { label: "SUCCESS", name: "Success", code: "#258900" },
+        { label: "PRIMARY", name: "Primary", code: "#0a66c2" },
+        { label: "SUCCESS", name: "Success", code: "#057642" },
         { label: "WARM_GRAY_20", name: "Warm Gray 20", code: "#f3f2ef" },
         { label: "WARNING", name: "Warning", code: "#fa9600" },
         { label: "DANGER", name: "Danger", code: "#f55854" },
@@ -307,6 +307,9 @@ export class Model {
     },
     NbpButtonComponent: {
       label: "Button",
+      cerca:"Cerca",
+      close:"Close",
+      salva:"Salva",
       labelHover: "Button Hover",
       cta: "My Profil",
     },
@@ -322,6 +325,12 @@ export class Model {
       nbpTitleCta: {
         title: "Dividing Line Composant with Cta",
         cta: "Edit Profil",
+      },
+      modal: {
+        title1: "modal type one",
+        title2: "modal type two",
+        title3: "modal type three",
+
       },
     },
     NbpBackgroundBoxComponent: {
@@ -353,8 +362,9 @@ export class Model {
       icon2: "fa fa-user",
     },
     NbpTextareaComponent: {
-      label1: "Description First Name",
-      label2: "Description Last Name",
+      label1: "Description First Name with limit = 10",
+      label2: "Description Last Name readonly",
+      label3: "Description Name without limit",
       rows: 8,
       name: "description",
       required: "true",
@@ -362,6 +372,11 @@ export class Model {
       lunghezzaMaxSup: "You have superate the length required",
       placeholder: "Insert the description name",
       lunghezzaMax: 10
+    },
+    NbpModalComponent: {
+      modal:"modal",
+      modalTitle: "string",
+      content: "jahjchacasbcjkasnchbsbcscnkscjiscslcscjsacbjc",
     },
     NbpIconComponent: {
       icons: [

@@ -33,41 +33,15 @@ export class NbpInputCheckboxComponent extends NbpBaseComponent implements OnIni
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpCheckBox = this.nbpGetCheckBoxStyle(this.nbpCheckBoxStyle);
-    this.nbpCheckBoxIcon = (this.nbpCheckBoxChecked == false || this.nbpCheckBoxChecked === undefined) ? this._displayClasse.NONE : '';
-    this.nbpCheckBoxOpacity = this.nbpCheckBoxDisabled == true ? this._opacityClasse.OPACITY_02 : '';
-    this.nbpCheckBoxCursor = this.nbpCheckBoxDisabled == true ? this._cursorClasse.NONE : '';
+    this.nbpCheckBox = this.nbpGetCheckBoxStyleClasse(this.nbpCheckBoxStyle);
+    this.nbpCheckBoxIcon = (this.nbpCheckBoxChecked === false || this.nbpCheckBoxChecked === undefined) ? this._displayClasse.NONE : '';
+    this.nbpCheckBoxOpacity = this.nbpCheckBoxDisabled === true ? this._opacityClasse.OPACITY_02 : '';
+    this.nbpCheckBoxCursor = this.nbpCheckBoxDisabled === true ? this._cursorClasse.NONE : '';
     this.nbpCheckBoxInput = this.nbpCheckBoxOpacity + this.nbpSeparator + this.nbpCheckBoxCursor;
   }
 
   nbpCheckBoxClick(event) {
     console.log('nbpCheckBoxClick: ', event)
     this.nbpCheckBoxModel.emit(this.nbpModel);
-  }
-
-  nbpGetCheckBoxStyle(nbpInput) {
-    switch (nbpInput) {
-      case this._style.DEFAULT:
-        return this._checkBoxStyleClasse.DEFAULT;
-        break;
-      case this._style.PRIMARY:
-        return this._checkBoxStyleClasse.PRIMARY;
-        break;
-      case this._style.INFO:
-        return this._checkBoxStyleClasse.INFO;
-        break;
-      case this._style.SUCCESS:
-        return this._checkBoxStyleClasse.SUCCESS;
-        break;
-      case this._style.WARNING:
-        return this._checkBoxStyleClasse.WARNING;
-        break;
-      case this._style.DANGER:
-        return this._checkBoxStyleClasse.DANGER;
-        break;
-      default:
-        return this._checkBoxStyleClasse.DEFAULT;
-        break;
-    }
   }
 }

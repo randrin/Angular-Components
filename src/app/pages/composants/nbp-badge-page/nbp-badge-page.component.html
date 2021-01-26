@@ -24,5 +24,29 @@
         </div>
       </div>
     </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title3" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="badge.icon && badge.type">
+          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title4" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="!badge.icon && badge.type">
+          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

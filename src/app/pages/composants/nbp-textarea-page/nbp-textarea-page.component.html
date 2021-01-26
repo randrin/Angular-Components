@@ -17,8 +17,7 @@
         [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
         [nbpTextareaErrorlunghezzaMaxSup]="_model.component.NbpTextareaComponent.lunghezzaMaxSup"
         [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
-        [maxlength]="_model.component.NbpTextareaComponent.lunghezzaMax"
-        ></nbp-textarea>
+        [maxlength]="_model.component.NbpTextareaComponent.lunghezzaMax"></nbp-textarea>
     </div>
     <div class="col-md-6">
       <nbp-textarea
@@ -26,10 +25,21 @@
         [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
         [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
         [nbpTextareaRequired]="'true'"
-        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
-        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
         [nbpTextareaDisabled]="'true'"
-        ></nbp-textarea>
+        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage">
+      </nbp-textarea>
+    </div>
+    <div class="col-md-6">
+      <nbp-textarea
+        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label3"
+        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="'false'"
+        [nbpTextareaDisabled]="'false'"
+        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage">
+      </nbp-textarea>
     </div>
   </div>
 </div>

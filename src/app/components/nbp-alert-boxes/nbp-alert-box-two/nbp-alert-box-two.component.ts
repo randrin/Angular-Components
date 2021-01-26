@@ -11,10 +11,6 @@ export class NbpAlertBoxTwoComponent extends NbpBaseComponent implements OnInit 
   @Input() nbpText: string;
   @Input() nbpAlertType: string;
 
-  nbpAlertBoxType: string;
-  nbpAlertBoxIcon: string;
-  nbpAlertBoxColor: string;
-
   constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
@@ -24,7 +20,7 @@ export class NbpAlertBoxTwoComponent extends NbpBaseComponent implements OnInit 
   // Functions
   nbpSetUpComponent() {
     this.nbpAlertBoxIcon = this.nbpGetIconClasse(this.nbpAlertType);
-    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType);
+    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType, this._border.BORDER);
     this.nbpAlertBoxColor = this.nbpGetColorClasse(this.nbpAlertType);
   }
 }
