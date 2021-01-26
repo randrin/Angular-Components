@@ -23,6 +23,7 @@ import {
   NbpBorderTopClasse,
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
+  NbpnbpModalPosition
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -53,6 +54,7 @@ export class NbpBaseComponent implements OnInit {
   _alert = NbpAlertType;
   _border = NbpBorder;
   _model = new Model();
+  _position = String
 
   _colorClasse = NbpColorClasse;
   _iconClasse = NbpIconClasse;
@@ -74,7 +76,8 @@ export class NbpBaseComponent implements OnInit {
   _cursorClasse = NbpCursorClasse;
   _radioStyleClasse = NbpRadioStyleClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
-  sizeModalClasse = NbpSizeModalClasse;
+  _sizeModalClasse = NbpSizeModalClasse;
+  _positionModalClasse = NbpnbpModalPosition;
 
   nbpColor: string;
   nbpButton: string;
@@ -900,16 +903,30 @@ export class NbpBaseComponent implements OnInit {
   nbpGetSizeModalClasse(nbpInput) {
     switch (nbpInput) {
       case this._size.SM:
-        return this.sizeModalClasse.SMALL;
+        return this._sizeModalClasse.SMALL;
         break;
       case this._size.MD:
-        return this.sizeModalClasse.MEDIUM;
+        return this._sizeModalClasse.MEDIUM;
         break;
       case this._size.LG:
-        return this.sizeModalClasse.LARGE;
+        return this._sizeModalClasse.LARGE;
         break;
       default:
-        return this.sizeModalClasse.SMALL;
+        return this._sizeModalClasse.SMALL;
+        break;
+    }
+  }
+
+  nbpGetnbpModalPosition(nbpInput) {
+    switch (nbpInput) {
+      case this._style.CENTER:
+        return this._positionModalClasse.CENTER;
+        break;
+      case this._style.DEFAULT:
+        return this._positionModalClasse.TOP;
+        break;
+      default:
+        return this._positionModalClasse.TOP;
         break;
     }
   }
