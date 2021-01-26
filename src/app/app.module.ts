@@ -61,6 +61,8 @@ import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-o
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpPanelTitleThreeComponent } from './components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component';
+import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +123,8 @@ import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert
     NbpBoxPageComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
+    NbpPanelTitleThreeComponent,
+    NbpPanelTitleFourthComponent,
   ],
   imports: [
     BrowserModule,
