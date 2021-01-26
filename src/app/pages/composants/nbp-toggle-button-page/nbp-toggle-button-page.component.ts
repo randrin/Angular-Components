@@ -10,7 +10,8 @@ export class NbpToggleButtonPageComponent extends NbpBaseComponent implements On
 
   constructor(injector: Injector) { super(injector)}
 
-  title1  = 'Toogle Button rounded Page';
+  title1 = 'Toogle Button rounded 1 Page';
+  title2 = 'Toogle Button rounded 2 Page';
 
   ngOnInit(): void {
   }

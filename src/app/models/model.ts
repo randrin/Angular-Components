@@ -1,15 +1,28 @@
 export class Model {
   component = {
     NbpToggleButtonOneComponent: {
-      default: "default",
-      info: "info",
-      danger: "danger",
-      warning: "warning",
-      black: "black",
-      primary: "primary",
-      tomato: "tomato",
-      smoke: "smoke",
-      success: "success"
+      one: {
+        default: "default-one",
+        info: "info-one",
+        danger: "danger-one",
+        warning: "warning-one",
+        black: "black-one",
+        primary: "primary-one",
+        tomato: "tomato-one",
+        smoke: "smoke-one",
+        success: "success-one",
+      },
+      two: {
+        default: "default-two",
+        info: "info-two",
+        danger: "danger-two",
+        warning: "warning-two",
+        black: "black-two",
+        primary: "primary-two",
+        tomato: "tomato-two",
+        smoke: "smoke-two",
+        success: "success-two",
+      },
     },
     NbpBoxComponent: {
       title: "Box Title 1",
@@ -373,7 +386,7 @@ export class Model {
       requiredMessage: "The description name is required",
       lunghezzaMaxSup: "You have superate the length required",
       placeholder: "Insert the description name",
-      lunghezzaMax: 10
+      lunghezzaMax: 10,
     },
     NbpIconComponent: {
       icons: [

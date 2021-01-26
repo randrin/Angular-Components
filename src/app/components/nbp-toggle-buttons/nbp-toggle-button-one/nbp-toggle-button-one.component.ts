@@ -31,7 +31,7 @@ export class NbpToggleButtonOneComponent
 
   // Functions
   nbpGetToggleType() {
-    return 'nbp-toggle-button-' + this.nbpToggleButtonType.toLowerCase();
+    return 'nbp-toggle-button-one-' + this.nbpToggleButtonType.toLowerCase();
   }
 
   nbpToggleButtonClick(event) {

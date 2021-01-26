@@ -1,1 +1,23 @@
-<p>nbp-toggle-button-two works!</p>
+<div class="nbp-toggle-button-two-wrapper">
+    <div class="nbp-toggle-button-two-container">
+      <div class="row">
+        <div class="col">
+          <div class="nbp-toggle-button-checkbox nbp-toggle-button-switcher">
+            <label [for]="nbpToggleButtonName" [ngClass]="nbpGetToggleType()">
+              <input
+                type="checkbox"
+                [id]="nbpToggleButtonName"
+                (click)="nbpToggleButtonClick($event)"
+                [checked]="nbpToggleButtonChecked"
+                [disabled]="nbpToggleButtonDisabled"
+              />
+              <span [ngClass]="nbpBorder"
+                ><small [ngClass]="nbpBackground"></small
+              ></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
