@@ -65,6 +65,8 @@ import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-m
 import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpPanelTitleThreeComponent } from './components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component';
+import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component';
 
 @NgModule({
   declarations: [
@@ -129,6 +131,8 @@ import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert
     NbpModalThreeComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
+    NbpPanelTitleThreeComponent,
+    NbpPanelTitleFourthComponent,
   ],
   imports: [
     BrowserModule,
