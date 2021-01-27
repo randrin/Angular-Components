@@ -1,3 +1,5 @@
+import { Message } from "@angular/compiler/src/i18n/i18n_ast";
+
 export class Model {
   component = {
     NbpBoxComponent: {
@@ -307,6 +309,9 @@ export class Model {
     },
     NbpButtonComponent: {
       label: "Button",
+      cerca:"Cerca",
+      close:"Close",
+      salva:"Salva",
       labelHover: "Button Hover",
       cta: "My Profil",
     },
@@ -322,6 +327,12 @@ export class Model {
       nbpTitleCta: {
         title: "Dividing Line Composant with Cta",
         cta: "Edit Profil",
+      },
+      modal: {
+        title1: "modal type one",
+        title2: "modal type two",
+        title3: "modal type three",
+
       },
     },
     NbpBackgroundBoxComponent: {
@@ -345,6 +356,7 @@ export class Model {
       label1: "First Name",
       label2: "Last Name",
       name: "firstName",
+      to:"Recipient",
       value: "Mario Rossi",
       required: "true",
       requiredMessage: "The first name is required",
@@ -353,8 +365,10 @@ export class Model {
       icon2: "fa fa-user",
     },
     NbpTextareaComponent: {
-      label1: "Description First Name",
-      label2: "Description Last Name",
+      label1: "Description First Name with limit = 10",
+      label2: "Description Last Name readonly",
+      label3: "Description Name without limit",
+      messageModal:"Message",
       rows: 8,
       name: "description",
       required: "true",
@@ -362,6 +376,16 @@ export class Model {
       lunghezzaMaxSup: "You have superate the length required",
       placeholder: "Insert the description name",
       lunghezzaMax: 10
+    },
+    NbpModalComponent: {
+      modal:"modal",
+      close:"close",
+      save:"Save",
+      sendMessage:"Send message",
+      modalTitle1: "Modal1",
+      modalTitle2: "Modal2",
+      modalTitle3: "Modal3",
+      content:  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     NbpIconComponent: {
       icons: [

@@ -11,8 +11,7 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpMessage: string;
   @Input() nbpFeedbackType: string;
 
-  nbpFeedbackIcon: string;
-  nbpFeedbackColor: string;
+  nbpFeedback: string;
 
   constructor(injector: Injector) {
     super(injector);
@@ -24,9 +23,7 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpFeedbackIcon =
-      this.nbpGetColorFeedbackClasse(this.nbpFeedbackType) +
-      this.nbpSeparator +
-      this.nbpFeedbackColor;
+    this.nbpFeedback =
+      this.nbpGetColorFeedbackClasse(this.nbpFeedbackType)
   }
 }

@@ -20,6 +20,10 @@ import {
   NbpPanelTitlePositionClasse,
   NbpButtonSizeClasse,
   NbpButtonStyleClasse,
+  NbpBorderTopClasse,
+  NbpBorderLeftClasse,
+  NbpSizeModalClasse,
+  NbpModalPosition
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -28,6 +32,7 @@ import {
   NbpSize,
   NbpStyle,
   NbpFontSize,
+  NbpBorder
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -47,6 +52,8 @@ export class NbpBaseComponent implements OnInit {
   _ctaType = NbpCtaType;
   _feedbackType = NbpAlertType;
   _alert = NbpAlertType;
+  _border = NbpBorder;
+  _position= NbpModalPosition
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -54,6 +61,8 @@ export class NbpBaseComponent implements OnInit {
   _borderColorClasse = NbpBorderColorClasse;
   _backgroundClasse = NbpBackgroundClasse;
   _borderClasse = NbpBorderClasse;
+  _borderTopClasse = NbpBorderTopClasse;
+  _borderLeftClasse = NbpBorderLeftClasse;
   _textTransformClasse = NbpTextTransformClasse;
   _badgeStyleClasse = NbpBadgeStyleClasse;
   _badgeOutlineStyleClasse = NbpBadgeOutlineStyleClasse;
@@ -67,6 +76,8 @@ export class NbpBaseComponent implements OnInit {
   _cursorClasse = NbpCursorClasse;
   _radioStyleClasse = NbpRadioStyleClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
+  _sizeModalClasse = NbpSizeModalClasse;
+  _positionModalClasse = NbpModalPosition;
 
   nbpColor: string;
   nbpButton: string;
@@ -75,6 +86,10 @@ export class NbpBaseComponent implements OnInit {
   nbpBorder: string;
   nbpTextTransform: string;
   nbpFeedbackColor: string;
+  nbpAlertBoxType: string;
+  nbpAlertBoxIcon: string;
+  nbpAlertBoxColor: string;
+  nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
   nbpPosition = {
@@ -257,67 +272,277 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-  /* Function to get the border classe with input as argument */
-  nbpGetBorderClasse(nbpInput) {
+  /* Function to get the background alert classe with input as argument */
+  nbpGetBackgroundBoxAlertClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._alertType.GENERIC:
+        return this._backgroundClasse.WHITE;
+        break;
+      case this._alertType.POSITIVE:
+        return this._backgroundClasse.MINT_CREAM;
+        break;
+      case this._alertType.PROMOTIONAL:
+        return this._backgroundClasse.EGYPTIAN_BLUE;
+        break;
+      case this._alertType.WARNING:
+        return this._backgroundClasse.FLORAL_WHITE;
+        break;
+      case this._alertType.ERROR:
+        return this._backgroundClasse.MISTY_ROSE;
+        break;
+      default:
+        return this._backgroundClasse.WHITE;
+        break;
+    }
+  }
+
+  /* Function to get the border classe with inputs as arguments */
+  nbpGetBorderClasse(nbpInput, border) {
     switch (nbpInput) {
       case this._style.DEFAULT:
       case this._alertType.GENERIC:
-        return this._borderClasse.DEFAULT;
+        if (border === this._border.BORDER) {
+          return this._borderClasse.DEFAULT;
+        }
+        if (border === this._border.TOP) {
+          return this._borderTopClasse.DEFAULT;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.DEFAULT;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.DEFAULT;
+        }
         break;
       case this._style.WHITE:
-        return this._borderClasse.WHITE;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.WHITE;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.WHITE;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.WHITE;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.WHITE;
+        }
         break;
       case this._style.WHITE_SMOKE:
-        return this._borderClasse.WHITE_SMOKE;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.WHITE_SMOKE;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.WHITE_SMOKE;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.WHITE_SMOKE;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.WHITE_SMOKE;
+        }
         break;
       case this._style.WARM_GRAY_20:
-        return this._borderClasse.WARM_GRAY_20;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.WARM_GRAY_20;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.WARM_GRAY_20;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.WARM_GRAY_20;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.WARM_GRAY_20;
+        }
         break;
       case this._style.NIGHT_RIDER:
-        return this._borderClasse.NIGHT_RIDER;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.NIGHT_RIDER;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.NIGHT_RIDER;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.NIGHT_RIDER;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.NIGHT_RIDER;
+        }
         break;
       case this._style.SLIVER:
-        return this._borderClasse.SLIVER;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.SLIVER;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.SLIVER;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.SLIVER;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.SLIVER;
+        }
         break;
       case this._style.BLACK:
-        return this._borderClasse.BLACK;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.BLACK;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.BLACK;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.BLACK;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.BLACK;
+        }
         break;
       case this._style.PRIMARY:
-        return this._borderClasse.PRIMARY;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.PRIMARY;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.PRIMARY;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.PRIMARY;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.PRIMARY;
+        }
         break;
       case this._style.TOMATO:
-        return this._borderClasse.TOMATO;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.TOMATO;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.TOMATO;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.TOMATO;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.TOMATO;
+        }
         break;
       case this._style.INFO:
       case this._alertType.PROMOTIONAL:
-        return this._borderClasse.INFO;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.INFO;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.INFO;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.INFO;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.INFO;
+        }
         break;
       case this._style.SUCCESS:
       case this._alertType.POSITIVE:
-        return this._borderClasse.SUCCESS;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.SUCCESS;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.SUCCESS;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.SUCCESS;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.SUCCESS;
+        }
         break;
       case this._style.WARNING:
       case this._alertType.WARNING:
-        return this._borderClasse.WARNING;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.WARNING;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.WARNING;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.WARNING;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.WARNING;
+        }
         break;
       case this._style.DANGER:
       case this._alertType.ERROR:
-        return this._borderClasse.DANGER;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.DANGER;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.DANGER;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.DANGER;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.DANGER;
+        }
         break;
       case this._style.EGYPTIAN_BLUE:
-        return this._borderClasse.EGYPTIAN_BLUE;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.EGYPTIAN_BLUE;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.EGYPTIAN_BLUE;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.EGYPTIAN_BLUE;
+        }
         break;
       case this._style.MISTY_ROSE:
-        return this._borderClasse.MISTY_ROSE;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.MISTY_ROSE;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.MISTY_ROSE;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.MISTY_ROSE;
+        }
         break;
       case this._style.MINT_CREAM:
-        return this._borderClasse.MINT_CREAM;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.MINT_CREAM;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.MINT_CREAM;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.MINT_CREAM;
+        }
         break;
       case this._style.FLORAL_WHITE:
-        return this._borderClasse.FLORAL_WHITE;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.FLORAL_WHITE;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.FLORAL_WHITE;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.FLORAL_WHITE;
+        }
         break;
       default:
-        return this._borderClasse.DEFAULT;
+        if (border ===  this._border.BORDER) {
+          return this._borderClasse.DEFAULT;
+        }
+        if (border ===  this._border.TOP) {
+          return this._borderTopClasse.DEFAULT;
+        }
+        if (border ===  this._border.LEFT) {
+          return this._borderLeftClasse.DEFAULT;
+        }
+        if (border ===  this._border.COLOR) {
+          return this._borderColorClasse.DEFAULT;
+        }
         break;
     }
   }
@@ -551,75 +776,37 @@ export class NbpBaseComponent implements OnInit {
     switch (nbpInput) {
       case this._feedbackType.POSITIVE:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS;
+        return (
+          this.nbpFeedbackIcon.SUCCESS +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
       case this._feedbackType.WARNING:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.WARNING);
-        return this.nbpFeedbackIcon.WARNING;
+        return (
+          this.nbpFeedbackIcon.WARNING +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
       case this._feedbackType.ERROR:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._alertType.ERROR);
-        return this.nbpFeedbackIcon.ERROR;
+        return (
+          this.nbpFeedbackIcon.ERROR + this.nbpSeparator + this.nbpFeedbackColor
+        );
         break;
       default:
         this.nbpFeedbackColor = this.nbpGetColorClasse(this._style.SUCCESS);
-        return this.nbpFeedbackIcon.SUCCESS;
+        return (
+          this.nbpFeedbackIcon.SUCCESS +
+          this.nbpSeparator +
+          this.nbpFeedbackColor
+        );
         break;
     }
   }
 
-  /* Function to get the border color classe with input as argument */
-  nbpGetBorderColorClasse(nbpInput) {
-    switch (nbpInput) {
-      case this._style.DEFAULT:
-      case this._alertType.GENERIC:
-        return this._borderColorClasse.DEFAULT;
-        break;
-      case this._style.WHITE:
-        return this._borderColorClasse.WHITE;
-        break;
-      case this._style.WHITE_SMOKE:
-        return this._borderColorClasse.WHITE_SMOKE;
-        break;
-      case this._style.WARM_GRAY_20:
-        return this._borderColorClasse.WARM_GRAY_20;
-        break;
-      case this._style.NIGHT_RIDER:
-        return this._borderColorClasse.NIGHT_RIDER;
-        break;
-      case this._style.SLIVER:
-        return this._borderColorClasse.SLIVER;
-        break;
-      case this._style.BLACK:
-        return this._borderColorClasse.BLACK;
-        break;
-      case this._style.PRIMARY:
-        return this._borderColorClasse.PRIMARY;
-        break;
-      case this._style.TOMATO:
-        return this._borderColorClasse.TOMATO;
-        break;
-      case this._style.INFO:
-      case this._alertType.PROMOTIONAL:
-        return this._borderColorClasse.INFO;
-        break;
-      case this._style.SUCCESS:
-      case this._alertType.POSITIVE:
-        return this._borderColorClasse.SUCCESS;
-        break;
-      case this._style.WARNING:
-      case this._alertType.WARNING:
-        return this._borderColorClasse.WARNING;
-        break;
-      case this._style.DANGER:
-      case this._alertType.ERROR:
-        return this._borderColorClasse.DANGER;
-        break;
-      default:
-        return this._borderColorClasse.DEFAULT;
-        break;
-    }
-  }
 
   /* Function to get the icon classe with input as argument */
   nbpGetIconClasse(nbpInput) {
@@ -710,6 +897,36 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._buttonSizeClasse.SMALL;
+        break;
+    }
+  }
+  nbpGetSizeModalClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._size.SM:
+        return this._sizeModalClasse.SMALL;
+        break;
+      case this._size.MD:
+        return this._sizeModalClasse.MEDIUM;
+        break;
+      case this._size.LG:
+        return this._sizeModalClasse.LARGE;
+        break;
+      default:
+        return this._sizeModalClasse.SMALL;
+        break;
+    }
+  }
+
+  nbpGetnbpModalPosition(nbpInput) {
+    switch (nbpInput) {
+      case this._style.CENTER:
+        return this._positionModalClasse.CENTER;
+        break;
+      case this._style.DEFAULT:
+        return this._positionModalClasse.TOP;
+        break;
+      default:
+        return this._positionModalClasse.TOP;
         break;
     }
   }
