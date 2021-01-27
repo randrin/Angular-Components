@@ -10,6 +10,8 @@ export class NbpPanelTitlePageComponent extends NbpBaseComponent implements OnIn
 
   title1 = 'Panels Title Page';
   title2 = 'Panels Title Page with Header Background';
+  title3 = 'Panel Title with border top color';
+  title4 = 'Panel Title with border left color';
 
   constructor(injector:Injector) {
     super(injector);
