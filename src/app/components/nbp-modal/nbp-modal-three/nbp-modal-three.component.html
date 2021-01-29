@@ -3,10 +3,10 @@
   [nbpButtonSize]="_size.MD"
   [nbpButtonColor]="_style.PRIMARY" 
   [nbpButtonType]="_style.OUTLINE" 
-  data-toggle="modal" data-target="#modalTorusPositionCenterMiddle">
+  data-toggle="modal" [attr.data-target]="'#' + nbpModalName">
 </nbp-button>
 
-<div class="modal fade" id="modalTorusPositionCenterMiddle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" [id]="nbpModalName" tabindex="-1" role="dialog" [attr.data-backdrop]="nbpModalStatic" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" [ngClass]="nbpSizeAndPosition" role="document">
     <div class="modal-content">
       <div class="modal-header">

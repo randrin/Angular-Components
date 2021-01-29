@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
 import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'nbp-modal-one',
@@ -11,6 +12,7 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpModalContent: string; 
   @Input() nbpModalSize: string;
   @Input() nbpModalPosition: string;
+  @Input() nbpModalMode: string;
 
   @Output() nbpOnSave: EventEmitter<any> = new EventEmitter<any>();
   @Output() nbpOnClose: EventEmitter<any> = new EventEmitter<any>();
@@ -18,6 +20,8 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   modalSize: string;
   modalPosition: string
   nbpSizeAndPosition: string;
+  nbpModalName: string;
+  nbpModalStatic : string
 
   constructor(injector:Injector) {
     super(injector);
@@ -28,10 +32,12 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   }
   
   nbpSetUpComponent() {
-    debugger
+    this.nbpModalName = 'a'+ uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
-    this.nbpSizeAndPosition =  this.modalPosition + this.nbpSeparator + this.modalSize
+    this.nbpSizeAndPosition =  this.modalPosition + this.nbpSeparator + this.modalSize ;
+    this.nbpModalStatic = this.nbpGetTypeModal(this.nbpModalMode)
+    console.log('this.nbpModalName one: ', this.nbpModalName)
   }
 
   nbpOnSaved(){

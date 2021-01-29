@@ -23,7 +23,8 @@ import {
   NbpBorderTopClasse,
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
-  NbpModalPosition
+  NbpModalPosition,
+  NbpModalType
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -78,6 +79,7 @@ export class NbpBaseComponent implements OnInit {
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPosition;
+  _modalType = NbpModalType;
 
   nbpColor: string;
   nbpButton: string;
@@ -297,7 +299,7 @@ export class NbpBaseComponent implements OnInit {
   }
 
   /* Function to get the border classe with inputs as arguments */
-  nbpGetBorderClasse(nbpInput, border) {
+  nbpGetBorderClasse (nbpInput, border) {
     switch (nbpInput) {
       case this._style.DEFAULT:
       case this._alertType.GENERIC:
@@ -927,6 +929,20 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._positionModalClasse.TOP;
+        break;
+    }
+  }
+
+  nbpGetTypeModal(nbpInput) {
+    switch (nbpInput) {
+      case 'static':
+        return this._modalType.STATIC;
+        break;
+      case 'no static':
+        return this._modalType.NOSTATIC;
+        break;
+      default:
+        return'';
         break;
     }
   }
