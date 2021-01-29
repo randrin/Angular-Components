@@ -268,10 +268,15 @@ export enum NbpSizeModalClasse {
   SMALL = 'modal-sm',
   MEDIUM = 'modal-md',
   LARGE = 'modal-lg',
-  EXTRALARGE = 'modal-xl'
 }
+
 export enum NbpModalPosition {
   TOP = 'modal-dialog',
   CENTER = 'modal-dialog-centered',
+}
+
+export enum NbpModalType {
+  STATIC = 'static',
+  NOSTATIC = 'noStatic',
 }
 
