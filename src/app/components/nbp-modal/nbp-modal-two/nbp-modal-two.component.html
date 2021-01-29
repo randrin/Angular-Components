@@ -4,10 +4,10 @@
     [nbpButtonSize]="_size.MD"
     [nbpButtonColor]="_style.PRIMARY" 
     [nbpButtonType]="_style.OUTLINE" 
-    data-toggle="modal" data-target="#staticBackdrop">
+    data-toggle="modal" [attr.data-target]="'#' + nbpModalName">
   </nbp-button>
   
-  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" [id]="nbpModalName" [attr.data-backdrop]="nbpModalStatic"  data-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" [ngClass]="nbpSizeAndPosition" role="document">
       <div class="modal-content">
         <div class="modal-header">
