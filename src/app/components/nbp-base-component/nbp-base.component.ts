@@ -23,8 +23,10 @@ import {
   NbpBorderTopClasse,
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
-  NbpModalPosition,
-  NbpModalType
+  NbpModalPositionClasse,
+  NbpModalTypeClasse,
+  // NbpModalScrollableClasse
+
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -33,7 +35,8 @@ import {
   NbpSize,
   NbpStyle,
   NbpFontSize,
-  NbpBorder
+  NbpBorder,
+  NbpModalPosition
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -78,8 +81,9 @@ export class NbpBaseComponent implements OnInit {
   _radioStyleClasse = NbpRadioStyleClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
-  _positionModalClasse = NbpModalPosition;
-  _modalType = NbpModalType;
+  _positionModalClasse = NbpModalPositionClasse;
+  _modalType = NbpModalTypeClasse;
+  // _modalScroll = NbpModalScrollableClasse
 
   nbpColor: string;
   nbpButton: string;
@@ -939,6 +943,19 @@ export class NbpBaseComponent implements OnInit {
         return this._modalType.STATIC;
         break;
       case 'no static':
+        return this._modalType.NOSTATIC;
+        break;
+      default:
+        return'';
+        break;
+    }
+  }
+  nbpGetScrollModal(nbpInput) {
+    switch (nbpInput) {
+      case 'static':
+        return this._modalType.STATIC;
+        break;
+      case 'noStatic':
         return this._modalType.NOSTATIC;
         break;
       default:

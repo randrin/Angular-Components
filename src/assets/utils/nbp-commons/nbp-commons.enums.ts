@@ -96,6 +96,10 @@ export enum NbpPipe {
   UPPERCASE = 'UPPERCASE',
   CONTO = 6
 }
+export enum NbpModalPosition {
+  TOP = 'TOP',
+  CENTER ='CENTER'
+}
 /**
 * Enum per la definizione del canale applicativo
 */
@@ -184,3 +188,5 @@ export declare enum NbpAccordionType {
   OUTER = 1,
   INNER = 2
 }
+
+

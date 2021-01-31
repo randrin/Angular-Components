@@ -270,13 +270,16 @@ export enum NbpSizeModalClasse {
   LARGE = 'modal-lg',
 }
 
-export enum NbpModalPosition {
+export enum NbpModalPositionClasse {
   TOP = 'modal-dialog',
   CENTER = 'modal-dialog-centered',
 }
 
-export enum NbpModalType {
+export enum NbpModalTypeClasse {
   STATIC = 'static',
   NOSTATIC = 'noStatic',
 }
+// export enum NbpModalScrollableClasse {
+//   SCROLL = 'modal-dialog-scrollable',
+// } 
 
