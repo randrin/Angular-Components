@@ -402,6 +402,10 @@ export class Model {
       lunghezzaMax: 10,
     },
     NbpModalComponent: {
+      modalOne: "Modal Top-Static-Scrollable",
+      modalTwo: "Modal Top-Static-NoScrollable",
+      modalThree: "Modal Center-Static-Scrollable",
+      modalFourth: "Modal Center-Static-NoScrollable",
       modal:"modal",
       close:"close",
       save:"Save",
