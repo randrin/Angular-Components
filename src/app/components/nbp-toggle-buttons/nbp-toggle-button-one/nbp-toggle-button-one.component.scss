@@ -1,0 +1,45 @@
+.nbp-toggle-button-one-wrapper {
+  .nbp-toggle-button-one-container {
+    .nbp-toggle-button-checkbox.nbp-toggle-button-switcher {
+      label {
+        padding: 0;
+
+        * {
+          vertical-align: middle;
+        }
+
+        input {
+          display: none;
+
+          &+span {
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+            width: 60px;
+            height: 30px;
+            background: transparent;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            small {
+              position: absolute;
+              display: block;
+              width: 50%;
+              height: 100%;
+              border-radius: 50%;
+              transition: all 0.3s ease-in-out;
+              left: 0;
+            }
+          }
+
+          &:checked+span {
+            small {
+              left: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

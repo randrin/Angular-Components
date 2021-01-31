@@ -5,11 +5,44 @@
     border-color: var(--nbp-success) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-success) !important;
+  }
+}
+
+.nbp-toggle-button-one-success {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-success) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-success {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-success) !important;
+
+      small {
+        background-color: var(--nbp-success) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }
 
@@ -20,11 +53,44 @@
     border-color: var(--nbp-primary) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-primary) !important;
+  }
+}
+
+.nbp-toggle-button-one-primary {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-primary) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-primary {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-primary) !important;
+
+      small {
+        background-color: var(--nbp-primary) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }
 
@@ -35,11 +101,44 @@
     border-color: var(--nbp-info) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-info) !important;
+  }
+}
+
+.nbp-toggle-button-one-info {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-info) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-info {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-info) !important;
+
+      small {
+        background-color: var(--nbp-info) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }
 
@@ -50,11 +149,44 @@
     border-color: var(--nbp-warning) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-warning) !important;
+  }
+}
+
+.nbp-toggle-button-one-warning {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-warning) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-warning {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-warning) !important;
+
+      small {
+        background-color: var(--nbp-warning) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }
 
@@ -65,11 +197,44 @@
     border-color: var(--nbp-tomato) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-tomato) !important;
+  }
+}
+
+.nbp-toggle-button-one-danger {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-danger) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-danger {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-danger) !important;
+
+      small {
+        background-color: var(--nbp-danger) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }
 
@@ -80,10 +245,43 @@
     border-color: var(--nbp-secondary) !important;
     color: var(--nbp-white) !important;
   }
+
   .nbp-checkbox-label.checked {
     font-weight: 600;
     background-color: transparent !important;
     border-color: transparent !important;
     color: var(--nbp-secondary) !important;
+  }
+}
+
+.nbp-toggle-button-one-default {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-secondary) !important;
+
+      small {
+        background-color: var(--nbp-white) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
+  }
+}
+
+.nbp-toggle-button-two-default {
+  input {
+    &:checked+span {
+      background-color: var(--nbp-secondary) !important;
+
+      small {
+        background-color: var(--nbp-secondary) !important;
+      }
+    }
+    &:disabled+span {
+      opacity: 0.4 !important;
+      cursor: no-drop !important;
+    }
   }
 }

@@ -65,6 +65,9 @@ import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-m
 import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpToggleButtonOneComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-one/nbp-toggle-button-one.component';
+import { NbpToggleButtonTwoComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-two/nbp-toggle-button-two.component';
+import { NbpToggleButtonPageComponent } from './pages/composants/nbp-toggle-button-page/nbp-toggle-button-page.component';
 import { NbpPanelTitleThreeComponent } from './components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component';
 import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component';
 
@@ -131,6 +134,9 @@ import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-
     NbpModalThreeComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
+    NbpToggleButtonOneComponent,
+    NbpToggleButtonTwoComponent,
+    NbpToggleButtonPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
   ],
