@@ -14,6 +14,7 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpModalSize: string;
   @Input() nbpModalPosition: string;
   @Input() nbpModalMode: string;
+  @Input() nbpModalScroll: boolean;
 
   @Output() nbpOnSave: EventEmitter<any> = new EventEmitter<any>();
   @Output() nbpOnClose: EventEmitter<any> = new EventEmitter<any>();
@@ -22,7 +23,8 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   modalPosition: string
   nbpSizeAndPosition: string;
   nbpModalName: string;
-  nbpModalStatic : string
+  nbpModalStatic : string;
+  modalTypes: string = 'modal-dialog-scrollable'
 
   constructor(injector:Injector) {
     super(injector);
@@ -36,9 +38,16 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
     this.nbpModalName = 'a'+ uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
-    this.nbpSizeAndPosition =  this.modalPosition + this.nbpSeparator + this.modalSize ;
+    this.nbpModalScrolls;
     this.nbpModalStatic = this.nbpGetTypeModal(this.nbpModalMode)
     console.log('this.nbpModalName three: ', this.nbpModalName)
+  }
+
+  get nbpModalScrolls() {
+    if (this.nbpModalScroll) {
+      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
+    }
+    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize
   }
 
   nbpOnSaved(){
