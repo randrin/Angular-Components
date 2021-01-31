@@ -9,42 +9,53 @@ import * as uuid from 'uuid';
 })
 export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpModalTitle: string;
-  @Input() nbpModalContent: string; 
+  @Input() nbpModalContent: string;
   @Input() nbpModalSize: string;
   @Input() nbpModalPosition: string;
   @Input() nbpModalMode: string;
+  @Input() nbpModalScroll: boolean;
 
   @Output() nbpOnSave: EventEmitter<any> = new EventEmitter<any>();
   @Output() nbpOnClose: EventEmitter<any> = new EventEmitter<any>();
 
   modalSize: string;
   modalPosition: string
+  modalType: string;
   nbpSizeAndPosition: string;
   nbpModalName: string;
-  nbpModalStatic : string
+  nbpModalStatic: string;
+  modalTypes: string = 'modal-dialog-scrollable'
 
-  constructor(injector:Injector) {
+
+  constructor(injector: Injector) {
     super(injector);
   }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.nbpSetUpComponent();
   }
-  
+
   nbpSetUpComponent() {
-    this.nbpModalName = 'a'+ uuid.v4();
+    this.nbpModalName = 'a' + uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
-    this.nbpSizeAndPosition =  this.modalPosition + this.nbpSeparator + this.modalSize ;
+    this.nbpModalScrolls; 
     this.nbpModalStatic = this.nbpGetTypeModal(this.nbpModalMode)
     console.log('this.nbpModalName one: ', this.nbpModalName)
   }
+ 
+  get nbpModalScrolls() {
+    if (this.nbpModalScroll) {
+      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
+    }
+    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize
+  }
 
-  nbpOnSaved(){
+  nbpOnSaved() {
 
   }
 
-  nbpOnClosed(){
+  nbpOnClosed() {
 
   }
 }
