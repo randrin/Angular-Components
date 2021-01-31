@@ -39,7 +39,7 @@ export class NbpModalTwoComponent extends NbpBaseComponent implements OnInit {
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
     this.nbpModalScrolls;
-     this.nbpModalStatic = this.nbpGetTypeModal(this.nbpModalMode)
+    this.nbpModalStatic = this.nbpGetTypeModal(this.nbpModalMode)
     console.log('this.nbpModalName two: ', this.nbpModalName)
   }
 
