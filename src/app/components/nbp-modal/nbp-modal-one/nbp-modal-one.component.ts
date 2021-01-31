@@ -8,6 +8,7 @@ import * as uuid from 'uuid';
   styleUrls: ['./nbp-modal-one.component.scss']
 })
 export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
+  @Input() nbpModalButtonTitle: string;
   @Input() nbpModalTitle: string;
   @Input() nbpModalContent: string;
   @Input() nbpModalSize: string;
