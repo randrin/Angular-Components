@@ -24,9 +24,6 @@ import {
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
   NbpModalPositionClasse,
-  NbpModalTypeClasse,
-  // NbpModalScrollableClasse
-
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -82,8 +79,6 @@ export class NbpBaseComponent implements OnInit {
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
-  _modalType = NbpModalTypeClasse;
-  // _modalScroll = NbpModalScrollableClasse
 
   nbpColor: string;
   nbpButton: string;
@@ -933,33 +928,6 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._positionModalClasse.TOP;
-        break;
-    }
-  }
-
-  nbpGetTypeModal(nbpInput) {
-    switch (nbpInput) {
-      case 'static':
-        return this._modalType.STATIC;
-        break;
-      case 'no static':
-        return this._modalType.NOSTATIC;
-        break;
-      default:
-        return'';
-        break;
-    }
-  }
-  nbpGetScrollModal(nbpInput) {
-    switch (nbpInput) {
-      case 'static':
-        return this._modalType.STATIC;
-        break;
-      case 'noStatic':
-        return this._modalType.NOSTATIC;
-        break;
-      default:
-        return'';
         break;
     }
   }
