@@ -8,4 +8,33 @@
       </div>
     </div>
   </div>
+
+<div class="row">
+  <div class="col-6" *ngIf="nbpWithButtonContinue">
+    <nbp-button
+    (click)="nbpClickContinue()" 
+    [nbpButtonLabel]="'CONTINUA'" 
+    [nbpButtonSize]="_size.MD"
+    [nbpButtonColor]="_style.PRIMARY"
+    [nbpButtonType]="_style.OUTLINE">
+ </nbp-button>
+  </div>
+  <div class="col text-center" *ngIf="nbpWithButtonOk">
+    <nbp-button
+    (click)="nbpClickOk()"
+    [nbpButtonLabel]="'OK'" 
+    [nbpButtonSize]="_size.MD"
+    [nbpButtonColor]="_style.WARNING"
+    [nbpButtonType]="_style.OUTLINE">
+ </nbp-button>
+  </div>
+  <div class="col-3" *ngIf="nbpWithButtonTryAgain">
+    <nbp-button 
+    (click)="nbpClickTryAgain()"
+    [nbpButtonLabel]="'RIPROVA'" 
+    [nbpButtonSize]="_size.MD"
+    [nbpButtonColor]="_style.PRIMARY">
+  </nbp-button>
+  </div>
+</div>
 </div>
