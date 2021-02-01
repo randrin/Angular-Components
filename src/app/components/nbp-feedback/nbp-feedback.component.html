@@ -10,7 +10,7 @@
   </div>
 
 <div class="row">
-  <div class="col-6" *ngIf="nbpWithButtonContinue">
+  <div class="col-6" *ngIf="nbpFeedbackWithButtonContinue">
     <nbp-button
     (click)="nbpClickContinue()" 
     [nbpButtonLabel]="'CONTINUA'" 
@@ -19,7 +19,7 @@
     [nbpButtonType]="_style.OUTLINE">
  </nbp-button>
   </div>
-  <div class="col text-center" *ngIf="nbpWithButtonOk">
+  <div class="col text-center" *ngIf="nbpFeedbackWithButtonOk">
     <nbp-button
     (click)="nbpClickOk()"
     [nbpButtonLabel]="'OK'" 
@@ -28,7 +28,7 @@
     [nbpButtonType]="_style.OUTLINE">
  </nbp-button>
   </div>
-  <div class="col-3" *ngIf="nbpWithButtonTryAgain">
+  <div class="col-3" *ngIf="nbpFeedbackWithButtonTryAgain">
     <nbp-button 
     (click)="nbpClickTryAgain()"
     [nbpButtonLabel]="'RIPROVA'" 
