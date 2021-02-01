@@ -369,7 +369,9 @@ export class Model {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     },
     NbpFeedbackComponent: {
-      title: "Feedback Title",
+      success: "Feedback Success",
+      warning: "Feedback Warning",
+      errore: "Feedback Errore",
       message:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
@@ -402,14 +404,21 @@ export class Model {
       lunghezzaMax: 10,
     },
     NbpModalComponent: {
-      modal:"modal",
+      modalOne: "Modal Top-Static-Scrollable",
+      modalTwo: "Modal Top-Static-NoScrollable",
+      modalThree: "Modal Center-Static-Scrollable",
+      modalFourth: "Modal Center-Static-NoScrollable",
+      modal:"modal", 
       close:"close",
       save:"Save",
       sendMessage:"Send message",
-      modalTitle1: "Modal1",
-      modalTitle2: "Modal2",
-      modalTitle3: "Modal3",
-      content:  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      modalTitle1: "size MD,position CENTER,Type NOSTATIC,Scrollable",
+      modalTitle2: "size MD,position TOP,Type STATIC,No Scrollable",
+      modalTitle3: "size LG,position CENTER,Type STATIC,No Scrollable",
+      modalTitle4: "size LG,position CENTER,Type NOSTATIC,No Scrollable",
+      modalTitle5: "size LG,position TOP,Type NOSTATIC,No Scrollable",
+      content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      content2:  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     NbpIconComponent: {
       icons: [

@@ -3,26 +3,51 @@
     <div class="col">
       <nbp-dividing-line-one
           [nbpTitle]="title"
-          [nbpColorStyle]="_style.DEFAULT"
-        ></nbp-dividing-line-one>
+          [nbpColorStyle]="_style.DEFAULT">
+        </nbp-dividing-line-one>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <nbp-feedback
-        [nbpTitle]="_model.component.NbpFeedbackComponent.title"
-        [nbpMessage]="_model.component.NbpFeedbackComponent.message"
-      ></nbp-feedback>
+        [nbpTitle]="_model.component.NbpFeedbackComponent.success"
+        [nbpMessage]="_model.component.NbpFeedbackComponent.message">
+      </nbp-feedback>
       <nbp-feedback
-        [nbpTitle]="_model.component.NbpFeedbackComponent.title"
+        [nbpTitle]="_model.component.NbpFeedbackComponent.warning"
+        [nbpMessage]="_model.component.NbpFeedbackComponent.message"
+        [nbpFeedbackType]="_alert.WARNING">
+      </nbp-feedback>
+      <nbp-feedback
+        [nbpTitle]="_model.component.NbpFeedbackComponent.errore"
+        [nbpMessage]="_model.component.NbpFeedbackComponent.message"
+        [nbpFeedbackType]="_alert.ERROR">
+      </nbp-feedback>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT">
+        </nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nbp-feedback
+        [nbpTitle]="_model.component.NbpFeedbackComponent.warning"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
         [nbpFeedbackType]="_alert.WARNING"
-      ></nbp-feedback>
+        [nbpFeedbackWithButtonContinue]="true"
+        [nbpFeedbackWithButtonTryAgain]="true">
+      </nbp-feedback>
       <nbp-feedback
-        [nbpTitle]="_model.component.NbpFeedbackComponent.title"
+        [nbpTitle]="_model.component.NbpFeedbackComponent.errore"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
         [nbpFeedbackType]="_alert.ERROR"
-      ></nbp-feedback>
+        [nbpFeedbackWithButtonOk]="true">
+      </nbp-feedback>
     </div>
   </div>
 </div>

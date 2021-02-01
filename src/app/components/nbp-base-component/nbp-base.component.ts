@@ -23,8 +23,7 @@ import {
   NbpBorderTopClasse,
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
-  NbpModalPosition,
-  NbpModalType
+  NbpModalPositionClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -33,7 +32,8 @@ import {
   NbpSize,
   NbpStyle,
   NbpFontSize,
-  NbpBorder
+  NbpBorder,
+  NbpModalPosition
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -78,8 +78,7 @@ export class NbpBaseComponent implements OnInit {
   _radioStyleClasse = NbpRadioStyleClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
-  _positionModalClasse = NbpModalPosition;
-  _modalType = NbpModalType;
+  _positionModalClasse = NbpModalPositionClasse;
 
   nbpColor: string;
   nbpButton: string;
@@ -929,20 +928,6 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._positionModalClasse.TOP;
-        break;
-    }
-  }
-
-  nbpGetTypeModal(nbpInput) {
-    switch (nbpInput) {
-      case 'static':
-        return this._modalType.STATIC;
-        break;
-      case 'no static':
-        return this._modalType.NOSTATIC;
-        break;
-      default:
-        return'';
         break;
     }
   }

@@ -11,7 +11,7 @@ export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpRadioName: string;
   @Input() nbpRadioStyle: string;
   @Input() nbpRadioDisabled: boolean;
-  @Input() nbpRadioChecked: boolean = false;
+  @Input() nbpRadioChecked: boolean;
 
   nbpModel: boolean;
   nbpRadio: string;

@@ -8,40 +8,58 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <nbp-modal-one
+                [nbpModalButtonTitle]="_model.component.NbpModalComponent.modalOne"
                 [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle1"
-                [nbpModalContent]="_model.component.NbpModalComponent.content"
-                [nbpModalSize]="_size.LG"
+                [nbpModalContent]="_model.component.NbpModalComponent.content2"
+                [nbpModalSize]="_size.MD"
                 [nbpModalPosition]="_position.CENTER"
-                [nbpModalMode]="_modalType.STATIC">
+                [nbpStaticModalMode]="false"
+                [nbpModalScroll]="true">
             </nbp-modal-one>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2"> 
             <nbp-modal-one
-                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle1"
-                [nbpModalContent]="_model.component.NbpModalComponent.content"
+                [nbpModalButtonTitle]="_model.component.NbpModalComponent.modalTwo"
+                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle2"
+                [nbpModalContent]="_model.component.NbpModalComponent.content2"
                 [nbpModalSize]="_size.MD"
                 [nbpModalPosition]="_position.TOP"
-                [nbpModalMode]="_modalType.NOSTATIC">
+                [nbpStaticModalMode]="true"
+                [nbpModalScroll]="false">
             </nbp-modal-one>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <nbp-modal-one
-                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle1"
-                [nbpModalContent]="_model.component.NbpModalComponent.content"
-                [nbpModalSize]="_size.SM"
-                [nbpModalPosition]="_position.CENTER"
-                [nbpModalMode]="_modalType.NOSTATIC">
+                [nbpModalButtonTitle]="_model.component.NbpModalComponent.modalThree"
+                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle3"
+                [nbpModalContent]="_model.component.NbpModalComponent.content2"
+                [nbpModalSize]="_size.LG"
+                [nbpModalPosition]="_position.TOP"
+                [nbpStaticModalMode]="true"
+                [nbpModalScroll]="false">
             </nbp-modal-one>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
+            <nbp-modal-one
+                [nbpModalButtonTitle]="_model.component.NbpModalComponent.modalFourth"
+                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle4"
+                [nbpModalContent]="_model.component.NbpModalComponent.content"
+                [nbpModalSize]="_size.LG"
+                [nbpModalPosition]="_position.CENTER"
+                [nbpStaticModalMode]="false"
+                [nbpModalScroll]="true">
+            </nbp-modal-one>
+        </div>
+        <div class="col-md-2">
             <nbp-modal-two
-                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle2"
+                [nbpModalTitle]="_model.component.NbpModalComponent.modalTitle5"
                 [nbpModalContent]="_model.component.NbpModalComponent.content"
                 [nbpModalSize]="_size.LG"
                 [nbpModalPosition]="_position.TOP"
-                [nbpModalMode]="_modalType.STATIC">
+                [nbpStaticModalMode]="true"
+                [nbpModalScroll]="true">
             </nbp-modal-two>
         </div>
     </div>
@@ -66,7 +84,8 @@
             [nbpModalContent]="_model.component.NbpModalComponent.content"
             [nbpModalSize]="_size.LG"
             [nbpModalPosition]="_position.CENTER"
-            [nbpModalMode]="_modalType.STATIC">
+            [nbpStaticModalMode]="false"
+            [nbpModalScroll]="false">
             </nbp-modal-three>
         </div>
     </div>
