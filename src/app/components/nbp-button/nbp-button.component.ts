@@ -13,7 +13,7 @@ export class NbpButtonComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpButtonType: string;
   @Input() nbpButtonForm: string;
   @Input() nbpButtonSize: string;
-  @Input() nbpButtonDisabled: boolean = false;
+  @Input() nbpButtonDisabled: boolean;
 
   constructor(injector: Injector) { super(injector); }
 

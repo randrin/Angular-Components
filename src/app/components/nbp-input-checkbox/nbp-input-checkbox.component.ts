@@ -12,7 +12,7 @@ export class NbpInputCheckboxComponent extends NbpBaseComponent implements OnIni
   @Input() nbpCheckBoxName: string;
   @Input() nbpCheckBoxStyle: string;
   @Input() nbpCheckBoxDisabled: boolean;
-  @Input() nbpCheckBoxChecked: boolean = false;
+  @Input() nbpCheckBoxChecked: boolean;
 
   @Output() nbpCheckBoxModel: EventEmitter<boolean> = new EventEmitter<boolean>();
 

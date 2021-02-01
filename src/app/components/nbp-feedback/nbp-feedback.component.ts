@@ -10,9 +10,9 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTitle: string;
   @Input() nbpMessage: string;
   @Input() nbpFeedbackType: string;
-  @Input() nbpWithButtonOk: boolean;
-  @Input() nbpWithButtonContinue: boolean;
-  @Input() nbpWithButtonTryAgain: boolean;
+  @Input() nbpFeedbackWithButtonOk: boolean;
+  @Input() nbpFeedbackWithButtonContinue: boolean;
+  @Input() nbpFeedbackWithButtonTryAgain: boolean;
 
   nbpFeedback: string;
 
@@ -26,8 +26,7 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpFeedback =
-      this.nbpGetColorFeedbackClasse(this.nbpFeedbackType)
+    this.nbpFeedback = this.nbpGetColorFeedbackClasse(this.nbpFeedbackType)
   }
 
   nbpClickContinue(){
