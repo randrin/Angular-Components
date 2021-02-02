@@ -10,9 +10,9 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTitle: string;
   @Input() nbpMessage: string;
   @Input() nbpFeedbackType: string;
-  @Input() nbpFeedbackWithButtonOk: boolean;
-  @Input() nbpFeedbackWithButtonContinue: boolean;
-  @Input() nbpFeedbackWithButtonTryAgain: boolean;
+  @Input() nbpFeedbackWithButtonContinueAndTryAgain: boolean;
+  @Input() nbpFeedbackWithButtonOk: boolean
+  // @Input() nbpFeedbackWithButtonTryAgain: boolean;
 
   nbpFeedback: string;
 
@@ -22,12 +22,21 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
+    
   }
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpFeedback = this.nbpGetColorFeedbackClasse(this.nbpFeedbackType)
+    this.nbpFeedback = this.nbpGetColorFeedbackClasse(this.nbpFeedbackType);
+    this.nbpSetUpModalButton()
   }
+
+  nbpSetUpModalButton(){
+    if(this.nbpFeedbackWithButtonContinueAndTryAgain == true && this.nbpFeedbackWithButtonOk == true ){
+      this.nbpFeedbackWithButtonOk = false
+    }
+  }
+
 
   nbpClickContinue(){
 
