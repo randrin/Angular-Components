@@ -65,20 +65,23 @@ import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-m
 import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
-import { NbpTooltipComponent } from './components/nbp-tooltip/nbp-tooltip.component';
+import { NbpToggleButtonOneComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-one/nbp-toggle-button-one.component';
+import { NbpToggleButtonTwoComponent } from './components/nbp-toggle-buttons/nbp-toggle-button-two/nbp-toggle-button-two.component';
+import { NbpToggleButtonPageComponent } from './pages/composants/nbp-toggle-button-page/nbp-toggle-button-page.component';
+import { NbpPanelTitleThreeComponent } from './components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component';
+import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component';
+import { NbpComboDropDownListComponent } from './components/nbp-combo-drop-down-list/nbp-combo-drop-down-list.component';
+import { NbpDatePickerComponent } from './components/nbp-date-picker/nbp-date-picker.component';
+import { NbpNotificationHeaderComponent } from './components/nbp-notification-header/nbp-notification-header.component';
+import { NbpTabarComponent } from './components/nbp-tabar/nbp-tabar.component';
+import { NbpUploadFileComponent } from './components/nbp-upload-file/nbp-upload-file.component';
+import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
 import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
 import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
 import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
-import { NbpNotificationHeaderComponent } from './components/nbp-notification-header/nbp-notification-header.component';
-import { NbpComboDropDownListComponent } from './components/nbp-combo-drop-down-list/nbp-combo-drop-down-list.component';
-import { NbpDatePickerComponent } from './components/nbp-date-picker/nbp-date-picker.component';
-import { NbpUploadFileComponent } from './components/nbp-upload-file/nbp-upload-file.component';
-import { NbpTabarComponent } from './components/nbp-tabar/nbp-tabar.component';
-import { NbpFilterFormComponent } from './components/nbp-filter-form/nbp-filter-form.component';
-
 
 @NgModule({
   declarations: [
@@ -143,20 +146,26 @@ import { NbpFilterFormComponent } from './components/nbp-filter-form/nbp-filter-
     NbpModalThreeComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
-    NbpTooltipComponent,
+    NbpToggleButtonOneComponent,
+    NbpToggleButtonTwoComponent,
+    NbpToggleButtonPageComponent,
+    NbpPanelTitleThreeComponent,
+    NbpPanelTitleFourthComponent,
+    NbpComboDropDownListComponent,
+    NbpDatePickerComponent,
+    NbpNotificationHeaderComponent,
+    NbpTabarComponent,
+    NbpUploadFileComponent,
+    NbpTooltipPageComponent,
     NbpNotificationHeaderPageComponent,
     NbpComboDropDownListPageComponent,
     NbpDatePickerPageComponent,
     NbpUploadFilePageComponent,
     NbpTabarPageComponent,
-    NbpFilterFormPageComponent,
-    NbpNotificationHeaderComponent,
-    NbpComboDropDownListComponent,
-    NbpDatePickerComponent,
-    NbpUploadFileComponent,
-    NbpTabarComponent,
-    NbpFilterFormComponent
+    NbpFilterFormPageComponent  
   ],
+
+
   imports: [
     BrowserModule,
     DataTablesModule,
@@ -167,3 +176,4 @@ import { NbpFilterFormComponent } from './components/nbp-filter-form/nbp-filter-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

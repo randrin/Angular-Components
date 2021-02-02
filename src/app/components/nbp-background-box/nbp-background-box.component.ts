@@ -20,7 +20,7 @@ export class NbpBackgroundBoxComponent extends NbpBaseComponent implements OnIni
   nbpColorBox: string;
   nbpTitleBox: string;
 
-  constructor(injector:Injector) {
+  constructor(injector:Injector) { 
     super(injector);
   }
 

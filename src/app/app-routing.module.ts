@@ -23,13 +23,14 @@ import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
 import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
-import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component'
+import { NbpToggleButtonPageComponent } from './pages/composants/nbp-toggle-button-page/nbp-toggle-button-page.component';
+import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
 import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
 import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
-import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
-import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
-import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
+import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
+import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
+import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -57,14 +58,14 @@ const appRoutes: Routes = [
       { path: 'links', component: NbpLinkPageComponent },
       { path: 'boxes', component: NbpBoxPageComponent },
       { path: 'modals', component: NbpModalPageComponent },
+      { path: 'toggle-buttons', component: NbpToggleButtonPageComponent },
       { path: 'tooltips', component: NbpTooltipPageComponent },
+      { path: 'notification-Header', component: NbpNotificationHeaderPageComponent },
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
-      { path: 'filter-Form', component: NbpFilterFormPageComponent },
-      { path: 'notification-Header', component: NbpNotificationHeaderPageComponent },
-      { path: 'tabar', component: NbpTabarPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
-      
+      { path: 'tabar', component: NbpTabarPageComponent },
+      { path: 'filter-Form', component: NbpFilterFormPageComponent },
     ]
   },
   { path: 'examples', component: ExamplesComponent },
