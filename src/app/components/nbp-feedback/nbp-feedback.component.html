@@ -13,7 +13,7 @@
   <div class="col-6" *ngIf="nbpFeedbackWithButtonContinueAndTryAgain">
     <nbp-button
     (click)="nbpClickContinue()" 
-    [nbpButtonLabel]="'CONTINUA'" 
+    [nbpButtonLabel]="'CONTINUE'" 
     [nbpButtonSize]="_size.MD"
     [nbpButtonColor]="_style.PRIMARY"
     [nbpButtonType]="_style.OUTLINE">
@@ -31,7 +31,7 @@
   <div class="col-3" *ngIf="nbpFeedbackWithButtonContinueAndTryAgain">
     <nbp-button 
     (click)="nbpClickTryAgain()"
-    [nbpButtonLabel]="'RIPROVA'" 
+    [nbpButtonLabel]="'TRY AGAIN'" 
     [nbpButtonSize]="_size.MD"
     [nbpButtonColor]="_style.PRIMARY">
   </nbp-button>
