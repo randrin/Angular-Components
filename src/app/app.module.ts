@@ -65,6 +65,20 @@ import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-m
 import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
+import { NbpTooltipComponent } from './components/nbp-tooltip/nbp-tooltip.component';
+import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
+import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
+import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
+import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
+import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
+import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
+import { NbpNotificationHeaderComponent } from './components/nbp-notification-header/nbp-notification-header.component';
+import { NbpComboDropDownListComponent } from './components/nbp-combo-drop-down-list/nbp-combo-drop-down-list.component';
+import { NbpDatePickerComponent } from './components/nbp-date-picker/nbp-date-picker.component';
+import { NbpUploadFileComponent } from './components/nbp-upload-file/nbp-upload-file.component';
+import { NbpTabarComponent } from './components/nbp-tabar/nbp-tabar.component';
+import { NbpFilterFormComponent } from './components/nbp-filter-form/nbp-filter-form.component';
+
 
 @NgModule({
   declarations: [
@@ -129,6 +143,19 @@ import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert
     NbpModalThreeComponent,
     NbpAlertBoxFourthComponent,
     NbpAlertBoxFiveComponent,
+    NbpTooltipComponent,
+    NbpNotificationHeaderPageComponent,
+    NbpComboDropDownListPageComponent,
+    NbpDatePickerPageComponent,
+    NbpUploadFilePageComponent,
+    NbpTabarPageComponent,
+    NbpFilterFormPageComponent,
+    NbpNotificationHeaderComponent,
+    NbpComboDropDownListComponent,
+    NbpDatePickerComponent,
+    NbpUploadFileComponent,
+    NbpTabarComponent,
+    NbpFilterFormComponent
   ],
   imports: [
     BrowserModule,
