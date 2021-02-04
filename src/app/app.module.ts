@@ -82,6 +82,7 @@ import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-p
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
 import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
+import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-panel-title-five/nbp-panel-title-five.component';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,8 @@ import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-p
     NbpDatePickerPageComponent,
     NbpUploadFilePageComponent,
     NbpTabarPageComponent,
-    NbpFilterFormPageComponent  
+    NbpFilterFormPageComponent,
+    NbpPanelTitleFiveComponent  
   ],
 
 

@@ -11,9 +11,6 @@ export class NbpPanelTitleTwoComponent extends NbpBaseComponent implements OnIni
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
 
-  nbpTitle: string;
-  nbpBackground: string;
-
   constructor(injector: Injector) {
     super(injector);
   }
