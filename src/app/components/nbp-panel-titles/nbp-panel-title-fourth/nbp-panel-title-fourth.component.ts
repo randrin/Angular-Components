@@ -10,8 +10,6 @@ export class NbpPanelTitleFourthComponent extends NbpBaseComponent implements On
 
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
-
-  nbpTitle: string;
   
   constructor(injector:Injector) { 
     super(injector)
