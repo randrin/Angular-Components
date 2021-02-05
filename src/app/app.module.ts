@@ -38,7 +38,7 @@ import { NbpSortDirective } from './directive/nbp-sort.directive';
 import { DataTablesModule } from 'angular-datatables';
 import { NbpBreadcrumdPageComponent } from './pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component';
 import { NbpTableTwoComponent } from './components/nbp-tables/nbp-table-two/nbp-table-two.component';
-import { NbpBadgeComponent } from './components/nbp-badge/nbp-badge.component';
+import { NbpBadgeOneComponent } from './components/nbp-badges/nbp-badge-one/nbp-badge-one.component';
 import { NbpIconComponent } from './components/nbp-icon/nbp-icon.component';
 import { NbpIconPageComponent } from './pages/composants/nbp-icon-page/nbp-icon-page.component';
 import { NbpBadgePageComponent } from './pages/composants/nbp-badge-page/nbp-badge-page.component';
@@ -83,6 +83,7 @@ import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-p
 import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-panel-title-five/nbp-panel-title-five.component';
+import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-badge-two.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +122,7 @@ import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-pa
     NbpSortDirective,
     NbpBreadcrumdPageComponent,
     NbpTableTwoComponent,
-    NbpBadgeComponent,
+    NbpBadgeOneComponent,
     NbpIconComponent,
     NbpIconPageComponent,
     NbpBadgePageComponent,
@@ -164,7 +165,8 @@ import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-pa
     NbpUploadFilePageComponent,
     NbpTabarPageComponent,
     NbpFilterFormPageComponent,
-    NbpPanelTitleFiveComponent  
+    NbpPanelTitleFiveComponent,
+    NbpBadgeTwoComponent  
   ],
 
 

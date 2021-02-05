@@ -73,7 +73,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, {
-    useHash: true
+    useHash: false,
+    onSameUrlNavigation: 'reload'
   })],
   exports: [RouterModule]
 })
