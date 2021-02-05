@@ -21,7 +21,7 @@ import { NbpTextareaPageComponent } from './pages/composants/nbp-textarea-page/n
 import { NbpTypographyPageComponent } from './pages/composants/nbp-typography-page/nbp-typography-page.component';
 import { ExamplesComponent } from './pages/examples/examples.component';
 import { HomeComponent } from './pages/home/home.component';
-import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpCardPageComponent } from './pages/composants/nbp-card-page/nbp-card-page.component';
 import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
 import { NbpInputSwitchPageComponent } from './pages/composants/nbp-input-switch-page/nbp-input-switch-page.component';
 import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
@@ -56,7 +56,7 @@ const appRoutes: Routes = [
       { path: 'typographies', component: NbpTypographyPageComponent },
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
-      { path: 'boxes', component: NbpBoxPageComponent },
+      { path: 'cards', component: NbpCardPageComponent },
       { path: 'modals', component: NbpModalPageComponent },
       { path: 'input-switchs', component: NbpInputSwitchPageComponent },
       { path: 'tooltips', component: NbpTooltipPageComponent },

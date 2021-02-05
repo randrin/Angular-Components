@@ -1,0 +1,36 @@
+<div class="nbp-card-one-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col nbp-card-content">
+        <div class="nbp-card-header h2 nbp-color-default">{{ nbpCardTitle }}</div>
+        <div class="nbp-card-body nbp-p2">
+          {{ getNbpCardDescription() }}
+        </div>
+        <div class="nbp-card-footer">
+          <nbp-button
+            *ngIf="nbpCardCta === _ctaType.BUTTON"
+            [nbpButtonLabel]="nbpCardTitleCta"
+            [nbpButtonColor]="nbpCardTypeCta"
+            [nbpButtonForm]="_style.ROUNDED"
+          ></nbp-button>
+          <nbp-deep-link
+            *ngIf="nbpCardCta === _ctaType.DEEP"
+            [nbpDeepLinkStyle]="nbpCardTypeCta"
+            [nbpDeepLinkName]="nbpCardTitleCta"
+            [nbpDeepLinkTextTransform]="_pipe.UPPERCASE"
+            [nbpDeepLinkRedirection]="nbpCardCtaRedirection"
+            [nbpDeepLinkTarget]="nbpCardCtaTarget"
+          ></nbp-deep-link>
+          <nbp-arrow-link
+            *ngIf="nbpCardCta === _ctaType.ARROW"
+            [nbpArrowLinkStyle]="nbpCardTypeCta"
+            [nbpArrowLinkName]="nbpCardTitleCta"
+            [nbpArrowLinkTextTransform]="_pipe.UPPERCASE"
+            [nbpArrowLinkRedirection]="nbpCardCtaRedirection"
+            [nbpArrowLinkTarget]="nbpCardCtaTarget"
+          ></nbp-arrow-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

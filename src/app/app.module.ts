@@ -57,8 +57,8 @@ import { NbpPanelTitleTwoComponent } from './components/nbp-panel-titles/nbp-pan
 import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
 import { NbpCookieOneComponent } from './components/nbp-cookies/nbp-cookie-one.component';
 import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component';
-import { NbpBoxOneComponent } from './components/nbp-boxes/nbp-box-one/nbp-box-one.component';
-import { NbpBoxPageComponent } from './pages/composants/nbp-box-page/nbp-box-page.component';
+import { NbpCardOneComponent } from './components/nbp-cards/nbp-card-one/nbp-card-one.component';
+import { NbpCardPageComponent } from './pages/composants/nbp-card-page/nbp-card-page.component';
 import { NbpModalOneComponent } from './components/nbp-modal/nbp-modal-one/nbp-modal-one.component';
 import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
 import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-modal-two.component';
@@ -140,8 +140,8 @@ import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-
     NbpPanelTitleTwoComponent,
     NbpCookieOneComponent,
     NbpDividingLineTwoComponent,
-    NbpBoxOneComponent,
-    NbpBoxPageComponent,
+    NbpCardOneComponent,
+    NbpCardPageComponent,
     NbpModalPageComponent,
     NbpModalOneComponent,
     NbpModalTwoComponent,

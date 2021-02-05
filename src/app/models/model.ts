@@ -26,8 +26,8 @@ export class Model {
         success: "success-two",
       },
     },
-    NbpBoxComponent: {
-      title: "Box Title 1",
+    NbpCardComponent: {
+      title: "Card Title 1",
       description:
         "Si vous poursuivez la navigation, nous utiliserons les cookies qui amélioreront les performances de notre site et personnaliseront votre expérience. Si vous acceptez, nous utiliserons également les cookies pour personnaliser les publicités.",
       titleCta1: "Add money",
