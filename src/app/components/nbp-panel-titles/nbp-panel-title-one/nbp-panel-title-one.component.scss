@@ -4,6 +4,7 @@
   border-width: 1px;
   border-style: solid;
   position: relative;
+
   .nbp-panel-title-header {
     text-align: center;
     color: var(--nbp-white) !important;
@@ -13,5 +14,10 @@
     position: relative;
     top: -32px;
     max-width: calc(100% - 30px);
+  }
+
+  .nbp-panel-title-body {
+    padding: 0 0 1rem;
+    text-align: justify;
   }
 }

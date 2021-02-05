@@ -21,7 +21,7 @@
       font-size: 1.6rem;
       line-height: 2rem;
       border-bottom: 1px solid var(--nbp-silver) !important;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 2rem 1.5rem 0;
       font-weight: 700;
       
       .nbp-panel-title-header-icon {
@@ -34,7 +34,8 @@
     }
   
     .nbp-panel-title-body {
-      padding: 1.5rem 2rem 1.5rem 6.5rem;
+      padding: 1.5rem 2rem 1.5rem 5rem;
+      text-align: justify;
     }
   }
   
