@@ -58,11 +58,11 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   }
   
 
-  nbpOnSaved(){
-
+  nbpHandleOnSaved() {
+    this.nbpOnSave.emit();
   }
 
-  nbpOnClosed(){
-
+  nbpHandleOnClosed() {
+    this.nbpOnClose.emit();
   }
 }

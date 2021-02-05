@@ -59,11 +59,11 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
     return this.nbpModalStatic = 'undefined'
   }
 
-  nbpOnSaved() {
-
+  nbpHandleOnSaved() {
+    this.nbpOnSave.emit();
   }
 
-  nbpOnClosed() {
-
+  nbpHandleOnClosed() {
+    this.nbpOnClose.emit();
   }
 }
