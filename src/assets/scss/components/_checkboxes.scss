@@ -14,7 +14,7 @@
   }
 }
 
-.nbp-toggle-button-one-success {
+.nbp-input-switch-one-success {
   input {
     &:checked+span {
       background-color: var(--nbp-success) !important;
@@ -30,7 +30,7 @@
   }
 }
 
-.nbp-toggle-button-two-success {
+.nbp-input-switch-two-success {
   input {
     &:checked+span {
       background-color: var(--nbp-success) !important;
@@ -62,7 +62,7 @@
   }
 }
 
-.nbp-toggle-button-one-primary {
+.nbp-input-switch-one-primary {
   input {
     &:checked+span {
       background-color: var(--nbp-primary) !important;
@@ -78,7 +78,7 @@
   }
 }
 
-.nbp-toggle-button-two-primary {
+.nbp-input-switch-two-primary {
   input {
     &:checked+span {
       background-color: var(--nbp-primary) !important;
@@ -110,7 +110,7 @@
   }
 }
 
-.nbp-toggle-button-one-info {
+.nbp-input-switch-one-info {
   input {
     &:checked+span {
       background-color: var(--nbp-info) !important;
@@ -126,7 +126,7 @@
   }
 }
 
-.nbp-toggle-button-two-info {
+.nbp-input-switch-two-info {
   input {
     &:checked+span {
       background-color: var(--nbp-info) !important;
@@ -158,7 +158,7 @@
   }
 }
 
-.nbp-toggle-button-one-warning {
+.nbp-input-switch-one-warning {
   input {
     &:checked+span {
       background-color: var(--nbp-warning) !important;
@@ -174,7 +174,7 @@
   }
 }
 
-.nbp-toggle-button-two-warning {
+.nbp-input-switch-two-warning {
   input {
     &:checked+span {
       background-color: var(--nbp-warning) !important;
@@ -206,7 +206,7 @@
   }
 }
 
-.nbp-toggle-button-one-danger {
+.nbp-input-switch-one-danger {
   input {
     &:checked+span {
       background-color: var(--nbp-danger) !important;
@@ -222,7 +222,7 @@
   }
 }
 
-.nbp-toggle-button-two-danger {
+.nbp-input-switch-two-danger {
   input {
     &:checked+span {
       background-color: var(--nbp-danger) !important;
@@ -254,7 +254,7 @@
   }
 }
 
-.nbp-toggle-button-one-default {
+.nbp-input-switch-one-default {
   input {
     &:checked+span {
       background-color: var(--nbp-secondary) !important;
@@ -270,7 +270,7 @@
   }
 }
 
-.nbp-toggle-button-two-default {
+.nbp-input-switch-two-default {
   input {
     &:checked+span {
       background-color: var(--nbp-secondary) !important;

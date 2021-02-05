@@ -1,0 +1,144 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title1"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.primary
+        "
+        [nbpInputSwitchType]="_style.PRIMARY"
+        [nbpInputSwitchDisabled]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.success
+        "
+        [nbpInputSwitchType]="_style.SUCCESS"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.default
+        "
+        [nbpInputSwitchType]="_style.DEFAULT"
+        [nbpInputSwitchChecked]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.danger
+        "
+        [nbpInputSwitchType]="_style.DANGER"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.warning
+        "
+        [nbpInputSwitchType]="_style.WARNING"
+        [nbpInputSwitchChecked]="true"
+        [nbpInputSwitchDisabled]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-one
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.one.info
+        "
+        [nbpInputSwitchType]="_style.INFO"
+        [nbpInputSwitchChecked]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-one>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title2"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.primary
+        "
+        [nbpInputSwitchType]="_style.PRIMARY"
+        [nbpInputSwitchDisabled]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.success
+        "
+        [nbpInputSwitchType]="_style.SUCCESS"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.default
+        "
+        [nbpInputSwitchType]="_style.DEFAULT"
+        [nbpInputSwitchChecked]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.danger
+        "
+        [nbpInputSwitchType]="_style.DANGER"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.warning
+        "
+        [nbpInputSwitchType]="_style.WARNING"
+        [nbpInputSwitchChecked]="true"
+        [nbpInputSwitchDisabled]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-two
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.two.info
+        "
+        [nbpInputSwitchType]="_style.INFO"
+        [nbpInputSwitchChecked]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-two>
+    </div>
+  </div>
+</div>
