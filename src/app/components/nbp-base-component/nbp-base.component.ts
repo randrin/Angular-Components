@@ -80,10 +80,15 @@ export class NbpBaseComponent implements OnInit {
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
 
+  nbpModel: string = "";
   nbpColor: string;
   nbpButton: string;
   nbpBadge: string;
   nbpBackground: string;
+  nbpTextarea: string;
+  nbpTextareaDefault = {
+    rows: 8,
+  };
   nbpBorder: string;
   nbpTextTransform: string;
   nbpFeedbackColor: string;
