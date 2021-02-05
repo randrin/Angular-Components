@@ -16,7 +16,7 @@ export class NbpInputCheckboxComponent extends NbpBaseComponent implements OnIni
 
   @Output() nbpCheckBoxModel: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  nbpModel: boolean;
+  nbpCheckBoxOutput: boolean;
   nbpCheckBoxInput: string;
   nbpCheckBox: string;
   nbpCheckBoxIcon: string;
@@ -42,6 +42,6 @@ export class NbpInputCheckboxComponent extends NbpBaseComponent implements OnIni
 
   nbpCheckBoxClick(event) {
     console.log('nbpCheckBoxClick: ', event)
-    this.nbpCheckBoxModel.emit(this.nbpModel);
+    this.nbpCheckBoxModel.emit(this.nbpCheckBoxOutput);
   }
 }
