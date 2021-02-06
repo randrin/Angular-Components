@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Injector, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
 import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
   templateUrl: './nbp-input-text.component.html',
   styleUrls: ['./nbp-input-text.component.scss']
 })
-export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, OnDestroy, OnChanges {
+export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   @Input() nbpInputLabel: string;
   @Input() nbpInputLabelRequired: boolean;
@@ -35,22 +35,8 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
     super(injector);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    // console.log('ngOnChanges: ', changes.nbpInputValue.currentValue);
-    if (this.nbpInputDisabled) {
-      this.nbpModel = this.nbpInputValue.length ? this.nbpInputValue : '';
-    }
-
-  }
-
   ngOnInit(): void {
     this.nbpSetUpComponent();
-  }
-
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy');
-
-    this.nbpModel = '';
   }
 
   // Functions
@@ -73,7 +59,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
   }
 
   nbpInputKeyUp() {
-    console.log('nbpInputKeyUp')
     if (this.nbpInputRequired) {
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR): '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
@@ -85,26 +70,22 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit, 
   }
 
   nbpInputBlur() {
-    console.log('nbpInputBlur')
   }
 
   nbpInputFocusOut() {
-    console.log('nbpInputFocusOut')
     if (this.nbpInputRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR) : '';
       this.nbpGetClasses();
     }
-    this.nbpIsDigitText = false;
+    // this.nbpIsDigitText = false;
   }
 
   nbpInputFocus() {
-    console.log('nbpInputFocus')
     this.nbpIsDigitText = (this.nbpModel.length === 0) ? false : true;
   }
 
   nbpInputOnClean() {
-    console.log('nbpInputOnClean')
     if (this.nbpModel.length !== 0) {
       this.nbpModel = '';
       this.nbpIsDigitText = false;
