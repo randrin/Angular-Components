@@ -390,6 +390,18 @@ export class Model {
       icon1: "fa fa-search",
       icon2: "fa fa-user",
     },
+    NbpInputPasswordComponent: {
+      label1: "Password",
+      label2: "Confirm Password",
+      name: "password",
+      to:"Recipient",
+      value: "Mario Rossi",
+      required: "true",
+      requiredMessage: "The password is required",
+      placeholder: "Insert your password",
+      hidePassword: "fa fa-lock",
+      showPassword: "fa fa-unlock"
+    },
     NbpTextareaComponent: {
       label1: "Description First Name with limit = 10",
       label2: "Description Last Name readonly",
@@ -399,9 +411,9 @@ export class Model {
       name: "description",
       required: "true",
       requiredMessage: "The description name is required",
-      lunghezzaMaxSup: "You have superate the length required",
+      maxLengthMessage: "You have superate the length required",
       placeholder: "Insert the description name",
-      lunghezzaMax: 10,
+      maxLength: 10,
     },
     NbpModalComponent: {
       modalOne: "Modal Top-Static-Scrollable",

@@ -108,7 +108,13 @@ export class NbpBaseComponent implements OnInit {
     ERROR: "fa fa-frown",
   };
   nbpInputDefault = {
-    type: "text",
+    text: "text",
+    password: "password",
+    clean: 'fa fa-times-circle'
+  };
+  nbpInputPasswordIcon = {
+    SHOW: "fa fa-unlock",
+    HIDE: "fa fa-lock"
   };
   nbpTypeInput = {
     ROUNDED: "nbp-rounded",

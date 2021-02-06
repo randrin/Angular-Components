@@ -2,11 +2,11 @@ import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angul
 import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'nbp-input-text',
-  templateUrl: './nbp-input-text.component.html',
-  styleUrls: ['./nbp-input-text.component.scss']
+  selector: 'nbp-input-password',
+  templateUrl: './nbp-input-password.component.html',
+  styleUrls: ['./nbp-input-password.component.scss']
 })
-export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
+export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnInit  {
 
   @Input() nbpInputLabel: string;
   @Input() nbpInputLabelRequired: boolean;
@@ -22,13 +22,14 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
   @Input() nbpInputErrorMessage: string;
 
   @Output() nbpInputModel: EventEmitter<string> = new EventEmitter<string>();
-
+  
   nbpModel: string = '';
   nbpInput: string;
   nbpErrorBorder: string = '';
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
   nbpIsDigitText: boolean = false;
+  nbpOnShowHideIcon: boolean = true;
 
   constructor(injector: Injector) {
     super(injector);
@@ -40,7 +41,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.text : this.nbpInputType;
+    this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.password : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpGetClasses();
   }
@@ -77,7 +78,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR) : '';
       this.nbpGetClasses();
     }
-    // this.nbpIsDigitText = false;
   }
 
   nbpInputFocus() {
@@ -93,6 +93,16 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
         this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR);
         this.nbpErrorMessage = true;
       }
+    }
+  }
+
+  nbpInputOnShowHide() {
+    if(this.nbpInputType === this.nbpInputDefault.password) {
+      this.nbpInputType = this.nbpInputDefault.text;
+      this.nbpInputIcon = this.nbpInputPasswordIcon.SHOW;
+    } else {
+      this.nbpInputType = this.nbpInputDefault.password;
+      this.nbpInputIcon = this.nbpInputPasswordIcon.HIDE;
     }
   }
 }

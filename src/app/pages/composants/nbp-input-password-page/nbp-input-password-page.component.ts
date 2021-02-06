@@ -2,13 +2,13 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'nbp-input-text-page',
-  templateUrl: './nbp-input-text-page.component.html',
-  styleUrls: ['./nbp-input-text-page.component.scss']
+  selector: 'nbp-input-password-page',
+  templateUrl: './nbp-input-password-page.component.html',
+  styleUrls: ['./nbp-input-password-page.component.scss']
 })
-export class NbpInputTextPageComponent extends NbpBaseComponent implements OnInit {
+export class NbpInputPasswordPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'Input Text Page';
+  title = 'Input Password Page';
 
   constructor(injector:Injector) {
     super(injector);
