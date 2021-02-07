@@ -25,4 +25,17 @@
       border-radius: 0px 0px 0px 8px; 
     }
   }
-  
+
+  .nbp-panel-title-header {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--nbp-silver) !important;
+    padding: 1.5rem 2rem;
+    font-weight: 700;
+    color: var(--nbp-black) !important;
+  }
+
+  .nbp-panel-title-body {
+    padding: 1.5rem 2rem;
+  }
+

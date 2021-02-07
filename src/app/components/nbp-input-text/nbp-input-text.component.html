@@ -17,8 +17,8 @@
         [placeholder]="nbpInputPlaceholder" 
         [disabled]="nbpInputDisabled"
         [required]="nbpInputRequired" />
-      <i class="nbp-input-text-icon" [ngClass]="nbpInputIcon" *ngIf="!nbpIsDigitText && nbpInputIconRequired"></i>
-      <i class="nbp-input-text-clean-icon" [ngClass]="nbpCleanInput" *ngIf="nbpIsDigitText"
+      <i class="nbp-input-text-icon" [ngClass]="nbpInputIcon" *ngIf="!nbpIsDigitText"></i>
+      <i class="nbp-input-text-clean-icon" [ngClass]="nbpInputDefault.clean" *ngIf="nbpIsDigitText"
         (click)="nbpInputOnClean()"></i>
     </div>
     <div class="nbp-input-text-error-message" *ngIf="nbpErrorMessage">

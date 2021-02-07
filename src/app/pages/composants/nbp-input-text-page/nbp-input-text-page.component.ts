@@ -10,8 +10,6 @@ export class NbpInputTextPageComponent extends NbpBaseComponent implements OnIni
 
   title = 'Input Text Page';
 
-  model: string;
-
   constructor(injector:Injector) {
     super(injector);
   }
@@ -19,10 +17,9 @@ export class NbpInputTextPageComponent extends NbpBaseComponent implements OnIni
   ngOnInit(): void {
   }
 
-
   // Functions
   nbpInputModel(event) {
-    this.model = event;
+    this.nbpModel = event;
   }
 
 }

@@ -2,7 +2,7 @@ import { Message } from "@angular/compiler/src/i18n/i18n_ast";
 
 export class Model {
   component = {
-    NbpToggleButtonOneComponent: {
+    NbpInputSwitchOneComponent: {
       one: {
         default: "default-one",
         info: "info-one",
@@ -26,8 +26,8 @@ export class Model {
         success: "success-two",
       },
     },
-    NbpBoxComponent: {
-      title: "Box Title 1",
+    NbpCardComponent: {
+      title: "Card Title 1",
       description:
         "Si vous poursuivez la navigation, nous utiliserons les cookies qui amélioreront les performances de notre site et personnaliseront votre expérience. Si vous acceptez, nous utiliserons également les cookies pour personnaliser les publicités.",
       titleCta1: "Add money",
@@ -369,7 +369,9 @@ export class Model {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     },
     NbpFeedbackComponent: {
-      title: "Feedback Title",
+      success: "Feedback Success",
+      warning: "Feedback Warning",
+      errore: "Feedback Errore",
       message:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
@@ -388,6 +390,18 @@ export class Model {
       icon1: "fa fa-search",
       icon2: "fa fa-user",
     },
+    NbpInputPasswordComponent: {
+      label1: "Password",
+      label2: "Confirm Password",
+      name: "password",
+      to:"Recipient",
+      value: "Mario Rossi",
+      required: "true",
+      requiredMessage: "The password is required",
+      placeholder: "Insert your password",
+      hidePassword: "fa fa-lock",
+      showPassword: "fa fa-unlock"
+    },
     NbpTextareaComponent: {
       label1: "Description First Name with limit = 10",
       label2: "Description Last Name readonly",
@@ -397,9 +411,9 @@ export class Model {
       name: "description",
       required: "true",
       requiredMessage: "The description name is required",
-      lunghezzaMaxSup: "You have superate the length required",
+      maxLengthMessage: "You have superate the length required",
       placeholder: "Insert the description name",
-      lunghezzaMax: 10,
+      maxLength: 10,
     },
     NbpModalComponent: {
       modalOne: "Modal Top-Static-Scrollable",

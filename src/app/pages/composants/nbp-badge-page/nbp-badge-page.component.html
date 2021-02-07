@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
         <div *ngIf="badge.icon">
-          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge>
+          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-one>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
         <div *ngIf="!badge.icon">
-          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge>
+          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-one>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
         <div *ngIf="badge.icon && badge.type">
-          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge>
+          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
         </div>
       </div>
     </div>
@@ -44,7 +44,55 @@
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
         <div *ngIf="!badge.icon && badge.type">
-          <nbp-badge [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge>
+          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title5" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="badge.icon">
+          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-two>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title6" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="!badge.icon">
+          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-two>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title7" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="badge.icon && badge.type">
+          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title8" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
+        <div *ngIf="!badge.icon && badge.type">
+          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
         </div>
       </div>
     </div>

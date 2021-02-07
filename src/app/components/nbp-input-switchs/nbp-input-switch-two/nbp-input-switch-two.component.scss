@@ -1,0 +1,47 @@
+.nbp-input-switch-two-wrapper {
+    .nbp-input-switch-two-container {
+      .nbp-input-switch-checkbox.nbp-input-switch-switcher {
+        label {
+          padding: 0;
+  
+          * {
+            vertical-align: middle;
+          }
+  
+          input {
+            display: none;
+  
+            &+span {
+              position: relative;
+              display: inline-block;
+              margin-right: 10px;
+              width: 60px;
+              height: 15px;
+              background: transparent;
+              border-radius: 50px;
+              transition: all 0.3s ease-in-out;
+              cursor: pointer;
+  
+              small {
+                position: absolute;
+                display: block;
+                width: 50%;
+                height: 30px;
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+                left: -1px;
+                top: -8px;
+              }
+            }
+  
+            &:checked+span {
+              small {
+                left: 55%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

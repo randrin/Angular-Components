@@ -1,0 +1,24 @@
+.nbp-card-one-wrapper {
+  .nbp-card-content {
+    background-color: var(--nbp-white) !important;
+    border: 1px solid var(--nbp-sliver) !important;
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+    color: var(--nbp-night-rider) !important;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    min-height: 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+
+    .nbp-card-body {
+      text-transform: inherit;
+    }
+
+    .nbp-card-footer {
+      padding: 1.5rem 0 0;
+    }
+  }
+}
