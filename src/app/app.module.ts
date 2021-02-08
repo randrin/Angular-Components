@@ -86,6 +86,8 @@ import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-pa
 import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-badge-two.component';
 import { NbpInputPasswordComponent } from './components/nbp-input-password/nbp-input-password.component';
 import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
+import { NbpDividingLineThreeComponent } from './components/nbp-dividing-lines/nbp-dividing-line-three/nbp-dividing-line-three.component';
+import { NbpDividingLineFourthComponent } from './components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component';
 
 @NgModule({
   declarations: [
@@ -170,7 +172,9 @@ import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-pass
     NbpPanelTitleFiveComponent,
     NbpBadgeTwoComponent,
     NbpInputPasswordComponent,
-    NbpInputPasswordPageComponent  
+    NbpInputPasswordPageComponent,
+    NbpDividingLineThreeComponent,
+    NbpDividingLineFourthComponent  
   ],
 
 

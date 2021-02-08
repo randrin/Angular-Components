@@ -340,7 +340,9 @@ export class Model {
       cta: "My Profil",
     },
     NbpDividingLineComponent: {
-      nbpTitle: "Dividing Line Composant",
+      nbpTitleCenter: "Dividing Line Text Center",
+      nbpTitleLeft: "Dividing Line Text Left",
+      nbpTitleRight: "Dividing Line Text Right",
       nbpTitleCtaReadOnly: {
         title: "Dividing Line Composant with Cta read only",
         cta: {
