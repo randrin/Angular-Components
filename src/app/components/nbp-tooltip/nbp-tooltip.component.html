@@ -1,12 +1,36 @@
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-    Tooltip on top
-  </button>
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-    Tooltip on right
-  </button>
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-    Tooltip on bottom
-  </button>
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-    Tooltip on left
-  </button>
+<div class="nbp-tooltip-wrapper">
+  <div *ngIf="nbpTooltipButton">
+    <button class="btn btn-secondary" 
+      [tooltip]="HtmlContentButton" 
+      content-type="template"
+      [placement]="nbpTooltipPosition" 
+      [show-delay]="nbpTooltipShowDelay" 
+      [hide-delay]="nbpTooltipHideDelay"
+      [trigger]="nbpTooltipClickOrHover" 
+      [max-width]="nbpTooltipMaxWidth"
+      [theme]="nbpTooltipTheme" 
+      [offset]="14">{{nbpTooltipButtonOrIconsName}}
+    </button>
+
+    <ng-template #HtmlContentButton>
+      {{nbpContentTooltip}}
+    </ng-template>
+  </div>
+  <div *ngIf="nbpTooltipIcon">
+    <button class="btn btn-default" 
+      [tooltip]="HtmlContentIcon" 
+      content-type="template" 
+      [placement]="nbpTooltipPosition"
+      [show-delay]="nbpTooltipShowDelay" 
+      [hide-delay]="nbpTooltipHideDelay" 
+      [trigger]="nbpTooltipClickOrHover"
+      [max-width]="nbpTooltipMaxWidth"
+      [theme]="nbpTooltipTheme" 
+      [offset]="4"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTooltipIconName"></nbp-icon>
+    </button>
+
+    <ng-template #HtmlContentIcon>
+      {{nbpContentTooltip}}
+    </ng-template>
+  </div>
+</div>

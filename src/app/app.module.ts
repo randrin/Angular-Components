@@ -84,6 +84,9 @@ import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tab
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-panel-title-five/nbp-panel-title-five.component';
 import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-badge-two.component';
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { NbpTooltipComponent } from './components/nbp-tooltip/nbp-tooltip.component';
+
 
 @NgModule({
   declarations: [
@@ -159,6 +162,7 @@ import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-
     NbpTabarComponent,
     NbpUploadFileComponent,
     NbpTooltipPageComponent,
+    NbpTooltipComponent,
     NbpNotificationHeaderPageComponent,
     NbpComboDropDownListPageComponent,
     NbpDatePickerPageComponent,
@@ -166,7 +170,7 @@ import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-
     NbpTabarPageComponent,
     NbpFilterFormPageComponent,
     NbpPanelTitleFiveComponent,
-    NbpBadgeTwoComponent  
+    NbpBadgeTwoComponent
   ],
 
 
@@ -174,7 +178,9 @@ import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-
     BrowserModule,
     DataTablesModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

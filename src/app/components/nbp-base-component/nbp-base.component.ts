@@ -34,6 +34,9 @@ import {
   NbpFontSize,
   NbpBorder,
   NbpModalPosition,
+  NbpTooltipType,
+  NbpTooltipPosition,
+  NbpTooltipTheme,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -55,6 +58,9 @@ export class NbpBaseComponent implements OnInit {
   _alert = NbpAlertType;
   _border = NbpBorder;
   _position = NbpModalPosition;
+  _tooltipPosition = NbpTooltipPosition;
+  _tooltipTheme = NbpTooltipTheme;
+  _type = NbpTooltipType;
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -120,7 +126,7 @@ export class NbpBaseComponent implements OnInit {
     this.router = injector.get(Router);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // Functions
   /* Function to navigate to another link or page */
@@ -954,6 +960,18 @@ export class NbpBaseComponent implements OnInit {
 
   nbpGetnbpModalPosition(nbpInput) {
     switch (nbpInput) {
+      case this._position.TOP:
+        return this._positionModalClasse.CENTER;
+        break;
+      case this._style.CENTER:
+        return this._positionModalClasse.CENTER;
+        break;
+      case this._style.CENTER:
+        return this._positionModalClasse.CENTER;
+        break;
+      case this._style.CENTER:
+        return this._positionModalClasse.CENTER;
+        break;
       case this._style.CENTER:
         return this._positionModalClasse.CENTER;
         break;

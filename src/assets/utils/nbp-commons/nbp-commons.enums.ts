@@ -123,6 +123,21 @@ export enum NbpAlertType {
   WARNING = 'WARNING',
   ERROR = 'ERROR'
 }
+export enum NbpTooltipType {
+  CLICK = 'click',
+  HOVER = 'hover'
+}
+export enum NbpTooltipPosition {
+  TOP = 'top',
+  RIGHT ='right',
+  BOTTOM = 'bottom',
+  LEFT ='left',
+  CENTER = 'center',
+}
+export enum NbpTooltipTheme {
+  DARK = 'dark',
+  LIGHT ='light'
+}
 export declare enum NbpSwitchType {
   ICON = 0,
   TEXT = 1,
