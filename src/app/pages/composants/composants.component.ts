@@ -2,7 +2,7 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'app-composants',
+  selector: 'nbp-composants',
   templateUrl: './composants.component.html',
   styleUrls: ['./composants.component.scss']
 })

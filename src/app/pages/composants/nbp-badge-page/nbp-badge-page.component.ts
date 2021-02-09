@@ -8,10 +8,14 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 })
 export class NbpBadgePageComponent extends NbpBaseComponent implements OnInit {
 
-  title1 = 'Badges Style with icon';
-  title2 = 'Badges Style without icon';
-  title3 = 'Badges Outline with icon';
-  title4 = 'Badges Outline without icon';
+  title1 = 'Badges Border Style with icon';
+  title2 = 'Badges Border Style without icon';
+  title3 = 'Badges Border Outline with icon';
+  title4 = 'Badges Border Outline without icon';
+  title5 = 'Badges Style with icon';
+  title6 = 'Badges Style without icon';
+  title7 = 'Badges Outline with icon';
+  title8 = 'Badges Outline without icon';
 
 
   nbpBadges = [

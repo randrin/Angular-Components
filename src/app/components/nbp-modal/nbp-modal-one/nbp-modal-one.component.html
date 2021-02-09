@@ -8,7 +8,7 @@
 </nbp-button>
 
 <div class="modal fade" tabindex="-1" role="dialog" [id]="nbpModalName" [attr.data-backdrop]="nbpModalStatic" aria-labelledby="ModalTarget" aria-hidden="true">
-  <div class="modal-dialog" [ngClass]="nbpSizeAndPosition" role="document">
+  <div class="modal.right modal-dialog" [ngClass]="nbpSizeAndPosition" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">{{nbpModalTitle}}</h5>
@@ -21,13 +21,13 @@
       </div>
       <div class="modal-footer">
         <nbp-button
-        (click)="nbpOnClosed()" 
+        (click)="nbpHandleOnClosed()" 
          [nbpButtonLabel]="_model.component.NbpModalComponent.close" 
          [nbpButtonSize]="_size.SM"
          data-dismiss="modal">
         </nbp-button>
         <nbp-button
-        (click)="nbpOnSaved()"
+        (click)="nbpHandleOnSaved()"
          [nbpButtonLabel]="_model.component.NbpModalComponent.save" 
          [nbpButtonSize]="_size.SM"
          [nbpButtonColor]="_style.PRIMARY">

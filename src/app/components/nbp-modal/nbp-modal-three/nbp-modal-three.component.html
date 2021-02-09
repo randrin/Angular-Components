@@ -39,18 +39,18 @@
         </form>
       </div>
       <div class="modal-footer">
-          <nbp-button
-            (click)="nbpOnClosed()" 
-            [nbpButtonLabel]="_model.component.NbpModalComponent.close" 
-            [nbpButtonSize]="_size.SM"
-            data-dismiss="modal">
-          </nbp-button>
-          <nbp-button
-            (click)="nbpOnSaved()"
-            [nbpButtonLabel]="_model.component.NbpModalComponent.sendMessage" 
-            [nbpButtonSize]="_size.SM"
-            [nbpButtonColor]="_style.PRIMARY">
-          </nbp-button>
+        <nbp-button
+        (click)="nbpHandleOnClosed()" 
+         [nbpButtonLabel]="_model.component.NbpModalComponent.close" 
+         [nbpButtonSize]="_size.SM"
+         data-dismiss="modal">
+        </nbp-button>
+        <nbp-button
+        (click)="nbpHandleOnSaved()"
+         [nbpButtonLabel]="_model.component.NbpModalComponent.save" 
+         [nbpButtonSize]="_size.SM"
+         [nbpButtonColor]="_style.PRIMARY">
+        </nbp-button>
       </div>
     </div>
   </div>

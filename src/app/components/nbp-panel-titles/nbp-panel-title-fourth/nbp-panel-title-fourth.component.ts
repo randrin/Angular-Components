@@ -10,8 +10,6 @@ export class NbpPanelTitleFourthComponent extends NbpBaseComponent implements On
 
   @Input() nbpPanelTitle: string;
   @Input() nbpPanelTitleStyle: string;
-
-  nbpTitle: string;
   
   constructor(injector:Injector) { 
     super(injector)
@@ -20,6 +18,7 @@ export class NbpPanelTitleFourthComponent extends NbpBaseComponent implements On
   ngOnInit(): void {
     this.nbpSetUpComponent();
   }
+  
   // Functions
   nbpSetUpComponent() {
     this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._border.LEFT);

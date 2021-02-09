@@ -1,0 +1,48 @@
+<div class="nbp-card-page-wrapper">
+  <div class="container my-5">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one
+          [nbpTitle]="title1"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <nbp-card-one
+          [nbpCardTitle]="_model.component.NbpCardComponent.title"
+          [nbpCardDescription]="_model.component.NbpCardComponent.description"
+          [nbpCardDescriptionTruncate]="150"
+          [nbpCardCta]="_ctaType.BUTTON"
+          [nbpCardTitleCta]="_model.component.NbpCardComponent.titleCta1"
+          [nbpCardTypeCta]="_style.PRIMARY"
+        ></nbp-card-one>
+      </div>
+      <div class="col-md-4">
+        <nbp-card-one
+          [nbpCardTitle]="_model.component.NbpCardComponent.title"
+          [nbpCardDescription]="_model.component.NbpCardComponent.description"
+          [nbpCardDescriptionTruncate]="150"
+          [nbpCardCta]="_ctaType.DEEP"
+          [nbpCardTitleCta]="_model.component.NbpCardComponent.titleCta2"
+          [nbpCardTypeCta]="_style.SUCCESS"
+          [nbpCardCtaRedirection]="'/#/composants/links'"
+          [nbpCardCtaTarget]="false"
+        ></nbp-card-one>
+      </div>
+      <div class="col-md-4">
+        <nbp-card-one
+          [nbpCardTitle]="_model.component.NbpCardComponent.title"
+          [nbpCardDescription]="_model.component.NbpCardComponent.description"
+          [nbpCardDescriptionTruncate]="150"
+          [nbpCardCta]="_ctaType.ARROW"
+          [nbpCardTitleCta]="_model.component.NbpCardComponent.titleCta3"
+          [nbpCardTypeCta]="_style.DANGER"
+          [nbpCardCtaRedirection]="_model.component.NbpLinkPageComponent.href"
+          [nbpCardCtaTarget]="true"
+        ></nbp-card-one>
+      </div>
+    </div>
+  </div>
+</div>

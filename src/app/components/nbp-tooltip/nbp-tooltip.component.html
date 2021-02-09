@@ -1,1 +1,36 @@
-<p>nbp-tooltip works!</p>
+<div class="nbp-tooltip-wrapper">
+  <div *ngIf="nbpTooltipButton">
+    <button class="btn btn-secondary" 
+      [tooltip]="HtmlContentButton" 
+      content-type="template"
+      [placement]="nbpTooltipPosition" 
+      [show-delay]="nbpTooltipShowDelay" 
+      [hide-delay]="nbpTooltipHideDelay"
+      [trigger]="nbpTooltipClickOrHover" 
+      [max-width]="nbpTooltipMaxWidth"
+      [theme]="nbpTooltipTheme" 
+      [offset]="14">{{nbpTooltipButtonOrIconsName}}
+    </button>
+
+    <ng-template #HtmlContentButton>
+      {{nbpContentTooltip}}
+    </ng-template>
+  </div>
+  <div *ngIf="nbpTooltipIcon">
+    <button class="btn btn-default" 
+      [tooltip]="HtmlContentIcon" 
+      content-type="template" 
+      [placement]="nbpTooltipPosition"
+      [show-delay]="nbpTooltipShowDelay" 
+      [hide-delay]="nbpTooltipHideDelay" 
+      [trigger]="nbpTooltipClickOrHover"
+      [max-width]="nbpTooltipMaxWidth"
+      [theme]="nbpTooltipTheme" 
+      [offset]="4"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTooltipIconName"></nbp-icon>
+    </button>
+
+    <ng-template #HtmlContentIcon>
+      {{nbpContentTooltip}}
+    </ng-template>
+  </div>
+</div>
