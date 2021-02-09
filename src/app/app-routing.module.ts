@@ -32,6 +32,7 @@ import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tab
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
+import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
       { path: 'cards', component: NbpCardPageComponent },
+      { path: 'boxes', component: NbpBoxePageComponent },
       { path: 'modals', component: NbpModalPageComponent },
       { path: 'input-switchs', component: NbpInputSwitchPageComponent },
       { path: 'tooltips', component: NbpTooltipPageComponent },

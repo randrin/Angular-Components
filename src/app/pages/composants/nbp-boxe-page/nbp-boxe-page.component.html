@@ -1,0 +1,15 @@
+<div class="nbp-boxe-page-wrapper">
+  <div class="container my-5">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row" *ngIf="_model.component.NbpBoxeComponent.boxes">
+      <div class="col-md-3" *ngFor="let boxe of _model.component.NbpBoxeComponent.boxes">
+        <nbp-boxe-one [nbpBoxeTitle]="boxe.title" [nbpBoxeDescription]="boxe.description" [nbpBoxeImage]="boxe.image"
+          [nbpBoxeDate]="boxe.date" [nbpBoxeUrl]="boxe.url"></nbp-boxe-one>
+      </div>
+    </div>
+  </div>
+</div>

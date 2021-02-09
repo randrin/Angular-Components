@@ -120,18 +120,26 @@ export class NbpBaseComponent implements OnInit {
     ROUNDED: "nbp-rounded",
     CURSOR: "nbp-cursor-not-allowed",
   };
+  nbpFormatDate = {
+    formatOne: "DD/MM/YYYY"
+  }
 
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
     this.router = injector.get(Router);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // Functions
   /* Function to navigate to another link or page */
   goTo(name?: string): void {
     window.location.href = name;
+  }
+
+  /* Function to get the truncate limit text with inputs as arguments */
+  nbpGetTextTruncate(nbpText, nbpTruncateLimit) {
+    return nbpText.length > nbpTruncateLimit ? (nbpText.substring(0, nbpTruncateLimit) + " ...") : nbpText;
   }
 
   /* Function to get the badge outline style classe with input as argument */
