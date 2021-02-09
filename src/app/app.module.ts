@@ -87,6 +87,12 @@ import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { NbpTooltipComponent } from './components/nbp-tooltip/nbp-tooltip.component';
 
+import { NbpInputPasswordComponent } from './components/nbp-input-password/nbp-input-password.component';
+import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
+import { NbpDividingLineThreeComponent } from './components/nbp-dividing-lines/nbp-dividing-line-three/nbp-dividing-line-three.component';
+import { NbpDividingLineFourthComponent } from './components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component';
+import { NbpBoxeOneComponent } from './components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component';
+import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
 
 @NgModule({
   declarations: [
@@ -170,7 +176,13 @@ import { NbpTooltipComponent } from './components/nbp-tooltip/nbp-tooltip.compon
     NbpTabarPageComponent,
     NbpFilterFormPageComponent,
     NbpPanelTitleFiveComponent,
-    NbpBadgeTwoComponent
+    NbpBadgeTwoComponent,
+    NbpInputPasswordComponent,
+    NbpInputPasswordPageComponent,
+    NbpDividingLineThreeComponent,
+    NbpDividingLineFourthComponent,
+    NbpBoxeOneComponent,
+    NbpBoxePageComponent  
   ],
 
 

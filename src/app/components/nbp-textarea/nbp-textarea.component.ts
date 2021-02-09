@@ -36,6 +36,8 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
+    console.log('this.nbpTextareaRequired : ', this.nbpTextareaRequired )
+    console.log('this.nbpTextareaDisabled : ', this.nbpTextareaDisabled )
     this.nbpTextareaRows =
       this.nbpTextareaRows === 0 || this.nbpTextareaRows === undefined
         ? this.nbpTextareaDefault.rows
@@ -46,7 +48,7 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
 
   nbpGetClasses() {
     this.nbpTextarea =
-      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
+      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpTextareaDisabled ? this.nbpTypeInput.CURSOR : '');
     this.nbpTextareaModel.emit(this.nbpModel);
   }
 

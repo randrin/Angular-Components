@@ -114,12 +114,21 @@ export class NbpBaseComponent implements OnInit {
     ERROR: "fa fa-frown",
   };
   nbpInputDefault = {
-    type: "text",
+    text: "text",
+    password: "password",
+    clean: 'fa fa-times-circle'
+  };
+  nbpInputPasswordIcon = {
+    SHOW: "fa fa-unlock",
+    HIDE: "fa fa-lock"
   };
   nbpTypeInput = {
     ROUNDED: "nbp-rounded",
     CURSOR: "nbp-cursor-not-allowed",
   };
+  nbpFormatDate = {
+    formatOne: "DD/MM/YYYY"
+  }
 
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
@@ -132,6 +141,11 @@ export class NbpBaseComponent implements OnInit {
   /* Function to navigate to another link or page */
   goTo(name?: string): void {
     window.location.href = name;
+  }
+
+  /* Function to get the truncate limit text with inputs as arguments */
+  nbpGetTextTruncate(nbpText, nbpTruncateLimit) {
+    return nbpText.length > nbpTruncateLimit ? (nbpText.substring(0, nbpTruncateLimit) + " ...") : nbpText;
   }
 
   /* Function to get the badge outline style classe with input as argument */

@@ -43,11 +43,15 @@
     .nbp-radio-label {
       font-size: 0.875rem !important;
       font-weight: 400;
-      margin: 0 0 0 0.625rem !important;
+      margin: 0 0 0 1.625rem !important;
       display: inline-block !important;
       -ms-flex: none;
       flex: none;
       white-space: nowrap;
+      label {
+        top: -5px;
+        position: relative;
+      }
     }
   }
 }

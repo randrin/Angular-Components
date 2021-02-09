@@ -1,4 +1,4 @@
-.nbp-dividing-line-one-wrapper {
+.nbp-dividing-line-fourth-wrapper {
   padding: 25px 0px;
   .nbp-dividing-line-container {
     display: flex;
@@ -28,22 +28,6 @@
         font-weight: 600;
         line-height: 1rem;
         vertical-align: middle;
-      }
-    }
-    .nbp-dividing-line-right {
-      align-self: auto;
-      min-height: 1.125rem;
-      padding-left: 1.25rem;
-      flex-grow: 1;
-      .nbp-right-line {
-        margin: 0.5rem 0;
-        height: 0.125rem;
-        border-top-width: 0.0625rem !important;
-        border-top-style: solid !important;
-        border-bottom: none;
-        border-left: none;
-        border-right: none;
-
       }
     }
   }

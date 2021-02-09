@@ -7,11 +7,12 @@ import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
   styleUrls: ["./nbp-input-radio.component.scss"],
 })
 export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
+
   @Input() nbpRadioLabel: string;
   @Input() nbpRadioName: string;
   @Input() nbpRadioStyle: string;
   @Input() nbpRadioDisabled: boolean;
-  @Input() nbpRadioChecked: boolean;
+  @Input() nbpRadioValue: string;
 
   nbpRadio: string;
   nbpRadioInput: string;

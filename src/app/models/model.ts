@@ -2,6 +2,38 @@ import { Message } from "@angular/compiler/src/i18n/i18n_ast";
 
 export class Model {
   component = {
+    NbpBoxeComponent: {
+      boxes: [
+        {
+          title: "Text Boxe One",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          date: "2020-06-08T12:07:33.291",
+          image: "/assets/images/nbp-boxes/image-1.png",
+          url: "https://www.google.com"
+        },
+        {
+          title: "Text Boxe Two",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          date: "2019-05-23T09:34:20.291",
+          image: "/assets/images/nbp-boxes/image-2.png",
+          url: "https://www.facebook.com"
+        },
+        {
+          title: "Text Boxe Three",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          date: "2020-11-11T09:34:20.291",
+          image: "/assets/images/nbp-boxes/image-3.png",
+          url: "https://www.yahoo.com"
+        },
+        {
+          title: "Text Boxe Fourth",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          date: "2021-12-11T09:34:20.291",
+          image: "/assets/images/nbp-boxes/image-4.png",
+          url: "https://www.twitter.com"
+        }
+      ]
+    },
     NbpInputSwitchOneComponent: {
       one: {
         default: "default-one",
@@ -333,14 +365,16 @@ export class Model {
     },
     NbpButtonComponent: {
       label: "Button",
-      cerca:"Cerca",
-      close:"Close",
-      salva:"Salva",
+      cerca: "Cerca",
+      close: "Close",
+      salva: "Salva",
       labelHover: "Button Hover",
       cta: "My Profil",
     },
     NbpDividingLineComponent: {
-      nbpTitle: "Dividing Line Composant",
+      nbpTitleCenter: "Dividing Line Text Center",
+      nbpTitleLeft: "Dividing Line Text Left",
+      nbpTitleRight: "Dividing Line Text Right",
       nbpTitleCtaReadOnly: {
         title: "Dividing Line Composant with Cta read only",
         cta: {
@@ -382,7 +416,7 @@ export class Model {
       label1: "First Name",
       label2: "Last Name",
       name: "firstName",
-      to:"Recipient",
+      to: "Recipient",
       value: "Mario Rossi",
       required: "true",
       requiredMessage: "The first name is required",
@@ -390,28 +424,40 @@ export class Model {
       icon1: "fa fa-search",
       icon2: "fa fa-user",
     },
+    NbpInputPasswordComponent: {
+      label1: "Password",
+      label2: "Confirm Password",
+      name: "password",
+      to: "Recipient",
+      value: "Mario Rossi",
+      required: "true",
+      requiredMessage: "The password is required",
+      placeholder: "Insert your password",
+      hidePassword: "fa fa-lock",
+      showPassword: "fa fa-unlock"
+    },
     NbpTextareaComponent: {
       label1: "Description First Name with limit = 10",
       label2: "Description Last Name readonly",
       label3: "Description Name without limit",
-      messageModal:"Message",
+      messageModal: "Message",
       rows: 8,
       name: "description",
       required: "true",
       requiredMessage: "The description name is required",
-      lunghezzaMaxSup: "You have superate the length required",
+      maxLengthMessage: "You have superate the length required",
       placeholder: "Insert the description name",
-      lunghezzaMax: 10,
+      maxLength: 10,
     },
     NbpModalComponent: {
       modalOne: "Modal Top-Static-Scrollable",
       modalTwo: "Modal Top-Static-NoScrollable",
       modalThree: "Modal Center-Static-Scrollable",
       modalFourth: "Modal Center-Static-NoScrollable",
-      modal:"modal", 
-      close:"close",
-      save:"Save",
-      sendMessage:"Send message",
+      modal: "modal",
+      close: "close",
+      save: "Save",
+      sendMessage: "Send message",
       modalTitle1: "size MD,position CENTER,Type NOSTATIC,Scrollable",
       modalTitle2: "size MD,position TOP,Type STATIC,No Scrollable",
       modalTitle3: "size LG,position CENTER,Type STATIC,No Scrollable",

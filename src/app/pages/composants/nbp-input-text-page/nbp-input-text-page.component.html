@@ -20,7 +20,7 @@
       [nbpInputIconRequired]="true"
       (nbpInputModel)="nbpInputModel($event)"
     ></nbp-input-text>
-    {{model}}
+    <span>Output: {{nbpModel}}</span>
     </div>
     <div class="col-md-6">
       <nbp-input-text
@@ -46,6 +46,7 @@
       [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder"
       [nbpInputIcon]="_model.component.NbpInputTextComponent.icon2"
       [nbpInputIconRequired]="true"
+      (nbpInputModel)="nbpInputModel($event)"
     ></nbp-input-text>
     </div>
   </div>
