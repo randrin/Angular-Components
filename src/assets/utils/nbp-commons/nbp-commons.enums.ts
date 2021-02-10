@@ -129,10 +129,20 @@ export enum NbpTooltipType {
 }
 export enum NbpTooltipPosition {
   TOP = 'top',
-  RIGHT ='right',
   BOTTOM = 'bottom',
-  LEFT ='left',
   CENTER = 'center',
+}
+export enum NbpTabbarPosition {
+  LEFT = 'LEFT',
+  CENTER = 'CENTER',
+  RIGHT = 'RIGHT',
+  FLEX = 'FLEX'
+}
+export enum NbpTabbarType {
+  TABS = 'TABS',
+  PILLS = 'PILLS',
+  PILLSANDJUSTIFY = 'PILLSANDJUSTIFY',
+  JUSTIFIED = 'JUSTIFIED'
 }
 export enum NbpTooltipTheme {
   DARK = 'dark',

@@ -1,0 +1,20 @@
+<div class="nbp-boxe-one-wrapper">
+  <div class="container nbp-boxe-container">
+    <div class="row">
+      <div class="col nbp-boxe-header">
+        <a [href]="nbpBoxeUrl">
+          <img class="nbp-boxe-header-img" [src]="nbpBoxeImage" [alt]="nbpBoxeTitle" />
+        </a>
+      </div>
+      <div class="col nbp-boxe-footer">
+        <div class="nbp-boxe-content">
+          <span class="nbp-boxe-content-date nbp-p3 nbp-color-danger">{{nbpBoxeDate}}</span>
+          <a [href]="nbpBoxeUrl" class="nbp-boxe-content-cta h3 nbp-color-primary">{{nbpBoxeTitle}}</a>
+          <div class="nbp-boxe-content-description nbp-p3 nbp-color-default">
+            {{nbpBoxeDescription}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

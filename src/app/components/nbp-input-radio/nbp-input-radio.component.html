@@ -1,20 +1,37 @@
 <div class="nbp-radio-wrapper">
   <div class="nbp-radio-container" [ngClass]="nbpRadio">
     <div class="nbp-radio-input" [ngClass]="nbpRadioInput">
-      <input 
-        type="radio" 
-        class="form-control nbp-form-control" 
-        [name]="nbpRadioName" 
-        [value]="nbpRadioChecked"
+      <input
+        [id]="nbpRadioName"
+        type="radio"
+        class="form-control nbp-form-control"
+        name="name"
+        [value]="nbpRadioValue"
         [(ngModel)]="nbpModel"
-        (click)="nbpRadioClick($event)"
         disabled="nbpRadioDisabled"
-        checked="checked"
       />
+      <div class="nbp-radio-label">
+        <label [for]="nbpRadioName" class="nbp-font-size-18">{{
+          nbpRadioLabel
+        }}</label>
+      </div>
       <div class="nbp-radio-circle-icon nbp-display-none"></div>
-    </div>
-    <div class="nbp-radio-label" (click)="nbpRadioClick($event)">
-      <label for="nbpRadioName" class="nbp-font-size-18">{{nbpRadioLabel}}</label>
     </div>
   </div>
 </div>
+
+<!-- <div>
+  <input type="radio" id="huey" name="drone" value="huey"
+         checked>
+  <label for="huey">Huey</label>
+</div>
+
+<div>
+  <input type="radio" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Dewey</label>
+</div>
+
+<div>
+  <input type="radio" id="louie" name="drone" value="louie">
+  <label for="louie">Louie</label>
+</div> -->

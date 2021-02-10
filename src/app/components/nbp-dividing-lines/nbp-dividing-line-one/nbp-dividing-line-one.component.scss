@@ -1,4 +1,4 @@
-.nbp-dividing-line-wrapper {
+.nbp-dividing-line-one-wrapper {
   padding: 25px 0px;
   .nbp-dividing-line-container {
     display: flex;
@@ -19,7 +19,6 @@
         border-bottom: none;
         border-left: none;
         border-right: none;
-        // color: var(--nbp-primary) !important;
       }
     }
     .nbp-dividing-line-center {
@@ -28,7 +27,6 @@
         font-size: 0.975rem;
         font-weight: 600;
         line-height: 1rem;
-        // color: var(--nbp-secondary);
         vertical-align: middle;
       }
     }
@@ -45,7 +43,7 @@
         border-bottom: none;
         border-left: none;
         border-right: none;
-        // color: var(--nbp-primary) !important;
+
       }
     }
   }

@@ -28,9 +28,11 @@ import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notif
 import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
 import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
-import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
+import { NbpTabbarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tab-bar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
+import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
+import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
       { path: 'colors', component: NbpColorPageComponent },
       { path: 'textareas', component: NbpTextareaPageComponent },
       { path: 'input-text', component: NbpInputTextPageComponent },
+      { path: 'input-password', component: NbpInputPasswordPageComponent },
       { path: 'dividing-lines', component: NbpDividingLinePageComponent },
       { path: 'feedbacks', component: NbpFeedbackPageComponent },
       { path: 'background-boxes', component: NbpBackgroundBoxPageComponent },
@@ -57,6 +60,7 @@ const appRoutes: Routes = [
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
       { path: 'cards', component: NbpCardPageComponent },
+      { path: 'boxes', component: NbpBoxePageComponent },
       { path: 'modals', component: NbpModalPageComponent },
       { path: 'input-switchs', component: NbpInputSwitchPageComponent },
       { path: 'tooltips', component: NbpTooltipPageComponent },
@@ -64,7 +68,7 @@ const appRoutes: Routes = [
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
-      { path: 'tabar', component: NbpTabarPageComponent },
+      { path: 'tab-bar', component: NbpTabbarPageComponent },
       { path: 'filter-Form', component: NbpFilterFormPageComponent },
     ]
   },

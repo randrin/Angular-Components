@@ -1,7 +1,6 @@
 // import nbpScrollTopScript from "./components/nbp-scroll-top/nbp-scroll-top-script";
 // import nbpAlertBoxScript from "./components/nbp-alert-box/nbp-alert-box-script";
 
-
 // Go to Top Page & Scroll Navbar Effet
 $(document).ready(function () {
   $(window).scroll(function () {
@@ -34,8 +33,8 @@ $(document).ready(function () {
 // NbpInputTextComponent
 $(document).ready(function () {
   var $nbpInputTextWrapper = $("#nbp-input");
-  $nbpInputTextWrapper.on('focusout', function () {
-    console.log('$nbpInputTextWrapper: ', $nbpInputTextWrapper.value);
+  $nbpInputTextWrapper.on("focusout", function () {
+    console.log("$nbpInputTextWrapper: ", $nbpInputTextWrapper.value);
   });
 });
 
@@ -44,20 +43,22 @@ $(document).ready(function () {
   var $nbpComposantsWrapper = $(".nbp-composants-wrapper");
   var $nbpComposantsLink = $(".nbp-composants-link");
   var $nbpComposantsLinkMenu = $(".nbp-nav ul .nbp-composants-link");
-  $nbpComposantsLink.on('click', function () {
-    $nbpComposantsWrapper.addClass('nbp-display-none');
+  $nbpComposantsLink.on("click", function () {
+    $nbpComposantsWrapper.addClass("nbp-display-none");
   });
-  $nbpComposantsLinkMenu.on('click', function () {
-    $nbpComposantsWrapper.toggleClass('nbp-display-none');
+  $nbpComposantsLinkMenu.on("click", function () {
+    $nbpComposantsWrapper.toggleClass("nbp-display-none");
   });
 });
 
 // NbpHeaderOneComponent
 $(document).ready(function () {
-  var $nbpHeaderOneWrapper = $(".nbp-header-one-wrapper").find('.nbp-header-one-profil-content');
+  var $nbpHeaderOneWrapper = $(".nbp-header-one-wrapper").find(
+    ".nbp-header-one-profil-content"
+  );
   var $nbpHeaderOneProfil = $(".nbp-header-one-profil");
-  $nbpHeaderOneProfil.on('click', function () {
-    $nbpHeaderOneWrapper.toggleClass('nbp-display-none');
+  $nbpHeaderOneProfil.on("click", function () {
+    $nbpHeaderOneWrapper.toggleClass("nbp-display-none");
   });
 });
 
@@ -67,11 +68,9 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
-      $nbpNavbarWrapper
-        .addClass("nbp-navbar-top-fixed")
+      $nbpNavbarWrapper.addClass("nbp-navbar-top-fixed");
     } else {
-      $nbpNavbarWrapper
-        .removeClass("nbp-navbar-top-fixed")
+      $nbpNavbarWrapper.removeClass("nbp-navbar-top-fixed");
     }
   });
 });
@@ -82,14 +81,16 @@ $(document).ready(function () {
   var $nbpCheckboxInput = $nbpCheckboxWrapper.find(".nbp-checkbox-input");
   var $nbpCheckboxLabel = $nbpCheckboxWrapper.find(".nbp-checkbox-label");
 
-  $nbpCheckboxInput.on('click', function () {
-    $(this).toggleClass('checked');
-    $(this).find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
-  })
-  $nbpCheckboxLabel.on('click', function () {
-    $nbpCheckboxInput.toggleClass('checked');
-    $nbpCheckboxInput.find('.nbp-checkbox-icon-check').toggleClass('nbp-display-none')
-  })
+  $nbpCheckboxInput.on("click", function () {
+    $(this).toggleClass("checked");
+    $(this).find(".nbp-checkbox-icon-check").toggleClass("nbp-display-none");
+  });
+  $nbpCheckboxLabel.on("click", function () {
+    $nbpCheckboxInput.toggleClass("checked");
+    $nbpCheckboxInput
+      .find(".nbp-checkbox-icon-check")
+      .toggleClass("nbp-display-none");
+  });
 });
 
 // NbpRadioComponent
@@ -98,20 +99,32 @@ $(document).ready(function () {
   var $nbpRadioInput = $nbpRadioWrapper.find(".nbp-radio-input");
   var $nbpRadioLabel = $nbpRadioWrapper.find(".nbp-radio-label");
 
-  $nbpRadioInput.on('click', function () {
+  console.log("$nbpRadioInput: ", $nbpRadioInput);
+
+  $nbpRadioInput.on("click", function () {
+    var nbpRadioClicked = $nbpRadioInput.index(this);
+    var $currentNbpRadio = $(this)
+    console.log('Index clicked: ', nbpRadioClicked)
     
-    $(this).toggleClass('checked');
-    $(this).find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
-  })
+
+    Array.from($nbpRadioInput).forEach((nbpRadio, index) => {
+      console.log('nbpRadio clicked: ', nbpRadio)
+      if(nbpRadioClicked == index) {
+        $currentNbpRadio.toggleClass("checked");
+        $currentNbpRadio.find(".nbp-radio-circle-icon").toggleClass("nbp-display-none");
+      } 
+    });
+  });
   // $nbpRadioLabel.on('click', function () {
   //   Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
   //     console.log('nbpRadioInput: ', index);
   //     console.log('nbpRadio: ', nbpRadio);
   //     console.log('nbpRadio $(this): ', $(this));
-  //   });
-  //   $(this).toggleClass('checked');
+  //     $(this).toggleClass('checked');
   //   $nbpRadioInput.toggleClass('checked');
   //   $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
+  //   });
+
   // })
 });
 
@@ -120,15 +133,16 @@ $(document).ready(function () {
   "use strict";
   var $nbpTableOneWrapper = $(".nbp-table-one-wrapper");
   var $nbpDataTablesFilter = $nbpTableOneWrapper.find(".dataTables_filter");
-  $nbpDataTablesFilter.addClass('nbp-display-none');
+  $nbpDataTablesFilter.addClass("nbp-display-none");
 
-  console.log('$nbpDataTablesFilter: ', $nbpDataTablesFilter);
+  console.log("$nbpDataTablesFilter: ", $nbpDataTablesFilter);
 
   // var $label = document.getElementsByClassName("dataTables_filter").addClass('nbp-display-none');
   // console.log('$label: ', $label.length)
 
-  Array.from(document.getElementsByClassName("dataTables_filter")).forEach(function (item) {
-    console.log(item);
-  });
-
+  Array.from(document.getElementsByClassName("dataTables_filter")).forEach(
+    function (item) {
+      console.log(item);
+    }
+  );
 });
