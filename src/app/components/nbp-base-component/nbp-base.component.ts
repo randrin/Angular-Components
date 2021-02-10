@@ -24,6 +24,8 @@ import {
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
   NbpModalPositionClasse,
+  NbpTabbarPositionClasse,
+  NbpTabbarTypeClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -37,6 +39,8 @@ import {
   NbpTooltipType,
   NbpTooltipPosition,
   NbpTooltipTheme,
+  NbpTabbarPosition,
+  NbpTabbarType,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -59,6 +63,8 @@ export class NbpBaseComponent implements OnInit {
   _border = NbpBorder;
   _position = NbpModalPosition;
   _tooltipPosition = NbpTooltipPosition;
+  _tabbarPosition = NbpTabbarPosition;
+  _tabbarType = NbpTabbarType;
   _tooltipTheme = NbpTooltipTheme;
   _type = NbpTooltipType;
   _model = new Model();
@@ -85,6 +91,8 @@ export class NbpBaseComponent implements OnInit {
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
+  _positionTabbarClasse = NbpTabbarPositionClasse;
+  _typeTabbarClasse = NbpTabbarTypeClasse
 
   nbpModel: string = "";
   nbpColor: string;
@@ -104,6 +112,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
+  nbpTaglia: string = "mb-3";
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
     RIGHT: "nbp-deep-link-right",
@@ -994,6 +1003,46 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._positionModalClasse.TOP;
+        break;
+    }
+  }
+
+  nbpGetnbpTabbarPosition(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarPosition.LEFT:
+        return this._positionTabbarClasse.LEFT;
+        break;
+      case this._tabbarPosition.CENTER:
+        return this._positionTabbarClasse.CENTER;
+        break;
+      case this._tabbarPosition.RIGHT:
+        return this._positionTabbarClasse.RIGHT;
+        break;
+      case this._tabbarPosition.FLEX:
+        return this._positionTabbarClasse.FLEX;
+        break;
+      default:
+        return this._positionTabbarClasse.LEFT;
+        break;
+    }
+  }
+
+  nbpGetnbpTabbarType(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarType.TABS:
+        return this._typeTabbarClasse.TABS;
+        break;
+      case this._tabbarType.PILLS:
+        return this._typeTabbarClasse.PILLS;
+        break;
+      case this._tabbarType.JUSTIFIED:
+        return this._typeTabbarClasse.JUSTIFIED;
+        break;
+      case this._tabbarType.PILLSANDJUSTIFY:
+        return this._typeTabbarClasse.PILLSANDJUSTIFY;
+        break;
+      default:
+        return this._typeTabbarClasse.TABS;
         break;
     }
   }

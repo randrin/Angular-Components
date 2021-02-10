@@ -73,14 +73,14 @@ import { NbpPanelTitleFourthComponent } from './components/nbp-panel-titles/nbp-
 import { NbpComboDropDownListComponent } from './components/nbp-combo-drop-down-list/nbp-combo-drop-down-list.component';
 import { NbpDatePickerComponent } from './components/nbp-date-picker/nbp-date-picker.component';
 import { NbpNotificationHeaderComponent } from './components/nbp-notification-header/nbp-notification-header.component';
-import { NbpTabarComponent } from './components/nbp-tabar/nbp-tabar.component';
+import { NbpTabbarComponent } from './components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component';
 import { NbpUploadFileComponent } from './components/nbp-upload-file/nbp-upload-file.component';
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notification-header-page/nbp-notification-header-page.component';
 import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
 import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
-import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
+import { NbpTabbarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tab-bar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpPanelTitleFiveComponent } from './components/nbp-panel-titles/nbp-panel-title-five/nbp-panel-title-five.component';
 import { NbpBadgeTwoComponent } from './components/nbp-badges/nbp-badge-two/nbp-badge-two.component';
@@ -93,6 +93,11 @@ import { NbpDividingLineThreeComponent } from './components/nbp-dividing-lines/n
 import { NbpDividingLineFourthComponent } from './components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component';
 import { NbpBoxeOneComponent } from './components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component';
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { NbpTabBarTwoComponent } from './components/nbp-tab-bars/nbp-tab-bar-two/nbp-tab-bar-two.component';
+import { NbpTabBarThreeComponent } from './components/nbp-tab-bars/nbp-tab-bar-three/nbp-tab-bar-three.component';
+import { NbpTabBarFourComponent } from './components/nbp-tab-bars/nbp-tab-bar-four/nbp-tab-bar-four.component';
+import { NbpTabBarFiveComponent } from './components/nbp-tab-bars/nbp-tab-bar-five/nbp-tab-bar-five.component';
+
 
 @NgModule({
   declarations: [
@@ -165,7 +170,7 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     NbpComboDropDownListComponent,
     NbpDatePickerComponent,
     NbpNotificationHeaderComponent,
-    NbpTabarComponent,
+    NbpTabbarComponent,
     NbpUploadFileComponent,
     NbpTooltipPageComponent,
     NbpTooltipComponent,
@@ -173,7 +178,7 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     NbpComboDropDownListPageComponent,
     NbpDatePickerPageComponent,
     NbpUploadFilePageComponent,
-    NbpTabarPageComponent,
+    NbpTabbarPageComponent,
     NbpFilterFormPageComponent,
     NbpPanelTitleFiveComponent,
     NbpBadgeTwoComponent,
@@ -182,7 +187,11 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     NbpDividingLineThreeComponent,
     NbpDividingLineFourthComponent,
     NbpBoxeOneComponent,
-    NbpBoxePageComponent  
+    NbpBoxePageComponent,
+    NbpTabBarTwoComponent,
+    NbpTabBarThreeComponent,
+    NbpTabBarFourComponent,
+    NbpTabBarFiveComponent  
   ],
 
 
@@ -191,8 +200,7 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     DataTablesModule,
     FormsModule,
     AppRoutingModule,
-    TooltipModule,
-    FormsModule
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
