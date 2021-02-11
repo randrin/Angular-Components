@@ -1,10 +1,43 @@
 .nbp-modal-one-wrapper {
-  .modal-footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding: .75rem;
-    border-top: 1px solid #dee2e6;
-    border-bottom-right-radius: calc(.3rem - 1px);
-    border-bottom-left-radius: calc(.3rem - 1px);
+  .modal-content {
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    .modal-header {
+      border-bottom: 1px solid var(--nbp-sliver) !important;
+      color: var(--nbp-white) !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+  
+      .modal-title {
+        margin: 0 !important;
+      }
+  
+      .close {
+        color: var(--nbp-white) !important;
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+  
+    .modal-body {
+      text-align: justify;
+    }
+  
+    .modal-footer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.75rem;
+      border-top: 1px solid var(--nbp-sliver) !important;
+      border-bottom-right-radius: calc(0.3rem - 1px);
+      border-bottom-left-radius: calc(0.3rem - 1px);
+      nbp-button {
+        &:first-child {
+          left: 10px;
+          position: absolute;
+          float: left;
+        }
+      }
+    }
   }
 }

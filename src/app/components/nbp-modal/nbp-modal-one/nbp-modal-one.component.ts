@@ -8,6 +8,8 @@ import * as uuid from 'uuid';
   styleUrls: ['./nbp-modal-one.component.scss']
 })
 export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
+
+  @Input() nbpModalType: string;
   @Input() nbpModalButtonTitle: string;
   @Input() nbpModalTitle: string;
   @Input() nbpModalContent: string;
@@ -25,8 +27,8 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   nbpSizeAndPosition: string;
   nbpModalName: string;
   modalTypes: string = 'modal-dialog-scrollable';
-  nbpModalStatic:string = 'static'
- 
+  nbpModalStatic: string = 'static';
+
 
   constructor(injector: Injector) {
     super(injector);
@@ -36,20 +38,21 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
-    this.nbpModalName = 'a' + uuid.v4();
+    this.nbpModalName = 'nbp' + uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
-    this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
-    this.nbpModalScrolls; 
+    this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpModalType) + this.nbpSeparator + this.nbpGetBorderClasse(this.nbpModalType, this._border.BORDER);
+    this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
+    this.nbpModalScrolls;
     this.nbpModalStaticModes;
-    console.log('this.nbpModalName one: ', this.nbpModalName)
   }
-   
+
   get nbpModalScrolls() {
     if (this.nbpModalScroll) {
-      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
+      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes;
     }
-    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize
+    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize;
   }
 
   get nbpModalStaticModes() {

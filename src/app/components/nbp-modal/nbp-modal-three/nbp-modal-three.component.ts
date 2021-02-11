@@ -35,12 +35,11 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   }
   
   nbpSetUpComponent() {
-    this.nbpModalName = 'a'+ uuid.v4();
+    this.nbpModalName = 'nbp'+ uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
-    this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
+    this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
     this.nbpModalScrolls;
     this.nbpModalStaticModes;
-    console.log('this.nbpModalName three: ', this.nbpModalName)
   }
 
   get nbpModalScrolls() {

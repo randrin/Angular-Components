@@ -955,6 +955,8 @@ export class NbpBaseComponent implements OnInit {
         break;
     }
   }
+
+  /* Function to get the Modal Size classe with input as argument */
   nbpGetSizeModalClasse(nbpInput) {
     switch (nbpInput) {
       case this._size.SM:
@@ -972,18 +974,10 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-  nbpGetnbpModalPosition(nbpInput) {
+  /* Function to get the Modal Position classe with input as argument */
+  nbpGetModalPositionClasse(nbpInput) {
     switch (nbpInput) {
       case this._position.TOP:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
         return this._positionModalClasse.CENTER;
         break;
       case this._style.CENTER:
