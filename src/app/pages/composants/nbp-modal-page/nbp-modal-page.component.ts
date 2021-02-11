@@ -10,6 +10,7 @@ export class NbpModalPageComponent extends NbpBaseComponent implements OnInit {
 
   title1 = "Modal with Header Style";
   title2 = "Modal without Header Style";
+  title3 = "Modal with Icon Alert";
 
   constructor(injector:Injector) {
     super(injector);
@@ -19,5 +20,5 @@ export class NbpModalPageComponent extends NbpBaseComponent implements OnInit {
   }
 
   // Functions
-  
+
 }

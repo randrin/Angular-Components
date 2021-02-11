@@ -22,10 +22,10 @@ export class NbpModalTwoComponent extends NbpBaseComponent implements OnInit {
 
   modalSize: string;
   modalPosition: string
-  nbpSizeAndPosition: string;
-  nbpModalName: string;
+  modalSizePosition: string;
+  modalName: string;
   modalTypes: string = 'modal-dialog-scrollable';
-  nbpModalStatic:string = 'static'
+  nbpModalStatic: string = 'static'
 
   constructor(injector:Injector) {
     super(injector);
@@ -36,7 +36,7 @@ export class NbpModalTwoComponent extends NbpBaseComponent implements OnInit {
   }
   
   nbpSetUpComponent() {
-    this.nbpModalName = 'nbp'+ uuid.v4(); 
+    this.modalName = 'nbp'+ uuid.v4(); 
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
     this.nbpModalScrolls;
@@ -45,9 +45,9 @@ export class NbpModalTwoComponent extends NbpBaseComponent implements OnInit {
 
   get nbpModalScrolls() {
     if (this.nbpModalScroll) {
-      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
+      return this.modalSizePosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
     }
-    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize
+    return this.modalSizePosition = this.modalPosition + this.nbpSeparator + this.modalSize
   }
 
   get nbpModalStaticModes() {

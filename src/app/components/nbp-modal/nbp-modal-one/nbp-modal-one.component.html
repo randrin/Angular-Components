@@ -1,11 +1,11 @@
 <div class="nbp-modal-one-wrapper">
   <nbp-button [nbpButtonLabel]="nbpModalButtonTitle" [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY"
-    [nbpButtonType]="_style.OUTLINE" data-toggle="modal" [attr.data-target]="'#' + nbpModalName">
+    [nbpButtonType]="_style.OUTLINE" data-toggle="modal" [attr.data-target]="'#' + modalName">
   </nbp-button>
 
-  <div class="modal fade" tabindex="-1" role="dialog" [id]="nbpModalName" [attr.data-backdrop]="nbpModalStatic"
+  <div class="modal fade" tabindex="-1" role="dialog" [id]="modalName" [attr.data-backdrop]="nbpModalStatic"
     aria-labelledby="ModalTarget" aria-hidden="true">
-    <div class="modal.right modal-dialog" [ngClass]="nbpSizeAndPosition" role="document">
+    <div class="modal.right modal-dialog" [ngClass]="modalSizePosition" role="document">
       <div class="modal-content">
         <div class="modal-header" [ngClass]="nbpBackground">
           <h5 class="modal-title">{{nbpModalTitle}}</h5>
