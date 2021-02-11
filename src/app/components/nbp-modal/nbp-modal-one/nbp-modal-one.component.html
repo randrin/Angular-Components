@@ -17,11 +17,11 @@
           <p>{{nbpModalContent}}</p>
         </div>
         <div class="modal-footer">
-          <nbp-button (click)="nbpHandleOnClosed()" [nbpButtonLabel]="_model.component.NbpModalComponent.close"
-            [nbpButtonSize]="_size.SM" data-dismiss="modal">
+          <nbp-button (click)="nbpHandleOnClosed()" [nbpButtonType]="_style.OUTLINE" [nbpButtonColor]="_style.PRIMARY"
+            [nbpButtonLabel]="_model.component.NbpModalComponent.close" [nbpButtonSize]="_size.SM" data-dismiss="modal">
           </nbp-button>
-          <nbp-button (click)="nbpHandleOnSaved()" [nbpButtonColor]="nbpModalType" [nbpButtonLabel]="_model.component.NbpModalComponent.save"
-            [nbpButtonSize]="_size.SM">
+          <nbp-button (click)="nbpHandleOnSaved()" [nbpButtonLabel]="_model.component.NbpModalComponent.save"
+            [nbpButtonSize]="_size.SM" [nbpButtonColor]="_style.PRIMARY">
           </nbp-button>
         </div>
       </div>
