@@ -13,7 +13,7 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpModalContent: string; 
   @Input() nbpModalSize: string;
   @Input() nbpModalPosition: string;
-  @Input() nbpStaticModalMode: boolean;
+  @Input() nbpModalStaticMode: boolean;
   @Input() nbpModalScroll: boolean;
 
   @Output() nbpOnSave: EventEmitter<any> = new EventEmitter<any>();
@@ -50,7 +50,7 @@ export class NbpModalThreeComponent extends NbpBaseComponent implements OnInit {
   }
 
   get nbpModalStaticModes() {
-    if (this.nbpStaticModalMode) {
+    if (this.nbpModalStaticMode) {
       return this.nbpModalStatic;
     }
     return this.nbpModalStatic = 'undefined'

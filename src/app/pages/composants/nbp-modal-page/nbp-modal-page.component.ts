@@ -9,6 +9,7 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 export class NbpModalPageComponent extends NbpBaseComponent implements OnInit {
 
   title1 = "Modal with Header Style";
+  title2 = "Modal without Header Style";
 
   constructor(injector:Injector) {
     super(injector);
@@ -17,6 +18,6 @@ export class NbpModalPageComponent extends NbpBaseComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   // Functions
+  
 }
