@@ -57,6 +57,17 @@ export class Model {
         smoke: "smoke-two",
         success: "success-two",
       },
+      three: {
+        default: "default-three",
+        info: "info-three",
+        danger: "danger-three",
+        warning: "warning-three",
+        black: "black-three",
+        primary: "primary-three",
+        tomato: "tomato-three",
+        smoke: "smoke-three",
+        success: "success-three",
+      },
     },
     NbpCardComponent: {
       title: "Card Title 1",

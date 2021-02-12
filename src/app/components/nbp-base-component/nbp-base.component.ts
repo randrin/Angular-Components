@@ -96,6 +96,7 @@ export class NbpBaseComponent implements OnInit {
     rows: 8,
   };
   nbpBorder: string;
+  nbpSwitch: boolean;
   nbpTextTransform: string;
   nbpFeedbackColor: string;
   nbpAlertBoxType: string;

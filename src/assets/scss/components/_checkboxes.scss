@@ -28,6 +28,12 @@
       cursor: no-drop !important;
     }
   }
+  .nbp-input-check {
+    color: var(--nbp-success) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
+  }
 }
 
 .nbp-input-switch-two-success {
@@ -75,6 +81,12 @@
       opacity: 0.4 !important;
       cursor: no-drop !important;
     }
+  }
+  .nbp-input-check {
+    color: var(--nbp-primary) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
   }
 }
 
@@ -124,6 +136,12 @@
       cursor: no-drop !important;
     }
   }
+  .nbp-input-check {
+    color: var(--nbp-info) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
+  }
 }
 
 .nbp-input-switch-two-info {
@@ -171,6 +189,12 @@
       opacity: 0.4 !important;
       cursor: no-drop !important;
     }
+  }
+  .nbp-input-check {
+    color: var(--nbp-warning) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
   }
 }
 
@@ -220,6 +244,12 @@
       cursor: no-drop !important;
     }
   }
+  .nbp-input-check {
+    color: var(--nbp-danger) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
+  }
 }
 
 .nbp-input-switch-two-danger {
@@ -267,6 +297,12 @@
       opacity: 0.4 !important;
       cursor: no-drop !important;
     }
+  }
+  .nbp-input-check {
+    color: var(--nbp-secondary) !important;
+  }
+  .nbp-input-remove {
+    color: var(--nbp-white) !important;
   }
 }
 

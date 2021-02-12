@@ -1,12 +1,19 @@
-import { Component, Injector, Input, Output, OnInit, EventEmitter } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Injector,
+  Input,
+  OnInit,
+  Output,
+} from "@angular/core";
 import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-input-switch-one",
-  templateUrl: "./nbp-input-switch-one.component.html",
-  styleUrls: ["./nbp-input-switch-one.component.scss"],
+  selector: "nbp-input-switch-three",
+  templateUrl: "./nbp-input-switch-three.component.html",
+  styleUrls: ["./nbp-input-switch-three.component.scss"],
 })
-export class NbpInputSwitchOneComponent
+export class NbpInputSwitchThreeComponent
   extends NbpBaseComponent
   implements OnInit {
   constructor(injector: Injector) {
@@ -18,20 +25,25 @@ export class NbpInputSwitchOneComponent
   @Input() nbpInputSwitchChecked: boolean;
   @Input() nbpInputSwitchDisabled: boolean;
 
-  @Output() nbpInputSwitchOnClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output()
+  nbpInputSwitchOnClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
   }
 
   nbpSetUpComponent() {
+    this.nbpSwitch = this.nbpInputSwitchChecked ? Boolean(true) : Boolean(false); 
     this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpInputSwitchType);
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpInputSwitchType, this._border.BORDER)
+    this.nbpBorder = this.nbpGetBorderClasse(
+      this.nbpInputSwitchType,
+      this._border.BORDER
+    );
   }
 
   // Functions
   nbpGetSwitchType() {
-    return 'nbp-input-switch-one-' + this.nbpInputSwitchType.toLowerCase();
+    return "nbp-input-switch-one-" + this.nbpInputSwitchType.toLowerCase();
   }
 
   nbpInputSwitchClick(event) {

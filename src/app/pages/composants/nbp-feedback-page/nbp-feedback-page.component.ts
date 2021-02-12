@@ -8,7 +8,8 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 })
 export class NbpFeedbackPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'Feedback Page';
+  title1 = 'Feedback Page';
+  title2 = 'Feedback Page with cta';
 
   constructor(injector:Injector) {
     super(injector);

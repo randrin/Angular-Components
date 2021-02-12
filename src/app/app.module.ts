@@ -93,6 +93,7 @@ import { NbpDividingLineThreeComponent } from './components/nbp-dividing-lines/n
 import { NbpDividingLineFourthComponent } from './components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component';
 import { NbpBoxeOneComponent } from './components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component';
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { NbpInputSwitchThreeComponent } from './components/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component';
 
 @NgModule({
   declarations: [
@@ -182,7 +183,8 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     NbpDividingLineThreeComponent,
     NbpDividingLineFourthComponent,
     NbpBoxeOneComponent,
-    NbpBoxePageComponent  
+    NbpBoxePageComponent,
+    NbpInputSwitchThreeComponent  
   ],
 
 
