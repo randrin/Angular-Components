@@ -2,13 +2,6 @@
   .modal-content {
     border: 1px solid transparent !important;
     border-radius: 0 !important;
-    // .modal-header {
-    //   border-bottom: 1px solid var(--nbp-sliver) !important;
-    //   color: var(--nbp-white) !important;
-    //   border-top-left-radius: 0 !important;
-    //   border-top-right-radius: 0 !important;
-
-    // }
 
     .modal-body {
       text-align: center;
@@ -18,12 +11,29 @@
       }
 
       .close {
-        color: var(--nbp-primary) !important;
-        top: -80px;
+        padding: 15px !important;
         position: relative;
-        left: 15px;
+        margin-top: -85px !important;
+        right: -20px;
+        opacity: 1;
+        border: 2px solid var(--nbp-primary) !important;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIxMi45ODIgMjEyLjk4MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEyLjk4MiAyMTIuOTgyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGcgaWQ9IkNsb3NlIj4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik0xMzEuODA0LDEwNi40OTFsNzUuOTM2LTc1LjkzNmM2Ljk5LTYuOTksNi45OS0xOC4zMjMsMC0yNS4zMTIgICBjLTYuOTktNi45OS0xOC4zMjItNi45OS0yNS4zMTIsMGwtNzUuOTM3LDc1LjkzN0wzMC41NTQsNS4yNDJjLTYuOTktNi45OS0xOC4zMjItNi45OS0yNS4zMTIsMGMtNi45ODksNi45OS02Ljk4OSwxOC4zMjMsMCwyNS4zMTIgICBsNzUuOTM3LDc1LjkzNkw1LjI0MiwxODIuNDI3Yy02Ljk4OSw2Ljk5LTYuOTg5LDE4LjMyMywwLDI1LjMxMmM2Ljk5LDYuOTksMTguMzIyLDYuOTksMjUuMzEyLDBsNzUuOTM3LTc1LjkzN2w3NS45MzcsNzUuOTM3ICAgYzYuOTg5LDYuOTksMTguMzIyLDYuOTksMjUuMzEyLDBjNi45OS02Ljk5LDYuOTktMTguMzIyLDAtMjUuMzEyTDEzMS44MDQsMTA2LjQ5MXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) no-repeat 9px 9px;
+        background-size: 13px;
+        text-indent: -999px;
+        overflow: hidden;
+        width: 33px;
+        height: 33px;
+        background-color: var(--nbp-primary) !important;
+
         &:focus {
           outline: none !important;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          background-color: var(--nbp-primary) !important;
         }
       }
     }
