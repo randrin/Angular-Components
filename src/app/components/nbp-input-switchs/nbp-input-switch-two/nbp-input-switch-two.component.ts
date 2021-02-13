@@ -26,7 +26,7 @@ export class NbpInputSwitchTwoComponent
 
   nbpSetUpComponent() {
     this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpInputSwitchType);
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpInputSwitchType, this._border.BORDER)
+    this.nbpBorder = this.nbpGetBorderClasse(this.nbpInputSwitchType, this._type.BORDER)
   }
 
     // Functions

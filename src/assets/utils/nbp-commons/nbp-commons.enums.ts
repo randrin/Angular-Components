@@ -55,6 +55,7 @@ export enum NbpStyle {
  * SM - Small
  */
 export enum NbpSize {
+  XS = "XS",
   SM = "SM",
   LG = "LG",
   MD = "MD",
@@ -80,11 +81,13 @@ export enum NbpCtaType {
 /**
  * Enum per la definizione del tipo del border da utilizzare
  */
-export enum NbpBorder {
+export enum NbpType {
   BORDER = "BORDER",
   COLOR = "COLOR",
   LEFT = "LEFT",
   TOP = "TOP",
+  SWITCH = "SWITCH",
+  BUTTON = "BUTTON",
 }
 
 export enum NbpPipe {

@@ -212,4 +212,80 @@
       ></nbp-input-switch-three>
     </div>
   </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title4"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.LG"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.primary
+        "
+        [nbpInputSwitchType]="_style.PRIMARY"
+        [nbpInputSwitchDisabled]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.MD"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.success
+        "
+        [nbpInputSwitchType]="_style.SUCCESS"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.SM"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.default
+        "
+        [nbpInputSwitchType]="_style.DEFAULT"
+        [nbpInputSwitchChecked]="false"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.XS"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.danger
+        "
+        [nbpInputSwitchType]="_style.DANGER"
+        [nbpInputSwitchChecked]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.LG"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.warning
+        "
+        [nbpInputSwitchType]="_style.WARNING"
+        [nbpInputSwitchChecked]="true"
+        [nbpInputSwitchDisabled]="true"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+    <div class="col-md-2">
+      <nbp-input-switch-fourth
+        [nbpInputSwitchSize]="_size.MD"
+        [nbpInputSwitchName]="
+          _model.component.NbpInputSwitchOneComponent.fourth.info
+        "
+        [nbpInputSwitchType]="_style.INFO"
+        (nbpToogleButtonOnClick)="nbpToogleButtonOnClick($event)"
+      ></nbp-input-switch-fourth>
+    </div>
+  </div>
 </div>

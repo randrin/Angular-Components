@@ -21,6 +21,6 @@ export class NbpPanelTitleThreeComponent extends NbpBaseComponent implements OnI
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._border.TOP);
+    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._type.TOP);
   }
 }

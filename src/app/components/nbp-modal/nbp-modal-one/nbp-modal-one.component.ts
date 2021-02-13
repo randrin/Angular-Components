@@ -42,7 +42,7 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   nbpSetUpComponent() {
     this.modalName = 'nbp' + uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
-    this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpModalType) + this.nbpSeparator + this.nbpGetBorderClasse(this.nbpModalType, this._border.BORDER);
+    this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpModalType) + this.nbpSeparator + this.nbpGetBorderClasse(this.nbpModalType, this._type.BORDER);
     this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
     this.nbpModalScrolls;
     this.nbpModalStaticModes;
