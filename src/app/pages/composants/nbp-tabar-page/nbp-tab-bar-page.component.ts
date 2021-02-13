@@ -8,6 +8,7 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 })
 
 export class NbpTabbarPageComponent extends NbpBaseComponent implements OnInit {
+  nbpTabbarOneConIcon = true;
   constructor(injector:Injector) {
     super(injector);
   }

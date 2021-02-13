@@ -24,6 +24,7 @@ export class NbpTabBarThreeComponent extends NbpBaseComponent implements OnInit 
   nbpTabbarTypes:string
   nbpTabbarPositionAndType: string;
   nbpSizeTooltip: string;
+  nbpTabbarOneConIcon = true
 
 
   constructor(injector:Injector) {

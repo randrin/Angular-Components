@@ -2,7 +2,7 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one 
-       [nbpTitle]="'tab-bar'" 
+       [nbpTitle]="'tab-bar 1 & 2'" 
        [nbpColorStyle]="_style.DEFAULT">
       </nbp-dividing-line-one>
     </div>
@@ -15,7 +15,8 @@
         [NbpTabbarInputFour]="'Address'"
         [NbpTabbarInputFive]="'Disabled card'">
       </nbp-tab-bar>
-    </div>  
+    </div>
+    <br>  
     <div class="col-18">
       <nbp-tab-bar  
         [NbpTabbarPosition]="_tabbarPosition.CENTER"  
@@ -26,6 +27,7 @@
         [NbpTabbarInputFive]="'Disabled card'">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">  
       <nbp-tab-bar 
       [NbpTabbarPosition]="_tabbarPosition.RIGHT"  
@@ -36,6 +38,7 @@
       [NbpTabbarInputFive]="'Disabled card'">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">  
       <nbp-tab-bar 
       [NbpTabbarPosition]="_tabbarPosition.FLEX"  
@@ -46,6 +49,7 @@
       [NbpTabbarInputFive]="'Disabled card'">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">
       <nbp-tab-bar 
         [NbpTabbarPosition]="_tabbarPosition.LEFT"   
@@ -57,6 +61,7 @@
         [NbpTabbarType]="_tabbarType.PILLS">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">
       <nbp-tab-bar 
         [NbpTabbarPosition]="_tabbarPosition.CENTER"   
@@ -68,6 +73,7 @@
         [NbpTabbarType]="_tabbarType.PILLS">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">
       <nbp-tab-bar 
         [NbpTabbarPosition]="_tabbarPosition.RIGHT"   
@@ -79,6 +85,7 @@
         [NbpTabbarType]="_tabbarType.PILLS">
       </nbp-tab-bar>
     </div>
+    <br>
     <div class="col-18">  
       <nbp-tab-bar 
       [NbpTabbarInputOne]="'Active'" 
@@ -89,14 +96,18 @@
       [NbpTabbarType]="_tabbarType.JUSTIFIED">  
       </nbp-tab-bar> 
     </div>
-    <div class="row text-center">
-      <div class="col">
-        <nbp-dividing-line-one 
-         [nbpTitle]="'tab-bar 2'" 
-         [nbpColorStyle]="_style.DEFAULT">
-        </nbp-dividing-line-one>
-      </div>
+    <br>
+    <div class="col-18">  
+      <nbp-tab-bar 
+      [NbpTabbarInputOne]="'Active'" 
+      [NbpTabbarInputTwo]="'Links'" 
+      [NbpTabbarInputThree]="'Google'"
+      [NbpTabbarInputFour]="'Address'"
+      [NbpTabbarInputFive]="'Disabled card'"
+      [NbpTabbarType]="_tabbarType.PILLSANDJUSTIFY">  
+      </nbp-tab-bar> 
     </div>
+    <br>
     <div class="col-18">
       <nbp-tab-bar-two 
         [NbpTabbarInputOne]="'Active'" 
@@ -215,6 +226,93 @@
     <br>
     <div class="col-18">
       <nbp-tab-bar-three 
+        [NbpTabbarPosition]="_tabbarPosition.LEFT"
+        [NbpTabbarInputOne]="'CALENDAR'" 
+        [NbpTabbarInputTwo]="'DOCUMENT'" 
+        [NbpTabbarInputThree]="'SETTINGS'"
+        [NbpTabbarInputFour]="'UTENTE ADDRESS'"
+        [NbpTabbarInputFive]="'BUSSINESS TIME'"
+        [NbpTabbarType]="_tabbarType.PILLS"
+        [nbpTabbarIconNameOne]="'nbp-icon-calendar-minus'" 
+        [nbpTabbarIconNameTwo]="'nbp-icon-briefcase'"
+        [nbpTabbarIconNameThree]="'nbp-icon-bars'"
+        [nbpTabbarIconNameFour]="'nbp-icon-address-book'"
+        [nbpTabbarIconNameFive]="'nbp-icon-business-time'">
+      </nbp-tab-bar-three>
+    </div>
+    <br>
+    <div class="col-18">
+      <nbp-tab-bar-three 
+        [NbpTabbarPosition]="_tabbarPosition.CENTER"
+        [NbpTabbarInputOne]="'CALENDAR'" 
+        [NbpTabbarInputTwo]="'DOCUMENT'" 
+        [NbpTabbarInputThree]="'SETTINGS'"
+        [NbpTabbarInputFour]="'UTENTE ADDRESS'"
+        [NbpTabbarInputFive]="'BUSSINESS TIME'"
+        [NbpTabbarType]="_tabbarType.PILLS"
+        [nbpTabbarIconNameOne]="'nbp-icon-calendar-minus'" 
+        [nbpTabbarIconNameTwo]="'nbp-icon-briefcase'"
+        [nbpTabbarIconNameThree]="'nbp-icon-bars'"
+        [nbpTabbarIconNameFour]="'nbp-icon-address-book'"
+        [nbpTabbarIconNameFive]="'nbp-icon-business-time'">
+      </nbp-tab-bar-three>
+    </div>
+    <br>
+    <div class="col-18">
+      <nbp-tab-bar-three 
+        [NbpTabbarPosition]="_tabbarPosition.RIGHT"
+        [NbpTabbarInputOne]="'CALENDAR'" 
+        [NbpTabbarInputTwo]="'DOCUMENT'" 
+        [NbpTabbarInputThree]="'SETTINGS'"
+        [NbpTabbarInputFour]="'UTENTE ADDRESS'"
+        [NbpTabbarInputFive]="'BUSSINESS TIME'"
+        [NbpTabbarType]="_tabbarType.PILLS"
+        [nbpTabbarIconNameOne]="'nbp-icon-calendar-minus'" 
+        [nbpTabbarIconNameTwo]="'nbp-icon-briefcase'"
+        [nbpTabbarIconNameThree]="'nbp-icon-bars'"
+        [nbpTabbarIconNameFour]="'nbp-icon-address-book'"
+        [nbpTabbarIconNameFive]="'nbp-icon-business-time'">
+      </nbp-tab-bar-three>
+    </div>
+    <br>
+    <br>
+    <div class="col-18">
+      <nbp-tab-bar-three 
+        [NbpTabbarPosition]="_tabbarPosition.RIGHT"
+        [NbpTabbarInputOne]="'CALENDAR'" 
+        [NbpTabbarInputTwo]="'DOCUMENT'" 
+        [NbpTabbarInputThree]="'SETTINGS'"
+        [NbpTabbarInputFour]="'UTENTE ADDRESS'"
+        [NbpTabbarInputFive]="'BUSSINESS TIME'"
+        [NbpTabbarType]="_tabbarType.JUSTIFIED"
+        [nbpTabbarIconNameOne]="'nbp-icon-calendar-minus'" 
+        [nbpTabbarIconNameTwo]="'nbp-icon-briefcase'"
+        [nbpTabbarIconNameThree]="'nbp-icon-bars'"
+        [nbpTabbarIconNameFour]="'nbp-icon-address-book'"
+        [nbpTabbarIconNameFive]="'nbp-icon-business-time'">
+      </nbp-tab-bar-three>
+    </div>
+    <br>
+    <br>
+    <div class="col-18">
+      <nbp-tab-bar-three 
+        [NbpTabbarPosition]="_tabbarPosition.RIGHT"
+        [NbpTabbarInputOne]="'CALENDAR'" 
+        [NbpTabbarInputTwo]="'DOCUMENT'" 
+        [NbpTabbarInputThree]="'SETTINGS'"
+        [NbpTabbarInputFour]="'UTENTE ADDRESS'"
+        [NbpTabbarInputFive]="'BUSSINESS TIME'"
+        [NbpTabbarType]="_tabbarType.PILLSANDJUSTIFY"
+        [nbpTabbarIconNameOne]="'nbp-icon-calendar-minus'" 
+        [nbpTabbarIconNameTwo]="'nbp-icon-briefcase'"
+        [nbpTabbarIconNameThree]="'nbp-icon-bars'"
+        [nbpTabbarIconNameFour]="'nbp-icon-address-book'"
+        [nbpTabbarIconNameFive]="'nbp-icon-business-time'">
+      </nbp-tab-bar-three>
+    </div>
+    <br>
+    <div class="col-18">
+      <nbp-tab-bar-three 
         [NbpTabbarPosition]="_tabbarPosition.FLEX"
         [NbpTabbarInputOne]="'CALENDAR'" 
         [NbpTabbarInputTwo]="'DOCUMENT'" 
@@ -267,3 +365,5 @@
       </nbp-tab-bar-five>
     </div>
 </div>  
+
+
