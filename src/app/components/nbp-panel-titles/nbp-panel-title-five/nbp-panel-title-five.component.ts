@@ -25,6 +25,6 @@ export class NbpPanelTitleFiveComponent extends NbpBaseComponent implements OnIn
   nbpSetUpComponent() {
     this.nbpPanel = this.nbpGetColorClasse(this.nbpPanelTitleStyle) + this.nbpSeparator + this.nbpGetBackgroundPanelTitleClasse(this.nbpPanelTitleStyle);
     this.nbpAlertBoxIcon = this.nbpGetIconClasse(this.nbpPanelTitleStyle);
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._border.LEFT);
+    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._type.LEFT);
   }
 }

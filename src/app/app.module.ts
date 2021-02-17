@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NbpDividingLineOneComponent } from './components/nbp-dividing-lines/nbp-dividing-line-one/nbp-dividing-line-one.component';
@@ -93,6 +93,13 @@ import { NbpDividingLineThreeComponent } from './components/nbp-dividing-lines/n
 import { NbpDividingLineFourthComponent } from './components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component';
 import { NbpBoxeOneComponent } from './components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component';
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { NbpInputSwitchThreeComponent } from './components/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component';
+import { NbpInputSwitchFourthComponent } from './components/nbp-input-switchs/nbp-input-switch-fourth/nbp-input-switch-fourth.component';
+import { NbpAuthService } from './services/nbp-auth.service';
+import { NbpLoginOneComponent } from './components/nbp-logins/nbp-login-one/nbp-login-one.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { NbpLocalStorage } from './utils/nbp-local-storage';
 
 @NgModule({
   declarations: [
@@ -182,7 +189,12 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     NbpDividingLineThreeComponent,
     NbpDividingLineFourthComponent,
     NbpBoxeOneComponent,
-    NbpBoxePageComponent  
+    NbpBoxePageComponent,
+    NbpInputSwitchThreeComponent,
+    NbpInputSwitchFourthComponent,
+    NbpLoginOneComponent,
+    LoginComponent,
+    RegisterComponent  
   ],
 
 
@@ -190,11 +202,15 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
     BrowserModule,
     DataTablesModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     TooltipModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    NbpAuthService, 
+    NbpLocalStorage
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

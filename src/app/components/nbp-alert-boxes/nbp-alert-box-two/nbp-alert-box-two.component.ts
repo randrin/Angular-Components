@@ -20,7 +20,7 @@ export class NbpAlertBoxTwoComponent extends NbpBaseComponent implements OnInit 
   // Functions
   nbpSetUpComponent() {
     this.nbpAlertBoxIcon = this.nbpGetIconClasse(this.nbpAlertType);
-    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType, this._border.BORDER);
+    this.nbpAlertBoxType = this.nbpGetBorderClasse(this.nbpAlertType, this._type.BORDER);
     this.nbpAlertBoxColor = this.nbpGetColorClasse(this.nbpAlertType);
   }
 }

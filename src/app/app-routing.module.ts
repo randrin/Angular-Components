@@ -33,10 +33,14 @@ import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-p
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   {
     path: 'composants', component: ComposantsComponent,
     children: [
