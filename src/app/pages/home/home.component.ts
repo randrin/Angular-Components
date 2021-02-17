@@ -3,7 +3,7 @@ import { Model } from 'src/app/models/model';
 import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from 'src/assets/utils/nbp-commons/nbp-commons.enums';
 
 @Component({
-  selector: 'app-home',
+  selector: 'nbp-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

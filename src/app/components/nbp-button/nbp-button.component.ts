@@ -13,6 +13,7 @@ export class NbpButtonComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpButtonForm: string;
   @Input() nbpButtonSize: string;
   @Input() nbpButtonDisabled: boolean;
+  @Input() nbpButtonFullWidth: boolean;
 
   constructor(injector: Injector) {
     super(injector);
@@ -38,7 +39,9 @@ export class NbpButtonComponent extends NbpBaseComponent implements OnInit {
       this.nbpSeparator +
       this.nbpGetSizeClasse(this.nbpButtonSize, this._type.BUTTON) +
       this.nbpSeparator +
-      this.nbpGetFormClasse();
+      this.nbpGetFormClasse() +
+      this.nbpSeparator + 
+      (this.nbpButtonFullWidth ? this.nbpButtonDefault.full : this.nbpButtonDefault.content);
   }
 
   nbpGetFormClasse() {

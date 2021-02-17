@@ -1,6 +1,9 @@
 // import nbpScrollTopScript from "./components/nbp-scroll-top/nbp-scroll-top-script";
 // import nbpAlertBoxScript from "./components/nbp-alert-box/nbp-alert-box-script";
 
+// Url to bak end -  See: https://github.com/randrin/Server-Components 
+var baseUrl = 'http://localhost:9192';
+
 // Go to Top Page & Scroll Navbar Effet
 $(document).ready(function () {
   $(window).scroll(function () {

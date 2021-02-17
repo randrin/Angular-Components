@@ -1,0 +1,14 @@
+.nbp-login-wrapper {
+  .nbp-login-container {
+    .nbp-login-row {
+      display: flex;
+      justify-content: center;
+      .nbp-login-content {
+          border: 2px solid var(--nbp-primary) !important;
+          border-radius: 5px;
+          margin: 20px;
+          padding: 25px;
+      }
+    }
+  }
+}

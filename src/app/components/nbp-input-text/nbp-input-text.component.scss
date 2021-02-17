@@ -1,5 +1,5 @@
 .nbp-input-text-wrapper {
-  padding: 15px 0px;
+  padding: 0px;
   .nbp-input-text-container {
     text-align: left;
     .nbp-input-text-label {
@@ -13,7 +13,6 @@
       position: relative;
       .nbp-form-control {
         background-clip: border-box;
-        // border-radius: 1.5625rem;
         padding: 0.625rem 3.4375rem 0.625rem 1.5625rem;
         border-width: 0.0625rem;
         border-style: solid;
@@ -45,8 +44,7 @@
     }
     .nbp-input-text-error-message {
       font-size: 0.875em;
-      margin-top: 0.7em;
-      margin-bottom: 0.7em;
+      margin: 0.325rem 3.4375rem 0.325rem 1.5625rem;
       opacity: 1;
       transition: all ease-out 0.25s;
       color: var(--nbp-tomato);
