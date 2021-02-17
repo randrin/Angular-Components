@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
+import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
   NbpTextTransformClasse,
@@ -48,6 +49,7 @@ import {
 export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
+  nbpLocalStorage = new NbpLocalStorage();
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -107,6 +109,11 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
+  nbpToken: string = "";
+  nbpLogin = {
+    userName: "",
+    password: "",
+  };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
     RIGHT: "nbp-deep-link-right",
@@ -120,6 +127,10 @@ export class NbpBaseComponent implements OnInit {
     text: "text",
     password: "password",
     clean: "fa fa-times-circle",
+  };
+  nbpButtonDefault = {
+    full: "nbp-button-full-width",
+    content: "",
   };
   nbpInputPasswordIcon = {
     SHOW: "fa fa-unlock",
@@ -136,6 +147,25 @@ export class NbpBaseComponent implements OnInit {
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
     this.router = injector.get(Router);
+
+    // Get the token in localStorage
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+
+    // Check if tken exist in localStorage
+    // 1) If exists, go to the previous page
+    // 2) If exists and the user want to go to login or register, go to home page
+    if (this.nbpToken && !!this.nbpToken.length) {
+      if (this.activatedRoute.snapshot.url[0]?.path !== undefined) {
+        const nbpUrl = this.activatedRoute.snapshot.url[0]?.path;
+        this.router.navigateByUrl("/" + nbpUrl);
+      }
+      if (
+        this.activatedRoute.snapshot.url[0]?.path === "login" ||
+        this.activatedRoute.snapshot.url[0]?.path === "register"
+      ) {
+        this.router.navigateByUrl("/home");
+      }
+    }
   }
 
   ngOnInit(): void {}
