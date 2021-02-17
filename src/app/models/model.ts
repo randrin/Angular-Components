@@ -1,6 +1,6 @@
 export class Model {
   component = {
-    NbpLoginComponent: {
+    NbpAuthComponent: {
       textInput: {
         label: "Username",
         name: "username",
@@ -18,9 +18,27 @@ export class Model {
         hidePassword: "fa fa-lock",
         showPassword: "fa fa-unlock",
       },
+      confirmPasswordInput: {
+        label: "Confirm Password",
+        name: "confirmPassword",
+        required: "true",
+        requiredMessage: "The confirm password is required",
+        placeholder: "Confirn your password",
+        hidePassword: "fa fa-lock",
+        showPassword: "fa fa-unlock",
+      },
+      emailInput: {
+        label: "Email",
+        name: "email",
+        required: "true",
+        requiredMessage: "The email is required",
+        placeholder: "Insert your email",
+        icon: "fa fa-envelope",
+      },
       submitInput: {
         login: "Login",
         register: "Register",
+        success: "Go to Login Page"
       },
       newUser: "New User?"
     },

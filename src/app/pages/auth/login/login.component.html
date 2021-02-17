@@ -10,52 +10,58 @@
           <div class="form-group">
             <nbp-input-text
               [nbpInputLabel]="
-                _model.component.NbpLoginComponent.textInput.label
+                _model.component.NbpAuthComponent.textInput.label
+              "
+              [nbpInputName]="
+                _model.component.NbpAuthComponent.textInput.name
               "
               [nbpInputLabelRequired]="
-                _model.component.NbpLoginComponent.textInput.required
+                _model.component.NbpAuthComponent.textInput.required
               "
               [nbpInputRequired]="true"
               [nbpInputBorderType]="_style.ROUNDED"
               [nbpInputErrorMessage]="
-                _model.component.NbpLoginComponent.textInput.requiredMessage
+                _model.component.NbpAuthComponent.textInput.requiredMessage
               "
               [nbpInputPlaceholder]="
-                _model.component.NbpLoginComponent.textInput.placeholder
+                _model.component.NbpAuthComponent.textInput.placeholder
               "
-              [nbpInputIcon]="_model.component.NbpLoginComponent.textInput.icon"
+              [nbpInputIcon]="_model.component.NbpAuthComponent.textInput.icon"
               [nbpInputIconRequired]="true"
-              (nbpInputModel)="nbpInputTextModel($event)"
+              (nbpInputModel)="nbpInputModel($event)"
             ></nbp-input-text>
           </div>
           <div class="form-group">
             <nbp-input-password
               [nbpInputLabel]="
-                _model.component.NbpLoginComponent.passwordInput.label
+                _model.component.NbpAuthComponent.passwordInput.label
+              "
+              [nbpInputName]="
+                _model.component.NbpAuthComponent.passwordInput.name
               "
               [nbpInputLabelRequired]="
-                _model.component.NbpLoginComponent.passwordInput.required
+                _model.component.NbpAuthComponent.passwordInput.required
               "
               [nbpInputRequired]="true"
               [nbpInputBorderType]="_style.ROUNDED"
               [nbpInputErrorMessage]="
-                _model.component.NbpLoginComponent.passwordInput.requiredMessage
+                _model.component.NbpAuthComponent.passwordInput.requiredMessage
               "
               [nbpInputPlaceholder]="
-                _model.component.NbpLoginComponent.passwordInput.placeholder
+                _model.component.NbpAuthComponent.passwordInput.placeholder
               "
               [nbpInputIcon]="
-                _model.component.NbpLoginComponent.passwordInput.hidePassword
+                _model.component.NbpAuthComponent.passwordInput.hidePassword
               "
               [nbpInputIconRequired]="true"
-              (nbpInputModel)="nbpInputPasswordModel($event)"
+              (nbpInputModel)="nbpInputModel($event)"
             ></nbp-input-password>
           </div>
           <div class="form-group">
             <nbp-button
               class="nbp-login-submit"
               [nbpButtonLabel]="
-                _model.component.NbpLoginComponent.submitInput.login
+                _model.component.NbpAuthComponent.submitInput.login
               "
               [nbpButtonSize]="_size.MD"
               [nbpButtonColor]="_style.PRIMARY"
@@ -67,14 +73,14 @@
           </div>
         </form>
         <nbp-dividing-line-one
-          [nbpTitle]="_model.component.NbpLoginComponent.newUser"
+          [nbpTitle]="_model.component.NbpAuthComponent.newUser"
           [nbpColorStyle]="_style.DEFAULT"
         >
         </nbp-dividing-line-one>
         <div class="form-group">
           <nbp-button
             [nbpButtonLabel]="
-              _model.component.NbpLoginComponent.submitInput.register
+              _model.component.NbpAuthComponent.submitInput.register
             "
             [nbpButtonSize]="_size.MD"
             [nbpButtonColor]="_style.PRIMARYHOVER"

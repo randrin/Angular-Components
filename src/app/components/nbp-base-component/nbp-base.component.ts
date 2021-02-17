@@ -110,9 +110,17 @@ export class NbpBaseComponent implements OnInit {
 
   nbpSeparator: string = " ";
   nbpToken: string = "";
-  nbpLogin = {
-    userName: "",
-    password: "",
+  nbpAuth = {
+    login: {
+      userName: "",
+      password: "",
+    },
+    register: {
+      userName: "",
+      password: "",
+      email: ""
+    }
+
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",

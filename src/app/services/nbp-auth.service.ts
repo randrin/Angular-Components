@@ -13,4 +13,8 @@ export class NbpAuthService {
   public NbpLoginService(nbpUser) {
     return this.http.post(this.nbpLoginUrl, nbpUser);
   }
+
+  public NbpRegisterService(nbpUser) {
+    return this.http.post(this.nbpRegisterUrl, nbpUser);
+  }
 }

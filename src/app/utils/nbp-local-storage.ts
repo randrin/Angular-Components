@@ -6,4 +6,8 @@ export class NbpLocalStorage {
       }
     }
   }
+
+  NbpSetTokenLocalStorage(toekn) {
+    localStorage.setItem("jwtToken", JSON.stringify(toekn))
+  }
 }

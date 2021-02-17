@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpAuthService } from "src/app/services/nbp-auth.service";
+import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
 @Component({
   selector: "nbp-login",
@@ -11,7 +12,7 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
   nbpLoginDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
 
-  constructor(injector: Injector, private nbpAuthService: NbpAuthService) {
+  constructor(injector: Injector, private nbpAuthService: NbpAuthService, nbpLocalStorage: NbpLocalStorage) {
     super(injector);
   }
 
@@ -21,7 +22,7 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
 
   nbpSetUpComponent() {
     this.nbpLoginDisabled =
-      !this.nbpLogin.userName.length || !this.nbpLogin.password.length
+      !this.nbpAuth.login.userName.length || !this.nbpAuth.login.password.length
         ? true
         : false;
     this.nbpLoginErrorMessage = "";
@@ -29,10 +30,9 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpLoginSubmit() {
-    this.nbpAuthService.NbpLoginService(this.nbpLogin).subscribe(
+    this.nbpAuthService.NbpLoginService(this.nbpAuth.login).subscribe(
       (response) => {
-        console.log("response: ", response);
-        localStorage.setItem("jwtToken", JSON.stringify(response));
+        this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
         this.router.navigateByUrl("/home");
       },
       (err) => {
@@ -46,13 +46,13 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.router.navigateByUrl("/register");
   }
 
-  nbpInputTextModel(event) {
-    this.nbpLogin.userName = event;
-    this.nbpSetUpComponent();
-  }
-
-  nbpInputPasswordModel(event) {
-    this.nbpLogin.password = event;
+  nbpInputModel(event) {
+    if(event.name === "username") {
+      this.nbpAuth.login.userName = event.value;
+    }
+    if(event.name === "password") {
+      this.nbpAuth.login.password = event.value;
+    }
     this.nbpSetUpComponent();
   }
 }
