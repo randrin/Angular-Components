@@ -1,7 +1,7 @@
 <div class="nbp-register-wrapper">
   <div class="nbp-register-container container">
     <div class="row nbp-register-row">
-      <div class="col-md-6 nbp-register-content" *ngIf="!nbpRegisterSuccess">
+      <div class="col-md-5 nbp-register-content" *ngIf="!nbpRegisterSuccess">
         <nbp-alert-box-fourth
           *ngIf="!!nbpRegisterErrorMessage.length"
           [nbpText]="nbpRegisterErrorMessage"
@@ -123,7 +123,7 @@
           </div>
         </form>
         <nbp-dividing-line-one
-          [nbpTitle]="_model.component.NbpAuthComponent.newUser"
+          [nbpTitle]="_model.component.NbpAuthComponent.alreadyUser"
           [nbpColorStyle]="_style.DEFAULT"
         >
         </nbp-dividing-line-one>

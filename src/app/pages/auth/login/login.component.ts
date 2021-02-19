@@ -11,6 +11,7 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 export class LoginComponent extends NbpBaseComponent implements OnInit {
   nbpLoginDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
+  nbpLoginErrorType: string = "";
 
   constructor(injector: Injector, private nbpAuthService: NbpAuthService, nbpLocalStorage: NbpLocalStorage) {
     super(injector);
@@ -37,6 +38,11 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
       },
       (err) => {
         console.log("err: ", err);
+        if (err.status === 401) {
+          this.nbpLoginErrorType = this._alert.WARNING;
+        } else {
+          this.nbpLoginErrorType = this._alert.ERROR;
+        }
         this.nbpLoginErrorMessage = err.error.message;
       }
     );
