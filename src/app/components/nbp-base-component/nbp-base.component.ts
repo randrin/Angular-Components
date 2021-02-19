@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
+import { NbpUser } from "src/app/models/user/nbpUser";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
@@ -50,6 +51,7 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
+  nbpUser = new NbpUser(0, "", "", "", false, "")
 
   _alertType = NbpAlertType;
   _style = NbpStyle;

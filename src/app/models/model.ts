@@ -40,7 +40,8 @@ export class Model {
         register: "Register",
         success: "Go to Login Page"
       },
-      newUser: "New User?"
+      newUser: "New User?",
+      alreadyUser: "Already have an account?"
     },
     NbpBoxeComponent: {
       boxes: [

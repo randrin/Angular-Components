@@ -8,4 +8,48 @@
       ></nbp-dividing-line-one>
     </div>
   </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-alert-box-one
+        *ngIf="nbpShowErrorMessage"
+        [nbpText]="nbpErrorMessage"
+        [nbpAlertType]="_alert.ERROR"
+      ></nbp-alert-box-one>
+      <div class="col-md-2">
+        <nbp-button
+          [nbpButtonLabel]="'Logout'"
+          [nbpButtonSize]="_size.MD"
+          [nbpButtonColor]="_style.DANGERHOVER"
+          [nbpButtonType]="_style.OUTLINE"
+          (click)="NbpOnLogout()"
+        ></nbp-button>
+      </div>
+      <nbp-background-box
+        *ngIf="!nbpShowErrorMessage"
+        [nbpBackgroundStyle]="_style.PRIMARY"
+        [nbpColorStyle]="_style.WHITE"
+        [nbpTitle]="nbpUser.userName"
+        [nbpSubTitle]="nbpUser.email"
+        [nbpFontSize]="_fontSize.MEDIUM"
+        [nbpTextTransform]="_pipe.UPPERCASE"
+      >
+      </nbp-background-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1" *ngFor="let role of nbpUserRoles">
+      <div *ngIf="role === 'ROLE_ADMIN'">
+        <nbp-badge-one
+          [nbpBadgeName]="'Admin'"
+          [nbpBadgeStyle]="_style.SUCCESS"
+        ></nbp-badge-one>
+      </div>
+      <div *ngIf="role === 'ROLE_USER'">
+        <nbp-badge-one
+          [nbpBadgeName]="'User'"
+          [nbpBadgeStyle]="_style.PRIMARY"
+        ></nbp-badge-one>
+      </div>
+    </div>
+  </div>
 </div>
