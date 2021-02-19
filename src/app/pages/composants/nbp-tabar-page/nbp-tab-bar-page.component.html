@@ -9,15 +9,11 @@
   </div>
     <div class="col-18">
       <nbp-tab-bar 
-        [NbpTabbarInputOne]="'Active'" 
-        [NbpTabbarInputTwo]="'Links'" 
-        [NbpTabbarInputThree]="'Google'"
-        [NbpTabbarInputFour]="'Address'"
-        [NbpTabbarInputFive]="'Disabled card'">
+        [NbpTabbarInputOne]="_model.component.NbpTabBarComponent.title">
       </nbp-tab-bar>
     </div>
     <br>  
-    <div class="col-18">
+    <!-- <div class="col-18">
       <nbp-tab-bar  
         [NbpTabbarPosition]="_tabbarPosition.CENTER"  
         [NbpTabbarInputOne]="'Active'" 
@@ -363,7 +359,7 @@
         [nbpTabbarContentFour]="'nbp-icon-address-book'"
         [nbpTabbarContentFive]="'nbp-icon-business-time'">
       </nbp-tab-bar-five>
-    </div>
+    </div> -->
 </div>  
 
 

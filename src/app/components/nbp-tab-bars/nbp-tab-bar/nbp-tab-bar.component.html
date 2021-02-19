@@ -1,9 +1,9 @@
 <div class="nbp-tab-bar-wrapper">
     <ul [class]="nbpTabbarPositionAndType" class ="nav">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="composants/tab-bar">{{NbpTabbarInputOne}}</a>
+        <li class="nav-item" *ngFor="let item of NbpTabbarInputOne">
+            <a class="nav-link active" aria-current="page" href={{item.url}}>{{item.name}}</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="composants/tab-bar">{{NbpTabbarInputTwo}}</a>
         </li>
         <li class="nav-item">
@@ -11,7 +11,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="https://www.google.it/">{{NbpTabbarInputFour}}</a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{{NbpTabbarInputFive}}</a>
         </li>
