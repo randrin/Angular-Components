@@ -12,6 +12,8 @@ export class NbpInputSwitchPageComponent extends NbpBaseComponent implements OnI
 
   title1 = 'Input Switch rounded 1 Page';
   title2 = 'Input Switch rounded 2 Page';
+  title3 = 'Input Switch rounded with icon Page';
+  title4 = 'Input Switch rounded with ON/OFF Page';
 
   ngOnInit(): void {
   }

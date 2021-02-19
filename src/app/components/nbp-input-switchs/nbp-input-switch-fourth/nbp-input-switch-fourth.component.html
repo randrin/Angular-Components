@@ -1,0 +1,24 @@
+<div class="nbp-input-switch-fourth-wrapper">
+  <div class="nbp-input-switch-fourth-container">
+    <div class="row">
+      <div class="col">
+        <div class="nbp-input-switch-checkbox nbp-input-switch-switcher">
+          <label [for]="nbpInputSwitchName" [ngClass]="nbpGetSwitchType()">
+            <input
+              type="checkbox"
+              [id]="nbpInputSwitchName"
+              (click)="nbpInputSwitchClick($event)"
+              [checked]="nbpInputSwitchChecked"
+              [disabled]="nbpInputSwitchDisabled"
+            />
+            <span [ngClass]="nbpBorder">
+              <span *ngIf="!nbpSwitch" class="nbp-input-switch-off">OFF</span>
+              <small [ngClass]="nbpBackground"></small>
+              <span *ngIf="nbpSwitch"  class="nbp-input-switch-on">ON</span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

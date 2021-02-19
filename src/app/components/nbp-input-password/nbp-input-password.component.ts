@@ -21,7 +21,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
   @Input() nbpInputType: string;
   @Input() nbpInputErrorMessage: string;
 
-  @Output() nbpInputModel: EventEmitter<string> = new EventEmitter<string>();
+  @Output() nbpInputModel: EventEmitter<object> = new EventEmitter<object>();
   
   nbpModel: string = '';
   nbpInput: string;
@@ -49,7 +49,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
   nbpGetClasses() {
     this.nbpInput = this.nbpInputDisabled ? this.nbpTypeInput.CURSOR : '';
     this.nbpInput = this.nbpInput + this.nbpSeparator + this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
-    this.nbpInputModel.emit(this.nbpModel);
+    this.nbpInputModel.emit({value: this.nbpModel, name: this.nbpInputName});
   }
 
   nbpGetTypeInputText(nbpInput) {
@@ -60,7 +60,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
 
   nbpInputKeyUp() {
     if (this.nbpInputRequired) {
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR): '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR): '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
       this.nbpGetClasses();
@@ -75,7 +75,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
   nbpInputFocusOut() {
     if (this.nbpInputRequired) {
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
-      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR) : '';
+      this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR) : '';
       this.nbpGetClasses();
     }
   }
@@ -88,9 +88,9 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
     if (this.nbpModel.length !== 0) {
       this.nbpModel = '';
       this.nbpIsDigitText = false;
-      this.nbpInputModel.emit(this.nbpModel);
+      this.nbpInputModel.emit({value: this.nbpModel, name: this.nbpInputName});
       if (this.nbpInputRequired) {
-        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderClasse(this._alertType.ERROR, this._border.COLOR);
+        this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR);
         this.nbpErrorMessage = true;
       }
     }

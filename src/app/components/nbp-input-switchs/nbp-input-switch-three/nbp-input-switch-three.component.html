@@ -1,0 +1,28 @@
+<div class="nbp-input-switch-three-wrapper">
+  <div class="nbp-input-switch-three-container">
+    <div class="row">
+      <div class="col">
+        <div class="nbp-input-switch-checkbox nbp-input-switch-switcher">
+          <label [for]="nbpInputSwitchName" [ngClass]="nbpGetSwitchType()">
+            <input
+              type="checkbox"
+              [id]="nbpInputSwitchName"
+              (click)="nbpInputSwitchClick($event)"
+              [checked]="nbpInputSwitchChecked"
+              [disabled]="nbpInputSwitchDisabled"
+            />
+            <span [ngClass]="nbpBorder"
+              ><small [ngClass]="nbpBackground"
+                ><i
+                  class="nbp-input-switch-actions fa fa-{{
+                    nbpSwitch ? 'check' : 'remove'
+                  }}"
+                  [ngClass]="nbpSwitch ? 'nbp-input-check' : 'nbp-input-remove'"
+                ></i></small
+            ></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

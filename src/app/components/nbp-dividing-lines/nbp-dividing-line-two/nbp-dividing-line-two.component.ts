@@ -32,6 +32,6 @@ export class NbpDividingLineTwoComponent extends NbpBaseComponent implements OnI
     this.nbpDividingLine =
       this.nbpGetColorClasse(this.nbpColorStyle) +
       this.nbpSeparator +
-      this.nbpGetBorderClasse(this.nbpColorStyle, this._border.COLOR);
+      this.nbpGetBorderClasse(this.nbpColorStyle, this._type.COLOR);
   }
 }
