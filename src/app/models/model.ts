@@ -541,32 +541,59 @@ export class Model {
       content2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     NbpTabBarComponent: {
-      title: [{
-        name: 'dossiers',
-        url:'/composant/dossiers'
-
+      title: [
+        {
+        name: 'DOSSIERS',
+        url:'/composants/tab-bar/dossiers'
       },
       {
-        name: 'setting',
-        url:'/composant/setting'
+        name: 'SETTINGS',
+        url:'/composants/tab-bar/setting'
       },
       {
-        name: 'links',
-        url:'/composant/links'
-
+        name: 'LINKS',
+        url:'/composants/tab-bar/links'
       },
       {
-        name: 'address',
-        url:'/composant/address'
-
+        name: 'ADDRESS',
+        url:'/composants/tab-bar/address'
       },
       {
-        name: 'login',
-        url:'/composant/login'
-
+        name: 'REPORTS',
+        url:'/composants/tab-bar/reports'
       },
-    ]
-
+      {
+        name: 'DISABLED',
+        url:'/composants/tab-bar/disabled'
+      }
+    ],
+    title2: [
+      {
+      name: 'CALENDAR',
+      icon:'nbp-icon-calendar-minus',
+      url:'/composants/tab-bar/calendar'
+    },
+    {
+      name: 'DOCUMENTS',
+      icon:'nbp-icon-briefcase',
+      url:'/composants/tab-bar/documents'
+    },
+    {
+      name: 'SETTINGS DOC',
+      icon:'nbp-icon-bars',
+      url:'/composants/tab-bar/settingDoc'
+    },
+    {
+      name: 'USERS ADDRESS',
+      icon:'nbp-icon-address-book',
+      url:'/composants/tab-bar/usersAddress'
+    },
+    {
+      name: 'BUSSINESS TIME',
+      icon:'nbp-icon-business-time',
+      url:'/composants/tab-bar/bussiness'
+    }
+  ]
     },
     NbpIconComponent: {
       icons: [

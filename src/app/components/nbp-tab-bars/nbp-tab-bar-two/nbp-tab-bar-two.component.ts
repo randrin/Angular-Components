@@ -10,11 +10,7 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 export class NbpTabBarTwoComponent extends NbpBaseComponent implements OnInit {
 
   @Input() NbpTabbarPosition: string;
-  @Input() NbpTabbarInputOne:string;
   @Input() NbpTabbarInputTwo:string;
-  @Input() NbpTabbarInputThree:string;
-  @Input() NbpTabbarInputFour:string;
-  @Input() NbpTabbarInputFive:string;
   @Input() NbpTabbarType:string;
 
   nbpTabbarTypes:string

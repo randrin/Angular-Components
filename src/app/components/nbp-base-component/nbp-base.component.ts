@@ -106,6 +106,7 @@ export class NbpBaseComponent implements OnInit {
   nbpBadge: string;
   nbpBackground: string;
   nbpTextarea: string;
+  status: boolean;
   nbpTextareaDefault = {
     rows: 8,
   };
@@ -1105,4 +1106,10 @@ export class NbpBaseComponent implements OnInit {
         break;
     }
   }
+
+  onChangeClass(event){
+    const id = event.target.innerText
+     console.log("this.event; ", event)
+     this.status = true
+   }
 }

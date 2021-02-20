@@ -72,7 +72,20 @@ const appRoutes: Routes = [
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
-      { path: 'tab-bar', component: NbpTabbarPageComponent },
+      { path: 'tab-bar', component: NbpTabbarPageComponent,
+           children: [
+                   { path: 'dossiers', component: NbpModalPageComponent },
+                   { path: 'setting', component: NbpTooltipPageComponent },
+                   { path: 'links', component: NbpInputTextPageComponent },
+                   { path: 'address', component: NbpInputPasswordPageComponent },
+                   { path: 'login', component: NbpButtonPageComponent },
+                   { path: 'disabled', component: NbpUploadFilePageComponent },
+                   { path: 'calendar', component: NbpModalPageComponent },
+                   { path: 'documents', component: NbpTooltipPageComponent },
+                   { path: 'settingDoc', component: NbpInputTextPageComponent },
+                   { path: 'usersAddress', component: NbpInputPasswordPageComponent },
+                   { path: 'bussiness', component: NbpButtonPageComponent },] 
+        },
       { path: 'filter-Form', component: NbpFilterFormPageComponent },
     ]
   },

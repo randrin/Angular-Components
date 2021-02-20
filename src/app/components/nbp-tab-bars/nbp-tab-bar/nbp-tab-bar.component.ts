@@ -1,3 +1,4 @@
+import { R3TargetBinder } from '@angular/compiler';
 import { Component, Injector, Input, OnInit } from '@angular/core';
 import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 
@@ -9,16 +10,13 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 export class NbpTabbarComponent extends NbpBaseComponent implements OnInit {
   @Input() NbpTabbarPosition: string = 'nav';
   @Input() NbpTabbarInputOne:Array<String>;
-  // @Input() NbpTabbarInputTwo:string;
-  // @Input() NbpTabbarInputThree:string;
-  // @Input() NbpTabbarInputFour:string;
-  // @Input() NbpTabbarInputFive:string;
   @Input() NbpTabbarType:string;
 
   nbpTabbarPositionAndType:string
+  status: boolean;
 
   constructor(injector:Injector) {
-    super(injector);
+    super(injector); 
   }
 
   ngOnInit(): void {
