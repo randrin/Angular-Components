@@ -10,9 +10,9 @@ import * as moment from 'moment';
 export class NbpBoxeOneComponent extends NbpBaseComponent implements OnInit {
 
   @Input() nbpBoxeTitle: string;
-  @Input() nbpBoxeDescription: boolean;
+  @Input() nbpBoxeDescription: boolean; 
   @Input() nbpBoxeImage: string;
-  @Input() nbpBoxeDate: string;
+  @Input() nbpBoxeDate: string; 
   @Input() nbpBoxeUrl: string;
   
   constructor(injector: Injector) { super(injector) }

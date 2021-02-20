@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-2">
         <nbp-tooltip
-        [nbpTooltipPosition]="_tooltipPosition.LEFT"
+        [nbpTooltipPosition]="_tooltipPosition.BOTTOM"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
         [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverLeft">
         </nbp-tooltip>
@@ -25,10 +25,10 @@
       </div>
       <div class="col-2">
         <nbp-tooltip
-        [nbpTooltipPosition]="_tooltipPosition.RIGHT"
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
         [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.clickRight"
-        [nbpTooltipClickOrHover]="_type.CLICK">
+        [nbpTooltipClickOrHover]="_tooltipType.CLICK">
         </nbp-tooltip>
       </div>
       <div class="col-2">
@@ -87,7 +87,7 @@
           [nbpTooltipHideDelay]="7000"
           [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
           [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.showWithDelayAndWidth"
-          [nbpTooltipClickOrHover]="_type.CLICK"
+          [nbpTooltipClickOrHover]="_tooltipType.CLICK"
           [nbpTooltipMaxWidth]="500">
           </nbp-tooltip>
         </div>
@@ -107,7 +107,7 @@
         <nbp-tooltip
         [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
-        [nbpTooltipClickOrHover]="_type.HOVER"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
         [nbpTooltipIconName] = "'nbp-icon-ad'">
         </nbp-tooltip>
       </div>
@@ -116,7 +116,7 @@
         [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpTooltipHideDelay]="3000"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
-        [nbpTooltipClickOrHover]="_type.HOVER"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
         [nbpTooltipIconName] = "'nbp-icon-address-book'"
         [nbpTooltipIconSize]= "_fontSize.SMALL">
         </nbp-tooltip>
@@ -126,7 +126,7 @@
         [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpTooltipHideDelay]="2000"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
-        [nbpTooltipClickOrHover]="_type.HOVER"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
         [nbpTooltipIconName] = "'nbp-icon-adjust'"
         [nbpTooltipIconSize]= "_fontSize.MEDIUM">
         </nbp-tooltip>
@@ -136,7 +136,7 @@
         [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpTooltipHideDelay]="3000"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
-        [nbpTooltipClickOrHover]="_type.HOVER"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
         [nbpTooltipMaxWidth]="500"
         [nbpTooltipIconName] = "'nbp-icon-adjust'"
         [nbpTooltipIconSize]= "_fontSize.LARGE">
@@ -146,7 +146,7 @@
         <nbp-tooltip
         [nbpTooltipPosition]="_tooltipPosition.TOP"
         [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
-        [nbpTooltipClickOrHover]="_type.HOVER"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
         [nbpTooltipMaxWidth]="500"
         [nbpTooltipIconName] = "'nbp-icon-bell'"
         [nbpTooltipIconSize]= "_fontSize.LARGE"

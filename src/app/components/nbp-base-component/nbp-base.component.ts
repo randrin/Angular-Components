@@ -27,6 +27,8 @@ import {
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
   NbpModalPositionClasse,
+  NbpTabbarPositionClasse,
+  NbpTabbarTypeClasse,
   NbpSwitchSizeClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
@@ -41,6 +43,8 @@ import {
   NbpTooltipType,
   NbpTooltipPosition,
   NbpTooltipTheme,
+  NbpTabbarPosition,
+  NbpTabbarType,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -66,6 +70,8 @@ export class NbpBaseComponent implements OnInit {
   _type = NbpType;
   _position = NbpModalPosition;
   _tooltipPosition = NbpTooltipPosition;
+  _tabbarPosition = NbpTabbarPosition;
+  _tabbarType = NbpTabbarType;
   _tooltipTheme = NbpTooltipTheme;
   _tooltipType = NbpTooltipType;
   _model = new Model();
@@ -93,6 +99,8 @@ export class NbpBaseComponent implements OnInit {
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
+  _positionTabbarClasse = NbpTabbarPositionClasse;
+  _typeTabbarClasse = NbpTabbarTypeClasse
 
   nbpModel: string = "";
   nbpColor: string;
@@ -100,6 +108,7 @@ export class NbpBaseComponent implements OnInit {
   nbpBadge: string;
   nbpBackground: string;
   nbpTextarea: string;
+  status: boolean;
   nbpTextareaDefault = {
     rows: 8,
   };
@@ -113,6 +122,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
+  nbpTaglia: string = "mb-3";
   nbpToken: string = "";
   nbpAuth = {
     login: {
@@ -1069,4 +1079,50 @@ export class NbpBaseComponent implements OnInit {
         break;
     }
   }
+
+  nbpGetnbpTabbarPosition(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarPosition.LEFT:
+        return this._positionTabbarClasse.LEFT;
+        break;
+      case this._tabbarPosition.CENTER:
+        return this._positionTabbarClasse.CENTER;
+        break;
+      case this._tabbarPosition.RIGHT:
+        return this._positionTabbarClasse.RIGHT;
+        break;
+      case this._tabbarPosition.FLEX:
+        return this._positionTabbarClasse.FLEX;
+        break;
+      default:
+        return this._positionTabbarClasse.LEFT;
+        break;
+    }
+  }
+
+  nbpGetnbpTabbarType(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarType.TABS:
+        return this._typeTabbarClasse.TABS;
+        break;
+      case this._tabbarType.PILLS:
+        return this._typeTabbarClasse.PILLS;
+        break;
+      case this._tabbarType.JUSTIFIED:
+        return this._typeTabbarClasse.JUSTIFIED;
+        break;
+      case this._tabbarType.PILLSANDJUSTIFY:
+        return this._typeTabbarClasse.PILLSANDJUSTIFY;
+        break;
+      default:
+        return this._typeTabbarClasse.TABS;
+        break;
+    }
+  }
+
+  onChangeClass(event){
+    const id = event.target.innerText
+     console.log("this.event; ", event)
+     this.status = true
+   }
 }
