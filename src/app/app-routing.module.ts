@@ -33,10 +33,14 @@ import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-p
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   {
     path: 'composants', component: ComposantsComponent,
     children: [
@@ -68,7 +72,20 @@ const appRoutes: Routes = [
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
-      { path: 'tab-bar', component: NbpTabbarPageComponent },
+      { path: 'tab-bar', component: NbpTabbarPageComponent,
+           children: [
+                   { path: 'dossiers', component: NbpModalPageComponent },
+                   { path: 'setting', component: NbpTooltipPageComponent },
+                   { path: 'links', component: NbpInputTextPageComponent },
+                   { path: 'address', component: NbpInputPasswordPageComponent },
+                   { path: 'login', component: NbpButtonPageComponent },
+                   { path: 'disabled', component: NbpUploadFilePageComponent },
+                   { path: 'calendar', component: NbpModalPageComponent },
+                   { path: 'documents', component: NbpTooltipPageComponent },
+                   { path: 'settingDoc', component: NbpInputTextPageComponent },
+                   { path: 'usersAddress', component: NbpInputPasswordPageComponent },
+                   { path: 'bussiness', component: NbpButtonPageComponent },] 
+        },
       { path: 'filter-Form', component: NbpFilterFormPageComponent },
     ]
   },

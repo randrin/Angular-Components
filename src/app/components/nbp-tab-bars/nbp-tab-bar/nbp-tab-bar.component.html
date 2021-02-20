@@ -1,19 +1,11 @@
 <div class="nbp-tab-bar-wrapper">
     <ul [class]="nbpTabbarPositionAndType" class ="nav">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="composants/tab-bar">{{NbpTabbarInputOne}}</a>
+        <li class="nav-item" *ngFor="let item of NbpTabbarInputOne">
+            <a [ngClass]="status ? 'nav-link active' : 'nav-link'" aria-current="page" 
+            routerLink={{item.url}} href={{item.url}} (click)="onChangeClass($event)">{{item.name}}</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="composants/tab-bar">{{NbpTabbarInputTwo}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://www.google.it/">{{NbpTabbarInputThree}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://www.google.it/">{{NbpTabbarInputFour}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{{NbpTabbarInputFive}}</a>
-        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">sdfghjkhg</a>
+        </li> -->
     </ul>
-</div>
+</div> 

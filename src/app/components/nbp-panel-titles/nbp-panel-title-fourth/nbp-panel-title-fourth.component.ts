@@ -21,6 +21,6 @@ export class NbpPanelTitleFourthComponent extends NbpBaseComponent implements On
   
   // Functions
   nbpSetUpComponent() {
-    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._border.LEFT);
+    this.nbpBorder = this.nbpGetBorderClasse(this.nbpPanelTitleStyle, this._type.LEFT);
   }
 }

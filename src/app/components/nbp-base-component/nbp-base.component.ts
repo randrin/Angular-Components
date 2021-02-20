@@ -1,6 +1,8 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
+import { NbpUser } from "src/app/models/user/nbpUser";
+import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
   NbpTextTransformClasse,
@@ -26,6 +28,7 @@ import {
   NbpModalPositionClasse,
   NbpTabbarPositionClasse,
   NbpTabbarTypeClasse,
+  NbpSwitchSizeClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -34,7 +37,7 @@ import {
   NbpSize,
   NbpStyle,
   NbpFontSize,
-  NbpBorder,
+  NbpType,
   NbpModalPosition,
   NbpTooltipType,
   NbpTooltipPosition,
@@ -51,6 +54,8 @@ import {
 export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
+  nbpLocalStorage = new NbpLocalStorage();
+  nbpUser = new NbpUser(0, "", "", "", false, "")
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -60,13 +65,13 @@ export class NbpBaseComponent implements OnInit {
   _ctaType = NbpCtaType;
   _feedbackType = NbpAlertType;
   _alert = NbpAlertType;
-  _border = NbpBorder;
+  _type = NbpType;
   _position = NbpModalPosition;
   _tooltipPosition = NbpTooltipPosition;
   _tabbarPosition = NbpTabbarPosition;
   _tabbarType = NbpTabbarType;
   _tooltipTheme = NbpTooltipTheme;
-  _type = NbpTooltipType;
+  _tooltipType = NbpTooltipType;
   _model = new Model();
 
   _colorClasse = NbpColorClasse;
@@ -83,6 +88,7 @@ export class NbpBaseComponent implements OnInit {
   _textAlignClasse = NbpTextAlignClasse;
   _buttonStyleClasse = NbpButtonStyleClasse;
   _buttonSizeClasse = NbpButtonSizeClasse;
+  _switchSizeClasse = NbpSwitchSizeClasse;
   _checkBoxStyleClasse = NbpCheckBoxStyleClasse;
   _displayClasse = NbpDisplayClasse;
   _opacityClasse = NbpOpacityClasse;
@@ -100,10 +106,12 @@ export class NbpBaseComponent implements OnInit {
   nbpBadge: string;
   nbpBackground: string;
   nbpTextarea: string;
+  status: boolean;
   nbpTextareaDefault = {
     rows: 8,
   };
   nbpBorder: string;
+  nbpSwitch: boolean;
   nbpTextTransform: string;
   nbpFeedbackColor: string;
   nbpAlertBoxType: string;
@@ -113,6 +121,19 @@ export class NbpBaseComponent implements OnInit {
 
   nbpSeparator: string = " ";
   nbpTaglia: string = "mb-3";
+  nbpToken: string = "";
+  nbpAuth = {
+    login: {
+      userName: "",
+      password: "",
+    },
+    register: {
+      userName: "",
+      password: "",
+      email: ""
+    }
+
+  };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
     RIGHT: "nbp-deep-link-right",
@@ -125,26 +146,49 @@ export class NbpBaseComponent implements OnInit {
   nbpInputDefault = {
     text: "text",
     password: "password",
-    clean: 'fa fa-times-circle'
+    clean: "fa fa-times-circle",
+  };
+  nbpButtonDefault = {
+    full: "nbp-button-full-width",
+    content: "",
   };
   nbpInputPasswordIcon = {
     SHOW: "fa fa-unlock",
-    HIDE: "fa fa-lock"
+    HIDE: "fa fa-lock",
   };
   nbpTypeInput = {
     ROUNDED: "nbp-rounded",
     CURSOR: "nbp-cursor-not-allowed",
   };
   nbpFormatDate = {
-    formatOne: "DD/MM/YYYY"
-  }
+    formatOne: "DD/MM/YYYY",
+  };
 
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
     this.router = injector.get(Router);
+
+    // Get the token in localStorage
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+
+    // Check if tken exist in localStorage
+    // 1) If exists, go to the previous page
+    // 2) If exists and the user want to go to login or register, go to home page
+    if (this.nbpToken && !!this.nbpToken.length) {
+      if (this.activatedRoute.snapshot.url[0]?.path !== undefined) {
+        const nbpUrl = this.activatedRoute.snapshot.url[0]?.path;
+        this.router.navigateByUrl("/" + nbpUrl);
+      }
+      if (
+        this.activatedRoute.snapshot.url[0]?.path === "login" ||
+        this.activatedRoute.snapshot.url[0]?.path === "register"
+      ) {
+        this.router.navigateByUrl("/home");
+      }
+    }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   // Functions
   /* Function to navigate to another link or page */
@@ -154,7 +198,9 @@ export class NbpBaseComponent implements OnInit {
 
   /* Function to get the truncate limit text with inputs as arguments */
   nbpGetTextTruncate(nbpText, nbpTruncateLimit) {
-    return nbpText.length > nbpTruncateLimit ? (nbpText.substring(0, nbpTruncateLimit) + " ...") : nbpText;
+    return nbpText.length > nbpTruncateLimit
+      ? nbpText.substring(0, nbpTruncateLimit) + " ..."
+      : nbpText;
   }
 
   /* Function to get the badge outline style classe with input as argument */
@@ -361,246 +407,246 @@ export class NbpBaseComponent implements OnInit {
     switch (nbpInput) {
       case this._style.DEFAULT:
       case this._alertType.GENERIC:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.DEFAULT;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.DEFAULT;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.DEFAULT;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.DEFAULT;
         }
         break;
       case this._style.WHITE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.WHITE;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.WHITE;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.WHITE;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.WHITE;
         }
         break;
       case this._style.WHITE_SMOKE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.WHITE_SMOKE;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.WHITE_SMOKE;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.WHITE_SMOKE;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.WHITE_SMOKE;
         }
         break;
       case this._style.WARM_GRAY_20:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.WARM_GRAY_20;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.WARM_GRAY_20;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.WARM_GRAY_20;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.WARM_GRAY_20;
         }
         break;
       case this._style.NIGHT_RIDER:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.NIGHT_RIDER;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.NIGHT_RIDER;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.NIGHT_RIDER;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.NIGHT_RIDER;
         }
         break;
       case this._style.SLIVER:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.SLIVER;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.SLIVER;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.SLIVER;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.SLIVER;
         }
         break;
       case this._style.BLACK:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.BLACK;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.BLACK;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.BLACK;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.BLACK;
         }
         break;
       case this._style.PRIMARY:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.PRIMARY;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.PRIMARY;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.PRIMARY;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.PRIMARY;
         }
         break;
       case this._style.TOMATO:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.TOMATO;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.TOMATO;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.TOMATO;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.TOMATO;
         }
         break;
       case this._style.INFO:
       case this._alertType.PROMOTIONAL:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.INFO;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.INFO;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.INFO;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.INFO;
         }
         break;
       case this._style.SUCCESS:
       case this._alertType.POSITIVE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.SUCCESS;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.SUCCESS;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.SUCCESS;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.SUCCESS;
         }
         break;
       case this._style.WARNING:
       case this._alertType.WARNING:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.WARNING;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.WARNING;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.WARNING;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.WARNING;
         }
         break;
       case this._style.DANGER:
       case this._alertType.ERROR:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.DANGER;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.DANGER;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.DANGER;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.DANGER;
         }
         break;
       case this._style.EGYPTIAN_BLUE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.EGYPTIAN_BLUE;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.EGYPTIAN_BLUE;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.EGYPTIAN_BLUE;
         }
         break;
       case this._style.MISTY_ROSE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.MISTY_ROSE;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.MISTY_ROSE;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.MISTY_ROSE;
         }
         break;
       case this._style.MINT_CREAM:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.MINT_CREAM;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.MINT_CREAM;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.MINT_CREAM;
         }
         break;
       case this._style.FLORAL_WHITE:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.FLORAL_WHITE;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.FLORAL_WHITE;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.FLORAL_WHITE;
         }
         break;
       default:
-        if (border === this._border.BORDER) {
+        if (border === this._type.BORDER) {
           return this._borderClasse.DEFAULT;
         }
-        if (border === this._border.TOP) {
+        if (border === this._type.TOP) {
           return this._borderTopClasse.DEFAULT;
         }
-        if (border === this._border.LEFT) {
+        if (border === this._type.LEFT) {
           return this._borderLeftClasse.DEFAULT;
         }
-        if (border === this._border.COLOR) {
+        if (border === this._type.COLOR) {
           return this._borderColorClasse.DEFAULT;
         }
         break;
@@ -948,22 +994,44 @@ export class NbpBaseComponent implements OnInit {
   }
 
   /* Function to get the size classe with input as argument */
-  nbpGetSizeClasse(nbpInput) {
+  nbpGetSizeClasse(nbpInput, nbpType) {
     switch (nbpInput) {
       case this._size.SM:
-        return this._buttonSizeClasse.SMALL;
+        if (nbpType === this._type.BUTTON) {
+          return this._buttonSizeClasse.SMALL;
+        }
+        if (nbpType === this._type.SWITCH) {
+          return this._switchSizeClasse.SM;
+        }
         break;
       case this._size.MD:
-        return this._buttonSizeClasse.MEDIUM;
+        if (nbpType === this._type.BUTTON) {
+          return this._buttonSizeClasse.MEDIUM;
+        }
+        if (nbpType === this._type.SWITCH) {
+          return this._switchSizeClasse.MD;
+        }
         break;
       case this._size.LG:
-        return this._buttonSizeClasse.LARGE;
+        if (nbpType === this._type.BUTTON) {
+          return this._buttonSizeClasse.LARGE;
+        }
+        if (nbpType === this._type.SWITCH) {
+          return this._switchSizeClasse.LG;
+        }
         break;
       default:
-        return this._buttonSizeClasse.SMALL;
+        if (nbpType === this._type.BUTTON) {
+          return this._buttonSizeClasse.SMALL;
+        }
+        if (nbpType === this._type.SWITCH) {
+          return this._switchSizeClasse.XS;
+        }
         break;
     }
   }
+
+  /* Function to get the Modal Size classe with input as argument */
   nbpGetSizeModalClasse(nbpInput) {
     switch (nbpInput) {
       case this._size.SM:
@@ -981,18 +1049,10 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-  nbpGetnbpModalPosition(nbpInput) {
+  /* Function to get the Modal Position classe with input as argument */
+  nbpGetModalPositionClasse(nbpInput) {
     switch (nbpInput) {
       case this._position.TOP:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
-        return this._positionModalClasse.CENTER;
-        break;
-      case this._style.CENTER:
         return this._positionModalClasse.CENTER;
         break;
       case this._style.CENTER:
@@ -1046,4 +1106,10 @@ export class NbpBaseComponent implements OnInit {
         break;
     }
   }
+
+  onChangeClass(event){
+    const id = event.target.innerText
+     console.log("this.event; ", event)
+     this.status = true
+   }
 }

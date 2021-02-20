@@ -32,6 +32,13 @@ export enum NbpButtonSizeClasse {
   LARGE = 'nbp-button-large'
 }
 
+export enum NbpSwitchSizeClasse {
+  XS = 'nbp-switch-xsmall',
+  SM = 'nbp-switch-small',
+  MD = 'nbp-switch-medium',
+  LG = 'nbp-switch-large'
+}
+
 export enum NbpColorClasse {
   DEFAULT = 'nbp-color-default',
   SUCCESS = 'nbp-color-success',

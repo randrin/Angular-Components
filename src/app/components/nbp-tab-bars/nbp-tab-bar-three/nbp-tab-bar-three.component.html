@@ -1,11 +1,15 @@
 <div class="nbp-tab-bar-three-wrapper">
     <ul [class]="nbpTabbarPositionAndType">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page">
-                <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameOne"></nbp-icon></span> 
-            <div>{{NbpTabbarInputOne}}</div>
+        <li class="nav-item" *ngFor="let item of NbpTabbarInputThree" (click)="onChangeClass($event)">
+            <a [ngClass]="status ? 'nav-link active' : 'nav-link'" aria-current="page"  routerLink={{item.url}} 
+            href={{item.url}}>
+                <span class ="nbpIconCss">
+                    <nbp-icon [ngClass]="nbpSizeTooltip" nbpIconName={{item.icon}}></nbp-icon>
+                </span> 
+            <div>{{item.name}}</div>
             </a>
         </li>
+            <!--   
         <li class="nav-item">
             <a class="nav-link">
                 <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameTwo"></nbp-icon></span> 
@@ -25,6 +29,6 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
                 <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameFive"></nbp-icon></span>
         <div>{{NbpTabbarInputFive}}</div></a>
-        </li>
+        </li> -->
     </ul>
 </div>
