@@ -62,7 +62,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
         "Password and Confirm Password don't mactch.";
     } else {
       if (
-        this.nbpRegex.test(String(this.nbpAuth.register.email).toLowerCase())
+        !this.nbpRegex.test(String(this.nbpAuth.register.email).toLowerCase())
       ) {
         this.nbpRegisterSuccess = false;
         this.nbpRegisterErrorMessage = "Email Address format isn't correct.";
@@ -74,7 +74,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
           },
           (err) => {
             console.log("err: ", err);
-            this.nbpRegisterErrorMessage = err.error.message;
+            this.nbpRegisterErrorMessage = err.error;
           }
         );
       }

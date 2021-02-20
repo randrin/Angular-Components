@@ -1,4 +1,15 @@
 <div class="container my-5">
+  <div class="row">
+    <div class="col nbp-text-align-right">
+      <nbp-button
+        [nbpButtonLabel]="'Logout'"
+        [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.DANGERHOVER"
+        [nbpButtonType]="_style.OUTLINE"
+        (click)="NbpOnLogout()"
+      ></nbp-button>
+    </div>
+  </div>
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one
@@ -15,15 +26,6 @@
         [nbpText]="nbpErrorMessage"
         [nbpAlertType]="_alert.ERROR"
       ></nbp-alert-box-one>
-      <div class="col-md-2">
-        <nbp-button
-          [nbpButtonLabel]="'Logout'"
-          [nbpButtonSize]="_size.MD"
-          [nbpButtonColor]="_style.DANGERHOVER"
-          [nbpButtonType]="_style.OUTLINE"
-          (click)="NbpOnLogout()"
-        ></nbp-button>
-      </div>
       <nbp-background-box
         *ngIf="!nbpShowErrorMessage"
         [nbpBackgroundStyle]="_style.PRIMARY"
@@ -50,6 +52,24 @@
           [nbpBadgeStyle]="_style.PRIMARY"
         ></nbp-badge-one>
       </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="titleUser"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row nbp-background-white">
+    <div class="col">
+      <nbp-table-one
+        *ngIf="!!nbpUsers.length"
+        [nbpTableHeaders]="nbpHeaders"
+        [nbpTableBodies]="nbpUsers"
+        [nbpTableTextAlignItem]="_style.LEFT"
+      ></nbp-table-one>
     </div>
   </div>
 </div>
