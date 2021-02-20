@@ -1,7 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpUser } from "src/app/models/user/nbpUser";
-import { NbpAuthService } from "src/app/services/nbp-auth.service";
+import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
 @Component({
@@ -10,16 +10,24 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent extends NbpBaseComponent implements OnInit {
-
   title = "Welcoem to Nbp";
+  titleUser = "All users in Nbp System";
+
   token: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
   nbpUserRoles: [] = [];
+  nbpHeaders: Array<any> = [
+    { label: "ID", name: "ID User" },
+    { label: "USERNAME", name: "Username" },
+    { label: "EMAIL", name: "Email Adress" },
+    { label: "ROLES", name: "Roles" },
+    { label: "ISACTIVE", name: "Status" },
+  ];
 
   constructor(
     injector: Injector,
-    private nbpAuthService: NbpAuthService,
+    private nbpUserService: NbpUserService,
     nbpLocalStorage: NbpLocalStorage
   ) {
     super(injector);
@@ -30,24 +38,36 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   nbpSetUpComponent() {
-    this.NbpGetProfileUSer();
+    this.NbpGetProfileUser();
+    this.NbpGetUsers();
   }
 
   // Functions
-  NbpGetProfileUSer() {
+  NbpGetProfileUser() {
     this.token = this.nbpLocalStorage.NbpGetTokenLocalStorage();
-    this.nbpAuthService.NbpUserProfileService(this.token).subscribe(
+    this.nbpUserService.NbpGetUserService(this.token).subscribe(
       (response: any) => {
         this.nbpUser = response;
         this.nbpUserRoles = response.roles.split(",");
-        console.log("User: ", this.nbpUser);
       },
       (err) => {
-        console.log("Err: ", err);
         if (err.status === 401) {
           this.nbpShowErrorMessage = true;
           this.nbpErrorMessage = err.error.error;
         }
+      }
+    );
+  }
+
+  NbpGetUsers() {
+    this.nbpUserService.NbpGetUsersService().subscribe(
+      (response: any) => {
+        this.nbpUsers = response;
+        console.log('this.nbpUsers: ', this.nbpUsers)
+      },
+      (err) => {
+        this.nbpShowErrorMessage = true;
+        this.nbpErrorMessage = err.error.error;
       }
     );
   }
