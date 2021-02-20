@@ -27,9 +27,6 @@ export class NbpTooltipComponent extends NbpBaseComponent implements OnInit {
   nbpTooltipIconNames: string;
   nbpSizeTooltip: string;
 
-
-
-
   constructor(injector: Injector) {
     super(injector);
   }
