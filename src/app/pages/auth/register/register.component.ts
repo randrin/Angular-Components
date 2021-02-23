@@ -13,7 +13,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
   nbpRegisterDisabled: boolean = true;
   nbpRegisterErrorMessage: string = "";
   nbpConfirmPassword: string = "";
-  nbpEmailInputModel:any;
+  nbpEmailInputModel: any;
   nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(injector: Injector, private nbpAuthService: NbpAuthService) {
@@ -27,9 +27,9 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
   nbpSetUpComponent() {
     this.nbpRegisterDisabled =
       !this.nbpAuth.register.userName.length ||
-        !this.nbpAuth.register.password.length ||
-        !this.nbpAuth.register.email.length ||
-        !this.nbpConfirmPassword
+      !this.nbpAuth.register.password.length ||
+      !this.nbpAuth.register.email.length ||
+      !this.nbpConfirmPassword
         ? true
         : false;
     this.nbpRegisterErrorMessage = "";
@@ -54,16 +54,6 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
 
   nbpLoginSubmit() {
     this.router.navigateByUrl("/login");
-  }
-
-  checkCorrectEmail(input) {
-    if (this.nbpRegex.test(input)) {
-      return ''
-    }
-    else {
-      return  this.nbpRegisterErrorMessage = "Email Address format isn't correct.";
-    }
-
   }
 
   nbpRegisterSubmit() {

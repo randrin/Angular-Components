@@ -69,6 +69,8 @@
         [nbpTableHeaders]="nbpHeaders"
         [nbpTableBodies]="nbpUsers"
         [nbpTableTextAlignItem]="_style.LEFT"
+        [nbpTableShowActions]="true"
+        (nbpTableActions)="NbpModalOnClickAction($event)"
       ></nbp-table-one>
     </div>
   </div>
