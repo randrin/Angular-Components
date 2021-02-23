@@ -1,6 +1,6 @@
 .nbp-table-one-wrapper {
   .nbp-table {
-    width: 100%;
+    width: 100% !important;
     border: 1.5px solid var(--nbp-sliver);
     .nbp-table-thead {
       .nbp-table-header {
@@ -44,10 +44,19 @@
           font-size: 12px !important;
           border-right: 1px solid var(--nbp-white) !important;
           border-left: 1px solid var(--nbp-white) !important;
+          &:focus {
+            outline: none !important;
+          }
           .nbp-table-content-item {
             padding: 0px 10px !important;
             font-size: 0.75rem !important;
           }
+        }
+        .nbp-table-content-actions {
+          display: flex;
+          font-size: 12px !important;
+          border-right: 1px solid var(--nbp-white) !important;
+          border-left: 1px solid var(--nbp-white) !important;
         }
       }
     }

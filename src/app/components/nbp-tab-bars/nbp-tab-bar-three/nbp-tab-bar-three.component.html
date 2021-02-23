@@ -1,0 +1,34 @@
+<div class="nbp-tab-bar-three-wrapper">
+    <ul [class]="nbpTabbarPositionAndType">
+        <li class="nav-item" *ngFor="let item of NbpTabbarInputThree" (click)="onChangeClass($event)">
+            <a [ngClass]="status ? 'nav-link active' : 'nav-link'" aria-current="page"  routerLink={{item.url}} 
+            href={{item.url}}>
+                <span class ="nbpIconCss">
+                    <nbp-icon [ngClass]="nbpSizeTooltip" nbpIconName={{item.icon}}></nbp-icon>
+                </span> 
+            <div>{{item.name}}</div>
+            </a>
+        </li>
+            <!--   
+        <li class="nav-item">
+            <a class="nav-link">
+                <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameTwo"></nbp-icon></span> 
+        <div>{{NbpTabbarInputTwo}}</div></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+               <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameThree"></nbp-icon></span> 
+        <div>{{NbpTabbarInputThree}}</div></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+                <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameFour"></nbp-icon></span>
+        <div>{{NbpTabbarInputFour}}</div></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                <span class ="nbpIconCss"><nbp-icon [ngClass]="nbpSizeTooltip" [nbpIconName]="nbpTabbarIconNameFive"></nbp-icon></span>
+        <div>{{NbpTabbarInputFive}}</div></a>
+        </li> -->
+    </ul>
+</div>

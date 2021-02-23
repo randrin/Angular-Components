@@ -28,14 +28,19 @@ import { NbpNotificationHeaderPageComponent } from './pages/composants/nbp-notif
 import { NbpComboDropDownListPageComponent } from './pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component';
 import { NbpDatePickerPageComponent } from './pages/composants/nbp-date-picker-page/nbp-date-picker-page.component';
 import { NbpUploadFilePageComponent } from './pages/composants/nbp-upload-file-page/nbp-upload-file-page.component';
-import { NbpTabarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tabar-page.component';
+import { NbpTabbarPageComponent } from './pages/composants/nbp-tabar-page/nbp-tab-bar-page.component';
 import { NbpFilterFormPageComponent } from './pages/composants/nbp-filter-form-page/nbp-filter-form-page.component';
 import { NbpTooltipPageComponent } from './pages/composants/nbp-tooltip-page/nbp-tooltip-page.component';
 import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-password-page/nbp-input-password-page.component';
+import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   {
     path: 'composants', component: ComposantsComponent,
     children: [
@@ -59,6 +64,7 @@ const appRoutes: Routes = [
       { path: 'panel-titles', component: NbpPanelTitlePageComponent },
       { path: 'links', component: NbpLinkPageComponent },
       { path: 'cards', component: NbpCardPageComponent },
+      { path: 'boxes', component: NbpBoxePageComponent },
       { path: 'modals', component: NbpModalPageComponent },
       { path: 'input-switchs', component: NbpInputSwitchPageComponent },
       { path: 'tooltips', component: NbpTooltipPageComponent },
@@ -66,7 +72,20 @@ const appRoutes: Routes = [
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
-      { path: 'tabar', component: NbpTabarPageComponent },
+      { path: 'tab-bar', component: NbpTabbarPageComponent,
+           children: [
+                   { path: 'dossiers', component: NbpModalPageComponent },
+                   { path: 'setting', component: NbpTooltipPageComponent },
+                   { path: 'links', component: NbpInputTextPageComponent },
+                   { path: 'address', component: NbpInputPasswordPageComponent },
+                   { path: 'login', component: NbpButtonPageComponent },
+                   { path: 'disabled', component: NbpUploadFilePageComponent },
+                   { path: 'calendar', component: NbpModalPageComponent },
+                   { path: 'documents', component: NbpTooltipPageComponent },
+                   { path: 'settingDoc', component: NbpInputTextPageComponent },
+                   { path: 'usersAddress', component: NbpInputPasswordPageComponent },
+                   { path: 'bussiness', component: NbpButtonPageComponent },] 
+        },
       { path: 'filter-Form', component: NbpFilterFormPageComponent },
     ]
   },

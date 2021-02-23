@@ -3,7 +3,7 @@ import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from '../assets
 import { Model } from './models/model';
 
 @Component({
-  selector: 'app-root',
+  selector: 'nbp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

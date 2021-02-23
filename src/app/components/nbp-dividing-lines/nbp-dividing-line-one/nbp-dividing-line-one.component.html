@@ -1,4 +1,4 @@
-<div class="nbp-dividing-line-wrapper">
+<div class="nbp-dividing-line-one-wrapper">
   <div class="row">
     <div [ngClass]="nbpCta ? 'col-md-11' : 'col'">
       <div class="nbp-dividing-line-container">
@@ -15,7 +15,8 @@
     </div>
     <div *ngIf="nbpCta" class="col-md-1">
       <span *ngIf="nbpCtaReadOnly" class="nbp-dividing-line-cta mr-3">{{nbpCtaText}}</span>
-      <span *ngIf="!nbpCtaReadOnly" class="nbp-dividing-line-cta nbp-dividing-line-cta-read-only mr-3" (click)="nbpOnClickedCta()">{{nbpCtaText}}</span>
+      <span *ngIf="!nbpCtaReadOnly" class="nbp-dividing-line-cta nbp-dividing-line-cta-read-only mr-3"
+        (click)="nbpOnClickedCta()">{{nbpCtaText}}</span>
     </div>
   </div>
 </div>

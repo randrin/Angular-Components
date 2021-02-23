@@ -43,6 +43,9 @@
         .nbp-table-content {
           font-size: 12px !important;
           border-right: 2px solid var(--nbp-white) !important;
+          &:focus {
+            outline: none !important;
+          }
           &:last-child {
             border-right: 2px solid var(--nbp-sliver) !important;
           }

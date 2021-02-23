@@ -8,12 +8,14 @@ import * as uuid from 'uuid';
   styleUrls: ['./nbp-modal-one.component.scss']
 })
 export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
+
+  @Input() nbpModalType: string;
   @Input() nbpModalButtonTitle: string;
   @Input() nbpModalTitle: string;
   @Input() nbpModalContent: string;
   @Input() nbpModalSize: string;
   @Input() nbpModalPosition: string;
-  @Input() nbpStaticModalMode: boolean;
+  @Input() nbpModalStaticMode: boolean;
   @Input() nbpModalScroll: boolean;
 
   @Output() nbpOnSave: EventEmitter<any> = new EventEmitter<any>();
@@ -22,11 +24,11 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
   modalSize: string;
   modalPosition: string
   modalType: string;
-  nbpSizeAndPosition: string;
-  nbpModalName: string;
+  modalSizePosition: string;
+  modalName: string;
   modalTypes: string = 'modal-dialog-scrollable';
-  nbpModalStatic:string = 'static'
- 
+  nbpModalStatic: string = 'static';
+
 
   constructor(injector: Injector) {
     super(injector);
@@ -36,34 +38,35 @@ export class NbpModalOneComponent extends NbpBaseComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
-    this.nbpModalName = 'a' + uuid.v4();
+    this.modalName = 'nbp' + uuid.v4();
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
-    this.modalPosition = this.nbpGetnbpModalPosition(this.nbpModalPosition);
-    this.nbpModalScrolls; 
+    this.nbpBackground = this.nbpGetBackgroundClasse(this.nbpModalType) + this.nbpSeparator + this.nbpGetBorderClasse(this.nbpModalType, this._type.BORDER);
+    this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
+    this.nbpModalScrolls;
     this.nbpModalStaticModes;
-    console.log('this.nbpModalName one: ', this.nbpModalName)
   }
-   
+
   get nbpModalScrolls() {
     if (this.nbpModalScroll) {
-      return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes
+      return this.modalSizePosition = this.modalPosition + this.nbpSeparator + this.modalSize + this.nbpSeparator + this.modalTypes;
     }
-    return this.nbpSizeAndPosition = this.modalPosition + this.nbpSeparator + this.modalSize
+    return this.modalSizePosition = this.modalPosition + this.nbpSeparator + this.modalSize;
   }
 
   get nbpModalStaticModes() {
-    if (this.nbpStaticModalMode) {
+    if (this.nbpModalStaticMode) {
       return this.nbpModalStatic;
     }
     return this.nbpModalStatic = 'undefined'
   }
 
-  nbpOnSaved() {
-
+  nbpHandleOnSaved() {
+    this.nbpOnSave.emit();
   }
 
-  nbpOnClosed() {
-
+  nbpHandleOnClosed() {
+    this.nbpOnClose.emit();
   }
 }

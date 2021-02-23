@@ -32,7 +32,7 @@ export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
   }
 
   nbpSetUpModalButton(){
-    if(this.nbpFeedbackWithButtonContinueAndTryAgain == true && this.nbpFeedbackWithButtonOk == true ){
+    if(this.nbpFeedbackWithButtonContinueAndTryAgain === true && this.nbpFeedbackWithButtonOk === true ){
       this.nbpFeedbackWithButtonOk = false
     }
   }

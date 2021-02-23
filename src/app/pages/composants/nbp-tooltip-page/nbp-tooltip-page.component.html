@@ -1,1 +1,158 @@
-<p>nbp-tooltip-page works!</p>
+<div class="container my-5">
+  <div *ngIf ="nbpTooltipButton">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one
+            [nbpTitle]="'tooltip button'"
+            [nbpColorStyle]="_style.DEFAULT">
+          </nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.BOTTOM"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverLeft">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverTop">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.clickRight"
+        [nbpTooltipClickOrHover]="_tooltipType.CLICK">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.BOTTOM"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverBottom">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.BOTTOM"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverBottom"
+        [nbpTooltipTheme]="_tooltipTheme.LIGHT">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hoverTop"
+        [nbpTooltipTheme]="_tooltipTheme.LIGHT">
+        </nbp-tooltip>
+      </div>
+    </div>
+    <br/>
+      <div class="row">
+        <div class="col-3">
+          <nbp-tooltip
+          [nbpTooltipPosition]="_tooltipPosition.TOP"
+          [nbpTooltipShowDelay]="2000"
+          [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+          [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.showWithDelay">
+          </nbp-tooltip>
+        </div>
+        <div class="col-3">
+          <nbp-tooltip
+          [nbpTooltipPosition]="_tooltipPosition.TOP"
+          [nbpTooltipHideDelay]="3000"
+          [nbpContentTooltip]="_model.component.NbpTooltipComponent.content"
+          [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hideWithDelay">
+          </nbp-tooltip>
+        </div>
+        <div class="col-3">
+          <nbp-tooltip
+          [nbpTooltipPosition]="_tooltipPosition.TOP"
+          [nbpTooltipHideDelay]="3000"
+          [nbpContentTooltip]="_model.component.NbpTooltipComponent.content"
+          [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.hideWithDelay">
+          </nbp-tooltip>
+        </div>
+        <div class="col-3">
+          <nbp-tooltip
+          [nbpTooltipPosition]="_tooltipPosition.TOP"
+          [nbpTooltipHideDelay]="7000"
+          [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+          [nbpTooltipButtonOrIconsName]="_model.component.NbpTooltipComponent.showWithDelayAndWidth"
+          [nbpTooltipClickOrHover]="_tooltipType.CLICK"
+          [nbpTooltipMaxWidth]="500">
+          </nbp-tooltip>
+        </div>
+      </div>
+  </div>
+  <div *ngIf ="nbpTooltipIcon">
+    <div class="row text-center">
+      <div class="col">
+        <nbp-dividing-line-one
+            [nbpTitle]="'tooltip icons'"
+            [nbpColorStyle]="_style.DEFAULT">
+          </nbp-dividing-line-one>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
+        [nbpTooltipIconName] = "'nbp-icon-ad'">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpTooltipHideDelay]="3000"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
+        [nbpTooltipIconName] = "'nbp-icon-address-book'"
+        [nbpTooltipIconSize]= "_fontSize.SMALL">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpTooltipHideDelay]="2000"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
+        [nbpTooltipIconName] = "'nbp-icon-adjust'"
+        [nbpTooltipIconSize]= "_fontSize.MEDIUM">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpTooltipHideDelay]="3000"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
+        [nbpTooltipMaxWidth]="500"
+        [nbpTooltipIconName] = "'nbp-icon-adjust'"
+        [nbpTooltipIconSize]= "_fontSize.LARGE">
+        </nbp-tooltip>
+      </div>
+      <div class="col-2">
+        <nbp-tooltip
+        [nbpTooltipPosition]="_tooltipPosition.TOP"
+        [nbpContentTooltip]="_model.component.NbpTooltipComponent.content1"
+        [nbpTooltipClickOrHover]="_tooltipType.HOVER"
+        [nbpTooltipMaxWidth]="500"
+        [nbpTooltipIconName] = "'nbp-icon-bell'"
+        [nbpTooltipIconSize]= "_fontSize.LARGE"
+        [nbpTooltipTheme]="_tooltipTheme.LIGHT">
+        </nbp-tooltip>
+      </div>
+    </div>
+  </div>
+</div>

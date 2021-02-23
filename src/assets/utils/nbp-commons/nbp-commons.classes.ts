@@ -32,6 +32,13 @@ export enum NbpButtonSizeClasse {
   LARGE = 'nbp-button-large'
 }
 
+export enum NbpSwitchSizeClasse {
+  XS = 'nbp-switch-xsmall',
+  SM = 'nbp-switch-small',
+  MD = 'nbp-switch-medium',
+  LG = 'nbp-switch-large'
+}
+
 export enum NbpColorClasse {
   DEFAULT = 'nbp-color-default',
   SUCCESS = 'nbp-color-success',
@@ -275,11 +282,17 @@ export enum NbpModalPositionClasse {
   CENTER = 'modal-dialog-centered',
 }
 
-// export enum NbpModalTypeClasse {
-//   STATIC = 'static',
-//   NOSTATIC = '',
-// }
-// export enum NbpModalScrollableClasse {
-//   SCROLL = 'modal-dialog-scrollable',
-// } 
+export enum NbpTabbarPositionClasse {
+  LEFT = 'nav',
+  CENTER = 'justify-content-center',
+  RIGHT = 'justify-content-end',
+  FLEX = 'flex-column'
+}
+
+export enum NbpTabbarTypeClasse {
+  TABS = 'nav nav-tabs',
+  PILLS = 'nav nav-pills',
+  PILLSANDJUSTIFY = 'nav nav-pills nav-fill',
+  JUSTIFIED = 'nav nav-pills nav-justified'
+}
 
