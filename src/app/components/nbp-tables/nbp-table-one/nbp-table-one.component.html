@@ -12,29 +12,14 @@
           </thead>
           <tbody class="nbp-table-tbody" *ngIf="nbpTableBodies.length !== 0">
             <tr class="nbp-table-body" *ngFor="let item of nbpTableBodies">
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.firstName}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.lastName}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.email}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.phone}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.zipCode}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.street}}</div>
+              <td class="nbp-table-content" *ngFor="let element of nbpObjectKeys(item)">
+                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item[element]}}</div>
               </td>
             </tr>
           </tbody>
           <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length === 0">
             <div class="nbp-table-content-item">Empty Data :)</div>
-        </div>
+          </div>
         </table>
       </div>
     </div>

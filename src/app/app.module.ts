@@ -105,6 +105,7 @@ import { NbpLoginOneComponent } from './components/nbp-logins/nbp-login-one/nbp-
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { NbpLocalStorage } from './utils/nbp-local-storage';
+import { NbpUserService } from './services/nbp-user.service';
 
 @NgModule({
   declarations: [
@@ -216,7 +217,8 @@ import { NbpLocalStorage } from './utils/nbp-local-storage';
     TooltipModule
   ],
   providers: [
-    NbpAuthService, 
+    NbpAuthService,
+    NbpUserService, 
     NbpLocalStorage
   ],
   bootstrap: [AppComponent]

@@ -43,7 +43,7 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
         } else {
           this.nbpLoginErrorType = this._alert.ERROR;
         }
-        this.nbpLoginErrorMessage = err.error.message;
+        this.nbpLoginErrorMessage = err.error;
       }
     );
   }

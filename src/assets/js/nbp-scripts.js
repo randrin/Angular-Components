@@ -1,9 +1,9 @@
 // import nbpScrollTopScript from "./components/nbp-scroll-top/nbp-scroll-top-script";
 // import nbpAlertBoxScript from "./components/nbp-alert-box/nbp-alert-box-script";
 
-// Url to bak end -  See: https://github.com/randrin/Server-Components 
-// var baseUrl = 'http://localhost:9192';
-var baseUrl = 'http://nbpservices-env.eba-zmyykfw3.eu-central-1.elasticbeanstalk.com';
+// Url to bak end -  See: https://github.com/randrin/Server-Components
+var baseUrl = "http://localhost:9192";
+// var baseUrl = 'http://nbpservices-env.eba-zmyykfw3.eu-central-1.elasticbeanstalk.com';
 
 // Go to Top Page & Scroll Navbar Effet
 $(document).ready(function () {
@@ -107,16 +107,17 @@ $(document).ready(function () {
 
   $nbpRadioInput.on("click", function () {
     var nbpRadioClicked = $nbpRadioInput.index(this);
-    var $currentNbpRadio = $(this)
-    console.log('Index clicked: ', nbpRadioClicked)
-    
+    var $currentNbpRadio = $(this);
+    console.log("Index clicked: ", nbpRadioClicked);
 
     Array.from($nbpRadioInput).forEach((nbpRadio, index) => {
-      console.log('nbpRadio clicked: ', nbpRadio)
-      if(nbpRadioClicked == index) {
+      console.log("nbpRadio clicked: ", nbpRadio);
+      if (nbpRadioClicked == index) {
         $currentNbpRadio.toggleClass("checked");
-        $currentNbpRadio.find(".nbp-radio-circle-icon").toggleClass("nbp-display-none");
-      } 
+        $currentNbpRadio
+          .find(".nbp-radio-circle-icon")
+          .toggleClass("nbp-display-none");
+      }
     });
   });
   // $nbpRadioLabel.on('click', function () {

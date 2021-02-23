@@ -2,6 +2,7 @@ import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
 import { NbpUser } from "src/app/models/user/nbpUser";
+import { NbpUsers } from "src/app/models/user/nbpUsers";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
@@ -56,6 +57,7 @@ export class NbpBaseComponent implements OnInit {
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
   nbpUser = new NbpUser(0, "", "", "", false, "")
+  nbpUsers: Array<any> = [];
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -167,13 +169,21 @@ export class NbpBaseComponent implements OnInit {
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
     this.router = injector.get(Router);
+    this.NbpCheckAuthentification();
+  }
 
+  ngOnInit(): void {}
+
+  // Functions
+  /* Function to check if the user is logged and redirection to correct link or page */
+  NbpCheckAuthentification() {
     // Get the token in localStorage
     this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
 
-    // Check if tken exist in localStorage
+    // Check if token exist in localStorage
     // 1) If exists, go to the previous page
     // 2) If exists and the user want to go to login or register, go to home page
+    // 3) If not exists, go to login page
     if (this.nbpToken && !!this.nbpToken.length) {
       if (this.activatedRoute.snapshot.url[0]?.path !== undefined) {
         const nbpUrl = this.activatedRoute.snapshot.url[0]?.path;
@@ -185,12 +195,15 @@ export class NbpBaseComponent implements OnInit {
       ) {
         this.router.navigateByUrl("/home");
       }
+    } else {
+      if(this.activatedRoute.snapshot.url[0]?.path === "register") {
+        this.router.navigateByUrl("/register");
+      } else {
+        this.router.navigateByUrl("/login");
+      }
     }
   }
 
-  ngOnInit(): void {}
-
-  // Functions
   /* Function to navigate to another link or page */
   goTo(name?: string): void {
     window.location.href = name;
