@@ -10,7 +10,7 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent extends NbpBaseComponent implements OnInit {
-  title = "Welcoem to Nbp";
+  title = "Welcome to Nbp Aplication";
   titleUser = "All users in Nbp System";
 
   token: string = "";
@@ -24,6 +24,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     { label: "ROLES", name: "Roles" },
     { label: "ISACTIVE", name: "Status" },
   ];
+  nbpShowModalAction: boolean = false;
 
   constructor(
     injector: Injector,
@@ -51,25 +52,62 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
+        console.log("Err: ", err);
         if (err.status === 401) {
           this.nbpShowErrorMessage = true;
-          this.nbpErrorMessage = err.error.error;
+          this.nbpErrorMessage = err.error;
         }
       }
     );
   }
 
   NbpGetUsers() {
+    this.nbpShowErrorMessage = false;
     this.nbpUserService.NbpGetUsersService().subscribe(
       (response: any) => {
         this.nbpUsers = response;
-        console.log('this.nbpUsers: ', this.nbpUsers)
+        console.log("this.nbpUsers: ", this.nbpUsers);
       },
       (err) => {
         this.nbpShowErrorMessage = true;
         this.nbpErrorMessage = err.error.error;
       }
     );
+  }
+
+  NbpModalOnClickAction(nbpUser) {
+    console.log("Event: ", nbpUser);
+    if (nbpUser.action === "delete") {
+      this.nbpUserService.NbpDeleteUserService(nbpUser).subscribe(
+        (response: string) => {
+          console.log("NbpDeleteUserService -> response: ", response);
+          this.NbpGetUsers();
+        },
+        (err) => {
+          console.log("NbpDeleteUserService -> err: ", err);
+          this.NbpGetUsers();
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error.error;
+        }
+      );
+    }
+    if (nbpUser.action === "permission") {
+      this.nbpUserService.NbpActivateOrDisableUserService(nbpUser).subscribe(
+        (response: string) => {
+          console.log(
+            "NbpActivateOrDisableUserService -> response: ",
+            response
+          );
+          this.NbpGetUsers();
+        },
+        (err) => {
+          console.log("NbpActivateOrDisableUserService -> err: ", err);
+          // this.NbpGetUsers();
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error.error;
+        }
+      );
+    }
   }
 
   NbpOnLogout() {

@@ -21,6 +21,14 @@
   .dataTables_paginate {
     padding: 15px 0px !important;
   }
+  .dataTables_filter input {
+    padding: 8px !important;
+    &:hover,
+    &:focus {
+      border: 1px solid var(--nbp-primary) !important;
+      outline: none !important;
+    }
+  }
   .dataTables_paginate .paginate_button.disabled, 
   .dataTables_paginate .paginate_button.disabled:hover, 
   .dataTables_paginate .paginate_button.disabled:active {
@@ -29,9 +37,11 @@
   .dataTables_length select {
     color: var(--nbp-secondary) !important;
     border: 1px solid var(--nbp-secondary) !important;
-    &:hover {
+    &:hover, 
+    &:focus {
       color: var(--nbp-primary) !important;
       border: 1px solid var(--nbp-primary) !important;
+      outline: none !important;
     }
     option {
       &:hover {
@@ -54,14 +64,17 @@
 
 table.dataTable {
   thead {
+    .nbp-table-header-no-sort {
+      background-image: none !important;
+    }
     .sorting {
-      background-image: url("/assets/images/nbp-tables/sort_both.png") !important;
+      background-image: url("/assets/images/nbp-tables/sort_both.png");
     }
     .sorting_asc {
-      background-image: url("/assets/images/nbp-tables/sort_asc.png") !important;
+      background-image: url("/assets/images/nbp-tables/sort_asc.png");
     }
     .sorting_desc {
-      background-image: url("/assets/images/nbp-tables/sort_desc.png") !important;
+      background-image: url("/assets/images/nbp-tables/sort_desc.png");
     }
   }
 } 

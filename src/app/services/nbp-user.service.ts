@@ -6,8 +6,10 @@ import { NbpLocalStorage } from "../utils/nbp-local-storage";
   providedIn: "root",
 })
 export class NbpUserService {
-  private nbpProfileUrl = window["baseUrl"] + "/v1/api/user";
+  private nbpUserUrl = window["baseUrl"] + "/v1/api/user";
   private nbpUsersUrl = window["baseUrl"] + "/v1/api/users";
+  private nbpUserDeleteUrl = window["baseUrl"] + "/v1/api/user/delete";
+  private nbpUserPermissionUrl = window["baseUrl"] + "/v1/api/user/permission";
 
   constructor(
     private http: HttpClient,
@@ -15,13 +17,25 @@ export class NbpUserService {
   ) {}
 
   public NbpGetUserService(token) {
-    return this.http.get(this.nbpProfileUrl + "/" + token, {
+    return this.http.get(this.nbpUserUrl + "/" + token, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
   public NbpGetUsersService() {
     return this.http.get(this.nbpUsersUrl, {
+      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    });
+  }
+
+  public NbpDeleteUserService(nbpUser) {
+    return this.http.delete(this.nbpUserDeleteUrl + "/" + nbpUser.item.id, {
+      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    });
+  }
+
+  public NbpActivateOrDisableUserService(nbpUser) {
+    return this.http.put(this.nbpUserPermissionUrl + "/" + nbpUser.item.id, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
