@@ -30,6 +30,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
   ngOnInit(): void {
     this.nbpSetUpComponent();
     console.log("nbpTableHeaders: ", this.nbpTableHeaders);
+    console.log("nbpTableBodies: ", this.nbpTableBodies);
   }
 
   // Functions
@@ -53,7 +54,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
   }
 
   nbpObjectKeys(obj) {
-    return Object.keys(obj);
+    return Object.keys(obj).filter(element => element !== "permissions");
   }
 
   nbpOnClickAction(item, action) {
@@ -61,12 +62,12 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
       item,
       action
     };
-    if (action === 'delete') {
+    if (action === item.permissions[1].permission) {
       this.nbpBackground = this.nbpGetBackgroundClasse(this._style.DANGER);
       this.nbpTableTextHeader = "Delete Confirmation"
       this.nbpTableTextBody = "Are you sure you want to delete " + item.userName + " ?"
     }
-    if (action === 'permission') {
+    if (action === item.permissions[5].permission) {
       this.nbpBackground = this.nbpGetBackgroundClasse(this._style.PRIMARY);
       this.nbpTableTextHeader = "Permission Confirmation"
       this.nbpTableTextBody = "Are you sure you want to activate / disabled " + item.userName + " ?"

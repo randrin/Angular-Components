@@ -57,6 +57,19 @@
           font-size: 12px !important;
           border-right: 1px solid var(--nbp-white) !important;
           border-left: 1px solid var(--nbp-white) !important;
+          .nbp-table-content-icon-actions {
+            background-color: var(--nbp-sliver)  !important;
+            color: var(--nbp-black)  !important;
+            height: 2.8rem;
+            width: 2.8rem;
+            min-width: auto;
+            border-radius: 50%;
+            cursor: pointer;
+            i {
+              top: 10px;
+              position: relative;
+            }
+          }
         }
       }
     }

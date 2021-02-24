@@ -56,8 +56,26 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
-  nbpUser = new NbpUser(0, "", "", "", false, "")
+  nbpUser = new NbpUser(0, "", "", "", false, "");
   nbpUsers: Array<any> = [];
+  nbpPermission = {
+    EDIT: "edit",
+    DELETE: "delete",
+    CREATE: "create",
+    UPDATE: "update",
+    VIEW: "View",
+    ACTIVE: "Active",
+    DISABLE: "Disactive"
+  };
+  nbpUsersPermissions = [
+    { permission: this.nbpPermission.EDIT, status: true },
+    { permission: this.nbpPermission.DELETE, status: true },
+    { permission: this.nbpPermission.CREATE, status: true },
+    { permission: this.nbpPermission.UPDATE, status: true },
+    { permission: this.nbpPermission.VIEW, status: true },
+    { permission: this.nbpPermission.ACTIVE, status: true },
+    { permission: this.nbpPermission.DISABLE, status: true }
+  ];
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -100,7 +118,7 @@ export class NbpBaseComponent implements OnInit {
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
   _positionTabbarClasse = NbpTabbarPositionClasse;
-  _typeTabbarClasse = NbpTabbarTypeClasse
+  _typeTabbarClasse = NbpTabbarTypeClasse;
 
   nbpModel: string = "";
   nbpColor: string;
@@ -132,9 +150,8 @@ export class NbpBaseComponent implements OnInit {
     register: {
       userName: "",
       password: "",
-      email: ""
-    }
-
+      email: "",
+    },
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
@@ -196,7 +213,7 @@ export class NbpBaseComponent implements OnInit {
         this.router.navigateByUrl("/home");
       }
     } else {
-      if(this.activatedRoute.snapshot.url[0]?.path === "register") {
+      if (this.activatedRoute.snapshot.url[0]?.path === "register") {
         this.router.navigateByUrl("/register");
       } else {
         this.router.navigateByUrl("/login");
@@ -1120,9 +1137,9 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-  onChangeClass(event){
-    const id = event.target.innerText
-     console.log("this.event; ", event)
-     this.status = true
-   }
+  onChangeClass(event) {
+    const id = event.target.innerText;
+    console.log("this.event; ", event);
+    this.status = true;
+  }
 }

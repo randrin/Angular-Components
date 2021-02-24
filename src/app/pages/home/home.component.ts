@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpUser } from "src/app/models/user/nbpUser";
+import { NbpUsers } from "src/app/models/user/nbpUsers";
 import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
@@ -16,7 +17,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   token: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
+  nbpLoading: boolean = true;
   nbpUserRoles: [] = [];
+  nbpUsersClone: Array<any> = [];
   nbpHeaders: Array<any> = [
     { label: "ID", name: "ID User" },
     { label: "USERNAME", name: "Username" },
@@ -32,6 +35,8 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     nbpLocalStorage: NbpLocalStorage
   ) {
     super(injector);
+    this.NbpGetUserProfile();
+    this.NbpGetUsers();
   }
 
   ngOnInit(): void {
@@ -39,12 +44,12 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   nbpSetUpComponent() {
-    this.NbpGetProfileUser();
-    this.NbpGetUsers();
+    this.nbpLoading = true;
+
   }
 
   // Functions
-  NbpGetProfileUser() {
+  NbpGetUserProfile() {
     this.token = this.nbpLocalStorage.NbpGetTokenLocalStorage();
     this.nbpUserService.NbpGetUserService(this.token).subscribe(
       (response: any) => {
@@ -66,7 +71,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpUserService.NbpGetUsersService().subscribe(
       (response: any) => {
         this.nbpUsers = response;
-        console.log("this.nbpUsers: ", this.nbpUsers);
+        this.NbpGetUsersPermissions();
       },
       (err) => {
         this.nbpShowErrorMessage = true;
@@ -75,38 +80,54 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     );
   }
 
+  NbpGetUsersPermissions() {
+    this.nbpUsers.forEach((nbpUser) => {
+      if (nbpUser.userName !== this.nbpUser.userName) {
+        this.nbpUsersClone.push({
+          ...nbpUser,
+          permissions: this.nbpUsersPermissions,
+        });
+      }
+    });
+    this.nbpUsers = this.nbpUsersClone;
+    console.log("this.nbpUsers: ", this.nbpUsers);
+    console.log("this.nbpUsersClone: ", this.nbpUsersClone);
+  }
+
   NbpModalOnClickAction(nbpUser) {
     console.log("Event: ", nbpUser);
     if (nbpUser.action === "delete") {
-      this.nbpUserService.NbpDeleteUserService(nbpUser).subscribe(
-        (response: string) => {
+      this.nbpUserService.NbpDeleteUserService(nbpUser.item.id).subscribe(
+        (response: any) => {
           console.log("NbpDeleteUserService -> response: ", response);
-          this.NbpGetUsers();
+          this.nbpUsers = this.nbpUsers.filter(elt => elt.userName !== response.userName);
+          console.log("NbpDeleteUserService -> this.nbpUsers: ", this.nbpUsers);
+          this.nbpLoading = true;
         },
         (err) => {
           console.log("NbpDeleteUserService -> err: ", err);
-          this.NbpGetUsers();
           this.nbpShowErrorMessage = true;
           this.nbpErrorMessage = err.error.error;
         }
       );
     }
     if (nbpUser.action === "permission") {
-      this.nbpUserService.NbpActivateOrDisableUserService(nbpUser).subscribe(
-        (response: string) => {
-          console.log(
-            "NbpActivateOrDisableUserService -> response: ",
-            response
-          );
-          this.NbpGetUsers();
-        },
-        (err) => {
-          console.log("NbpActivateOrDisableUserService -> err: ", err);
-          // this.NbpGetUsers();
-          this.nbpShowErrorMessage = true;
-          this.nbpErrorMessage = err.error.error;
-        }
-      );
+      this.nbpUserService
+        .NbpActivateOrDisableUserService(nbpUser.item.id)
+        .subscribe(
+          (response) => {
+            console.log(
+              "NbpActivateOrDisableUserService -> response: ",
+              response
+            );
+            this.NbpGetUsers();
+          },
+          (err) => {
+            console.log("NbpActivateOrDisableUserService -> err: ", err);
+            this.nbpShowErrorMessage = true;
+            this.nbpErrorMessage = err.error.error;
+          }
+        );
     }
   }
 
