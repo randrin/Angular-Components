@@ -22,6 +22,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
   nbpTableItem: object = {item: "", action: ""};
   nbpTableTextHeader: string = "";
   nbpTableTextBody: string = "";
+  nbpModalSizePosition: string = "";
 
   constructor(injector: Injector) {
     super(injector);
@@ -51,6 +52,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
       },
     };
     this.nbpTextAlign = this.nbpGetTextAlignClasse(this.nbpTableTextAlignItem);
+    this.nbpModalSizePosition = this.nbpGetModalPositionClasse(this._position.CENTER) + this.nbpSeparator + this.nbpGetSizeModalClasse(this._size.MD);
   }
 
   nbpObjectKeys(obj) {

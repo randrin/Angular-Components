@@ -2,6 +2,7 @@
   .nbp-table {
     width: 100% !important;
     border: 1.5px solid var(--nbp-sliver);
+
     .nbp-table-thead {
       .nbp-table-header {
         font-weight: bold;
@@ -10,6 +11,7 @@
         min-height: 30px !important;
         line-height: 14px;
         background: var(--nbp-white);
+
         .nbp-table-header-item {
           border-left: 1px solid var(--nbp-white-smoke);
           border-top: 1px solid var(--nbp-white-smoke);
@@ -31,6 +33,7 @@
         }
       }
     }
+
     .nbp-table-tbody {
       .nbp-table-body {
         font-size: 0.875em;
@@ -40,46 +43,83 @@
         line-height: 14px;
         border: 1px solid var(--nbp-sliver);
         color: var(--nbp-night-rider);
+
         .nbp-table-content {
           font-size: 12px !important;
           border-right: 1px solid var(--nbp-white) !important;
           border-left: 1px solid var(--nbp-white) !important;
+
           &:focus {
             outline: none !important;
           }
+
           .nbp-table-content-item {
             padding: 0px 10px !important;
             font-size: 0.75rem !important;
           }
         }
+
         .nbp-table-content-actions {
+          justify-content: center;
           display: flex;
+          align-items: center;
           font-size: 12px !important;
           border-right: 1px solid var(--nbp-white) !important;
           border-left: 1px solid var(--nbp-white) !important;
+
           .nbp-table-content-icon-actions {
-            background-color: var(--nbp-sliver)  !important;
-            color: var(--nbp-black)  !important;
-            height: 2.8rem;
-            width: 2.8rem;
+            background-color: var(--nbp-primary) !important;
+            color: var(--nbp-white) !important;
+            height: 2.5rem;
+            width: 2.5rem;
             min-width: auto;
             border-radius: 50%;
             cursor: pointer;
-            i {
+            z-index: 15;
+
+            .nbp-table-content-icon {
               top: 10px;
               position: relative;
             }
+
+            &:hover {
+              .nbp-table-content-actions-link {
+                top: -20px;
+                left: 40px;
+                display: block;
+                min-width: max-content;
+                min-height: auto;
+                background-color: var(--nbp-white) !important;
+                border: 1px solid var(--nbp-sliver) !important;
+                border-radius: 6px;
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+                padding: 10px;
+                z-index: 10;
+                position: relative;
+
+                nbp-button {
+                  margin: 5px 0px;
+                  display: block;
+                }
+              }
+            }
+          }
+
+          .nbp-table-content-actions-link {
+            display: none;
           }
         }
       }
     }
   }
+
   .nbp-table-body-empty {
     border-left: 1px solid var(--nbp-sliver);
     border-right: 1px solid var(--nbp-sliver);
     border-bottom: 1px solid var(--nbp-sliver);
     padding: 0.9875em;
     text-align: center;
+
     .nbp-table-content-item {
       font-size: 0.975rem !important;
       font-weight: 600;

@@ -63,9 +63,9 @@ export class NbpBaseComponent implements OnInit {
     DELETE: "delete",
     CREATE: "create",
     UPDATE: "update",
-    VIEW: "View",
-    ACTIVE: "Active",
-    DISABLE: "Disactive"
+    VIEW: "view",
+    ACTIVE: "active",
+    DISABLE: "disactive"
   };
   nbpUsersPermissions = [
     { permission: this.nbpPermission.EDIT, status: true },

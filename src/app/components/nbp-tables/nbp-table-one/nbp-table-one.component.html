@@ -19,36 +19,38 @@
                 <div class="nbp-table-content-item" [ngClass]="nbpTextAlign" *ngIf="item[element] !== 'permissions'">{{item[element]}}</div>
               </td>
               <td class="nbp-table-content-actions" *ngIf="nbpTableShowActions">
-                <!-- <div class="nbp-table-content-icon-actions nbp-font-size-25">
-                  <i class="fa fa-ellipsis-v"></i>
-                </div> -->
-                <nbp-button (click)="nbpOnClickAction(item, item.permissions[5].permission)"
-                  [nbpButtonLabel]="'Permission'"
-                  [nbpButtonColor]="_style.INFO"
-                  [nbpButtonForm]="_style.ROUNDED"
-                  [nbpButtonDisabled]="!item.permissions[5].status"
-                  data-toggle="modal" [attr.data-target]="'#' + modalName"
-                ></nbp-button>
-                <nbp-button (click)="nbpOnClickAction(item, item.permissions[0].permission)"
-                  [nbpButtonLabel]="'Edit'"
-                  [nbpButtonColor]="_style.PRIMARY"
-                  [nbpButtonForm]="_style.ROUNDED"
-                  [nbpButtonDisabled]="!item.permissions[0].status"
-                  data-toggle="modal" [attr.data-target]="'#' + modalName"
-                ></nbp-button>
-                <nbp-button (click)="nbpOnClickAction(item, item.permissions[1].permission)"
-                  [nbpButtonLabel]="'Delete'"
-                  [nbpButtonColor]="_style.DANGER"
-                  [nbpButtonForm]="_style.ROUNDED"
-                  [nbpButtonDisabled]="!item.permissions[1].status"
-                  data-toggle="modal" [attr.data-target]="'#' + modalName"
-                ></nbp-button>
+                <div class="nbp-table-content-icon-actions nbp-font-size-20">
+                  <i class="nbp-table-content-icon fa fa-ellipsis-v"></i>
+                  <div class="nbp-table-content-actions-link">
+                    <nbp-button (click)="nbpOnClickAction(item, item.permissions[5].permission)"
+                    [nbpButtonLabel]="'Permission'"
+                    [nbpButtonColor]="_style.INFO"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[5].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  <nbp-button (click)="nbpOnClickAction(item, item.permissions[0].permission)"
+                    [nbpButtonLabel]="'Edit'"
+                    [nbpButtonColor]="_style.PRIMARY"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[0].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  <nbp-button (click)="nbpOnClickAction(item, item.permissions[1].permission)"
+                    [nbpButtonLabel]="'Delete'"
+                    [nbpButtonColor]="_style.DANGER"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[1].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody>
-          <!-- <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length === 0">
+          <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length !== 0">
             <div class="nbp-table-content-item">Empty Data :)</div>
-          </div> -->
+          </div>
         </table>
       </div>
     </div>
@@ -59,7 +61,7 @@
 <div class="nbp-modal-one-wrapper">
   <div class="modal fade" tabindex="-1" role="dialog" [id]="modalName" [attr.data-backdrop]="nbpModalStatic"
     aria-labelledby="ModalTarget" aria-hidden="true">
-    <div class="modal.right modal-dialog" role="document">
+    <div class="modal.right modal-dialog" [ngClass]="nbpModalSizePosition" role="document">
       <div class="modal-content">
         <div class="modal-header" [ngClass]="nbpBackground">
           <h5 class="modal-title">{{nbpTableTextHeader}}</h5>

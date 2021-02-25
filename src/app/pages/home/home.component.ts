@@ -17,7 +17,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   token: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
-  nbpLoading: boolean = true;
+  nbpLoading: boolean = false;
   nbpUserRoles: [] = [];
   nbpUsersClone: Array<any> = [];
   nbpHeaders: Array<any> = [
@@ -35,8 +35,6 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     nbpLocalStorage: NbpLocalStorage
   ) {
     super(injector);
-    this.NbpGetUserProfile();
-    this.NbpGetUsers();
   }
 
   ngOnInit(): void {
@@ -44,8 +42,8 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   nbpSetUpComponent() {
-    this.nbpLoading = true;
-
+    this.NbpGetUserProfile();
+    this.NbpGetUsers();
   }
 
   // Functions
@@ -90,6 +88,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
       }
     });
     this.nbpUsers = this.nbpUsersClone;
+    this.nbpLoading = true;
     console.log("this.nbpUsers: ", this.nbpUsers);
     console.log("this.nbpUsersClone: ", this.nbpUsersClone);
   }
@@ -111,7 +110,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         }
       );
     }
-    if (nbpUser.action === "permission") {
+    if (nbpUser.action === "active" || nbpUser.action === "disactive") {
       this.nbpUserService
         .NbpActivateOrDisableUserService(nbpUser.item.id)
         .subscribe(

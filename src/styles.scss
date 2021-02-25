@@ -11,8 +11,26 @@ nbp-table-two {
   padding: 20px 0;
 }
 
+// To be fixed later
 @media only screen and (max-width: 47.9375em) {
   .nbp-nav ul {
     display: grid;
+  }
+
+  .nbp-table-one-wrapper {
+    .dataTables_wrapper {
+      .nbp-table {
+        tbody {
+          .nbp-table-content-icon-actions {
+            .nbp-table-content-icon {
+              display: none !important;
+            }
+            .nbp-table-content-actions-link {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
   }
 }
