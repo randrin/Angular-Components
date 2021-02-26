@@ -11,12 +11,15 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent extends NbpBaseComponent implements OnInit {
-  title = "Welcome to Nbp Aplication";
-  titleUser = "All users in Nbp System";
+  nbpTitle = "Welcome to Nbp Aplication";
+  nbpTitleUser = "All users in Nbp System";
+  nbpUpdateUser = "Update user in Nbp System";
 
-  token: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
+  nbpShowFormUpdateProfile: boolean = false;
+  nbpUpdateDisabled: boolean = true;
+  nbpUpdateErrorMessage: string = "";
   nbpLoading: boolean = false;
   nbpUserRoles: [] = [];
   nbpUsersClone: Array<any> = [];
@@ -28,6 +31,8 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     { label: "ISACTIVE", name: "Status" },
   ];
   nbpShowModalAction: boolean = false;
+  nbpUpdateSuccess: boolean = false;
+  nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(
     injector: Injector,
@@ -48,8 +53,8 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   NbpGetUserProfile() {
-    this.token = this.nbpLocalStorage.NbpGetTokenLocalStorage();
-    this.nbpUserService.NbpGetUserService(this.token).subscribe(
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
       (response: any) => {
         this.nbpUser = response;
         this.nbpUserRoles = response.roles.split(",");
@@ -93,18 +98,21 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     console.log("this.nbpUsersClone: ", this.nbpUsersClone);
   }
 
+  NbpLoadingUsers() {
+    this.NbpGetUsers();
+  }
+
   NbpModalOnClickAction(nbpUser) {
     console.log("Event: ", nbpUser);
     if (nbpUser.action === "delete") {
       this.nbpUserService.NbpDeleteUserService(nbpUser.item.id).subscribe(
         (response: any) => {
-          console.log("NbpDeleteUserService -> response: ", response);
-          this.nbpUsers = this.nbpUsers.filter(elt => elt.userName !== response.userName);
-          console.log("NbpDeleteUserService -> this.nbpUsers: ", this.nbpUsers);
+          this.nbpUsers = this.nbpUsers.filter(
+            (elt) => elt.userName !== response.userName
+          );
           this.nbpLoading = true;
         },
         (err) => {
-          console.log("NbpDeleteUserService -> err: ", err);
           this.nbpShowErrorMessage = true;
           this.nbpErrorMessage = err.error.error;
         }
@@ -114,12 +122,12 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
       this.nbpUserService
         .NbpActivateOrDisableUserService(nbpUser.item.id)
         .subscribe(
-          (response) => {
+          (response: any) => {
             console.log(
               "NbpActivateOrDisableUserService -> response: ",
               response
             );
-            this.NbpGetUsers();
+            this.NbpLoadingUsers();
           },
           (err) => {
             console.log("NbpActivateOrDisableUserService -> err: ", err);
@@ -130,9 +138,66 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     }
   }
 
+  nbpInputModel(event) {
+    if (event.name === "username") {
+      this.nbpAuth.profile.userName = event.value;
+    }
+    if (event.name === "email") {
+      this.nbpAuth.profile.email = event.value;
+    }
+    this.nbpCheckValidationForm();
+  }
+
+  nbpCheckValidationForm() {
+    this.nbpUpdateDisabled =
+      !this.nbpAuth.profile.userName.length ||
+      !this.nbpAuth.profile.email.length
+        ? true
+        : false;
+    this.nbpUpdateErrorMessage = "";
+  }
+
+  NbpOnUpdateProfile() {
+    console.log("this.nbpUser: ", this.nbpUser);
+    this.nbpShowFormUpdateProfile = true;
+    this.nbpCheckValidationForm();
+  }
+
   NbpOnLogout() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
     this.nbpUser = new NbpUser(0, "", "", "", false, "");
     this.router.navigateByUrl("/login");
+  }
+
+  NbpAbortSubmit() {
+    this.nbpShowFormUpdateProfile = false;
+  }
+
+  NbpUpdateSubmit() { 
+    if (
+      !this.nbpRegex.test(String(this.nbpAuth.profile.email).toLowerCase())
+    ) {
+      this.nbpUpdateErrorMessage = "Invalid Email Address !";
+    } else {
+      const nbpUserRequest = {
+        userName: this.nbpAuth.profile.userName,
+        email: this.nbpAuth.profile.email
+      }
+      this.nbpUserService.NbpUpdateUserService(this.nbpUser.id, nbpUserRequest).subscribe(
+        (response: any) => {
+          this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
+          this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
+          console.log("response NbpUpdateUserService: ", response);
+          this.NbpGetUserProfile();
+          this.nbpShowFormUpdateProfile = false;
+        },
+        (err) => {
+          console.log("err: ", err);
+          this.nbpShowFormUpdateProfile = true;
+          this.nbpUpdateErrorMessage = err.error.error;
+        }
+      );
+    }
+    console.log("NbpUpdateSubmit: ", this.nbpAuth.profile);
   }
 }

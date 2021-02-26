@@ -36,12 +36,15 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
+    console.log("nbpInputValue: ", this.nbpInputValue);
+    
   }
 
   // Functions
   nbpSetUpComponent() {
     this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.text : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
+    this.nbpModel = this.nbpInputValue === undefined ?  "" : this.nbpInputValue;
     this.nbpGetClasses();
   }
 

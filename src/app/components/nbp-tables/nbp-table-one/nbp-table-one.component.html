@@ -23,7 +23,7 @@
                   <i class="nbp-table-content-icon fa fa-ellipsis-v"></i>
                   <div class="nbp-table-content-actions-link">
                     <nbp-button (click)="nbpOnClickAction(item, item.permissions[5].permission)"
-                    [nbpButtonLabel]="'Permission'"
+                    [nbpButtonLabel]="item.active ? 'Disactive' : 'Active'"
                     [nbpButtonColor]="_style.INFO"
                     [nbpButtonForm]="_style.ROUNDED"
                     [nbpButtonDisabled]="!item.permissions[5].status"

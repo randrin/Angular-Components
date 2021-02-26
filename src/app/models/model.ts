@@ -38,6 +38,10 @@ export class Model {
       submitInput: {
         login: "Login",
         register: "Register",
+        resetPassword: "Reset Passport",
+        updatePassword: "Update Passport",
+        updateProfile: "Update Profile",
+        back: "Back to Home",
         success: "Go to Login Page"
       },
       newUser: "New User?",

@@ -1,6 +1,14 @@
 <div class="nbp-home-wrapper">
   <div class="container my-5">
     <div class="row">
+      <div class="col nbp-text-align-left">
+        <nbp-button
+          [nbpButtonLabel]="'Update Profile'"
+          [nbpButtonSize]="_size.MD"
+          [nbpButtonColor]="_style.PRIMARYHOVER"
+          (click)="NbpOnUpdateProfile()"
+        ></nbp-button>
+      </div>
       <div class="col nbp-text-align-right">
         <nbp-button
           [nbpButtonLabel]="'Logout'"
@@ -14,7 +22,7 @@
     <div class="row text-center">
       <div class="col">
         <nbp-dividing-line-one
-          [nbpTitle]="title"
+          [nbpTitle]="nbpTitle"
           [nbpColorStyle]="_style.DEFAULT"
           [nbpUppercaseTitle]="_pipe.UPPERCASE"
         ></nbp-dividing-line-one>
@@ -55,24 +63,134 @@
         </div>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="col">
-        <nbp-dividing-line-one
-          [nbpTitle]="titleUser"
-          [nbpColorStyle]="_style.DEFAULT"
-        ></nbp-dividing-line-one>
+    <div *ngIf="!nbpShowFormUpdateProfile">
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one
+            [nbpTitle]="nbpTitleUser"
+            [nbpColorStyle]="_style.DEFAULT"
+          ></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row nbp-background-white">
+        <div class="col">
+          <nbp-table-one
+            *ngIf="nbpLoading"
+            [nbpTableHeaders]="nbpHeaders"
+            [nbpTableBodies]="nbpUsers"
+            [nbpTableTextAlignItem]="_style.LEFT"
+            [nbpTableShowActions]="true"
+            (nbpTableActions)="NbpModalOnClickAction($event)"
+          ></nbp-table-one>
+        </div>
       </div>
     </div>
-    <div class="row nbp-background-white">
-      <div class="col">
-        <nbp-table-one
-          *ngIf="nbpLoading"
-          [nbpTableHeaders]="nbpHeaders"
-          [nbpTableBodies]="nbpUsers"
-          [nbpTableTextAlignItem]="_style.LEFT"
-          [nbpTableShowActions]="true"
-          (nbpTableActions)="NbpModalOnClickAction($event)"
-        ></nbp-table-one>
+    <div *ngIf="nbpShowFormUpdateProfile">
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one
+            [nbpTitle]="nbpUpdateUser"
+            [nbpColorStyle]="_style.DEFAULT"
+          ></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row nbp-background-white">
+        <div class="col">
+          <form>
+            <nbp-alert-box-fourth
+              *ngIf="!!nbpUpdateErrorMessage.length"
+              [nbpText]="nbpUpdateErrorMessage"
+              [nbpAlertType]="_alert.ERROR"
+            ></nbp-alert-box-fourth>
+            <div class="form-group">
+              <nbp-input-text
+                [nbpInputLabel]="
+                  _model.component.NbpAuthComponent.textInput.label
+                "
+                [nbpInputValue]="nbpUser.userName"
+                [nbpInputName]="
+                  _model.component.NbpAuthComponent.textInput.name
+                "
+                [nbpInputLabelRequired]="
+                  _model.component.NbpAuthComponent.textInput.required
+                "
+                [nbpInputRequired]="true"
+                [nbpInputBorderType]="_style.ROUNDED"
+                [nbpInputErrorMessage]="
+                  _model.component.NbpAuthComponent.textInput.requiredMessage
+                "
+                [nbpInputPlaceholder]="
+                  _model.component.NbpAuthComponent.textInput.placeholder
+                "
+                [nbpInputIcon]="
+                  _model.component.NbpAuthComponent.textInput.icon
+                "
+                [nbpInputIconRequired]="true"
+                (nbpInputModel)="nbpInputModel($event)"
+              ></nbp-input-text>
+            </div>
+            <div class="form-group">
+              <nbp-input-text
+                [nbpInputLabel]="
+                  _model.component.NbpAuthComponent.emailInput.label
+                "
+                [nbpInputValue]="nbpUser.email"
+                [nbpInputName]="
+                  _model.component.NbpAuthComponent.emailInput.name
+                "
+                [nbpInputLabelRequired]="
+                  _model.component.NbpAuthComponent.emailInput.required
+                "
+                [nbpInputRequired]="true"
+                [nbpInputBorderType]="_style.ROUNDED"
+                [nbpInputErrorMessage]="
+                  _model.component.NbpAuthComponent.emailInput.requiredMessage
+                "
+                [nbpInputPlaceholder]="
+                  _model.component.NbpAuthComponent.emailInput.placeholder
+                "
+                [nbpInputIcon]="
+                  _model.component.NbpAuthComponent.emailInput.icon
+                "
+                [nbpInputIconRequired]="true"
+                (nbpInputModel)="nbpInputModel($event)"
+              ></nbp-input-text>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <nbp-button
+                    class="nbp-login-submit"
+                    [nbpButtonLabel]="
+                      _model.component.NbpAuthComponent.submitInput.back
+                    "
+                    [nbpButtonSize]="_size.MD"
+                    [nbpButtonColor]="_style.PRIMARYHOVER"
+                    [nbpButtonFullWidth]="true"
+                    (click)="NbpAbortSubmit()"
+                  >
+                  </nbp-button>
+                </div>
+                <div class="col-md-6">
+                  <nbp-button
+                    class="nbp-login-submit"
+                    [nbpButtonLabel]="
+                      _model.component.NbpAuthComponent.submitInput
+                        .updateProfile
+                    "
+                    [nbpButtonSize]="_size.MD"
+                    [nbpButtonColor]="_style.PRIMARY"
+                    [nbpButtonType]="_style.OUTLINE"
+                    [nbpButtonFullWidth]="true"
+                    [nbpButtonDisabled]="nbpUpdateDisabled"
+                    (click)="NbpUpdateSubmit()"
+                  >
+                  </nbp-button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
