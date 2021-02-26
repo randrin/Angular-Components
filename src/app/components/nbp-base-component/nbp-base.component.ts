@@ -152,6 +152,9 @@ export class NbpBaseComponent implements OnInit {
       password: "",
       email: "",
     },
+    forgotPassword:{
+      email: "",
+    }
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
