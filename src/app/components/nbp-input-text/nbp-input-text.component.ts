@@ -48,6 +48,9 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
   nbpGetClasses() {
     this.nbpInput = this.nbpInputDisabled ? this.nbpTypeInput.CURSOR : '';
     this.nbpInput = this.nbpInput + this.nbpSeparator + this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
+    if(this.nbpErrorMessage) {
+      this.nbpInputIcon = this.nbpInputIcon + this.nbpSeparator + "nbp-input-text-icon-message"
+    }
     this.nbpInputModel.emit({value: this.nbpModel, name: this.nbpInputName});
   }
 

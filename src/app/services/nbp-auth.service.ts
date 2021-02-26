@@ -19,6 +19,6 @@ export class NbpAuthService {
   }
 
   public NbpRegisterService(nbpUser) {
-    return this.http.post(this.nbpRegisterUrl, nbpUser);
+    return this.http.post(this.nbpRegisterUrl, nbpUser); 
   }
 }

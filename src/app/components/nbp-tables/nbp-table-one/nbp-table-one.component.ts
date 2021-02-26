@@ -22,6 +22,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
   nbpTableItem: object = {item: "", action: ""};
   nbpTableTextHeader: string = "";
   nbpTableTextBody: string = "";
+  nbpModalSizePosition: string = "";
 
   constructor(injector: Injector) {
     super(injector);
@@ -51,10 +52,11 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
       },
     };
     this.nbpTextAlign = this.nbpGetTextAlignClasse(this.nbpTableTextAlignItem);
+    this.nbpModalSizePosition = this.nbpGetModalPositionClasse(this._position.CENTER) + this.nbpSeparator + this.nbpGetSizeModalClasse(this._size.MD);
   }
 
   nbpObjectKeys(obj) {
-    return Object.keys(obj);
+    return Object.keys(obj).filter(element => element !== "permissions");
   }
 
   nbpOnClickAction(item, action) {
@@ -62,12 +64,12 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
       item,
       action
     };
-    if (action === 'delete') {
+    if (action === item.permissions[1].permission) {
       this.nbpBackground = this.nbpGetBackgroundClasse(this._style.DANGER);
       this.nbpTableTextHeader = "Delete Confirmation"
       this.nbpTableTextBody = "Are you sure you want to delete " + item.userName + " ?"
     }
-    if (action === 'permission') {
+    if (action === item.permissions[5].permission) {
       this.nbpBackground = this.nbpGetBackgroundClasse(this._style.PRIMARY);
       this.nbpTableTextHeader = "Permission Confirmation"
       this.nbpTableTextBody = "Are you sure you want to activate / disabled " + item.userName + " ?"

@@ -11,6 +11,7 @@ export class Model {
       },
       passwordInput: {
         label: "Password",
+        label2: "New password",
         name: "password",
         required: "true",
         requiredMessage: "The password is required",
@@ -20,6 +21,7 @@ export class Model {
       },
       confirmPasswordInput: {
         label: "Confirm Password",
+        label2: "Confirm new Password",
         name: "confirmPassword",
         required: "true",
         requiredMessage: "The confirm password is required",
@@ -38,7 +40,8 @@ export class Model {
       submitInput: {
         login: "Login",
         register: "Register",
-        success: "Go to Login Page"
+        success: "Go to Login Page",
+        back:"Back to Login"
       },
       newUser: "New User?",
       alreadyUser: "Already have an account?"

@@ -28,14 +28,14 @@ export class NbpUserService {
     });
   }
 
-  public NbpDeleteUserService(nbpUser) {
-    return this.http.delete(this.nbpUserDeleteUrl + "/" + nbpUser.item.id, {
+  public NbpDeleteUserService(nbpUserId) {
+    return this.http.delete(this.nbpUserDeleteUrl + "/" + nbpUserId, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
-  public NbpActivateOrDisableUserService(nbpUser) {
-    return this.http.put(this.nbpUserPermissionUrl + "/" + nbpUser.item.id, {
+  public NbpActivateOrDisableUserService(nbpUserId) {
+    return this.http.put(this.nbpUserPermissionUrl + "/" + nbpUserId, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }

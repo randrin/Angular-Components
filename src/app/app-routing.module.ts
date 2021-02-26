@@ -35,14 +35,15 @@ import { NbpInputPasswordPageComponent } from './pages/composants/nbp-input-pass
 import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-page.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {
-    path: 'composants', component: ComposantsComponent,
+  { path: 'manage-password', component: ChangePasswordComponent },
+  {path: 'composants', component: ComposantsComponent,
     children: [
       { path: 'breadcrumbs', component: NbpBreadcrumdPageComponent },
       { path: 'colors', component: NbpColorPageComponent },
