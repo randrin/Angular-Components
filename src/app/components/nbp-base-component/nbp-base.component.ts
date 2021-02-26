@@ -1,6 +1,8 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
+import { NbpUser } from "src/app/models/user/nbpUser";
+import { NbpUsers } from "src/app/models/user/nbpUsers";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
@@ -25,6 +27,8 @@ import {
   NbpBorderLeftClasse,
   NbpSizeModalClasse,
   NbpModalPositionClasse,
+  NbpTabbarPositionClasse,
+  NbpTabbarTypeClasse,
   NbpSwitchSizeClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
@@ -39,6 +43,8 @@ import {
   NbpTooltipType,
   NbpTooltipPosition,
   NbpTooltipTheme,
+  NbpTabbarPosition,
+  NbpTabbarType,
 } from "src/assets/utils/nbp-commons/nbp-commons.enums";
 
 @Component({
@@ -50,6 +56,26 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
+  nbpUser = new NbpUser(0, "", "", "", false, "");
+  nbpUsers: Array<any> = [];
+  nbpPermission = {
+    EDIT: "edit",
+    DELETE: "delete",
+    CREATE: "create",
+    UPDATE: "update",
+    VIEW: "view",
+    ACTIVE: "active",
+    DISABLE: "disactive"
+  };
+  nbpUsersPermissions = [
+    { permission: this.nbpPermission.EDIT, status: true },
+    { permission: this.nbpPermission.DELETE, status: true },
+    { permission: this.nbpPermission.CREATE, status: true },
+    { permission: this.nbpPermission.UPDATE, status: true },
+    { permission: this.nbpPermission.VIEW, status: true },
+    { permission: this.nbpPermission.ACTIVE, status: true },
+    { permission: this.nbpPermission.DISABLE, status: true }
+  ];
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -62,6 +88,8 @@ export class NbpBaseComponent implements OnInit {
   _type = NbpType;
   _position = NbpModalPosition;
   _tooltipPosition = NbpTooltipPosition;
+  _tabbarPosition = NbpTabbarPosition;
+  _tabbarType = NbpTabbarType;
   _tooltipTheme = NbpTooltipTheme;
   _tooltipType = NbpTooltipType;
   _model = new Model();
@@ -89,6 +117,8 @@ export class NbpBaseComponent implements OnInit {
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
+  _positionTabbarClasse = NbpTabbarPositionClasse;
+  _typeTabbarClasse = NbpTabbarTypeClasse;
 
   nbpModel: string = "";
   nbpColor: string;
@@ -96,6 +126,7 @@ export class NbpBaseComponent implements OnInit {
   nbpBadge: string;
   nbpBackground: string;
   nbpTextarea: string;
+  status: boolean;
   nbpTextareaDefault = {
     rows: 8,
   };
@@ -109,6 +140,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxBackground: string;
 
   nbpSeparator: string = " ";
+  nbpTaglia: string = "mb-3";
   nbpToken: string = "";
   nbpAuth = {
     login: {
@@ -118,9 +150,11 @@ export class NbpBaseComponent implements OnInit {
     register: {
       userName: "",
       password: "",
-      email: ""
+      email: "",
+    },
+    forgotPassword:{
+      email: "",
     }
-
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
@@ -155,13 +189,21 @@ export class NbpBaseComponent implements OnInit {
   constructor(injector: Injector) {
     this.activatedRoute = injector.get(ActivatedRoute);
     this.router = injector.get(Router);
+    this.NbpCheckAuthentification();
+  }
 
+  ngOnInit(): void {}
+
+  // Functions
+  /* Function to check if the user is logged and redirection to correct link or page */
+  NbpCheckAuthentification() {
     // Get the token in localStorage
     this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
 
-    // Check if tken exist in localStorage
+    // Check if token exist in localStorage
     // 1) If exists, go to the previous page
     // 2) If exists and the user want to go to login or register, go to home page
+    // 3) If not exists, go to login page
     if (this.nbpToken && !!this.nbpToken.length) {
       if (this.activatedRoute.snapshot.url[0]?.path !== undefined) {
         const nbpUrl = this.activatedRoute.snapshot.url[0]?.path;
@@ -173,12 +215,18 @@ export class NbpBaseComponent implements OnInit {
       ) {
         this.router.navigateByUrl("/home");
       }
+    } else {
+      if (this.activatedRoute.snapshot.url[0]?.path === "register") {
+        this.router.navigateByUrl("/register");
+      } else if(this.activatedRoute.snapshot.url[0]?.path === "manage-password") {
+        this.router.navigateByUrl("/manage-password");
+      }
+      else {
+        this.router.navigateByUrl("/login");
+      }
     }
   }
 
-  ngOnInit(): void {}
-
-  // Functions
   /* Function to navigate to another link or page */
   goTo(name?: string): void {
     window.location.href = name;
@@ -1053,5 +1101,51 @@ export class NbpBaseComponent implements OnInit {
         return this._positionModalClasse.TOP;
         break;
     }
+  }
+
+  nbpGetnbpTabbarPosition(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarPosition.LEFT:
+        return this._positionTabbarClasse.LEFT;
+        break;
+      case this._tabbarPosition.CENTER:
+        return this._positionTabbarClasse.CENTER;
+        break;
+      case this._tabbarPosition.RIGHT:
+        return this._positionTabbarClasse.RIGHT;
+        break;
+      case this._tabbarPosition.FLEX:
+        return this._positionTabbarClasse.FLEX;
+        break;
+      default:
+        return this._positionTabbarClasse.LEFT;
+        break;
+    }
+  }
+
+  nbpGetnbpTabbarType(nbpInput) {
+    switch (nbpInput) {
+      case this._tabbarType.TABS:
+        return this._typeTabbarClasse.TABS;
+        break;
+      case this._tabbarType.PILLS:
+        return this._typeTabbarClasse.PILLS;
+        break;
+      case this._tabbarType.JUSTIFIED:
+        return this._typeTabbarClasse.JUSTIFIED;
+        break;
+      case this._tabbarType.PILLSANDJUSTIFY:
+        return this._typeTabbarClasse.PILLSANDJUSTIFY;
+        break;
+      default:
+        return this._typeTabbarClasse.TABS;
+        break;
+    }
+  }
+
+  onChangeClass(event) {
+    const id = event.target.innerText;
+    console.log("this.event; ", event);
+    this.status = true;
   }
 }

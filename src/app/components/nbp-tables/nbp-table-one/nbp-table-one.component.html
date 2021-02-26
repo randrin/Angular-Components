@@ -8,34 +8,78 @@
               <th *ngFor="let header of nbpTableHeaders" class="nbp-table-header-item">
                 {{header.name}}
               </th>
+              <th class="nbp-table-header-item nbp-table-header-no-sort" *ngIf="nbpTableShowActions">
+                Actions
+              </th>
             </tr>
           </thead>
           <tbody class="nbp-table-tbody" *ngIf="nbpTableBodies.length !== 0">
             <tr class="nbp-table-body" *ngFor="let item of nbpTableBodies">
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.firstName}}</div>
+              <td class="nbp-table-content" *ngFor="let element of nbpObjectKeys(item)">
+                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign" *ngIf="item[element] !== 'permissions'">{{item[element]}}</div>
               </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.lastName}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.email}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.phone}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.zipCode}}</div>
-              </td>
-              <td class="nbp-table-content">
-                <div class="nbp-table-content-item" [ngClass]="nbpTextAlign">{{item.street}}</div>
+              <td class="nbp-table-content-actions" *ngIf="nbpTableShowActions">
+                <div class="nbp-table-content-icon-actions nbp-font-size-20">
+                  <i class="nbp-table-content-icon fa fa-ellipsis-v"></i>
+                  <div class="nbp-table-content-actions-link">
+                    <nbp-button (click)="nbpOnClickAction(item, item.permissions[5].permission)"
+                    [nbpButtonLabel]="'Permission'"
+                    [nbpButtonColor]="_style.INFO"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[5].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  <nbp-button (click)="nbpOnClickAction(item, item.permissions[0].permission)"
+                    [nbpButtonLabel]="'Edit'"
+                    [nbpButtonColor]="_style.PRIMARY"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[0].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  <nbp-button (click)="nbpOnClickAction(item, item.permissions[1].permission)"
+                    [nbpButtonLabel]="'Delete'"
+                    [nbpButtonColor]="_style.DANGER"
+                    [nbpButtonForm]="_style.ROUNDED"
+                    [nbpButtonDisabled]="!item.permissions[1].status"
+                    data-toggle="modal" [attr.data-target]="'#' + modalName"
+                  ></nbp-button>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody>
-          <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length === 0">
+          <div class="nbp-table-body-empty nbp-display-none" *ngIf="nbpTableBodies.length !== 0">
             <div class="nbp-table-content-item">Empty Data :)</div>
-        </div>
+          </div>
         </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Confirmation -->
+<div class="nbp-modal-one-wrapper">
+  <div class="modal fade" tabindex="-1" role="dialog" [id]="modalName" [attr.data-backdrop]="nbpModalStatic"
+    aria-labelledby="ModalTarget" aria-hidden="true">
+    <div class="modal.right modal-dialog" [ngClass]="nbpModalSizePosition" role="document">
+      <div class="modal-content">
+        <div class="modal-header" [ngClass]="nbpBackground">
+          <h5 class="modal-title">{{nbpTableTextHeader}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>{{nbpTableTextBody}}</p>
+        </div>
+        <div class="modal-footer">
+          <nbp-button [nbpButtonType]="_style.OUTLINE" [nbpButtonColor]="_style.PRIMARY"
+            [nbpButtonLabel]="_model.component.NbpModalComponent.close" [nbpButtonSize]="_size.SM" data-dismiss="modal">
+          </nbp-button>
+          <nbp-button data-dismiss="modal" (click)="nbpOnValidateAction()" [nbpButtonLabel]="_model.component.NbpModalComponent.save"
+            [nbpButtonSize]="_size.SM" [nbpButtonColor]="_style.PRIMARY">
+          </nbp-button>
+        </div>
       </div>
     </div>
   </div>

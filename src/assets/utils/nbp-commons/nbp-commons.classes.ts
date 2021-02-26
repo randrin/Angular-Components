@@ -282,4 +282,17 @@ export enum NbpModalPositionClasse {
   CENTER = 'modal-dialog-centered',
 }
 
+export enum NbpTabbarPositionClasse {
+  LEFT = 'nav',
+  CENTER = 'justify-content-center',
+  RIGHT = 'justify-content-end',
+  FLEX = 'flex-column'
+}
+
+export enum NbpTabbarTypeClasse {
+  TABS = 'nav nav-tabs',
+  PILLS = 'nav nav-pills',
+  PILLSANDJUSTIFY = 'nav nav-pills nav-fill',
+  JUSTIFIED = 'nav nav-pills nav-justified'
+}
 

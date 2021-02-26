@@ -1,0 +1,9 @@
+<div class="nbp-tab-bar-two-wrapper">
+    <ul [class]="nbpTabbarPositionAndType">
+        <li class="nav-item" *ngFor="let item of NbpTabbarInputTwo">
+            <a [ngClass]="status ? 'nav-link active' : 'nav-link'" aria-current="page" 
+            routerLink={{item.url}} href={{item.url}} (click)="onChangeClass($event)">{{item.name}}</a>
+        </li>
+    </ul>
+</div>
+  

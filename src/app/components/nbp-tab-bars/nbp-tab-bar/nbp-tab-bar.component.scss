@@ -1,0 +1,12 @@
+.nbp-tab-bar-wrapper{
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 20px;
+        background: #e7e7e7;
+        .nav-item{
+         margin: 13px;
+        }
+    }
+}
