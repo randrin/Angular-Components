@@ -52,6 +52,10 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.router.navigateByUrl("/register");
   }
 
+  nbpLookPassword() {
+    this.router.navigateByUrl("/manage-password");
+  }
+
   nbpInputModel(event) {
     if(event.name === "username") {
       this.nbpAuth.login.userName = event.value;

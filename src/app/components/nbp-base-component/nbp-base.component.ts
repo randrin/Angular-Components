@@ -215,7 +215,10 @@ export class NbpBaseComponent implements OnInit {
     } else {
       if (this.activatedRoute.snapshot.url[0]?.path === "register") {
         this.router.navigateByUrl("/register");
-      } else {
+      } else if(this.activatedRoute.snapshot.url[0]?.path === "manage-password") {
+        this.router.navigateByUrl("/manage-password");
+      }
+      else {
         this.router.navigateByUrl("/login");
       }
     }

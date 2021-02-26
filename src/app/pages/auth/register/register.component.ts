@@ -11,6 +11,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
   nbpRegisterSuccess: boolean = false;
   nbpRegisterSuccessMessage: string = "";
   nbpRegisterDisabled: boolean = true;
+  nbpEmailDisabled: boolean = true;
   nbpRegisterErrorMessage: string = "";
   nbpConfirmPassword: string = "";
   nbpEmailInputModel: any;
@@ -66,6 +67,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
         !this.nbpRegex.test(String(this.nbpAuth.register.email).toLowerCase())
       ) {
         this.nbpRegisterSuccess = false;
+        this.nbpRegisterErrorMessage ="Invalid Email !";
       } else {
         this.nbpAuthService.NbpRegisterService(this.nbpAuth.register).subscribe(
           (response: any) => {
