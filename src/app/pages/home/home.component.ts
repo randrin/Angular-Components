@@ -55,7 +55,6 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
-        console.log("Err: ", err);
         if (err.status === 401) {
           this.nbpShowErrorMessage = true;
           this.nbpErrorMessage = err.error;
