@@ -8,6 +8,8 @@ import { NbpLocalStorage } from "../utils/nbp-local-storage";
 export class NbpAuthService {
   private nbpLoginUrl = window["baseUrl"] + "/v1/api/login";
   private nbpRegisterUrl = window["baseUrl"] + "/v1/api/register";
+  private nbpResetPasswordUrl = window["baseUrl"] + "/v1/api/resetPassword";
+  private nbpShowPasswordUrl = window["baseUrl"] + "/v1/api/forgottenPassword";
 
   constructor(
     private http: HttpClient,
@@ -21,4 +23,14 @@ export class NbpAuthService {
   public NbpRegisterService(nbpUser) {
     return this.http.post(this.nbpRegisterUrl, nbpUser); 
   }
+
+  public NbpResetPasswordService(nbpUser) {
+    return this.http.post(this.nbpResetPasswordUrl, nbpUser);
+  }
+
+  
+  public NbpSearchForgottenPasswordService(nbpUser) {
+    return this.http.post(this.nbpShowPasswordUrl, nbpUser);
+  }
 }
+  
