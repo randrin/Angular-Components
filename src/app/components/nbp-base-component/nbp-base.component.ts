@@ -65,7 +65,7 @@ export class NbpBaseComponent implements OnInit {
     UPDATE: "update",
     VIEW: "view",
     ACTIVE: "active",
-    DISABLE: "disactive"
+    DISABLE: "disactive",
   };
   nbpUsersPermissions = [
     { permission: this.nbpPermission.EDIT, status: true },
@@ -74,7 +74,7 @@ export class NbpBaseComponent implements OnInit {
     { permission: this.nbpPermission.UPDATE, status: true },
     { permission: this.nbpPermission.VIEW, status: true },
     { permission: this.nbpPermission.ACTIVE, status: true },
-    { permission: this.nbpPermission.DISABLE, status: true }
+    { permission: this.nbpPermission.DISABLE, status: true },
   ];
 
   _alertType = NbpAlertType;
@@ -139,6 +139,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxColor: string;
   nbpAlertBoxBackground: string;
 
+  nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   nbpSeparator: string = " ";
   nbpTaglia: string = "mb-3";
   nbpToken: string = "";
@@ -155,7 +156,10 @@ export class NbpBaseComponent implements OnInit {
     profile: {
       userName: "",
       email: "",
-    }
+    },
+    forgotPassword: {
+      email: "",
+    },
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
@@ -219,6 +223,10 @@ export class NbpBaseComponent implements OnInit {
     } else {
       if (this.activatedRoute.snapshot.url[0]?.path === "register") {
         this.router.navigateByUrl("/register");
+      } else if (
+        this.activatedRoute.snapshot.url[0]?.path === "manage-password"
+      ) {
+        this.router.navigateByUrl("/manage-password");
       } else {
         this.router.navigateByUrl("/login");
       }
@@ -980,13 +988,16 @@ export class NbpBaseComponent implements OnInit {
   nbpGetTextTransformClasse(nbpInput) {
     switch (nbpInput) {
       case this._pipe.LOWERCASE:
-        return this._textTransformClasse.CAPITALIZE;
+        return this._textTransformClasse.LOWERCASE;
         break;
       case this._pipe.UPPERCASE:
         return this._textTransformClasse.UPPERCASE;
         break;
-      default:
+      case this._pipe.CAPITALIZE:
         return this._textTransformClasse.CAPITALIZE;
+        break;
+      default:
+        return this._textTransformClasse.INHERIT;
         break;
     }
   }

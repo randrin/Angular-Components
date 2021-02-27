@@ -32,7 +32,6 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   ];
   nbpShowModalAction: boolean = false;
   nbpUpdateSuccess: boolean = false;
-  nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(
     injector: Injector,
@@ -60,7 +59,6 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
-        console.log("Err: ", err);
         if (err.status === 401) {
           this.nbpShowErrorMessage = true;
           this.nbpErrorMessage = err.error;

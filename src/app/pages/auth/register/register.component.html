@@ -3,7 +3,8 @@
     <div class="row nbp-register-row">
       <div class="col-md-5 nbp-register-content" *ngIf="!nbpRegisterSuccess">
         <nbp-alert-box-fourth *ngIf="!!nbpRegisterErrorMessage.length" [nbpText]="nbpRegisterErrorMessage"
-          [nbpAlertType]="_alert.ERROR"></nbp-alert-box-fourth>
+          [nbpAlertType]="_alert.ERROR">
+        </nbp-alert-box-fourth>
         <form>
           <div class="form-group">
             <nbp-input-text

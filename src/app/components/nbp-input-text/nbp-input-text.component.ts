@@ -36,8 +36,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    console.log("nbpInputValue: ", this.nbpInputValue);
-    
   }
 
   // Functions

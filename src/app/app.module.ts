@@ -106,6 +106,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { NbpLocalStorage } from './utils/nbp-local-storage';
 import { NbpUserService } from './services/nbp-user.service';
+import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -204,7 +205,8 @@ import { NbpUserService } from './services/nbp-user.service';
     NbpInputSwitchFourthComponent,
     NbpLoginOneComponent,
     LoginComponent,
-    RegisterComponent  
+    RegisterComponent,
+    ChangePasswordComponent  
   ],
 
 
