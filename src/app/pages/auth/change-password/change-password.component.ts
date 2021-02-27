@@ -158,7 +158,7 @@ export class ChangePasswordComponent
             } else {
               this.nbpLoginErrorType = this._alert.ERROR;
             }
-            this.nbpLoginErrorMessage = err.error;
+            this.nbpRegisterErrorMessage = err.error;
           }
         );
     }
