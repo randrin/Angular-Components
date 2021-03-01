@@ -201,6 +201,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
           this.NbpGetUserProfile();
           this.nbpShowFormUpdateProfile = false;
           this.nbpRegisterSuccessMessage = response.message;
+          setTimeout(()=>{
+            this.nbpRegisterSuccessMessage = "";
+          },4000)
         },
         (err) => {
           console.log("err: ", err);
