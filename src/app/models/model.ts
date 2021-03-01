@@ -13,6 +13,8 @@ export class Model {
         label: "Password",
         label2: "New password",
         label3: "Old password",
+        newPassword: "newPassword",
+        oldPassword: "oldPassword",
         name: "password",
         required: "true",
         requiredMessage: "The password is required",
@@ -23,6 +25,8 @@ export class Model {
       confirmPasswordInput: {
         label: "Confirm Password",
         label2: "Confirm New Password",
+        newPassword: "newPassword",
+        OldPassword: "OldPassword",
         name: "confirmPassword",
         required: "true",
         requiredMessage: "The confirm password is required",

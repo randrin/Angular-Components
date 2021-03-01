@@ -41,7 +41,7 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.nbpAuthService.NbpLoginService(this.nbpAuth.login).subscribe(
       (response) => {
         this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
-        if(this.changeOldPasswordToNew = true){
+        if(!this.changeOldPasswordToNew){
           this.router.navigateByUrl("/change-old-password-to-new-password");
         }else{
           this.router.navigateByUrl("/home");

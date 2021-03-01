@@ -11,7 +11,6 @@ import { NbpLocalStorage } from 'src/app/utils/nbp-local-storage';
 export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements OnInit {
   nbpPasswordDisabled: boolean = true;
   nbpChangePasswordSuccess:boolean = false;
-  nbpOldPasswordToNewPasswordSuccess:boolean = false;
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
   nbpUpdateDisabled: boolean = true;
@@ -19,6 +18,8 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
   changeOldPasswordToNew:boolean;
   nbpRegisterErrorMessage: string = "";
   nbpConfirmPassword: string = "";
+  nbpGeneratePasswordErrorMessage: string;
+  nbpOldPassword: string = "";
 
   constructor(
     injector: Injector,
@@ -43,7 +44,7 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
   }
 
   nbpInputModels(event) {
-    if (event.name === "password") {
+    if (event.name === "oldPassword") {
       this.nbpAuth.changePassword.oldPassword = event.value;
     }
     if (event.name === "newPassword") {
@@ -55,12 +56,12 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
     this.nbpSetUpComponent();
   }
 
-  nbpChangePasswordSubmit() {
-    // if (this.nbpAuth.changePassword.oldPassword !== response.object) {
+  nbpChangeOldToNewPasswordSubmit() {
+    // if (this.nbpAuth.changePassword.oldPassword !== this.nbpGeneratePasswordErrorMessage) {
     //   this.nbpChangePasswordSuccess = false;
-    //   this.nbpChangeOldPasswordErrorMessage = this.nbpUser;
+    //   this.nbpChangeOldPasswordErrorMessage = this.nbpChangeOldPasswordErrorMessage;
     // }else
-    if (this.nbpAuth.changePassword.oldPassword !== this.nbpConfirmPassword) {
+    if (this.nbpAuth.changePassword.newPassword !== this.nbpConfirmPassword) {
       this.nbpChangePasswordSuccess = false;
       this.nbpChangeOldPasswordErrorMessage = "Password don't match !";
     } else {
@@ -68,20 +69,21 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
         old_password: this.nbpAuth.changePassword.oldPassword,
         new_password: this.nbpAuth.changePassword.newPassword,
       }
-
+      console.log("nbpUserRequest : ", nbpUserRequest);
       this.nbpUserService.NbpChangePasswordService(this.nbpUser.id, nbpUserRequest).subscribe(
         (response: any) => {
           this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
           this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
           console.log("response NbpcChangePasswordService: ", response);
           this.NbpGetUserProfile();
-          this.nbpChangePasswordSuccess = false;
-          this.nbpChangeOldPasswordErrorMessage = response.message;
+          this.nbpChangePasswordSuccess = true;
+
         },
         (err) => {
-          console.log("err: ", err);
+          
       //    this.nbpShowFormUpdateProfile = true;
           this.nbpChangeOldPasswordErrorMessage = err.error.error;
+          console.log("response errore: ", err);
         }
       );
 

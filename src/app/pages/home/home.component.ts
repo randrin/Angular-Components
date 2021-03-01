@@ -39,6 +39,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpShowModalAction: boolean = false;
   nbpUpdateSuccess: boolean = false;
   nbpConfirmPassword: any;
+  nbpRegisterSuccessMessage: string;
 
   constructor(
     injector: Injector,
@@ -167,7 +168,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpOnUpdateProfile() {
-    console.log("this.nbpUser: ", this.nbpUser);
+    console.log("this.nbpUser login: ", this.nbpUser);
     this.nbpShowFormUpdateProfile = true;
     this.nbpCheckValidationForm();
   }
@@ -199,6 +200,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
           console.log("response NbpUpdateUserService: ", response);
           this.NbpGetUserProfile();
           this.nbpShowFormUpdateProfile = false;
+          this.nbpRegisterSuccessMessage = response.message;
         },
         (err) => {
           console.log("err: ", err);

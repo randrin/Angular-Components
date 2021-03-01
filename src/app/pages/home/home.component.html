@@ -18,6 +18,7 @@
     </div>
     <div class="row text-center">
       <div class="col">
+        <nbp-feedback *ngIf="nbpRegisterSuccessMessage"  [nbpTitle]="nbpRegisterSuccessMessage"> </nbp-feedback>
         <nbp-alert-box-one *ngIf="nbpShowErrorMessage" [nbpText]="nbpErrorMessage" [nbpAlertType]="_alert.ERROR">
         </nbp-alert-box-one>
         <nbp-background-box *ngIf="!nbpShowErrorMessage" [nbpBackgroundStyle]="_style.PRIMARY"
