@@ -62,7 +62,8 @@ export enum NbpColorClasse {
 export enum NbpTextTransformClasse {
   LOWERCASE = 'nbp-text-lowercase',
   UPPERCASE = 'nbp-text-uppercase',
-  CAPITALIZE = 'nbp-text-capitalize'
+  CAPITALIZE = 'nbp-text-capitalize',
+  INHERIT = 'nbp-text-inherit'
 }
 
 export enum NbpTextAlignClasse {

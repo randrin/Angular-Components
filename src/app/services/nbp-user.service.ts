@@ -10,6 +10,7 @@ export class NbpUserService {
   private nbpUsersUrl = window["baseUrl"] + "/v1/api/users";
   private nbpUserDeleteUrl = window["baseUrl"] + "/v1/api/user/delete";
   private nbpUserPermissionUrl = window["baseUrl"] + "/v1/api/user/permission";
+  private nbpUserUpdateUrl = window["baseUrl"] + "/v1/api/user/update";
 
   constructor(
     private http: HttpClient,
@@ -28,14 +29,20 @@ export class NbpUserService {
     });
   }
 
-  public NbpDeleteUserService(nbpUser) {
-    return this.http.delete(this.nbpUserDeleteUrl + "/" + nbpUser.item.id, {
+  public NbpDeleteUserService(nbpUserId) {
+    return this.http.delete(this.nbpUserDeleteUrl + "/" + nbpUserId, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
-  public NbpActivateOrDisableUserService(nbpUser) {
-    return this.http.put(this.nbpUserPermissionUrl + "/" + nbpUser.item.id, {
+  public NbpActivateOrDisableUserService(nbpUserId) {
+    return this.http.put(this.nbpUserPermissionUrl + "/" + nbpUserId, {
+      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    });
+  }
+
+  public NbpUpdateUserService(nbpUserId, nbpUser) {
+    return this.http.put(this.nbpUserUpdateUrl + "/" + nbpUserId, nbpUser, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }

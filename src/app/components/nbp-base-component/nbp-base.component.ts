@@ -56,8 +56,26 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
-  nbpUser = new NbpUser(0, "", "", "", false, "")
+  nbpUser = new NbpUser(0, "", "", "", false, "");
   nbpUsers: Array<any> = [];
+  nbpPermission = {
+    EDIT: "edit",
+    DELETE: "delete",
+    CREATE: "create",
+    UPDATE: "update",
+    VIEW: "view",
+    ACTIVE: "active",
+    DISABLE: "disactive",
+  };
+  nbpUsersPermissions = [
+    { permission: this.nbpPermission.EDIT, status: true },
+    { permission: this.nbpPermission.DELETE, status: true },
+    { permission: this.nbpPermission.CREATE, status: true },
+    { permission: this.nbpPermission.UPDATE, status: true },
+    { permission: this.nbpPermission.VIEW, status: true },
+    { permission: this.nbpPermission.ACTIVE, status: true },
+    { permission: this.nbpPermission.DISABLE, status: true },
+  ];
 
   _alertType = NbpAlertType;
   _style = NbpStyle;
@@ -100,7 +118,7 @@ export class NbpBaseComponent implements OnInit {
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
   _positionTabbarClasse = NbpTabbarPositionClasse;
-  _typeTabbarClasse = NbpTabbarTypeClasse
+  _typeTabbarClasse = NbpTabbarTypeClasse;
 
   nbpModel: string = "";
   nbpColor: string;
@@ -121,6 +139,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxColor: string;
   nbpAlertBoxBackground: string;
 
+  nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   nbpSeparator: string = " ";
   nbpTaglia: string = "mb-3";
   nbpToken: string = "";
@@ -132,9 +151,15 @@ export class NbpBaseComponent implements OnInit {
     register: {
       userName: "",
       password: "",
-      email: ""
-    }
-
+      email: "",
+    },
+    profile: {
+      userName: "",
+      email: "",
+    },
+    forgotPassword: {
+      email: "",
+    },
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
@@ -196,8 +221,12 @@ export class NbpBaseComponent implements OnInit {
         this.router.navigateByUrl("/home");
       }
     } else {
-      if(this.activatedRoute.snapshot.url[0]?.path === "register") {
+      if (this.activatedRoute.snapshot.url[0]?.path === "register") {
         this.router.navigateByUrl("/register");
+      } else if (
+        this.activatedRoute.snapshot.url[0]?.path === "manage-password"
+      ) {
+        this.router.navigateByUrl("/manage-password");
       } else {
         this.router.navigateByUrl("/login");
       }
@@ -959,13 +988,16 @@ export class NbpBaseComponent implements OnInit {
   nbpGetTextTransformClasse(nbpInput) {
     switch (nbpInput) {
       case this._pipe.LOWERCASE:
-        return this._textTransformClasse.CAPITALIZE;
+        return this._textTransformClasse.LOWERCASE;
         break;
       case this._pipe.UPPERCASE:
         return this._textTransformClasse.UPPERCASE;
         break;
-      default:
+      case this._pipe.CAPITALIZE:
         return this._textTransformClasse.CAPITALIZE;
+        break;
+      default:
+        return this._textTransformClasse.INHERIT;
         break;
     }
   }
@@ -1120,9 +1152,9 @@ export class NbpBaseComponent implements OnInit {
     }
   }
 
-  onChangeClass(event){
-    const id = event.target.innerText
-     console.log("this.event; ", event)
-     this.status = true
-   }
+  onChangeClass(event) {
+    const id = event.target.innerText;
+    console.log("this.event; ", event);
+    this.status = true;
+  }
 }

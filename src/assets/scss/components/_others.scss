@@ -37,6 +37,9 @@
 .nbp-text-capitalize {
   text-transform: capitalize !important;
 }
+.nbp-text-capitalize {
+  text-transform: inherit !important;
+}
 
 // Rounded
 .nbp-rounded {

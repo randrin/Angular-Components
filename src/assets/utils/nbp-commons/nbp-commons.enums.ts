@@ -97,6 +97,7 @@ export enum NbpPipe {
   LOWERCASE = "LOWERCASE",
   PERCENT = 4,
   UPPERCASE = "UPPERCASE",
+  CAPITALIZE = "CAPITALIZE",
   CONTO = 6,
 }
 export enum NbpModalPosition {
