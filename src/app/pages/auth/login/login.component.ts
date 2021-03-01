@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpAuthService } from "src/app/services/nbp-auth.service";
+import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
 @Component({
@@ -12,8 +13,14 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
   nbpLoginDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
   nbpLoginErrorType: string = "";
+  changeOldPasswordToNew:boolean = false;
+  nbpShowErrorMessage: boolean = false;
+  nbpErrorMessage: boolean = false;
 
-  constructor(injector: Injector, private nbpAuthService: NbpAuthService, nbpLocalStorage: NbpLocalStorage) {
+  constructor(injector: Injector,
+    private nbpAuthService: NbpAuthService, 
+    private nbpUserService: NbpUserService,
+    nbpLocalStorage: NbpLocalStorage) {
     super(injector);
   }
 
@@ -34,7 +41,11 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.nbpAuthService.NbpLoginService(this.nbpAuth.login).subscribe(
       (response) => {
         this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
-        this.router.navigateByUrl("/home");
+        if(this.changeOldPasswordToNew = true){
+          this.router.navigateByUrl("/change-old-password-to-new-password");
+        }else{
+          this.router.navigateByUrl("/home");
+        }
       },
       (err) => {
         console.log("err: ", err);
@@ -64,5 +75,22 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
       this.nbpAuth.login.password = event.value;
     }
     this.nbpSetUpComponent();
+  }
+
+  NbpGetUserProfile() {
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
+      (response: any) => {
+        this.nbpUser = response;
+        this.changeOldPasswordToNew = this.nbpUser.temporaryPassword;
+     //   this.nbpUserRoles = response.roles.split(",");
+      },
+      (err) => {
+        if (err.status === 401) {
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error;
+        }
+      }
+    );
   }
 }

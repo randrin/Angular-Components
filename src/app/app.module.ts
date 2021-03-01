@@ -107,6 +107,7 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { NbpLocalStorage } from './utils/nbp-local-storage';
 import { NbpUserService } from './services/nbp-user.service';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
+import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
 
 @NgModule({
   declarations: [
@@ -206,7 +207,8 @@ import { ChangePasswordComponent } from './pages/auth/change-password/change-pas
     NbpLoginOneComponent,
     LoginComponent,
     RegisterComponent,
-    ChangePasswordComponent  
+    ChangePasswordComponent,
+    ChangeOldPassToNewPassComponent  
   ],
 
 

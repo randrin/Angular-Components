@@ -11,6 +11,7 @@ export class NbpUserService {
   private nbpUserDeleteUrl = window["baseUrl"] + "/v1/api/user/delete";
   private nbpUserPermissionUrl = window["baseUrl"] + "/v1/api/user/permission";
   private nbpUserUpdateUrl = window["baseUrl"] + "/v1/api/user/update";
+  private nbpChangePasswordUrl = window["baseUrl"] + "/v1/api/user/changePassword"
 
   constructor(
     private http: HttpClient,
@@ -43,6 +44,12 @@ export class NbpUserService {
 
   public NbpUpdateUserService(nbpUserId, nbpUser) {
     return this.http.put(this.nbpUserUpdateUrl + "/" + nbpUserId, nbpUser, {
+      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    });
+  }
+
+  public NbpChangePasswordService(nbpUserId,nbpUserPwd) {
+    return this.http.put(this.nbpChangePasswordUrl + "/" + nbpUserId + "/"+nbpUserPwd.old_password + "/" + nbpUserPwd.new_password , {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }

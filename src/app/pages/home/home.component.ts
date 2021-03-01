@@ -15,11 +15,16 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpTitleUser = "All users in Nbp System";
   nbpUpdateUser = "Update user in Nbp System";
 
+  nbpPasswordrDisabled: boolean = true;
+  nbpChangePasswordSuccess:boolean = false;
+  changeOldPasswordToNew:boolean = false;
+  nbpRegisterSuccess:boolean = false;
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
   nbpShowFormUpdateProfile: boolean = false;
   nbpUpdateDisabled: boolean = true;
   nbpUpdateErrorMessage: string = "";
+  nbpRegisterErrorMessage: string = "";
   nbpLoading: boolean = false;
   nbpUserRoles: [] = [];
   nbpUsersClone: Array<any> = [];
@@ -28,10 +33,12 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     { label: "USERNAME", name: "Username" },
     { label: "EMAIL", name: "Email Adress" },
     { label: "ROLES", name: "Roles" },
-    { label: "ISACTIVE", name: "Status" },
+    { label: "TEMPORARY-PASSWORD", name: "Temporary-Password"},
+    { label: "ISACTIVE", name: "Status" }
   ];
   nbpShowModalAction: boolean = false;
   nbpUpdateSuccess: boolean = false;
+  nbpConfirmPassword: any;
 
   constructor(
     injector: Injector,
@@ -45,10 +52,13 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
+
   nbpSetUpComponent() {
     this.NbpGetUserProfile();
     this.NbpGetUsers();
   }
+
+  
 
   // Functions
   NbpGetUserProfile() {
@@ -56,6 +66,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
       (response: any) => {
         this.nbpUser = response;
+        this.changeOldPasswordToNew = this.nbpUser.temporaryPassword;
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
@@ -163,7 +174,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
 
   NbpOnLogout() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-    this.nbpUser = new NbpUser(0, "", "", "", false, "");
+    this.nbpUser = new NbpUser(0, "", "", "", false, "", false);
     this.router.navigateByUrl("/login");
   }
 
@@ -198,4 +209,5 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     }
     console.log("NbpUpdateSubmit: ", this.nbpAuth.profile);
   }
+
 }

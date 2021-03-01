@@ -12,6 +12,7 @@ export class Model {
       passwordInput: {
         label: "Password",
         label2: "New password",
+        label3: "Old password",
         name: "password",
         required: "true",
         requiredMessage: "The password is required",

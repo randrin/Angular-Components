@@ -36,6 +36,7 @@ import { NbpBoxePageComponent } from './pages/composants/nbp-boxe-page/nbp-boxe-
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
+import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'manage-password', component: ChangePasswordComponent },
-  {path: 'composants', component: ComposantsComponent,
+  { path: 'change-old-password-to-new-password', component: ChangeOldPassToNewPassComponent },
+  { path: 'composants', component: ComposantsComponent,
     children: [
       { path: 'breadcrumbs', component: NbpBreadcrumdPageComponent },
       { path: 'colors', component: NbpColorPageComponent },

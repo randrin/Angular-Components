@@ -11,6 +11,7 @@ export class NbpAuthService {
   private nbpResetPasswordUrl = window["baseUrl"] + "/v1/api/user/resetPassword";
   private nbpShowPasswordUrl = window["baseUrl"] + "/v1/api/user/forgottenPassword";
 
+
   constructor(
     private http: HttpClient,
     private nbpLocalStorage: NbpLocalStorage

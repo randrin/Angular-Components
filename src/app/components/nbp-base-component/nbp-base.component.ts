@@ -56,7 +56,7 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
-  nbpUser = new NbpUser(0, "", "", "", false, "");
+  nbpUser = new NbpUser(0, "", "", "", false, "",false);
   nbpUsers: Array<any> = [];
   nbpPermission = {
     EDIT: "edit",
@@ -160,6 +160,10 @@ export class NbpBaseComponent implements OnInit {
     forgotPassword: {
       email: "",
     },
+    changePassword: {
+      oldPassword: "",
+      newPassword: "",
+    },
   };
   nbpPosition = {
     LEFT: "nbp-deep-link-left",
@@ -227,7 +231,12 @@ export class NbpBaseComponent implements OnInit {
         this.activatedRoute.snapshot.url[0]?.path === "manage-password"
       ) {
         this.router.navigateByUrl("/manage-password");
-      } else {
+      }else if (
+        this.activatedRoute.snapshot.url[0]?.path === "change-old-password-to-new-password"
+      ) {
+        this.router.navigateByUrl("/change-old-password-to-new-password");
+      }
+      else {
         this.router.navigateByUrl("/login");
       }
     }
