@@ -5,6 +5,7 @@ export class NbpUser {
   public email: string;
   public isActive: boolean;
   public roles: number;
+  public temporaryPassword:boolean
 
   constructor(
     id: number,
@@ -12,6 +13,7 @@ export class NbpUser {
     password: string,
     email: string,
     isActive: boolean,
-    roles: string
+    roles: string,
+    temporaryPassword:boolean
   ) {}
 }

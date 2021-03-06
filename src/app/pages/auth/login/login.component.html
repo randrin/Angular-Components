@@ -1,11 +1,11 @@
 <div class="nbp-login-wrapper">
   <div class="nbp-login-container container">
     <div class="row nbp-login-row">
-      <div class="col-md-5 nbp-login-content">
+      <div class="col-md-4 nbp-login-content">
         <nbp-alert-box-fourth *ngIf="!!nbpLoginErrorMessage.length"
-          [nbpText]="nbpLoginErrorMessage"
-          [nbpAlertType]="nbpLoginErrorType"
-        ></nbp-alert-box-fourth>
+          [nbpAlertText]="nbpLoginErrorMessage"
+          [nbpAlertType]="nbpLoginErrorType">
+        </nbp-alert-box-fourth>
         <form>
           <div class="form-group">
             <nbp-input-text

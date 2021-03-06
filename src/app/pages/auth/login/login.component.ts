@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpAuthService } from "src/app/services/nbp-auth.service";
+import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
 @Component({
@@ -9,11 +10,17 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
   styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent extends NbpBaseComponent implements OnInit {
+
   nbpLoginDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
   nbpLoginErrorType: string = "";
+  nbpShowErrorMessage: boolean = false;
+  nbpErrorMessage: boolean = false;
 
-  constructor(injector: Injector, private nbpAuthService: NbpAuthService, nbpLocalStorage: NbpLocalStorage) {
+  constructor(injector: Injector,
+    private nbpAuthService: NbpAuthService, 
+    private nbpUserService: NbpUserService, 
+    nbpLocalStorage: NbpLocalStorage) {
     super(injector);
   }
 
@@ -29,21 +36,37 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.nbpLoginErrorMessage = "";
   }
 
+
   // Functions
   nbpLoginSubmit() {
     this.nbpAuthService.NbpLoginService(this.nbpAuth.login).subscribe(
-      (response) => {
+      (response: any) => {
         this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
+        this.NbpGetUserProfile();
         this.router.navigateByUrl("/home");
       },
       (err) => {
-        console.log("err: ", err);
         if (err.status === 401) {
           this.nbpLoginErrorType = this._alert.WARNING;
         } else {
           this.nbpLoginErrorType = this._alert.ERROR;
         }
         this.nbpLoginErrorMessage = err.error;
+      }
+    );
+  }
+
+  NbpGetUserProfile() {
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
+      (response: any) => {
+        this.nbpAuthService.nbpUser = response;
+      },
+      (err) => {
+        if (err.status === 401) {
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error;
+        }
       }
     );
   }

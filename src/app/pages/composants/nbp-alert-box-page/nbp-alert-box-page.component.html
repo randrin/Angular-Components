@@ -10,24 +10,24 @@
   <div class="row">
     <div class="col">
       <nbp-alert-box-one
-        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertText]="_model.component.NbpAlertBoxComponent.title"
         [nbpClose]="'true'"
         (nbpClickClose)="nbpOnClickClose($event)"
       ></nbp-alert-box-one>
       <nbp-alert-box-one
-        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.PROMOTIONAL"
       ></nbp-alert-box-one>
       <nbp-alert-box-one
-        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.WARNING"
       ></nbp-alert-box-one>
       <nbp-alert-box-one
-        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.POSITIVE"
       ></nbp-alert-box-one>
       <nbp-alert-box-one
-        [nbpText]="_model.component.NbpAlertBoxComponent.title"
+        [nbpAlertText]="_model.component.NbpAlertBoxComponent.title"
         [nbpAlertType]="_alert.ERROR"
       ></nbp-alert-box-one>
     </div>
@@ -43,7 +43,7 @@
   <div class="row">
     <div class="col-md-6">
       <nbp-alert-box-two
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.GENERIC"
@@ -51,7 +51,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-two
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.PROMOTIONAL"
@@ -59,7 +59,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-two
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.WARNING"
@@ -67,7 +67,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-two
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.POSITIVE"
@@ -75,7 +75,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-two
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.ERROR"
@@ -93,7 +93,7 @@
   <div class="row">
     <div class="col-md-6">
       <nbp-alert-box-three
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.GENERIC"
@@ -101,7 +101,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-three
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.PROMOTIONAL"
@@ -109,7 +109,15 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-three
-        [nbpText]="
+        [nbpAlertText]="
+          _model.component.NbpAlertBoxComponent.title.substring(0, 100)
+        "
+        [nbpAlertType]="_alert.INFO"
+      ></nbp-alert-box-three>
+    </div>
+    <div class="col-md-6">
+      <nbp-alert-box-three
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.WARNING"
@@ -117,7 +125,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-three
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.POSITIVE"
@@ -125,7 +133,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-three
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.ERROR"
@@ -143,7 +151,7 @@
   <div class="row">
     <div class="col-md-6">
       <nbp-alert-box-fourth
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.GENERIC"
@@ -151,7 +159,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-fourth
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.PROMOTIONAL"
@@ -159,7 +167,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-fourth
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.WARNING"
@@ -167,7 +175,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-fourth
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.POSITIVE"
@@ -175,7 +183,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-fourth
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.ERROR"
@@ -193,7 +201,7 @@
   <div class="row">
     <div class="col-md-6">
       <nbp-alert-box-five
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.GENERIC"
@@ -201,7 +209,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-five
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.PROMOTIONAL"
@@ -209,7 +217,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-five
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.WARNING"
@@ -217,7 +225,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-five
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.POSITIVE"
@@ -225,7 +233,7 @@
     </div>
     <div class="col-md-6">
       <nbp-alert-box-five
-        [nbpText]="
+        [nbpAlertText]="
           _model.component.NbpAlertBoxComponent.title.substring(0, 100)
         "
         [nbpAlertType]="_alert.ERROR"

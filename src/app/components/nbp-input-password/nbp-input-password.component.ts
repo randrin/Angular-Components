@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
 import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'nbp-input-password',
@@ -25,6 +26,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
   
   nbpModel: string = '';
   nbpInput: string;
+  nbpInputId: string;
   nbpErrorBorder: string = '';
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
@@ -41,6 +43,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
 
   // Functions
   nbpSetUpComponent() {
+    this.nbpInputId = 'nbp' + uuid.v4();
     this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.password : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpGetClasses();

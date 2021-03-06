@@ -13,12 +13,12 @@ import { NbpAuthService } from "src/app/services/nbp-auth.service";
   templateUrl: "./change-password.component.html",
   styleUrls: ["./change-password.component.scss"],
 })
-export class ChangePasswordComponent
-  extends NbpBaseComponent
-  implements OnInit {
+export class ChangePasswordComponent extends NbpBaseComponent implements OnInit {
+
   nbpChangePasswordSuccess: boolean = false;
-  changePassword: boolean = false;
-  findPassword: boolean = true;
+  nbpChangeTemporalPassword: boolean = false;
+  nbpCheckTemporalPassword: boolean = true;
+  changeOldPasswordToNew:boolean = false;
   nbpRegisterDisabled: boolean = true;
   nbpEmailDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
@@ -61,8 +61,8 @@ export class ChangePasswordComponent
   }
 
   nbpChangePassword() {
-    this.changePassword = true;
-    this.findPassword = false;
+    this.nbpChangeTemporalPassword = true;
+    this.nbpCheckTemporalPassword = false;
     this.router.navigateByUrl("/manage-password");
   }
 
@@ -114,7 +114,7 @@ export class ChangePasswordComponent
         (response: any) => {
           console.log("NbpResetPasswordService: ", response);
           this.nbpChangePasswordSuccess = true;
-          this.changePassword = false;
+          this.nbpChangeTemporalPassword = false;
           this.nbpRegisterSuccessMessage = response.message;
         },
         (err) => {
@@ -146,7 +146,6 @@ export class ChangePasswordComponent
           (response: any) => {
             console.log("NbpforgotPasswordService: ", response);
             this.nbpChangePasswordSuccess = true;
-            // this.changePassword = false;
             this.nbpRegisterSuccessMessage = response.message;
             this.nbpPermanentPassword =
               "Your temporal password: " + response.object;
@@ -161,6 +160,15 @@ export class ChangePasswordComponent
             this.nbpRegisterErrorMessage = err.error;
           }
         );
+    }
+  }
+
+  changePasswordToNew(event){
+    console.log("this login go event: ", event)
+    if(!this.nbpPermanentPassword){
+      this.router.navigateByUrl("/login");
+    } else if(this.nbpPermanentPassword){
+      this.router.navigateByUrl("/manage-password");
     }
   }
 }
