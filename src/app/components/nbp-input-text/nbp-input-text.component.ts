@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
 import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'nbp-input-text',
@@ -25,6 +26,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   nbpModel: string = '';
   nbpInput: string;
+  nbpInputId: string;
   nbpErrorBorder: string = '';
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
@@ -40,6 +42,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   // Functions
   nbpSetUpComponent() {
+    this.nbpInputId = 'nbp' + uuid.v4();
     this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.text : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpModel = this.nbpInputValue === undefined ?  "" : this.nbpInputValue;

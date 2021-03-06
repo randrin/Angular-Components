@@ -126,6 +126,7 @@ export enum NbpAlertType {
   PROMOTIONAL = "PROMOTIONAL",
   WARNING = "WARNING",
   ERROR = "ERROR",
+  INFO = "INFO",
 }
 export enum NbpTooltipType {
   CLICK = "click",

@@ -1,9 +1,9 @@
 <div class="nbp-login-wrapper">
   <div class="nbp-login-container container">
     <div class="row nbp-login-row">
-      <div class="col-md-5 nbp-login-content">
+      <div class="col-md-4 nbp-login-content">
         <nbp-alert-box-fourth *ngIf="!!nbpLoginErrorMessage.length"
-          [nbpText]="nbpLoginErrorMessage"
+          [nbpAlertText]="nbpLoginErrorMessage"
           [nbpAlertType]="nbpLoginErrorType">
         </nbp-alert-box-fourth>
         <form>
@@ -35,10 +35,7 @@
               (nbpInputModel)="nbpInputModel($event)">
             </nbp-input-password>
           </div>
-           <div class="forgotPassword">
-             <a (click)="nbpLookPassword()">Forgot your password?</a>
-            </div>
-          <div class="form-group">
+          <div class="form-group pt-3">
             <nbp-button
               class="nbp-login-submit"
               [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.login"
@@ -50,12 +47,15 @@
               (click)="nbpLoginSubmit()">
             </nbp-button>
           </div>
+          <div class="form-group nbp-login-forgotPassword">
+            <a (click)="nbpLookPassword()">Forgot your password ?</a>
+          </div>
         </form>
         <nbp-dividing-line-one
           [nbpTitle]="_model.component.NbpAuthComponent.newUser"
           [nbpColorStyle]="_style.DEFAULT">
         </nbp-dividing-line-one>
-        <div class="form-group">
+        <div class="form-group pt-3">
           <nbp-button
             [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.register"
             [nbpButtonSize]="_size.MD"

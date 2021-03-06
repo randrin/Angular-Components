@@ -16,8 +16,8 @@ import { NbpAuthService } from "src/app/services/nbp-auth.service";
 export class ChangePasswordComponent extends NbpBaseComponent implements OnInit {
 
   nbpChangePasswordSuccess: boolean = false;
-  changePassword: boolean = false;
-  findPassword: boolean = true;
+  nbpChangeTemporalPassword: boolean = false;
+  nbpCheckTemporalPassword: boolean = true;
   changeOldPasswordToNew:boolean = false;
   nbpRegisterDisabled: boolean = true;
   nbpEmailDisabled: boolean = true;
@@ -61,8 +61,8 @@ export class ChangePasswordComponent extends NbpBaseComponent implements OnInit 
   }
 
   nbpChangePassword() {
-    this.changePassword = true;
-    this.findPassword = false;
+    this.nbpChangeTemporalPassword = true;
+    this.nbpCheckTemporalPassword = false;
     this.router.navigateByUrl("/manage-password");
   }
 
@@ -114,7 +114,7 @@ export class ChangePasswordComponent extends NbpBaseComponent implements OnInit 
         (response: any) => {
           console.log("NbpResetPasswordService: ", response);
           this.nbpChangePasswordSuccess = true;
-          this.changePassword = false;
+          this.nbpChangeTemporalPassword = false;
           this.nbpRegisterSuccessMessage = response.message;
         },
         (err) => {
@@ -157,7 +157,7 @@ export class ChangePasswordComponent extends NbpBaseComponent implements OnInit 
             } else {
               this.nbpLoginErrorType = this._alert.ERROR;
             }
-            this.nbpLoginErrorMessage = err.error;
+            this.nbpRegisterErrorMessage = err.error;
           }
         );
     }

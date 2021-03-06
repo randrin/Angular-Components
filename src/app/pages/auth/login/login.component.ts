@@ -10,16 +10,16 @@ import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
   styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent extends NbpBaseComponent implements OnInit {
+
   nbpLoginDisabled: boolean = true;
   nbpLoginErrorMessage: string = "";
   nbpLoginErrorType: string = "";
-  changeOldPasswordToNew:boolean = false;
   nbpShowErrorMessage: boolean = false;
   nbpErrorMessage: boolean = false;
 
   constructor(injector: Injector,
     private nbpAuthService: NbpAuthService, 
-    private nbpUserService: NbpUserService,
+    private nbpUserService: NbpUserService, 
     nbpLocalStorage: NbpLocalStorage) {
     super(injector);
   }
@@ -36,25 +36,37 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.nbpLoginErrorMessage = "";
   }
 
+
   // Functions
   nbpLoginSubmit() {
     this.nbpAuthService.NbpLoginService(this.nbpAuth.login).subscribe(
-      (response) => {
+      (response: any) => {
         this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
-        if(!this.changeOldPasswordToNew){
-          this.router.navigateByUrl("/change-old-password-to-new-password");
-        }else{
-          this.router.navigateByUrl("/home");
-        }
+        this.NbpGetUserProfile();
+        this.router.navigateByUrl("/home");
       },
       (err) => {
-        console.log("err: ", err);
         if (err.status === 401) {
           this.nbpLoginErrorType = this._alert.WARNING;
         } else {
           this.nbpLoginErrorType = this._alert.ERROR;
         }
         this.nbpLoginErrorMessage = err.error;
+      }
+    );
+  }
+
+  NbpGetUserProfile() {
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
+      (response: any) => {
+        this.nbpAuthService.nbpUser = response;
+      },
+      (err) => {
+        if (err.status === 401) {
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error;
+        }
       }
     );
   }
@@ -75,22 +87,5 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
       this.nbpAuth.login.password = event.value;
     }
     this.nbpSetUpComponent();
-  }
-
-  NbpGetUserProfile() {
-    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
-    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
-      (response: any) => {
-        this.nbpUser = response;
-        this.changeOldPasswordToNew = this.nbpUser.temporaryPassword;
-     //   this.nbpUserRoles = response.roles.split(",");
-      },
-      (err) => {
-        if (err.status === 401) {
-          this.nbpShowErrorMessage = true;
-          this.nbpErrorMessage = err.error;
-        }
-      }
-    );
   }
 }

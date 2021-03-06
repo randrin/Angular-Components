@@ -56,7 +56,7 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpLocalStorage = new NbpLocalStorage();
-  nbpUser = new NbpUser(0, "", "", "", false, "",false);
+  nbpUser: any;
   nbpUsers: Array<any> = [];
   nbpPermission = {
     EDIT: "edit",
@@ -219,10 +219,15 @@ export class NbpBaseComponent implements OnInit {
         this.router.navigateByUrl("/" + nbpUrl);
       }
       if (
-        this.activatedRoute.snapshot.url[0]?.path === "login" ||
+        this.activatedRoute.snapshot.url[0]?.path === "login" || 
         this.activatedRoute.snapshot.url[0]?.path === "register"
       ) {
         this.router.navigateByUrl("/home");
+      }
+      if (
+        this.activatedRoute.snapshot.url[0]?.path === "login" && this.nbpToken
+      ) {
+        this.router.navigateByUrl("/login");
       }
     } else {
       if (this.activatedRoute.snapshot.url[0]?.path === "register") {
@@ -231,12 +236,12 @@ export class NbpBaseComponent implements OnInit {
         this.activatedRoute.snapshot.url[0]?.path === "manage-password"
       ) {
         this.router.navigateByUrl("/manage-password");
-      }else if (
-        this.activatedRoute.snapshot.url[0]?.path === "change-old-password-to-new-password"
+      } else if (
+        this.activatedRoute.snapshot.url[0]?.path ===
+        "change-old-password-to-new-password"
       ) {
         this.router.navigateByUrl("/change-old-password-to-new-password");
-      }
-      else {
+      } else {
         this.router.navigateByUrl("/login");
       }
     }
@@ -974,6 +979,9 @@ export class NbpBaseComponent implements OnInit {
       case this._style.SUCCESS:
       case this._alertType.POSITIVE:
         return this._iconClasse.POSITIVE;
+        break;
+      case this._alertType.INFO:
+        return this._iconClasse.GENERIC;
         break;
       case this._alertType.PROMOTIONAL:
         return this._iconClasse.PROMOTIONAL;

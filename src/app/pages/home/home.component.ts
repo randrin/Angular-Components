@@ -2,6 +2,7 @@ import { Component, Injector, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpUser } from "src/app/models/user/nbpUser";
 import { NbpUsers } from "src/app/models/user/nbpUsers";
+import { NbpAuthService } from "src/app/services/nbp-auth.service";
 import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 
@@ -16,9 +17,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpUpdateUser = "Update user in Nbp System";
 
   nbpPasswordrDisabled: boolean = true;
-  nbpChangePasswordSuccess:boolean = false;
-  changeOldPasswordToNew:boolean = false;
-  nbpRegisterSuccess:boolean = false;
+  nbpChangePasswordSuccess: boolean = false;
+  nbpChangeOldPasswordToNew: boolean = false;
+  nbpUpdateSuccessMessage: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
   nbpShowFormUpdateProfile: boolean = false;
@@ -33,8 +34,8 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     { label: "USERNAME", name: "Username" },
     { label: "EMAIL", name: "Email Adress" },
     { label: "ROLES", name: "Roles" },
-    { label: "TEMPORARY-PASSWORD", name: "Temporary-Password"},
-    { label: "ISACTIVE", name: "Status" }
+    { label: "TEMPORARY-PASSWORD", name: "Temporary-Password" },
+    { label: "ISACTIVE", name: "Status" },
   ];
   nbpShowModalAction: boolean = false;
   nbpUpdateSuccess: boolean = false;
@@ -44,6 +45,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   constructor(
     injector: Injector,
     private nbpUserService: NbpUserService,
+    private nbpAuthService: NbpAuthService,
     nbpLocalStorage: NbpLocalStorage
   ) {
     super(injector);
@@ -53,21 +55,23 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpSetUpComponent();
   }
 
-
   nbpSetUpComponent() {
     this.NbpGetUserProfile();
     this.NbpGetUsers();
   }
-
-  
 
   // Functions
   NbpGetUserProfile() {
     this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
     this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
       (response: any) => {
-        this.nbpUser = response;
-        this.changeOldPasswordToNew = this.nbpUser.temporaryPassword;
+        this.nbpAuthService.nbpUser = response;
+        this.nbpUser = this.nbpAuthService.nbpUser;
+        this.nbpChangeOldPasswordToNew = response.temporaryPassword;
+        console.log(
+          "NbpGetUserProfile -> this.nbpChangeOldPasswordToNew: ",
+          this.nbpChangeOldPasswordToNew
+        );
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
@@ -95,7 +99,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
 
   NbpGetUsersPermissions() {
     this.nbpUsers.forEach((nbpUser) => {
-      if (nbpUser.userName !== this.nbpUser.userName) {
+      if (nbpUser.userName !== this.nbpAuthService.nbpUser.userName) {
         this.nbpUsersClone.push({
           ...nbpUser,
           permissions: this.nbpUsersPermissions,
@@ -168,14 +172,13 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpOnUpdateProfile() {
-    console.log("this.nbpUser login: ", this.nbpUser);
     this.nbpShowFormUpdateProfile = true;
     this.nbpCheckValidationForm();
   }
 
   NbpOnLogout() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-    this.nbpUser = new NbpUser(0, "", "", "", false, "", false);
+    this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
     this.router.navigateByUrl("/login");
   }
 
@@ -183,36 +186,32 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpShowFormUpdateProfile = false;
   }
 
-  NbpUpdateSubmit() { 
-    if (
-      !this.nbpRegex.test(String(this.nbpAuth.profile.email).toLowerCase())
-    ) {
+  NbpUpdateSubmit() {
+    if (!this.nbpRegex.test(String(this.nbpAuth.profile.email).toLowerCase())) {
       this.nbpUpdateErrorMessage = "Invalid Email Address !";
     } else {
       const nbpUserRequest = {
         userName: this.nbpAuth.profile.userName,
-        email: this.nbpAuth.profile.email
-      }
-      this.nbpUserService.NbpUpdateUserService(this.nbpUser.id, nbpUserRequest).subscribe(
-        (response: any) => {
-          this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-          this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
-          console.log("response NbpUpdateUserService: ", response);
-          this.NbpGetUserProfile();
-          this.nbpShowFormUpdateProfile = false;
-          this.nbpRegisterSuccessMessage = response.message;
-          setTimeout(()=>{
-            this.nbpRegisterSuccessMessage = "";
-          },4000)
-        },
-        (err) => {
-          console.log("err: ", err);
-          this.nbpShowFormUpdateProfile = true;
-          this.nbpUpdateErrorMessage = err.error.error;
-        }
-      );
+        email: this.nbpAuth.profile.email,
+      };
+      this.nbpUserService
+        .NbpUpdateUserService(this.nbpAuthService.nbpUser.id, nbpUserRequest)
+        .subscribe(
+          (response: any) => {
+            this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
+            this.nbpLocalStorage.NbpSetTokenLocalStorage(response);
+            this.NbpGetUserProfile();
+            this.nbpShowFormUpdateProfile = false;
+            this.nbpUpdateSuccessMessage = response.message;
+            setTimeout(()=>{
+              this.nbpUpdateSuccessMessage = "";
+            }, 3000)
+          },
+          (err) => {
+            this.nbpShowFormUpdateProfile = true;
+            this.nbpUpdateErrorMessage = err.error.error;
+          }
+        );
     }
-    console.log("NbpUpdateSubmit: ", this.nbpAuth.profile);
   }
-
 }

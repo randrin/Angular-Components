@@ -1,8 +1,14 @@
 <div class="nbp-oldPass-to-newPass-wrapper">
   <div class="nbp-oldPass-to-newPass-container container">
+    <div class="pt-4" *ngIf="!nbpChangePasswordSuccess">
+      <nbp-alert-box-three
+        [nbpAlertText]="'You requested a temporary password during your last logged in. To access Nbp System Components, you need to change your password.'"
+        [nbpAlertType]="_alert.INFO">
+      </nbp-alert-box-three>
+    </div>
     <div class="row nbp-oldPass-to-newPass-row">
-      <div class="col-md-5 nbp-oldPass-to-newPass-content" *ngIf="!nbpChangePasswordSuccess">
-        <nbp-alert-box-fourth *ngIf="!!nbpChangeOldPasswordErrorMessage.length" [nbpText]="nbpChangeOldPasswordErrorMessage"
+      <div class="col-md-4 nbp-oldPass-to-newPass-content" *ngIf="!nbpChangePasswordSuccess">
+        <nbp-alert-box-fourth *ngIf="!!nbpChangeOldPasswordErrorMessage.length" [nbpAlertText]="nbpChangeOldPasswordErrorMessage"
           [nbpAlertType]="_alert.ERROR">
         </nbp-alert-box-fourth>
         <form>
@@ -11,9 +17,9 @@
               [nbpInputName]="_model.component.NbpAuthComponent.passwordInput.oldPassword"
               [nbpInputLabelRequired]="_model.component.NbpAuthComponent.passwordInput.required"
               [nbpInputRequired]="true" [nbpInputBorderType]="_style.ROUNDED"
-              [nbpInputErrorMessage]="_model.component.NbpAuthComponent.passwordInput.requiredMessage"
-              [nbpInputPlaceholder]="_model.component.NbpAuthComponent.passwordInput.placeholder"
-              [nbpInputIcon]="_model.component.NbpAuthComponent.passwordInput.hidePassword"
+              [nbpInputErrorMessage]="_model.component.NbpAuthComponent.newOldPasswordInput.requiredMessage2"
+              [nbpInputPlaceholder]="_model.component.NbpAuthComponent.newOldPasswordInput.placeholder2"
+              [nbpInputIcon]="_model.component.NbpAuthComponent.newOldPasswordInput.hidePassword"
               [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModels($event)">
             </nbp-input-password>
           </div>
@@ -22,9 +28,9 @@
               [nbpInputName]="_model.component.NbpAuthComponent.passwordInput.newPassword"
               [nbpInputLabelRequired]="_model.component.NbpAuthComponent.passwordInput.required"
               [nbpInputRequired]="true" [nbpInputBorderType]="_style.ROUNDED"
-              [nbpInputErrorMessage]="_model.component.NbpAuthComponent.passwordInput.requiredMessage"
-              [nbpInputPlaceholder]="_model.component.NbpAuthComponent.passwordInput.placeholder"
-              [nbpInputIcon]="_model.component.NbpAuthComponent.passwordInput.hidePassword"
+              [nbpInputErrorMessage]="_model.component.NbpAuthComponent.newOldPasswordInput.requiredMessage1"
+              [nbpInputPlaceholder]="_model.component.NbpAuthComponent.newOldPasswordInput.placeholder1"
+              [nbpInputIcon]="_model.component.NbpAuthComponent.newOldPasswordInput.hidePassword"
               [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModels($event)">
             </nbp-input-password>
           </div>
@@ -39,20 +45,18 @@
               [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModels($event)">
             </nbp-input-password>
           </div>
-          <div class="row form-submit">
-            <div class="col-6">
-              <nbp-button class="nbp-login-submit"
-                [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.resetPassword"
-                [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.ROUNDED"
-                [nbpButtonFullWidth]="true" 
-                (click)="nbpChangeOldToNewPasswordSubmit()">
-              </nbp-button>
-            </div>
+          <div class="form-group pt-4">
+            <nbp-button class="nbp-login-submit"
+              [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.resetPassword"
+              [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.ROUNDED"
+              [nbpButtonFullWidth]="true" [nbpButtonDisabled]="nbpPasswordDisabled"
+              (click)="nbpChangePasswordSubmit()">
+            </nbp-button>
           </div>
         </form>
       </div>
       <div class="text-center" *ngIf="nbpChangePasswordSuccess">
-        <nbp-feedback [nbpTitle]="nbpRegisterSuccessMessage"> </nbp-feedback>
+        <nbp-feedback [nbpTitle]="nbpChangeOldPasswordErrorMessage"> </nbp-feedback>
         <nbp-deep-link [nbpDeepLinkStyle]="_style.PRIMARY"
           [nbpDeepLinkName]="_model.component.NbpAuthComponent.submitInput.success"
           [nbpDeepLinkTextTransform]="_pipe.UPPERCASE" [nbpDeepLinkRedirection]="'/login'"

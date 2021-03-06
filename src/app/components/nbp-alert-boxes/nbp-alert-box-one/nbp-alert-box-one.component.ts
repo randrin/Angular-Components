@@ -8,7 +8,7 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 })
 export class NbpAlertBoxOneComponent extends NbpBaseComponent implements OnInit {
 
-  @Input() nbpText: string;
+  @Input() nbpAlertText: string;
   @Input() nbpClose: boolean;
   @Input() nbpAlertType: string;
 

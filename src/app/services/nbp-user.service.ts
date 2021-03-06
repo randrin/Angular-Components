@@ -48,8 +48,8 @@ export class NbpUserService {
     });
   }
 
-  public NbpChangePasswordService(nbpUserId,nbpUserPwd) {
-    return this.http.put(this.nbpChangePasswordUrl + "/" + nbpUserId + "/"+nbpUserPwd.old_password + "/" + nbpUserPwd.new_password , {
+  public NbpChangePasswordService(nbpUserId, nbpUserPwd) {
+    return this.http.put(this.nbpChangePasswordUrl + "/" + nbpUserId, nbpUserPwd , {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }

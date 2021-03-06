@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { NbpUser } from "../models/user/nbpUser";
 import { NbpLocalStorage } from "../utils/nbp-local-storage"; 
 
 @Injectable({
@@ -11,12 +12,17 @@ export class NbpAuthService {
   private nbpResetPasswordUrl = window["baseUrl"] + "/v1/api/user/resetPassword";
   private nbpShowPasswordUrl = window["baseUrl"] + "/v1/api/user/forgottenPassword";
 
+  nbpUser: any;
 
   constructor(
     private http: HttpClient,
     private nbpLocalStorage: NbpLocalStorage
   ) {}
 
+  public setNbpUser(nbpUser) {
+    this.nbpUser = nbpUser;
+  }
+  
   public NbpLoginService(nbpUser) {
     return this.http.post(this.nbpLoginUrl, nbpUser);
   }
