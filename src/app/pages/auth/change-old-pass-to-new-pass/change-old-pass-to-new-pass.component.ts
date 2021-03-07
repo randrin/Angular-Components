@@ -37,8 +37,8 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
   nbpSetUpComponent() {
     this.nbpPasswordDisabled =
       !this.nbpAuth.changePassword.oldPassword.length ||
-      !this.nbpAuth.changePassword.newPassword.length ||
-      !this.nbpConfirmPassword
+        !this.nbpAuth.changePassword.newPassword.length ||
+        !this.nbpConfirmPassword
         ? true
         : false;
     this.nbpChangeOldPasswordErrorMessage = "";
@@ -63,6 +63,9 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
       this.nbpChangeOldPasswordErrorMessage =
         "New and Confirm Password don't match !";
     } else {
+      if(this.nbpValidatePassword(this.nbpAuth.changePassword.newPassword) == true){
+         this.nbpCheckPassword = false;
+      }else{
       const nbpUserRequest = {
         oldPassword: this.nbpAuth.changePassword.oldPassword,
         newPassword: this.nbpAuth.changePassword.newPassword,
@@ -70,9 +73,8 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
       console.log("response NbpcChangePasswordService: ", this.nbpAuthService.nbpUser.id);
       this.nbpUserService.NbpChangePasswordService(this.nbpAuthService.nbpUser.id, nbpUserRequest).subscribe(
         (response: any) => {
-           this.nbpChangePasswordSuccess = true;
-           this.nbpChangeOldPasswordErrorMessage = response.message;
-      
+          this.nbpChangePasswordSuccess = true;
+          this.nbpChangeOldPasswordErrorMessage = response.message;
         },
         (err) => {
           this.nbpChangeOldPasswordErrorMessage = err.error;
@@ -80,23 +82,5 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
       );
     }
   }
-
-  // NbpGetUserProfile() {
-  //   this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
-  //   this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
-  //     (response: any) => {
-  //       this.nbpUser = response;
-  //       this.changeOldPasswordToNew = this.nbpUser.temporaryPassword;
-  //       console.log("this users: ", this.nbpUser);
-  //       console.log("changeOldPasswordToNew: ", this.nbpUser.temporaryPassword);
-  //       //      this.nbpUserRoles = response.roles.split(",");
-  //     },
-  //     (err) => {
-  //       if (err.status === 401) {
-  //         this.nbpShowErrorMessage = true;
-  //         this.nbpErrorMessage = err.error;
-  //       }
-  //     }
-  //   );
-  // }
+}
 }
