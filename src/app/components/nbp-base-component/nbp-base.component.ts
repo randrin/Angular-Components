@@ -55,6 +55,8 @@ import {
 export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
+  nbpCheckPassword: boolean = false;
+  nbpCheckPasswordErrorMessage: string = "Password must be have minimun lenght of 8,max length 32 and least one Uppercase,lowercase,number, special character";
   nbpLocalStorage = new NbpLocalStorage();
   nbpUser: any;
   nbpUsers: Array<any> = [];
@@ -201,7 +203,7 @@ export class NbpBaseComponent implements OnInit {
     this.NbpCheckAuthentification();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // Functions
   /* Function to check if the user is logged and redirection to correct link or page */
@@ -219,7 +221,7 @@ export class NbpBaseComponent implements OnInit {
         this.router.navigateByUrl("/" + nbpUrl);
       }
       if (
-        this.activatedRoute.snapshot.url[0]?.path === "login" || 
+        this.activatedRoute.snapshot.url[0]?.path === "login" ||
         this.activatedRoute.snapshot.url[0]?.path === "register"
       ) {
         this.router.navigateByUrl("/home");
@@ -1173,5 +1175,23 @@ export class NbpBaseComponent implements OnInit {
     const id = event.target.innerText;
     console.log("this.event; ", event);
     this.status = true;
+  }
+
+  nbpValidatePassword(password) {
+    const minMaxLength = /^[0-9]{8,9}$/,
+      upper = /[A-Z]/,
+      lower = /[a-z]/,
+      number = /[0-9]/,
+      special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+
+    if (minMaxLength.test(String(password)) &&
+      upper.test(String(password)) &&
+      lower.test(String(password)) &&
+      number.test(String(password)) &&
+      special.test(String(password))
+    ) {
+      return true;
+    }
+    return false;
   }
 }

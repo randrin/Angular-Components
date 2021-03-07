@@ -6,6 +6,10 @@
           [nbpAlertText]="nbpLoginErrorMessage"
           [nbpAlertType]="nbpLoginErrorType">
         </nbp-alert-box-fourth>
+        <nbp-alert-box-three *ngIf="nbpCheckPassword"
+        [nbpAlertText]="nbpCheckPasswordErrorMessage"
+        [nbpAlertType]="_alert.ERROR">
+      </nbp-alert-box-three>
         <form>
           <div class="form-group">
             <nbp-input-text
