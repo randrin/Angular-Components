@@ -63,7 +63,7 @@ export class ChangeOldPassToNewPassComponent extends NbpBaseComponent implements
       this.nbpChangeOldPasswordErrorMessage =
         "New and Confirm Password don't match !";
     } else {
-      if(this.nbpValidatePassword(this.nbpAuth.changePassword.newPassword) == false){
+      if(!this.nbpValidatePassword(this.nbpAuth.changePassword.newPassword)){
          this.nbpCheckPassword = true;
       }else{
       const nbpUserRequest = {
