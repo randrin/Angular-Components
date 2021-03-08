@@ -56,7 +56,13 @@ export class NbpBaseComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRoute;
   nbpCheckPassword: boolean = false;
-  nbpCheckPasswordErrorMessage: string = "Password must be have minimun lenght of 8,max length 32 and least one Uppercase,lowercase,number, special character";
+  nbpCheckPasswordErrorMessages: string = "";
+  nbpCheckPasswordErrorMessage: string = "Password must be have minimun lenght of 8 and max 32,least one uppercase,lowercase,number and special character";
+  nbpCheckPasswordLenghtErrorMessage: string = "Password must be have minimun lenght of 8 and max 32";
+  nbpCheckPasswordUppercaseErrorMessage: string = "Password must be have least one uppercase";
+  nbpCheckPasswordLowercaseErrorMessage: string = "Password must be have least one lowercase";
+  nbpCheckPasswordNumberErrorMessage: string = "Password must be have least one number";
+  nbpCheckPasswordSpecialCharacterErrorMessage: string = "Password must be have least one special character";
   nbpLocalStorage = new NbpLocalStorage();
   nbpUser: any;
   nbpUsers: Array<any> = [];
@@ -1179,10 +1185,10 @@ export class NbpBaseComponent implements OnInit {
 
   nbpValidatePassword(password) {
     var minMaxLength = /^[\s\S]{8,32}$/,
-        upper = /[A-Z]/,
-        lower = /[a-z]/,
-        number = /[0-9]/,
-        special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+      upper = /[A-Z]/,
+      lower = /[a-z]/,
+      number = /[0-9]/,
+      special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
 
     if (minMaxLength.test(password) &&
       upper.test(password) &&
@@ -1194,4 +1200,55 @@ export class NbpBaseComponent implements OnInit {
     }
     return false;
   }
+  // nbpValidatePassword(password) {
+  //   var minMaxLength = /^[\s\S]{8,32}$/,
+  //     upper = /[A-Z]/,
+  //     lower = /[a-z]/,
+  //     number = /[0-9]/,
+  //     special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+
+  //   if (minMaxLength.test(password)) {
+  //     this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordLenghtErrorMessage;
+  //   } else if (upper.test(password)) {
+  //     this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordUppercaseErrorMessage;
+  //   } else if (lower.test(password)) {
+  //     this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordLowercaseErrorMessage;
+  //   } else if (number.test(password)) {
+  //     this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordNumberErrorMessage;
+  //   } else if (special.test(password)) {
+  //     this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordSpecialCharacterErrorMessage;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+
+  // nbpValidatePassword(password) {
+  //   var minMaxLength = /^[\s\S]{8,32}$/,
+  //     upper = /[A-Z]/,
+  //     lower = /[a-z]/,
+  //     number = /[0-9]/,
+  //     special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+
+  //   switch (password) {
+  //     case minMaxLength.test(password):
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordLenghtErrorMessage;
+  //       break;
+  //     case upper.test(password):
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordUppercaseErrorMessage;
+  //       break;
+  //     case lower.test(password):
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordLowercaseErrorMessage;
+  //       break;
+  //     case number.test(password):
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordNumberErrorMessage;
+  //       break;
+  //     case special.test(password):
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordSpecialCharacterErrorMessage;
+  //       break;
+  //     default:
+  //       return this.nbpCheckPasswordErrorMessages = this.nbpCheckPasswordErrorMessage;
+  //       break;
+  //   }
+  // }
 }
