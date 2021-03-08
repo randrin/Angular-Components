@@ -1178,17 +1178,17 @@ export class NbpBaseComponent implements OnInit {
   }
 
   nbpValidatePassword(password) {
-    const minMaxLength = /^[0-9]{8,9}$/,
-      upper = /[A-Z]/,
-      lower = /[a-z]/,
-      number = /[0-9]/,
-      special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+    var minMaxLength = /^[\s\S]{8,32}$/,
+        upper = /[A-Z]/,
+        lower = /[a-z]/,
+        number = /[0-9]/,
+        special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
 
-    if (minMaxLength.test(String(password)) &&
-      upper.test(String(password)) &&
-      lower.test(String(password)) &&
-      number.test(String(password)) &&
-      special.test(String(password))
+    if (minMaxLength.test(password) &&
+      upper.test(password) &&
+      lower.test(password) &&
+      number.test(password) &&
+      special.test(password)
     ) {
       return true;
     }
