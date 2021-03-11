@@ -1,0 +1,196 @@
+<div class="container my-5">
+    <div class="row nbp-background-white">
+        <nbp-alert-box-fourth *ngIf="!!nbpUpdateErrorMessage.length" 
+        [nbpAlertText]="nbpUpdateErrorMessage"
+        [nbpAlertType]="_alert.ERROR">
+        </nbp-alert-box-fourth>
+        <div *ngIf="nbpUpdatePatient">
+        <form>
+            <div class="col-12">
+                <div class="row">
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientId.label" 
+                        [nbpInputValue]="nbpUser.userName" 
+                        [nbpInputRequired]="true" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientId.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientId.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientId.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientCode.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientCode.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientCode.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientCode.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientName.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientName.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientName.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientName.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientLassName.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientLassName.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientLassName.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientLassName.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientBirthday.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientBirthday.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientBirthday.placeholder"  
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientAge.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientAge.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientAge.placeholder" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div> 
+                    <div class="form-group">
+                        <div class="row">
+                        <div class="col-md-2">
+                            <nbp-input-radio 
+                            [nbpRadioLabel]="'M'" 
+                            [nbpRadioValue]="'info'" 
+                            [nbpRadioName]="'radio5'" 
+                            [nbpRadioStyle]="_style.INFO">
+                            </nbp-input-radio>
+                        </div>
+                        <div class="col-md-2">
+                            <nbp-input-radio 
+                            [nbpRadioLabel]="'F'" 
+                            [nbpRadioValue]="'success'" 
+                            [nbpRadioName]="'radio6'" 
+                            [nbpRadioStyle]="_style.SUCCESS">
+                            </nbp-input-radio>
+                        </div>
+                    </div>
+                    </div>             
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientAddress.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientAddress.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientAddress.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientAddress.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientPostcode.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientPostcode.name" 
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientPostcode.placeholder" 
+                        [nbpInputIcon]="_model.component.NbpPatientComponent.patientPostcode.icon" 
+                        [nbpInputIconRequired]="true" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientInfoSuppl.label" 
+                        [nbpInputValue]="nbpUser.userName" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientInfoSuppl.name"  
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientEmail.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientEmail.name"  
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientEmail.placeholder" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientPhoneNumber.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientPhoneNumber.name"  
+                        [nbpInputBorderType]="_style.ROUNDED"  
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientPhoneNumber.placeholder" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientFixNumber.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientFixNumber.name"  
+                        [nbpInputBorderType]="_style.ROUNDED" 
+                        [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientFixNumber.placeholder" 
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                    <div class="form-group">
+                        <nbp-input-text 
+                        [nbpInputLabel]="_model.component.NbpPatientComponent.patientDiseases.label" 
+                        [nbpInputValue]="nbpUser.email" 
+                        [nbpInputName]="_model.component.NbpPatientComponent.patientDiseases.name" 
+                        [nbpInputBorderType]="_style.ROUNDED"  
+                        (nbpInputModel)="nbpInputModel($event)">
+                    </nbp-input-text>
+                    </div>
+                </div>
+            </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <nbp-button class="nbp-patient-submit" 
+                            [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.updateProfile" 
+                            [nbpButtonSize]="_size.MD" 
+                            [nbpButtonColor]="_style.PRIMARY" 
+                            [nbpButtonType]="_style.OUTLINE"
+                            [nbpButtonFullWidth]="true" 
+                            [nbpButtonDisabled]="nbpUpdateDisabled"
+                            (click)="NbpUpdatePatient()">
+                            </nbp-button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+    </div>
+</div>
