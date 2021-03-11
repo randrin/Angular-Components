@@ -613,7 +613,7 @@ export class Model {
       icon:'nbp-icon-business-time',
       url:'/composants/tab-bar/bussiness'
     }
-  ]
+   ]
     },
     NbpIconComponent: {
       icons: [
@@ -2080,15 +2080,15 @@ export class Model {
         { name: "nbp-icon-zhihu" },
       ],
     },
-  };
-  NbpPatientComponent:{
+
+   NbpPatientComponent:{
     patientId: {
       label: "Patient Id",
       name: "patientId",
       required: "true",
       requiredMessage: "The patient Id is required",
       placeholder: "Insert your patient Id",
-      icon: "fa fa-at",
+      icon: "fa fa-id-card",
     },
     patientCode: {
       label: "Patient Code",
@@ -2104,7 +2104,7 @@ export class Model {
       required: "true",
       requiredMessage: "The patient name is required",
       placeholder: "Insert your patient name",
-      icon: "fa fa-address-book",
+      icon: "fa fa-user",
     },
     patientLassName: {
       label: "LassName",
@@ -2136,7 +2136,7 @@ export class Model {
       required: "true",
       requiredMessage: "The Address is required",
       placeholder: "Insert your Address",
-      icon: "fa fa-building",
+      icon: "fa fa-address-card",
     },
     patientPostcode: {
       label: "Post code",
@@ -2147,12 +2147,14 @@ export class Model {
       icon: "fa fa-building",
     },
     patientInfoSuppl: {
-      label: "Info Suppl.",
+      label: "additional information",
       name: "patientInfoSuppl",
       required: "true",
       requiredMessage: "The Info Suppl is required",
-  //    placeholder: "Insert your password",
-  //    icon: "fa fa-user",
+      placeholder: "Additional information is required",
+      rows: 8,
+      maxLengthMessage: "You have superate the length required",
+      maxLength: 50,
     },
     patientEmail: {
       label: "Email",
@@ -2160,7 +2162,7 @@ export class Model {
       required: "true",
       requiredMessage: "The Email is required",
       placeholder: "Insert your Email",
-  //    icon: "fa fa-user",
+      icon: "fa fa-envelope",
     },
     patientPhoneNumber: {
       label: "Phone Number",
@@ -2168,7 +2170,7 @@ export class Model {
       required: "true",
       requiredMessage: "The Phone Number is required",
       placeholder: "Insert your Phone Number",
-  //    icon: "fa fa-user",
+      icon: "fa fa-phone",
     },
     patientFixNumber: {
       label: "Fix Number",
@@ -2176,15 +2178,26 @@ export class Model {
       required: "true",
       requiredMessage: "The Fix Number is required",
       placeholder: "Insert your Fix Number",
-  //    icon: "fa fa-user",
+      icon: "fa fa-phone",
     },
     patientDiseases: {
       label: "Diseases",
       name: "patientDiseases",
       required: "true",
-      requiredMessage: "The Diseases is required",
-   //   placeholder: "Insert your password",
-  //    icon: "fa fa-user",
+      requiredMessage: "least one Disease is required",
+      rows: 8,
+      maxLengthMessage: "You have superate the length required",
+      placeholder: "disease is required",
+      maxLength: 20,
     },
+    patientSexe: {
+      label: "Gender",
+      name: "patientSexe",
+      required: "true",
+    },
+    submitInput:{
+      label: "Update"
+    }
   }
+}
 }
