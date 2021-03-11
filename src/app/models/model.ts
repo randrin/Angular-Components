@@ -503,6 +503,7 @@ export class Model {
       placeholder: "Insert your name",
       icon1: "fa fa-search",
       icon2: "fa fa-user",
+      calendar:"fa fa-calendar"
     },
     NbpInputPasswordComponent: {
       label1: "Password",
@@ -612,7 +613,7 @@ export class Model {
       icon:'nbp-icon-business-time',
       url:'/composants/tab-bar/bussiness'
     }
-  ]
+   ]
     },
     NbpIconComponent: {
       icons: [
@@ -2079,5 +2080,124 @@ export class Model {
         { name: "nbp-icon-zhihu" },
       ],
     },
-  };
+
+   NbpPatientComponent:{
+    patientId: {
+      label: "Patient Id",
+      name: "patientId",
+      required: "true",
+      requiredMessage: "The patient Id is required",
+      placeholder: "Insert your patient Id",
+      icon: "fa fa-id-card",
+    },
+    patientCode: {
+      label: "Patient Code",
+      name: "patientCode",
+      required: "true",
+      requiredMessage: "The patient code is required",
+      placeholder: "Insert your patient code",
+      icon: "fa fa-barcode",
+    },
+    patientName: {
+      label: "Name",
+      name: "patientName",
+      required: "true",
+      requiredMessage: "The patient name is required",
+      placeholder: "Insert your patient name",
+      icon: "fa fa-user",
+    },
+    patientLassName: {
+      label: "LassName",
+      name: "patientLassName",
+      required: "true",
+      requiredMessage: "The LassName is required",
+      placeholder: "Insert your LassName",
+      icon: "fa fa-address-book",
+    },
+    patientBirthday: {
+      label: "Date of Birth",
+      name: "patientBirthday",
+      required: "true",
+      requiredMessage: "The Date of Birth is required",
+      placeholder: "Insert your Date of Birth",
+        //    icon: "fa fa-user",
+    },
+    patientAge: {
+      label: "Age",
+      name: "patientAge",
+      required: "true",
+      requiredMessage: "The age is required",
+      placeholder: "Insert your age",
+  //    icon: "fa fa-user",
+    },
+    patientAddress: {
+      label: "Address",
+      name: "patientAddress",
+      required: "true",
+      requiredMessage: "The Address is required",
+      placeholder: "Insert your Address",
+      icon: "fa fa-address-card",
+    },
+    patientPostcode: {
+      label: "Post code",
+      name: "patientPostcode",
+      required: "true",
+      requiredMessage: "The Postcode is required",
+      placeholder: "Insert your Post code",
+      icon: "fa fa-building",
+    },
+    patientInfoSuppl: {
+      label: "additional information",
+      name: "patientInfoSuppl",
+      required: "true",
+      requiredMessage: "The Info Suppl is required",
+      placeholder: "Additional information is required",
+      rows: 8,
+      maxLengthMessage: "You have superate the length required",
+      maxLength: 50,
+    },
+    patientEmail: {
+      label: "Email",
+      name: "patientEmail",
+      required: "true",
+      requiredMessage: "The Email is required",
+      placeholder: "Insert your Email",
+      icon: "fa fa-envelope",
+    },
+    patientPhoneNumber: {
+      label: "Phone Number",
+      name: "patientPhoneNumber",
+      required: "true",
+      requiredMessage: "The Phone Number is required",
+      placeholder: "Insert your Phone Number",
+      icon: "fa fa-phone",
+    },
+    patientFixNumber: {
+      label: "Fix Number",
+      name: "patientFixNumber",
+      required: "true",
+      requiredMessage: "The Fix Number is required",
+      placeholder: "Insert your Fix Number",
+      icon: "fa fa-phone",
+    },
+    patientDiseases: {
+      label: "Diseases",
+      name: "patientDiseases",
+      required: "true",
+      requiredMessage: "least one Disease is required",
+      rows: 8,
+      maxLengthMessage: "You have superate the length required",
+      placeholder: "disease is required",
+      maxLength: 20,
+    },
+    patientSexe: {
+      label: "Gender",
+      name: "patientSexe",
+      required: "true",
+    },
+    submitInput:{
+      label: "Update"
+    }
+  }
+}
 }

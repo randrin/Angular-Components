@@ -37,6 +37,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
+import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'manage-password', component: ChangePasswordComponent },
   { path: 'change-old-password-to-new-password', component: ChangeOldPassToNewPassComponent },
+  { path: 'patients', component: NbpPatientComponent },
   { path: 'composants', component: ComposantsComponent,
     children: [
       { path: 'breadcrumbs', component: NbpBreadcrumdPageComponent },

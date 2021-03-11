@@ -10,7 +10,7 @@ import { NbpAlertBoxOneComponent } from './components/nbp-alert-boxes/nbp-alert-
 import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-top.component';
 import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.component';
 import { NbpInputTextComponent } from './components/nbp-input-text/nbp-input-text.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NbpTextareaComponent } from './components/nbp-textarea/nbp-textarea.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ComposantsComponent } from './pages/composants/composants.component';
@@ -108,6 +108,7 @@ import { NbpLocalStorage } from './utils/nbp-local-storage';
 import { NbpUserService } from './services/nbp-user.service';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
+import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component'
 
 @NgModule({
   declarations: [
@@ -208,7 +209,8 @@ import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to
     LoginComponent,
     RegisterComponent,
     ChangePasswordComponent,
-    ChangeOldPassToNewPassComponent  
+    ChangeOldPassToNewPassComponent,
+    NbpPatientComponent
   ],
 
 
