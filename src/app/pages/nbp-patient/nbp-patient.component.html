@@ -1,6 +1,6 @@
 <div class="container my-5">
     <div class="nbp-background-white">
-        <div class="nbp-background-white-smoke" *ngIf="nbpUpdatePatient">
+        <div class="nbp-background-sliver" *ngIf="nbpUpdatePatient">
             <nbp-alert-box-fourth *ngIf="!!nbpUpdateErrorMessage.length" [nbpAlertText]="nbpUpdateErrorMessage"
             [nbpAlertType]="_alert.ERROR">
              </nbp-alert-box-fourth>
@@ -216,7 +216,7 @@
                                 [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.label"
                                 [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY"
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
-                                [nbpButtonDisabled]="nbpUpdateDisabled" (click)="NbpUpdatePatient()">
+                                [nbpButtonDisabled]="nbpUpdateDisabled" (click)="NbpUpdatePatient($event)">
                             </nbp-button>
                         </div>
                         </div>

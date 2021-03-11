@@ -82,28 +82,10 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
     this.enableButton();
   }
 
-  NbpUpdatePatient(){
-
+  NbpUpdatePatient(event){
+  console.log("eventert: ",event)
   }
 
 }
 
-// nbpInputModel(event) {
-//   if (event.name === "username") {
-//     this.nbpAuth.profile.userName = event.value;
-//   }
-//   if (event.name === "email") {
-//     this.nbpAuth.profile.email = event.value;
-//   }
-//   this.nbpCheckValidationForm();
-// }
-
-// nbpCheckValidationForm() {
-//   this.nbpUpdateDisabled =
-//     !this.nbpAuth.profile.userName.length ||
-//     !this.nbpAuth.profile.email.length
-//       ? true
-//       : false;
-//   this.nbpUpdateErrorMessage = "";
-// }
 
