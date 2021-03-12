@@ -175,6 +175,10 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpCheckValidationForm();
   }
 
+  NbpPatient() {
+    this.router.navigateByUrl("/patients");
+  }
+
   NbpOnLogout() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
     this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
@@ -182,7 +186,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpAbortSubmit() {
-    this.nbpShowFormUpdateProfile = false;
+    this.nbpShowFormUpdateProfile = false; 
   }
 
   NbpUpdateSubmit() {
