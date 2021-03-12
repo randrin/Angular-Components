@@ -3,6 +3,7 @@
 
 // Url to bak end -  See: https://github.com/randrin/Server-Components
 var baseUrl = "http://localhost:9192";
+var basePatientUrl = "http://localhost:9191";
 // var baseUrl = 'http://nbpservices-env.eba-zmyykfw3.eu-central-1.elasticbeanstalk.com';
 
 // Go to Top Page & Scroll Navbar Effet

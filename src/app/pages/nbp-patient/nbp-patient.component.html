@@ -1,6 +1,6 @@
 <div class="container my-5">
     <div class="nbp-background-white">
-        <div class="nbp-background-sliver" *ngIf="nbpUpdatePatient">
+        <div class="nbp-background-sliver" *ngIf="nbpUpdatePatientShow">
             <nbp-alert-box-fourth *ngIf="!!nbpUpdateErrorMessage.length" [nbpAlertText]="nbpUpdateErrorMessage"
             [nbpAlertType]="_alert.ERROR">
              </nbp-alert-box-fourth>
@@ -9,7 +9,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientId.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientId" [nbpInputRequired]="true"
+                            [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientId.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -40,13 +40,14 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientCode.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientCode"
+                            [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientCode.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
                             [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientCode.placeholder"
                             [nbpInputIcon]="_model.component.NbpPatientComponent.patientCode.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
+                            [nbpInputIconRequired]="true" 
+                            (nbpInputModel)="nbpInputModel($event)">
                         </nbp-input-text>
                         </div>
                 </div>
@@ -55,8 +56,8 @@
                     <div class="col-6">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientName.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientName"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientName.name"
+                            [nbpInputRequired]="true"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
                             [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientName.placeholder"
@@ -68,7 +69,7 @@
                     <div class="col-6">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientLassName.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientLassName"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientLassName.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -83,7 +84,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientBirthday.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientBirthday"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientBirthday.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -96,7 +97,7 @@
                     <div class="col-6 col-md-8">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientEmail.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientEmail"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientEmail.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -111,7 +112,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientAge.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientAge"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientAge.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -123,7 +124,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientPhoneNumber.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientPhoneNumber"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientPhoneNumber.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -136,7 +137,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientFixNumber.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientFixNumber"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientFixNumber.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -151,7 +152,7 @@
                     <div class="col-6 col-md-9">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientAddress.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientAddress"
+                        [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientAddress.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -164,7 +165,7 @@
                     <div class="col-6 col-md-3">
                         <div class="form-group">
                         <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientPostcode.label"
-                            [nbpInputValue]="nbpPatientInitialProfil.patientPostcode"
+                            [nbpInputRequired]="true"
                             [nbpInputName]="_model.component.NbpPatientComponent.patientPostcode.name"
                             [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                             [nbpInputBorderType]="_style.ROUNDED"
@@ -181,6 +182,7 @@
                         <div class="form-group">
                             <nbp-textarea
                               [nbpTextareaLabel]="_model.component.NbpPatientComponent.patientInfoSuppl.label"
+                              [nbpTextareaName]="_model.component.NbpPatientComponent.patientInfoSuppl.name"
                               [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientInfoSuppl.required"
                               [nbpTextareaRows]="_model.component.NbpPatientComponent.rows"
                               [nbpTextareaRequired]="true"
@@ -196,6 +198,7 @@
                         <div class="form-group">
                             <nbp-textarea
                               [nbpTextareaLabel]="_model.component.NbpPatientComponent.patientDiseases.label"
+                              [nbpTextareaName]="_model.component.NbpPatientComponent.patientDiseases.name"
                               [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientDiseases.required"
                               [nbpTextareaRows]="_model.component.NbpPatientComponent.patientDiseases.rows"
                               [nbpTextareaRequired]="true"
@@ -216,12 +219,25 @@
                                 [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.label"
                                 [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY"
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
-                                [nbpButtonDisabled]="nbpUpdateDisabled" (click)="NbpUpdatePatient($event)">
+                                [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpUpdatePatient($event)">
                             </nbp-button>
                         </div>
                         </div>
                     </div>
                 </div>
             </form>
+        </div>
     </div>
+    <div class="row text-center" *ngIf="nbpUpdatePatientShow">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="'List of Patient'" [nbpColorStyle]="_style.DEFAULT"
+            [nbpUppercaseTitle]="_pipe.UPPERCASE"></nbp-dividing-line-one>
+        </div>
+    </div>
+    <div class="nbp-background-white">
+          <nbp-table-one  [nbpTableHeaders]="nbpPatientHeaders" [nbpTableBodies]="listPatients"
+            [nbpTableTextAlignItem]="_style.LEFT" [nbpTableShowActions]="false"
+            (nbpTableActions)="NbpModalOnClickActionPatient($event)">
+        </nbp-table-one>
+      </div>
 </div>
