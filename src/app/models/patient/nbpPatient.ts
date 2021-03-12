@@ -15,20 +15,20 @@ export class NbpPatient {
     public patientDiseases: string;
 
   
-    constructor(
-     patientId: number,
-     patientCode: number,
-     patientName: string,
-     patientLassName: string,
-     patientBirthday: string,
-     patientAge: number,
-     patientSexe: string,
-     patientAddress:string,
-     patientPostcode: number,
-     patientInfoSuppl: string,
-     patientEmail: string,
-     patientPhoneNumber: number,
-     patientFixNumber: number,
-     patientDiseases: string,
-    ) {}
+    // constructor(
+    //  patientId: number,
+    //  patientCode: number,
+    //  patientName: string,
+    //  patientLassName: string,
+    //  patientBirthday: string,
+    //  patientAge: number,
+    //  patientSexe: string,
+    //  patientAddress:string,
+    //  patientPostcode: number,
+    //  patientInfoSuppl: string,
+    //  patientEmail: string,
+    //  patientPhoneNumber: number,
+    //  patientFixNumber: number,
+    //  patientDiseases: string,
+    // ) {}
   }

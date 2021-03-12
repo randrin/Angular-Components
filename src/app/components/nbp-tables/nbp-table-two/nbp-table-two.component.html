@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody class="nbp-table-tbody" *ngIf="nbpTableBodies.length !== 0">
-            <tr class="nbp-table-body" *ngFor="let item of nbpTableBodies.slice(0,5)">
+            <tr class="nbp-table-body" *ngFor="let item of nbpTableBodies.slice(0,12)">
               <td class="nbp-table-content" *ngFor="let element of nbpObjectKeys(item)">
                 <div class="nbp-table-content-item" [ngClass]="nbpTextAlign" *ngIf="item[element] !== 'permissions'">{{item[element]}}</div>
               </td>
