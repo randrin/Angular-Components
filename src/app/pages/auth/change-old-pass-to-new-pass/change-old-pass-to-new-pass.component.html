@@ -5,10 +5,10 @@
         [nbpAlertText]="'You requested a temporary password during your last logged in. To access Nbp System Components, you need to change your password.'"
         [nbpAlertType]="_alert.INFO">
       </nbp-alert-box-three>
-      <nbp-alert-box-three *ngIf="nbpCheckPassword"
-      [nbpAlertText]="nbpCheckPasswordErrorMessages"
-      [nbpAlertType]="_alert.ERROR">
-    </nbp-alert-box-three>
+        <nbp-alert-box-three *ngIf="nbpCheckPassword"
+        [nbpAlertText]="nbpCheckPasswordErrorMessage"
+        [nbpAlertType]="_alert.ERROR">
+      </nbp-alert-box-three>
     </div>
     <div class="row nbp-oldPass-to-newPass-row">
       <div class="col-md-4 nbp-oldPass-to-newPass-content" *ngIf="!nbpChangePasswordSuccess">
@@ -49,7 +49,7 @@
               [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModels($event)">
             </nbp-input-password>
           </div>
-          <div class="form-group pt-4">
+          <div class="form-group pt-3">
             <nbp-button class="nbp-login-submit"
               [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.resetPassword"
               [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.ROUNDED"
@@ -68,5 +68,16 @@
         </nbp-deep-link>
       </div>
     </div>
+    <div class="row nbp-oldPass-to-newPass-row" *ngIf="!nbpChangePasswordSuccess">
+      <div class="col-md-4 nbp-oldPass-to-newPass-content">
+        <div class="form-group pt-3">
+          <nbp-button class="nbp-login-submit"
+            [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.success"
+            [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.DANGER" [nbpButtonType]="_style.ROUNDED"
+            [nbpButtonFullWidth]="true"
+            (click)="nbpOnAbortPasswordSubmit()">
+          </nbp-button>
+        </div>
+      </div>
   </div>
 </div>

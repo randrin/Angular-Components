@@ -1,14 +1,16 @@
 .nbp-oldPass-to-newPass-wrapper {
+  padding-bottom: 20px;
   .nbp-oldPass-to-newPass-container {
     .nbp-oldPass-to-newPass-row {
       display: flex;
       justify-content: center;
 
       .nbp-oldPass-to-newPass-content {
-        border: 2px solid var(--nbp-primary) !important;
+        box-shadow: var(--nbp-box-shadow) !important;
+        background-color: var(--nbp-white);
         border-radius: 5px;
         margin: 20px;
-        padding: 10px;
+        padding: 15px;
       }
     }
   }
