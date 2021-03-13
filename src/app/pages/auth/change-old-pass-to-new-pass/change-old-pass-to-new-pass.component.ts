@@ -67,14 +67,14 @@ export class ChangeOldPassToNewPassComponent
     if (this.nbpAuth.changePassword.newPassword !== this.nbpConfirmPassword) {
       this.nbpChangePasswordSuccess = false;
       this.nbpChangeOldPasswordErrorMessage =
-        "New and Confirm Password don't match !";
+        "New and Confirm Password don't match. Try again !!!";
     } else if (
       this.nbpAuth.changePassword.newPassword ===
       this.nbpAuth.changePassword.oldPassword
     ) {
       this.nbpChangePasswordSuccess = false;
       this.nbpChangeOldPasswordErrorMessage =
-        "New and Old Password must be different!";
+        "New and Old Password must be different. Try again !!!";
     } else {
       if (this.nbpValidatePassword(this.nbpAuth.changePassword.newPassword)) {
         this.nbpCheckPassword = true;
