@@ -63,6 +63,17 @@ export class Model {
       newUser: "New User?",
       alreadyUser: "Already have an account?"
     },
+    NbpProfileBoxComponent: {
+      imageUrl: "https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-graphic-default-avatar-png-image_2813121.jpg",
+      title: "Welcome Back",
+      subtitle: "Nbp Administrator",
+      footer: "Last connexion: Monday, 22 February 2021 - 15:37",
+      btn: {
+        view: "View Profile",
+        update: "Update Profile",
+        logout: "Logout",
+      }
+    },
     NbpBoxeComponent: {
       boxes: [
         {

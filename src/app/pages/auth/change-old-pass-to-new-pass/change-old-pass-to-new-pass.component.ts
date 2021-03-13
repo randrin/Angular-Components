@@ -103,7 +103,7 @@ export class ChangeOldPassToNewPassComponent
 
   nbpOnAbortPasswordSubmit() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-    this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
+    // this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
     this.router.navigateByUrl("/login");
   }
 }

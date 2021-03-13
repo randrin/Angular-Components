@@ -1,0 +1,51 @@
+<div class="nbp-profile-box-one-wrapper">
+  <div class="nbp-profile-box-container container">
+    <div class="nbp-profile-box-row row">
+      <div class="col-3 nbp-profile-boxe-image">
+        <img
+          class="nbp-profile-box-image-url"
+          [src]="nbpProfileImageUrl"
+          [title]="nbpProfileSubtitle"
+        />
+      </div>
+      <div class="col-9 nbp-profile-box-content">
+        <h5 class="nbp-profile-box-content-title nbp-color-default">
+          {{ nbpProfileTitle }}
+        </h5>
+        <h2 class="nbp-profile-box-content-subtitle nbp-color-default">
+          {{ nbpProfileSubtitle }}
+        </h2>
+        <p class="nbp-profile-box-content-footer nbp-p3 nbp-color-default">
+          {{ nbpProfileFooter }}
+        </p>
+        <div class="nbp-profile-box-cta">
+          <div class="row">
+            <div class="col nbp-profile-box-cta-content">
+              <nbp-button
+                [nbpButtonLabel]="nbpProfileBtnView"
+                [nbpButtonSize]="_size.SM"
+                [nbpButtonColor]="_style.PRIMARYHOVER"
+                [nbpButtonForm]="_style.ROUNDED"
+                (click)="nbpProfileOnClickBtn('view')"
+              ></nbp-button>
+              <nbp-button
+                [nbpButtonLabel]="nbpProfileBtnUpdate"
+                [nbpButtonSize]="_size.SM"
+                [nbpButtonColor]="_style.PRIMARYHOVER"
+                [nbpButtonForm]="_style.ROUNDED"
+                (click)="nbpProfileOnClickBtn('update')"
+              ></nbp-button>
+              <nbp-button
+                [nbpButtonLabel]="nbpProfileBtnExit"
+                [nbpButtonSize]="_size.SM"
+                [nbpButtonColor]="_style.DANGERHOVER"
+                [nbpButtonForm]="_style.ROUNDED"
+                (click)="nbpProfileOnClickBtn('exit')"
+              ></nbp-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

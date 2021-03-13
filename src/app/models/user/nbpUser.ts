@@ -1,19 +1,14 @@
-export class NbpUser {
-  public id: number;
-  public userName: string;
-  public password: string;
-  public email: string;
-  public isActive: boolean;
-  public roles: number;
-  public temporaryPassword:boolean
-
-  constructor(
-    id: number,
-    userName: string,
-    password: string,
-    email: string,
-    isActive: boolean,
-    roles: string,
-    temporaryPassword:boolean
-  ) {}
+export interface NbpUser {
+  id: number;
+  userName: string;
+  password: string;
+  email: string;
+  active: boolean;
+  roles: string;
+  temporaryPassword: boolean;
+  imageUrl: string;
+  userId: string;
+  lastConnexion: Date;
+  lastUpdated: Date;
+  fullName: string;
 }

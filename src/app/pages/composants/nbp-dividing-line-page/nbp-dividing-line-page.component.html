@@ -31,6 +31,19 @@
         [nbpColorStyle]="_style.PRIMARY" [nbpUppercaseTitle]="_pipe.UPPERCASE"></nbp-dividing-line-two>
       <nbp-dividing-line-two [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCenter"
         [nbpColorStyle]="_style.SUCCESS" [nbpUppercaseTitle]="_pipe.LOWERCASE"></nbp-dividing-line-two>
+      <nbp-dividing-line-five [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCenter"
+        [nbpColorStyle]="_style.DEFAULT" [nbpUppercaseTitle]="_pipe.UPPERCASE">
+      </nbp-dividing-line-five>
+      <nbp-dividing-line-five [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCta.title"
+        [nbpColorTitle]="_style.PRIMARY" [nbpCta]="true"
+        [nbpCtaTextShow]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show"
+        [nbpCtaTextHide]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.hide"
+        [nbpColorStyle]="_style.PRIMARY" (nbpOnClickCta)="nbpOnClickCta($event)">
+      </nbp-dividing-line-five>
+      <nbp-dividing-line-five [nbpTitle]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.title"
+        [nbpColorTitle]="_style.DANGER" [nbpCta]="true" [nbpColorStyle]="_style.DANGER" [nbpCtaReadOnly]="true"
+        [nbpCtaTextShow]="_model.component.NbpDividingLineComponent.nbpTitleCtaReadOnly.cta.show">
+      </nbp-dividing-line-five>
     </div>
   </div>
 </div>

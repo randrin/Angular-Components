@@ -108,7 +108,10 @@ import { NbpLocalStorage } from './utils/nbp-local-storage';
 import { NbpUserService } from './services/nbp-user.service';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
-import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component'
+import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component';
+import { NbpDividingLineFiveComponent } from './components/nbp-dividing-lines/nbp-dividing-line-five/nbp-dividing-line-five.component';
+import { NbpProfileBoxOneComponent } from './components/nbp-profile-boxes/nbp-profile-box-one/nbp-profile-box-one.component';
+import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-page/nbp-profile-box-page.component'
 
 @NgModule({
   declarations: [
@@ -210,7 +213,10 @@ import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component'
     RegisterComponent,
     ChangePasswordComponent,
     ChangeOldPassToNewPassComponent,
-    NbpPatientComponent
+    NbpPatientComponent,
+    NbpDividingLineFiveComponent,
+    NbpProfileBoxOneComponent,
+    NbpProfileBoxPageComponent
   ],
 
 
