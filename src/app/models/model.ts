@@ -51,6 +51,7 @@ export class Model {
       },
       submitInput: {
         login: "Login",
+        logout: "Logout",
         register: "Register",
         resetPassword: "Reset Password",
         updatePassword: "Update Password",

@@ -147,8 +147,7 @@ export class ChangePasswordComponent extends NbpBaseComponent implements OnInit 
             console.log("NbpforgotPasswordService: ", response);
             this.nbpChangePasswordSuccess = true;
             this.nbpRegisterSuccessMessage = response.message;
-            this.nbpPermanentPassword =
-              "Your temporal password: " + response.object;
+            this.nbpPermanentPassword = response.object;
           },
           (err) => {
             console.log("err: ", err);
