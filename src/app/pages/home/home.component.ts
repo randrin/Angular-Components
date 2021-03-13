@@ -1,7 +1,7 @@
 import { Component, Injector, OnInit } from "@angular/core";
+import * as moment from "moment";
 import { NbpBaseComponent } from "src/app/components/nbp-base-component/nbp-base.component";
 import { NbpUser } from "src/app/models/user/nbpUser";
-import { NbpUsers } from "src/app/models/user/nbpUsers";
 import { NbpAuthService } from "src/app/services/nbp-auth.service";
 import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
@@ -27,15 +27,15 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpUpdateErrorMessage: string = "";
   nbpRegisterErrorMessage: string = "";
   nbpLoading: boolean = false;
-  nbpUserRoles: [] = [];
+  nbpUserRoles: Array<any> = [];
   nbpUsersClone: Array<any> = [];
   nbpHeaders: Array<any> = [
-    { label: "ID", name: "ID User" },
+    { label: "ID", name: "User ID" },
     { label: "USERNAME", name: "Username" },
-    { label: "EMAIL", name: "Email Adress" },
-    { label: "ROLES", name: "Roles" },
-    { label: "TEMPORARY-PASSWORD", name: "Temporary-Password" },
-    { label: "ISACTIVE", name: "Status" },
+    { label: "EMAIL", name: "Email Address" },
+    { label: "ACTIVE", name: "Status" },
+    { label: "TEMPORARY-PASSWORD", name: "Temporary Password" },
+    { label: "LAST-CONNEXION", name: "Last Connexion" },
   ];
   nbpShowModalAction: boolean = false;
   nbpUpdateSuccess: boolean = false;
@@ -63,14 +63,10 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   NbpGetUserProfile() {
     this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
     this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
-      (response: any) => {
+      (response: NbpUser) => {
         this.nbpAuthService.nbpUser = response;
         this.nbpUser = this.nbpAuthService.nbpUser;
         this.nbpChangeOldPasswordToNew = response.temporaryPassword;
-        console.log(
-          "NbpGetUserProfile -> this.nbpChangeOldPasswordToNew: ",
-          this.nbpChangeOldPasswordToNew
-        );
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
@@ -85,7 +81,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   NbpGetUsers() {
     this.nbpShowErrorMessage = false;
     this.nbpUserService.NbpGetUsersService().subscribe(
-      (response: any) => {
+      (response: Array<NbpUser>) => {
         this.nbpUsers = response;
         this.NbpGetUsersPermissions();
       },
@@ -99,8 +95,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   NbpGetUsersPermissions() {
     this.nbpUsers.forEach((nbpUser) => {
       if (nbpUser.userName !== this.nbpAuthService.nbpUser.userName) {
+        const user = this.NbpUserValues(nbpUser);
         this.nbpUsersClone.push({
-          ...nbpUser,
+          ...user,
           permissions: this.nbpUsersPermissions,
         });
       }
@@ -109,6 +106,17 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     this.nbpLoading = true;
     console.log("this.nbpUsers: ", this.nbpUsers);
     console.log("this.nbpUsersClone: ", this.nbpUsersClone);
+  }
+
+  NbpUserValues(nbpUser: NbpUser) {
+    return {
+      userId: nbpUser.userId,
+      userName: nbpUser.userName,
+      email: nbpUser.email,
+      active: nbpUser.active,
+      temporaryPassword: nbpUser.temporaryPassword,
+      lastConnexion: moment(nbpUser.lastConnexion).format('DD/MM/y'),
+    };
   }
 
   NbpLoadingUsers() {
@@ -135,7 +143,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
       this.nbpUserService
         .NbpActivateOrDisableUserService(nbpUser.item.id)
         .subscribe(
-          (response: any) => {
+          (response: NbpUser) => {
             console.log(
               "NbpActivateOrDisableUserService -> response: ",
               response
@@ -181,12 +189,12 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
 
   NbpOnLogout() {
     this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-    this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
+    // this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
     this.router.navigateByUrl("/login");
   }
 
   NbpAbortSubmit() {
-    this.nbpShowFormUpdateProfile = false; 
+    this.nbpShowFormUpdateProfile = false;
   }
 
   NbpUpdateSubmit() {
@@ -206,9 +214,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
             this.NbpGetUserProfile();
             this.nbpShowFormUpdateProfile = false;
             this.nbpUpdateSuccessMessage = response.message;
-            setTimeout(()=>{
+            setTimeout(() => {
               this.nbpUpdateSuccessMessage = "";
-            }, 3000)
+            }, 3000);
           },
           (err) => {
             this.nbpShowFormUpdateProfile = true;

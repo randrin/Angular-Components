@@ -69,7 +69,7 @@ export class NbpBaseComponent implements OnInit {
     "Password must be have least one special character";
   nbpLocalStorage = new NbpLocalStorage();
   nbpUser: any;
-  nbpUsers: Array<any> = [];
+  nbpUsers: Array<NbpUser> = [];
   nbpPermission = {
     EDIT: "edit",
     DELETE: "delete",
