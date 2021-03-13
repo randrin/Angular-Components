@@ -26,6 +26,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpUpdateDisabled: boolean = true;
   nbpUpdateErrorMessage: string = "";
   nbpRegisterErrorMessage: string = "";
+  nbpTitleLastConnexion: string = "";
   nbpLoading: boolean = false;
   nbpUserRoles: Array<any> = [];
   nbpUsersClone: Array<any> = [];
@@ -67,6 +68,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         this.nbpAuthService.nbpUser = response;
         this.nbpUser = this.nbpAuthService.nbpUser;
         this.nbpChangeOldPasswordToNew = response.temporaryPassword;
+        this.nbpTitleLastConnexion = moment(this.nbpUser.lastConnexion).format("LLLL");
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
@@ -181,6 +183,15 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   NbpOnUpdateProfile() {
     this.nbpShowFormUpdateProfile = true;
     this.nbpCheckValidationForm();
+  }
+
+  NbpProfileOnBtnAction(event) {
+    if (event === 'exit') {
+      this.NbpOnLogout();
+    }
+    if (event === 'update') {
+      this.NbpOnUpdateProfile();
+    }
   }
 
   NbpPatient() {
