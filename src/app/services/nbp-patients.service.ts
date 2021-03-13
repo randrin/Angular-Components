@@ -30,7 +30,6 @@ export class NbpPatientService {
   }
 
   public NbpUpdatePatientService(nbpPatientId, nbpPatient) {
-    debugger
     return this.http.put(this.nbpPatientUpdateUrl + "/" + nbpPatientId, nbpPatient, {
       headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });

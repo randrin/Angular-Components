@@ -20,7 +20,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   nbpModalTitle:string='ADD PATIENT'
   nbpUpdateAndAddPatientShow: boolean = false;
   nbpUpdatePatientShow:boolean = false;
-  nbpText:boolean= true;
+  nbpUpdatePatients:boolean= false;
   nbpPatientInitialProfil = new NbpPatient();
   listPatients: {};
   nbpPatientHeaders: Array<any> = [
@@ -112,8 +112,8 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpOnUpdatePatient(){
-    this.nbpUpdatePatientShow = true;
-    this.nbpText = false
+    this.nbpUpdatePatients = true;
+ //   this.nbpText = false
   }
 
   NbpOnSavePatient(){
@@ -130,10 +130,10 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpUpdatePatientService(this.nbpPatientInitialProfil.patientId, nbpPatient)
       .subscribe(
         (response: any) => {
-          //      this.nbpShowFormUpdateProfile = false;
-          this.nbpUpdateSuccessMessage = response.message;
+          this.nbpUpdatePatientShow = true;
+          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
           setTimeout(() => {
-            this.nbpUpdateSuccessMessage = "";
+            this.nbpUpdateDeleteSAveSuccessMessage = "";
           }, 3000)
         },
         (err) => {
@@ -148,10 +148,10 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpDeletePatientService(this.nbpPatientInitialProfil.patientId)
       .subscribe(
         (response: any) => {
-          //      this.nbpShowFormUpdateProfile = false;
-          this.nbpUpdateSuccessMessage = response.message;
+         this.nbpUpdatePatientShow = true;
+          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
           setTimeout(() => {
-            this.nbpUpdateSuccessMessage = "";
+            this.nbpUpdateDeleteSAveSuccessMessage = "";
           }, 3000)
         },
         (err) => {
@@ -167,10 +167,10 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpSavePatientService(this.nbpPatientInitialProfil)
       .subscribe(
         (response: any) => {
-          //      this.nbpShowFormUpdateProfile = false;
-          this.nbpUpdateSuccessMessage = response.message;
+          this.nbpUpdatePatientShow = true;
+          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
           setTimeout(() => {
-            this.nbpUpdateSuccessMessage = "";
+            this.nbpUpdateDeleteSAveSuccessMessage = "";
           }, 3000)
         },
         (err) => {
