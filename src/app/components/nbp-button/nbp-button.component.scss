@@ -1,6 +1,7 @@
 .nbp-button-wrapper {
   padding: 0px;
-  margin: 0 3px;
+  margin: 5px;
+
   .nbp-button {
     transition: unset;
     border-width: 0.0625rem;
@@ -21,6 +22,8 @@
     white-space: nowrap;
     vertical-align: middle;
     display: inline-block;
+    width: 100%;
+
     .nbp-button-content {
       display: inline-flex;
       align-items: center;
@@ -30,6 +33,7 @@
       overflow: hidden;
       height: 100%;
       position: relative;
+
       .nbp-button-label {
         line-height: 0.88rem;
         width: 100%;
@@ -37,6 +41,7 @@
         white-space: normal;
         display: inline-flex;
         justify-content: center;
+
         .nbp-button-text {
           display: inline-block;
           width: 100%;

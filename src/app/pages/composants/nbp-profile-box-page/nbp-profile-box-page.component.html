@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title1"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <nbp-profile-box-one 
+            [nbpProfileImageUrl]="_model.component.NbpProfileBoxComponent.imageUrl"
+            [nbpProfileTitle]="_model.component.NbpProfileBoxComponent.title"
+            [nbpProfileSubtitle]="_model.component.NbpProfileBoxComponent.subtitle"
+            [nbpProfileFooter]="_model.component.NbpProfileBoxComponent.footer"
+            [nbpProfileBtnView]="_model.component.NbpProfileBoxComponent.btn.view"
+            [nbpProfileBtnUpdate]="_model.component.NbpProfileBoxComponent.btn.update"
+            [nbpProfileBtnExit]="_model.component.NbpProfileBoxComponent.btn.logout"
+            (nbpProfileBtnOnClick)="nbpOnClickBtn($event)">
+        </nbp-profile-box-one>
+    </div>
+  </div>
+</div>

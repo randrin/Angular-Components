@@ -38,6 +38,7 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { ChangePasswordComponent } from './pages/auth/change-password/change-password.component';
 import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to-new-pass/change-old-pass-to-new-pass.component';
 import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component';
+import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-page/nbp-profile-box-page.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -77,6 +78,7 @@ const appRoutes: Routes = [
       { path: 'comboDropDownList', component: NbpComboDropDownListPageComponent },
       { path: 'date-Picker', component: NbpDatePickerPageComponent },
       { path: 'upload-File', component: NbpUploadFilePageComponent },
+      { path: 'profiles', component: NbpProfileBoxPageComponent },
       { path: 'tab-bar', component: NbpTabbarPageComponent,
            children: [
                    { path: 'dossiers', component: NbpModalPageComponent },
