@@ -17,8 +17,10 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   dateOfBirth: any
 
   nbpUpdateErrorMessage: '' = "";
-  nbpUpdatePatientShow: boolean = false;
-  nbpUpdateDisabled: boolean = true;
+  nbpModalTitle:string='ADD PATIENT'
+  nbpUpdateAndAddPatientShow: boolean = false;
+  nbpUpdatePatientShow:boolean = false;
+  nbpText:boolean= true;
   nbpPatientInitialProfil = new NbpPatient();
   listPatients: {};
   nbpPatientHeaders: Array<any> = [
@@ -104,6 +106,24 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
     //   this.enableButton();
   }
 
+  nbpClose(){
+    this.nbpPatientInitialProfil ;
+    this.nbpUpdateAndAddPatientShow = false;
+  }
+
+  NbpOnUpdatePatient(){
+    this.nbpUpdatePatientShow = true;
+    this.nbpText = false
+  }
+
+  NbpOnSavePatient(){
+    this.nbpUpdateAndAddPatientShow = true;
+  }
+
+  NbpOnDeletePatient(){
+
+  }
+  
   nbpUpdatePatient() {
     const nbpPatient = this.nbpPatientInitialProfil;
     this.nbpPatientService

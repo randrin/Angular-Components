@@ -2196,7 +2196,9 @@ export class Model {
       required: "true",
     },
     submitInput:{
-      label: "Update"
+      close: "Close",
+      add: "Add",
+      update: "Update",
     }
   }
 }
