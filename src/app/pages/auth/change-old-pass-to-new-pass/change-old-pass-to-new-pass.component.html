@@ -5,10 +5,14 @@
         [nbpAlertText]="'You requested a temporary password during your last logged in. To access Nbp System Components, you need to change your password.'"
         [nbpAlertType]="_alert.INFO">
       </nbp-alert-box-three>
-        <nbp-alert-box-three *ngIf="nbpCheckPassword"
-        [nbpAlertText]="nbpCheckPasswordErrorMessage"
-        [nbpAlertType]="_alert.ERROR">
-      </nbp-alert-box-three>
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <nbp-alert-box-three *ngIf="nbpCheckPassword"
+            [nbpAlertText]="nbpCheckPasswordErrorMessage"
+            [nbpAlertType]="_alert.ERROR">
+          </nbp-alert-box-three>
+        </div>
+      </div>
     </div>
     <div class="row nbp-oldPass-to-newPass-row">
       <div class="col-md-4 nbp-oldPass-to-newPass-content" *ngIf="!nbpChangePasswordSuccess">

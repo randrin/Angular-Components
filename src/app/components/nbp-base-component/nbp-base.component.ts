@@ -1189,7 +1189,6 @@ export class NbpBaseComponent implements OnInit {
   }
 
   nbpValidatePassword(password) {
-    debugger
     var minMaxLength = /^[\s\S]{8,32}$/,
       upper = /[A-Z]/,
       lower = /[a-z]/,

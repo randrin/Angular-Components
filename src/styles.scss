@@ -17,6 +17,10 @@ nbp-table-two {
     display: grid;
   }
 
+  .nbp-alert-box-row {
+    flex-wrap: wrap !important;
+  }
+
   .nbp-table-one-wrapper {
     .dataTables_wrapper {
       .nbp-table {
