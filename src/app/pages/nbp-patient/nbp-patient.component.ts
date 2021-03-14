@@ -16,9 +16,12 @@ const ckeckFalsyButNotZero = (value) =>
 export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
 
   @ViewChild('closeModal') closeModal: ElementRef;
-  
-  nbpUpdateErrorMessage:string = "";
-  nbpModalTitle: string = 'ADD PATIENT'
+
+  nbpUpdateErrorMessage: string = "";
+  saveOrUpdateOrUpdateMessage: string = "";
+  nbpModalTitle: string = 'ADD PATIENT';
+  alreadyExist: string = "This patient profil already exist by his ID, do you want to update it?";
+  saveByError: boolean = false;
   nbpUpdateAndAddPatientShow: boolean = false;
   nbpUpdatePatientShow: boolean = false;
   nbpUpdatePatients: boolean = false;
@@ -51,7 +54,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
 
   refresh(): void {
     window.location.reload();
-}
+  }
 
   NbpPatientValues(nbpPatient) {
     nbpPatient.forEach((patient) => {
@@ -148,7 +151,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpUpdatePatientService(this.nbpPatientInitialProfil.patientId, nbpPatient)
       .subscribe(
         (response: any) => {
-          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
+          this.nbpUpdateDeleteSaveSuccessMessage = response.message;
           this.nbpUpdatePatientShow = true;
           setTimeout(() => {
             this.nbpUpdatePatientShow = false;
@@ -166,7 +169,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpDeletePatientService(this.nbpPatientInitialProfil.patientId)
       .subscribe(
         (response: any) => {
-          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
+          this.nbpUpdateDeleteSaveSuccessMessage = response.message;
           this.nbpUpdatePatientShow = true;
           setTimeout(() => {
             this.nbpUpdatePatientShow = false;
@@ -187,12 +190,18 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .subscribe(
         (response: any) => {
           this.closeModalSaveOrUpdate();
-          this.nbpUpdateDeleteSAveSuccessMessage = response.message;
-          this.nbpUpdatePatientShow = true;
-          setTimeout(() => {
-            this.nbpUpdatePatientShow = false;
-            this.refresh()
-          }, 3000)
+          if (response.message === this.alreadyExist) {
+            this.saveOrUpdateOrUpdateMessage = response.message;
+            this.nbpUpdatePatients = true;
+            this.saveByError = true;
+          } else {
+            this.nbpUpdateDeleteSaveSuccessMessage = response.message;
+            this.nbpUpdatePatientShow = true;
+            setTimeout(() => {
+              this.nbpUpdatePatientShow = false;
+              this.refresh()
+            }, 3000)
+          }
         },
         (err) => {
           this.nbpUpdateErrorMessage = err.error.error;
@@ -215,6 +224,26 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   NbpModalOnClickActionPatient(event) {
 
   }
+
+
+  NbpClickBackUpdateDelete(event) {
+
+    if (event = 'back') {
+      this.saveByError = false;
+      this.nbpUpdatePatients = false
+    } 
+
+    if (event = 'update') {
+      this.saveByError = false;
+      this.nbpUpdatePatient()
+    } 
+
+    if (event = 'delete') {
+      this.saveByError = false;
+      this.nbpDeletePatient()
+    }
+  }
+
 }
 
 

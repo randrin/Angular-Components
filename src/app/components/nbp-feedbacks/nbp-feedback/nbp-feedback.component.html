@@ -8,35 +8,20 @@
       </div>
     </div>
   </div>
-
-  <div class="row">
+  <div class="row nbp-text-align-center">
     <div class="col-6" *ngIf="nbpFeedbackWithButtonContinueAndTryAgain">
-      <nbp-button
-        (click)="nbpClickContinue()"
-        [nbpButtonLabel]="'CONTINUE'"
-        [nbpButtonSize]="_size.MD"
-        [nbpButtonColor]="_style.PRIMARY"
-        [nbpButtonType]="_style.OUTLINE"
-      >
+      <nbp-button (click)="nbpClickContinue()" [nbpButtonLabel]="'CONTINUE'" [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.OUTLINE">
       </nbp-button>
     </div>
     <div class="col text-center" *ngIf="nbpFeedbackWithButtonOk">
-      <nbp-button
-        (click)="nbpClickOk()"
-        [nbpButtonLabel]="'OK'"
-        [nbpButtonSize]="_size.MD"
-        [nbpButtonColor]="_style.WARNING"
-        [nbpButtonType]="_style.OUTLINE"
-      >
+      <nbp-button (click)="nbpClickOk()" [nbpButtonLabel]="'OK'" [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.WARNING" [nbpButtonType]="_style.OUTLINE">
       </nbp-button>
     </div>
     <div class="col-3" *ngIf="nbpFeedbackWithButtonContinueAndTryAgain">
-      <nbp-button
-        (click)="nbpClickTryAgain()"
-        [nbpButtonLabel]="'TRY AGAIN'"
-        [nbpButtonSize]="_size.MD"
-        [nbpButtonColor]="_style.PRIMARY"
-      >
+      <nbp-button (click)="nbpClickTryAgain()" [nbpButtonLabel]="'TRY AGAIN'" [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.PRIMARY">
       </nbp-button>
     </div>
   </div>
