@@ -25,6 +25,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpUpdateDisabled: boolean = true;
   nbpUpdateErrorMessage: string = "";
   nbpRegisterErrorMessage: string = "";
+  nbpUpdateSuccessMessage: string = "";
   nbpTitleLastConnexion: string = "";
   nbpLoading: boolean = false;
   nbpUserRoles: Array<any> = [];

@@ -6,223 +6,11 @@
         <nbp-alert-box-three *ngIf="nbpUpdatePatientShow" [nbpAlertText]="nbpUpdateDeleteSAveSuccessMessage"
             [nbpAlertType]="_alert.POSITIVE">
         </nbp-alert-box-three>
-        <form class="nbp-background-sliver" *ngIf="nbpUpdatePatients">
-            <div class="row">
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientId.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientId.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientId.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientId.icon"
-                            [nbpInputIconRequired]="true" (ngModelChange)="enableButton()"
-                            (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <nbp-input-radio [nbpRadioLabel]="'M'" [nbpRadioValue]="'info'"
-                                    [nbpRadioName]="'radio5'" [nbpRadioStyle]="_style.INFO">
-                                </nbp-input-radio>
-                            </div>
-                            <div class="col-md-2">
-                                <nbp-input-radio [nbpRadioLabel]="'F'" [nbpRadioValue]="'success'"
-                                    [nbpRadioName]="'radio6'" [nbpRadioStyle]="_style.SUCCESS">
-                                </nbp-input-radio>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientCode.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientCode.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientCode.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientCode.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientName.label"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientName.name"
-                            [nbpInputRequired]="true"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientName.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientName.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientLassName.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientLassName.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientLassName.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientLassName.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientBirthday.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientBirthday.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientBirthday.placeholder"
-                            [nbpInputType]="'date'" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-8">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientEmail.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientEmail.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientEmail.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientEmail.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientAge.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientAge.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientAge.placeholder"
-                            (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientPhoneNumber.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientPhoneNumber.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientPhoneNumber.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientPhoneNumber.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientFixNumber.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientFixNumber.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientFixNumber.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientFixNumber.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-9">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientAddress.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientAddress.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientAddress.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientAddress.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="form-group">
-                        <nbp-input-text [nbpInputLabel]="_model.component.NbpPatientComponent.patientPostcode.label"
-                            [nbpInputRequired]="true"
-                            [nbpInputName]="_model.component.NbpPatientComponent.patientPostcode.name"
-                            [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
-                            [nbpInputBorderType]="_style.ROUNDED"
-                            [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientPostcode.placeholder"
-                            [nbpInputIcon]="_model.component.NbpPatientComponent.patientPostcode.icon"
-                            [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-input-text>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="form-group">
-                        <nbp-textarea [nbpTextareaLabel]="_model.component.NbpPatientComponent.patientInfoSuppl.label"
-                            [nbpTextareaName]="_model.component.NbpPatientComponent.patientInfoSuppl.name"
-                            [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientInfoSuppl.required"
-                            [nbpTextareaRows]="_model.component.NbpPatientComponent.rows" [nbpTextareaRequired]="true"
-                            [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientInfoSuppl.maxLengthMessage"
-                            [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientInfoSuppl.placeholder"
-                            [nbpTextareaErrorMessage]="_model.component.NbpPatientComponent.patientInfoSuppl.requiredMessage"
-                            [nbpTextareaMaxLength]="_model.component.NbpPatientComponent.patientInfoSuppl.maxLength"
-                            (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-textarea>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <nbp-textarea [nbpTextareaLabel]="_model.component.NbpPatientComponent.patientDiseases.label"
-                            [nbpTextareaName]="_model.component.NbpPatientComponent.patientDiseases.name"
-                            [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientDiseases.required"
-                            [nbpTextareaRows]="_model.component.NbpPatientComponent.patientDiseases.rows"
-                            [nbpTextareaRequired]="true"
-                            [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientDiseases.placeholder"
-                            [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientDiseases.maxLengthMessage"
-                            [nbpTextareaErrorMessage]="_model.component.NbpPatientComponent.patientDiseases.requiredMessage"
-                            [nbpTextareaMaxLength]="_model.component.NbpPatientComponent.patientDiseases.maxLength"
-                            (nbpInputModel)="nbpInputModel($event)">
-                        </nbp-textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <nbp-button [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.close"
-                    [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.DANGERHOVER" [nbpButtonType]="_style.OUTLINE"
-                    [nbpButtonFullWidth]="true" [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpClose()">
-                </nbp-button>
-                <nbp-button [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.update"
-                    [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.OUTLINE"
-                    [nbpButtonFullWidth]="true" [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpUpdatePatient()">
-                </nbp-button>
-            </div>
-        </form>
     </div>
     <div class="row">
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
             <nbp-button [nbpButtonLabel]="'Update Patient'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.PRIMARYHOVER" (click)="NbpOnUpdatePatient()">
+                [nbpButtonColor]="_style.PRIMARYHOVER" [nbpButtonDisabled]="true"(click)="NbpOnUpdatePatient()">
             </nbp-button>
         </div>
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
@@ -236,7 +24,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">{{nbpModalTitle}}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeModal>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -248,6 +36,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientId.label"
                                                 [nbpInputRequired]="true"
+
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientId.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -279,6 +68,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientCode.label"
                                                 [nbpInputRequired]="true"
+
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientCode.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -296,6 +86,7 @@
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientName.label"
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientName.name"
                                                 [nbpInputRequired]="true"
+
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
                                                 [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientName.placeholder"
@@ -307,13 +98,14 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <nbp-input-text
-                                                [nbpInputLabel]="_model.component.NbpPatientComponent.patientLassName.label"
+                                                [nbpInputLabel]="_model.component.NbpPatientComponent.patientLastName.label"
                                                 [nbpInputRequired]="true"
-                                                [nbpInputName]="_model.component.NbpPatientComponent.patientLassName.name"
+
+                                                [nbpInputName]="_model.component.NbpPatientComponent.patientLastName.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
-                                                [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientLassName.placeholder"
-                                                [nbpInputIcon]="_model.component.NbpPatientComponent.patientLassName.icon"
+                                                [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientLastName.placeholder"
+                                                [nbpInputIcon]="_model.component.NbpPatientComponent.patientLastName.icon"
                                                 [nbpInputIconRequired]="true" (nbpInputModel)="nbpInputModel($event)">
                                             </nbp-input-text>
                                         </div>
@@ -325,6 +117,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientBirthday.label"
                                                 [nbpInputRequired]="true"
+                   
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientBirthday.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -338,6 +131,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientEmail.label"
                                                 [nbpInputRequired]="true"
+
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientEmail.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -354,6 +148,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientAge.label"
                                                 [nbpInputRequired]="true"
+                              
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientAge.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -381,6 +176,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientFixNumber.label"
                                                 [nbpInputRequired]="true"
+                                            
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientFixNumber.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -397,6 +193,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientAddress.label"
                                                 [nbpInputRequired]="true"
+                                          
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientAddress.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -411,6 +208,7 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientPostcode.label"
                                                 [nbpInputRequired]="true"
+                                          
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientPostcode.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -431,6 +229,7 @@
                                                 [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientInfoSuppl.required"
                                                 [nbpTextareaRows]="_model.component.NbpPatientComponent.rows"
                                                 [nbpTextareaRequired]="true"
+                                         
                                                 [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientInfoSuppl.maxLengthMessage"
                                                 [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientInfoSuppl.placeholder"
                                                 [nbpTextareaErrorMessage]="_model.component.NbpPatientComponent.patientInfoSuppl.requiredMessage"
@@ -446,6 +245,7 @@
                                                 [nbpTextareaName]="_model.component.NbpPatientComponent.patientDiseases.name"
                                                 [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientDiseases.required"
                                                 [nbpTextareaRows]="_model.component.NbpPatientComponent.patientDiseases.rows"
+                                        
                                                 [nbpTextareaRequired]="true"
                                                 [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientDiseases.placeholder"
                                                 [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientDiseases.maxLengthMessage"
@@ -464,10 +264,11 @@
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
                                 [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpClose()" data-dismiss="modal">
                             </nbp-button>
-                            <nbp-button [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.add"
+                            <nbp-button 
+                                [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.add"
                                 [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY"
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
-                                [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpUpdatePatient()">
+                                [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpSavePatient()">
                             </nbp-button>
                         </div>
                     </div>
@@ -482,7 +283,7 @@
         </div>
     </div>
     <div class="nbp-background-white">
-        <nbp-table-two [nbpTableHeaders]="nbpPatientHeaders" [nbpTableBodies]="listPatients"
+        <nbp-table-two [nbpTableHeaders]="nbpPatientHeaders" [nbpTableBodies]="nbpPatientsClone"
             [nbpTableTextAlignItem]="_style.LEFT" [nbpTableShowActions]="false"
             (nbpTableActions)="NbpModalOnClickActionPatient($event)">
         </nbp-table-two>

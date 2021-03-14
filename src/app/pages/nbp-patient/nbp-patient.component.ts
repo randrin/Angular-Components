@@ -1,7 +1,7 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, ElementRef, Injector, OnInit, ViewChild } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 import { NbpPatient } from 'src/app/models/patient/nbpPatient';
-import { NbpPatientService } from 'src/app/services/nbp-patients.service';
+import { NbpPatientService } from '../../services/nbp-patients.service';
 
 
 
@@ -14,30 +14,25 @@ const ckeckFalsyButNotZero = (value) =>
   styleUrls: ['./nbp-patient.component.scss']
 })
 export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
-  dateOfBirth: any
 
-  nbpUpdateErrorMessage: '' = "";
-  nbpModalTitle:string='ADD PATIENT'
+  @ViewChild('closeModal') closeModal: ElementRef;
+  
+  nbpUpdateErrorMessage:string = "";
+  nbpModalTitle: string = 'ADD PATIENT'
   nbpUpdateAndAddPatientShow: boolean = false;
-  nbpUpdatePatientShow:boolean = false;
-  nbpUpdatePatients:boolean= false;
+  nbpUpdatePatientShow: boolean = false;
+  nbpUpdatePatients: boolean = false;
   nbpPatientInitialProfil = new NbpPatient();
-  listPatients: {};
+  nbpPatientsClone: Array<any> = [];
+  listPatient: Array<any> = [];
   nbpPatientHeaders: Array<any> = [
-    { label: "ID", name: "ID" },
-    // { label: "PATIENT CODE", name: "patientCode" },
-    { label: "NAME", name: "NAME" },
-    { label: "LASTNAME", name: "LASTNAME" },
-    { label: "DATE OF BIRTH", name: "DATE OF BIRTH" },
-    // { label: "AGE", name: "patientAge" },
-    { label: "GENDER", name: "GENDER" },
-    // { label: "ADDRESS", name: "patientAddress" },
-    // { label: "POSTCODE", name: "patientPostcode" },
-    // { label: "INFOS SUPP.", name: "patientInfoSuppl" },
-    // { label: "EMAIL", name: "patientEmail" },
-    // { label: "PHONE NUMBER", name: "patientPhoneNumber" },
-    // { label: "FIX NUMBER", name: "patientFixNumber" },
-    // { label: "DISEASES", name: "patientDiseases" }
+    { label: "patientId", name: "ID" },
+    { label: "patientCode", name: "PATIENT CODE" },
+    { label: "patientName", name: "NAME" },
+    { label: "patientBirthday", name: "DATE OF BIRTH" },
+    { label: "patientSexe", name: "GENDER" },
+    { label: "patientFixNumber", name: "FIX NUMBER" },
+    { label: "patientDiseases", name: "DISEASES" },
   ];
 
 
@@ -47,7 +42,30 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.NbpGetAllPatients()
+    this.NbpGetAllPatients();
+  }
+
+  closeModalSaveOrUpdate() {
+    this.closeModal.nativeElement.click();
+  }
+
+  refresh(): void {
+    window.location.reload();
+}
+
+  NbpPatientValues(nbpPatient) {
+    nbpPatient.forEach((patient) => {
+      this.nbpPatientsClone.push({
+        patientId: patient.patientId,
+        patientCode: patient.patientCode,
+        patientName: patient.patientName,
+        patientBirthday: patient.patientBirthday,
+        patientSexe: patient.patientSexe,
+        patientFixNumber: patient.patientFixNumber,
+        patientDiseases: patient.patientDiseases,
+      });
+      return this.nbpPatientsClone
+    })
   }
 
   // enableButton() {
@@ -70,8 +88,8 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
     if (event.name === "patientName") {
       this.nbpPatientInitialProfil.patientName = event.value;
     }
-    if (event.name === "patientLassName") {
-      this.nbpPatientInitialProfil.patientLassName = event.value;
+    if (event.name === "patientLastName") {
+      this.nbpPatientInitialProfil.patientLastName = event.value;
     }
     if (event.name === "patientBirthday") {
       this.nbpPatientInitialProfil.patientBirthday = event.value;
@@ -106,38 +124,38 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
     //   this.enableButton();
   }
 
-  nbpClose(){
-    this.nbpPatientInitialProfil ;
+  nbpClose() {
+    this.nbpPatientInitialProfil;
     this.nbpUpdateAndAddPatientShow = false;
   }
 
-  NbpOnUpdatePatient(){
+  NbpOnUpdatePatient() {
     this.nbpUpdatePatients = true;
- //   this.nbpText = false
+    //   this.nbpText = false
   }
 
-  NbpOnSavePatient(){
+  NbpOnSavePatient() {
     this.nbpUpdateAndAddPatientShow = true;
   }
 
-  NbpOnDeletePatient(){
+  NbpOnDeletePatient() {
 
   }
-  
+
   nbpUpdatePatient() {
     const nbpPatient = this.nbpPatientInitialProfil;
     this.nbpPatientService
       .NbpUpdatePatientService(this.nbpPatientInitialProfil.patientId, nbpPatient)
       .subscribe(
         (response: any) => {
-          this.nbpUpdatePatientShow = true;
           this.nbpUpdateDeleteSAveSuccessMessage = response.message;
+          this.nbpUpdatePatientShow = true;
           setTimeout(() => {
-            this.nbpUpdateDeleteSAveSuccessMessage = "";
+            this.nbpUpdatePatientShow = false;
+            this.refresh()
           }, 3000)
         },
         (err) => {
-          //    this.nbpShowFormUpdateProfile = true;
           this.nbpUpdateErrorMessage = err.error.error;
         }
       );
@@ -148,14 +166,14 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
       .NbpDeletePatientService(this.nbpPatientInitialProfil.patientId)
       .subscribe(
         (response: any) => {
-         this.nbpUpdatePatientShow = true;
           this.nbpUpdateDeleteSAveSuccessMessage = response.message;
+          this.nbpUpdatePatientShow = true;
           setTimeout(() => {
-            this.nbpUpdateDeleteSAveSuccessMessage = "";
+            this.nbpUpdatePatientShow = false;
+            this.refresh()
           }, 3000)
         },
         (err) => {
-          //    this.nbpShowFormUpdateProfile = true;
           this.nbpUpdateErrorMessage = err.error.error;
         }
       );
@@ -163,43 +181,42 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
 
 
   nbpSavePatient() {
+    this.nbpUpdatePatients = false;
     this.nbpPatientService
       .NbpSavePatientService(this.nbpPatientInitialProfil)
       .subscribe(
         (response: any) => {
-          this.nbpUpdatePatientShow = true;
+          this.closeModalSaveOrUpdate();
           this.nbpUpdateDeleteSAveSuccessMessage = response.message;
+          this.nbpUpdatePatientShow = true;
           setTimeout(() => {
-            this.nbpUpdateDeleteSAveSuccessMessage = "";
+            this.nbpUpdatePatientShow = false;
+            this.refresh()
           }, 3000)
         },
         (err) => {
-          //    this.nbpShowFormUpdateProfile = true;
           this.nbpUpdateErrorMessage = err.error.error;
         }
       );
   }
 
   NbpGetAllPatients() {
-
- //   this.nbpShowErrorMessage = false;
     this.nbpPatientService.NbpGetPatientService().subscribe(
       (response: any) => {
-        this.listPatients = response;
-        console.log("list patients: ",response)
+        this.NbpPatientValues(response);
+        console.log("list patientst: ", response)
       },
       (err) => {
-        // this.nbpShowErrorMessage = true;
-        // this.nbpErrorMessage = err.error.error;
+        console.log(err.error.error)
       }
     );
   }
 
-  NbpModalOnClickActionPatient(event){
+  NbpModalOnClickActionPatient(event) {
 
   }
-
 }
+
 
 
 
