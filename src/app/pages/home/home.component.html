@@ -34,12 +34,14 @@
             <nbp-badge-one
               [nbpBadgeName]="'Admin'"
               [nbpBadgeStyle]="_style.SUCCESS"
+              [nbpBadgeIcon]="'nbp-icon-biohazard'"
             ></nbp-badge-one>
           </div>
           <div *ngIf="role === 'ROLE_USER'">
             <nbp-badge-one
               [nbpBadgeName]="'User'"
               [nbpBadgeStyle]="_style.PRIMARY"
+              [nbpBadgeIcon]="'nbp-icon-bug'"
             ></nbp-badge-one>
           </div>
         </div>
