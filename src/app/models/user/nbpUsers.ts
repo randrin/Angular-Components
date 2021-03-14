@@ -1,5 +1,5 @@
 import { NbpUser } from "./nbpUser";
 
-export class NbpUsers {
+export interface NbpUsers {
     list: NbpUser[];
 }

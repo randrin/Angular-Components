@@ -1,0 +1,27 @@
+.nbp-profile-box-one-wrapper {
+  box-shadow: var(--nbp-box-shadow) !important;
+  background-color: var(--nbp-white);
+  margin: 20px 0px;
+  padding: 15px;
+
+  .nbp-profile-box-container {
+    .nbp-profile-box-row {
+      .nbp-profile-boxe-image {
+        .nbp-profile-box-image-url {
+          max-width: -webkit-fill-available;
+          border-radius: 100%;
+          border: 1.5px solid var(--nbp-secondary);
+        }
+      }
+
+      .nbp-profile-box-content {
+        .nbp-profile-box-cta {
+            padding-top: 20px;
+          .nbp-profile-box-cta-content {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,31 +13,30 @@ export class NbpPatientService {
 
   constructor(
     private http: HttpClient,
-    private nbpLocalStorage: NbpLocalStorage
+ //   private nbpLocalStorage: NbpLocalStorage
   ) { }
 
 
   public NbpGetPatientService() {
     return this.http.get(this.nbpPatientUrl, {
-      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+   //   headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
   public NbpDeletePatientService(nbpPatientId) {
     return this.http.delete(this.nbpPatientDeleteUrl + "/" + nbpPatientId, {
-      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+   //   headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
   public NbpUpdatePatientService(nbpPatientId, nbpPatient) {
-    debugger
     return this.http.put(this.nbpPatientUpdateUrl + "/" + nbpPatientId, nbpPatient, {
-      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    //  headers: this.nbpLocalStorage.NbpGetAuthHeader(),
     });
   }
 
-  public NbpSavePatientService(nbpPatientId) {
-    return this.http.post(this.nbpPatientSaveUrl, nbpPatientId);
+  public NbpSavePatientService(nbpPatient) {
+    return this.http.post(this.nbpPatientSaveUrl, nbpPatient);
   }
 }
 

@@ -7,8 +7,11 @@
     border-top-right-radius: 5px;
     text-align: center;
 
-    .nbp-alert-box-message {
-      padding: 5px 0px;
+    .nbp-alert-box-row {
+      flex-wrap: nowrap;
+      .nbp-alert-box-message {
+        padding: 5px 0px;
+      }
     }
   }
 }
