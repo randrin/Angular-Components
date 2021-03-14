@@ -16,6 +16,8 @@ import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
 export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTextareaLabel: string;
   @Input() nbpTextareaLabelRequired: boolean;
+  @Input() nbpTextareaValue: string;
+  @Input() nbpTextareaName: string;
   @Input() nbpTextareaRequired: boolean;
   @Input() nbpTextareaRows: number;
   @Input() nbpTextareaPlaceholder: string;
@@ -24,13 +26,14 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTextareaDisabled: boolean;
   @Input() nbpTextareaMaxLength: number;
 
-  @Output() nbpTextareaModel: EventEmitter<string> = new EventEmitter<string>();
+  @Output() nbpTextareaModel: EventEmitter<object> = new EventEmitter<object>();
 
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
   nbpErrorMessageMaxLength: boolean = false;
   nbpErrorLength: boolean = false;
   nbpErrorBorder: string = "";
+  nbpModel: string = '';
 
   constructor(injector: Injector) {
     super(injector);
@@ -47,7 +50,9 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
         ? this.nbpTextareaDefault.rows
         : this.nbpTextareaRows;
     this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
+    this.nbpModel = this.nbpTextareaValue === undefined ?  "" : this.nbpTextareaValue;
     this.nbpGetClasses();
+    
   }
 
   nbpGetClasses() {
@@ -57,7 +62,8 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
       this.nbpErrorBorder +
       this.nbpSeparator +
       (this.nbpTextareaDisabled ? this.nbpTypeInput.CURSOR : "");
-    this.nbpTextareaModel.emit(this.nbpModel);
+  //  this.nbpTextareaModel.emit(this.nbpModel);
+    this.nbpTextareaModel.emit({value: this.nbpModel, name: this.nbpTextareaName});
   }
 
   nbpTextareaKeyDown() {

@@ -19,13 +19,13 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   nbpPasswordrDisabled: boolean = true;
   nbpChangePasswordSuccess: boolean = false;
   nbpChangeOldPasswordToNew: boolean = false;
-  nbpUpdateSuccessMessage: string = "";
   nbpErrorMessage: string = "";
   nbpShowErrorMessage: boolean = false;
   nbpShowFormUpdateProfile: boolean = false;
   nbpUpdateDisabled: boolean = true;
   nbpUpdateErrorMessage: string = "";
   nbpRegisterErrorMessage: string = "";
+  nbpUpdateSuccessMessage: string = "";
   nbpTitleLastConnexion: string = "";
   nbpLoading: boolean = false;
   nbpUserRoles: Array<any> = [];
