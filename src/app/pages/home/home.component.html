@@ -2,6 +2,7 @@
   <nbp-change-old-pass-to-new-pass></nbp-change-old-pass-to-new-pass>
 </div>
 <div class="nbp-home-wrapper" *ngIf="nbpChangeOldPasswordToNew">
+  <nbp-navbar *ngIf="!!this.nbpToken"></nbp-navbar>
   <div class="container my-5">
     <nbp-feedback *ngIf="nbpUpdateSuccessMessage.length" [nbpTitle]="nbpUpdateSuccessMessage"></nbp-feedback>
     <div *ngIf="!nbpShowFormUpdateProfile">
@@ -141,4 +142,5 @@
       </div>
     </div>
   </div>
+  <nbp-footer-one *ngIf="!!this.nbpToken"></nbp-footer-one>
 </div>

@@ -76,7 +76,7 @@ export class LoginComponent extends NbpBaseComponent implements OnInit {
     this.router.navigateByUrl("/register");
   }
 
-  nbpLookPassword() {
+  nbpForgotPassword() {
     this.router.navigateByUrl("/manage-password");
   }
 

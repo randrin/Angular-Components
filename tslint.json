@@ -73,6 +73,7 @@
     "component-class-suffix": true,
     "directive-class-suffix": true,
     "no-trailing-whitespace": false,
-    "no-string-literal": false
+    "no-string-literal": false,
+    "one-variable-per-declaration": false
   }
 }

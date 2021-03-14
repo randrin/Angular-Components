@@ -2,7 +2,6 @@ import { Component, Injector, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Model } from "src/app/models/model";
 import { NbpUser } from "src/app/models/user/nbpUser";
-import { NbpUsers } from "src/app/models/user/nbpUsers";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
 import {
   NbpBorderClasse,
@@ -68,7 +67,7 @@ export class NbpBaseComponent implements OnInit {
   nbpCheckPasswordSpecialCharacterErrorMessage: string =
     "Password must be have least one special character";
   nbpLocalStorage = new NbpLocalStorage();
-  nbpUser: any;
+  nbpUser: NbpUser;
   nbpUsers: Array<NbpUser> = [];
   nbpPermission = {
     EDIT: "edit",
@@ -1190,29 +1189,29 @@ export class NbpBaseComponent implements OnInit {
   }
 
   nbpValidatePassword(password) {
-    var minMaxLength = /^[\s\S]{8,32}$/,
-      upper = /[A-Z]/,
-      lower = /[a-z]/,
-      number = /[0-9]/,
-      special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+    const minMaxLength = /^[\s\S]{8,32}$/,
+      upperCase = /[A-Z]/,
+      lowerCase = /[a-z]/,
+      atLeastNumber = /[0-9]/,
+      specialCharacter = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
 
     if (!minMaxLength.test(password)) {
       this.nbpCheckPasswordErrorMessage = this.nbpCheckPasswordLenghtErrorMessage;
       return true;
     }
-    if (!upper.test(password)) {
+    if (!upperCase.test(password)) {
       this.nbpCheckPasswordErrorMessage = this.nbpCheckPasswordUppercaseErrorMessage;
       return true;
     }
-    if (!lower.test(password)) {
+    if (!lowerCase.test(password)) {
       this.nbpCheckPasswordErrorMessage = this.nbpCheckPasswordLowercaseErrorMessage;
       return true;
     }
-    if (!number.test(password)) {
+    if (!atLeastNumber.test(password)) {
       this.nbpCheckPasswordErrorMessage = this.nbpCheckPasswordNumberErrorMessage;
       return true;
     }
-    if (!special.test(password)) {
+    if (!specialCharacter.test(password)) {
       this.nbpCheckPasswordErrorMessage = this.nbpCheckPasswordSpecialCharacterErrorMessage;
       return true;
     }
