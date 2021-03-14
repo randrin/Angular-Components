@@ -150,7 +150,7 @@ export class NbpBaseComponent implements OnInit {
   nbpAlertBoxIcon: string;
   nbpAlertBoxColor: string;
   nbpAlertBoxBackground: string;
-  nbpUpdateDeleteSAveSuccessMessage: string = "";
+  nbpUpdateDeleteSaveSuccessMessage: string = "";
 
   nbpRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   nbpSeparator: string = " ";
@@ -214,7 +214,7 @@ export class NbpBaseComponent implements OnInit {
     this.NbpCheckAuthentification();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   // Functions
   /* Function to check if the user is logged and redirection to correct link or page */

@@ -8,7 +8,7 @@ import { NbpBackgroundBoxComponent } from './components/nbp-background-box/nbp-b
 import { NbpButtonComponent } from './components/nbp-button/nbp-button.component';
 import { NbpAlertBoxOneComponent } from './components/nbp-alert-boxes/nbp-alert-box-one/nbp-alert-box-one.component';
 import { NbpScrollTopComponent } from './components/nbp-scroll-top/nbp-scroll-top.component';
-import { NbpFeedbackComponent } from './components/nbp-feedback/nbp-feedback.component';
+import { NbpFeedbackComponent } from './components/nbp-feedbacks/nbp-feedback/nbp-feedback.component';
 import { NbpInputTextComponent } from './components/nbp-input-text/nbp-input-text.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NbpTextareaComponent } from './components/nbp-textarea/nbp-textarea.component';
@@ -111,7 +111,8 @@ import { ChangeOldPassToNewPassComponent } from './pages/auth/change-old-pass-to
 import { NbpPatientComponent } from './pages/nbp-patient/nbp-patient.component';
 import { NbpDividingLineFiveComponent } from './components/nbp-dividing-lines/nbp-dividing-line-five/nbp-dividing-line-five.component';
 import { NbpProfileBoxOneComponent } from './components/nbp-profile-boxes/nbp-profile-box-one/nbp-profile-box-one.component';
-import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-page/nbp-profile-box-page.component'
+import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-page/nbp-profile-box-page.component';
+import { NbpFeedbackTwoComponent } from './components/nbp-feedbacks/nbp-feedback-two/nbp-feedback-two.component'
 
 @NgModule({
   declarations: [
@@ -216,7 +217,8 @@ import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-p
     NbpPatientComponent,
     NbpDividingLineFiveComponent,
     NbpProfileBoxOneComponent,
-    NbpProfileBoxPageComponent
+    NbpProfileBoxPageComponent,
+    NbpFeedbackTwoComponent
   ],
 
 
