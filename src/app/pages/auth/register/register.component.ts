@@ -56,6 +56,10 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
+  nbpUserPrivacy(choice) {
+    console.log("nbpUserPrivacy: ", choice)
+  }
+
   nbpRegisterSubmit() {
     if (this.nbpAuth.register.password !== this.nbpConfirmPassword) {
       this.nbpRegisterSuccess = false;

@@ -1,7 +1,7 @@
 import { Component, ElementRef, Injector, OnInit, ViewChild } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 import { NbpPatient } from 'src/app/models/patient/nbpPatient';
-import { NbpPatientService } from '../../services/nbp-patients.service';
+import { NbpPatientService } from 'src/app/services/nbp-patients.service';
 
 
 
@@ -9,7 +9,7 @@ const ckeckFalsyButNotZero = (value) =>
   value == '' || value === null || value === undefined;
 
 @Component({
-  selector: 'app-nbp-patient',
+  selector: 'nbp-patient',
   templateUrl: './nbp-patient.component.html',
   styleUrls: ['./nbp-patient.component.scss']
 })

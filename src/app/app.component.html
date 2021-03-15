@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="nbp-app-wrapper">
-  <nbp-navbar></nbp-navbar>
+  <!-- <nbp-navbar *ngIf="!!this.nbpToken"></nbp-navbar> -->
   <!-- <nbp-header-one></nbp-header-one>
   <div class="container my-2">
     <div class="row text-center">
@@ -57,6 +57,6 @@
     [nbpCookieTextLink]="_model.component.NbpCookieComponent.link"
     [nbpCookieRedirectionLink]="_model.component.NbpCookieComponent.href"
   ></nbp-cookie-one>
-  <nbp-footer-one></nbp-footer-one>
+  <!-- <nbp-footer-one *ngIf="!!this.nbpToken"></nbp-footer-one> -->
   <nbp-scroll-top></nbp-scroll-top>
 </div>

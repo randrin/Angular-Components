@@ -68,7 +68,9 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         this.nbpAuthService.nbpUser = response;
         this.nbpUser = this.nbpAuthService.nbpUser;
         this.nbpChangeOldPasswordToNew = response.temporaryPassword;
-        this.nbpTitleLastConnexion = moment(this.nbpUser.lastConnexion).format("LLLL");
+        this.nbpTitleLastConnexion = moment(this.nbpUser.lastConnexion).format(
+          "LLLL"
+        );
         this.nbpUserRoles = response.roles.split(",");
       },
       (err) => {
@@ -117,7 +119,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
       email: nbpUser.email,
       active: nbpUser.active,
       temporaryPassword: nbpUser.temporaryPassword,
-      lastConnexion: moment(nbpUser.lastConnexion).format('DD/MM/y'),
+      lastConnexion: moment(nbpUser.lastConnexion).format("DD/MM/y HH:mm:ss"),
     };
   }
 
@@ -186,10 +188,10 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpProfileOnBtnAction(event) {
-    if (event === 'exit') {
+    if (event === "exit") {
       this.NbpOnLogout();
     }
-    if (event === 'update') {
+    if (event === "update") {
       this.NbpOnUpdateProfile();
     }
   }
@@ -199,9 +201,18 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   }
 
   NbpOnLogout() {
-    this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
-    // this.nbpAuthService.nbpUser = new NbpUser(0, "", "", "", false, "", false);
-    this.router.navigateByUrl("/login");
+    this.nbpAuthService
+      .NbpLogoutService(this.nbpAuthService.nbpUser)
+      .subscribe(
+        (response: any) => {
+          this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
+          console.log("NbpOnLogout: ", response);
+          this.router.navigateByUrl("/login");
+        },
+        (err) => {
+          console.log("NbpOnLogout: ", err);
+        }
+      );
   }
 
   NbpAbortSubmit() {

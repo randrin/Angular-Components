@@ -2,6 +2,7 @@
   <nbp-change-old-pass-to-new-pass></nbp-change-old-pass-to-new-pass>
 </div>
 <div class="nbp-home-wrapper" *ngIf="nbpChangeOldPasswordToNew">
+  <nbp-navbar *ngIf="!!this.nbpToken"></nbp-navbar>
   <div class="container my-5">
     <nbp-feedback *ngIf="nbpUpdateSuccessMessage.length" [nbpTitle]="nbpUpdateSuccessMessage"></nbp-feedback>
     <div *ngIf="!nbpShowFormUpdateProfile">
@@ -20,10 +21,18 @@
       <div class="row">
         <div class="col-1" *ngFor="let role of nbpUserRoles">
           <div *ngIf="role === 'ROLE_ADMIN'">
-            <nbp-badge-one [nbpBadgeName]="'Admin'" [nbpBadgeStyle]="_style.SUCCESS"></nbp-badge-one>
+            <nbp-badge-one
+              [nbpBadgeName]="'Admin'"
+              [nbpBadgeStyle]="_style.SUCCESS"
+              [nbpBadgeIcon]="'nbp-icon-biohazard'"
+            ></nbp-badge-one>
           </div>
           <div *ngIf="role === 'ROLE_USER'">
-            <nbp-badge-one [nbpBadgeName]="'User'" [nbpBadgeStyle]="_style.PRIMARY"></nbp-badge-one>
+            <nbp-badge-one
+              [nbpBadgeName]="'User'"
+              [nbpBadgeStyle]="_style.PRIMARY"
+              [nbpBadgeIcon]="'nbp-icon-bug'"
+            ></nbp-badge-one>
           </div>
         </div>
       </div>
@@ -133,4 +142,5 @@
       </div>
     </div>
   </div>
+  <nbp-footer-one *ngIf="!!this.nbpToken"></nbp-footer-one>
 </div>
