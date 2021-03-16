@@ -130,7 +130,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
   NbpModalOnClickAction(nbpUser) {
     console.log("Event: ", nbpUser);
     if (nbpUser.action === "delete") {
-      this.nbpUserService.NbpDeleteUserService(nbpUser.item.id).subscribe(
+      this.nbpUserService.NbpDeleteUserService(nbpUser.item.userId).subscribe(
         (response: any) => {
           this.nbpUsers = this.nbpUsers.filter(
             (elt) => elt.userName !== response.userName
@@ -228,7 +228,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         email: this.nbpAuth.profile.email,
       };
       this.nbpUserService
-        .NbpUpdateUserService(this.nbpAuthService.nbpUser.id, nbpUserRequest)
+        .NbpUpdateUserService(this.nbpAuthService.nbpUser.userId, nbpUserRequest)
         .subscribe(
           (response: any) => {
             this.nbpLocalStorage.NbpRemoveTokenLocalStorage();

@@ -38,7 +38,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <nbp-alert-box-one *ngIf="nbpShowErrorMessage" [nbpText]="nbpErrorMessage" [nbpAlertType]="_alert.ERROR">
+          <nbp-alert-box-one *ngIf="nbpShowErrorMessage" [nbpAlertText]="nbpErrorMessage" [nbpAlertType]="_alert.ERROR">
           </nbp-alert-box-one>
           <nbp-profile-box-one [nbpProfileImageUrl]="nbpUser.imageUrl"
             [nbpProfileTitle]="_model.component.NbpProfileBoxComponent.title" [nbpProfileSubtitle]="nbpUser.fullName"
