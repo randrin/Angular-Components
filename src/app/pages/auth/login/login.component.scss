@@ -1,6 +1,21 @@
 .nbp-login-wrapper {
   padding-bottom: 20px;
+
   .nbp-login-container {
+    .nbp-login-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nbp-login-title-two {
+        background: var(--nbp-primary);
+        margin: 5px;
+        padding: 5px;
+        text-transform: capitalize;
+        border-radius: 5px;
+      }
+    }
+
     .nbp-login-row {
       display: flex;
       justify-content: center;

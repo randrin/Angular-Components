@@ -60,9 +60,6 @@ import { NbpDividingLineTwoComponent } from './components/nbp-dividing-lines/nbp
 import { NbpCardOneComponent } from './components/nbp-cards/nbp-card-one/nbp-card-one.component';
 import { NbpCardPageComponent } from './pages/composants/nbp-card-page/nbp-card-page.component';
 import { NbpModalOneComponent } from './components/nbp-modal/nbp-modal-one/nbp-modal-one.component';
-import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
-import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-modal-two.component';
-import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
 import { NbpAlertBoxFourthComponent } from './components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component';
 import { NbpAlertBoxFiveComponent } from './components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component';
 import { NbpInputSwitchOneComponent } from './components/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component';
@@ -113,6 +110,10 @@ import { NbpDividingLineFiveComponent } from './components/nbp-dividing-lines/nb
 import { NbpProfileBoxOneComponent } from './components/nbp-profile-boxes/nbp-profile-box-one/nbp-profile-box-one.component';
 import { NbpProfileBoxPageComponent } from './pages/composants/nbp-profile-box-page/nbp-profile-box-page.component';
 import { NbpFeedbackTwoComponent } from './components/nbp-feedbacks/nbp-feedback-two/nbp-feedback-two.component'
+import { NbpPatientService } from './services/nbp-patients.service';
+import { NbpModalPageComponent } from './pages/composants/nbp-modal-page/nbp-modal-page.component';
+import { NbpModalThreeComponent } from './components/nbp-modal/nbp-modal-three/nbp-modal-three.component';
+import { NbpModalTwoComponent } from './components/nbp-modal/nbp-modal-two/nbp-modal-two.component';
 
 @NgModule({
   declarations: [
@@ -233,6 +234,7 @@ import { NbpFeedbackTwoComponent } from './components/nbp-feedbacks/nbp-feedback
   providers: [
     NbpAuthService,
     NbpUserService, 
+    NbpPatientService,
     NbpLocalStorage
   ],
   bootstrap: [AppComponent]

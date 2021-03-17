@@ -53,6 +53,7 @@ export class Model {
         login: "Login",
         logout: "Logout",
         register: "Register",
+        agreeAndJoin: "Agree & Join",
         resetPassword: "Reset Password",
         updatePassword: "Update Password",
         showPassword: "Show Password",

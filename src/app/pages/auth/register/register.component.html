@@ -1,5 +1,12 @@
 <div class="nbp-register-wrapper">
-  <div class="nbp-register-container container">
+  <div class="nbp-register-container container my-3">
+    <div class="nbp-register-title">
+      <h2 class="nbp-color-primary nbp-register-title-one">System</h2>
+      <h6 class="nbp-color-white nbp-register-title-two">Nbp</h6>
+    </div>
+    <h2 class="nbp-color-default nbp-register-subtitle">
+      Make the best of your dream development
+    </h2>
     <div class="row nbp-register-row">
       <div class="col-md-5 nbp-register-content" *ngIf="!nbpRegisterSuccess">
         <nbp-alert-box-fourth
@@ -108,11 +115,19 @@
               (nbpInputModel)="nbpInputModel($event)"
             ></nbp-input-password>
           </div>
-          <div class="form-group pt-4">
+          <div class="form-group">
+            <p class="nbp-text-align-center nbp-p3 nbp-color-default">
+              By clicking Agree & Join, you agree to the Nbp System
+              <a (click)="nbpUserPrivacy('agreement')" class="nbp-font-bold nbp-color-primary nbp-cursor-pointer">User Agreement</a>,
+              <a (click)="nbpUserPrivacy('privacy')" class="nbp-font-bold nbp-color-primary nbp-cursor-pointer">Privacy Policy</a>,
+              <a (click)="nbpUserPrivacy('cookie')" class="nbp-font-bold nbp-color-primary nbp-cursor-pointer">Cookie Policy</a>
+            </p>
+          </div>
+          <div class="form-group pt-2">
             <nbp-button
               class="nbp-login-submit"
               [nbpButtonLabel]="
-                _model.component.NbpAuthComponent.submitInput.register
+                _model.component.NbpAuthComponent.submitInput.agreeAndJoin
               "
               [nbpButtonSize]="_size.MD"
               [nbpButtonColor]="_style.PRIMARY"

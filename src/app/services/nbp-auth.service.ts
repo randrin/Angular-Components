@@ -11,8 +11,9 @@ export class NbpAuthService {
   private nbpRegisterUrl = window["baseUrl"] + "/v1/api/register";
   private nbpResetPasswordUrl = window["baseUrl"] + "/v1/api/user/resetPassword";
   private nbpShowPasswordUrl = window["baseUrl"] + "/v1/api/user/forgottenPassword";
+  private nbpLogoutUrl = window["baseUrl"] + "/v1/api/logout";
 
-  nbpUser: any;
+  nbpUser: NbpUser;
 
   constructor(
     private http: HttpClient,
@@ -35,9 +36,14 @@ export class NbpAuthService {
     return this.http.post(this.nbpResetPasswordUrl, nbpUser);
   }
 
-  
   public NbpSearchForgottenPasswordService(nbpUser) {
     return this.http.get(this.nbpShowPasswordUrl + "/" +nbpUser);
+  }
+
+  public NbpLogoutService(nbpUser) {
+    return this.http.put(this.nbpLogoutUrl, nbpUser, {
+      headers: this.nbpLocalStorage.NbpGetAuthHeader(),
+    });
   }
 }
   

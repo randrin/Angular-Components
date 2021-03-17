@@ -1,30 +1,19 @@
-import { Component } from '@angular/core';
-import { NbpAlertType, NbpFontSize, NbpPipe, NbpSize, NbpStyle } from '../assets/utils/nbp-commons/nbp-commons.enums';
-import { Model } from './models/model';
+import { Component, Injector, OnInit } from '@angular/core';
+import { NbpBaseComponent } from './components/nbp-base-component/nbp-base.component';
 
 @Component({
   selector: 'nbp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent extends NbpBaseComponent implements OnInit {
 
   title = 'Angular Components';
 
-  _style = NbpStyle;
-  _fontSize = NbpFontSize;
-  _pipe = NbpPipe;
-  _size = NbpSize;
-  _alert = NbpAlertType;
-  _model = new Model();
-
-  constructor() { }
+  constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
-  }
-
-  nbpCheckBoxModel(event) {
-    console.log(event);
+    console.log("this.nbpToken: ", !!this.nbpToken)
   }
   
 }
