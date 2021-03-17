@@ -22,6 +22,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   nbpModalTitle: string = 'ADD PATIENT';
   alreadyExist: string = "This patient profil already exist by his ID, do you want to update it?";
   saveByError: boolean = false;
+  tabella:boolean = true;
   nbpUpdateAndAddPatientShow: boolean = false;
   nbpUpdatePatientShow: boolean = false;
   nbpUpdatePatients: boolean = false;
@@ -132,7 +133,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
     this.nbpUpdateAndAddPatientShow = false;
   }
 
-  NbpOnUpdatePatient() {
+  nbpOnUpdatePatient() {
     this.nbpUpdatePatients = true;
     //   this.nbpText = false
   }
@@ -194,6 +195,7 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
             this.saveOrUpdateOrUpdateMessage = response.message;
             this.nbpUpdatePatients = true;
             this.saveByError = true;
+            this.tabella = false;
           } else {
             this.nbpUpdateDeleteSaveSuccessMessage = response.message;
             this.nbpUpdatePatientShow = true;
@@ -226,17 +228,17 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
   }
 
 
-  NbpClickBackUpdateDelete(event) {
+  nbpClickBackUpdateDelete(event) {
 
     if (event = 'back') {
       this.saveByError = false;
       this.nbpUpdatePatients = false
-    } 
+    }
 
     if (event = 'update') {
       this.saveByError = false;
       this.nbpUpdatePatient()
-    } 
+    }
 
     if (event = 'delete') {
       this.saveByError = false;

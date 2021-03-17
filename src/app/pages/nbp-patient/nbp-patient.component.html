@@ -6,16 +6,14 @@
         <nbp-alert-box-three *ngIf="nbpUpdatePatientShow" [nbpAlertText]="nbpUpdateDeleteSaveSuccessMessage"
             [nbpAlertType]="_alert.POSITIVE">
         </nbp-alert-box-three>
-        <nbp-feedback-two *ngIf="saveByError"
-        [nbpMessage]="saveOrUpdateOrUpdateMessage"
-        [nbpFeedbackType]="_alert.WARNING"
-        (clickBackUpdateDelete)="NbpClickBackUpdateDelete($event)">
-      </nbp-feedback-two>
+        <nbp-feedback-two *ngIf="saveByError" [nbpMessage]="saveOrUpdateOrUpdateMessage"
+            [nbpFeedbackType]="_alert.WARNING" (clickBackUpdateDelete)="nbpClickBackUpdateDelete($event)">
+        </nbp-feedback-two>
     </div>
     <div class="row">
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
             <nbp-button [nbpButtonLabel]="'Update Patient'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.PRIMARYHOVER" [nbpButtonDisabled]="true" (click)="NbpOnUpdatePatient()">
+                [nbpButtonColor]="_style.PRIMARYHOVER" [nbpButtonDisabled]="true" (click)="nbpOnUpdatePatient()">
             </nbp-button>
         </div>
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
@@ -268,14 +266,14 @@
             </div>
         </div>
     </div>
-    <div class="row text-center">
+    <div *ngIf="tabella" class="row text-center">
         <div class="col">
             <nbp-dividing-line-one [nbpTitle]="'List of Patient'" [nbpColorStyle]="_style.DEFAULT"
                 [nbpUppercaseTitle]="_pipe.UPPERCASE"></nbp-dividing-line-one>
         </div>
     </div>
     <div class="nbp-background-white">
-        <nbp-table-one [nbpTableHeaders]="nbpPatientHeaders" [nbpTableBodies]="nbpPatientsClone"
+        <nbp-table-one *ngIf="tabella" [nbpTableBodies]="nbpPatientsClone"
             [nbpTableTextAlignItem]="_style.LEFT" [nbpTableShowActions]="false"
             (nbpTableActions)="NbpModalOnClickActionPatient($event)">
         </nbp-table-one>
