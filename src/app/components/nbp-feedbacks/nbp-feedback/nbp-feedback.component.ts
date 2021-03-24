@@ -1,5 +1,5 @@
 import { Component, Injector, Input, OnInit } from "@angular/core";
-import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({
   selector: "nbp-feedback",

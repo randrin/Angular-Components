@@ -3,14 +3,17 @@
         <nbp-alert-box-fourth *ngIf="!!nbpUpdateErrorMessage.length" [nbpAlertText]="nbpUpdateErrorMessage"
             [nbpAlertType]="_alert.ERROR">
         </nbp-alert-box-fourth>
-        <nbp-alert-box-three *ngIf="nbpUpdatePatientShow" [nbpAlertText]="nbpUpdateDeleteSAveSuccessMessage"
+        <nbp-alert-box-three *ngIf="nbpUpdatePatientShow" [nbpAlertText]="nbpUpdateDeleteSaveSuccessMessage"
             [nbpAlertType]="_alert.POSITIVE">
         </nbp-alert-box-three>
+        <nbp-feedback-two *ngIf="saveByError" [nbpMessage]="saveOrUpdateOrUpdateMessage"
+            [nbpFeedbackType]="_alert.WARNING" (clickBackUpdateDelete)="nbpClickBackUpdateDelete($event)">
+        </nbp-feedback-two>
     </div>
     <div class="row">
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
             <nbp-button [nbpButtonLabel]="'Update Patient'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.PRIMARYHOVER" [nbpButtonDisabled]="true"(click)="NbpOnUpdatePatient()">
+                [nbpButtonColor]="_style.PRIMARYHOVER" [nbpButtonDisabled]="true" (click)="nbpOnUpdatePatient()">
             </nbp-button>
         </div>
         <div class="col nbp-text-align-left" *ngIf="!nbpUpdatePatients">
@@ -36,7 +39,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientId.label"
                                                 [nbpInputRequired]="true"
-
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientId.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -68,7 +70,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientCode.label"
                                                 [nbpInputRequired]="true"
-
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientCode.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -86,7 +87,6 @@
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientName.label"
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientName.name"
                                                 [nbpInputRequired]="true"
-
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
                                                 [nbpInputPlaceholder]="_model.component.NbpPatientComponent.patientName.placeholder"
@@ -100,7 +100,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientLastName.label"
                                                 [nbpInputRequired]="true"
-
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientLastName.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -117,7 +116,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientBirthday.label"
                                                 [nbpInputRequired]="true"
-                   
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientBirthday.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -131,7 +129,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientEmail.label"
                                                 [nbpInputRequired]="true"
-
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientEmail.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -148,7 +145,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientAge.label"
                                                 [nbpInputRequired]="true"
-                              
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientAge.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -176,7 +172,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientFixNumber.label"
                                                 [nbpInputRequired]="true"
-                                            
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientFixNumber.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -193,7 +188,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientAddress.label"
                                                 [nbpInputRequired]="true"
-                                          
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientAddress.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -208,7 +202,6 @@
                                             <nbp-input-text
                                                 [nbpInputLabel]="_model.component.NbpPatientComponent.patientPostcode.label"
                                                 [nbpInputRequired]="true"
-                                          
                                                 [nbpInputName]="_model.component.NbpPatientComponent.patientPostcode.name"
                                                 [nbpInputLabelRequired]="_model.component.NbpAuthComponent.textInput.required"
                                                 [nbpInputBorderType]="_style.ROUNDED"
@@ -229,7 +222,6 @@
                                                 [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientInfoSuppl.required"
                                                 [nbpTextareaRows]="_model.component.NbpPatientComponent.rows"
                                                 [nbpTextareaRequired]="true"
-                                         
                                                 [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientInfoSuppl.maxLengthMessage"
                                                 [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientInfoSuppl.placeholder"
                                                 [nbpTextareaErrorMessage]="_model.component.NbpPatientComponent.patientInfoSuppl.requiredMessage"
@@ -245,7 +237,6 @@
                                                 [nbpTextareaName]="_model.component.NbpPatientComponent.patientDiseases.name"
                                                 [nbpTextareaLabelRequired]="_model.component.NbpPatientComponent.patientDiseases.required"
                                                 [nbpTextareaRows]="_model.component.NbpPatientComponent.patientDiseases.rows"
-                                        
                                                 [nbpTextareaRequired]="true"
                                                 [nbpTextareaPlaceholder]="_model.component.NbpPatientComponent.patientDiseases.placeholder"
                                                 [nbpTextareaErrorLengthMaxSup]="_model.component.NbpPatientComponent.patientDiseases.maxLengthMessage"
@@ -264,8 +255,7 @@
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
                                 [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpClose()" data-dismiss="modal">
                             </nbp-button>
-                            <nbp-button 
-                                [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.add"
+                            <nbp-button [nbpButtonLabel]="_model.component.NbpPatientComponent.submitInput.add"
                                 [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY"
                                 [nbpButtonType]="_style.OUTLINE" [nbpButtonFullWidth]="true"
                                 [nbpButtonDisabled]="nbpUpdateDisabledo" (click)="nbpSavePatient()">
@@ -276,16 +266,16 @@
             </div>
         </div>
     </div>
-    <div class="row text-center">
+    <div *ngIf="tabella" class="row text-center">
         <div class="col">
             <nbp-dividing-line-one [nbpTitle]="'List of Patient'" [nbpColorStyle]="_style.DEFAULT"
                 [nbpUppercaseTitle]="_pipe.UPPERCASE"></nbp-dividing-line-one>
         </div>
     </div>
     <div class="nbp-background-white">
-        <nbp-table-two [nbpTableHeaders]="nbpPatientHeaders" [nbpTableBodies]="nbpPatientsClone"
+        <nbp-table-one *ngIf="tabella" [nbpTableBodies]="nbpPatientsClone"
             [nbpTableTextAlignItem]="_style.LEFT" [nbpTableShowActions]="false"
             (nbpTableActions)="NbpModalOnClickActionPatient($event)">
-        </nbp-table-two>
+        </nbp-table-one>
     </div>
 </div>

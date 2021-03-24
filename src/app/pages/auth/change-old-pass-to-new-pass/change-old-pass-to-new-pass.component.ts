@@ -37,6 +37,7 @@ export class ChangeOldPassToNewPassComponent
     this.nbpSetUpComponent();
   }
 
+  // Functions
   nbpSetUpComponent() {
     this.nbpPasswordDisabled =
       !this.nbpAuth.changePassword.oldPassword.length ||
