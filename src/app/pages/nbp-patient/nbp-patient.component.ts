@@ -230,17 +230,17 @@ export class NbpPatientComponent extends NbpBaseComponent implements OnInit {
 
   nbpClickBackUpdateDelete(event) {
 
-    if (event = 'back') {
+    if (event === 'back') {
       this.saveByError = false;
       this.nbpUpdatePatients = false
     }
 
-    if (event = 'update') {
+    if (event === 'update') {
       this.saveByError = false;
       this.nbpUpdatePatient()
     }
 
-    if (event = 'delete') {
+    if (event === 'delete') {
       this.saveByError = false;
       this.nbpDeletePatient()
     }
