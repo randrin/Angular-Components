@@ -273,7 +273,7 @@
         </div>
     </div>
     <div class="nbp-background-white">
-        <nbp-table-one *ngIf="tabella" [nbpTableBodies]="nbpPatientsClone"
+        <nbp-table-one *ngIf="tabella" [nbpTableBodies]="nbpPatientsClone" [nbpTableHeaders]="nbpPatientHeaders"
             [nbpTableTextAlignItem]="_style.LEFT" [nbpTableShowActions]="false"
             (nbpTableActions)="NbpModalOnClickActionPatient($event)">
         </nbp-table-one>
