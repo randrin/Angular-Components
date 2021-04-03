@@ -2,7 +2,8 @@ export class Model {
   component = {
     NbpAuthComponent: {
       textInput: {
-        label: "Username / Email Address",
+        label1: "Username / Email Address",
+        label2: "Username",
         name: "username",
         required: "true",
         requiredMessage: "The username / email is required",

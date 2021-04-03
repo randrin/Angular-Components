@@ -13,7 +13,7 @@ export class AppComponent extends NbpBaseComponent implements OnInit {
   constructor(injector: Injector) { super(injector); }
 
   ngOnInit(): void {
-    console.log("this.nbpToken: ", !!this.nbpToken)
+    // console.log("this.nbpToken: ", !!this.nbpToken)
   }
   
 }

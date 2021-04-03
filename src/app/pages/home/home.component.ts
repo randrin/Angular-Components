@@ -108,8 +108,6 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
     });
     this.nbpUsers = this.nbpUsersClone;
     this.nbpLoading = true;
-    console.log("this.nbpUsers: ", this.nbpUsers);
-    console.log("this.nbpUsersClone: ", this.nbpUsersClone);
   }
 
   NbpUserValues(nbpUser: NbpUser) {
@@ -207,6 +205,7 @@ export class HomeComponent extends NbpBaseComponent implements OnInit {
         (response: any) => {
           this.nbpLocalStorage.NbpRemoveTokenLocalStorage();
           console.log("NbpOnLogout: ", response);
+          this.nbpAuthService.nbpUser = undefined;
           this.router.navigateByUrl("/login");
         },
         (err) => {
