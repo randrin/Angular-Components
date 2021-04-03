@@ -31,10 +31,27 @@ export class ChangeOldPassToNewPassComponent
     nbpLocalStorage: NbpLocalStorage
   ) {
     super(injector);
+    this.NbpGetUserProfile();
   }
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
+  }
+
+  // Functions
+  NbpGetUserProfile() {
+    this.nbpToken = this.nbpLocalStorage.NbpGetTokenLocalStorage();
+    this.nbpUserService.NbpGetUserService(this.nbpToken).subscribe(
+      (response: NbpUser) => {
+        this.nbpAuthService.nbpUser = response;
+      },
+      (err) => {
+        if (err.status === 401) {
+          this.nbpShowErrorMessage = true;
+          this.nbpErrorMessage = err.error;
+        }
+      }
+    );
   }
 
   nbpSetUpComponent() {

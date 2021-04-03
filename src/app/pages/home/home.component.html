@@ -34,8 +34,8 @@
         <div class="col">
           <nbp-alert-box-one *ngIf="nbpShowErrorMessage" [nbpAlertText]="nbpErrorMessage" [nbpAlertType]="_alert.ERROR">
           </nbp-alert-box-one>
-          <nbp-profile-box-one [nbpProfileImageUrl]="nbpUser.imageUrl"
-            [nbpProfileTitle]="_model.component.NbpProfileBoxComponent.title" [nbpProfileSubtitle]="nbpUser.fullName"
+          <nbp-profile-box-one [nbpProfileImageUrl]="nbpUser?.imageUrl"
+            [nbpProfileTitle]="_model.component.NbpProfileBoxComponent.title" [nbpProfileSubtitle]="nbpUser?.fullName"
             [nbpProfileFooter]="'Last connexion: ' + nbpTitleLastConnexion" [nbpProfileBtnView]="
               _model.component.NbpProfileBoxComponent.btn.view
             " [nbpProfileBtnUpdate]="
@@ -84,7 +84,7 @@
               [nbpAlertType]="_alert.ERROR"></nbp-alert-box-fourth>
             <div class="form-group">
               <nbp-input-text [nbpInputLabel]="
-                  _model.component.NbpAuthComponent.textInput.label
+                  _model.component.NbpAuthComponent.textInput.label2
                 " [nbpInputValue]="nbpUser.userName" [nbpInputName]="
                   _model.component.NbpAuthComponent.textInput.name
                 " [nbpInputLabelRequired]="
