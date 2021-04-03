@@ -30,7 +30,6 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.nbpSetUpComponent();
-    console.log("nbpTableHeaders: ", this.nbpTableHeaders);
     const obj = this.nbpTableBodies[0];
   }
 

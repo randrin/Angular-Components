@@ -38,7 +38,7 @@ export class RegisterComponent extends NbpBaseComponent implements OnInit {
   // Functions
   nbpInputModel(event) {
     if (event.name === "username") {
-      this.nbpAuth.register.userName = event.value;
+      this.nbpAuth.register.userName = event.value.toLowerCase();
     }
     if (event.name === "password") {
       this.nbpAuth.register.password = event.value;
