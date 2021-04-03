@@ -135,32 +135,6 @@
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <h2>Basic Table</h2>
-      <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p> 
-    <div><button (click)="enable()">Edit</button> <input type="checkbox" value="product">Product&nbsp;<input type="checkbox" value="market">market</div>  
-      <table class="table border">
-        <thead>
-        <tr>
-        <th>Items</th>
-        <th>Business</th>
-        <th></th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of groups;let i = index" (click)="setClickedRow(i)"  [class.active]="i == selectedRow">
-           <td> <input #focus [disabled]='toggleButton' type="text" value="{{row.name}}"> </td>
-           <td> <input [disabled]='toggleButton' type="text" value="{{row.items}}"> </td>
-           <td> <button (click)="addRow(i)">Add</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-
-
   </div>
   <nbp-footer-one *ngIf="!!this.nbpToken"></nbp-footer-one>
 </div>
