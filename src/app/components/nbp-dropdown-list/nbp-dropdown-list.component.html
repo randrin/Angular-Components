@@ -13,12 +13,10 @@
     <div class="nbp-dropdown-list">
       <ngx-dropdown-list
         [id]="nbpDropDownListId"
-        [name]="nbpDropDownListName"
         (selectionChange)="onChange($event)"
         [items]="nbpDropDownListLItems"
         [multiSelection]="false"
         [placeHolder]="nbpDropDownListPlaceholder"
-        [(selectedValue)]="maxRowsLimitation"
         [filterBox]="false"
         [ngClass]="nbpDropDownList"
         (focusout)="nbpInputFocusOut()"
