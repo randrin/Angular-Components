@@ -506,6 +506,14 @@ export class Model {
     NbpCheckboxComponent: {
       label: "Privacy Policy",
     },
+    NbpDatePickerComponent: {
+      label: "Born Date",
+      name: "dayOfBorn",
+      required: "true",
+      requiredMessage: "The born date is required",
+      icon: "fa fa-calendar",
+      placeholder: "Select the date",
+    },
     NbpInputTextComponent: {
       label1: "First Name",
       label2: "Last Name",

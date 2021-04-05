@@ -87,7 +87,7 @@ const appRoutes: Routes = [
         path: "comboDropDownList",
         component: NbpComboDropDownListPageComponent,
       },
-      { path: "date-Picker", component: NbpDatePickerPageComponent },
+      { path: "date-picker", component: NbpDatePickerPageComponent },
       { path: "upload-File", component: NbpUploadFilePageComponent },
       { path: "profiles", component: NbpProfileBoxPageComponent },
       {

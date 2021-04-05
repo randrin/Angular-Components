@@ -1,1 +1,40 @@
-<p>nbp-date-picker-page works!</p>
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-date-picker
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerRequired]="true"
+        [nbpDatePickerBorderType]="_style.ROUNDED"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-date-picker>
+    </div>
+    <div class="col-md-6">
+      <nbp-date-picker
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerRequired]="false"
+        [nbpDatePickerDisabled]="true"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-date-picker>
+    </div>
+  </div>
+</div>

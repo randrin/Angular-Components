@@ -11,6 +11,25 @@ nbp-table-two {
   padding: 20px 0;
 }
 
+dp-date-picker {
+  .dp-input-container {
+    .dp-picker-input {
+      border: none !important;
+    }
+  }
+  &.dp-material {
+    .dp-picker-input {
+      font-size: inherit !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.dp-popup {
+  top: 6px;
+  position: relative;
+}
+
 // To be fixed later
 @media only screen and (max-width: 47.9375em) {
   .nbp-nav ul {
