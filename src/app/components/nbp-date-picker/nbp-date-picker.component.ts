@@ -20,6 +20,8 @@ export class NbpDatePickerComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpDatePickerLabelRequired: boolean;
   @Input() nbpDatePickerBorderType: string;
   @Input() nbpDatePickerName: string;
+  @Input() nbpDatePickerMinDate: string;
+  @Input() nbpDatePickerMaxDate: string;
   @Input() nbpDatePickerIcon: string;
   @Input() nbpDatePickerIconRequired: boolean;
   @Input() nbpDatePickerPlaceholder: string;
@@ -69,7 +71,6 @@ export class NbpDatePickerComponent extends NbpBaseComponent implements OnInit {
       value: this.nbpModel,
       name: this.nbpDatePickerName,
     });
-    console.log("this.nbpDatePicker: ", this.nbpDatePicker);
   }
 
   nbpInputFocusOut() {

@@ -509,6 +509,7 @@ export class Model {
     NbpDatePickerComponent: {
       label: "Born Date",
       name: "dayOfBorn",
+      value: "05-05-2021",
       required: "true",
       requiredMessage: "The born date is required",
       icon: "fa fa-calendar",
