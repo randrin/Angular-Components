@@ -1,16 +1,37 @@
 <div class="nbp-dropdown-list-wrapper">
   <div class="nbp-dropdown-list-container">
     <label
-      *ngIf="nbpDatePickerLabelRequired"
-      for="nbpDatePickerName"
+      *ngIf="nbpDropDownListLabelRequired"
+      for="nbpDropDownListName"
       class="nbp-p2 nbp-color-default nbp-dropdown-list-label nbp-text-capitalize"
     >
-      {{ nbpDatePickerLabel }}
-      <span *ngIf="nbpDatePickerRequired" class="nbp-color-tomato ml-1">*</span>
+      {{ nbpDropDownListLabel }}
+      <span *ngIf="nbpDropDownListRequired" class="nbp-color-tomato ml-1"
+        >*</span
+      >
     </label>
-    <div class="nbp-dropdown-list"></div>
+    <div class="nbp-dropdown-list">
+      <ngx-dropdown-list
+        [id]="nbpDropDownListId"
+        [name]="nbpDropDownListName"
+        (selectionChange)="onChange($event)"
+        [items]="nbpDropDownListLItems"
+        [multiSelection]="false"
+        [placeHolder]="nbpDropDownListPlaceholder"
+        [(selectedValue)]="maxRowsLimitation"
+        [filterBox]="false"
+        [ngClass]="nbpDropDownList"
+        (focusout)="nbpInputFocusOut()"
+        class="form-control nbp-form-control"
+        [formatNumber]="true"
+        [disabled]="nbpDropDownListDisabled"
+      >
+      </ngx-dropdown-list>
+    </div>
     <div class="nbp-dropdown-list-error-message" *ngIf="nbpErrorMessage">
-        <span class="nbp-dropdown-list-alert">{{ nbpDatePickerErrorMessage }}</span>
-      </div>
+      <span class="nbp-dropdown-list-alert">{{
+        nbpDropDownListErrorMessage
+      }}</span>
+    </div>
   </div>
 </div>

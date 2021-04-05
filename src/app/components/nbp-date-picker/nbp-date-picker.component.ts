@@ -66,7 +66,7 @@ export class NbpDatePickerComponent extends NbpBaseComponent implements OnInit {
   nbpGetClasses() {
     console.log(this.nbpModel);
     this.nbpDatePicker =
-      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpDatePickerDisabled ? "nbp-background-sliver" : "");
+      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpDatePickerDisabled ? "nbp-background-sliver nbp-cursor-not-allowed" : "");
     this.nbpDatePickerModel.emit({
       value: this.nbpModel,
       name: this.nbpDatePickerName,

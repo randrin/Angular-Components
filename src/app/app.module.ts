@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
+import { DropdownListModule } from 'ngx-dropdown-list';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -226,6 +227,7 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
   imports: [
     BrowserModule,
     DataTablesModule,
+    DropdownListModule,
     FormsModule,
     DpDatePickerModule,
     HttpClientModule,
