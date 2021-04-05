@@ -68,14 +68,14 @@ import { NbpInputSwitchTwoComponent } from "./components/nbp-input-switchs/nbp-i
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
-import { NbpComboDropDownListComponent } from "./components/nbp-combo-drop-down-list/nbp-combo-drop-down-list.component";
+import { NbpDropdownListComponent } from './components/nbp-dropdown-list/nbp-dropdown-list.component';
 import { NbpDatePickerComponent } from "./components/nbp-date-picker/nbp-date-picker.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
 import { NbpUploadFileComponent } from "./components/nbp-upload-file/nbp-upload-file.component";
 import { NbpTooltipPageComponent } from "./pages/composants/nbp-tooltip-page/nbp-tooltip-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
-import { NbpComboDropDownListPageComponent } from "./pages/composants/nbp-combo-drop-down-list-page/nbp-combo-drop-down-list-page.component";
+import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
 import { NbpDatePickerPageComponent } from "./pages/composants/nbp-date-picker-page/nbp-date-picker-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
@@ -184,7 +184,7 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
     NbpInputSwitchPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
-    NbpComboDropDownListComponent,
+    NbpDropdownListComponent,
     NbpDatePickerComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
@@ -192,7 +192,7 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
     NbpTooltipPageComponent,
     NbpTooltipComponent,
     NbpNotificationHeaderPageComponent,
-    NbpComboDropDownListPageComponent,
+    NbpDropDownListPageComponent,
     NbpDatePickerPageComponent,
     NbpUploadFilePageComponent,
     NbpTabbarPageComponent,
