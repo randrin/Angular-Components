@@ -83,8 +83,23 @@ dp-date-picker {
 }
 
 .dropdown {
+  top: 9px;
+  border: 1px solid var(--nbp-primary) !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+
+  .filter-box {
+    border: 1px solid var(--nbp-secondary) !important;
+    margin: 10px 5px !important;
+    height: 35px !important;
+    font-size: 15px !important;
+  }
+
+  .with-filter {
+    top: 55px !important;
+  }
+
   .no-filter {
-    top: 8px !important;
     border-radius: 4px !important;
   }
 

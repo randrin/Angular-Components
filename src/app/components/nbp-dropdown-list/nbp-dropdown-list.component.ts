@@ -31,6 +31,7 @@ export class NbpDropdownListComponent
   @Input() nbpDropDownListErrorMessage: string;
   @Input() nbpDropDownListRequired: boolean;
   @Input() nbpDropDownListDisabled: boolean;
+  @Input() nbpDropDownListFilterItems: boolean;
 
   @Output()
   nbpDropDownListModel: EventEmitter<object> = new EventEmitter<object>();
