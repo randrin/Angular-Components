@@ -1,0 +1,76 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-nbp-dropdown-list
+        [nbpDropDownListLItems]="
+          _model.component.NbpDropdownListComponent.items
+        "
+        [nbpDropDownListName]="_model.component.NbpDropdownListComponent.name"
+        [nbpDropDownListLabel]="_model.component.NbpDropdownListComponent.label1"
+        [nbpDropDownListLabelRequired]="
+          _model.component.NbpDropdownListComponent.required
+        "
+        [nbpDropDownListPlaceholder]="
+          _model.component.NbpDropdownListComponent.placeholder
+        "
+        [nbpDropDownListRequired]="true"
+        [nbpDropDownListFilterItems]="false"
+        [nbpDropDownListBorderType]="_style.ROUNDED"
+        [nbpDropDownListErrorMessage]="
+          _model.component.NbpDropdownListComponent.requiredMessage
+        "
+        (nbpDropDownListModel)="nbpInputModel($event)"
+      ></nbp-nbp-dropdown-list>
+    </div>
+    <div class="col-md-6">
+      <nbp-nbp-dropdown-list
+        [nbpDropDownListName]="_model.component.NbpDropdownListComponent.name"
+        [nbpDropDownListLabel]="_model.component.NbpDropdownListComponent.label1"
+        [nbpDropDownListLabelRequired]="
+          _model.component.NbpDropdownListComponent.required
+        "
+        [nbpDropDownListPlaceholder]="
+          _model.component.NbpDropdownListComponent.placeholder
+        "
+        [nbpDropDownListRequired]="false"
+        [nbpDropDownListErrorMessage]="
+          _model.component.NbpDropdownListComponent.requiredMessage
+        "
+        [nbpDropDownListDisabled]="true"
+        (nbpDropDownListModel)="nbpInputModel($event)"
+      ></nbp-nbp-dropdown-list>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-nbp-dropdown-list
+        [nbpDropDownListLItems]="
+          _model.component.NbpDropdownListComponent.items
+        "
+        [nbpDropDownListName]="_model.component.NbpDropdownListComponent.name"
+        [nbpDropDownListLabel]="_model.component.NbpDropdownListComponent.label2"
+        [nbpDropDownListLabelRequired]="
+          _model.component.NbpDropdownListComponent.required
+        "
+        [nbpDropDownListPlaceholder]="
+          _model.component.NbpDropdownListComponent.placeholder
+        "
+        [nbpDropDownListRequired]="true"
+        [nbpDropDownListFilterItems]="true"
+        [nbpDropDownListBorderType]="_style.ROUNDED"
+        [nbpDropDownListErrorMessage]="
+          _model.component.NbpDropdownListComponent.requiredMessage
+        "
+        (nbpDropDownListModel)="nbpInputModel($event)"
+      ></nbp-nbp-dropdown-list>
+    </div>
+  </div>
+</div>

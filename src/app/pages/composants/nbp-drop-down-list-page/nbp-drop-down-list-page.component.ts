@@ -2,14 +2,14 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base.component';
 
 @Component({
-  selector: 'nbp-date-picker-page',
-  templateUrl: './nbp-date-picker-page.component.html',
-  styleUrls: ['./nbp-date-picker-page.component.scss']
+  selector: 'nbp-drop-down-list-page',
+  templateUrl: './nbp-drop-down-list-page.component.html',
+  styleUrls: ['./nbp-drop-down-list-page.component.scss']
 })
 
-export class NbpDatePickerPageComponent extends NbpBaseComponent implements OnInit {
+export class NbpDropDownListPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'Date Picker Page';
+  title = 'DropDown List Page';
 
   constructor(injector:Injector) {
     super(injector);
@@ -21,6 +21,6 @@ export class NbpDatePickerPageComponent extends NbpBaseComponent implements OnIn
   // Functions
   nbpInputModel(event) {
     this.nbpModel = event;
-    console.log("NbpDatePickerPageComponent: ", event)
+    console.log("NbpDropDownListPageComponent: ", event)
   }
 }

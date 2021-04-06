@@ -506,6 +506,33 @@ export class Model {
     NbpCheckboxComponent: {
       label: "Privacy Policy",
     },
+    NbpDropdownListComponent: {
+      items: [
+        {id: "FE", value: "Front End Developer", text: "Front End Developer"},
+        {id: "BE", value: "Back End Developer", text: "Back End Developer"},
+        {id: "BF", value: "Full Stack Developer", text: "Full Stack Developer"},
+        {id: "DV", value: "DevOp Developer", text: "DevOp Developer"},
+        {id: "SM", value: "Scrum Master", text: "Scrum Master"},
+        {id: "PM", value: "Project Manager", text: "Project Manager"},
+        {id: "QA", value: "QA Tester", text: "QA Tester"},
+        {id: "BF", value: "Business Functional", text: "Business Functional"},
+      ],
+      label1: "Profession",
+      label2: "Profession with filter",
+      name: "profession",
+      placeholder: "Select ypur profession",
+      required: "true",
+      requiredMessage: "The profession is required",
+    },
+    NbpDatePickerComponent: {
+      label: "Born Date",
+      name: "dayOfBorn",
+      value: "05-05-2021",
+      required: "true",
+      requiredMessage: "The born date is required",
+      icon: "fa fa-calendar",
+      placeholder: "Select the date",
+    },
     NbpInputTextComponent: {
       label1: "First Name",
       label2: "Last Name",

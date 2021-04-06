@@ -1,0 +1,53 @@
+.nbp-date-picker-wrapper {
+  text-align: left;
+
+  .nbp-date-picker-label {
+    display: inline-flex;
+    font-weight: 500;
+    line-height: 1.0625rem !important;
+    margin: 10px !important;
+    font-size: 0.925em !important;
+  }
+
+  .nbp-date-picker {
+    position: relative;
+    cursor: pointer;
+
+    .nbp-form-control {
+      background-clip: border-box;
+      padding: 0.625rem 3.4375rem 0.625rem 1.5625rem;
+      border-width: 0.0625rem;
+      border-style: solid;
+      font-size: 1rem;
+      height: 3.125rem;
+      color: var(--nbp-secondary);
+      border-color: var(--nbp-secondary);
+
+      &:focus {
+        border-width: 0.125rem;
+        border-style: solid;
+        outline: 0;
+        box-shadow: none !important;
+        border-color: var(--nbp-primary) !important;
+      }
+    }
+
+    .nbp-date-picker-icon {
+      right: 1.975rem;
+      position: absolute;
+      top: 0.75rem;
+      z-index: 3;
+      font-size: 1.565rem;
+      line-height: 1.5625rem;
+      color: var(--nbp-primary);
+    }
+  }
+
+  .nbp-date-picker-error-message {
+    font-size: 0.875em;
+    margin: 0.325rem 3.4375rem 0.325rem 1.5625rem;
+    opacity: 1;
+    transition: all ease-out 0.25s;
+    color: var(--nbp-tomato);
+  }
+}

@@ -11,6 +11,118 @@ nbp-table-two {
   padding: 20px 0;
 }
 
+dp-date-picker {
+  .dp-input-container {
+    .dp-picker-input {
+      border: none !important;
+    }
+  }
+
+  &.dp-material {
+    .dp-picker-input {
+      font-size: inherit !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.dp-popup {
+  top: 6px;
+  position: relative;
+}
+
+// NbpDropdownListComponent
+.selection-anchor-close,
+.selection-anchor-open,
+.selection-anchor-disabled {
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+  padding: 5px 12px 5px !important;
+  font-size: 1rem !important;
+
+  &::after,
+  &::before {
+    font-size: 15px !important;
+    right: -10px !important;
+    top: 20px !important;
+    color: var(--nbp-primary) !important;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.selection-anchor-disabled {
+  background: var(--nbp-sliver) !important;
+  filter: none !important;
+}
+
+.selection-clearance {
+  border: 1px solid var(--nbp-primary);
+  border-radius: 21px;
+  width: 25px;
+  height: 25px;
+  margin-top: 1px;
+  color: var(--nbp-white);
+  font-size: 1.5rem !important;
+  float: right;
+  position: initial !important;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-weight: 900 !important;
+  right: 20px !important;
+  background: var(--nbp-primary) !important;
+
+  &:hover {
+    color: var(--nbp-white) !important;
+  }
+}
+
+.dropdown {
+  top: 9px;
+  border: 1px solid var(--nbp-primary) !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+
+  .filter-box {
+    border: 1px solid var(--nbp-secondary) !important;
+    margin: 10px 5px !important;
+    height: 35px !important;
+    font-size: 15px !important;
+  }
+
+  .with-filter {
+    top: 55px !important;
+  }
+
+  .no-filter {
+    border-radius: 4px !important;
+  }
+
+  .options {
+    border: 1px solid var(--nbp-primary) !important;
+    font-size: 1rem !important;
+
+    item {
+      .container-selection {
+        &:hover {
+          color: var(--nbp-white) !important;
+          background-color: var(--nbp-primary) !important;
+        }
+      }
+
+      .container-selection-selected {
+        background: var(--nbp-primary) !important;
+        color: var(--nbp-white) !important;
+      }
+    }
+  }
+}
+
 // To be fixed later
 @media only screen and (max-width: 47.9375em) {
   .nbp-nav ul {
@@ -29,6 +141,7 @@ nbp-table-two {
             .nbp-table-content-icon {
               display: none !important;
             }
+
             .nbp-table-content-actions-link {
               display: flex;
             }
@@ -37,7 +150,7 @@ nbp-table-two {
       }
     }
   }
-  
+
   .nbp-profile-box-cta-content {
     display: grid !important;
   }
