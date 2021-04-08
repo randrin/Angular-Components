@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
 import { DropdownListModule } from 'ngx-dropdown-list';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -116,6 +117,7 @@ import { NbpPatientService } from "./services/nbp-patients.service";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
 import { NbpModalThreeComponent } from "./components/nbp-modal/nbp-modal-three/nbp-modal-three.component";
 import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-modal-two.component";
+import { NbpDropdownListTwoComponent } from './components/nbp-dropdown-list-two/nbp-dropdown-list-two.component';
 
 @NgModule({
   declarations: [
@@ -222,12 +224,14 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
     NbpProfileBoxOneComponent,
     NbpProfileBoxPageComponent,
     NbpFeedbackTwoComponent,
+    NbpDropdownListTwoComponent,
   ],
 
   imports: [
     BrowserModule,
     DataTablesModule,
     DropdownListModule,
+    NgMultiSelectDropDownModule.forRoot(),
     FormsModule,
     DpDatePickerModule,
     HttpClientModule,

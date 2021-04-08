@@ -507,20 +507,34 @@ export class Model {
       label: "Privacy Policy",
     },
     NbpDropdownListComponent: {
-      items: [
+      itemsOne: [
         {id: "FE", value: "Front End Developer", text: "Front End Developer"},
         {id: "BE", value: "Back End Developer", text: "Back End Developer"},
         {id: "BF", value: "Full Stack Developer", text: "Full Stack Developer"},
         {id: "DV", value: "DevOp Developer", text: "DevOp Developer"},
-        {id: "SM", value: "Scrum Master", text: "Scrum Master"},
+        {id: "SM", value: "Scrum / Agile Master", text: "Scrum / Agile Master"},
         {id: "PM", value: "Project Manager", text: "Project Manager"},
         {id: "QA", value: "QA Tester", text: "QA Tester"},
         {id: "BF", value: "Business Functional", text: "Business Functional"},
       ],
+      itemsTwo: [
+        { item_id: 1, item_value: 'Front End Developer', item_text: 'Front End Developer' },
+        { item_id: 2, item_value: 'Back End Developer', item_text: 'Back End Developer' },
+        { item_id: 3, item_value: 'Full Stack Developer', item_text: 'Full Stack Developer' },
+        { item_id: 4, item_value: 'DevOp Developer', item_text: 'DevOp Developer' },
+        { item_id: 5, item_value: 'Scrum Master', item_text: 'Scrum Master' },
+        { item_id: 6, item_value: 'QA Tester', item_text: 'QA Tester' },
+        { item_id: 7, item_value: 'Business Functional', item_text: 'Business Functional' }
+      ],
+      selectedItems: [
+        { item_id: 1, item_value: 'Front End Developer', item_text: 'Front End Developer' },
+        { item_id: 2, item_value: 'Back End Developer', item_text: 'Back End Developer' },
+      ],
       label1: "Profession",
       label2: "Profession with filter",
-      name: "profession",
-      placeholder: "Select ypur profession",
+      name1: "profession1",
+      name2: "profession2",
+      placeholder: "Select your profession",
       required: "true",
       requiredMessage: "The profession is required",
     },

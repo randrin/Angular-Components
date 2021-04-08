@@ -10,14 +10,14 @@ import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
 
 @Component({
-  selector: "nbp-nbp-dropdown-list",
+  selector: "nbp-dropdown-list",
   templateUrl: "./nbp-dropdown-list.component.html",
   styleUrls: ["./nbp-dropdown-list.component.scss"],
 })
 export class NbpDropdownListComponent
   extends NbpBaseComponent
   implements OnInit {
-  @Input() nbpDropDownListLItems: Array<object>;
+  @Input() nbpDropDownListItems: Array<object>;
   @Input() nbpDropDownListLabel: string;
   @Input() nbpDropDownListValue: string;
   @Input() nbpDropDownListLabelRequired: boolean;
@@ -67,7 +67,6 @@ export class NbpDropdownListComponent
   }
 
   nbpGetClasses() {
-    console.log(this.nbpModel);
     this.nbpDropDownList =
       this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpDropDownListDisabled ? "nbp-background-sliver nbp-cursor-not-allowed" : "");
     this.nbpDropDownListModel.emit({
@@ -77,8 +76,6 @@ export class NbpDropdownListComponent
   }
 
   nbpInputFocusOut() {
-    console.log("this.nbpModel.length: ", this.nbpModel);
-    console.log(this.nbpModel);
     if (this.nbpDropDownListRequired) {
       this.nbpErrorMessage =
         this.nbpModel === undefined || this.nbpModel.length === 0
@@ -93,7 +90,6 @@ export class NbpDropdownListComponent
   }
 
   onChange(event) {
-    console.log("NbpDropdownListComponent: ", event);
     this.nbpModel = event;
     this.nbpInputFocusOut();
   }

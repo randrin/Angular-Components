@@ -1,4 +1,4 @@
-<div class="nbp-dropdown-list-wrapper">
+<div class="nbp-dropdown-list-two-wrapper">
   <div class="nbp-dropdown-list-container">
     <label
       *ngIf="nbpDropDownListLabelRequired"
@@ -11,20 +11,22 @@
       >
     </label>
     <div class="nbp-dropdown-list">
-      <ngx-dropdown-list
-        [id]="nbpDropDownListId"
-        (selectionChange)="onChange($event)"
-        [items]="nbpDropDownListItems"
-        [multiSelection]="false"
-        [placeHolder]="nbpDropDownListPlaceholder"
-        [filterBox]="nbpDropDownListFilterItems"
+      <ng-multiselect-dropdown
+        [placeholder]="nbpDropDownListPlaceholder"
+        [settings]="nbpDropDownListSettings"
+        [data]="nbpDropDownListItems"
         [ngClass]="nbpDropDownList"
-        (focusout)="nbpInputFocusOut()"
         class="form-control nbp-form-control"
-        [formatNumber]="true"
+        [(ngModel)]="nbpDropDownListSelectedItems"
+        (blur)="nbpInputBlur()"
+        (focusout)="nbpInputFocusOut()" 
+        (focus)="nbpInputFocus()"
+        (onSelect)="onItemSelect($event)"
+        (onSelectAll)="onSelectAll($event)"
+        (focusout)="nbpInputFocusOut()"
         [disabled]="nbpDropDownListDisabled"
       >
-      </ngx-dropdown-list>
+      </ng-multiselect-dropdown>
     </div>
     <div class="nbp-dropdown-list-error-message" *ngIf="nbpErrorMessage">
       <span class="nbp-dropdown-list-alert">{{
