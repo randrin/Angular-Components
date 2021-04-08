@@ -6,15 +6,15 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
+import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-dropdown-list",
-  templateUrl: "./nbp-dropdown-list.component.html",
-  styleUrls: ["./nbp-dropdown-list.component.scss"],
+  selector: "nbp-dropdown-list-one",
+  templateUrl: "./nbp-dropdown-list-one.component.html",
+  styleUrls: ["./nbp-dropdown-list-one.component.scss"],
 })
-export class NbpDropdownListComponent
+export class NbpDropdownListOneComponent
   extends NbpBaseComponent
   implements OnInit {
   @Input() nbpDropDownListItems: Array<object>;

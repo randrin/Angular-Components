@@ -70,7 +70,7 @@ import { NbpInputSwitchTwoComponent } from "./components/nbp-input-switchs/nbp-i
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
-import { NbpDropdownListComponent } from './components/nbp-dropdown-list/nbp-dropdown-list.component';
+import { NbpDropdownListOneComponent } from './components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component';
 import { NbpDatePickerComponent } from "./components/nbp-date-picker/nbp-date-picker.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
@@ -117,7 +117,7 @@ import { NbpPatientService } from "./services/nbp-patients.service";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
 import { NbpModalThreeComponent } from "./components/nbp-modal/nbp-modal-three/nbp-modal-three.component";
 import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-modal-two.component";
-import { NbpDropdownListTwoComponent } from './components/nbp-dropdown-list-two/nbp-dropdown-list-two.component';
+import { NbpDropdownListTwoComponent } from './components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component';
 
 @NgModule({
   declarations: [
@@ -187,7 +187,7 @@ import { NbpDropdownListTwoComponent } from './components/nbp-dropdown-list-two/
     NbpInputSwitchPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
-    NbpDropdownListComponent,
+    NbpDropdownListOneComponent,
     NbpDatePickerComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
