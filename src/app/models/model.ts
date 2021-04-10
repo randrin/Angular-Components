@@ -532,6 +532,7 @@ export class Model {
       ],
       label1: "Profession",
       label2: "Profession with filter",
+      label3: "Profession with single selection",
       name1: "profession1",
       name2: "profession2",
       placeholder: "Select your profession",

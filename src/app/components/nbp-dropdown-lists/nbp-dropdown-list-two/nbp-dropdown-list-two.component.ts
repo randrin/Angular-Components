@@ -18,7 +18,7 @@ export class NbpDropdownListTwoComponent
   extends NbpBaseComponent
   implements OnInit {
   @Input() nbpDropDownListItems: Array<object>;
-  @Input() nbpDropDownListSelectedItems: Array<object>;
+  @Input() nbpDropDownListSelectedItems: Array<object> = [];
   @Input() nbpDropDownListLabel: string;
   @Input() nbpDropDownListLabelRequired: boolean;
   @Input() nbpDropDownListBorderType: string;
@@ -39,8 +39,6 @@ export class NbpDropdownListTwoComponent
   @Output()
   nbpDropDownListModel: EventEmitter<object> = new EventEmitter<object>();
 
-  nbpDropDownListModels: Array<object> = [];
-  nbpDropDownListModelsClone: Array<object> = [];
   nbpDropDownList: string;
   nbpDropDownListSettings = {};
   nbpDropDownListId: string;
@@ -87,7 +85,6 @@ export class NbpDropdownListTwoComponent
   }
 
   nbpGetClasses() {
-    console.log(this.nbpDropDownListModel);
     this.nbpDropDownList =
       this.nbpBorderType +
       this.nbpSeparator +
@@ -97,21 +94,19 @@ export class NbpDropdownListTwoComponent
         ? "nbp-background-sliver nbp-cursor-not-allowed"
         : "");
     this.nbpDropDownListModel.emit({
-      value: this.nbpDropDownListModels,
+      value: this.nbpDropDownListSelectedItems,
       name: this.nbpDropDownListName,
     });
   }
 
   nbpInputFocusOut() {
-    console.log("nbpInputFocusOut: ", this.nbpDropDownListModels);
-    console.log(this.nbpDropDownListModels);
     if (this.nbpDropDownListRequired) {
       this.nbpErrorMessage =
-        this.nbpDropDownListModels === undefined || this.nbpDropDownListModels.length === 0
+        this.nbpDropDownListSelectedItems === undefined || this.nbpDropDownListSelectedItems.length === 0
           ? true
           : false;
       this.nbpErrorBorder =
-        this.nbpDropDownListModels === undefined || this.nbpDropDownListModels.length === 0
+        this.nbpDropDownListSelectedItems === undefined || this.nbpDropDownListSelectedItems.length === 0
           ? this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR)
           : "";
       this.nbpGetClasses();
@@ -119,22 +114,12 @@ export class NbpDropdownListTwoComponent
   }
 
   onItemSelect(item: any) {
-    console.log("onItemSelect: ", item)
-    this.nbpDropDownListModels.push(item);
+    this.nbpDropDownListSelectedItems.filter(element => element !== item.item_id)
   }
   
   onSelectAll(items: []) {
     items.forEach(element => {
-      this.nbpDropDownListModels.push(element);
+      this.nbpDropDownListSelectedItems.push(element);
     });
-    console.log("onSelectAll: ", this.nbpDropDownListModels);
-  }
-
-  nbpInputBlur() {
-    console.log("nbpInputBlur: ")
-  }
-
-  nbpInputFocus() {
-    console.log("nbpInputFocus: ")
   }
 }
