@@ -54,7 +54,9 @@ export class NbpDropdownListOneComponent
   // Functions
   nbpSetUpComponent() {
     this.nbpDropDownListId = "nbp" + uuid.v4();
-    this.nbpBorderType = this.nbpGetTypeInputText(this.nbpDropDownListBorderType);
+    this.nbpBorderType = this.nbpGetTypeInputText(
+      this.nbpDropDownListBorderType
+    );
     this.nbpModel =
       this.nbpDropDownListValue === undefined ? "" : this.nbpDropDownListValue;
     this.nbpGetClasses();
@@ -68,7 +70,13 @@ export class NbpDropdownListOneComponent
 
   nbpGetClasses() {
     this.nbpDropDownList =
-      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpDropDownListDisabled ? "nbp-background-sliver nbp-cursor-not-allowed" : "");
+      this.nbpBorderType +
+      this.nbpSeparator +
+      this.nbpErrorBorder +
+      this.nbpSeparator +
+      (this.nbpDropDownListDisabled
+        ? "nbp-background-sliver nbp-cursor-not-allowed"
+        : "");
     this.nbpDropDownListModel.emit({
       value: this.nbpModel,
       name: this.nbpDropDownListName,
@@ -89,7 +97,7 @@ export class NbpDropdownListOneComponent
     }
   }
 
-  onChange(event) {
+  nbpOnChange(event) {
     this.nbpModel = event;
     this.nbpInputFocusOut();
   }

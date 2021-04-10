@@ -14,9 +14,6 @@
           _model.component.NbpDropdownListComponent.itemsOne
         "
         [nbpDropDownListName]="_model.component.NbpDropdownListComponent.name1"
-        [nbpDropDownListValue]="
-          _model.component.NbpDropdownListComponent.itemsOne[0].value
-        "
         [nbpDropDownListLabel]="
           _model.component.NbpDropdownListComponent.label1
         "
@@ -193,6 +190,33 @@
         "
         [nbpDropDownListRequired]="true"
         [nbpDropDownListSingleSelection]="true"
+        [nbpDropDownListErrorMessage]="
+          _model.component.NbpDropdownListComponent.requiredMessage
+        "
+        [nbpDropDownListEnableCheckAll]="true"
+        (nbpDropDownListModel)="nbpInputModel($event)"
+      ></nbp-dropdown-list-two>
+    </div>
+  </div>
+  <div class="row pb-4">
+    <div class="col-md-6">
+      <nbp-dropdown-list-two
+        [nbpDropDownListItems]="
+          _model.component.NbpDropdownListComponent.itemsTwo
+        "
+        [nbpDropDownListItemsShowLimit]="2"
+        [nbpDropDownListName]="_model.component.NbpDropdownListComponent.name2"
+        [nbpDropDownListLabel]="
+          _model.component.NbpDropdownListComponent.label4
+        "
+        [nbpDropDownListLabelRequired]="
+          _model.component.NbpDropdownListComponent.required
+        "
+        [nbpDropDownListPlaceholder]="
+          _model.component.NbpDropdownListComponent.placeholder
+        "
+        [nbpDropDownListRequired]="true"
+        [nbpDropDownListSingleSelection]="false"
         [nbpDropDownListErrorMessage]="
           _model.component.NbpDropdownListComponent.requiredMessage
         "

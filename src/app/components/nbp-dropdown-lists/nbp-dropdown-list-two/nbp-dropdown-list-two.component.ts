@@ -113,11 +113,11 @@ export class NbpDropdownListTwoComponent
     }
   }
 
-  onItemSelect(item: any) {
+  nbpOnItemSelect(item: any) {
     this.nbpDropDownListSelectedItems.filter(element => element !== item.item_id)
   }
   
-  onSelectAll(items: []) {
+  nbpOnSelectAll(items: []) {
     items.forEach(element => {
       this.nbpDropDownListSelectedItems.push(element);
     });
