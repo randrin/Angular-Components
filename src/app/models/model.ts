@@ -552,14 +552,20 @@ export class Model {
     NbpInputTextComponent: {
       label1: "First Name",
       label2: "Last Name",
-      name: "firstName",
+      label3: "Phone Number",
+      name1: "firstName",
+      name2: "lastName",
+      name3: "phoneNumber",
       to: "Recipient",
       value: "Mario Rossi",
       required: "true",
-      requiredMessage: "The first name is required",
+      requiredMessage1: "The first name is required",
+      requiredMessage2: "The last name is required",
+      requiredMessage3: "The phone number is required",
       placeholder: "Insert your name",
       icon1: "fa fa-search",
       icon2: "fa fa-user",
+      icon3: "fa fa-mobile-phone",
       calendar: "fa fa-calendar"
     },
     NbpInputPasswordComponent: {
