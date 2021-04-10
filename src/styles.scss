@@ -11,6 +11,7 @@ nbp-table-two {
   padding: 20px 0;
 }
 
+// NbpDatePickerComponent
 dp-date-picker {
   .dp-input-container {
     .dp-picker-input {
@@ -22,6 +23,7 @@ dp-date-picker {
     .dp-picker-input {
       font-size: inherit !important;
       cursor: pointer;
+      width: 100% !important;
     }
   }
 }

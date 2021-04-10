@@ -24,7 +24,9 @@
         color: var(--nbp-secondary);
         border-color: var(--nbp-secondary);
 
-        &:focus, &:focus-visible, &:focus-within {
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
           border-width: 0.125rem;
           border-style: solid;
           outline: 0;
