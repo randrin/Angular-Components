@@ -99,40 +99,40 @@ $(document).ready(function () {
 });
 
 // NbpRadioComponent
-$(document).ready(function () {
-  var $nbpRadioWrapper = $(".nbp-radio-wrapper");
-  var $nbpRadioInput = $nbpRadioWrapper.find(".nbp-radio-input");
-  var $nbpRadioLabel = $nbpRadioWrapper.find(".nbp-radio-label");
+// $(document).ready(function () {
+//   var $nbpRadioWrapper = $(".nbp-radio-wrapper");
+//   var $nbpRadioInput = $nbpRadioWrapper.find(".nbp-radio-input");
+//   var $nbpRadioLabel = $nbpRadioWrapper.find(".nbp-radio-label");
 
-  console.log("$nbpRadioInput: ", $nbpRadioInput);
+//   console.log("$nbpRadioInput: ", $nbpRadioInput);
 
-  $nbpRadioInput.on("click", function () {
-    var nbpRadioClicked = $nbpRadioInput.index(this);
-    var $currentNbpRadio = $(this);
-    console.log("Index clicked: ", nbpRadioClicked);
+//   $nbpRadioInput.on("click", function () {
+//     var nbpRadioClicked = $nbpRadioInput.index(this);
+//     var $currentNbpRadio = $(this);
+//     console.log("Index clicked: ", nbpRadioClicked);
 
-    Array.from($nbpRadioInput).forEach((nbpRadio, index) => {
-      console.log("nbpRadio clicked: ", nbpRadio);
-      if (nbpRadioClicked == index) {
-        $currentNbpRadio.toggleClass("checked");
-        $currentNbpRadio
-          .find(".nbp-radio-circle-icon")
-          .toggleClass("nbp-display-none");
-      }
-    });
-  });
-  // $nbpRadioLabel.on('click', function () {
-  //   Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
-  //     console.log('nbpRadioInput: ', index);
-  //     console.log('nbpRadio: ', nbpRadio);
-  //     console.log('nbpRadio $(this): ', $(this));
-  //     $(this).toggleClass('checked');
-  //   $nbpRadioInput.toggleClass('checked');
-  //   $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
-  //   });
+//     Array.from($nbpRadioInput).forEach((nbpRadio, index) => {
+//       console.log("nbpRadio clicked: ", nbpRadio);
+//       if (nbpRadioClicked == index) {
+//         $currentNbpRadio.toggleClass("checked");
+//         $currentNbpRadio
+//           .find(".nbp-radio-circle-icon")
+//           .toggleClass("nbp-display-none");
+//       }
+//     });
+//   });
+//   // $nbpRadioLabel.on('click', function () {
+//   //   Array.from($nbpRadioWrapper).forEach((nbpRadio, index) => {
+//   //     console.log('nbpRadioInput: ', index);
+//   //     console.log('nbpRadio: ', nbpRadio);
+//   //     console.log('nbpRadio $(this): ', $(this));
+//   //     $(this).toggleClass('checked');
+//   //   $nbpRadioInput.toggleClass('checked');
+//   //   $nbpRadioInput.find('.nbp-radio-circle-icon').toggleClass('nbp-display-none')
+//   //   });
 
-  // })
-});
+//   // })
+// });
 
 // NbpTablesComponent
 $(document).ready(function () {

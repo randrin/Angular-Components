@@ -18,4 +18,8 @@ export class NbpInputRadioPageComponent extends NbpBaseComponent implements OnIn
   ngOnInit(): void {
   }
 
+  // Functions
+  nbpRadioOutput(event) {
+    console.log("NbpInputRadioPageComponent: ", event)
+  }
 }

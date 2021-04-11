@@ -4,12 +4,18 @@
       <nbp-dividing-line-one [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
     </div>
   </div>
-  <div class="row">
+  <div class="row" *ngIf="!!_model.component.NbpInputRadioComponent.inputRadios.length">
     <div class="col-md-2">
-      <nbp-input-radio [nbpRadioLabel]="'Default Radio'" [nbpRadioValue]="'default'" [nbpRadioName]="'radio1'" [nbpRadioStyle]="_style.DEFAULT">
-      </nbp-input-radio>
+        <nbp-input-radio
+          *ngFor="let inputRadio of _model.component.NbpInputRadioComponent.inputRadios"
+          [nbpRadioLabel]="inputRadio.label"
+          [nbpRadioValue]="inputRadio.value"
+          [nbpRadioName]="inputRadio.name"
+          [nbpRadioStyle]="inputRadio.style"
+          (nbpRadioOutput)="nbpRadioOutput($event)">
+        </nbp-input-radio>
     </div>
-    <div class="col-md-2">
+    <!-- <div class="col-md-2">
       <nbp-input-radio [nbpRadioLabel]="'Primary Radio'" [nbpRadioValue]="'primary'" [nbpRadioName]="'radio2'" [nbpRadioStyle]="_style.PRIMARY">
       </nbp-input-radio>
     </div>
@@ -28,6 +34,6 @@
     <div class="col-md-2">
       <nbp-input-radio [nbpRadioLabel]="'Success Radio'" [nbpRadioValue]="'success'" [nbpRadioName]="'radio6'" [nbpRadioStyle]="_style.SUCCESS">
       </nbp-input-radio>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, Injector, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Injector, Input, OnInit, Output } from "@angular/core";
 import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
+import * as uuid from "uuid";
 
 @Component({
   selector: "nbp-input-radio",
@@ -14,8 +15,14 @@ export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpRadioDisabled: boolean;
   @Input() nbpRadioValue: string;
 
+  @Output()
+  nbpRadioOutput: EventEmitter<string> = new EventEmitter<string>();
+
+  nbpRadioModel: string;
   nbpRadio: string;
   nbpRadioInput: string;
+  nbpInputRadioId: string;
+  nbpRadioBackground: string;
 
   constructor(injector: Injector) {
     super(injector);
@@ -27,10 +34,14 @@ export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
+    this.nbpInputRadioId = "nbp" + uuid.v4();
     this.nbpRadio = this.nbpGetRadioStyleClasse(this.nbpRadioStyle);
+    this.nbpRadioInput = this.nbpGetRadioBorderClasse(this.nbpRadioStyle);
+    this.nbpRadioBackground = this.nbpGetBackgroundClasse(this.nbpRadioStyle);
   }
 
   nbpRadioClick(event) {
     console.log("nbpRadioClick: ", event);
+    this.nbpRadioOutput.emit(this.nbpRadioModel);
   }
 }

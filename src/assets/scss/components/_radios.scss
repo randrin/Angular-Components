@@ -7,6 +7,11 @@
       background: var(--nbp-success) !important;
     }
   }
+
+  .nbp-radio-border-success {
+    border-color: var(--nbp-success) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;
@@ -24,6 +29,11 @@
       background: var(--nbp-primary) !important;
     }
   }
+
+  .nbp-radio-border-primary {
+    border-color: var(--nbp-primary) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;
@@ -41,6 +51,11 @@
       background: var(--nbp-info) !important;
     }
   }
+
+  .nbp-radio-border-info {
+    border-color: var(--nbp-info) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;
@@ -58,6 +73,11 @@
       background: var(--nbp-warning) !important;
     }
   }
+
+  .nbp-radio-border-warning {
+    border-color: var(--nbp-warning) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;
@@ -75,6 +95,11 @@
       background: var(--nbp-tomato) !important;
     }
   }
+
+  .nbp-radio-border-danger {
+    border-color: var(--nbp-danger) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;
@@ -92,6 +117,11 @@
       background: var(--nbp-secondary) !important;
     }
   }
+
+  .nbp-radio-border-default {
+    border-color: var(--nbp-secondary) !important;
+  }
+
   .nbp-radio-label.checked {
     font-weight: 600;
     background-color: transparent !important;

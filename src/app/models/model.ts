@@ -60,13 +60,14 @@ export class Model {
         showPassword: "Show Password",
         updateProfile: "Update Profile",
         back: "Back to Home",
-        success: "Go to Login Page"
+        success: "Go to Login Page",
       },
       newUser: "New User?",
-      alreadyUser: "Already have an account?"
+      alreadyUser: "Already have an account?",
     },
     NbpProfileBoxComponent: {
-      imageUrl: "https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-graphic-default-avatar-png-image_2813121.jpg",
+      imageUrl:
+        "https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-graphic-default-avatar-png-image_2813121.jpg",
       title: "Welcome Back",
       subtitle: "Nbp Administrator",
       footer: "Last connexion: Monday, 22 February 2021 - 15:37",
@@ -74,7 +75,7 @@ export class Model {
         view: "View Profile",
         update: "Update Profile",
         logout: "Logout",
-      }
+      },
     },
     NbpBoxeComponent: {
       boxes: [
@@ -508,27 +509,63 @@ export class Model {
     },
     NbpDropdownListComponent: {
       itemsOne: [
-        {id: "FE", value: "Front End Developer", text: "Front End Developer"},
-        {id: "BE", value: "Back End Developer", text: "Back End Developer"},
-        {id: "BF", value: "Full Stack Developer", text: "Full Stack Developer"},
-        {id: "DV", value: "DevOp Developer", text: "DevOp Developer"},
-        {id: "SM", value: "Scrum / Agile Master", text: "Scrum / Agile Master"},
-        {id: "PM", value: "Project Manager", text: "Project Manager"},
-        {id: "QA", value: "QA Tester", text: "QA Tester"},
-        {id: "BF", value: "Business Functional", text: "Business Functional"},
+        { id: "FE", value: "Front End Developer", text: "Front End Developer" },
+        { id: "BE", value: "Back End Developer", text: "Back End Developer" },
+        {
+          id: "BF",
+          value: "Full Stack Developer",
+          text: "Full Stack Developer",
+        },
+        { id: "DV", value: "DevOp Developer", text: "DevOp Developer" },
+        {
+          id: "SM",
+          value: "Scrum / Agile Master",
+          text: "Scrum / Agile Master",
+        },
+        { id: "PM", value: "Project Manager", text: "Project Manager" },
+        { id: "QA", value: "QA Tester", text: "QA Tester" },
+        { id: "BF", value: "Business Functional", text: "Business Functional" },
       ],
       itemsTwo: [
-        { item_id: 1, item_value: 'Front End Developer', item_text: 'Front End Developer' },
-        { item_id: 2, item_value: 'Back End Developer', item_text: 'Back End Developer' },
-        { item_id: 3, item_value: 'Full Stack Developer', item_text: 'Full Stack Developer' },
-        { item_id: 4, item_value: 'DevOp Developer', item_text: 'DevOp Developer' },
-        { item_id: 5, item_value: 'Scrum Master', item_text: 'Scrum Master' },
-        { item_id: 6, item_value: 'QA Tester', item_text: 'QA Tester' },
-        { item_id: 7, item_value: 'Business Functional', item_text: 'Business Functional' }
+        {
+          item_id: 1,
+          item_value: "Front End Developer",
+          item_text: "Front End Developer",
+        },
+        {
+          item_id: 2,
+          item_value: "Back End Developer",
+          item_text: "Back End Developer",
+        },
+        {
+          item_id: 3,
+          item_value: "Full Stack Developer",
+          item_text: "Full Stack Developer",
+        },
+        {
+          item_id: 4,
+          item_value: "DevOp Developer",
+          item_text: "DevOp Developer",
+        },
+        { item_id: 5, item_value: "Scrum Master", item_text: "Scrum Master" },
+        { item_id: 6, item_value: "QA Tester", item_text: "QA Tester" },
+        {
+          item_id: 7,
+          item_value: "Business Functional",
+          item_text: "Business Functional",
+        },
       ],
       selectedItems: [
-        { item_id: 1, item_value: 'Front End Developer', item_text: 'Front End Developer' },
-        { item_id: 2, item_value: 'Back End Developer', item_text: 'Back End Developer' },
+        {
+          item_id: 1,
+          item_value: "Front End Developer",
+          item_text: "Front End Developer",
+        },
+        {
+          item_id: 2,
+          item_value: "Back End Developer",
+          item_text: "Back End Developer",
+        },
       ],
       label1: "Profession with multiple choice",
       label2: "Profession with filter",
@@ -566,7 +603,7 @@ export class Model {
       icon1: "fa fa-search",
       icon2: "fa fa-user",
       icon3: "fa fa-mobile-phone",
-      calendar: "fa fa-calendar"
+      calendar: "fa fa-calendar",
     },
     NbpInputPasswordComponent: {
       label1: "Password",
@@ -579,6 +616,46 @@ export class Model {
       placeholder: "Insert your password",
       hidePassword: "fa fa-lock",
       showPassword: "fa fa-unlock",
+    },
+    NbpInputRadioComponent: {
+      inputRadios: [
+        {
+          label: "Default Radio",
+          value: "default",
+          name: "radio1",
+          style: "DEFAULT",
+        },
+        {
+          label: "Info Radio",
+          value: "info",
+          name: "radio1",
+          style: "INFO",
+        },
+        {
+          label: "Success Radio",
+          value: "success",
+          name: "radio1",
+          style: "SUCCESS",
+        },
+        {
+          label: "Danger Radio",
+          value: "danger",
+          name: "radio1",
+          style: "DANGER",
+        },
+        {
+          label: "Primary Radio",
+          value: "primary",
+          name: "radio1",
+          style: "PRIMARY",
+        },
+        {
+          label: "Warning Radio",
+          value: "warning",
+          name: "radio1",
+          style: "WARNING",
+        },
+      ],
     },
     NbpTextareaComponent: {
       label1: "Description First Name with limit = 10",
@@ -607,9 +684,12 @@ export class Model {
       modalTitle3: "size LG,position CENTER,Type STATIC,No Scrollable",
       modalTitle4: "size LG,position CENTER,Type NOSTATIC,No Scrollable",
       modalTitle5: "size LG,position TOP,Type NOSTATIC,No Scrollable",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      content1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      content2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      content1:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      content2:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     NbpTooltipComponent: {
       hoverLeft: "hover left",
@@ -618,65 +698,69 @@ export class Model {
       hoverBottom: "hover bottom",
       showWithDelay: "hover tooltip with show delay 2 secondes",
       hideWithDelay: "hover tooltip with hide delay 3 secondes",
-      showWithDelayAndWidth: "click tooltip with hide delay 3 secondes and max width 500",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      content1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      content2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      showWithDelayAndWidth:
+        "click tooltip with hide delay 3 secondes and max width 500",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      content1:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      content2:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     NbpTabBarComponent: {
       title: [
         {
-          name: 'DOSSIERS',
-          url: '/composants/tab-bar/dossiers'
+          name: "DOSSIERS",
+          url: "/composants/tab-bar/dossiers",
         },
         {
-          name: 'SETTINGS',
-          url: '/composants/tab-bar/setting'
+          name: "SETTINGS",
+          url: "/composants/tab-bar/setting",
         },
         {
-          name: 'LINKS',
-          url: '/composants/tab-bar/links'
+          name: "LINKS",
+          url: "/composants/tab-bar/links",
         },
         {
-          name: 'ADDRESS',
-          url: '/composants/tab-bar/address'
+          name: "ADDRESS",
+          url: "/composants/tab-bar/address",
         },
         {
-          name: 'REPORTS',
-          url: '/composants/tab-bar/reports'
+          name: "REPORTS",
+          url: "/composants/tab-bar/reports",
         },
         {
-          name: 'DISABLED',
-          url: '/composants/tab-bar/disabled'
-        }
+          name: "DISABLED",
+          url: "/composants/tab-bar/disabled",
+        },
       ],
       title2: [
         {
-          name: 'CALENDAR',
-          icon: 'nbp-icon-calendar-minus',
-          url: '/composants/tab-bar/calendar'
+          name: "CALENDAR",
+          icon: "nbp-icon-calendar-minus",
+          url: "/composants/tab-bar/calendar",
         },
         {
-          name: 'DOCUMENTS',
-          icon: 'nbp-icon-briefcase',
-          url: '/composants/tab-bar/documents'
+          name: "DOCUMENTS",
+          icon: "nbp-icon-briefcase",
+          url: "/composants/tab-bar/documents",
         },
         {
-          name: 'SETTINGS DOC',
-          icon: 'nbp-icon-bars',
-          url: '/composants/tab-bar/settingDoc'
+          name: "SETTINGS DOC",
+          icon: "nbp-icon-bars",
+          url: "/composants/tab-bar/settingDoc",
         },
         {
-          name: 'USERS ADDRESS',
-          icon: 'nbp-icon-address-book',
-          url: '/composants/tab-bar/usersAddress'
+          name: "USERS ADDRESS",
+          icon: "nbp-icon-address-book",
+          url: "/composants/tab-bar/usersAddress",
         },
         {
-          name: 'BUSSINESS TIME',
-          icon: 'nbp-icon-business-time',
-          url: '/composants/tab-bar/bussiness'
-        }
-      ]
+          name: "BUSSINESS TIME",
+          icon: "nbp-icon-business-time",
+          url: "/composants/tab-bar/bussiness",
+        },
+      ],
     },
     NbpIconComponent: {
       icons: [
@@ -2262,7 +2346,7 @@ export class Model {
         close: "Close",
         add: "Add",
         update: "Update",
-      }
-    }
-  }
+      },
+    },
+  };
 }

@@ -6221,6 +6221,11 @@ ng2-date-picker@^11.0.0:
     moment "^2.24.0"
     tslib "^2.0.0"
 
+ng2-radio-group@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/ng2-radio-group/-/ng2-radio-group-0.0.6.tgz#fa1faae3592e2a2d2c0d27ca606018c86d48e4aa"
+  integrity sha1-+h+q41kuKi0sDSfKYGAYyG1I5Ko=
+
 ng2-tooltip-directive@^2.9.22:
   version "2.9.22"
   resolved "https://registry.yarnpkg.com/ng2-tooltip-directive/-/ng2-tooltip-directive-2.9.22.tgz#742ad1f8c670c890b1ea3dead5f20feecbe98b78"
