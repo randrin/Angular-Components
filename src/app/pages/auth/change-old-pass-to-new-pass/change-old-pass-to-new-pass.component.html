@@ -1,6 +1,6 @@
 <div class="nbp-oldPass-to-newPass-wrapper">
-  <div class="nbp-oldPass-to-newPass-container container">
-    <div class="pt-4" *ngIf="!nbpChangePasswordSuccess">
+  <div class="nbp-oldPass-to-newPass-container container" *ngIf="!nbpChangePasswordSuccess">
+    <div class="pt-4">
       <nbp-alert-box-three
         [nbpAlertText]="'You requested a temporary password during your last logged in. To access Nbp System Components, you need to change your password.'"
         [nbpAlertType]="_alert.INFO">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="row nbp-oldPass-to-newPass-row">
-      <div class="col-md-4 nbp-oldPass-to-newPass-content" *ngIf="!nbpChangePasswordSuccess">
+      <div class="col-md-4 nbp-oldPass-to-newPass-content">
         <nbp-alert-box-fourth *ngIf="!!nbpChangeOldPasswordErrorMessage.length" [nbpAlertText]="nbpChangeOldPasswordErrorMessage"
           [nbpAlertType]="_alert.ERROR">
         </nbp-alert-box-fourth>
@@ -63,25 +63,54 @@
           </div>
         </form>
       </div>
-      <div class="text-center" *ngIf="nbpChangePasswordSuccess">
-        <nbp-feedback [nbpTitle]="nbpChangeOldPasswordErrorMessage"> </nbp-feedback>
-        <nbp-deep-link [nbpDeepLinkStyle]="_style.PRIMARY"
-          [nbpDeepLinkName]="_model.component.NbpAuthComponent.submitInput.success"
-          [nbpDeepLinkTextTransform]="_pipe.UPPERCASE" [nbpDeepLinkRedirection]="'/login'"
-          [nbpDeepLinkTarget]="false">
-        </nbp-deep-link>
-      </div>
     </div>
-    <div class="row nbp-oldPass-to-newPass-row" *ngIf="!nbpChangePasswordSuccess">
+    <div class="row nbp-oldPass-to-newPass-row">
       <div class="col-md-4 nbp-oldPass-to-newPass-content">
         <div class="form-group pt-3">
           <nbp-button class="nbp-login-submit"
             [nbpButtonLabel]="_model.component.NbpAuthComponent.submitInput.logout"
             [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.DANGER" [nbpButtonType]="_style.ROUNDED"
             [nbpButtonFullWidth]="true"
-            (click)="nbpOnAbortPasswordSubmit()">
+            data-toggle="modal" [attr.data-target]="'#' + modalName">
           </nbp-button>
         </div>
       </div>
+    </div>
   </div>
+  <div class="nbp-oldPass-to-newPass-container container my-5" *ngIf="nbpChangePasswordSuccess">
+    <div class="text-center">
+      <nbp-feedback [nbpTitle]="nbpChangeOldPasswordErrorMessage"> </nbp-feedback>
+      <nbp-deep-link [nbpDeepLinkStyle]="_style.PRIMARY"
+        [nbpDeepLinkName]="_model.component.NbpAuthComponent.submitInput.success"
+        [nbpDeepLinkTextTransform]="_pipe.UPPERCASE" [nbpDeepLinkRedirection]="'/login'"
+        [nbpDeepLinkTarget]="false">
+      </nbp-deep-link>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Confirmation -->
+<div class="nbp-modal-two-wrapper">
+  <div class="modal fade" tabindex="-1" role="dialog" [id]="modalName" [attr.data-backdrop]="nbpModalStatic" data-keyboard="false" tabindex="-1"
+      aria-hidden="true">
+      <div class="modal-dialog" [ngClass]="nbpModalSizePosition" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h5 class="modal-title text-center">{{nbpTableTextHeader}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <p>{{nbpTableTextBody}}</p>
+          </div>
+          <div class="modal-footer">
+            <nbp-button [nbpButtonType]="_style.OUTLINE" [nbpButtonColor]="_style.PRIMARY"
+              [nbpButtonLabel]="_model.component.NbpModalComponent.close" [nbpButtonSize]="_size.MD" data-dismiss="modal">
+            </nbp-button>
+            <nbp-button (click)="nbpOnAbortPasswordSubmit()" [nbpButtonLabel]="_model.component.NbpModalComponent.confirm"
+              [nbpButtonSize]="_size.MD" [nbpButtonColor]="_style.PRIMARY" data-dismiss="modal">
+            </nbp-button>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

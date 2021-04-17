@@ -4,11 +4,12 @@ import { NbpUser } from "src/app/models/user/nbpUser";
 import { NbpAuthService } from "src/app/services/nbp-auth.service";
 import { NbpUserService } from "src/app/services/nbp-user.service";
 import { NbpLocalStorage } from "src/app/utils/nbp-local-storage";
+import * as uuid from 'uuid';
 
 @Component({
   selector: "nbp-change-old-pass-to-new-pass",
   templateUrl: "./change-old-pass-to-new-pass.component.html",
-  styleUrls: ["./change-old-pass-to-new-pass.component.scss"],
+  styleUrls: ["./change-old-pass-to-new-pass.component.scss", "../../../components/nbp-modals/nbp-modal-two/nbp-modal-two.component.scss"],
 })
 export class ChangeOldPassToNewPassComponent
   extends NbpBaseComponent
@@ -23,6 +24,11 @@ export class ChangeOldPassToNewPassComponent
   changeOldPasswordToNew: boolean;
   nbpRegisterErrorMessage: string = "";
   nbpConfirmPassword: string = "";
+  modalName: string;
+  nbpModalStatic: string = 'static';
+  nbpTableTextHeader: string = "";
+  nbpTableTextBody: string = "";
+  nbpModalSizePosition: string;
 
   constructor(
     injector: Injector,
@@ -65,6 +71,10 @@ export class ChangeOldPassToNewPassComponent
     this.nbpChangeOldPasswordErrorMessage = "";
     this.nbpCheckPassword = false;
     this.nbpCheckPasswordErrorMessage = "";
+    this.modalName = 'nbp' + uuid.v4();
+    this.nbpModalSizePosition = this.nbpGetModalPositionClasse(this._position.CENTER) + this.nbpSeparator + this.nbpGetSizeModalClasse(this._size.MD);
+    this.nbpTableTextHeader = "Logout Confirmation"
+    this.nbpTableTextBody = "Are you sure you want to leave Nbp System ?"
   }
 
   nbpInputModels(event) {
