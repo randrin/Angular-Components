@@ -12,7 +12,7 @@ import { NbpBackgroundBoxComponent } from "./components/nbp-background-box/nbp-b
 import { NbpButtonComponent } from "./components/nbp-button/nbp-button.component";
 import { NbpAlertBoxOneComponent } from "./components/nbp-alert-boxes/nbp-alert-box-one/nbp-alert-box-one.component";
 import { NbpScrollTopComponent } from "./components/nbp-scroll-top/nbp-scroll-top.component";
-import { NbpFeedbackComponent } from "./components/nbp-feedbacks/nbp-feedback/nbp-feedback.component";
+import { NbpFeedbackOneComponent } from "./components/nbp-feedbacks/nbp-feedback-one/nbp-feedback-one.component";
 import { NbpInputTextComponent } from "./components/nbp-input-text/nbp-input-text.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NbpTextareaComponent } from "./components/nbp-textarea/nbp-textarea.component";
@@ -130,7 +130,7 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpButtonComponent,
     NbpAlertBoxOneComponent,
     NbpScrollTopComponent,
-    NbpFeedbackComponent,
+    NbpFeedbackOneComponent,
     NbpInputTextComponent,
     NbpTextareaComponent,
     HomeComponent,

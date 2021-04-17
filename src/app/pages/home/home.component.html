@@ -4,10 +4,10 @@
 <div class="nbp-home-wrapper" *ngIf="nbpChangeOldPasswordToNew">
   <nbp-navbar *ngIf="!!this.nbpToken"></nbp-navbar>
   <div class="container my-5">
-    <nbp-feedback
+    <nbp-feedback-one
       *ngIf="nbpUpdateSuccessMessage.length"
       [nbpTitle]="nbpUpdateSuccessMessage"
-    ></nbp-feedback>
+    ></nbp-feedback-one>
     <div *ngIf="!nbpShowFormUpdateProfile">
       <div class="row">
         <div class="col-3 nbp-text-align-left">

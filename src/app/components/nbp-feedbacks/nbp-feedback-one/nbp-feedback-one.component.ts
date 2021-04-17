@@ -2,11 +2,11 @@ import { Component, Injector, Input, OnInit } from "@angular/core";
 import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-feedback",
-  templateUrl: "./nbp-feedback.component.html",
-  styleUrls: ["./nbp-feedback.component.scss"],
+  selector: "nbp-feedback-one",
+  templateUrl: "./nbp-feedback-one.component.html",
+  styleUrls: ["./nbp-feedback-one.component.scss"],
 })
-export class NbpFeedbackComponent extends NbpBaseComponent implements OnInit {
+export class NbpFeedbackOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTitle: string;
   @Input() nbpMessage: string;
   @Input() nbpFeedbackType: string;
