@@ -71,7 +71,7 @@ export class NbpDropdownListTwoComponent
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpDropDownListId = "nbp" + uuid.v4();
+    this.nbpDropDownListId = "nbp-" + uuid.v4();
     this.nbpBorderType = this.nbpGetTypeInputText(
       this.nbpDropDownListBorderType
     );

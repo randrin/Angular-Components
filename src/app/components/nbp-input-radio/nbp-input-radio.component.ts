@@ -34,7 +34,7 @@ export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpInputRadioId = "nbp" + uuid.v4();
+    this.nbpInputRadioId = "nbp-" + uuid.v4();
     this.nbpRadio = this.nbpGetRadioStyleClasse(this.nbpRadioStyle);
     this.nbpRadioInput = this.nbpGetRadioBorderClasse(this.nbpRadioStyle);
     this.nbpRadioBackground = this.nbpGetBackgroundClasse(this.nbpRadioStyle);

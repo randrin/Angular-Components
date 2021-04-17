@@ -42,7 +42,7 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpInputId = 'nbp' + uuid.v4();
+    this.nbpInputId = 'nbp-' + uuid.v4();
     this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.text : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpModel = this.nbpInputValue === undefined ?  "" : this.nbpInputValue;

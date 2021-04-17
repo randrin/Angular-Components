@@ -45,6 +45,6 @@ export class NbpDatePickerTwoComponent extends NbpBaseComponent implements OnIni
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpDatePickerId = "nbp" + uuid.v4();
+    this.nbpDatePickerId = "nbp-" + uuid.v4();
   }
 }

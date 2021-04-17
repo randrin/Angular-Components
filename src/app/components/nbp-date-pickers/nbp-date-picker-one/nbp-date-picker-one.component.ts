@@ -49,7 +49,7 @@ export class NbpDatePickerOneComponent extends NbpBaseComponent implements OnIni
 
   // Functions
   nbpSetUpComponent() {
-    this.nbpDatePickerId = "nbp" + uuid.v4();
+    this.nbpDatePickerId = "nbp-" + uuid.v4();
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpDatePickerBorderType);
     this.nbpModel =
       this.nbpDatePickerValue === undefined ? "" : this.nbpDatePickerValue;

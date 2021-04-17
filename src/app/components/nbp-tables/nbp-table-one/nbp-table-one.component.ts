@@ -35,7 +35,7 @@ export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
 
   // Functions
   nbpSetUpComponent() {
-    this.modalName = 'nbp' + uuid.v4();
+    this.modalName = 'nbp-' + uuid.v4();
     this.nbpDtOptions = {
       pagingType: "full_numbers",
       responsive: true,

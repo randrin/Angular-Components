@@ -36,7 +36,7 @@ export class NbpModalTwoComponent extends NbpBaseComponent implements OnInit {
   }
   
   nbpSetUpComponent() {
-    this.modalName = 'nbp'+ uuid.v4(); 
+    this.modalName = 'nbp-'+ uuid.v4(); 
     this.modalSize = this.nbpGetSizeModalClasse(this.nbpModalSize);
     this.modalPosition = this.nbpGetModalPositionClasse(this.nbpModalPosition);
     this.nbpModalScrolls;
