@@ -678,6 +678,7 @@ export class Model {
       modal: "modal",
       close: "close",
       save: "Save",
+      confirm: "Confirm",
       sendMessage: "Send message",
       modalTitle1: "size MD,position CENTER,Type NOSTATIC,Scrollable",
       modalTitle2: "size MD,position TOP,Type STATIC,No Scrollable",
