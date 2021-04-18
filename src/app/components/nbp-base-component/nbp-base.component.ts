@@ -29,6 +29,7 @@ import {
   NbpTabbarPositionClasse,
   NbpTabbarTypeClasse,
   NbpSwitchSizeClasse,
+  NbpRadioBorderClasse,
 } from "src/assets/utils/nbp-commons/nbp-commons.classes";
 import {
   NbpAlertType,
@@ -125,6 +126,7 @@ export class NbpBaseComponent implements OnInit {
   _opacityClasse = NbpOpacityClasse;
   _cursorClasse = NbpCursorClasse;
   _radioStyleClasse = NbpRadioStyleClasse;
+  _radioBorderClasse = NbpRadioBorderClasse;
   _panelTitlePositionClasse = NbpPanelTitlePositionClasse;
   _sizeModalClasse = NbpSizeModalClasse;
   _positionModalClasse = NbpModalPositionClasse;
@@ -391,6 +393,33 @@ export class NbpBaseComponent implements OnInit {
         break;
       default:
         return this._radioStyleClasse.DEFAULT;
+        break;
+    }
+  }
+
+  /* Function to get the radio border classe with input as argument */
+  nbpGetRadioBorderClasse(nbpInput) {
+    switch (nbpInput) {
+      case this._style.DEFAULT:
+        return this._radioBorderClasse.DEFAULT;
+        break;
+      case this._style.PRIMARY:
+        return this._radioBorderClasse.PRIMARY;
+        break;
+      case this._style.INFO:
+        return this._radioBorderClasse.INFO;
+        break;
+      case this._style.SUCCESS:
+        return this._radioBorderClasse.SUCCESS;
+        break;
+      case this._style.WARNING:
+        return this._radioBorderClasse.WARNING;
+        break;
+      case this._style.DANGER:
+        return this._radioBorderClasse.DANGER;
+        break;
+      default:
+        return this._radioBorderClasse.DEFAULT;
         break;
     }
   }

@@ -1,7 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
-import { DropdownListModule } from 'ngx-dropdown-list';
+import { DatePickerModule } from "@syncfusion/ej2-angular-calendars";
+import { DropdownListModule } from "ngx-dropdown-list";
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -61,7 +63,7 @@ import { NbpCookieOneComponent } from "./components/nbp-cookies/nbp-cookie-one.c
 import { NbpDividingLineTwoComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-two/nbp-dividing-line-two.component";
 import { NbpCardOneComponent } from "./components/nbp-cards/nbp-card-one/nbp-card-one.component";
 import { NbpCardPageComponent } from "./pages/composants/nbp-card-page/nbp-card-page.component";
-import { NbpModalOneComponent } from "./components/nbp-modal/nbp-modal-one/nbp-modal-one.component";
+import { NbpModalOneComponent } from "./components/nbp-modals/nbp-modal-one/nbp-modal-one.component";
 import { NbpAlertBoxFourthComponent } from "./components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component";
 import { NbpAlertBoxFiveComponent } from "./components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component";
 import { NbpInputSwitchOneComponent } from "./components/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
@@ -69,8 +71,8 @@ import { NbpInputSwitchTwoComponent } from "./components/nbp-input-switchs/nbp-i
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
-import { NbpDropdownListComponent } from './components/nbp-dropdown-list/nbp-dropdown-list.component';
-import { NbpDatePickerComponent } from "./components/nbp-date-picker/nbp-date-picker.component";
+import { NbpDropdownListOneComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component";
+import { NbpDatePickerOneComponent } from "./components/nbp-date-pickers/nbp-date-picker-one/nbp-date-picker-one.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
 import { NbpUploadFileComponent } from "./components/nbp-upload-file/nbp-upload-file.component";
@@ -114,8 +116,10 @@ import { NbpProfileBoxPageComponent } from "./pages/composants/nbp-profile-box-p
 import { NbpFeedbackTwoComponent } from "./components/nbp-feedbacks/nbp-feedback-two/nbp-feedback-two.component";
 import { NbpPatientService } from "./services/nbp-patients.service";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
-import { NbpModalThreeComponent } from "./components/nbp-modal/nbp-modal-three/nbp-modal-three.component";
-import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-modal-two.component";
+import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/nbp-modal-three.component";
+import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
+import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
+import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-date-picker-two/nbp-date-picker-two.component";
 
 @NgModule({
   declarations: [
@@ -185,8 +189,8 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
     NbpInputSwitchPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
-    NbpDropdownListComponent,
-    NbpDatePickerComponent,
+    NbpDropdownListOneComponent,
+    NbpDatePickerOneComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
     NbpUploadFileComponent,
@@ -222,18 +226,23 @@ import { NbpModalTwoComponent } from "./components/nbp-modal/nbp-modal-two/nbp-m
     NbpProfileBoxOneComponent,
     NbpProfileBoxPageComponent,
     NbpFeedbackTwoComponent,
+    NbpDropdownListTwoComponent,
+    NbpDatePickerTwoComponent,
   ],
-
   imports: [
     BrowserModule,
+    DatePickerModule,
     DataTablesModule,
     DropdownListModule,
+    NgMultiSelectDropDownModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     DpDatePickerModule,
     HttpClientModule,
     AppRoutingModule,
     TooltipModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     NbpAuthService,
     NbpUserService,

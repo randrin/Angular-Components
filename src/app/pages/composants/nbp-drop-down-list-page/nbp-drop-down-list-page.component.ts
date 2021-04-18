@@ -9,7 +9,8 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 
 export class NbpDropDownListPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'DropDown List Page';
+  title1 = 'Drop Down List Page';
+  title2 = 'Drop Down Multi Select List Page';
 
   constructor(injector:Injector) {
     super(injector);

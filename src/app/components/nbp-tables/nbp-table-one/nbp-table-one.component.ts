@@ -5,7 +5,7 @@ import * as uuid from 'uuid';
 @Component({
   selector: "nbp-table-one",
   templateUrl: "./nbp-table-one.component.html",
-  styleUrls: ["./nbp-table-one.component.scss", '../../nbp-modal/nbp-modal-one/nbp-modal-one.component.scss'],
+  styleUrls: ["./nbp-table-one.component.scss", '../../nbp-modals/nbp-modal-one/nbp-modal-one.component.scss'],
 })
 export class NbpTableOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTableHeaders: Array<any> = [];

@@ -6,15 +6,15 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
 
 @Component({
-  selector: "nbp-date-picker",
-  templateUrl: "./nbp-date-picker.component.html",
-  styleUrls: ["./nbp-date-picker.component.scss"],
+  selector: "nbp-date-picker-one",
+  templateUrl: "./nbp-date-picker-one.component.html",
+  styleUrls: ["./nbp-date-picker-one.component.scss"],
 })
-export class NbpDatePickerComponent extends NbpBaseComponent implements OnInit {
+export class NbpDatePickerOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpDatePickerLabel: string;
   @Input() nbpDatePickerValue: string;
   @Input() nbpDatePickerLabelRequired: boolean;
@@ -38,7 +38,6 @@ export class NbpDatePickerComponent extends NbpBaseComponent implements OnInit {
   nbpErrorBorder: string = "";
   nbpBorderType: string;
   nbpErrorMessage: boolean = false;
-  nbpIsDigitText: boolean = false;
 
   constructor(injector: Injector) {
     super(injector);

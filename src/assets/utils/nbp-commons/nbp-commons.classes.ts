@@ -90,6 +90,15 @@ export enum NbpRadioStyleClasse {
   INFO = 'nbp-radio-info',
 }
 
+export enum NbpRadioBorderClasse {
+  DEFAULT = 'nbp-radio-border-default',
+  PRIMARY = 'nbp-radio-border-primary',
+  SUCCESS = 'nbp-radio-border-success',
+  DANGER = 'nbp-radio-border-danger',
+  WARNING = 'nbp-radio-border-warning',
+  INFO = 'nbp-radio-border-info',
+}
+
 export enum NbpOpacityClasse {
   OPACITY_02 = 'nbp-opacity-02',
   OPACITY_04 = 'nbp-opacity-04',

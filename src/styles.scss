@@ -3,6 +3,15 @@
 @import "~datatables.net-dt/css/jquery.dataTables.css";
 @import "~datatables.net-responsive-dt/css/responsive.dataTables.css";
 
+@import '~@syncfusion/ej2-base/styles/material.css';
+@import '~@syncfusion/ej2-buttons/styles/material.css';
+@import '~@syncfusion/ej2-inputs/styles/material.css';
+@import '~@syncfusion/ej2-popups/styles/material.css';
+@import '~@syncfusion/ej2-lists/styles/material.css';
+@import '~@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '~@syncfusion/ej2-calendars/styles/material.css';
+@import '~@syncfusion/ej2-angular-calendars/styles/material.css';
+
 @import "assets/scss/nbp-styles-components";
 
 nbp-table-one,
@@ -11,6 +20,7 @@ nbp-table-two {
   padding: 20px 0;
 }
 
+// NbpDatePickerComponent
 dp-date-picker {
   .dp-input-container {
     .dp-picker-input {
@@ -22,6 +32,7 @@ dp-date-picker {
     .dp-picker-input {
       font-size: inherit !important;
       cursor: pointer;
+      width: 100% !important;
     }
   }
 }
@@ -31,7 +42,7 @@ dp-date-picker {
   position: relative;
 }
 
-// NbpDropdownListComponent
+// NbpDropdownListOneComponent
 .selection-anchor-close,
 .selection-anchor-open,
 .selection-anchor-disabled {
@@ -122,6 +133,77 @@ dp-date-picker {
     }
   }
 }
+
+// NbpDropdownListTwoComponent
+.multiselect-dropdown {
+  &:focus {
+    outline: none !important;
+  }
+
+  .disabled>span {
+    background: none !important;
+    pointer-events: none;
+  }
+
+  .dropdown-btn {
+    padding: 4px 0px !important;
+    border: none !important;
+
+    .dropdown-multiselect__caret {
+      right: -20px !important;
+
+      &:before {
+        top: 75% !important;
+        border-color: var(--nbp-primary) transparent !important;
+        border-width: 11px 6px 0 !important;
+      }
+    }
+
+    .selected-item {
+      max-width: initial !important;
+      border: 1px solid var(--nbp-primary) !important;
+      background: var(--nbp-primary) !important;
+
+      a {
+        padding-left: 10px !important;
+      }
+    }
+  }
+
+  .dropdown-list {
+    .filter-textbox {
+      border: 2px solid var(--nbp-primary) !important;
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.multiselect-item-checkbox {
+  &:hover {
+    background-color: var(--nbp-primary) !important;
+
+    input[type=checkbox]+div {
+      color: var(--nbp-white) !important;
+    }
+
+    input[type=checkbox]+div:before {
+
+      color: var(--nbp-white) !important;
+      border: 2px solid var(--nbp-white) !important;
+    }
+  }
+
+  input[type=checkbox]+div:before {
+
+    color: var(--nbp-primary) !important;
+    border: 2px solid var(--nbp-primary) !important;
+  }
+
+  input[type=checkbox]:checked+div:before {
+    background: var(--nbp-primary) !important;
+  }
+}
+
 
 // To be fixed later
 @media only screen and (max-width: 47.9375em) {

@@ -6,18 +6,18 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
+import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-nbp-dropdown-list",
-  templateUrl: "./nbp-dropdown-list.component.html",
-  styleUrls: ["./nbp-dropdown-list.component.scss"],
+  selector: "nbp-dropdown-list-one",
+  templateUrl: "./nbp-dropdown-list-one.component.html",
+  styleUrls: ["./nbp-dropdown-list-one.component.scss"],
 })
-export class NbpDropdownListComponent
+export class NbpDropdownListOneComponent
   extends NbpBaseComponent
   implements OnInit {
-  @Input() nbpDropDownListLItems: Array<object>;
+  @Input() nbpDropDownListItems: Array<object>;
   @Input() nbpDropDownListLabel: string;
   @Input() nbpDropDownListValue: string;
   @Input() nbpDropDownListLabelRequired: boolean;
@@ -54,7 +54,9 @@ export class NbpDropdownListComponent
   // Functions
   nbpSetUpComponent() {
     this.nbpDropDownListId = "nbp" + uuid.v4();
-    this.nbpBorderType = this.nbpGetTypeInputText(this.nbpDropDownListBorderType);
+    this.nbpBorderType = this.nbpGetTypeInputText(
+      this.nbpDropDownListBorderType
+    );
     this.nbpModel =
       this.nbpDropDownListValue === undefined ? "" : this.nbpDropDownListValue;
     this.nbpGetClasses();
@@ -67,9 +69,14 @@ export class NbpDropdownListComponent
   }
 
   nbpGetClasses() {
-    console.log(this.nbpModel);
     this.nbpDropDownList =
-      this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder + this.nbpSeparator + (this.nbpDropDownListDisabled ? "nbp-background-sliver nbp-cursor-not-allowed" : "");
+      this.nbpBorderType +
+      this.nbpSeparator +
+      this.nbpErrorBorder +
+      this.nbpSeparator +
+      (this.nbpDropDownListDisabled
+        ? "nbp-background-sliver nbp-cursor-not-allowed"
+        : "");
     this.nbpDropDownListModel.emit({
       value: this.nbpModel,
       name: this.nbpDropDownListName,
@@ -77,8 +84,6 @@ export class NbpDropdownListComponent
   }
 
   nbpInputFocusOut() {
-    console.log("this.nbpModel.length: ", this.nbpModel);
-    console.log(this.nbpModel);
     if (this.nbpDropDownListRequired) {
       this.nbpErrorMessage =
         this.nbpModel === undefined || this.nbpModel.length === 0
@@ -92,8 +97,7 @@ export class NbpDropdownListComponent
     }
   }
 
-  onChange(event) {
-    console.log("NbpDropdownListComponent: ", event);
+  nbpOnChange(event) {
     this.nbpModel = event;
     this.nbpInputFocusOut();
   }

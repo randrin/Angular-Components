@@ -13,22 +13,26 @@
     position: relative;
     cursor: pointer;
 
-    .nbp-form-control {
-      background-clip: border-box;
-      padding: 0.625rem 3.4375rem 0.625rem 1.5625rem;
-      border-width: 0.0625rem;
-      border-style: solid;
-      font-size: 1rem;
-      height: 3.125rem;
-      color: var(--nbp-secondary);
-      border-color: var(--nbp-secondary);
-
-      &:focus {
-        border-width: 0.125rem;
+    dp-date-picker {
+      &.nbp-form-control {
+        background-clip: border-box;
+        padding: 0.625rem 3.4375rem 0.625rem 1.5625rem;
+        border-width: 0.0625rem;
         border-style: solid;
-        outline: 0;
-        box-shadow: none !important;
-        border-color: var(--nbp-primary) !important;
+        font-size: 1rem;
+        height: 3.125rem;
+        color: var(--nbp-secondary);
+        border-color: var(--nbp-secondary);
+
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+          border-width: 0.125rem;
+          border-style: solid;
+          outline: 0;
+          box-shadow: none !important;
+          border-color: var(--nbp-primary) !important;
+        }
       }
     }
 

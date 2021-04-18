@@ -52,6 +52,9 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
   nbpGetClasses() {
     this.nbpInput = this.nbpInputDisabled ? this.nbpTypeInput.CURSOR : '';
     this.nbpInput = this.nbpInput + this.nbpSeparator + this.nbpBorderType + this.nbpSeparator + this.nbpErrorBorder;
+    if(this.nbpErrorMessage) {
+      this.nbpInputIcon = this.nbpInputIcon + this.nbpSeparator + "nbp-input-password-icon-message"
+    }
     this.nbpInputModel.emit({value: this.nbpModel, name: this.nbpInputName});
   }
 
@@ -66,6 +69,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
       this.nbpErrorBorder = (this.nbpModel.length === 0) ? this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR): '';
       this.nbpErrorMessage = (this.nbpModel.length === 0) ? true : false;
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
+      document.getElementById("nbp-input-password-icon").classList.remove("nbp-input-password-icon-message");
       this.nbpGetClasses();
     } else {
       this.nbpIsDigitText = (this.nbpModel.length >= 1) ? true : false;
@@ -94,6 +98,7 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
       this.nbpInputModel.emit({value: this.nbpModel, name: this.nbpInputName});
       if (this.nbpInputRequired) {
         this.nbpInput = this.nbpBorderType + this.nbpSeparator + this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR);
+        this.nbpInputIcon = this.nbpInputIcon + this.nbpSeparator + "nbp-input-password-icon-message"
         this.nbpErrorMessage = true;
       }
     }
@@ -107,5 +112,6 @@ export class NbpInputPasswordComponent extends NbpBaseComponent implements  OnIn
       this.nbpInputType = this.nbpInputDefault.password;
       this.nbpInputIcon = this.nbpInputPasswordIcon.HIDE;
     }
+    this.nbpInputKeyUp();
   }
 }
