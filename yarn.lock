@@ -1124,6 +1124,13 @@
     enhanced-resolve "4.3.0"
     webpack-sources "1.4.3"
 
+"@ngx-tiny/date-picker@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@ngx-tiny/date-picker/-/date-picker-10.0.2.tgz#a568aedb5f2c9322528bd97cbe6d7dff60d082eb"
+  integrity sha512-jSBq00T+9G1C0ctgAMoKQl48WSGC4MOBz+cXJ8cQbmIPfz7BEQxw1F+QV5xym+7cDWfLgEtHCoXsX4S7m92l+g==
+  dependencies:
+    tslib "^2.0.0"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -3230,6 +3237,11 @@ datatables.net@1.10.24, datatables.net@^1.10.15, datatables.net@^1.10.22:
   integrity sha512-CwXixvOdinvBCLXvcTloDinWiEM7Geaz+GwyjPrZL+MXIGPcLv4Op1bbWn8ErsI1JWMIWC8Cuf1rnDU2RrFV5w==
   dependencies:
     jquery ">=1.7"
+
+date-fns@^2.21.1:
+  version "2.21.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.21.1.tgz#679a4ccaa584c0706ea70b3fa92262ac3009d2b0"
+  integrity sha512-m1WR0xGiC6j6jNFAyW4Nvh4WxAi4JF4w9jRJwSI8nBmNcyZXPcP9VUQG+6gHQXAmqaGEKDKhOqAtENDC941UkA==
 
 date-format@^2.1.0:
   version "2.1.0"

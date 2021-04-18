@@ -18,7 +18,7 @@ export class NbpInputRadioComponent extends NbpBaseComponent implements OnInit {
   @Output()
   nbpRadioOutput: EventEmitter<string> = new EventEmitter<string>();
 
-  nbpRadioModel: string;
+  nbpRadioModel: string = "";
   nbpRadio: string;
   nbpRadioInput: string;
   nbpInputRadioId: string;

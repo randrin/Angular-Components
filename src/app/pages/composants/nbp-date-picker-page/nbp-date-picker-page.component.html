@@ -2,7 +2,7 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one
-        [nbpTitle]="title"
+        [nbpTitle]="title1"
         [nbpColorStyle]="_style.DEFAULT"
       ></nbp-dividing-line-one>
     </div>
@@ -41,14 +41,25 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one
-        [nbpTitle]="title"
+        [nbpTitle]="title2"
         [nbpColorStyle]="_style.DEFAULT"
       ></nbp-dividing-line-one>
     </div>
   </div>
   <div class="row pb-4">
     <div class="col-md-6">
-      <nbp-date-picker-two></nbp-date-picker-two>
+      <nbp-date-picker-two
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerRequired]="true"
+        [nbpDatePickerBorderType]="_style.ROUNDED"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-date-picker-two>
     </div>
   </div>
 </div>

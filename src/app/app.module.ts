@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
 import { DatePickerModule } from "@syncfusion/ej2-angular-calendars";
+import { NgxDatePickerModule } from '@ngx-tiny/date-picker';
 import { DropdownListModule } from "ngx-dropdown-list";
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { HttpClientModule } from "@angular/common/http";
@@ -241,6 +242,7 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     HttpClientModule,
     AppRoutingModule,
     TooltipModule,
+    NgxDatePickerModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

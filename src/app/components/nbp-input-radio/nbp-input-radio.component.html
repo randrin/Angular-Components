@@ -11,7 +11,7 @@
         (click)="nbpRadioClick($event)"
         [disabled]="nbpRadioDisabled"
       />
-      <!-- <div class="nbp-radio-circle-icon" [ngClass]="nbpRadioBackground"></div> -->
+      <div class="nbp-radio-circle-icon" [ngClass]="{'nbpRadioBackground': nbpRadioModel == nbpRadioValue}"></div>
       <div class="nbp-radio-label">
         <label [for]="nbpInputRadioId" class="nbp-font-size-18">{{
           nbpRadioLabel
@@ -20,7 +20,7 @@
     </div>
   </div>
 </div>
-{{nbpRadioModel}}
+{{nbpRadioModel}} {{nbpRadioValue}}
 
 <!-- <div>
   <input type="radio" id="huey" name="drone" value="huey"

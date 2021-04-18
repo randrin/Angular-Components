@@ -9,7 +9,8 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 
 export class NbpDatePickerPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'Date Picker Page';
+  title1 = 'Date Picker One Page';
+  title2 = 'Date Picker Two Page';
 
   constructor(injector:Injector) {
     super(injector);
