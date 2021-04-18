@@ -1131,6 +1131,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@ngx-tiny/quill-editor@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-tiny/quill-editor/-/quill-editor-10.0.0.tgz#b5f64793ad0317cab4270f933dc10ee96d7bda7f"
+  integrity sha512-mFWbhWTjxO+kaywm36/lqMhn/E436r51H5wvRyHxO9ih8rXUJ7aaVm1vO8GD7ZtoiqH1Q+VqmiCcMHYo2AAUqA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"

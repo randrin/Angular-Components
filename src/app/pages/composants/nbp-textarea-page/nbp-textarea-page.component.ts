@@ -8,7 +8,8 @@ import { NbpBaseComponent } from 'src/app/components/nbp-base-component/nbp-base
 })
 export class NbpTextareaPageComponent extends NbpBaseComponent implements OnInit {
 
-  title = 'Textarea Page';
+  title1 = 'Textarea One Page';
+  title2 = 'Textarea Two Page';
 
   constructor(injector:Injector) {
     super(injector);

@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
 import { DatePickerModule } from "@syncfusion/ej2-angular-calendars";
 import { NgxDatePickerModule } from '@ngx-tiny/date-picker';
+import { NgxQuillEditorModule } from '@ngx-tiny/quill-editor';
 import { DropdownListModule } from "ngx-dropdown-list";
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { HttpClientModule } from "@angular/common/http";
@@ -16,7 +17,7 @@ import { NbpScrollTopComponent } from "./components/nbp-scroll-top/nbp-scroll-to
 import { NbpFeedbackOneComponent } from "./components/nbp-feedbacks/nbp-feedback-one/nbp-feedback-one.component";
 import { NbpInputTextComponent } from "./components/nbp-input-text/nbp-input-text.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NbpTextareaComponent } from "./components/nbp-textarea/nbp-textarea.component";
+import { NbpTextareaOneComponent } from "./components/nbp-textareas/nbp-textarea-one/nbp-textarea-one.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ComposantsComponent } from "./pages/composants/composants.component";
 import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
@@ -133,7 +134,7 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpScrollTopComponent,
     NbpFeedbackOneComponent,
     NbpInputTextComponent,
-    NbpTextareaComponent,
+    NbpTextareaOneComponent,
     HomeComponent,
     ComposantsComponent,
     NbpTextareaPageComponent,
@@ -243,6 +244,7 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     AppRoutingModule,
     TooltipModule,
     NgxDatePickerModule,
+    NgxQuillEditorModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

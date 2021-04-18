@@ -2,14 +2,14 @@
   <div class="row text-center">
     <div class="col">
       <nbp-dividing-line-one
-          [nbpTitle]="title"
+          [nbpTitle]="title1"
           [nbpColorStyle]="_style.DEFAULT"
         ></nbp-dividing-line-one>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <nbp-textarea
+      <nbp-textarea-one
         [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label1"
         [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
         [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
@@ -18,10 +18,10 @@
         [nbpTextareaErrorLengthMaxSup]="_model.component.NbpTextareaComponent.maxLengthMessage"
         [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage"
         [nbpTextareaMaxLength]="_model.component.NbpTextareaComponent.maxLength">
-      </nbp-textarea>
+      </nbp-textarea-one>
     </div>
     <div class="col-md-6">
-      <nbp-textarea
+      <nbp-textarea-one
         [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label2"
         [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
         [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
@@ -29,18 +29,28 @@
         [nbpTextareaDisabled]="true"
         [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
         [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage">
-      </nbp-textarea>
+      </nbp-textarea-one>
     </div>
     <div class="col-md-6">
-      <nbp-textarea
+      <nbp-textarea-one
         [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label3"
         [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
         [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
-        [nbpTextareaRequired]="false"
+        [nbpTextareaRequired]="true"
         [nbpTextareaDisabled]="false"
         [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
         [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage">
-      </nbp-textarea>
+      </nbp-textarea-one>
+    </div>
+    <div class="col-md-6">
+      <nbp-textarea-one
+        [nbpTextareaLabel]="_model.component.NbpTextareaComponent.label4"
+        [nbpTextareaLabelRequired]="_model.component.NbpTextareaComponent.required"
+        [nbpTextareaRows]="_model.component.NbpTextareaComponent.rows"
+        [nbpTextareaRequired]="false"
+        [nbpTextareaPlaceholder]="_model.component.NbpTextareaComponent.placeholder"
+        [nbpTextareaErrorMessage]="_model.component.NbpTextareaComponent.requiredMessage">
+      </nbp-textarea-one>
     </div>
   </div>
 </div>

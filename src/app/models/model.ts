@@ -663,6 +663,7 @@ export class Model {
       label1: "Description First Name with limit = 10",
       label2: "Description Last Name readonly",
       label3: "Description Name without limit",
+      label4: "Description Name no required and without limit",
       messageModal: "Message",
       rows: 8,
       name: "description",

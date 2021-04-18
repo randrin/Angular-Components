@@ -6,14 +6,15 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
+
 
 @Component({
-  selector: "nbp-textarea",
-  templateUrl: "./nbp-textarea.component.html",
-  styleUrls: ["./nbp-textarea.component.scss"],
+  selector: "nbp-textarea-one",
+  templateUrl: "./nbp-textarea-one.component.html",
+  styleUrls: ["./nbp-textarea-one.component.scss"],
 })
-export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
+export class NbpTextareaOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTextareaLabel: string;
   @Input() nbpTextareaLabelRequired: boolean;
   @Input() nbpTextareaValue: string;
@@ -49,7 +50,7 @@ export class NbpTextareaComponent extends NbpBaseComponent implements OnInit {
       this.nbpTextareaRows === 0 || this.nbpTextareaRows === undefined
         ? this.nbpTextareaDefault.rows
         : this.nbpTextareaRows;
-    this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
+    // this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
     this.nbpModel = this.nbpTextareaValue === undefined ?  "" : this.nbpTextareaValue;
     this.nbpGetClasses();
     
