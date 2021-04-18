@@ -3,8 +3,7 @@
     <label
       *ngIf="nbpDatePickerLabelRequired"
       [for]="nbpDatePickerName"
-      class="nbp-p2 nbp-color-default nbp-date-picker-label nbp-text-capitalize"
-    >
+      class="nbp-p2 nbp-color-default nbp-date-picker-label nbp-text-capitalize">
       {{ nbpDatePickerLabel }}
       <span *ngIf="nbpDatePickerRequired" class="nbp-color-tomato ml-1">*</span>
     </label>
@@ -22,8 +21,8 @@
         [ngClass]="nbpDatePicker"
         [(ngModel)]="nbpModel"
         [disabled]="nbpDatePickerDisabled"
-        [required]="nbpDatePickerRequired"
-      ></dp-date-picker>
+        [required]="nbpDatePickerRequired">
+    </dp-date-picker>
       <i class="nbp-date-picker-icon" [ngClass]="nbpDatePickerIcon"></i>
       <!-- <input
         [id]="nbpDatePickerId"
