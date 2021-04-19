@@ -20,7 +20,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
   @Input() nbpInputIcon: string;
   @Input() nbpInputIconRequired: boolean;
   @Input() nbpInputPlaceholder: string;
-  @Input() nbpInputType: string;
   @Input() nbpInputErrorMessage: string;
 
   @Output() nbpInputModel: EventEmitter<object> = new EventEmitter<object>();
@@ -44,7 +43,6 @@ export class NbpInputTextComponent extends NbpBaseComponent implements  OnInit {
   // Functions
   nbpSetUpComponent() {
     this.nbpInputId = 'nbp-' + uuid.v4();
-    this.nbpInputType = this.nbpInputType === undefined ? this.nbpInputDefault.text : this.nbpInputType;
     this.nbpBorderType = this.nbpGetTypeInputText(this.nbpInputBorderType);
     this.nbpModel = this.nbpInputValue === undefined ?  "" : this.nbpInputValue;
     this.nbpGetClasses();
