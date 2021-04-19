@@ -21,7 +21,7 @@ import { NbpTextareaOneComponent } from "./components/nbp-textareas/nbp-textarea
 import { HomeComponent } from "./pages/home/home.component";
 import { ComposantsComponent } from "./pages/composants/composants.component";
 import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
-import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-text-page/nbp-input-text-page.component";
+import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-text-page/nbp-input-text-page.component";
 import { NbpAlertBoxPageComponent } from "./pages/composants/nbp-alert-box-page/nbp-alert-box-page.component";
 import { NbpBackgroundBoxPageComponent } from "./pages/composants/nbp-background-box-page/nbp-background-box-page.component";
 import { NbpButtonPageComponent } from "./pages/composants/nbp-button-page/nbp-button-page.component";
@@ -34,7 +34,7 @@ import { NbpBreadcrumbOneComponent } from "./components/nbp-breadcrumbs/nbp-brea
 import { NbpBreadcrumbTwoComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-two/nbp-breadcrumb-two.component";
 import { NbpHeaderPageComponent } from "./pages/composants/nbp-header-page/nbp-header-page.component";
 import { NbpInputCheckboxComponent } from "./components/nbp-input-widget/nbp-input-checkbox/nbp-input-checkbox.component";
-import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
+import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
 import { NbpColorComponent } from "./components/nbp-color/nbp-color.component";
 import { NbpColorPageComponent } from "./pages/composants/nbp-color-page/nbp-color-page.component";
 import { NbpTableOneComponent } from "./components/nbp-tables/nbp-table-one/nbp-table-one.component";
@@ -52,7 +52,7 @@ import { NbpTypographyPageComponent } from "./pages/composants/nbp-typography-pa
 import { NbpPanelTitleOneComponent } from "./components/nbp-panel-titles/nbp-panel-title-one/nbp-panel-title-one.component";
 import { NbpPanelTitlePageComponent } from "./pages/composants/nbp-panel-title-page/nbp-panel-title-page.component";
 import { NbpInputRadioComponent } from "./components/nbp-input-widget/nbp-input-radio/nbp-input-radio.component";
-import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-radio-page/nbp-input-radio-page.component";
+import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-radio-page/nbp-input-radio-page.component";
 import { NbpBreadcrumdThreeComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-three/nbp-breadcrumd-three.component";
 import { NbpAlertBoxTwoComponent } from "./components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component";
 import { NbpArrowLinkComponent } from "./components/nbp-links/nbp-arrow-link/nbp-arrow-link.component";
@@ -70,7 +70,7 @@ import { NbpAlertBoxFourthComponent } from "./components/nbp-alert-boxes/nbp-ale
 import { NbpAlertBoxFiveComponent } from "./components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component";
 import { NbpInputSwitchOneComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
 import { NbpInputSwitchTwoComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-two/nbp-input-switch-two.component";
-import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
+import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
 import { NbpDropdownListOneComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component";
@@ -91,7 +91,7 @@ import { TooltipModule } from "ng2-tooltip-directive";
 import { NbpTooltipComponent } from "./components/nbp-tooltip/nbp-tooltip.component";
 
 import { NbpInputPasswordComponent } from "./components/nbp-input-widget/nbp-input-password/nbp-input-password.component";
-import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-password-page/nbp-input-password-page.component";
+import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-password-page/nbp-input-password-page.component";
 import { NbpDividingLineThreeComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-three/nbp-dividing-line-three.component";
 import { NbpDividingLineFourthComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component";
 import { NbpBoxeOneComponent } from "./components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component";
