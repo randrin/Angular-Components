@@ -1,4 +1,4 @@
-<div class="nbp-textarea-one-wrapper">
+<div class="nbp-textarea-two-wrapper">
   <div class="nbp-textarea-container">
     <label
       *ngIf="nbpTextareaLabelRequired"
@@ -9,26 +9,18 @@
       <span *ngIf="nbpTextareaRequired" class="nbp-color-tomato ml-1">*</span>
     </label>
     <div class="nbp-textarea">
-      <textarea
-        [(ngModel)]="nbpModel"
-        [rows]="nbpTextareaRows"
-        [ngClass]="nbpTextarea"
-        (keydown)="nbpTextareaKeyDown()"
-        (focusout)="nbpTextareaFocusOut()"
-        (keyup)="nbpTextareaKeyUp($event)"
-        class="nbp-form-control form-control"
-        [placeholder]="nbpTextareaPlaceholder"
-        [disabled]="nbpTextareaDisabled"
-        [required]="nbpTextareaRequired"
-        [maxlength]="nbpTextareaMaxLength"
-        [name]="nbpTextareaName">
-      </textarea>
+        <ngx-quill-editor [content]="content" (changed)="onContentChange($event)"></ngx-quill-editor>
     </div>
     <div class="nbp-textarea-errors">
       <div class="nbp-textarea-error-message">
-        <span class="nbp-textarea-alert" *ngIf="nbpErrorMessage">{{ nbpTextareaErrorMessage }}</span>
-        <span class="nbp-textarea-alert-length" *ngIf="nbpErrorMessageMaxLength">
-          {{nbpTextareaErrorLengthMaxSup}}
+        <span class="nbp-textarea-alert" *ngIf="nbpErrorMessage">{{
+          nbpTextareaErrorMessage
+        }}</span>
+        <span
+          class="nbp-textarea-alert-length"
+          *ngIf="nbpErrorMessageMaxLength"
+        >
+          {{ nbpTextareaErrorLengthMaxSup }}
         </span>
       </div>
       <div class="nbp-textarea-error-max-length" *ngIf="nbpErrorLength">

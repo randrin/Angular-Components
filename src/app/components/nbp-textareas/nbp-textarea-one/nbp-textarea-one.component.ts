@@ -53,7 +53,6 @@ export class NbpTextareaOneComponent extends NbpBaseComponent implements OnInit 
     // this.nbpTextareaRequired = this.nbpTextareaDisabled ? false : true;
     this.nbpModel = this.nbpTextareaValue === undefined ?  "" : this.nbpTextareaValue;
     this.nbpGetClasses();
-    
   }
 
   nbpGetClasses() {

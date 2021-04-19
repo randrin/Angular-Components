@@ -664,6 +664,7 @@ export class Model {
       label2: "Description Last Name readonly",
       label3: "Description Name without limit",
       label4: "Description Name no required and without limit",
+      label5: "Description Profession",
       messageModal: "Message",
       rows: 8,
       name: "description",

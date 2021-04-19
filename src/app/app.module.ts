@@ -122,6 +122,7 @@ import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/
 import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
 import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
 import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-date-picker-two/nbp-date-picker-two.component";
+import { NbpTextareaTwoComponent } from './components/nbp-textareas/nbp-textarea-two/nbp-textarea-two.component';
 
 @NgModule({
   declarations: [
@@ -230,6 +231,7 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpFeedbackTwoComponent,
     NbpDropdownListTwoComponent,
     NbpDatePickerTwoComponent,
+    NbpTextareaTwoComponent,
   ],
   imports: [
     BrowserModule,
