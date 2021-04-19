@@ -15,7 +15,7 @@ import { NbpButtonComponent } from "./components/nbp-button/nbp-button.component
 import { NbpAlertBoxOneComponent } from "./components/nbp-alert-boxes/nbp-alert-box-one/nbp-alert-box-one.component";
 import { NbpScrollTopComponent } from "./components/nbp-scroll-top/nbp-scroll-top.component";
 import { NbpFeedbackOneComponent } from "./components/nbp-feedbacks/nbp-feedback-one/nbp-feedback-one.component";
-import { NbpInputTextComponent } from "./components/nbp-input-text/nbp-input-text.component";
+import { NbpInputTextComponent } from "./components/nbp-input-widget/nbp-input-text/nbp-input-text.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NbpTextareaOneComponent } from "./components/nbp-textareas/nbp-textarea-one/nbp-textarea-one.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -33,7 +33,7 @@ import { NbpNavbarComponent } from "./components/nbp-navbar/nbp-navbar.component
 import { NbpBreadcrumbOneComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-one/nbp-breadcrumb-one.component";
 import { NbpBreadcrumbTwoComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-two/nbp-breadcrumb-two.component";
 import { NbpHeaderPageComponent } from "./pages/composants/nbp-header-page/nbp-header-page.component";
-import { NbpInputCheckboxComponent } from "./components/nbp-input-checkbox/nbp-input-checkbox.component";
+import { NbpInputCheckboxComponent } from "./components/nbp-input-widget/nbp-input-checkbox/nbp-input-checkbox.component";
 import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
 import { NbpColorComponent } from "./components/nbp-color/nbp-color.component";
 import { NbpColorPageComponent } from "./pages/composants/nbp-color-page/nbp-color-page.component";
@@ -51,7 +51,7 @@ import { NbpBadgePageComponent } from "./pages/composants/nbp-badge-page/nbp-bad
 import { NbpTypographyPageComponent } from "./pages/composants/nbp-typography-page/nbp-typography-page.component";
 import { NbpPanelTitleOneComponent } from "./components/nbp-panel-titles/nbp-panel-title-one/nbp-panel-title-one.component";
 import { NbpPanelTitlePageComponent } from "./pages/composants/nbp-panel-title-page/nbp-panel-title-page.component";
-import { NbpInputRadioComponent } from "./components/nbp-input-radio/nbp-input-radio.component";
+import { NbpInputRadioComponent } from "./components/nbp-input-widget/nbp-input-radio/nbp-input-radio.component";
 import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-radio-page/nbp-input-radio-page.component";
 import { NbpBreadcrumdThreeComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-three/nbp-breadcrumd-three.component";
 import { NbpAlertBoxTwoComponent } from "./components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component";
@@ -68,8 +68,8 @@ import { NbpCardPageComponent } from "./pages/composants/nbp-card-page/nbp-card-
 import { NbpModalOneComponent } from "./components/nbp-modals/nbp-modal-one/nbp-modal-one.component";
 import { NbpAlertBoxFourthComponent } from "./components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component";
 import { NbpAlertBoxFiveComponent } from "./components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component";
-import { NbpInputSwitchOneComponent } from "./components/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
-import { NbpInputSwitchTwoComponent } from "./components/nbp-input-switchs/nbp-input-switch-two/nbp-input-switch-two.component";
+import { NbpInputSwitchOneComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
+import { NbpInputSwitchTwoComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-two/nbp-input-switch-two.component";
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
@@ -90,7 +90,7 @@ import { NbpBadgeTwoComponent } from "./components/nbp-badges/nbp-badge-two/nbp-
 import { TooltipModule } from "ng2-tooltip-directive";
 import { NbpTooltipComponent } from "./components/nbp-tooltip/nbp-tooltip.component";
 
-import { NbpInputPasswordComponent } from "./components/nbp-input-password/nbp-input-password.component";
+import { NbpInputPasswordComponent } from "./components/nbp-input-widget/nbp-input-password/nbp-input-password.component";
 import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-password-page/nbp-input-password-page.component";
 import { NbpDividingLineThreeComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-three/nbp-dividing-line-three.component";
 import { NbpDividingLineFourthComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component";
@@ -101,8 +101,8 @@ import { NbpTabBarThreeComponent } from "./components/nbp-tab-bars/nbp-tab-bar-t
 import { NbpTabBarFourComponent } from "./components/nbp-tab-bars/nbp-tab-bar-four/nbp-tab-bar-four.component";
 import { NbpTabBarFiveComponent } from "./components/nbp-tab-bars/nbp-tab-bar-five/nbp-tab-bar-five.component";
 
-import { NbpInputSwitchThreeComponent } from "./components/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component";
-import { NbpInputSwitchFourthComponent } from "./components/nbp-input-switchs/nbp-input-switch-fourth/nbp-input-switch-fourth.component";
+import { NbpInputSwitchThreeComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component";
+import { NbpInputSwitchFourthComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-fourth/nbp-input-switch-fourth.component";
 import { NbpAuthService } from "./services/nbp-auth.service";
 import { NbpLoginOneComponent } from "./components/nbp-logins/nbp-login-one/nbp-login-one.component";
 import { LoginComponent } from "./pages/auth/login/login.component";

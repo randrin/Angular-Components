@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from '@angular/core';
-import { NbpBaseComponent } from '../nbp-base-component/nbp-base.component';
+import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 import * as uuid from 'uuid';
 
 @Component({

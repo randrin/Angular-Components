@@ -6,14 +6,14 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-input-switch-three",
-  templateUrl: "./nbp-input-switch-three.component.html",
-  styleUrls: ["./nbp-input-switch-three.component.scss"],
+  selector: "nbp-input-switch-fourth",
+  templateUrl: "./nbp-input-switch-fourth.component.html",
+  styleUrls: ["./nbp-input-switch-fourth.component.scss"],
 })
-export class NbpInputSwitchThreeComponent
+export class NbpInputSwitchFourthComponent
   extends NbpBaseComponent
   implements OnInit {
   constructor(injector: Injector) {
@@ -21,6 +21,7 @@ export class NbpInputSwitchThreeComponent
   }
 
   @Input() nbpInputSwitchName: string;
+  @Input() nbpInputSwitchSize: string;
   @Input() nbpInputSwitchType: string;
   @Input() nbpInputSwitchChecked: boolean;
   @Input() nbpInputSwitchDisabled: boolean;
@@ -39,6 +40,7 @@ export class NbpInputSwitchThreeComponent
       this.nbpInputSwitchType,
       this._type.BORDER
     );
+    this.nbpBorder = this.nbpBorder + this.nbpSeparator + this.nbpGetSizeClasse(this.nbpInputSwitchSize, this._type.SWITCH);
   }
 
   // Functions
