@@ -1,0 +1,43 @@
+<div class="nbp-input-number-wrapper">
+  <div class="nbp-input-number-container">
+    <label
+      *ngIf="nbpInputLabelRequired"
+      for="nbpInputName"
+      class="nbp-p2 nbp-color-default nbp-input-number-label nbp-text-capitalize"
+    >
+      {{ nbpInputLabel }}
+      <span *ngIf="nbpInputRequired" class="nbp-color-tomato ml-1">*</span>
+    </label>
+    <div class="nbp-input-number">
+      <input
+        [id]="nbpInputId"
+        [(ngModel)]="nbpModel"
+        (keyup)="nbpInputKeyUp()"
+        [name]="nbpInputName"
+        [ngClass]="nbpInput"
+        (blur)="nbpInputBlur()"
+        (focusout)="nbpInputFocusOut()"
+        (focus)="nbpInputFocus()"
+        class="form-control nbp-form-control"
+        type="number"
+        [placeholder]="nbpInputPlaceholder"
+        [disabled]="nbpInputDisabled"
+        [required]="nbpInputRequired"
+      />
+      <i
+        class="nbp-input-number-icon"
+        [ngClass]="nbpInputIcon"
+        *ngIf="!nbpIsDigitText"
+      ></i>
+      <i
+        class="nbp-input-number-clean-icon"
+        [ngClass]="nbpInputDefault.clean"
+        *ngIf="nbpIsDigitText"
+        (click)="nbpInputOnClean()"
+      ></i>
+    </div>
+    <div class="nbp-input-number-error-message" *ngIf="nbpErrorMessage">
+      <span class="nbp-input-number-alert">{{ nbpInputErrorMessage }}</span>
+    </div>
+  </div>
+</div>
