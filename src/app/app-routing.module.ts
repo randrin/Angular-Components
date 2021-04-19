@@ -39,6 +39,7 @@ import { ChangeOldPassToNewPassComponent } from "./pages/auth/change-old-pass-to
 import { NbpPatientComponent } from "./pages/nbp-patient/nbp-patient.component";
 import { NbpProfileBoxPageComponent } from "./pages/composants/nbp-profile-box-page/nbp-profile-box-page.component";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
+import { NbpInputNumberPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
       { path: "colors", component: NbpColorPageComponent },
       { path: "textareas", component: NbpTextareaPageComponent },
       { path: "input-text", component: NbpInputTextPageComponent },
+      { path: "input-number", component: NbpInputNumberPageComponent },
       { path: "input-password", component: NbpInputPasswordPageComponent },
       { path: "dividing-lines", component: NbpDividingLinePageComponent },
       { path: "feedbacks", component: NbpFeedbackPageComponent },
