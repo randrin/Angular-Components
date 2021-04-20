@@ -73,14 +73,14 @@ import { NbpInputSwitchTwoComponent } from "./components/nbp-input-widget/nbp-in
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
-import { NbpDropdownListOneComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component";
+import { NbpInputSelectOneComponent } from "./components/nbp-input-widget/nbp-input-selects/nbp-input-select-one/nbp-input-select-one.component";
 import { NbpInputDateOneComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-one/nbp-input-date-one.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
 import { NbpUploadFileComponent } from "./components/nbp-upload-file/nbp-upload-file.component";
 import { NbpTooltipPageComponent } from "./pages/composants/nbp-tooltip-page/nbp-tooltip-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
-import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
+import { NbpInputSelectPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-select-page/nbp-input-select-page.component";
 import { NbpInputDatePageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-date-page/nbp-input-date-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
@@ -120,7 +120,7 @@ import { NbpPatientService } from "./services/nbp-patients.service";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
 import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/nbp-modal-three.component";
 import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
-import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
+import { NbpInputSelectTwoComponent } from "./components/nbp-input-widget/nbp-input-selects/nbp-input-select-two/nbp-input-select-two.component";
 import { NbpInputDateTwoComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-two/nbp-input-date-two.component";
 import { NbpInputTextareaTwoComponent } from './components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-two/nbp-input-textarea-two.component';
 import { NbpInputNumberComponent } from './components/nbp-input-widget/nbp-input-number/nbp-input-number.component';
@@ -194,7 +194,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpInputSwitchPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
-    NbpDropdownListOneComponent,
+    NbpInputSelectOneComponent,
     NbpInputDateOneComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
@@ -202,7 +202,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpTooltipPageComponent,
     NbpTooltipComponent,
     NbpNotificationHeaderPageComponent,
-    NbpDropDownListPageComponent,
+    NbpInputSelectPageComponent,
     NbpInputDatePageComponent,
     NbpUploadFilePageComponent,
     NbpTabbarPageComponent,
@@ -231,7 +231,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpProfileBoxOneComponent,
     NbpProfileBoxPageComponent,
     NbpFeedbackTwoComponent,
-    NbpDropdownListTwoComponent,
+    NbpInputSelectTwoComponent,
     NbpInputDateTwoComponent,
     NbpInputTextareaTwoComponent,
     NbpInputNumberComponent,

@@ -1,7 +1,7 @@
-.nbp-dropdown-list-two-wrapper {
+.nbp-input-select-two-wrapper {
   text-align: left;
 
-  .nbp-dropdown-list-label {
+  .nbp-input-select-label {
     display: inline-flex;
     font-weight: 500;
     line-height: 1.0625rem !important;
@@ -9,7 +9,7 @@
     font-size: 0.925em !important;
   }
 
-  .nbp-dropdown-list {
+  .nbp-input-select {
     position: relative;
     cursor: pointer;
 
@@ -37,7 +37,7 @@
     }
 
 
-    .nbp-dropdown-list-icon {
+    .nbp-input-select-icon {
       right: 1.975rem;
       position: absolute;
       top: 0.75rem;
@@ -48,7 +48,7 @@
     }
   }
 
-  .nbp-dropdown-list-error-message {
+  .nbp-input-select-error-message {
     font-size: 0.875em;
     margin: 0.325rem 3.4375rem 0.325rem 1.5625rem;
     opacity: 1;

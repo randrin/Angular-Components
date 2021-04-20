@@ -6,26 +6,25 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
+import { NbpBaseComponent } from "../../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-dropdown-list-two",
-  templateUrl: "./nbp-dropdown-list-two.component.html",
-  styleUrls: ["./nbp-dropdown-list-two.component.scss"],
+  selector: "nbp-input-select-one",
+  templateUrl: "./nbp-input-select-one.component.html",
+  styleUrls: ["./nbp-input-select-one.component.scss"],
 })
-export class NbpDropdownListTwoComponent
+export class NbpInputSelectOneComponent
   extends NbpBaseComponent
   implements OnInit {
   @Input() nbpDropDownListItems: Array<object>;
-  @Input() nbpDropDownListSelectedItems: Array<object> = [];
   @Input() nbpDropDownListLabel: string;
+  @Input() nbpDropDownListValue: string;
   @Input() nbpDropDownListLabelRequired: boolean;
   @Input() nbpDropDownListBorderType: string;
   @Input() nbpDropDownListName: string;
   @Input() nbpDropDownListMinDate: string;
   @Input() nbpDropDownListMaxDate: string;
-  @Input() nbpDropDownListItemsShowLimit: number = 3;
   @Input() nbpDropDownListIcon: string;
   @Input() nbpDropDownListIconRequired: boolean;
   @Input() nbpDropDownListPlaceholder: string;
@@ -33,14 +32,12 @@ export class NbpDropdownListTwoComponent
   @Input() nbpDropDownListRequired: boolean;
   @Input() nbpDropDownListDisabled: boolean;
   @Input() nbpDropDownListFilterItems: boolean;
-  @Input() nbpDropDownListSingleSelection: boolean;
-  @Input() nbpDropDownListEnableCheckAll: boolean;
 
   @Output()
   nbpDropDownListModel: EventEmitter<object> = new EventEmitter<object>();
 
+  nbpModel: string = "";
   nbpDropDownList: string;
-  nbpDropDownListSettings = {};
   nbpDropDownListId: string;
   nbpErrorBorder: string = "";
   nbpBorderType: string;
@@ -50,23 +47,8 @@ export class NbpDropdownListTwoComponent
     super(injector);
   }
 
-  selectedItems = [];
-
   ngOnInit(): void {
     this.nbpSetUpComponent();
-
-    this.nbpDropDownListSettings = {
-      singleSelection: this.nbpDropDownListSingleSelection,
-      enableCheckAll: this.nbpDropDownListEnableCheckAll,
-      defaultOpen: false,
-      idField: 'item_id',
-      textField: 'item_text',
-      selectAllText: 'Select All',
-      unSelectAllText: 'UnSelect All',
-      itemsShowLimit: this.nbpDropDownListItemsShowLimit,
-      allowSearchFilter: this.nbpDropDownListFilterItems
-    };
-
   }
 
   // Functions
@@ -75,6 +57,8 @@ export class NbpDropdownListTwoComponent
     this.nbpBorderType = this.nbpGetTypeInputText(
       this.nbpDropDownListBorderType
     );
+    this.nbpModel =
+      this.nbpDropDownListValue === undefined ? "" : this.nbpDropDownListValue;
     this.nbpGetClasses();
   }
 
@@ -94,7 +78,7 @@ export class NbpDropdownListTwoComponent
         ? "nbp-background-sliver nbp-cursor-not-allowed"
         : "");
     this.nbpDropDownListModel.emit({
-      value: this.nbpDropDownListSelectedItems,
+      value: this.nbpModel,
       name: this.nbpDropDownListName,
     });
   }
@@ -102,24 +86,19 @@ export class NbpDropdownListTwoComponent
   nbpInputFocusOut() {
     if (this.nbpDropDownListRequired) {
       this.nbpErrorMessage =
-        this.nbpDropDownListSelectedItems === undefined || this.nbpDropDownListSelectedItems.length === 0
+        this.nbpModel === undefined || this.nbpModel.length === 0
           ? true
           : false;
       this.nbpErrorBorder =
-        this.nbpDropDownListSelectedItems === undefined || this.nbpDropDownListSelectedItems.length === 0
+        this.nbpModel === undefined || this.nbpModel.length === 0
           ? this.nbpGetBorderClasse(this._alertType.ERROR, this._type.COLOR)
           : "";
       this.nbpGetClasses();
     }
   }
 
-  nbpOnItemSelect(item: any) {
-    this.nbpDropDownListSelectedItems.filter(element => element !== item.item_id)
-  }
-  
-  nbpOnSelectAll(items: []) {
-    items.forEach(element => {
-      this.nbpDropDownListSelectedItems.push(element);
-    });
+  nbpOnChange(event) {
+    this.nbpModel = event;
+    this.nbpInputFocusOut();
   }
 }

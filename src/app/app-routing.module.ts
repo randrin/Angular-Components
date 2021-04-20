@@ -24,7 +24,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { NbpCardPageComponent } from "./pages/composants/nbp-card-page/nbp-card-page.component";
 import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
-import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
+import { NbpInputSelectPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-select-page/nbp-input-select-page.component";
 import { NbpInputDatePageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-date-page/nbp-input-date-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
@@ -86,8 +86,8 @@ const appRoutes: Routes = [
         component: NbpNotificationHeaderPageComponent,
       },
       {
-        path: "dropdown-list",
-        component: NbpDropDownListPageComponent,
+        path: "input-select",
+        component: NbpInputSelectPageComponent,
       },
       { path: "input-date", component: NbpInputDatePageComponent },
       { path: "upload-File", component: NbpUploadFilePageComponent },
