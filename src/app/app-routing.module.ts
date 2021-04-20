@@ -17,7 +17,7 @@ import { NbpLinkPageComponent } from "./pages/composants/nbp-link-page/nbp-link-
 import { NbpPanelTitlePageComponent } from "./pages/composants/nbp-panel-title-page/nbp-panel-title-page.component";
 import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-radio-page/nbp-input-radio-page.component";
 import { NbpTablePageComponent } from "./pages/composants/nbp-table-page/nbp-table-page.component";
-import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
+import { NbpInputTextareaPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-textarea-page/nbp-input-textarea-page.component";
 import { NbpTypographyPageComponent } from "./pages/composants/nbp-typography-page/nbp-typography-page.component";
 import { ExamplesComponent } from "./pages/examples/examples.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     children: [
       { path: "breadcrumbs", component: NbpBreadcrumdPageComponent },
       { path: "colors", component: NbpColorPageComponent },
-      { path: "textareas", component: NbpTextareaPageComponent },
+      { path: "input-textarea", component: NbpInputTextareaPageComponent },
       { path: "input-text", component: NbpInputTextPageComponent },
       { path: "input-number", component: NbpInputNumberPageComponent },
       { path: "input-password", component: NbpInputPasswordPageComponent },

@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Injector, Input, OnInit, Output } from "@angular/core";
-import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../../nbp-base-component/nbp-base.component";
 
 @Component({
-  selector: "nbp-textarea-two",
-  templateUrl: "./nbp-textarea-two.component.html",
-  styleUrls: ["./nbp-textarea-two.component.scss"],
+  selector: "nbp-input-textarea-two",
+  templateUrl: "./nbp-input-textarea-two.component.html",
+  styleUrls: ["./nbp-input-textarea-two.component.scss"],
   preserveWhitespaces: true
 })
-export class NbpTextareaTwoComponent
+export class NbpInputTextareaTwoComponent
   extends NbpBaseComponent
   implements OnInit {
   @Input() nbpTextareaLabel: string;

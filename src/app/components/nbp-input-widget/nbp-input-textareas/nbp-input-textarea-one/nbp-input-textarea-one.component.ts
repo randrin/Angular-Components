@@ -6,15 +6,15 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../../nbp-base-component/nbp-base.component";
 
 
 @Component({
-  selector: "nbp-textarea-one",
-  templateUrl: "./nbp-textarea-one.component.html",
-  styleUrls: ["./nbp-textarea-one.component.scss"],
+  selector: "nbp-input-textarea-one",
+  templateUrl: "./nbp-input-textarea-one.component.html",
+  styleUrls: ["./nbp-input-textarea-one.component.scss"],
 })
-export class NbpTextareaOneComponent extends NbpBaseComponent implements OnInit {
+export class NbpInputTextareaOneComponent extends NbpBaseComponent implements OnInit {
   @Input() nbpTextareaLabel: string;
   @Input() nbpTextareaLabelRequired: boolean;
   @Input() nbpTextareaValue: string;

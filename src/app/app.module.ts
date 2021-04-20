@@ -17,10 +17,10 @@ import { NbpScrollTopComponent } from "./components/nbp-scroll-top/nbp-scroll-to
 import { NbpFeedbackOneComponent } from "./components/nbp-feedbacks/nbp-feedback-one/nbp-feedback-one.component";
 import { NbpInputTextComponent } from "./components/nbp-input-widget/nbp-input-text/nbp-input-text.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NbpTextareaOneComponent } from "./components/nbp-textareas/nbp-textarea-one/nbp-textarea-one.component";
+import { NbpInputTextareaOneComponent } from "./components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-one/nbp-input-textarea-one.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ComposantsComponent } from "./pages/composants/composants.component";
-import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
+import { NbpInputTextareaPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-textarea-page/nbp-input-textarea-page.component";
 import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-text-page/nbp-input-text-page.component";
 import { NbpAlertBoxPageComponent } from "./pages/composants/nbp-alert-box-page/nbp-alert-box-page.component";
 import { NbpBackgroundBoxPageComponent } from "./pages/composants/nbp-background-box-page/nbp-background-box-page.component";
@@ -122,7 +122,7 @@ import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/
 import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
 import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
 import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-date-picker-two/nbp-date-picker-two.component";
-import { NbpTextareaTwoComponent } from './components/nbp-textareas/nbp-textarea-two/nbp-textarea-two.component';
+import { NbpInputTextareaTwoComponent } from './components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-two/nbp-input-textarea-two.component';
 import { NbpInputNumberComponent } from './components/nbp-input-widget/nbp-input-number/nbp-input-number.component';
 import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component';
 
@@ -137,10 +137,10 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpScrollTopComponent,
     NbpFeedbackOneComponent,
     NbpInputTextComponent,
-    NbpTextareaOneComponent,
+    NbpInputTextareaOneComponent,
     HomeComponent,
     ComposantsComponent,
-    NbpTextareaPageComponent,
+    NbpInputTextareaPageComponent,
     NbpInputTextPageComponent,
     NbpAlertBoxPageComponent,
     NbpBackgroundBoxPageComponent,
@@ -233,7 +233,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpFeedbackTwoComponent,
     NbpDropdownListTwoComponent,
     NbpDatePickerTwoComponent,
-    NbpTextareaTwoComponent,
+    NbpInputTextareaTwoComponent,
     NbpInputNumberComponent,
     NbpInputNumberPageComponent,
   ],
