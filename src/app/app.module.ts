@@ -74,14 +74,14 @@ import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
 import { NbpDropdownListOneComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component";
-import { NbpDatePickerOneComponent } from "./components/nbp-date-pickers/nbp-date-picker-one/nbp-date-picker-one.component";
+import { NbpInputDateOneComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-one/nbp-input-date-one.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
 import { NbpUploadFileComponent } from "./components/nbp-upload-file/nbp-upload-file.component";
 import { NbpTooltipPageComponent } from "./pages/composants/nbp-tooltip-page/nbp-tooltip-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
 import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
-import { NbpDatePickerPageComponent } from "./pages/composants/nbp-date-picker-page/nbp-date-picker-page.component";
+import { NbpInputDatePageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-date-page/nbp-input-date-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
 import { NbpFilterFormPageComponent } from "./pages/composants/nbp-filter-form-page/nbp-filter-form-page.component";
@@ -121,7 +121,7 @@ import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-mod
 import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/nbp-modal-three.component";
 import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
 import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
-import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-date-picker-two/nbp-date-picker-two.component";
+import { NbpInputDateTwoComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-two/nbp-input-date-two.component";
 import { NbpInputTextareaTwoComponent } from './components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-two/nbp-input-textarea-two.component';
 import { NbpInputNumberComponent } from './components/nbp-input-widget/nbp-input-number/nbp-input-number.component';
 import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component';
@@ -195,7 +195,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
     NbpDropdownListOneComponent,
-    NbpDatePickerOneComponent,
+    NbpInputDateOneComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
     NbpUploadFileComponent,
@@ -203,7 +203,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpTooltipComponent,
     NbpNotificationHeaderPageComponent,
     NbpDropDownListPageComponent,
-    NbpDatePickerPageComponent,
+    NbpInputDatePageComponent,
     NbpUploadFilePageComponent,
     NbpTabbarPageComponent,
     NbpFilterFormPageComponent,
@@ -232,7 +232,7 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpProfileBoxPageComponent,
     NbpFeedbackTwoComponent,
     NbpDropdownListTwoComponent,
-    NbpDatePickerTwoComponent,
+    NbpInputDateTwoComponent,
     NbpInputTextareaTwoComponent,
     NbpInputNumberComponent,
     NbpInputNumberPageComponent,

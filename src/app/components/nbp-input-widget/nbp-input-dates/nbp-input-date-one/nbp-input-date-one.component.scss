@@ -1,7 +1,7 @@
-.nbp-date-picker-wrapper {
+.nbp-input-date-one-wrapper {
   text-align: left;
 
-  .nbp-date-picker-label {
+  .nbp-input-date-label {
     display: inline-flex;
     font-weight: 500;
     line-height: 1.0625rem !important;
@@ -9,7 +9,7 @@
     font-size: 0.925em !important;
   }
 
-  .nbp-date-picker {
+  .nbp-input-date {
     position: relative;
     cursor: pointer;
 
@@ -36,7 +36,7 @@
       }
     }
 
-    .nbp-date-picker-icon {
+    .nbp-input-date-icon {
       right: 1.975rem;
       position: absolute;
       top: 0.75rem;
@@ -47,7 +47,7 @@
     }
   }
 
-  .nbp-date-picker-error-message {
+  .nbp-input-date-error-message {
     font-size: 0.875em;
     margin: 0.325rem 3.4375rem 0.325rem 1.5625rem;
     opacity: 1;

@@ -7,16 +7,16 @@ import {
   Output,
   ViewEncapsulation,
 } from "@angular/core";
-import { NbpBaseComponent } from "../../nbp-base-component/nbp-base.component";
+import { NbpBaseComponent } from "../../../nbp-base-component/nbp-base.component";
 import * as uuid from "uuid";
 
 @Component({
-  selector: "nbp-date-picker-two",
-  templateUrl: "./nbp-date-picker-two.component.html",
-  styleUrls: ["./nbp-date-picker-two.component.scss"],
+  selector: "nbp-input-date-two",
+  templateUrl: "./nbp-input-date-two.component.html",
+  styleUrls: ["./nbp-input-date-two.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-export class NbpDatePickerTwoComponent
+export class NbpInputDateTwoComponent
   extends NbpBaseComponent
   implements OnInit {
   @Input() nbpDatePickerLabel: string;
