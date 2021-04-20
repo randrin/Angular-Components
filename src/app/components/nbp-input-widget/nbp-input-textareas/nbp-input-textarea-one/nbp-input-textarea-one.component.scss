@@ -1,8 +1,8 @@
-.nbp-textarea-one-wrapper {
+.nbp-input-textarea-one-wrapper {
   margin-bottom: 20px;
 
-  .nbp-textarea-container {
-    .nbp-textarea-text-label {
+  .nbp-input-textarea-container {
+    .nbp-input-textarea-text-label {
       display: inline-flex;
       font-weight: 500;
       line-height: 1.0625rem !important;
@@ -27,14 +27,14 @@
       }
     }
 
-    .nbp-textarea {
+    .nbp-input-textarea {
       position: relative;
     }
 
-    .nbp-textarea-errors {
+    .nbp-input-textarea-errors {
       display: flex;
 
-      .nbp-textarea-error-message {
+      .nbp-input-textarea-error-message {
         font-size: 0.875em;
         margin-top: 0.7em;
         margin-bottom: 0.7em;
@@ -43,7 +43,7 @@
         color: var(--nbp-tomato);
       }
 
-      .nbp-textarea-error-max-length {
+      .nbp-input-textarea-error-max-length {
         font-size: 0.875em;
         margin-top: 0.7em;
         margin-bottom: 0.7em;
@@ -55,16 +55,16 @@
         position: absolute;
       }
 
-      .nbp-textarea-alert-length {
+      .nbp-input-textarea-alert-length {
         float: right;
       }
 
-      .nbp-textarea-alert-count {
+      .nbp-input-textarea-alert-count {
         font-weight: 600;
         color: var(--nbp-primary);
       }
 
-      .nbp-textarea-error-message-length {
+      .nbp-input-textarea-error-message-length {
         color: var(--nbp-tomato);
       }
     }

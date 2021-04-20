@@ -1,6 +1,6 @@
-<div class="nbp-radio-wrapper">
-  <div class="nbp-radio-container" [ngClass]="nbpRadio">
-    <div class="nbp-radio-input" [ngClass]="nbpRadioInput">
+<div class="nbp-radio-input-wrapper">
+  <div class="nbp-radio-input-container" [ngClass]="nbpRadio">
+    <div class="nbp-radio-input-input" [ngClass]="nbpRadioInput">
       <input
         [id]="nbpInputRadioId"
         type="radio"
@@ -11,8 +11,8 @@
         (click)="nbpRadioClick($event)"
         [disabled]="nbpRadioDisabled"
       />
-      <div class="nbp-radio-circle-icon" [ngClass]="{'nbpRadioBackground': nbpRadioModel == nbpRadioValue}"></div>
-      <div class="nbp-radio-label">
+      <div class="nbp-radio-input-circle-icon" [ngClass]="{'nbpRadioBackground': nbpRadioModel == nbpRadioValue}"></div>
+      <div class="nbp-radio-input-label">
         <label [for]="nbpInputRadioId" class="nbp-font-size-18">{{
           nbpRadioLabel
         }}</label>

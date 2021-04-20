@@ -1,5 +1,5 @@
-.nbp-radio-wrapper {
-  .nbp-radio-container {
+.nbp-radio-input-wrapper {
+  .nbp-radio-input-container {
     display: inline-block;
     margin-right: 0.195rem;
     width: 100%;
@@ -10,7 +10,7 @@
     -ms-flex-align: center;
     align-items: center;
 
-    .nbp-radio-input {
+    .nbp-radio-input-input {
       position: relative;
       display: inline-block;
       vertical-align: middle;
@@ -32,16 +32,16 @@
         top: 0;
         left: 0;
 
-        &.ng-valid + .nbp-radio-circle-icon {
+        &.ng-valid + .nbp-radio-input-circle-icon {
           display: none;
         }
 
-        &.ng-dirty + .nbp-radio-circle-icon {
+        &.ng-dirty + .nbp-radio-input-circle-icon {
           display: block;
         }
       }
 
-      .nbp-radio-circle-icon {
+      .nbp-radio-input-circle-icon {
         position: absolute;
         width: 0.625rem;
         height: 0.625rem;
@@ -52,7 +52,7 @@
       }
     }
 
-    .nbp-radio-label {
+    .nbp-radio-input-label {
       font-size: 0.875rem !important;
       font-weight: 400;
       margin: 0 0 0 1.625rem !important;
