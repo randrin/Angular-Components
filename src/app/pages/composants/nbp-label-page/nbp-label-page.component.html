@@ -1,0 +1,100 @@
+<div class="nbp-label-page-wrapper">
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title1" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="label.icon">
+            <nbp-label-one [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style"></nbp-label-one>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title2" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="!label.icon">
+            <nbp-label-one [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style"></nbp-label-one>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title3" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="label.icon && label.type">
+            <nbp-label-one [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style" [nbpLabelType]="_style.OUTLINE"></nbp-label-one>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title4" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="!label.icon && label.type">
+            <nbp-label-one [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style" [nbpLabelType]="_style.OUTLINE"></nbp-label-one>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title5" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="label.icon">
+            <nbp-label-two [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style"></nbp-label-two>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title6" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="!label.icon">
+            <nbp-label-two [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style"></nbp-label-two>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title7" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="label.icon && label.type">
+            <nbp-label-two [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style" [nbpLabelType]="_style.OUTLINE"></nbp-label-two>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <nbp-dividing-line-one [nbpTitle]="title8" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nbp-label-page-content" *ngFor="let label of nbpLabels">
+          <div *ngIf="!label.icon && label.type">
+            <nbp-label-two [nbpLabelName]="label.name" [nbpLabelIcon]="label.icon" [nbpLabelStyle]="label.style" [nbpLabelType]="_style.OUTLINE"></nbp-label-two>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

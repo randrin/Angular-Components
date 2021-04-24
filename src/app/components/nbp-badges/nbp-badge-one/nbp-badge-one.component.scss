@@ -2,6 +2,15 @@
   .nbp-badge-container {
     margin: 0px 5px 8px 0px;
   }
+  .nbp-badge-icon {
+    padding: 0px 5px 0px 3px !important;
+    font-size: 28px;
+  }
+  .nbp-badge-icon + .nbp-badge  {
+    top: -15px;
+    left: -10px;
+    position: relative;
+  }
   .nbp-badge {
     display: inline-block;
     padding: 5px 10px;
@@ -11,8 +20,9 @@
     text-align: center;
     white-space: nowrap;
     border-radius: 2em;
-    .nbp-badge-icon {
-      padding: 0px 5px 0px 3px !important;
-    }
+    min-width: 30px;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
   }
 }
