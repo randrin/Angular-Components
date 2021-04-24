@@ -8,7 +8,7 @@ import { NbpBaseComponent } from '../../nbp-base-component/nbp-base.component';
 })
 export class NbpBadgeTwoComponent extends NbpBaseComponent implements OnInit {
 
-  @Input() nbpBadgeName: string;
+  @Input() nbpBadgeNumber: string;
   @Input() nbpBadgeIcon: string;
   @Input() nbpBadgeStyle: string;
   @Input() nbpBadgeType: string;

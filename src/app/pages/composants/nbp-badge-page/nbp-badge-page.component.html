@@ -7,9 +7,7 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="badge.icon">
-          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-one>
-        </div>
+        <nbp-badge-one [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style"></nbp-badge-one>
       </div>
     </div>
     <div class="row text-center">
@@ -19,8 +17,8 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="!badge.icon">
-          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-one>
+        <div *ngIf="badge.icon">
+          <nbp-badge-one [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeIcon]="badge.icon"></nbp-badge-one>
         </div>
       </div>
     </div>
@@ -31,9 +29,7 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="badge.icon && badge.type">
-          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
-        </div>
+        <nbp-badge-one [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
       </div>
     </div>
     <div class="row text-center">
@@ -43,8 +39,8 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="!badge.icon && badge.type">
-          <nbp-badge-one [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
+        <div *ngIf="badge.icon">
+          <nbp-badge-one [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeIcon]="badge.icon" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-one>
         </div>
       </div>
     </div>
@@ -55,9 +51,7 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="badge.icon">
-          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-two>
-        </div>
+        <nbp-badge-two [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style"></nbp-badge-two>
       </div>
     </div>
     <div class="row text-center">
@@ -67,8 +61,8 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="!badge.icon">
-          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style"></nbp-badge-two>
+        <div *ngIf="badge.icon">
+          <nbp-badge-two [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeIcon]="badge.icon"></nbp-badge-two>
         </div>
       </div>
     </div>
@@ -79,9 +73,7 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="badge.icon && badge.type">
-          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
-        </div>
+        <nbp-badge-two [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
       </div>
     </div>
     <div class="row text-center">
@@ -91,8 +83,8 @@
     </div>
     <div class="row">
       <div class="col nbp-badge-page-content" *ngFor="let badge of nbpBadges">
-        <div *ngIf="!badge.icon && badge.type">
-          <nbp-badge-two [nbpBadgeName]="badge.name" [nbpBadgeIcon]="badge.icon" [nbpBadgeStyle]="badge.style" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
+        <div *ngIf="badge.icon">
+          <nbp-badge-two [nbpBadgeNumber]="badge.number"  [nbpBadgeStyle]="badge.style" [nbpBadgeIcon]="badge.icon" [nbpBadgeType]="_style.OUTLINE"></nbp-badge-two>
         </div>
       </div>
     </div>
