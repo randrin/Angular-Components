@@ -2,6 +2,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { DpDatePickerModule } from "ng2-date-picker";
 import { DatePickerModule } from "@syncfusion/ej2-angular-calendars";
+import { NgxDatePickerModule } from '@ngx-tiny/date-picker';
+import { NgxQuillEditorModule } from '@ngx-tiny/quill-editor';
 import { DropdownListModule } from "ngx-dropdown-list";
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { HttpClientModule } from "@angular/common/http";
@@ -12,14 +14,14 @@ import { NbpBackgroundBoxComponent } from "./components/nbp-background-box/nbp-b
 import { NbpButtonComponent } from "./components/nbp-button/nbp-button.component";
 import { NbpAlertBoxOneComponent } from "./components/nbp-alert-boxes/nbp-alert-box-one/nbp-alert-box-one.component";
 import { NbpScrollTopComponent } from "./components/nbp-scroll-top/nbp-scroll-top.component";
-import { NbpFeedbackComponent } from "./components/nbp-feedbacks/nbp-feedback/nbp-feedback.component";
-import { NbpInputTextComponent } from "./components/nbp-input-text/nbp-input-text.component";
+import { NbpFeedbackOneComponent } from "./components/nbp-feedbacks/nbp-feedback-one/nbp-feedback-one.component";
+import { NbpInputTextComponent } from "./components/nbp-input-widget/nbp-input-text/nbp-input-text.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NbpTextareaComponent } from "./components/nbp-textarea/nbp-textarea.component";
+import { NbpInputTextareaOneComponent } from "./components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-one/nbp-input-textarea-one.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ComposantsComponent } from "./pages/composants/composants.component";
-import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
-import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-text-page/nbp-input-text-page.component";
+import { NbpInputTextareaPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-textarea-page/nbp-input-textarea-page.component";
+import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-text-page/nbp-input-text-page.component";
 import { NbpAlertBoxPageComponent } from "./pages/composants/nbp-alert-box-page/nbp-alert-box-page.component";
 import { NbpBackgroundBoxPageComponent } from "./pages/composants/nbp-background-box-page/nbp-background-box-page.component";
 import { NbpButtonPageComponent } from "./pages/composants/nbp-button-page/nbp-button-page.component";
@@ -31,8 +33,8 @@ import { NbpNavbarComponent } from "./components/nbp-navbar/nbp-navbar.component
 import { NbpBreadcrumbOneComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-one/nbp-breadcrumb-one.component";
 import { NbpBreadcrumbTwoComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-two/nbp-breadcrumb-two.component";
 import { NbpHeaderPageComponent } from "./pages/composants/nbp-header-page/nbp-header-page.component";
-import { NbpInputCheckboxComponent } from "./components/nbp-input-checkbox/nbp-input-checkbox.component";
-import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
+import { NbpInputCheckboxComponent } from "./components/nbp-input-widget/nbp-input-checkbox/nbp-input-checkbox.component";
+import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
 import { NbpColorComponent } from "./components/nbp-color/nbp-color.component";
 import { NbpColorPageComponent } from "./pages/composants/nbp-color-page/nbp-color-page.component";
 import { NbpTableOneComponent } from "./components/nbp-tables/nbp-table-one/nbp-table-one.component";
@@ -49,8 +51,8 @@ import { NbpBadgePageComponent } from "./pages/composants/nbp-badge-page/nbp-bad
 import { NbpTypographyPageComponent } from "./pages/composants/nbp-typography-page/nbp-typography-page.component";
 import { NbpPanelTitleOneComponent } from "./components/nbp-panel-titles/nbp-panel-title-one/nbp-panel-title-one.component";
 import { NbpPanelTitlePageComponent } from "./pages/composants/nbp-panel-title-page/nbp-panel-title-page.component";
-import { NbpInputRadioComponent } from "./components/nbp-input-radio/nbp-input-radio.component";
-import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-radio-page/nbp-input-radio-page.component";
+import { NbpInputRadioComponent } from "./components/nbp-input-widget/nbp-input-radio/nbp-input-radio.component";
+import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-radio-page/nbp-input-radio-page.component";
 import { NbpBreadcrumdThreeComponent } from "./components/nbp-breadcrumbs/nbp-breadcrumb-three/nbp-breadcrumd-three.component";
 import { NbpAlertBoxTwoComponent } from "./components/nbp-alert-boxes/nbp-alert-box-two/nbp-alert-box-two.component";
 import { NbpArrowLinkComponent } from "./components/nbp-links/nbp-arrow-link/nbp-arrow-link.component";
@@ -66,20 +68,20 @@ import { NbpCardPageComponent } from "./pages/composants/nbp-card-page/nbp-card-
 import { NbpModalOneComponent } from "./components/nbp-modals/nbp-modal-one/nbp-modal-one.component";
 import { NbpAlertBoxFourthComponent } from "./components/nbp-alert-boxes/nbp-alert-box-fourth/nbp-alert-box-fourth.component";
 import { NbpAlertBoxFiveComponent } from "./components/nbp-alert-boxes/nbp-alert-box-five/nbp-alert-box-five.component";
-import { NbpInputSwitchOneComponent } from "./components/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
-import { NbpInputSwitchTwoComponent } from "./components/nbp-input-switchs/nbp-input-switch-two/nbp-input-switch-two.component";
-import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
+import { NbpInputSwitchOneComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-one/nbp-input-switch-one.component";
+import { NbpInputSwitchTwoComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-two/nbp-input-switch-two.component";
+import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpPanelTitleThreeComponent } from "./components/nbp-panel-titles/nbp-panel-title-three/nbp-panel-title-three.component";
 import { NbpPanelTitleFourthComponent } from "./components/nbp-panel-titles/nbp-panel-title-fourth/nbp-panel-title-fourth.component";
-import { NbpDropdownListOneComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-one/nbp-dropdown-list-one.component";
-import { NbpDatePickerOneComponent } from "./components/nbp-date-pickers/nbp-date-picker-one/nbp-date-picker-one.component";
+import { NbpInputSelectOneComponent } from "./components/nbp-input-widget/nbp-input-selects/nbp-input-select-one/nbp-input-select-one.component";
+import { NbpInputDateOneComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-one/nbp-input-date-one.component";
 import { NbpNotificationHeaderComponent } from "./components/nbp-notification-header/nbp-notification-header.component";
 import { NbpTabbarComponent } from "./components/nbp-tab-bars/nbp-tab-bar/nbp-tab-bar.component";
 import { NbpUploadFileComponent } from "./components/nbp-upload-file/nbp-upload-file.component";
 import { NbpTooltipPageComponent } from "./pages/composants/nbp-tooltip-page/nbp-tooltip-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
-import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
-import { NbpDatePickerPageComponent } from "./pages/composants/nbp-date-picker-page/nbp-date-picker-page.component";
+import { NbpInputSelectPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-select-page/nbp-input-select-page.component";
+import { NbpInputDatePageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-date-page/nbp-input-date-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
 import { NbpFilterFormPageComponent } from "./pages/composants/nbp-filter-form-page/nbp-filter-form-page.component";
@@ -88,8 +90,8 @@ import { NbpBadgeTwoComponent } from "./components/nbp-badges/nbp-badge-two/nbp-
 import { TooltipModule } from "ng2-tooltip-directive";
 import { NbpTooltipComponent } from "./components/nbp-tooltip/nbp-tooltip.component";
 
-import { NbpInputPasswordComponent } from "./components/nbp-input-password/nbp-input-password.component";
-import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-password-page/nbp-input-password-page.component";
+import { NbpInputPasswordComponent } from "./components/nbp-input-widget/nbp-input-password/nbp-input-password.component";
+import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-password-page/nbp-input-password-page.component";
 import { NbpDividingLineThreeComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-three/nbp-dividing-line-three.component";
 import { NbpDividingLineFourthComponent } from "./components/nbp-dividing-lines/nbp-dividing-line-fourth/nbp-dividing-line-fourth.component";
 import { NbpBoxeOneComponent } from "./components/nbp-boxes/nbp-boxe-one/nbp-boxe-one.component";
@@ -99,8 +101,8 @@ import { NbpTabBarThreeComponent } from "./components/nbp-tab-bars/nbp-tab-bar-t
 import { NbpTabBarFourComponent } from "./components/nbp-tab-bars/nbp-tab-bar-four/nbp-tab-bar-four.component";
 import { NbpTabBarFiveComponent } from "./components/nbp-tab-bars/nbp-tab-bar-five/nbp-tab-bar-five.component";
 
-import { NbpInputSwitchThreeComponent } from "./components/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component";
-import { NbpInputSwitchFourthComponent } from "./components/nbp-input-switchs/nbp-input-switch-fourth/nbp-input-switch-fourth.component";
+import { NbpInputSwitchThreeComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-three/nbp-input-switch-three.component";
+import { NbpInputSwitchFourthComponent } from "./components/nbp-input-widget/nbp-input-switchs/nbp-input-switch-fourth/nbp-input-switch-fourth.component";
 import { NbpAuthService } from "./services/nbp-auth.service";
 import { NbpLoginOneComponent } from "./components/nbp-logins/nbp-login-one/nbp-login-one.component";
 import { LoginComponent } from "./pages/auth/login/login.component";
@@ -118,8 +120,11 @@ import { NbpPatientService } from "./services/nbp-patients.service";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
 import { NbpModalThreeComponent } from "./components/nbp-modals/nbp-modal-three/nbp-modal-three.component";
 import { NbpModalTwoComponent } from "./components/nbp-modals/nbp-modal-two/nbp-modal-two.component";
-import { NbpDropdownListTwoComponent } from "./components/nbp-dropdown-lists/nbp-dropdown-list-two/nbp-dropdown-list-two.component";
-import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-date-picker-two/nbp-date-picker-two.component";
+import { NbpInputSelectTwoComponent } from "./components/nbp-input-widget/nbp-input-selects/nbp-input-select-two/nbp-input-select-two.component";
+import { NbpInputDateTwoComponent } from "./components/nbp-input-widget/nbp-input-dates/nbp-input-date-two/nbp-input-date-two.component";
+import { NbpInputTextareaTwoComponent } from './components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-two/nbp-input-textarea-two.component';
+import { NbpInputNumberComponent } from './components/nbp-input-widget/nbp-input-number/nbp-input-number.component';
+import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component';
 
 @NgModule({
   declarations: [
@@ -130,12 +135,12 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpButtonComponent,
     NbpAlertBoxOneComponent,
     NbpScrollTopComponent,
-    NbpFeedbackComponent,
+    NbpFeedbackOneComponent,
     NbpInputTextComponent,
-    NbpTextareaComponent,
+    NbpInputTextareaOneComponent,
     HomeComponent,
     ComposantsComponent,
-    NbpTextareaPageComponent,
+    NbpInputTextareaPageComponent,
     NbpInputTextPageComponent,
     NbpAlertBoxPageComponent,
     NbpBackgroundBoxPageComponent,
@@ -189,16 +194,16 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpInputSwitchPageComponent,
     NbpPanelTitleThreeComponent,
     NbpPanelTitleFourthComponent,
-    NbpDropdownListOneComponent,
-    NbpDatePickerOneComponent,
+    NbpInputSelectOneComponent,
+    NbpInputDateOneComponent,
     NbpNotificationHeaderComponent,
     NbpTabbarComponent,
     NbpUploadFileComponent,
     NbpTooltipPageComponent,
     NbpTooltipComponent,
     NbpNotificationHeaderPageComponent,
-    NbpDropDownListPageComponent,
-    NbpDatePickerPageComponent,
+    NbpInputSelectPageComponent,
+    NbpInputDatePageComponent,
     NbpUploadFilePageComponent,
     NbpTabbarPageComponent,
     NbpFilterFormPageComponent,
@@ -226,8 +231,11 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     NbpProfileBoxOneComponent,
     NbpProfileBoxPageComponent,
     NbpFeedbackTwoComponent,
-    NbpDropdownListTwoComponent,
-    NbpDatePickerTwoComponent,
+    NbpInputSelectTwoComponent,
+    NbpInputDateTwoComponent,
+    NbpInputTextareaTwoComponent,
+    NbpInputNumberComponent,
+    NbpInputNumberPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -241,6 +249,8 @@ import { NbpDatePickerTwoComponent } from "./components/nbp-date-pickers/nbp-dat
     HttpClientModule,
     AppRoutingModule,
     TooltipModule,
+    NgxDatePickerModule,
+    NgxQuillEditorModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

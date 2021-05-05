@@ -1,0 +1,68 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+          [nbpTitle]="title"
+          [nbpColorStyle]="_style.DEFAULT"
+        ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label1"
+      [nbpInputName]="_model.component.NbpInputTextComponent.name1"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputRequired]="true"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage1"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder1"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
+      [nbpInputIconRequired]="true"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    </div>
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputName]="_model.component.NbpInputTextComponent.name2"
+      [nbpInputValue]="_model.component.NbpInputTextComponent.value"
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label2"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage2"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder2"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon1"
+      [nbpInputDisabled]="true"
+      (nbpInputModel)="nbpInputModel($event)">
+       </nbp-input-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-text
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label2"
+      [nbpInputName]="_model.component.NbpInputTextComponent.name2"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage2"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder2"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon2"
+      [nbpInputIconRequired]="true"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-text>
+    </div>
+    <div class="col-md-6">
+      <nbp-input-number
+      [nbpInputLabel]="_model.component.NbpInputTextComponent.label3"
+      [nbpInputName]="_model.component.NbpInputTextComponent.name3"
+      [nbpInputRequired]="true"
+      [nbpInputLabelRequired]="_model.component.NbpInputTextComponent.required"
+      [nbpInputBorderType]="_style.ROUNDED"
+      [nbpInputErrorMessage]="_model.component.NbpInputTextComponent.requiredMessage3"
+      [nbpInputPlaceholder]="_model.component.NbpInputTextComponent.placeholder3"
+      [nbpInputIcon]="_model.component.NbpInputTextComponent.icon3"
+      [nbpInputIconRequired]="true"
+      (nbpInputModel)="nbpInputModel($event)"
+    ></nbp-input-number>
+    </div>
+  </div>
+</div>

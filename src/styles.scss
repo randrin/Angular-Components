@@ -56,7 +56,7 @@ dp-date-picker {
   &::before {
     font-size: 15px !important;
     right: -10px !important;
-    top: 20px !important;
+    top: 17px !important;
     color: var(--nbp-primary) !important;
   }
 
@@ -155,7 +155,15 @@ dp-date-picker {
       &:before {
         top: 75% !important;
         border-color: var(--nbp-primary) transparent !important;
-        border-width: 11px 6px 0 !important;
+        border-width: 10px 8px 0 !important;
+      }
+    }
+
+    .dropdown-multiselect--active {
+      .dropdown-multiselect__caret {
+        &:before {
+          top: 85% !important;
+        }
       }
     }
 

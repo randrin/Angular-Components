@@ -1,0 +1,33 @@
+<div class="nbp-input-date-one-wrapper">
+  <div class="nbp-input-date-container">
+    <label
+      *ngIf="nbpDatePickerLabelRequired"
+      [for]="nbpDatePickerName"
+      class="nbp-p2 nbp-color-default nbp-input-date-label nbp-text-capitalize"
+    >
+      {{ nbpDatePickerLabel }}
+      <span *ngIf="nbpDatePickerRequired" class="nbp-color-tomato ml-1">*</span>
+    </label>
+    <div class="nbp-input-date">
+      <dp-date-picker
+        [id]="nbpDatePickerId"
+        [name]="nbpDatePickerName"
+        [placeholder]="nbpDatePickerPlaceholder"
+        theme="dp-material"
+        (keyup)="nbpInputKeyUp()"
+        (blur)="nbpInputBlur()"
+        (focusout)="nbpInputFocusOut()"
+        (focus)="nbpInputFocus()"
+        class="form-control nbp-form-control"
+        [ngClass]="nbpDatePicker"
+        [(ngModel)]="nbpModel"
+        [disabled]="nbpDatePickerDisabled"
+        [required]="nbpDatePickerRequired"
+      ></dp-date-picker>
+      <i class="nbp-input-date-icon" [ngClass]="nbpDatePickerIcon"></i>
+    </div>
+    <div class="nbp-input-date-error-message" *ngIf="nbpErrorMessage">
+      <span class="nbp-input-date-alert">{{ nbpDatePickerErrorMessage }}</span>
+    </div>
+  </div>
+</div>

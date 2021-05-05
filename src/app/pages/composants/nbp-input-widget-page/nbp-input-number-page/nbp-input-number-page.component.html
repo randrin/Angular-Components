@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <nbp-input-number
+        [nbpInputLabel]="_model.component.NbpInputTextComponent.label3"
+        [nbpInputName]="_model.component.NbpInputTextComponent.name3"
+        [nbpInputRequired]="true"
+        [nbpInputLabelRequired]="
+          _model.component.NbpInputTextComponent.required
+        "
+        [nbpInputBorderType]="_style.ROUNDED"
+        [nbpInputErrorMessage]="
+          _model.component.NbpInputTextComponent.requiredMessage3
+        "
+        [nbpInputPlaceholder]="
+          _model.component.NbpInputTextComponent.placeholder3
+        "
+        [nbpInputIcon]="_model.component.NbpInputTextComponent.icon3"
+        [nbpInputIconRequired]="true"
+        (nbpInputModel)="nbpInputModel($event)"
+      ></nbp-input-number>
+    </div>
+  </div>
+</div>

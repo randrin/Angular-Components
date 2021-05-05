@@ -1,0 +1,47 @@
+<div class="nbp-input-textarea-one-wrapper">
+  <div class="nbp-input-textarea-container">
+    <label
+      *ngIf="nbpTextareaLabelRequired"
+      for="nbpTextareaName"
+      class="nbp-p2 nbp-color-default nbp-input-textarea-text-label nbp-text-capitalize"
+    >
+      {{ nbpTextareaLabel }}
+      <span *ngIf="nbpTextareaRequired" class="nbp-color-tomato ml-1">*</span>
+    </label>
+    <div class="nbp-input-textarea">
+      <textarea
+        [(ngModel)]="nbpModel"
+        [rows]="nbpTextareaRows"
+        [ngClass]="nbpTextarea"
+        (keydown)="nbpTextareaKeyDown()"
+        (focusout)="nbpTextareaFocusOut()"
+        (keyup)="nbpTextareaKeyUp($event)"
+        class="nbp-form-control form-control"
+        [placeholder]="nbpTextareaPlaceholder"
+        [disabled]="nbpTextareaDisabled"
+        [required]="nbpTextareaRequired"
+        [maxlength]="nbpTextareaMaxLength"
+        [name]="nbpTextareaName">
+      </textarea>
+    </div>
+    <div class="nbp-input-textarea-errors">
+      <div class="nbp-input-textarea-error-message">
+        <span class="nbp-input-textarea-alert" *ngIf="nbpErrorMessage">{{ nbpTextareaErrorMessage }}</span>
+        <span class="nbp-input-textarea-alert-length" *ngIf="nbpErrorMessageMaxLength">
+          {{nbpTextareaErrorLengthMaxSup}}
+        </span>
+      </div>
+      <div class="nbp-input-textarea-error-max-length" *ngIf="nbpErrorLength">
+        <span
+          class="nbp-input-textarea-alert-count"
+          *ngIf="nbpTextareaErrorLengthMaxSup"
+          [ngClass]="{
+            'nbp-input-textarea-error-message-length': nbpErrorMessageMaxLength,
+            '': !nbpErrorMessageMaxLength
+          }"
+          >{{ nbpGetCountWord() }}/{{ nbpTextareaMaxLength }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

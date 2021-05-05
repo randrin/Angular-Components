@@ -9,10 +9,10 @@
   </div>
   <div class="row">
     <div class="col">
-      <nbp-feedback
+      <nbp-feedback-one
         [nbpTitle]="_model.component.NbpFeedbackComponent.success"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message">
-      </nbp-feedback>
+      </nbp-feedback-one>
       <nbp-feedback
         [nbpTitle]="_model.component.NbpFeedbackComponent.warning"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
@@ -35,26 +35,26 @@
   </div>
   <div class="row">
     <div class="col">
-      <nbp-feedback
+      <nbp-feedback-one
         [nbpTitle]="_model.component.NbpFeedbackComponent.warning"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
         [nbpFeedbackType]="_alert.WARNING"
         [nbpFeedbackWithButtonContinueAndTryAgain]="true"
         [nbpFeedbackWithButtonOk]="true">
-      </nbp-feedback>
-      <nbp-feedback
+      </nbp-feedback-one>
+      <nbp-feedback-one
         [nbpTitle]="_model.component.NbpFeedbackComponent.errore"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
         [nbpFeedbackType]="_alert.ERROR"
         [nbpFeedbackWithButtonOk]="true">
-      </nbp-feedback>
-      <nbp-feedback
+      </nbp-feedback-one>
+      <nbp-feedback-one
         [nbpTitle]="_model.component.NbpFeedbackComponent.warning"
         [nbpMessage]="_model.component.NbpFeedbackComponent.message"
         [nbpFeedbackType]="_alert.ERROR"
         [nbpFeedbackWithButtonContinueAndTryAgain]="true"
         [nbpFeedbackWithButtonOk]="true">
-      </nbp-feedback>
+      </nbp-feedback-one>
     </div>
   </div>
 </div>

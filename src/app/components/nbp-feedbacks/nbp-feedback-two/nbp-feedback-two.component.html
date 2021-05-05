@@ -1,28 +1,42 @@
 <div class="nbp-feedback-wrapper">
-    <div class="row">
-        <div class="col text-center">
-            <div class="nbp-feedback-icon"><i [ngClass]="nbpFeedback"></i></div>
-            <div class="nbp-feedback-content">
-                <span class="nbp-feedback-title">{{ nbpTitle }}</span>
-                <span class="nbp-feedback-message">{{ nbpMessage }}</span>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col text-center">
+      <div class="nbp-feedback-icon"><i [ngClass]="nbpFeedback"></i></div>
+      <div class="nbp-feedback-content">
+        <span class="nbp-feedback-title">{{ nbpTitle }}</span>
+        <span class="nbp-feedback-message">{{ nbpMessage }}</span>
+      </div>
     </div>
-    <div class="row nbp-text-align-center">
-        <div class="col-3">
-            <nbp-button (click)="onClickBackUpdateDelete('back')" [nbpButtonLabel]="'BACK'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.DEFAULTHOVER" [nbpButtonType]="_style.OUTLINE">
-            </nbp-button>
-        </div>
-        <div class="col-3 text-center">
-            <nbp-button (click)="onClickBackUpdateDelete('update')" [nbpButtonLabel]="'UPDATE'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.PRIMARY" [nbpButtonType]="_style.OUTLINE">
-            </nbp-button>
-        </div>
-        <div class="col-3">
-            <nbp-button (click)="onClickBackUpdateDelete('delete')" [nbpButtonLabel]="'DELETE'" [nbpButtonSize]="_size.MD"
-                [nbpButtonColor]="_style.PRIMARY">
-            </nbp-button>
-        </div>
+  </div>
+  <div class="row nbp-text-align-center">
+    <div class="col-3">
+      <nbp-button
+        (click)="onClickBackUpdateDelete('back')"
+        [nbpButtonLabel]="'BACK'"
+        [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.DEFAULTHOVER"
+        [nbpButtonType]="_style.OUTLINE"
+      >
+      </nbp-button>
     </div>
+    <div class="col-3 text-center">
+      <nbp-button
+        (click)="onClickBackUpdateDelete('update')"
+        [nbpButtonLabel]="'UPDATE'"
+        [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.PRIMARY"
+        [nbpButtonType]="_style.OUTLINE"
+      >
+      </nbp-button>
+    </div>
+    <div class="col-3">
+      <nbp-button
+        (click)="onClickBackUpdateDelete('delete')"
+        [nbpButtonLabel]="'DELETE'"
+        [nbpButtonSize]="_size.MD"
+        [nbpButtonColor]="_style.PRIMARY"
+      >
+      </nbp-button>
+    </div>
+  </div>
 </div>

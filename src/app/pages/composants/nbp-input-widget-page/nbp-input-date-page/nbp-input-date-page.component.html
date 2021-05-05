@@ -1,0 +1,65 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title1"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row pb-4">
+    <div class="col-md-6">
+      <nbp-input-date-one
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerRequired]="true"
+        [nbpDatePickerBorderType]="_style.ROUNDED"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-input-date-one>
+    </div>
+    <div class="col-md-6">
+      <nbp-input-date-one
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerValue]="_model.component.NbpDatePickerComponent.value"
+        [nbpDatePickerRequired]="false"
+        [nbpDatePickerDisabled]="true"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-input-date-one>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <nbp-dividing-line-one
+        [nbpTitle]="title2"
+        [nbpColorStyle]="_style.DEFAULT"
+      ></nbp-dividing-line-one>
+    </div>
+  </div>
+  <div class="row pb-4">
+    <div class="col-md-6">
+      <nbp-input-date-two
+        [nbpDatePickerName]="_model.component.NbpDatePickerComponent.name"
+        [nbpDatePickerLabel]="_model.component.NbpDatePickerComponent.label"
+        [nbpDatePickerLabelRequired]="_model.component.NbpDatePickerComponent.required"
+        [nbpDatePickerPlaceholder]="_model.component.NbpDatePickerComponent.placeholder"
+        [nbpDatePickerRequired]="true"
+        [nbpDatePickerBorderType]="_style.ROUNDED"
+        [nbpDatePickerErrorMessage]="_model.component.NbpDatePickerComponent.requiredMessage"
+        [nbpDatePickerIcon]="_model.component.NbpDatePickerComponent.icon"
+        [nbpDatePickerIconRequired]="true"
+        (nbpDatePickerModel)="nbpInputModel($event)"
+      ></nbp-input-date-two>
+    </div>
+  </div>
+</div>

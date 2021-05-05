@@ -29,7 +29,7 @@ export class NbpIconComponent extends NbpBaseComponent implements OnInit {
     let arraySplit = [];
     arraySplit = nbpInput.split('-');
     if (arraySplit.length > 3) {
-      let arraySplitNew = [];
+      const arraySplitNew = [];
       arraySplit.forEach((elt, index) => {
         if (index !== 0 && index !== 1) {
           arraySplitNew.push(elt)

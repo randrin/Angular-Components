@@ -6,31 +6,31 @@ import { NbpBackgroundBoxPageComponent } from "./pages/composants/nbp-background
 import { NbpBadgePageComponent } from "./pages/composants/nbp-badge-page/nbp-badge-page.component";
 import { NbpBreadcrumdPageComponent } from "./pages/composants/nbp-breadcrumd-page/nbp-breadcrumd-page.component";
 import { NbpButtonPageComponent } from "./pages/composants/nbp-button-page/nbp-button-page.component";
-import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
+import { NbpInputCheckboxPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-checkbox-page/nbp-input-checkbox-page.component";
 import { NbpColorPageComponent } from "./pages/composants/nbp-color-page/nbp-color-page.component";
 import { NbpDividingLinePageComponent } from "./pages/composants/nbp-dividing-line-page/nbp-dividing-line-page.component";
 import { NbpFeedbackPageComponent } from "./pages/composants/nbp-feedback-page/nbp-feedback-page.component";
 import { NbpHeaderPageComponent } from "./pages/composants/nbp-header-page/nbp-header-page.component";
 import { NbpIconPageComponent } from "./pages/composants/nbp-icon-page/nbp-icon-page.component";
-import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-text-page/nbp-input-text-page.component";
+import { NbpInputTextPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-text-page/nbp-input-text-page.component";
 import { NbpLinkPageComponent } from "./pages/composants/nbp-link-page/nbp-link-page.component";
 import { NbpPanelTitlePageComponent } from "./pages/composants/nbp-panel-title-page/nbp-panel-title-page.component";
-import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-radio-page/nbp-input-radio-page.component";
+import { NbpInputRadioPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-radio-page/nbp-input-radio-page.component";
 import { NbpTablePageComponent } from "./pages/composants/nbp-table-page/nbp-table-page.component";
-import { NbpTextareaPageComponent } from "./pages/composants/nbp-textarea-page/nbp-textarea-page.component";
+import { NbpInputTextareaPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-textarea-page/nbp-input-textarea-page.component";
 import { NbpTypographyPageComponent } from "./pages/composants/nbp-typography-page/nbp-typography-page.component";
 import { ExamplesComponent } from "./pages/examples/examples.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { NbpCardPageComponent } from "./pages/composants/nbp-card-page/nbp-card-page.component";
-import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-switch-page/nbp-input-switch-page.component";
+import { NbpInputSwitchPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-switch-page/nbp-input-switch-page.component";
 import { NbpNotificationHeaderPageComponent } from "./pages/composants/nbp-notification-header-page/nbp-notification-header-page.component";
-import { NbpDropDownListPageComponent } from "./pages/composants/nbp-drop-down-list-page/nbp-drop-down-list-page.component";
-import { NbpDatePickerPageComponent } from "./pages/composants/nbp-date-picker-page/nbp-date-picker-page.component";
+import { NbpInputSelectPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-select-page/nbp-input-select-page.component";
+import { NbpInputDatePageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-date-page/nbp-input-date-page.component";
 import { NbpUploadFilePageComponent } from "./pages/composants/nbp-upload-file-page/nbp-upload-file-page.component";
 import { NbpTabbarPageComponent } from "./pages/composants/nbp-tabar-page/nbp-tab-bar-page.component";
 import { NbpFilterFormPageComponent } from "./pages/composants/nbp-filter-form-page/nbp-filter-form-page.component";
 import { NbpTooltipPageComponent } from "./pages/composants/nbp-tooltip-page/nbp-tooltip-page.component";
-import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-password-page/nbp-input-password-page.component";
+import { NbpInputPasswordPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-password-page/nbp-input-password-page.component";
 import { NbpBoxePageComponent } from "./pages/composants/nbp-boxe-page/nbp-boxe-page.component";
 import { LoginComponent } from "./pages/auth/login/login.component";
 import { RegisterComponent } from "./pages/auth/register/register.component";
@@ -39,6 +39,7 @@ import { ChangeOldPassToNewPassComponent } from "./pages/auth/change-old-pass-to
 import { NbpPatientComponent } from "./pages/nbp-patient/nbp-patient.component";
 import { NbpProfileBoxPageComponent } from "./pages/composants/nbp-profile-box-page/nbp-profile-box-page.component";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
+import { NbpInputNumberPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -57,8 +58,9 @@ const appRoutes: Routes = [
     children: [
       { path: "breadcrumbs", component: NbpBreadcrumdPageComponent },
       { path: "colors", component: NbpColorPageComponent },
-      { path: "textareas", component: NbpTextareaPageComponent },
+      { path: "input-textarea", component: NbpInputTextareaPageComponent },
       { path: "input-text", component: NbpInputTextPageComponent },
+      { path: "input-number", component: NbpInputNumberPageComponent },
       { path: "input-password", component: NbpInputPasswordPageComponent },
       { path: "dividing-lines", component: NbpDividingLinePageComponent },
       { path: "feedbacks", component: NbpFeedbackPageComponent },
@@ -84,10 +86,10 @@ const appRoutes: Routes = [
         component: NbpNotificationHeaderPageComponent,
       },
       {
-        path: "dropdown-list",
-        component: NbpDropDownListPageComponent,
+        path: "input-select",
+        component: NbpInputSelectPageComponent,
       },
-      { path: "date-picker", component: NbpDatePickerPageComponent },
+      { path: "input-date", component: NbpInputDatePageComponent },
       { path: "upload-File", component: NbpUploadFilePageComponent },
       { path: "profiles", component: NbpProfileBoxPageComponent },
       {

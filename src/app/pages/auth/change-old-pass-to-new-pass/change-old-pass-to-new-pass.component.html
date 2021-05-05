@@ -79,7 +79,7 @@
   </div>
   <div class="nbp-oldPass-to-newPass-container container my-5" *ngIf="nbpChangePasswordSuccess">
     <div class="text-center">
-      <nbp-feedback [nbpTitle]="nbpChangeOldPasswordErrorMessage"> </nbp-feedback>
+      <nbp-feedback-one [nbpTitle]="nbpChangeOldPasswordErrorMessage"> </nbp-feedback-one>
       <nbp-deep-link [nbpDeepLinkStyle]="_style.PRIMARY"
         [nbpDeepLinkName]="_model.component.NbpAuthComponent.submitInput.success"
         [nbpDeepLinkTextTransform]="_pipe.UPPERCASE" [nbpDeepLinkRedirection]="'/login'"

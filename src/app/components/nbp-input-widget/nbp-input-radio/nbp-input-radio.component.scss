@@ -1,0 +1,70 @@
+.nbp-radio-input-wrapper {
+  .nbp-radio-input-container {
+    display: inline-block;
+    margin-right: 0.195rem;
+    width: 100%;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .nbp-radio-input-input {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0;
+      margin: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-style: solid;
+      border-width: 0.0625rem;
+      border-radius: 50%;
+
+      .nbp-form-control {
+        cursor: pointer;
+        height: 18px;
+        width: 1.125rem;
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.ng-valid + .nbp-radio-input-circle-icon {
+          display: none;
+        }
+
+        &.ng-dirty + .nbp-radio-input-circle-icon {
+          display: block;
+        }
+      }
+
+      .nbp-radio-input-circle-icon {
+        position: absolute;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .nbp-radio-input-label {
+      font-size: 0.875rem !important;
+      font-weight: 400;
+      margin: 0 0 0 1.625rem !important;
+      display: inline-block !important;
+      -ms-flex: none;
+      flex: none;
+      white-space: nowrap;
+
+      label {
+        top: -5px;
+        position: relative;
+      }
+    }
+  }
+}
