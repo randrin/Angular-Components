@@ -125,6 +125,9 @@ import { NbpInputDateTwoComponent } from "./components/nbp-input-widget/nbp-inpu
 import { NbpInputTextareaTwoComponent } from './components/nbp-input-widget/nbp-input-textareas/nbp-input-textarea-two/nbp-input-textarea-two.component';
 import { NbpInputNumberComponent } from './components/nbp-input-widget/nbp-input-number/nbp-input-number.component';
 import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component';
+import { NbpLabelOneComponent } from './components/nbp-labels/nbp-label-one/nbp-label-one.component';
+import { NbpLabelPageComponent } from './pages/composants/nbp-label-page/nbp-label-page.component';
+import { NbpLabelTwoComponent } from './components/nbp-labels/nbp-label-two/nbp-label-two.component';
 
 @NgModule({
   declarations: [
@@ -236,6 +239,9 @@ import { NbpInputNumberPageComponent } from './pages/composants/nbp-input-widget
     NbpInputTextareaTwoComponent,
     NbpInputNumberComponent,
     NbpInputNumberPageComponent,
+    NbpLabelOneComponent,
+    NbpLabelPageComponent,
+    NbpLabelTwoComponent,
   ],
   imports: [
     BrowserModule,

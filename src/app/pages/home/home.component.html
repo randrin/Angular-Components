@@ -32,19 +32,19 @@
       <div class="row">
         <div class="col-1" *ngFor="let role of nbpUserRoles">
           <div *ngIf="role === 'ROLE_ADMIN'">
-            <nbp-badge-one
-              [nbpBadgeName]="'Admin'"
-              [nbpBadgeStyle]="_style.SUCCESS"
-              [nbpBadgeIcon]="'nbp-icon-biohazard'"
-            ></nbp-badge-one>
+            <nbp-label-one
+              [nbpLabelName]="'Admin'"
+              [nbpLabelStyle]="_style.SUCCESS"
+              [nbpLabelIcon]="'nbp-icon-biohazard'"
+            ></nbp-label-one>
           </div>
           <div *ngIf="role === 'ROLE_USER'">
-            <nbp-badge-one
-              [nbpBadgeName]="'User'"
-              [nbpBadgeStyle]="_style.PRIMARY"
-              [nbpBadgeIcon]="'nbp-icon-bug'"
+            <nbp-label-one
+              [nbpLabelName]="'User'"
+              [nbpLabelStyle]="_style.PRIMARY"
+              [nbpLabelIcon]="'nbp-icon-bug'"
             >
-            </nbp-badge-one>
+            </nbp-label-one>
           </div>
         </div>
       </div>

@@ -137,6 +137,7 @@ export class NbpBaseComponent implements OnInit {
   nbpColor: string;
   nbpButton: string;
   nbpBadge: string;
+  nbpLabel: string;
   nbpBackground: string;
   nbpTextarea: string;
   status: boolean;

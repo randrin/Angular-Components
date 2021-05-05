@@ -1,0 +1,10 @@
+<div class="nbp-label-one-wrapper">
+  <div class="nbp-label-container">
+    <span class="nbp-label" [ngClass]="nbpLabel">
+      <span *ngIf="nbpLabelIcon" class="nbp-label-icon">
+        <nbp-icon [nbpIconName]="nbpLabelIcon"></nbp-icon>
+      </span>
+      {{ nbpLabelName }}
+    </span>
+  </div>
+</div>

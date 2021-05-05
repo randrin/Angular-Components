@@ -4,10 +4,10 @@
       <nbp-dividing-line-one [nbpTitle]="title" [nbpColorStyle]="_style.DEFAULT"></nbp-dividing-line-one>
     </div>
   </div>
-  <div class="row" *ngIf="_model.component.NbpIconComponent.icons.length">
+  <div class="row" *ngIf="!!_model.component.NbpIconComponent.icons.length">
     <div *ngFor="let icon of _model.component.NbpIconComponent.icons" class="col-2 nbp-icon-content">
-      <nbp-icon [nbpIconName]="getIconName(icon.name)" class="nbp-icon"></nbp-icon>
-      <span>{{icon.name}}</span>
+      <nbp-icon [nbpIconName]="getIconName(icon?.name)" class="nbp-icon"></nbp-icon>
+      <span>{{icon?.name}}</span>
     </div>
   </div>
 </div>

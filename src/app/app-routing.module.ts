@@ -40,6 +40,7 @@ import { NbpPatientComponent } from "./pages/nbp-patient/nbp-patient.component";
 import { NbpProfileBoxPageComponent } from "./pages/composants/nbp-profile-box-page/nbp-profile-box-page.component";
 import { NbpModalPageComponent } from "./pages/composants/nbp-modal-page/nbp-modal-page.component";
 import { NbpInputNumberPageComponent } from "./pages/composants/nbp-input-widget-page/nbp-input-number-page/nbp-input-number-page.component";
+import { NbpLabelPageComponent } from "./pages/composants/nbp-label-page/nbp-label-page.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -73,6 +74,7 @@ const appRoutes: Routes = [
       { path: "tables", component: NbpTablePageComponent },
       { path: "icons", component: NbpIconPageComponent },
       { path: "badges", component: NbpBadgePageComponent },
+      { path: "labels", component: NbpLabelPageComponent },
       { path: "typographies", component: NbpTypographyPageComponent },
       { path: "panel-titles", component: NbpPanelTitlePageComponent },
       { path: "links", component: NbpLinkPageComponent },
